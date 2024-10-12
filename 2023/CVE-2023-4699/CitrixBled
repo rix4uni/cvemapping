@@ -1,0 +1,31 @@
+# Representing Citrix Bleed Buffer Overread Vulnerability in C
+# Scott Shaulis
+# 11/17/2023
+
+#include <stdio.h>
+#include <string.h>
+
+int main(int argc, char *argv[]) {
+
+
+    char attackerHostname[10];
+    char citrixBuffer[10];
+    int num;
+
+    strcpy(attackerHostname, "In Citrix Bleed, the attacker exploits the vulnerability by sending an "
+                             "overly large hostname to the GW/ADC. Let this represent an overly large hostname.");
+
+    //Citrix Server attempts to parse the large HTTP header in preparation for JWT to authentication server.
+    num = snprintf(citrixBuffer, sizeof(citrixBuffer), "%20s", attackerHostname);
+
+    //snprintf provides a built-in buffer to prevent Buffer Overflows, unlike sprintf.
+
+    //citrixNetScalerGW = Buffer. This should be 50 characters. The gateway/ADC should not return more than 50.
+
+    //Server return HTTPS response to external client
+    printf("\n");
+    printf("The amount of memory Citrix Exposed: snprintf returned: %d\n\n", num);
+    printf("The Citrix Server Should have returned: %s\n", citrixBuffer);
+
+    //This results in an Access Violation error: -1073741819.
+}

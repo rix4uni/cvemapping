@@ -1,0 +1,7 @@
+# Intro
+This repository contains PoC the **CVE-2023-40459** vulnerability. This vulnerability affects the ACEManager file in the ALEOS 4.16 and earlier versions, a product of Sierra Wireless. This attack, without any initial access rights, can lead to disruption in accessing the target device (DoS).
+To use it, execute the following command:
+
+```bash
+$ python3 PoC-CVE-2023-40459.py [Address: http://target]  [Port: 9091]
+```

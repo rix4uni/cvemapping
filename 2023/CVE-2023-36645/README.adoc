@@ -1,0 +1,28 @@
+== Affected Software
+[%hardbreaks]
+**Vendor:** ITB-GmbH
+**Affected Products:** TradePro (v9.5)
+**Component:** Function Customer; Action `oordershow`
+**Confirmed:** yes
+
+== Attack Vector
+[%hardbreaks]
+**Type:** SQLi
+**Access-Type:** Remote
+**Impact:** Information Disclosure; Escalation of Privileges
+
+SQL injection in function `customer`, action `oordershow` in ITB-GmbH
+TradePro v9.5 allows remote attackers to run SQL queries on the target system.
+
+== Description
+Calling `http(s)://[DOMAIN]/shop/de/sys/?func=customer&action=oordershow&bestellid=[SQL_QUERY]&wkid=[COOKIE]` with a valid but unauthenticated session cookie allows for SQLi.
+
+== CVSS
+[%hardbreaks]
+**Score:** 9.1
+**Vector:** https://www.first.org/cvss/calculator/3.1=CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N/E:P[CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N/E:P]
+
+== Credits
+- pajowu
+- https://zerforschung.org[zerforschung.org]
+

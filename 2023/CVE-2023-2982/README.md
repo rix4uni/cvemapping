@@ -1,0 +1,1 @@
+This repos serves as a way to get this python script on a docker container
