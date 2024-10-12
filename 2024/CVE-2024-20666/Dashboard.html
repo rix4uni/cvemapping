@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Analytics Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            grid-column: span 2;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            font-size: 1.2em;
+        }
+        .chart {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .chart img {
+            max-width: 100%;
+            height: auto;
+        }
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            h1 {
+                grid-column: span 1;
+            }
+        }
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .chart:nth-child(3),
+            .chart:nth-child(5) {
+                grid-column: span 2;
+            }
+        }
+        @media (max-width: 1024px) {
+            .chart img {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Content Analytics Dashboard</h1>
+
+
+        <div class="chart">
+            <h2>Weekly Content Count</h2>
+            <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%22bar%22%2C%22data%22%3A%7B%22labels%22%3A%5B%222024-26%22%2C%222024-24%22%2C%222024-22%22%2C%222024-21%22%5D%2C%22datasets%22%3A%5B%7B%22label%22%3A%22Weekly+Content+Count%22%2C%22data%22%3A%5B23%2C16%2C4%2C16%5D%2C%22backgroundColor%22%3A%22rgba%2854%2C+162%2C+235%2C+0.6%29%22%7D%5D%7D%2C%22options%22%3A%7B%22scales%22%3A%7B%22y%22%3A%7B%22beginAtZero%22%3Atrue%7D%7D%7D%7D&w=600&h=400&bkg=%23ffffff&devicePixelRatio=1.0&f=png&v=2.9.4" alt="Weekly Content Count">
+        </div>
+
+        <div class="chart">
+            <h2>Content Distribution by Day of the Week</h2>
+            <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%22bar%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22Saturday%22%2C%22Friday%22%2C%22Monday%22%2C%22Sunday%22%2C%22Wednesday%22%2C%22Thursday%22%5D%2C%22datasets%22%3A%5B%7B%22label%22%3A%22Content+Distribution+by+Day+of+the+Week%22%2C%22data%22%3A%5B1%2C34%2C4%2C15%2C1%2C4%5D%2C%22backgroundColor%22%3A%22rgba%28255%2C+99%2C+132%2C+0.6%29%22%7D%5D%7D%2C%22options%22%3A%7B%22scales%22%3A%7B%22y%22%3A%7B%22beginAtZero%22%3Atrue%7D%7D%7D%7D&w=600&h=400&bkg=%23ffffff&devicePixelRatio=1.0&f=png&v=2.9.4" alt="Content Distribution by Day of the Week">
+        </div>
+
+        <div class="chart">
+            <h2>Platform Content Count</h2>
+            <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%22bar%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22Newsletter%22%2C%22Twitter%22%2C%22Medium%22%5D%2C%22datasets%22%3A%5B%7B%22label%22%3A%22Platform+Content+Count%22%2C%22data%22%3A%5B34%2C19%2C21%5D%2C%22backgroundColor%22%3A%22rgba%28255%2C+206%2C+86%2C+0.6%29%22%7D%5D%7D%2C%22options%22%3A%7B%22scales%22%3A%7B%22y%22%3A%7B%22beginAtZero%22%3Atrue%7D%7D%7D%7D&w=600&h=400&bkg=%23ffffff&devicePixelRatio=1.0&f=png&v=2.9.4" alt="Platform Content Count">
+        </div>
+
+        <div class="chart">
+            <h2>Daily Post Count Progression</h2>
+            <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%22line%22%2C%22data%22%3A%7B%22labels%22%3A%5B%222024-05-30%22%2C%222024-05-31%22%2C%222024-06-03%22%2C%222024-06-05%22%2C%222024-06-16%22%2C%222024-06-17%22%2C%222024-07-05%22%2C%222024-07-06%22%5D%2C%22datasets%22%3A%5B%7B%22label%22%3A%22Daily+Post+Count%22%2C%22data%22%3A%5B4%2C12%2C3%2C1%2C15%2C1%2C22%2C1%5D%2C%22fill%22%3Afalse%2C%22borderColor%22%3A%22rgba%2875%2C+192%2C+192%2C+1%29%22%2C%22tension%22%3A0.1%7D%5D%7D%2C%22options%22%3A%7B%22scales%22%3A%7B%22x%22%3A%7B%22type%22%3A%22time%22%2C%22time%22%3A%7B%22unit%22%3A%22day%22%7D%7D%2C%22y%22%3A%7B%22beginAtZero%22%3Atrue%7D%7D%7D%7D&w=800&h=400&bkg=%23ffffff&devicePixelRatio=1.0&f=png&v=2.9.4" alt="Daily Post Count Progression">
+        </div>
+
+        <div class="chart">
+            <h2>Monthly Post Count</h2>
+            <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%22doughnut%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22January%22%2C%22February%22%2C%22March%22%2C%22April%22%2C%22May%22%2C%22June%22%2C%22July%22%2C%22August%22%2C%22September%22%2C%22October%22%2C%22November%22%2C%22December%22%5D%2C%22datasets%22%3A%5B%7B%22data%22%3A%5B0%2C0%2C0%2C0%2C16%2C20%2C23%2C0%2C0%2C0%2C0%2C0%5D%2C%22backgroundColor%22%3A%5B%22%23FF6384%22%2C%22%2336A2EB%22%2C%22%23FFCE56%22%2C%22%23FF9F40%22%2C%22%23FFCD56%22%2C%22%234BC0C0%22%2C%22%239966FF%22%2C%22%23C9CBCF%22%2C%22%23FF6384%22%2C%22%2336A2EB%22%2C%22%23FFCE56%22%2C%22%23FF9F40%22%5D%7D%5D%7D%2C%22options%22%3A%7B%22responsive%22%3Atrue%2C%22plugins%22%3A%7B%22legend%22%3A%7B%22position%22%3A%22top%22%7D%2C%22title%22%3A%7B%22display%22%3Atrue%2C%22text%22%3A%22Monthly+Post+Count%22%7D%2C%22doughnutlabel%22%3A%7B%22labels%22%3A%5B%7B%22text%22%3A%2259%22%2C%22font%22%3A%7B%22size%22%3A20%2C%22weight%22%3A%22bold%22%7D%2C%22color%22%3A%22%23FF6384%22%7D%5D%7D%7D%7D%7D&w=800&h=800&bkg=%23ffffff&devicePixelRatio=1.0&f=png&v=2.9.4" alt="Monthly Post Count">
+        </div>
+
+    </div>
+</body>
+</html>

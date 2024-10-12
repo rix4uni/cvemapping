@@ -1,0 +1,13 @@
+# Exploit Title: INCOGNITO SAC STORED CROSS-SITE SCRIPTING (XSS) VULNERABILITY
+# Date: 26 JULY 2024
+# Exploit Author: Etienne Supra
+# Vendor Homepage: https://www.incognito.com/products/service-activation-center/
+# Version: 14.11
+# CVE : CVE-2024-42834
+# Vendor has been informed and acknowledge the vulnerability.
+  
+VULNERABILITY SUMMARY
+A stored Cross-site scripting (XSS) vulnerability was identified in the customerManager API and ManageAccount_retrieve modules of the Incognito Service Activation Center User Interface (SAC UI). 
+SAC UI Version 14.11 allows remotely authenticated attackers to inject arbitrary JavaScript or HTML via the ‘lastName’ parameter. If malicious JavaScript was submitted, it would be stored on the web server and would be triggered on users’ browsers when viewed.
+The XSS was triggered when the user account was viewed on the ManageAccount_retrieve page.
+The remediation of this vulnerability lies with the vendor, as they would need to sanitise the API input and the SAC UI output.

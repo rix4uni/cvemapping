@@ -1,0 +1,85 @@
+**Descripción**
+Este repositorio contiene una solución para los problemas de verificación de firmas en los algoritmos ECDSA y EDDSA identificados por el proyecto Wycheproof. La ausencia de ciertas verificaciones durante la etapa de decodificación de las firmas puede causar problemas de seguridad y funcionalidad en la verificación de firmas digitales.
+
+**Problemas Identificados**
+EDDSA:
+
+Falta de verificación de longitud durante la creación de la firma, lo que permite la eliminación o adición de bytes cero.
+ECDSA:
+
+Falta de comprobación de si el bit inicial de r y s es cero, como lo requiere la codificación ASN.
+Permitir firmas codificadas con BER en lugar de DER, lo que crea la posibilidad de confusión y errores de envío.
+
+**Solución**
+Para solucionar estos problemas, hemos implementado las siguientes verificaciones en el código:
+
+Para EDDSA:
+
+Verificación de la longitud de la firma durante la creación de la misma.
+Para ECDSA:
+
+Verificación del bit inicial de r y s para asegurar que sea cero.
+Modificación de la función getLength para no permitir el uso de ceros a la izquierda en la secuencia de longitud.
+
+**Ejemplo de Código**
+**Verificación de Longitud en EDDSA**
+
+var elliptic = require('elliptic');
+var eddsa = elliptic.eddsa;
+var ed25519 = new eddsa('ed25519');
+var key = ed25519.keyFromPublic('7d4d0e7f6153a69b6242b522abbee685fda4420f8834b108c3bdae369ef549fa', 'hex');
+
+// Verificación de longitud durante la creación de la firma
+function verifySignatureLength(sig) {
+  if (sig.length !== 128) { // Longitud esperada para una firma ED25519
+    return false;
+  }
+  return true;
+}
+
+var msg = '54657374';
+var sig = '7c38e026f29e14aabd059a0f2db8b0cd783040609a8be684db12f82a27774ab07a9155711ecfaf7f99f277bad0c6ae7e39d4eef676573336a5c51eb6f946b30d00';
+
+if (verifySignatureLength(sig)) {
+  console.log(key.verify(msg, sig));
+} else {
+  console.log('Invalid signature length');
+}
+
+msg = '546573743137';
+sig = '93de3ca252426c95f735cb9edd92e83321ac62372d5aa5b379786bae111ab6b17251330e8f9a7c30d6993137c596007d7b001409287535ac4804e662bc58a3';
+
+if (verifySignatureLength(sig)) {
+  console.log(key.verify(msg, sig));
+} else {
+  console.log('Invalid signature length');
+}
+
+**Verificación del Bit Inicial en ECDSA**
+var elliptic = require('elliptic');
+var hash = require('hash.js');
+var toArray = elliptic.utils.toArray;
+var ec = new elliptic.ec('secp256k1');
+
+// Verificación del bit inicial de r y s
+function verifyLeadingZero(sig) {
+  var r = sig.slice(4, 68); // r en hexadecimal
+  var s = sig.slice(72, 136); // s en hexadecimal
+  if (r[0] === '0' || s[0] === '0') {
+    return false;
+  }
+  return true;
+}
+
+var msg = '313233343030';
+var sig = '30440220813ef79ccefa9a56f7ba805f0e478584fe5f0dd5f567bc09b5123ccbc983236502206ff18a52dcc0336f7af62400a6dd9b810732baf1ff758000d6f613a556eb31ba';
+var pk = '04b838ff44e5bc177bf21189d0766082fc9d843226887fc9760371100b7ee20a6ff0c9d75bfba7b31a6bca1974496eeb56de357071955d83c4b1badaa0b21832e9';
+
+var hashMsg = hash.sha256().update(toArray(msg, 'hex')).digest();
+var pubKey = ec.keyFromPublic(pk, 'hex');
+
+if (verifyLeadingZero(sig)) {
+  console.log('Valid signature: ' + pubKey.verify(hashMsg, sig));
+} else {
+  console.log('Invalid signature: leading zero detected');
+}

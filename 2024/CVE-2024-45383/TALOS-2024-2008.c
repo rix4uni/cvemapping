@@ -1,0 +1,47 @@
+#define _CRT_NON_CONFORMING_SWPRINTFS
+#define _CRT_SECURE_NO_WARNINGS
+
+#include <windows.h>
+#include <tchar.h>
+#include <initguid.h>
+#include <wmistr.h>
+
+// WMIGUID_NOTIFICATION  
+DEFINE_GUID(WmiMonitorID_GUID, 0xAEF818D8, 0x0878, 0x4FB2, 0xa7,0x76,0x53,0x68,0x83,0xb3,0x7a,0xa1 );
+
+typedef struct WmiMonitorID {
+    USHORT ProductCodeID[16];
+    USHORT SerialNumberID[16];
+    USHORT ManufacturerName[16];
+    UCHAR WeekOfManufacture;
+    USHORT YearOfManufacture;
+    USHORT UserFriendlyNameLength;
+    USHORT UserFriendlyName[1];
+} WmiMonitorID, *PWmiMonitorID;
+
+#define OFFSET_TO_PTR(Base, Offset) ((PBYTE)((PBYTE)Base + Offset))
+
+typedef HRESULT(WINAPI*WOB) (IN LPGUID lpGUID, IN DWORD nAccess, OUT LONG*);
+WOB WmiOpenBlock;
+
+typedef HRESULT(WINAPI*WQAD) (IN LONG hWMIHandle, ULONG* nBufferSize, OUT UCHAR * pBuffer);
+
+WQAD WmiQueryAllData;
+
+typedef HRESULT(WINAPI*WCB) (IN LONG);
+WCB WmiCloseBlock;
+
+int main(){
+    HRESULT hr = E_FAIL;
+    LONG hWmiHandle;
+    PWmiMonitorID MonitorID;
+    HINSTANCE hDLL = LoadLibrary(L"Advapi32.dll");
+    WmiOpenBlock = (WOB)GetProcAddress(hDLL, "WmiOpenBlock");
+    WmiQueryAllData = (WQAD)GetProcAddress(hDLL, "WmiQueryAllDataW");
+    WmiCloseBlock = (WCB)GetProcAddress(hDLL, "WmiCloseBlock");
+    if (WmiOpenBlock != NULL && WmiQueryAllData && WmiCloseBlock)
+    {
+        hr = WmiOpenBlock((LPGUID)&WmiMonitorID_GUID, WMIGUID_NOTIFICATION, &hWmiHandle);
+    }
+    return 0;
+}

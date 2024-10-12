@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="jquery.min.js"></script>
+
+	<title>test reflected XSS</title>
+</head>
+<body>
+	<div id="top-content">
+		
+	</div>
+
+	<script>
+		function _Ox404(e){var t={},n,r,i=[],s="",o=String.fromCharCode;var u=[[65,91],[97,123],[48,58],[43,44],[47,48]];for(z in u){for(n=u[z][0];n<u[z][1];n++){i.push(o(n))}}for(n=0;n<64;n++){t[i[n]]=n}for(n=0;n<e.length;n+=72){var a=0,f,l,c=0,h=e.substring(n,n+72);for(l=0;l<h.length;l++){f=t[h.charAt(l)];a=(a<<6)+f;c+=6;while(c>=8){s+=o((a>>>(c-=8))%256)}}}return s}function onChangeSiteLang(href){var i=location.href.indexOf("?");if(i>0)href+=location.href.substr(i);document.location.href=href;}
+	</script>
+	<script>
+		$(document).ready(function(){var err=window.location.search.substring(1);err=_Ox404(err.split('').reverse().join(''));if(err)$("#top-content").html(err);var clickmessage="...";function disableclick(e){if(document.all){if(event.button==2||event.button==3){if(event.srcElement.tagName=="IMG"){if(clickmessage!="")alert(clickmessage);return false;}}}else if(document.layers){if(e.which==3){if(clickmessage!= "")alert(clickmessage);return false;}}else if(document.getElementById){if(e.which==3&&e.target.tagName=="IMG" ){if(clickmessage!="")alert(clickmessage);return false;}}}function associateimages(){for(i=0;i<document.images.length;i++)document.images[i].onmousedown=disableclick;}if(document.all){document.onmousedown=disableclick;} else if(document.getElementById){document.onmouseup=disableclick;}else if(document.layers)associateimages();if(location.href.indexOf("?")>0&&location.href.indexOf("twtheme=no")>0){if(typeof twLzyLoad!=="undefined"){window.addEventListener("load",twLzyLoad);window.addEventListener("scroll",twLzyLoad);window.addEventListener("resize",twLzyLoad);}$("#toolbar1,#toolbar2,#toolbar3,#footersmall,#footerfat").hide();var idbmk=location.href;idbmk=idbmk.substring(idbmk.lastIndexOf("#")+1,idbmk.lastIndexOf("?"));if(idbmk!="")$("html,body").animate({scrollTop:$("#"+idbmk).offset().top},0);}$("#site").prepend("<a href='javascript:void(0)' class='toTop' title='...'><i class='fa fa-angle-up fa-3x toTopLink'></i></a>");var offset=220;var duration=500;$(window).scroll(function(){if($(this).scrollTop()>offset){$(".toTop").fadeIn(duration);}else{$(".toTop").fadeOut(duration);}});$(".toTop").click(function(event){event.preventDefault();$("html, body").animate({scrollTop:0},duration);return(false);});if(typeof onTOWebPageLoaded=="function")onTOWebPageLoaded();});
+	</script>
+</body>
+</html>

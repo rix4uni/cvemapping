@@ -1,0 +1,1 @@
+# Digisol-DG--GR1321-s-Password-Storage-in-Plaintext--CVE-2024-4232

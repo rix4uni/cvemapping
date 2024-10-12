@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# CUPS sürümünü kontrol et
+CUPS_VERSION=$(pacman -Qi cups | grep Version | awk '{print $3}')
+
+# Eğer CUPS yüklü değilse uyarı ver
+if [ -z "$CUPS_VERSION" ]; then
+    echo "CUPS yüklü değil. Bu sistem CVE-2024-47076 zafiyetinden etkilenmez."
+    exit 0
+fi
+
+# Zafiyetli sürüm aralığı (örneğin: 2.4.x)
+VULNERABLE_MAJOR_VERSION="2.4"
+
+# CUPS sürümünün zafiyetli olup olmadığını kontrol et
+if [[ "$CUPS_VERSION" == "$VULNERABLE_MAJOR_VERSION"* ]]; then
+    echo "UYARI: Bu sistemde CUPS sürümü $CUPS_VERSION ve bu sürüm CVE-2024-47076 zafiyetinden etkilenmektedir!"
+    echo "Sürümü güncellemek için: sudo pacman -Syu cups"
+else
+    echo "Bu sistemde yüklü olan CUPS sürümü $CUPS_VERSION, CVE-2024-47076 zafiyetinden etkilenmemektedir."
+fi

