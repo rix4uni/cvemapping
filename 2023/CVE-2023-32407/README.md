@@ -1,0 +1,1 @@
+# CVE-2023-32407-a-macOS-TCC-bypass-in-Metal

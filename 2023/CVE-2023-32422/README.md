@@ -1,0 +1,1 @@
+# CVE-2023-32422-a-macOS-TCC-bypass-in-sqlite

