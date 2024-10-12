@@ -1,0 +1,29 @@
+{
+    "Published": "2022-09-29T13:15:00",
+    "Modified": "2022-09-29T13:20:00",
+    "access": {
+        "authentication": "not available",
+        "complexity": "not available",
+        "vector": "not available"
+    },
+    "assigner": "cve@mitre.org",
+    "cvss": "not available",
+    "cvss_time": "not available",
+    "cvss_vector": "not available",
+    "cwe": "Unknown",
+    "id": "CVE-2022-40363",
+    "impact": {
+        "availability": "not available",
+        "confidentiality": "not available",
+        "integrity": "not available"
+    },
+    "last_modified": "2022-09-29T13:20:00",
+    "references": [
+        "https://vvx7.io/posts/2022/09/your-amiibos-haunted/",
+        "https://github.com/flipperdevices/flipperzero-firmware/pull/1697"
+    ],
+    "summary": "A buffer overflow in the component nfc_device_load_mifare_ul_data of Flipper Devices Inc., Flipper Zero before v0.65.2 allows attackers to cause a Denial of Service (DoS) via a crafted NFC file.",
+    "vulnerable_configuration": [],
+    "vulnerable_configuration_cpe_2_2": [],
+    "vulnerable_product": []
+}

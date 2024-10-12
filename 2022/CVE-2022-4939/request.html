@@ -1,0 +1,15 @@
+jQuery.ajax({
+    url: '/wp-admin/admin-ajax.php',
+    type: 'POST',
+    data: {
+        action: 'wcfm_ajax_controller',
+        controller: 'wcfm-membership',
+        method: 'update_membership_registration',
+        membership_registration: {
+            registration_role: 'administrator'
+        }
+    },
+    success: function(response) {
+        console.log(response);
+    }
+});

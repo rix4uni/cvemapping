@@ -1,0 +1,3 @@
+# CVE-2022-26485
+Tested against Firefox 78.0 (Windows)
+https://ftp.mozilla.org/pub/firefox/releases/78.0/win64/en-US/Firefox%20Setup%2078.0.exe

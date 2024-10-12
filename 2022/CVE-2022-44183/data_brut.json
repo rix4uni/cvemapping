@@ -1,0 +1,33 @@
+{
+    "Published": "2022-11-21T18:15:00",
+    "Modified": "2022-11-28T13:32:00",
+    "access": {
+        "authentication": "not available",
+        "complexity": "not available",
+        "vector": "not available"
+    },
+    "assigner": "cve@mitre.org",
+    "cvss": "not available",
+    "cvss_time": "not available",
+    "cvss_vector": "not available",
+    "cwe": "CWE-120",
+    "id": "CVE-2022-44183",
+    "impact": {
+        "availability": "not available",
+        "confidentiality": "not available",
+        "integrity": "not available"
+    },
+    "last_modified": "2022-11-28T13:32:00",
+    "references": [
+        "https://github.com/RobinWang825/IoT_vuln/tree/main/Tenda/AC18/formSetWifiGuestBasic"
+    ],
+    "summary": "Tenda AC18 V15.03.05.19 is vulnerable to Buffer Overflow via function formSetWifiGuestBasic.",
+    "vulnerable_configuration": [
+        "cpe:2.3:o:tenda:ac18_firmware:15.03.05.19:*:*:*:*:*:*:*",
+        "cpe:2.3:h:tenda:ac18:-:*:*:*:*:*:*:*"
+    ],
+    "vulnerable_configuration_cpe_2_2": [],
+    "vulnerable_product": [
+        "cpe:2.3:o:tenda:ac18_firmware:15.03.05.19:*:*:*:*:*:*:*"
+    ]
+}

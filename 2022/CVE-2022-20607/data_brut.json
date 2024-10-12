@@ -1,0 +1,32 @@
+{
+    "Published": "2022-12-16T16:15:00",
+    "Modified": "2022-12-21T16:19:00",
+    "access": {
+        "authentication": "not available",
+        "complexity": "not available",
+        "vector": "not available"
+    },
+    "assigner": "security@android.com",
+    "cvss": "not available",
+    "cvss_time": "not available",
+    "cvss_vector": "not available",
+    "cwe": "CWE-787",
+    "id": "CVE-2022-20607",
+    "impact": {
+        "availability": "not available",
+        "confidentiality": "not available",
+        "integrity": "not available"
+    },
+    "last_modified": "2022-12-21T16:19:00",
+    "references": [
+        "https://source.android.com/security/bulletin/pixel/2022-12-01"
+    ],
+    "summary": "In the Pixel cellular firmware, there is a possible out of bounds write due to a missing bounds check. This could lead to remote code execution with LTE authentication needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android kernelAndroid ID: A-238914868References: N/A",
+    "vulnerable_configuration": [
+        "cpe:2.3:o:google:android:-:*:*:*:*:*:*:*"
+    ],
+    "vulnerable_configuration_cpe_2_2": [],
+    "vulnerable_product": [
+        "cpe:2.3:o:google:android:-:*:*:*:*:*:*:*"
+    ]
+}

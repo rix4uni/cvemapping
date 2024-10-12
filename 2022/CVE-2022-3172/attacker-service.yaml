@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: attacker-service
+  namespace: default
+spec:
+  selector:
+    app: attacker
+  ports:
+    - protocol: TCP
+      port: 443
+      targetPort: 443

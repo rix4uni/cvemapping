@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: attacker-deployment
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: attacker
+  template:
+    metadata:
+      labels:
+        app: attacker
+    spec:
+      containers:
+      - name: attacker
+        image: nginx:latest
+        ports:
+        - containerPort: 443
+        command: ["/bin/bash", "-c"]
+        args:
+          - |
+            mkdir -p /etc/nginx/certs
+            openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/nginx/certs/tls.key -out /etc/nginx/certs/tls.crt -subj "/CN=nginx-ssl-redirector"
+            echo 'server { listen 443 ssl; ssl_certificate /etc/nginx/certs/tls.crt; ssl_certificate_key /etc/nginx/certs/tls.key; location / { return 302 https://www.example.com/; } }' > /etc/nginx/conf.d/default.conf
+            nginx -g 'daemon off;'

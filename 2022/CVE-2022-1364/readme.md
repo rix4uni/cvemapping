@@ -1,0 +1,1 @@
+tested in Bromite v95.0.4638.79 arm_ChromePublic.apk 

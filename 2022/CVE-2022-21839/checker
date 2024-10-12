@@ -1,0 +1,42 @@
+# Function to get user or group associated with IP
+function Get-UserByIP {
+    param (
+        [Parameter(Mandatory=$true)]
+        [string]$IPAddress
+    )
+
+    # Get the user or group associated with the IP address
+    $IPAddress = [System.Net.IPAddress]::Parse($IPAddress)
+    $IPHostEntry = [System.Net.Dns]::GetHostEntry($IPAddress)
+    $HostName = $IPHostEntry.HostName
+
+    return $HostName
+}
+
+# Function to check access rights of IP address on a file
+function Check-FileAccess {
+    param (
+        [Parameter(Mandatory=$true)]
+        [string]$IPAddress,
+        [Parameter(Mandatory=$true)]
+        [string]$FilePath
+    )
+
+    $user = Get-UserByIP -IPAddress $ipAddress
+    $access = Get-Acl $FilePath
+    $readAccess = $false
+    foreach ($acc in $access.Access){
+        if ($acc.IdentityReference -eq $user -and $acc.FileSystemRights -eq "ReadAndExecute"){
+            $readAccess = $true
+            break
+        }
+    }
+    if($readAccess){
+        Write-Host "The IP: $IPAddress has read access to the file: $FilePath"
+    }
+    else{
+        Write-Host "The IP: $IPAddress does not have read access to the file: $FilePath"
+    }
+}
+
+Check-FileAccess -IPAddress 8.8.8.8 -FilePath 'C:\Windows\System32\EventTracing.dll'

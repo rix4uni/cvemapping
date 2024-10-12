@@ -1,0 +1,33 @@
+# Exploit Title: Sanitization Management System 1.0: Stored XSS
+ # Exploit Author: Lohith Velagapudi
+ # Vendor Name: oretnom23 
+ # Vendor Homepage:  https://www.sourcecodester.com/php/15770/sanitization-management-system-project-php-and-mysql-free-source-code.html
+ # Software Link:  https://www.sourcecodester.com/php/15770/sanitization-management-system-project-php-and-mysql-free-source-code.html
+ # Version: v1.0 
+ # Tested on: Parrot GNU/Linux 4.10, Apache 
+ # CVE: CVE-2022-3518
+  
+  
+ Description:- 
+ A Stored XSS issue in  Sanitization Management System 1.0 allows to inject Arbitrary JavaScript in create user creation account First Name, Middle name and Last Name
+  
+  
+ ` 
+ Payload used:- 
+<script>confirm(1)</script>
+  
+ ` 
+ Parameter:-  
+ First Name
+ Middle Name
+ Last Name
+  
+  
+ ` 
+ Steps to reproduce:- 
+  
+ 1. First go the admin login 
+ 2. From there go to "User creation" and we fill out the details.
+ 3.  We put our payload in First Name, Middle Name and Last name 
+ Payload:   <script>confirm(1)</script>
+ 4.  Now when the account is created our payload has been executed.

@@ -1,0 +1,1 @@
+POC Exploit for CVE-2022-26488 - Python for Windows (CPython) escalation of privilege vulnerability, discovered by the Lockheed Martin Red Team.
