@@ -1,0 +1,98 @@
+rochar_m
+rodrig_i
+
+
+          Man local exploit CVE-2000-0170
+          ===============================
+
+
+  send to: benham_f
+
+
+  Buffer overflow in the man program in Linux allows local users to gain
+  privileges via the MANPAGER environmental variable.
+
+  http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2000-0170
+
+  Affected distributions are:
+
+  * Turbolinux up to 4.4
+  * Red Hat Linux up to 6.2
+
+
+1. Testing
+
+  The environements variables are located near the bottom of the stack.
+  We will modify the MANPAGER var and see what is happening.
+
+    export MANPAGER=`perl -e 'print "A" x 4053'`
+
+  * writting 4053 bytes to $MANPAGER leads to ... nothing special.
+  * writting 4054 bytes to $MANPAGER leads to ... an "illegal instruction".
+  * writting 4055 bytes to $MANPAGER leads to ... a "Segmentation fault".
+
+  When we used gdb we found that we are erasing EIP 1st byte at 4059
+  But we are not using that information since we tried not to use gdb and
+  use a brutefore way.
+
+  The size of our payload will be 4054 + 40 (a couple of bytes in order to
+  be sure to erase esp).
+
+  we will use a length of 4094 in order to be sure to erase EIP and for
+  alignments purposes. If the alignment is wrong we will modify the size
+  later.
+
+
+2. Exploitation
+
+  The payload we will put in MANPAGER is filled with NOP instructions,
+  a shellcode and repeated return addresses.
+
+  The goal is to find an address in the middle of the NOPs and overwrite
+  the return address with.
+  We will erase the return address in order to modify where the instruction
+  pointer points in order to have our program's next instruction in the
+  middle of our NOP sled.
+
+  If the EIP register points to any address in the NOP sled it will
+  sequentially execute every NOP instruction until it reaches and executes
+  the shellcode.
+
+  From now on its just a matter of overwriting the return address with an
+  address which leads anywhere in the NOP.
+  With a simple C program we can get the address in the stack of where our
+  environment variable will be located:
+
+      printf("%s is at %p"\n", argv[1], getenv(argv[1]));
+
+  So we can write repeatedly that address plus a certain offset in order to
+  have the new return address in the middle of the NOP sled.
+
+  We dont have to be really precise about the address because we have a large
+  NOP sled. We are also erasing the return address in a "bruteforce" way
+  because we are writing repeatedly addresses at the end of our shellcode.
+  Then we dont really care exactly where is esp, and we can modify the length
+  of our payload in order to align the range of our ret addresses for them
+  to match the esp address we are targeting. We could try size - 1,
+  size - 2 or size - 3 if needed.
+
+  So we wrote a small perl script in order to show that its working.
+
+
+  ---------------------------------------------------------------------------
+
+
+  We had no code to rely on, and were not using gdb at first since we wanted
+  to try a bruteforce method.
+  Afterwards, using gdb, we defined exactly where $esp was on the stack, the
+  4 bytes starting at 4059 (4059 to 4062) ...
+
+  In order to proove our sniping skills :P , you can launch the perl script
+  like that:
+
+    perl exploit.pl 0 4062 1
+
+  offset to 0 should work, 4062 is the size since 4058 to 4062 is where esp
+  is located and 1 is the number of times you want to write the addr (in this
+  case once at the end of the payload.
+
