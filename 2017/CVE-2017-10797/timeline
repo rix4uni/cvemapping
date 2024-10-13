@@ -1,0 +1,135 @@
+n4xh4ck5 posted a comment.	Jul 2nd (7 months ago)
+In the next steps it describes the PoC to show the vulnerability:
+
+Go to the demo website: https://demo.owncloud.org/index.php/login
+Authenticated using demo/demo such as credentials.
+Go to the user settings.
+Analyzing the traffic, it can be appreciated the next URL:
+
+https://demo.owncloud.org/index.php/avatar/demo/1
+
+The server responds:
+
+"{"data"}: ("displayname":"demo")}
+
+So, if it changes in the URL the value "demo" by another:
+
+For example, by a valid user such as admin:
+
+https://demo.owncloud.org/index.php/avatar/admin/1
+
+The server responds: "{"data"}: ("displayname":"admin")}
+
+but it changes by a user not valid such as "noexiste":
+
+https://demo.owncloud.org/index.php/avatar/noexiste/1
+
+the server responds: "{"data"}: ("displayname":"")}
+
+The server responds differently depending on the legitimacy of the user, it is possible to enumerate users.
+
+I have reviewed the CVE and I haven't found about this vulnerability. I have found another user enumeration in the CVE-2017-5865 (http://www.cvedetails.com/cve/CVE-2017-5865/) in another location.
+
+I have also attached the evidences.
+
+Kind regards.
+
+3 attachments:
+F199591: enumeracion_user1.png
+F199590: enumeracion_user3.png
+F199589: enumeracion_user2.png
+pprochaska posted a comment.	Jul 5th (7 months ago)
+Nice catch! We have confirmed this vulnerability and have escalated this internally.
+
+We will now proceed as following:
+
+Work on a patch and send it back to you to request it for verification
+Validate the impact and determine a potential bounty payout
+Release an advisory and an update
+For 3 can you please let me know how you want to get credited on our advisory on https://owncloud.org/security/advisories/ ? - Please include:
+
+Your name
+E-mail (optional)
+Company (optional)
+pprochaska changed the status to Triaged.	Jul 5th (7 months ago)
+n4xh4ck5 posted a comment.	Jul 5th (7 months ago)
+Hi,
+My data are:
+
+Your Name: Ignacio Brihuega Rodríguez
+E-mail: brihuega.nacho@gmail.com
+I have reserved a CVE with mitre (CVE-2017-10797), but the information is confidential, I have not disclosure the vulnerability to guarantee the confidentiality of this
+
+if you let me know an email, I will send you the CVE.
+
+I am looking forward to hear from you.
+
+Do not hesitate to contact me with anything.
+
+Kind regards.
+
+n4xh4ck5 posted a comment.	Oct 30th (3 months ago)
+Hello,
+
+Any update?
+
+I am looking forward to hear from you.
+
+Do not hesitate to contact me with anything.
+
+Kind regards.
+
+settermjd posted a comment.	Jan 15th (14 days ago)
+I'm currently chasing this up. I'll add a further update when I know more.
+
+settermjd posted a comment.	Jan 15th (14 days ago)
+FWIW, this isn't user enumeration, rather it's brute forcing usernames.
+
+n4xh4ck5 posted a comment.	Jan 15th (14 days ago)
+Hi,
+
+"pprochaska" replied me confirmiting the vunerability such as you could be in the mail thread the last Jul 5th in 2017:
+
+"pprochaska posted a comment. Jul 5th (6 months ago)
+Nice catch! We have confirmed this vulnerability and have escalated this internally.
+
+We will now proceed as following:
+
+Work on a patch and send it back to you to request it for verification
+Validate the impact and determine a potential bounty payout
+Release an advisory and an update
+For 3 can you please let me know how you want to get credited on our advisory on https://owncloud.org/security/advisories/ ? - Please include:
+
+Your name
+E-mail (optional)
+Company (optional)"
+
+I don't understand this new reply.
+
+Analyzing the URL structure:
+
+https://demo.owncloud.org/index.php/avatar/<<USERNAME>>/1
+
+depending on the legitimacy of the username entered, the application returns a different error message, allowing users to be enumerated.
+
+For this, the process could be auntomatizarse through diccinaries of typical usernames such as admin, administrator, guest or demo being able to know if some of the users are registered. It is the first step to do brute force attack against the usernames detected through the vulnerability of user enumerations explained.
+
+In these cases, the security recommendation is the web application returns the same error menssage 
+independently of the legitimacy of the username entered.
+
+For example, in this case:
+
+the server responds: "{"data"}: ("displayname":"")}
+
+or simply:
+
+the server responds: "{"data"}: ("displayname":"<<Resource doesn't find it>> ")}
+
+I am looking forward to hear from you.
+
+Do not hesitate to contact me with anything.
+
+Kind regards.
+
+settermjd posted a comment.	Jan 29th (about 1 hr ago)
+Hi @n4xh4ck5, I appreciate what @pprochaska wrote, but after discussing the issue further with the team, this is not regarded as an issue, rather as an unfortunate by-product of required functionality. Here's why; if you can't perform this kind of user enumeration then rendering avatars when sharing content with users isn't possible. There are a variety of other contexts where this functionality is also required. For what it's worth, this functionality is similar to how other services, such as GitHub, work.

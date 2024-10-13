@@ -1,0 +1,4 @@
+<zimlet name="com_zgheb_shf" version="1.0.0" label="SHF - Zimbra Security Hotfix for CVE-2017-8802" description="This hotfix disables the show snippet / fragment functionality (hotkey Q), thus patching https://bugzilla.zimbra.com/show_bug.cgi?id=108265 which is fixed in Zimbra 8.8.3">
+   <include>com_zgheb_shf.js</include>
+   <handlerObject>com_zgheb_shf_HandlerObject</handlerObject>
+</zimlet>

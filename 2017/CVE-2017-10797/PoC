@@ -1,0 +1,40 @@
+Class  User Enumeration
+CVE
+Remote  Yes
+
+
+Credit  n4xh4ck5
+Home    https://github.com/n4xh4ck5
+Vulnerable Owncloud Server 8.1 to 10.0
+
+Once time authenticated in the application, the Owncloud funcionality let to User enumeration due the different error messages of the server.
+
+The vulnerabiblity it finds in Owncloud Server 8.1 to 10.0.
+
+In the next steps it describes the PoC to show the vulnerability:
+
+- Go to the user settings.
+
+- Analyzing the traffic, it can be appreciated the next URL (In this case I used to demo.owcloud.org such as target trought Bug Bounty program Hacker One):
+
+https://demo.owncloud.org/index.php/avatar/demo/1
+
+The server responds:
+
+"{"data"}: ("displayname":"demo")}
+
+So, if it changes in the URL the value "demo" by another:
+
+For example, by a valid user such as admin:
+
+https://demo.owncloud.org/index.php/avatar/admin/1
+
+The server responds: "{"data"}: ("displayname":"admin")}
+
+but it changes by a user not valid such as "noexiste":
+
+https://demo.owncloud.org/index.php/avatar/noexiste/1
+
+the server responds: "{"data"}: ("displayname":"")}
+
+The server responds differently depending on the legitimacy of the user, it is possible to enumerate users.

@@ -1,0 +1,26 @@
+diff --git a/include/mbedtls/dhm.h b/include/mbedtls/dhm.h
+index d7ab152..9fcd54d 100644
+--- a/include/mbedtls/dhm.h
++++ b/include/mbedtls/dhm.h
+@@ -124,7 +124,7 @@
+     "CDF93ACC44328387315D75E198C641A480CD86A1B9E587E8" \
+     "BE60E69CC928B2B9C52172E413042E9B23F10B0E16E79763" \
+     "C9B53DCF4BA80A29E3FB73C16B8E75B97EF363E2FFA31F71" \
+-    "CF9DE5384E71B81C0AC4DFFE0C10E64F"
++    "CF9DE5384E71B81C0AC4DFFE0C10E64E"
+ 
+ #define MBEDTLS_DHM_RFC5114_MODP_2048_G              \
+     "AC4032EF4F2D9AE39DF30B5C8FFDAC506CDEBE7B89998CAF"\
+diff --git a/library/bignum.c b/library/bignum.c
+index 4c99e04..3ad89f1 100644
+--- a/library/bignum.c
++++ b/library/bignum.c
+@@ -1609,7 +1609,7 @@ int mbedtls_mpi_exp_mod( mbedtls_mpi *X, const mbedtls_mpi *A, const mbedtls_mpi
+     mbedtls_mpi RR, T, W[ 2 << MBEDTLS_MPI_WINDOW_SIZE ], Apos;
+     int neg;
+ 
+-    if( mbedtls_mpi_cmp_int( N, 0 ) < 0 || ( N->p[0] & 1 ) == 0 )
++    if( mbedtls_mpi_cmp_int( N, 0 ) < 0 )
+         return( MBEDTLS_ERR_MPI_BAD_INPUT_DATA );
+ 
+     if( mbedtls_mpi_cmp_int( E, 0 ) < 0 )

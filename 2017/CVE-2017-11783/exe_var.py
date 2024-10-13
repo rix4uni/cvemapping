@@ -1,0 +1,58 @@
+from ctypes import *
+from ctypes.wintypes import *
+import ctypes
+import time
+import os
+
+PVOID = c_void_p
+ULONG_PTR = PVOID
+
+def CTL_CODE(DeviceType, Function, Method, Access) : 
+    return (DeviceType << 16) | (Access << 14) | (Function << 2) | Method
+def DEVICE_TYPE_FROM(ctrlCode):
+    return (ctrlCode & 0xffff0000) >> 16
+def METHOD_FORM_CTL_CODE(ctrlCode):
+    return ctrlCode & 3
+def HRESULT_FROM_WIN32(x):
+    x = c_long(x).value
+    if x<0:
+        return x
+    return c_long(0x80070000 | (x&0xffff)).value
+def touch(path):
+    with open(path, 'a'):
+        os.utime(path, None)
+
+class REQUEST_OPLOCK_INPUT_BUFFER(Structure):
+    _fields_ = [
+    ("StructureVersion", WORD),
+    ("StructureLength", WORD),
+    ("RequestOplockLevel", DWORD), 
+    ("Flags", DWORD)
+    ]
+
+class REQUEST_OPLOCK_OUTPUT_BUFFER(Structure):
+    _fields_ = [
+     ("StructureVersion", WORD),
+     ("StructureLength", WORD),
+     ("OriginalOplockLevel", DWORD), 
+     ("NewOplockLevel", DWORD),
+     ("Flags", DWORD),
+     ("AccessMode", DWORD),
+     ("ShareMode", WORD)
+     ]
+
+# Variable
+FILE_DEVICE_FILE_SYSTEM = 0x00000009
+METHOD_BUFFERED = 0x0
+FILE_ANY_ACCESS = 0x0
+
+FSCTL_REQUEST_OPLOCK = CTL_CODE(FILE_DEVICE_FILE_SYSTEM, 144, METHOD_BUFFERED, FILE_ANY_ACCESS)
+REQUEST_OPLOCK_CURRENT_VERSION = 0x0
+REQUEST_OPLOCK_INPUT_FLAG_REQUEST   = 0x1
+REQUEST_OPLOCK_INPUT_FLAG_ACK       = 0x2
+REQUEST_OPLOCK_INPUT_FLAG_COMPLETE_ACK_ON_CLOSE = 0x4
+REQUEST_OPLOCK_OUTPUT_FLAG_ACK_REQUIRED     = 0x1
+REQUEST_OPLOCK_OUTPUT_FLAG_MODES_PROVIDED   = 0x2
+OPLOCK_LEVEL_CACHE_READ = 0x1
+OPLOCK_LEVEL_CACHE_HANDLE = 0x2
+OPLOCK_LEVEL_CACHE_WRITE = 0x4

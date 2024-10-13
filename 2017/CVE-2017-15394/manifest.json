@@ -1,0 +1,12 @@
+{
+  "manifest_version":2,
+  "name":"IDN Homograph Attack Demo",
+  "version":"1.0",
+  "description":"View extension details",
+  "permissions":[
+    "https://ɡoogle.com/",
+    "https://apрle.com/",
+    "https://wіkipedia.com/"
+  ],
+  "content_security_policy":"script-src 'self' 'unsafe-eval'; object-src 'self';"
+}

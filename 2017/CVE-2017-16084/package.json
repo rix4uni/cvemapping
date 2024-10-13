@@ -1,0 +1,29 @@
+{
+  "name": "list-n-stream",
+  "version": "0.0.10",
+  "description": "super basic dirlist and file streaming server",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/KoryNunn/list-n-stream.git"
+  },
+  "dependencies": {
+    "beeline": "~0.2.1",
+    "commander": "~2.1.0"
+  },
+  "preferGlobal": "true",
+  "bin": {
+    "list-n-stream": "./server.js"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "devDependencies": {},
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/KoryNunn/list-n-stream/issues"
+  },
+  "homepage": "https://github.com/KoryNunn/list-n-stream#readme",
+  "keywords": []
+}
