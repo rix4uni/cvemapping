@@ -1,0 +1,134 @@
+//------------------------------------------------
+//--- 010 Editor
+//
+//      File: HFSPlus.bt
+//   Authors: Marcin 'Icewall' Noga
+//------------------------------------------------
+
+BigEndian();
+local int BLOCK_SIZE = 0x1000;
+
+typedef uint64 UInt64;
+typedef uint32 UInt32;
+typedef uint16 UInt16;
+typedef char   SInt8;
+typedef unsigned char   UInt8;
+
+typedef struct {
+    char   magic[4];
+    uint32 endian;
+    if (endian == 0x12345678)
+        BigEndian();
+    else
+        LittleEndian();
+    uint64 start;
+    uint64 end;
+    uint64 size;
+    uint32 blh_size;
+    uint32 checksum;
+    uint32 header_size;
+    char   pad[header_size - 44];
+} Header;
+
+typedef struct {
+    uint64 sector;
+    uint32 size;
+    uint32 next_ptr;
+} BlockInfo;
+
+typedef struct {
+    char data[BLOCK_SIZE];
+} BlockData;
+
+typedef struct {
+    local int start = FTell();
+    uint16    max_block_count;
+    uint16    num_block_info;
+    uint32    block_size;
+    uint32    checksum;
+    char      fixed_pad[4];
+    BlockInfo info[num_block_info];
+    local int pad_size = header.blh_size - num_block_info * 16 - 16;
+    char      pad[pad_size];
+    BlockData data[num_block_info-1] <optimize=false>;
+    FSeek( start + block_size );
+} BlockList;
+
+struct BTNodeDescriptor {
+    UInt32    fLink;
+    UInt32    bLink;
+    SInt8     kind;
+    UInt8     height;
+    UInt16    numRecords;
+    UInt16    reserved;
+};
+struct BTHeaderRec {
+    UInt16    treeDepth;
+    UInt32    rootNode;
+    UInt32    leafRecords;
+    UInt32    firstLeafNode;
+    UInt32    lastLeafNode;
+    UInt16    nodeSize;
+    UInt16    maxKeyLength;
+    UInt32    totalNodes;
+    UInt32    freeNodes;
+    UInt16    reserved1;
+    UInt32    clumpSize;      // misaligned
+    UInt8     btreeType;
+    UInt8     keyCompareType;
+    UInt32    attributes;     // long aligned again
+    UInt32    reserved3[16];
+};
+typedef struct BTHeaderRec BTHeaderRec;
+
+
+struct HFSPlusExtentDescriptor {
+    UInt32                  startBlock;
+    UInt32                  blockCount;
+};
+typedef struct HFSPlusExtentDescriptor HFSPlusExtentDescriptor;
+
+typedef HFSPlusExtentDescriptor HFSPlusExtentRecord[8];
+
+struct HFSPlusForkData {
+    UInt64                  logicalSize<format=hex>;
+    UInt32                  clumpSize;
+    UInt32                  totalBlocks<format=hex>;
+    HFSPlusExtentRecord     extents;
+};
+typedef struct HFSPlusForkData HFSPlusForkData;
+
+typedef UInt32 HFSCatalogNodeID;
+
+struct HFSPlusVolumeHeader {
+    UInt16              signature;
+    UInt16              version;
+    UInt32              attributes;
+    UInt32              lastMountedVersion;
+    UInt32              journalInfoBlock;
+    UInt32              createDate;
+    UInt32              modifyDate;
+    UInt32              backupDate;
+    UInt32              checkedDate;
+    UInt32              fileCount;
+    UInt32              folderCount;
+    UInt32              blockSize;
+    UInt32              totalBlocks;
+    UInt32              freeBlocks;
+    UInt32              nextAllocation;
+    UInt32              rsrcClumpSize;
+    UInt32              dataClumpSize;
+    HFSCatalogNodeID    nextCatalogID;
+    UInt32              writeCount;
+    UInt64              encodingsBitmap;
+    UInt32              finderInfo[8];
+    HFSPlusForkData     allocationFile;
+    HFSPlusForkData     extentsFile;
+    HFSPlusForkData     catalogFile;
+    HFSPlusForkData     attributesFile;
+    HFSPlusForkData     startupFile;
+};
+typedef struct HFSPlusVolumeHeader HFSPlusVolumeHeader;
+
+FSeek(0x400);
+HFSPlusVolumeHeader header;

