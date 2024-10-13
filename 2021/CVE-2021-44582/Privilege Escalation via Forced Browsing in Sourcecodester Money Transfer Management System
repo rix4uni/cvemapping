@@ -1,0 +1,14 @@
+# Exploit Title: Privilege Escalation via Forced Browsing
+# Google Dork: NA
+# Date: 11/03/2022
+# Exploit Author: Ali J.
+# Vendor Homepage: https://www.sourcecodester.com/
+# Software Link: https://www.sourcecodester.com/php/15015/money-transfer-management-system-send-money-businesses-php-free-source-code.html
+# Version: 1.0
+# Tested on: Windows 10
+# CVE : CVE-2021-44582
+
+Steps to Reproduce:
+1. Login to the Money Transfer Management System with admin credentials and copy the URL.
+2. Logout from the admin role and login with the normal user credentials, observe the available modules on the left side.
+3. Paste the admin URL and observe that the application is vulnerable to Privilege Escalation via Forced Browsing.

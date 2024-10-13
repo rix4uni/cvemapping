@@ -1,0 +1,45 @@
+{
+    "Published": "2021-11-04T16:15:00",
+    "Modified": "2022-10-24T16:06:00",
+    "access": {
+        "authentication": "NONE",
+        "complexity": "LOW",
+        "vector": "NETWORK"
+    },
+    "assigner": "psirt@cisco.com",
+    "cvss": 7.5,
+    "cvss_time": "2022-10-24T16:06:00",
+    "cvss_vector": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+    "cwe": "CWE-78",
+    "id": "CVE-2021-40113",
+    "impact": {
+        "availability": "PARTIAL",
+        "confidentiality": "PARTIAL",
+        "integrity": "PARTIAL"
+    },
+    "last_modified": "2022-10-24T16:06:00",
+    "references": [
+        "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-catpon-multivulns-CE3DSYGr"
+    ],
+    "summary": "Multiple vulnerabilities in the web-based management interface of the Cisco Catalyst Passive Optical Network (PON) Series Switches Optical Network Terminal (ONT) could allow an unauthenticated, remote attacker to perform the following actions: Log in with a default credential if the Telnet protocol is enabled Perform command injection Modify the configuration For more information about these vulnerabilities, see the Details section of this advisory.",
+    "vulnerable_configuration": [
+        "cpe:2.3:o:cisco:catalyst_pon_switch_cgp-ont-1p_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:cisco:catalyst_pon_switch_cgp-ont-1p:*:*:*:*:*:*:*:*",
+        "cpe:2.3:o:cisco:catalyst_pon_switch_cgp-ont-4p_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:cisco:catalyst_pon_switch_cgp-ont-4p:*:*:*:*:*:*:*:*",
+        "cpe:2.3:o:cisco:catalyst_pon_switch_cgp-ont-4pvc_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:cisco:catalyst_pon_switch_cgp-ont-4pvc:*:*:*:*:*:*:*:*",
+        "cpe:2.3:o:cisco:catalyst_pon_switch_cgp-ont-4tvcw_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:cisco:catalyst_pon_switch_cgp-ont-4tvcw:*:*:*:*:*:*:*:*",
+        "cpe:2.3:o:cisco:catalyst_pon_switch_cgp-ont-4pv_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:h:cisco:catalyst_pon_switch_cgp-ont-4pv:*:*:*:*:*:*:*:*"
+    ],
+    "vulnerable_configuration_cpe_2_2": [],
+    "vulnerable_product": [
+        "cpe:2.3:o:cisco:catalyst_pon_switch_cgp-ont-1p_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:o:cisco:catalyst_pon_switch_cgp-ont-4p_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:o:cisco:catalyst_pon_switch_cgp-ont-4pvc_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:o:cisco:catalyst_pon_switch_cgp-ont-4tvcw_firmware:*:*:*:*:*:*:*:*",
+        "cpe:2.3:o:cisco:catalyst_pon_switch_cgp-ont-4pv_firmware:*:*:*:*:*:*:*:*"
+    ]
+}

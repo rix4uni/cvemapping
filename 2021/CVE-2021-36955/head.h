@@ -1,0 +1,229 @@
+#pragma once
+#include <Windows.h>
+#include <stdio.h>
+#include <psapi.h>
+#include <tlhelp32.h>
+#pragma comment(lib, "Advapi32.lib")
+#pragma message ("Test output")
+
+LPVOID ntoskrnlBase = NULL;
+
+
+
+#define ThreadNameInformation 0x26
+
+typedef enum _THREADINFOCLASS {
+	ThreadBasicInformation,
+	ThreadTimes,
+	ThreadPriority,
+	ThreadBasePriority,
+	ThreadAffinityMask,
+	ThreadImpersonationToken,
+	ThreadDescriptorTableEntry,
+	ThreadEnableAlignmentFaultFixup,
+	ThreadEventPair_Reusable,
+	ThreadQuerySetWin32StartAddress,
+	ThreadZeroTlsCell,
+	ThreadPerformanceCount,
+	ThreadAmILastThread,
+	ThreadIdealProcessor,
+	ThreadPriorityBoost,
+	ThreadSetTlsArrayAddress,
+	ThreadIsIoPending,
+	ThreadHideFromDebugger,
+	ThreadBreakOnTermination,
+	ThreadSwitchLegacyState,
+	ThreadIsTerminated,
+	MaxThreadInfoClass
+} THREADINFOCLASS;
+
+
+typedef enum _SYSTEM_INFORMATION_CLASS {
+	SystemBasicInformation,
+	SystemProcessorInformation,             // obsolete...delete
+	SystemPerformanceInformation,
+	SystemTimeOfDayInformation,
+	SystemPathInformation,
+	SystemProcessInformation,
+	SystemCallCountInformation,
+	SystemDeviceInformation,
+	SystemProcessorPerformanceInformation,
+	SystemFlagsInformation,
+	SystemCallTimeInformation,
+	SystemModuleInformation,
+	SystemLocksInformation,
+	SystemStackTraceInformation,
+	SystemPagedPoolInformation,
+	SystemNonPagedPoolInformation,
+	SystemHandleInformation,
+	SystemObjectInformation,
+	SystemPageFileInformation,
+	SystemVdmInstemulInformation,
+	SystemVdmBopInformation,
+	SystemFileCacheInformation,
+	SystemPoolTagInformation,
+	SystemInterruptInformation,
+	SystemDpcBehaviorInformation,
+	SystemFullMemoryInformation,
+	SystemLoadGdiDriverInformation,
+	SystemUnloadGdiDriverInformation,
+	SystemTimeAdjustmentInformation,
+	SystemSummaryMemoryInformation,
+	SystemMirrorMemoryInformation,
+	SystemPerformanceTraceInformation,
+	SystemObsolete0,
+	SystemExceptionInformation,
+	SystemCrashDumpStateInformation,
+	SystemKernelDebuggerInformation,
+	SystemContextSwitchInformation,
+	SystemRegistryQuotaInformation,
+	SystemExtendServiceTableInformation,
+	SystemPrioritySeperation,
+	SystemVerifierAddDriverInformation,
+	SystemVerifierRemoveDriverInformation,
+	SystemProcessorIdleInformation,
+	SystemLegacyDriverInformation,
+	SystemCurrentTimeZoneInformation,
+	SystemLookasideInformation,
+	SystemTimeSlipNotification,
+	SystemSessionCreate,
+	SystemSessionDetach,
+	SystemSessionInformation,
+	SystemRangeStartInformation,
+	SystemVerifierInformation,
+	SystemVerifierThunkExtend,
+	SystemSessionProcessInformation,
+	SystemLoadGdiDriverInSystemSpace,
+	SystemNumaProcessorMap,
+	SystemPrefetcherInformation,
+	SystemExtendedProcessInformation,
+	SystemRecommendedSharedDataAlignment,
+	SystemComPlusPackage,
+	SystemNumaAvailableMemory,
+	SystemProcessorPowerInformation,
+	SystemEmulationBasicInformation,
+	SystemEmulationProcessorInformation,
+	SystemExtendedHandleInformation,
+	SystemLostDelayedWriteInformation,
+	SystemBigPoolInformation,
+	SystemSessionPoolTagInformation,
+	SystemSessionMappedViewInformation,
+	SystemHotpatchInformation,
+	SystemObjectSecurityMode,
+	SystemWatchdogTimerHandler,
+	SystemWatchdogTimerInformation,
+	SystemLogicalProcessorInformation,
+	SystemWow64SharedInformation,
+	SystemRegisterFirmwareTableInformationHandler,
+	SystemFirmwareTableInformation,
+	SystemModuleInformationEx,
+	SystemVerifierTriageInformation,
+	SystemSuperfetchInformation,
+	SystemMemoryListInformation,
+	SystemFileCacheInformationEx,
+	MaxSystemInfoClass  // MaxSystemInfoClass should always be the last enum
+} SYSTEM_INFORMATION_CLASS;
+
+
+
+typedef struct _SYSTEM_MODULE_ENTRY_INFO
+{
+	HANDLE Section;
+	PVOID MappedBase;
+	PVOID ImageBase;
+	ULONG ImageSize;
+	ULONG Flags;
+	USHORT LoadOrderIndex;
+	USHORT InitOrderIndex;
+	USHORT LoadCount;
+	USHORT OffsetToFileName;
+	UCHAR FullPathName[256];
+} SYSTEM_MODULE_ENTRY_INFO, * PSYSTEM_MODULE_ENTRY_INFO;
+
+typedef struct _SYSTEM_MODULE_INFORMATION
+{
+	ULONG NumberOfModules;
+	SYSTEM_MODULE_ENTRY_INFO Modules[1];
+} SYSTEM_MODULE_INFORMATION, * PSYSTEM_MODULE_INFORMATION;
+
+typedef struct
+{
+	DWORD64 Address;
+	DWORD64 PoolSize;
+	char PoolTag[4];
+	char Padding[4];
+} BIG_POOL_INFO, * PBIG_POOL_INFO;
+
+typedef struct _SYSTEM_HANDLE_TABLE_ENTRY_INFO {
+	USHORT UniqueProcessId;
+	USHORT CreatorBackTraceIndex;
+	UCHAR ObjectTypeIndex;
+	UCHAR HandleAttributes;
+	USHORT HandleValue;
+	PVOID Object;
+	ULONG GrantedAccess;
+} SYSTEM_HANDLE_TABLE_ENTRY_INFO, * PSYSTEM_HANDLE_TABLE_ENTRY_INFO;
+
+
+typedef struct _SYSTEM_HANDLE_INFORMATION {
+	ULONG NumberOfHandles;
+	SYSTEM_HANDLE_TABLE_ENTRY_INFO Handles[1];
+} SYSTEM_HANDLE_INFORMATION, * PSYSTEM_HANDLE_INFORMATION;
+
+typedef struct
+{
+	USHORT Length;
+	USHORT MaximumLength;
+	union
+	{
+		PWSTR  Buffer;
+		ULONG64 Dummy;
+	};
+} UNICODE_STRING, * PUNICODE_STRING;
+
+typedef struct _IO_STATUS_BLOCK {
+	union {
+		NTSTATUS Status;
+		PVOID Pointer;
+	};
+
+	ULONG_PTR Information;
+} IO_STATUS_BLOCK, * PIO_STATUS_BLOCK;
+
+typedef struct _OBJECT_ATTRIBUTES {
+	ULONG           Length;
+	HANDLE          RootDirectory;
+	PUNICODE_STRING ObjectName;
+	ULONG           Attributes;
+	PVOID           SecurityDescriptor;
+	PVOID           SecurityQualityOfService;
+} OBJECT_ATTRIBUTES, * POBJECT_ATTRIBUTES;
+
+typedef VOID(*RtlInitUnicodeStringFunc)(OUT PUNICODE_STRING DestinationString, IN PCWSTR SourceString OPTIONAL);
+
+typedef NTSTATUS(*NtCreateFileFunc)(__out PHANDLE FileHandle, __in ACCESS_MASK DesiredAccess, __in POBJECT_ATTRIBUTES ObjectAttributes, __out PIO_STATUS_BLOCK IoStatusBlock, __in_opt PLARGE_INTEGER AllocationSize, __in ULONG FileAttributes, __in ULONG ShareAccess, __in ULONG CreateDisposition, __in ULONG CreateOptions, __in_bcount_opt(EaLength) PVOID EaBuffer, __in ULONG EaLength);
+
+typedef NTSTATUS(*NtSetInformationThreadFunc)(HANDLE threadHandle, THREADINFOCLASS threadInformationClass, PVOID threadInformation, ULONG threadInformationLength);
+
+typedef NTSTATUS(*NtQuerySystemInformationFunc)(__in SYSTEM_INFORMATION_CLASS SystemInformationClass, __out_bcount_opt(SystemInformationLength) PVOID SystemInformation, __in ULONG SystemInformationLength, __out_opt PULONG ReturnLength);
+
+NtQuerySystemInformationFunc NtQuerySystemInformation = 0;
+
+NtSetInformationThreadFunc NtSetInformationThread = 0;
+
+RtlInitUnicodeStringFunc RtlInitUnicodeString = 0;
+
+NtCreateFileFunc NtCreateFile = 0;
+
+DWORD datas[0x100] = { 0 };
+
+DWORD64 LeakEporcessKtoken();
+
+DWORD64 GetGadgetAddr(const char* name);
+
+DWORD64 GetKernelPointer(HANDLE handle, DWORD type);
+
+DWORD64 GetModuleAddr(const char* modName);
+
+BOOL InitFuncAddr();
+

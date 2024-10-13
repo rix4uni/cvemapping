@@ -1,0 +1,13 @@
+# Exploit Title: Employee Daily Task Management System 1.0 - 'Name' Stored Cross-Site Scripting (XSS)
+# Vendor Homepage: https://www.sourcecodester.com/
+# Software Link: https://www.sourcecodester.com/sites/default/files/download/oretnom23/edtms.zip
+
+# Version: v1.0
+
+# Tested on: Windows 10
+
+As no sanitization is performed in the `name` parameter, it is possible to send XSS payload which gets stored as a result which results in Stored XSS.
+
+Mitigation: 
+
+Sanitize user input to mitigate from this attack.

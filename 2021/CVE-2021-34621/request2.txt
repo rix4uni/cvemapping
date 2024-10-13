@@ -1,0 +1,15 @@
+#change navreets according to request1 
+
+
+POST /wp-login.php HTTP/1.1
+Host: ca.bentley.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+Connection: close
+Content-Length: 104
+Accept: application/json, text/javascript, */*; q=0.01
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Origin: https://ca.bentley.com/
+Referer: https://ca.bentley.com/
+Accept-Encoding: gzip
+
+log=navreets@interact.sh&pwd=navreets@interact.sh&wp-submit=Log+In

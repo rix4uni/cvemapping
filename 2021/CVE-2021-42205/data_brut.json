@@ -1,0 +1,32 @@
+{
+    "Published": "2022-11-07T16:15:00",
+    "Modified": "2022-11-09T20:19:00",
+    "access": {
+        "authentication": "not available",
+        "complexity": "not available",
+        "vector": "not available"
+    },
+    "assigner": "cve@mitre.org",
+    "cvss": "not available",
+    "cvss_time": "not available",
+    "cvss_vector": "not available",
+    "cwe": "NVD-CWE-noinfo",
+    "id": "CVE-2021-42205",
+    "impact": {
+        "availability": "not available",
+        "confidentiality": "not available",
+        "integrity": "not available"
+    },
+    "last_modified": "2022-11-09T20:19:00",
+    "references": [
+        "https://www.emc.com.tw/upload/F2E/Vulnerability%20Report/Vulnerability%20Report_Miniport%20touchpad%20Windows%20driver_20221107.pdf"
+    ],
+    "summary": "ELAN Miniport touchpad Windows driver before 24.21.51.2, as used in PC hardware from multiple manufacturers, allows local users to cause a system crash by sending a certain IOCTL request, because that request is handled twice.",
+    "vulnerable_configuration": [
+        "cpe:2.3:a:lenovo:elan_miniport_touchpad_driver:-:*:*:*:*:windows:*:*"
+    ],
+    "vulnerable_configuration_cpe_2_2": [],
+    "vulnerable_product": [
+        "cpe:2.3:a:lenovo:elan_miniport_touchpad_driver:-:*:*:*:*:windows:*:*"
+    ]
+}

