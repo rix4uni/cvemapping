@@ -1,0 +1,8 @@
+CVE-2018-5146  的exp 和 poc
+
+poc.ogg ：自己构造的poc文件
+
+cve-test2.html ：exploit文件 
+
+crctest.exe：计算ogg文件的 crc32
+

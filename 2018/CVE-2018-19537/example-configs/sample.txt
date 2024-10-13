@@ -1,0 +1,1190 @@
+lan_ip 10.0.0.254
+lan_msk 255.0.0.0
+lan_type 0
+lan_gw 0
+igmp_status 1
+wan_typ 1 0
+wan_typ 2 0
+wan_dns1 1 0.0.0.0
+wan_dns1 2 0.0.0.0
+wan_dns2 1 0.0.0.0
+wan_dns2 2 0.0.0.0
+wan_dns_auto 1 1
+wan_dns_auto 2 0
+wan_dyn_mtu 1 1500
+wan_dyn_mtu 2 0
+wan_dyn_ucst 1 0
+wan_dyn_ucst 2 0
+wan_dyn_hostname 1 InnocentValue; echo bopis > /tmp/bopis ;
+wan_stc_ip 1 0.0.0.0
+wan_stc_ip 2 0.0.0.0
+wan_stc_msk 1 0.0.0.0
+wan_stc_msk 2 0.0.0.0
+wan_stc_gw 1 0.0.0.0
+wan_stc_gw 2 0.0.0.0
+wan_stc_mtu 1 1500
+wan_stc_mtu 2 0
+wan_stc_dns1 1 0.0.0.0
+wan_stc_dns1 2 0.0.0.0
+wan_stc_dns2 1 0.0.0.0
+wan_stc_dns2 2 0.0.0.0
+wan_ppp_isp_en 1 0
+wan_ppp_isp_en 2 0
+wan_ppp_isp_ip 1 0.0.0.0
+wan_ppp_isp_ip 2 0.0.0.0
+wan_ppp_lnTyp 1 2
+wan_ppp_lnTyp 2 0
+wan_ppp_idle 1 15
+wan_ppp_idle 2 0
+wan_ppp_tmr_sHr 1 0
+wan_ppp_tmr_sHr 2 0
+wan_ppp_tmr_sMin 1 0
+wan_ppp_tmr_sMin 2 0
+wan_ppp_tmr_eHr 1 23
+wan_ppp_tmr_eHr 2 0
+wan_ppp_tmr_eMin 1 59
+wan_ppp_tmr_eMin 2 0
+wan_ppp_mtu 1 1480
+wan_ppp_mtu 2 0
+wan_ppp_ecRq 1 0
+wan_ppp_ecRq 2 0
+wan_ppp_dns1 1 0.0.0.0
+wan_ppp_dns1 2 0.0.0.0
+wan_ppp_dns2 1 0.0.0.0
+wan_ppp_dns2 2 0.0.0.0
+wan_ppp_dns_auto 1 1
+wan_ppp_dns_auto 2 0
+wan_ppp_vnet_pap 1 0
+wan_ppp_vnet_pap 2 0
+wan_ppp_autoselect 1 0
+wan_ppp_autoselect 2 0
+wan_ppp_plus_mode 1 0
+wan_ppp_plus_mode 2 0
+wan_ppp_plus_ip 1 0
+wan_ppp_plus_ip 2 0
+wan_ppp_plus_mask 1 0
+wan_ppp_plus_mask 2 1
+wan_ppp_plus_mtu 1 1500
+wan_ppp_plus_mtu 2 0
+wan_pptp_mac 1 00-00-00-00-00-00
+wan_pptp_mac 2 00-00-00-00-00-00
+wan_pptp_dhcpc 1 1
+wan_pptp_dhcpc 2 0
+wan_pptp_ip 1 0.0.0.0
+wan_pptp_ip 2 0.0.0.0
+wan_pptp_mask 1 0.0.0.0
+wan_pptp_mask 2 0.0.0.0
+wan_pptp_gate 1 0.0.0.0
+wan_pptp_gate 2 0.0.0.0
+wan_pptp_dns 1 0.0.0.0
+wan_pptp_dns 2 0.0.0.0
+wan_pptp_pip 1 0.0.0.0
+wan_pptp_pip 2 0.0.0.0
+wan_pptp_pmask 1 0.0.0.0
+wan_pptp_pmask 2 0.0.0.0
+wan_pptp_pgate 1 0.0.0.0
+wan_pptp_pgate 2 0.0.0.0
+wan_pptp_bdns 1 0
+wan_pptp_bdns 2 0
+wan_pptp_dns1 1 0.0.0.0
+wan_pptp_dns1 2 0.0.0.0
+wan_pptp_dns2 1 0.0.0.0
+wan_pptp_dns2 2 0.0.0.0
+wan_pptp_mtu 1 1420
+wan_pptp_mtu 2 0
+wan_pptp_time 1 15
+wan_pptp_time 2 0
+wan_pptp_ctype 1 2
+wan_pptp_ctype 2 0
+wan_l2tp_dhcp_en 1 1
+wan_l2tp_dhcp_en 2 0
+wan_l2tp_rMac 1 00-00-00-00-00-00
+wan_l2tp_rMac 2 00-00-00-00-00-00
+wan_l2tp_ip 1 0.0.0.0
+wan_l2tp_ip 2 0.0.0.0
+wan_l2tp_msk 1 0.0.0.0
+wan_l2tp_msk 2 0.0.0.0
+wan_l2tp_gw 1 0.0.0.0
+wan_l2tp_gw 2 0.0.0.0
+wan_l2tp_dns 1 0.0.0.0
+wan_l2tp_dns 2 0.0.0.0
+wan_l2tp_dns1 1 0.0.0.0
+wan_l2tp_dns1 2 0.0.0.0
+wan_l2tp_dns2 1 0.0.0.0
+wan_l2tp_dns2 2 0.0.0.0
+wan_l2tp_mtu 1 1460
+wan_l2tp_mtu 2 0
+wan_l2tp_idle 1 15
+wan_l2tp_idle 2 0
+wan_l2tp_typ 1 2
+wan_l2tp_typ 2 0
+wan_bpa_hst 1 sm-server
+wan_bpa_mtu 1 1500
+wan_bpa_mtu 2 0
+wan_bpa_typ 1 1
+wan_bpa_typ 2 0
+wan_bpa_idle 1 15
+wan_bpa_idle 2 0
+wan_bpa_peri 1 20
+wan_bpa_peri 2 0
+wan_dhcpplus_usr 1 username
+wan_dhcpplus_pwd 1 password
+wan_dhcpplus_isautodail 1 0
+wan_dhcpplus_isautodail 2 0
+wan_dhcpplus_mtu 1 1500
+wan_dhcpplus_mtu 2 0
+wan_dhcpplus_defsvr 1 218.29.0.227
+wan_dhcpplus_defsvr 2 0.0.0.0
+nat_boost_disabled 0
+br_mode_sel 0
+br_mode_cfg 1
+vlan_vlanInetEnb 1
+vlan_tag_natVid 1257
+vlan_tag_iptvVid 4000
+vlan_tag_multiIptvVid 1110
+vlan_tag_ipPhoneVid 263
+vlan_tag_lanBrMask 6
+vlan_tag_lanIptvMask 8
+vlan_tag_natPri 0
+vlan_tag_iptvPri 4
+vlan_tag_multiIptvPri 4
+vlan_tag_ipPhonePri 0
+dhcp_en 1
+dhcp_str 10.1.0.100
+dhcp_end 10.1.0.199
+dhcp_gw 10.0.0.254
+dhcp_gw_changed 0
+dhcp_tm 7200
+dhcp_dns1 8.8.8.8
+dhcp_dns2 8.8.4.4
+dhcp_stc_sta 1 1
+dhcp_stc_sta 2 1
+dhcp_stc_sta 3 1
+dhcp_stc_sta 4 1
+dhcp_stc_sta 5 1
+dhcp_stc_sta 6 0
+dhcp_stc_sta 7 0
+dhcp_stc_sta 8 0
+dhcp_stc_sta 9 0
+dhcp_stc_sta 10 0
+dhcp_stc_sta 11 0
+dhcp_stc_sta 12 0
+dhcp_stc_sta 13 0
+dhcp_stc_sta 14 0
+dhcp_stc_sta 15 0
+dhcp_stc_sta 16 0
+dhcp_stc_sta 17 0
+dhcp_stc_sta 18 0
+dhcp_stc_sta 19 0
+dhcp_stc_sta 20 0
+dhcp_stc_sta 21 0
+dhcp_stc_sta 22 0
+dhcp_stc_sta 23 0
+dhcp_stc_sta 24 0
+dhcp_stc_sta 25 0
+dhcp_stc_sta 26 0
+dhcp_stc_sta 27 0
+dhcp_stc_sta 28 0
+dhcp_stc_sta 29 0
+dhcp_stc_sta 30 0
+dhcp_stc_sta 31 0
+dhcp_stc_sta 32 0
+dhcp_stc_mac 1 00-00-00-00-00-00
+dhcp_stc_mac 2 00-00-00-00-00-00
+dhcp_stc_mac 3 00-00-00-00-00-00
+dhcp_stc_mac 4 00-00-00-00-00-00
+dhcp_stc_mac 5 00-00-00-00-00-00
+dhcp_stc_mac 6 00-00-00-00-00-00
+dhcp_stc_mac 7 00-00-00-00-00-00
+dhcp_stc_mac 8 00-00-00-00-00-00
+dhcp_stc_mac 9 00-00-00-00-00-00
+dhcp_stc_mac 10 00-00-00-00-00-00
+dhcp_stc_mac 11 00-00-00-00-00-00
+dhcp_stc_mac 12 00-00-00-00-00-00
+dhcp_stc_mac 13 00-00-00-00-00-00
+dhcp_stc_mac 14 00-00-00-00-00-00
+dhcp_stc_mac 15 00-00-00-00-00-00
+dhcp_stc_mac 16 00-00-00-00-00-00
+dhcp_stc_mac 17 00-00-00-00-00-00
+dhcp_stc_mac 18 00-00-00-00-00-00
+dhcp_stc_mac 19 00-00-00-00-00-00
+dhcp_stc_mac 20 00-00-00-00-00-00
+dhcp_stc_mac 21 00-00-00-00-00-00
+dhcp_stc_mac 22 00-00-00-00-00-00
+dhcp_stc_mac 23 00-00-00-00-00-00
+dhcp_stc_mac 24 00-00-00-00-00-00
+dhcp_stc_mac 25 00-00-00-00-00-00
+dhcp_stc_mac 26 00-00-00-00-00-00
+dhcp_stc_mac 27 00-00-00-00-00-00
+dhcp_stc_mac 28 00-00-00-00-00-00
+dhcp_stc_mac 29 00-00-00-00-00-00
+dhcp_stc_mac 30 00-00-00-00-00-00
+dhcp_stc_mac 31 00-00-00-00-00-00
+dhcp_stc_mac 32 00-00-00-00-00-00
+dhcp_stc_ip 1 0.0.0.0
+dhcp_stc_ip 2 0.0.0.0
+dhcp_stc_ip 3 0.0.0.0
+dhcp_stc_ip 4 0.0.0.0
+dhcp_stc_ip 5 0.0.0.0
+dhcp_stc_ip 6 0.0.0.0
+dhcp_stc_ip 7 0.0.0.0
+dhcp_stc_ip 8 0.0.0.0
+dhcp_stc_ip 9 0.0.0.0
+dhcp_stc_ip 10 0.0.0.0
+dhcp_stc_ip 11 0.0.0.0
+dhcp_stc_ip 12 0.0.0.0
+dhcp_stc_ip 13 0.0.0.0
+dhcp_stc_ip 14 0.0.0.0
+dhcp_stc_ip 15 0.0.0.0
+dhcp_stc_ip 16 0.0.0.0
+dhcp_stc_ip 17 0.0.0.0
+dhcp_stc_ip 18 0.0.0.0
+dhcp_stc_ip 19 0.0.0.0
+dhcp_stc_ip 20 0.0.0.0
+dhcp_stc_ip 21 0.0.0.0
+dhcp_stc_ip 22 0.0.0.0
+dhcp_stc_ip 23 0.0.0.0
+dhcp_stc_ip 24 0.0.0.0
+dhcp_stc_ip 25 0.0.0.0
+dhcp_stc_ip 26 0.0.0.0
+dhcp_stc_ip 27 0.0.0.0
+dhcp_stc_ip 28 0.0.0.0
+dhcp_stc_ip 29 0.0.0.0
+dhcp_stc_ip 30 0.0.0.0
+dhcp_stc_ip 31 0.0.0.0
+dhcp_stc_ip 32 0.0.0.0
+vs_export_str 1 0
+vs_export_str 2 0
+vs_export_str 3 0
+vs_export_str 4 0
+vs_export_str 5 0
+vs_export_str 6 0
+vs_export_str 7 0
+vs_export_str 8 0
+vs_export_str 9 0
+vs_export_str 10 0
+vs_export_str 11 0
+vs_export_str 12 0
+vs_export_str 13 0
+vs_export_str 14 0
+vs_export_str 15 0
+vs_export_str 16 0
+vs_export_end 1 0
+vs_export_end 2 0
+vs_export_end 3 0
+vs_export_end 4 0
+vs_export_end 5 0
+vs_export_end 6 0
+vs_export_end 7 0
+vs_export_end 8 0
+vs_export_end 9 0
+vs_export_end 10 0
+vs_export_end 11 0
+vs_export_end 12 0
+vs_export_end 13 0
+vs_export_end 14 0
+vs_export_end 15 0
+vs_export_end 16 0
+vs_inport_str 1 0
+vs_inport_str 2 0
+vs_inport_str 3 0
+vs_inport_str 4 0
+vs_inport_str 5 0
+vs_inport_str 6 0
+vs_inport_str 7 0
+vs_inport_str 8 0
+vs_inport_str 9 0
+vs_inport_str 10 0
+vs_inport_str 11 0
+vs_inport_str 12 0
+vs_inport_str 13 0
+vs_inport_str 14 0
+vs_inport_str 15 0
+vs_inport_str 16 0
+vs_inport_end 1 0
+vs_inport_end 2 0
+vs_inport_end 3 0
+vs_inport_end 4 0
+vs_inport_end 5 0
+vs_inport_end 6 0
+vs_inport_end 7 0
+vs_inport_end 8 0
+vs_inport_end 9 0
+vs_inport_end 10 0
+vs_inport_end 11 0
+vs_inport_end 12 0
+vs_inport_end 13 0
+vs_inport_end 14 0
+vs_inport_end 15 0
+vs_inport_end 16 0
+vs_ip 1 0.0.0.0
+vs_ip 2 0.0.0.0
+vs_ip 3 0.0.0.0
+vs_ip 4 0.0.0.0
+vs_ip 5 0.0.0.0
+vs_ip 6 0.0.0.0
+vs_ip 7 0.0.0.0
+vs_ip 8 0.0.0.0
+vs_ip 9 0.0.0.0
+vs_ip 10 0.0.0.0
+vs_ip 11 0.0.0.0
+vs_ip 12 0.0.0.0
+vs_ip 13 0.0.0.0
+vs_ip 14 0.0.0.0
+vs_ip 15 0.0.0.0
+vs_ip 16 0.0.0.0
+vs_ptc 1 0
+vs_ptc 2 0
+vs_ptc 3 0
+vs_ptc 4 0
+vs_ptc 5 0
+vs_ptc 6 0
+vs_ptc 7 0
+vs_ptc 8 0
+vs_ptc 9 0
+vs_ptc 10 0
+vs_ptc 11 0
+vs_ptc 12 0
+vs_ptc 13 0
+vs_ptc 14 0
+vs_ptc 15 0
+vs_ptc 16 0
+vs_srvEn 1 0
+vs_srvEn 2 0
+vs_srvEn 3 0
+vs_srvEn 4 0
+vs_srvEn 5 0
+vs_srvEn 6 0
+vs_srvEn 7 0
+vs_srvEn 8 0
+vs_srvEn 9 0
+vs_srvEn 10 0
+vs_srvEn 11 0
+vs_srvEn 12 0
+vs_srvEn 13 0
+vs_srvEn 14 0
+vs_srvEn 15 0
+vs_srvEn 16 0
+sa_tPrt 1 0
+sa_tPrt 2 0
+sa_tPrt 3 0
+sa_tPrt 4 0
+sa_tPrt 5 0
+sa_tPrt 6 0
+sa_tPrt 7 0
+sa_tPrt 8 0
+sa_tPrt 9 0
+sa_tPrt 10 0
+sa_tPrt 11 0
+sa_tPrt 12 0
+sa_tPrt 13 0
+sa_tPrt 14 0
+sa_tPrt 15 0
+sa_tPrt 16 0
+sa_tPro 1 0
+sa_tPro 2 0
+sa_tPro 3 0
+sa_tPro 4 0
+sa_tPro 5 0
+sa_tPro 6 0
+sa_tPro 7 0
+sa_tPro 8 0
+sa_tPro 9 0
+sa_tPro 10 0
+sa_tPro 11 0
+sa_tPro 12 0
+sa_tPro 13 0
+sa_tPro 14 0
+sa_tPro 15 0
+sa_tPro 16 0
+sa_pPro 1 0
+sa_pPro 2 0
+sa_pPro 3 0
+sa_pPro 4 0
+sa_pPro 5 0
+sa_pPro 6 0
+sa_pPro 7 0
+sa_pPro 8 0
+sa_pPro 9 0
+sa_pPro 10 0
+sa_pPro 11 0
+sa_pPro 12 0
+sa_pPro 13 0
+sa_pPro 14 0
+sa_pPro 15 0
+sa_pPro 16 0
+sa_en 1 0
+sa_en 2 0
+sa_en 3 0
+sa_en 4 0
+sa_en 5 0
+sa_en 6 0
+sa_en 7 0
+sa_en 8 0
+sa_en 9 0
+sa_en 10 0
+sa_en 11 0
+sa_en 12 0
+sa_en 13 0
+sa_en 14 0
+sa_en 15 0
+sa_en 16 0
+dmz_en 0
+dmz_ip 192.168.0.105
+upnp_en 1
+rmt_en 0
+rmt_ip 0.0.0.0
+rmt_prt 80
+sec_bsc -1
+loc_manage_en 0
+loc_mac0 00-00-00-00-00-00
+loc_mac1 00-00-00-00-00-00
+loc_mac2 00-00-00-00-00-00
+loc_mac3 00-00-00-00-00-00
+dos_en 0
+dos_tm 5
+dos_icmp_en 0
+dos_icmp_lim 50
+dos_udp_en 0
+dos_udp_lim 500
+dos_tcp_en 0
+dos_tcp_lim 50
+dos_ping_wan 0
+dos_ping_lan 0
+rt_ip 1 0.0.0.0
+rt_ip 2 0.0.0.0
+rt_ip 3 0.0.0.0
+rt_ip 4 0.0.0.0
+rt_ip 5 0.0.0.0
+rt_ip 6 0.0.0.0
+rt_ip 7 0.0.0.0
+rt_ip 8 0.0.0.0
+rt_ip 9 0.0.0.0
+rt_ip 10 0.0.0.0
+rt_ip 11 0.0.0.0
+rt_ip 12 0.0.0.0
+rt_ip 13 0.0.0.0
+rt_ip 14 0.0.0.0
+rt_ip 15 0.0.0.0
+rt_ip 16 0.0.0.0
+rt_msk 1 0.0.0.0
+rt_msk 2 0.0.0.0
+rt_msk 3 0.0.0.0
+rt_msk 4 0.0.0.0
+rt_msk 5 0.0.0.0
+rt_msk 6 0.0.0.0
+rt_msk 7 0.0.0.0
+rt_msk 8 0.0.0.0
+rt_msk 9 0.0.0.0
+rt_msk 10 0.0.0.0
+rt_msk 11 0.0.0.0
+rt_msk 12 0.0.0.0
+rt_msk 13 0.0.0.0
+rt_msk 14 0.0.0.0
+rt_msk 15 0.0.0.0
+rt_msk 16 0.0.0.0
+rt_gw 1 0.0.0.0
+rt_gw 2 0.0.0.0
+rt_gw 3 0.0.0.0
+rt_gw 4 0.0.0.0
+rt_gw 5 0.0.0.0
+rt_gw 6 0.0.0.0
+rt_gw 7 0.0.0.0
+rt_gw 8 0.0.0.0
+rt_gw 9 0.0.0.0
+rt_gw 10 0.0.0.0
+rt_gw 11 0.0.0.0
+rt_gw 12 0.0.0.0
+rt_gw 13 0.0.0.0
+rt_gw 14 0.0.0.0
+rt_gw 15 0.0.0.0
+rt_gw 16 0.0.0.0
+rt_entry_en 1 0
+rt_entry_en 2 0
+rt_entry_en 3 0
+rt_entry_en 4 0
+rt_entry_en 5 0
+rt_entry_en 6 0
+rt_entry_en 7 0
+rt_entry_en 8 0
+rt_entry_en 9 0
+rt_entry_en 10 0
+rt_entry_en 11 0
+rt_entry_en 12 0
+rt_entry_en 13 0
+rt_entry_en 14 0
+rt_entry_en 15 0
+rt_entry_en 16 0
+ddns_ind 3
+ddns_phe_en 0
+ddns_phe_usr username
+ddns_phe_pwd password
+ddns_phe_auto 0
+ddns_phe_wanidx 0
+ddns_cmx_en 0
+ddns_cmx_usr username
+ddns_cmx_pwd password
+ddns_cmx_auto 0
+ddns_dyn_en 0
+ddns_dyn_usr username
+ddns_dyn_pwd password
+ddns_dyn_wCrd NO
+ddns_dyn_bkmx NOCHG
+ddns_dyn_rqst /nic/update
+ddns_dyn_mx NOCHG
+ddns_dyn_offln NO
+ddns_dyn_sys dyndns
+ddns_dyn_svr members.dyndns.org
+ddns_dyn_wanidx 0
+ddns_dyn_svip 0
+ddns_dyn_svpt 0
+ddns_dyn_updTm 0
+ddns_dyn_unlkTm 0
+ddns_dyn_lupdTm 0
+ddns_dyn_lupdRe 0
+ddns_noip_en 0
+ddns_noip_usr username
+ddns_noip_pwd password
+qos_magic 3735928559
+qos_en 0
+qos_rlNum 0
+qos_rlMax 16
+qos_rlRx 2048
+qos_rlTx 512
+qos_userWanT 0
+qos_rule_enbl 1 0
+qos_rule_enbl 2 0
+qos_rule_enbl 3 0
+qos_rule_enbl 4 0
+qos_rule_enbl 5 0
+qos_rule_enbl 6 0
+qos_rule_enbl 7 0
+qos_rule_enbl 8 0
+qos_rule_enbl 9 0
+qos_rule_enbl 10 0
+qos_rule_enbl 11 0
+qos_rule_enbl 12 0
+qos_rule_enbl 13 0
+qos_rule_enbl 14 0
+qos_rule_enbl 15 0
+qos_rule_enbl 16 0
+qos_rule_key 1 0
+qos_rule_key 2 0
+qos_rule_key 3 0
+qos_rule_key 4 0
+qos_rule_key 5 0
+qos_rule_key 6 0
+qos_rule_key 7 0
+qos_rule_key 8 0
+qos_rule_key 9 0
+qos_rule_key 10 0
+qos_rule_key 11 0
+qos_rule_key 12 0
+qos_rule_key 13 0
+qos_rule_key 14 0
+qos_rule_key 15 0
+qos_rule_key 16 0
+qos_rule_typ 1 0
+qos_rule_typ 2 0
+qos_rule_typ 3 0
+qos_rule_typ 4 0
+qos_rule_typ 5 0
+qos_rule_typ 6 0
+qos_rule_typ 7 0
+qos_rule_typ 8 0
+qos_rule_typ 9 0
+qos_rule_typ 10 0
+qos_rule_typ 11 0
+qos_rule_typ 12 0
+qos_rule_typ 13 0
+qos_rule_typ 14 0
+qos_rule_typ 15 0
+qos_rule_typ 16 0
+qos_rule_mode 1 0
+qos_rule_mode 2 0
+qos_rule_mode 3 0
+qos_rule_mode 4 0
+qos_rule_mode 5 0
+qos_rule_mode 6 0
+qos_rule_mode 7 0
+qos_rule_mode 8 0
+qos_rule_mode 9 0
+qos_rule_mode 10 0
+qos_rule_mode 11 0
+qos_rule_mode 12 0
+qos_rule_mode 13 0
+qos_rule_mode 14 0
+qos_rule_mode 15 0
+qos_rule_mode 16 0
+qos_rule_ipStr 1 0.0.0.0
+qos_rule_ipStr 2 0.0.0.0
+qos_rule_ipStr 3 0.0.0.0
+qos_rule_ipStr 4 0.0.0.0
+qos_rule_ipStr 5 0.0.0.0
+qos_rule_ipStr 6 0.0.0.0
+qos_rule_ipStr 7 0.0.0.0
+qos_rule_ipStr 8 0.0.0.0
+qos_rule_ipStr 9 0.0.0.0
+qos_rule_ipStr 10 0.0.0.0
+qos_rule_ipStr 11 0.0.0.0
+qos_rule_ipStr 12 0.0.0.0
+qos_rule_ipStr 13 0.0.0.0
+qos_rule_ipStr 14 0.0.0.0
+qos_rule_ipStr 15 0.0.0.0
+qos_rule_ipStr 16 0.0.0.0
+qos_rule_ipEnd 1 0.0.0.0
+qos_rule_ipEnd 2 0.0.0.0
+qos_rule_ipEnd 3 0.0.0.0
+qos_rule_ipEnd 4 0.0.0.0
+qos_rule_ipEnd 5 0.0.0.0
+qos_rule_ipEnd 6 0.0.0.0
+qos_rule_ipEnd 7 0.0.0.0
+qos_rule_ipEnd 8 0.0.0.0
+qos_rule_ipEnd 9 0.0.0.0
+qos_rule_ipEnd 10 0.0.0.0
+qos_rule_ipEnd 11 0.0.0.0
+qos_rule_ipEnd 12 0.0.0.0
+qos_rule_ipEnd 13 0.0.0.0
+qos_rule_ipEnd 14 0.0.0.0
+qos_rule_ipEnd 15 0.0.0.0
+qos_rule_ipEnd 16 0.0.0.0
+qos_rule_ptStr 1 0
+qos_rule_ptStr 2 0
+qos_rule_ptStr 3 0
+qos_rule_ptStr 4 0
+qos_rule_ptStr 5 0
+qos_rule_ptStr 6 0
+qos_rule_ptStr 7 0
+qos_rule_ptStr 8 0
+qos_rule_ptStr 9 0
+qos_rule_ptStr 10 0
+qos_rule_ptStr 11 0
+qos_rule_ptStr 12 0
+qos_rule_ptStr 13 0
+qos_rule_ptStr 14 0
+qos_rule_ptStr 15 0
+qos_rule_ptStr 16 0
+qos_rule_ptEnd 1 0
+qos_rule_ptEnd 2 0
+qos_rule_ptEnd 3 0
+qos_rule_ptEnd 4 0
+qos_rule_ptEnd 5 0
+qos_rule_ptEnd 6 0
+qos_rule_ptEnd 7 0
+qos_rule_ptEnd 8 0
+qos_rule_ptEnd 9 0
+qos_rule_ptEnd 10 0
+qos_rule_ptEnd 11 0
+qos_rule_ptEnd 12 0
+qos_rule_ptEnd 13 0
+qos_rule_ptEnd 14 0
+qos_rule_ptEnd 15 0
+qos_rule_ptEnd 16 0
+qos_rule_pro 1 0
+qos_rule_pro 2 0
+qos_rule_pro 3 0
+qos_rule_pro 4 0
+qos_rule_pro 5 0
+qos_rule_pro 6 0
+qos_rule_pro 7 0
+qos_rule_pro 8 0
+qos_rule_pro 9 0
+qos_rule_pro 10 0
+qos_rule_pro 11 0
+qos_rule_pro 12 0
+qos_rule_pro 13 0
+qos_rule_pro 14 0
+qos_rule_pro 15 0
+qos_rule_pro 16 0
+qos_rule_rxMin 1 0
+qos_rule_rxMin 2 0
+qos_rule_rxMin 3 0
+qos_rule_rxMin 4 0
+qos_rule_rxMin 5 0
+qos_rule_rxMin 6 0
+qos_rule_rxMin 7 0
+qos_rule_rxMin 8 0
+qos_rule_rxMin 9 0
+qos_rule_rxMin 10 0
+qos_rule_rxMin 11 0
+qos_rule_rxMin 12 0
+qos_rule_rxMin 13 0
+qos_rule_rxMin 14 0
+qos_rule_rxMin 15 0
+qos_rule_rxMin 16 0
+qos_rule_rxMax 1 0
+qos_rule_rxMax 2 0
+qos_rule_rxMax 3 0
+qos_rule_rxMax 4 0
+qos_rule_rxMax 5 0
+qos_rule_rxMax 6 0
+qos_rule_rxMax 7 0
+qos_rule_rxMax 8 0
+qos_rule_rxMax 9 0
+qos_rule_rxMax 10 0
+qos_rule_rxMax 11 0
+qos_rule_rxMax 12 0
+qos_rule_rxMax 13 0
+qos_rule_rxMax 14 0
+qos_rule_rxMax 15 0
+qos_rule_rxMax 16 0
+qos_rule_txMin 1 0
+qos_rule_txMin 2 0
+qos_rule_txMin 3 0
+qos_rule_txMin 4 0
+qos_rule_txMin 5 0
+qos_rule_txMin 6 0
+qos_rule_txMin 7 0
+qos_rule_txMin 8 0
+qos_rule_txMin 9 0
+qos_rule_txMin 10 0
+qos_rule_txMin 11 0
+qos_rule_txMin 12 0
+qos_rule_txMin 13 0
+qos_rule_txMin 14 0
+qos_rule_txMin 15 0
+qos_rule_txMin 16 0
+qos_rule_txMax 1 0
+qos_rule_txMax 2 0
+qos_rule_txMax 3 0
+qos_rule_txMax 4 0
+qos_rule_txMax 5 0
+qos_rule_txMax 6 0
+qos_rule_txMax 7 0
+qos_rule_txMax 8 0
+qos_rule_txMax 9 0
+qos_rule_txMax 10 0
+qos_rule_txMax 11 0
+qos_rule_txMax 12 0
+qos_rule_txMax 13 0
+qos_rule_txMax 14 0
+qos_rule_txMax 15 0
+qos_rule_txMax 16 0
+arp_topen 0
+wlan_rout_type 8
+wlan_en 1
+wlan_ssid_brd 1
+wlan_op_mode 0
+disable_local_wlan 0
+wlan_mbssid_en 1 1
+wlan_mbssid_en 2 0
+wlan_mbssid_en 3 0
+wlan_mbssid_en 4 0
+wlan_mbssid_str 1 SlowWifi
+wlan_mbssid_str 2 TP-LINK_Guest_5391
+wlan_mbssid_str 3 TP-LINK_5391_3
+wlan_mbssid_str 4 TP-LINK_5391_4
+wlan_rgn_ind 100
+wlan_curent_region 93
+wlan_show_region 1
+wlan_chnnl 15
+wlan_mode 5
+wlan_ssid_nochange 0
+wlan_xr 0
+wlan_chanWidth 1
+wlan_rate 71
+wlan_bridgeEn 0
+wlan_sec 1
+wlan_wepIdx 1
+wlan_authtype 1
+wlan_vlan_enable 0
+old_wlan_status 1
+guest_net_enable 0
+guest_net_num 64
+wlan_router_type 0
+wlan_security_en 1 1
+wlan_security_en 2 0
+wlan_security_en 3 1
+wlan_security_en 4 1
+wlan_Auth 1 3
+wlan_Auth 2 0
+wlan_Auth 3 3
+wlan_Auth 4 3
+wlan_secSubType1 1 3
+wlan_secSubType1 2 3
+wlan_secSubType1 3 3
+wlan_secSubType1 4 3
+wlan_secSubType2 1 3
+wlan_secSubType2 2 3
+wlan_secSubType2 3 3
+wlan_secSubType2 4 3
+wlan_secSubType3 1 2
+wlan_secSubType3 2 2
+wlan_secSubType3 3 2
+wlan_secSubType3 4 2
+wlan_Encrypt 2
+wlan_Dot1x_en 0
+wlan_Radius 1 0.0.0.0
+wlan_Radius 2 0.0.0.0
+wlan_Radius 3 0.0.0.0
+wlan_Radius 4 0.0.0.0
+wlan_RadiusPort 1 1812
+wlan_RadiusPort 2 1812
+wlan_RadiusPort 3 1812
+wlan_RadiusPort 4 1812
+wlan_PskSecret 1 SecureKey
+wlan_PskSecret 2 70752793
+wlan_PskSecret 3 70752793
+wlan_PskSecret 4 70752793
+wlan_CurKey 1
+wlan_GroupKeyUpdate 1 0
+wlan_GroupKeyUpdate 2 0
+wlan_GroupKeyUpdate 3 0
+wlan_GroupKeyUpdate 4 0
+wlan_GroupKeyUpdateWpa 1 0
+wlan_GroupKeyUpdateWpa 2 0
+wlan_GroupKeyUpdateWpa 3 0
+wlan_GroupKeyUpdateWpa 4 0
+wlan_wpaCipher 1 1
+wlan_wpaCipher 2 1
+wlan_wpaCipher 3 1
+wlan_wpaCipher 4 1
+wlan_pskCipher 1 3
+wlan_pskCipher 2 3
+wlan_pskCipher 3 3
+wlan_pskCipher 4 3
+wlan_pirv_key 2
+wlan_pirv_defkey 1
+wlan_key_len 1 0
+wlan_key_len 2 0
+wlan_key_len 3 0
+wlan_key_len 4 0
+wlan_warn 1 0
+wlan_warn 2 0
+wlan_warn 3 0
+wlan_warn 4 0
+wlan_sec_changed 1 0
+wlan_sec_changed 2 0
+wlan_sec_changed 3 0
+wlan_sec_changed 4 0
+wlan_vapIdx 1 0
+wlan_vapIdx 2 1
+wlan_vapIdx 3 2
+wlan_vapIdx 4 3
+wlan_mode_ap 1
+wlan_mode_staType 0
+wlan_mode_wds 0
+wlan_mode_pptAp 1
+wlan_mode_mptAp 1
+wlan_mode_apBrd 1
+wlan_mode_modes 111000010
+wlan_mode_mbssid 0
+wlan_wme_en 1
+wlan_shortPrm_dis 0
+wlan_rts_thrh 2346
+wlan_frag_thrh 2346
+wlan_beacon_intv 100
+wlan_pwr 0
+wlan_shortGI 1
+wlan_isolate 0
+wlan_dtim_intv 1
+wlan_wps_en 0
+wlan_wps_pinState 0
+wlan_acl_mode 0
+wlan_exc_unlist 0
+wlan_show_key 0
+5g_wlan_rout_type 8
+5g_wlan_en 1
+5g_wlan_ssid_brd 1
+5g_wlan_op_mode 0
+5g_disable_local_wlan 0
+5g_wlan_mbssid_en 1 1
+5g_wlan_mbssid_en 2 0
+5g_wlan_mbssid_en 3 0
+5g_wlan_mbssid_en 4 0
+5g_wlan_mbssid_str 1 FastWifi
+5g_wlan_mbssid_str 2 TP-LINK_Guest_5390_5G
+5g_wlan_mbssid_str 3 TP-LINK_5390_5G_3
+5g_wlan_mbssid_str 4 TP-LINK_5390_5G_4
+5g_wlan_rgn_ind 100
+5g_wlan_curent_region 93
+5g_wlan_show_region 1
+5g_wlan_chnnl 15
+5g_wlan_mode 10
+5g_wlan_ssid_nochange 0
+5g_wlan_xr 0
+5g_wlan_chanWidth 2
+5g_wlan_rate 71
+5g_wlan_bridgeEn 0
+5g_wlan_sec 1
+5g_wlan_wepIdx 1
+5g_wlan_authtype 1
+5g_wlan_vlan_enable 0
+5g_old_wlan_status 1
+5g_guest_net_enable 0
+5g_guest_net_num 64
+5g_wlan_router_type 0
+5g_wlan_security_en 1 1
+5g_wlan_security_en 2 0
+5g_wlan_security_en 3 1
+5g_wlan_security_en 4 1
+5g_wlan_Auth 1 3
+5g_wlan_Auth 2 0
+5g_wlan_Auth 3 3
+5g_wlan_Auth 4 3
+5g_wlan_secSubType1 1 3
+5g_wlan_secSubType1 2 3
+5g_wlan_secSubType1 3 3
+5g_wlan_secSubType1 4 3
+5g_wlan_secSubType2 1 3
+5g_wlan_secSubType2 2 3
+5g_wlan_secSubType2 3 3
+5g_wlan_secSubType2 4 3
+5g_wlan_secSubType3 1 2
+5g_wlan_secSubType3 2 2
+5g_wlan_secSubType3 3 2
+5g_wlan_secSubType3 4 2
+5g_wlan_Encrypt 2
+5g_wlan_Dot1x_en 0
+5g_wlan_Radius 1 0.0.0.0
+5g_wlan_Radius 2 0.0.0.0
+5g_wlan_Radius 3 0.0.0.0
+5g_wlan_Radius 4 0.0.0.0
+5g_wlan_RadiusPort 1 1812
+5g_wlan_RadiusPort 2 1812
+5g_wlan_RadiusPort 3 1812
+5g_wlan_RadiusPort 4 1812
+5g_wlan_PskSecret 1 SecureKey
+5g_wlan_PskSecret 2 70752793
+5g_wlan_PskSecret 3 70752793
+5g_wlan_PskSecret 4 70752793
+5g_wlan_CurKey 1
+5g_wlan_GroupKeyUpdate 1 3600
+5g_wlan_GroupKeyUpdate 2 0
+5g_wlan_GroupKeyUpdate 3 0
+5g_wlan_GroupKeyUpdate 4 0
+5g_wlan_GroupKeyUpdateWpa 1 0
+5g_wlan_GroupKeyUpdateWpa 2 0
+5g_wlan_GroupKeyUpdateWpa 3 0
+5g_wlan_GroupKeyUpdateWpa 4 0
+5g_wlan_wpaCipher 1 1
+5g_wlan_wpaCipher 2 1
+5g_wlan_wpaCipher 3 1
+5g_wlan_wpaCipher 4 1
+5g_wlan_pskCipher 1 3
+5g_wlan_pskCipher 2 3
+5g_wlan_pskCipher 3 3
+5g_wlan_pskCipher 4 3
+5g_wlan_pirv_key 2
+5g_wlan_pirv_defkey 1
+5g_wlan_key_len 1 0
+5g_wlan_key_len 2 0
+5g_wlan_key_len 3 0
+5g_wlan_key_len 4 0
+5g_wlan_warn 1 0
+5g_wlan_warn 2 0
+5g_wlan_warn 3 0
+5g_wlan_warn 4 0
+5g_wlan_sec_changed 1 0
+5g_wlan_sec_changed 2 0
+5g_wlan_sec_changed 3 0
+5g_wlan_sec_changed 4 0
+5g_wlan_vapIdx 1 0
+5g_wlan_vapIdx 2 1
+5g_wlan_vapIdx 3 2
+5g_wlan_vapIdx 4 3
+5g_wlan_mode_ap 1
+5g_wlan_mode_staType 0
+5g_wlan_mode_wds 0
+5g_wlan_mode_pptAp 1
+5g_wlan_mode_mptAp 1
+5g_wlan_mode_apBrd 1
+5g_wlan_mode_modes 111000010
+5g_wlan_mode_mbssid 0
+5g_wlan_wme_en 1
+5g_wlan_shortPrm_dis 0
+5g_wlan_rts_thrh 2346
+5g_wlan_frag_thrh 2346
+5g_wlan_beacon_intv 100
+5g_wlan_pwr 0
+5g_wlan_shortGI 1
+5g_wlan_isolate 0
+5g_wlan_dtim_intv 1
+5g_wlan_wps_en 0
+5g_wlan_wps_pinState 0
+5g_wlan_acl_mode 0
+5g_wlan_exc_unlist 0
+5g_wlan_show_key 0
+guest_acc_type 1
+guest_acc_hour 0
+guest_acc_min 0
+guest_acc_weekday 128
+guest_acc_ballday 1
+5g_guest_acc_type 1
+5g_guest_acc_hour 0
+5g_guest_acc_min 0
+5g_guest_acc_weekday 128
+5g_guest_acc_ballday 1
+guest_qos_enable 0
+guest_access_local 0
+guests_see_eachother 0
+guest_rx_bandwidth 1024
+guest_tx_bandwidth 256
+lgn_ousr admin
+lgn_opswd inexplicable_old_password
+lgn_usr admin
+lgn_pwd password
+sntp_tz -360
+sntp_isManualTime 0
+sntp_dls_start_month 2
+sntp_dls_start_count 1
+sntp_dls_start_week 0
+sntp_dls_start_hour 2
+sntp_dls_end_month 10
+sntp_dls_end_count 0
+sntp_dls_end_week 0
+sntp_dls_end_hour 2
+sntp_dls_set 0
+sntp_svrA 0.0.0.0
+sntp_svrB 0.0.0.0
+shw_wzd 0
+loopback_en 1
+upnp_en_unused 1
+tcp_trace_ip 0.0.0.0
+sysstat_en 1
+sysstat_nInterval 5
+sysstat_autoRefresh 1
+sysstat_nSortRules 3
+dhcp_sta_num 5
+virt_srv_num 0
+port_trig_num 0
+sta_rt_num 0
+parent_en 0
+parent_mode 0
+parent_mac 00-00-00-00-00-00
+access_glbl_en 0
+access_mode 0
+syslog_mail_veri 0
+syslog_mail_noti 0
+syslog_mail_inter 0
+syslog_mail_hour 0
+syslog_mail_minute 0
+snmp_enable 0
+snmp_get_comm public
+snmp_get_src 0.0.0.0
+snmp_set_comm private
+snmp_set_src 0.0.0.0
+server_name TP-LINK_E15392
+share_mode 0
+nas_account_type 0
+nas_user_num 2
+nas_user_name 1 admin
+nas_user_name 2 admin
+nas_user_passwd 1 password
+nas_user_passwd 2 admin
+nas_ftp_enable 0
+nas_ftp_inet_enable 0
+nas_ftp_port 21
+nas_ftp_inet_port 21
+nas_smb_enable 1
+nas_mediasrv_enable 0
+nas_sharedfolder_num 0
+nas_folder_enable 1 0
+nas_folder_enable 2 0
+nas_folder_enable 3 0
+nas_folder_enable 4 0
+nas_folder_enable 5 0
+nas_folder_enable 6 0
+nas_folder_enable 7 0
+nas_folder_enable 8 0
+nas_folder_enable 9 0
+nas_folder_enable 10 0
+nas_folder_guest 1 0
+nas_folder_guest 2 0
+nas_folder_guest 3 0
+nas_folder_guest 4 0
+nas_folder_guest 5 0
+nas_folder_guest 6 0
+nas_folder_guest 7 0
+nas_folder_guest 8 0
+nas_folder_guest 9 0
+nas_folder_guest 10 0
+nas_folder_readpasswd 1 0
+nas_folder_readpasswd 2 0
+nas_folder_readpasswd 3 0
+nas_folder_readpasswd 4 0
+nas_folder_readpasswd 5 0
+nas_folder_readpasswd 6 0
+nas_folder_readpasswd 7 0
+nas_folder_readpasswd 8 0
+nas_folder_readpasswd 9 0
+nas_folder_readpasswd 10 0
+nas_folder_writeaccess 1 0
+nas_folder_writeaccess 2 0
+nas_folder_writeaccess 3 0
+nas_folder_writeaccess 4 0
+nas_folder_writeaccess 5 0
+nas_folder_writeaccess 6 0
+nas_folder_writeaccess 7 0
+nas_folder_writeaccess 8 0
+nas_folder_writeaccess 9 0
+nas_folder_writeaccess 10 0
+nas_folder_mediashare 1 0
+nas_folder_mediashare 2 0
+nas_folder_mediashare 3 0
+nas_folder_mediashare 4 0
+nas_folder_mediashare 5 0
+nas_folder_mediashare 6 0
+nas_folder_mediashare 7 0
+nas_folder_mediashare 8 0
+nas_folder_mediashare 9 0
+nas_folder_mediashare 10 0
+active_volume 1 1
+active_volume 2 1
+active_volume 3 1
+active_volume 4 1
+active_volume 5 1
+active_volume 6 1
+active_volume 7 1
+active_volume 8 1
+active_volume 9 1
+active_volume 10 1
+active_volume 11 1
+active_volume 12 1
+active_volume 13 1
+active_volume 14 1
+active_volume 15 1
+active_volume 16 1
+usbip_enabled 1
+get_ip_type 2
+get_dns_type 0
+prim_dns_addr ::
+sec_dns_addr ::
+static_ipv6_addr ::
+static_ipv6_default_gateway ::
+static_ipv6_prefix_length 64
+static_ipv6_mtu 1500
+static_ipv6_prim_dns 2001:4860:4860::8888
+static_ipv6_sec_dns 2001:4860:4860::8844
+pppoev6_ip_way 0
+pppoev6_link_type 2
+pppoev6_auto_off_waittime 15
+pppoev6_auto_start_hour 0
+pppoev6_auto_end_hour 23
+pppoev6_auto_start_minute 0
+pppoev6_auto_end_minute 59
+pppoev6_be_user_gateway 0
+pppoev6_ipv6_gateway ::
+pppoev6_mru 1480
+pppoev6_ulechoReq 0
+pppoev6_is_auto_dns 1
+pppoev6_prim_dns ::
+pppoev6_sec_dns ::
+6to4_is_auto_dns 0
+6to4_prim_dns 2001:4860:4860::8888
+6to4_sec_dns 2001:4860:4860::8844
+6to4_mru 1480
+lanipv6_dhcp6s_min_pool_addr 2001:db8:1111:ffff::1000
+lanipv6_dhcp6s_max_pool_addr 2001:db8:1111:ffff::2000
+lanipv6_dhcp6s_prefix ::
+lanipv6_dhcp6s_lease_time 86400
+lanipv6_type 1
+ipv6basic_wan_type 1
+lanipv6_radvd_prefix ::
+ipv6_enable 0
+system_mode 1
+pwd_enable 0
+pwd_destip 0
+pwd_interval 300
+pwd_delay 300
+pwd_failcount 3

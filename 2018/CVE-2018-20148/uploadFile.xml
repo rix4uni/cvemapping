@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<methodCall>
+    <methodName>wp.uploadFile</methodName>
+    <params>
+        <param>
+            <value><string>1</string></value>
+        </param>
+        <param>
+            <value><string>username</string></value>
+        </param>
+        <param>
+            <value><string>password</string></value>
+        </param>
+        <param>
+            <value><struct>
+                <member><name>name</name><value>POLYGLOT-NAME-HERE.jpg</value></member>
+                <member><name>type</name><value>image/polyglot</value></member>
+                <member><name>bits</name><value><base64>BASE64-DATA-HERE</base64></value></member>
+            </struct></value>
+        </param>
+    </params>
+</methodCall>

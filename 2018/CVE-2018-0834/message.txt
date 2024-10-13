@@ -1,0 +1,50 @@
+First chance exceptions are reported before any exception handling.
+This exception may be expected and handled.
+chakracore!Js::DataView::GetValue+0x31 [inlined in chakracore!Js::DataView::EntryGetInt32+0x11d]:
+00007ff9`0253641d 418b0400        mov     eax,dword ptr [r8+rax] ds:000000db`9de03ff8=00000000
+0:004> k
+ # Child-SP          RetAddr               Call Site
+00 (Inline Function) --------`--------     chakracore!Js::DataView::GetValue+0x31 [c:\users\vlad\desktop\chakracore-1.8.0\lib\runtime\library\dataview.h @ 118] 
+01 000000db`9defddf0 0000028e`003a33b5     chakracore!Js::DataView::EntryGetInt32+0x11d [c:\users\vlad\desktop\chakracore-1.8.0\lib\runtime\library\dataview.cpp @ 298] 
+02 000000db`9defde50 0000028e`003a2960     0x0000028e`003a33b5
+03 000000db`9defdf80 00007ff9`02457a9a     0x0000028e`003a2960
+04 (Inline Function) --------`--------     chakracore!Js::InterpreterStackFrame::CallLoopBody+0x1e [c:\users\vlad\desktop\chakracore-1.8.0\lib\runtime\language\interpreterstackframe.cpp @ 6180] 
+05 000000db`9defe020 00007ff9`0245ac03     chakracore!Js::InterpreterStackFrame::DoLoopBodyStart+0x3aa [c:\users\vlad\desktop\chakracore-1.8.0\lib\runtime\language\interpreterstackframe.cpp @ 5985] 
+06 000000db`9defe0d0 00007ff9`0246fcc9     chakracore!Js::InterpreterStackFrame::ProfiledLoopBodyStart<0,1>+0x53 [c:\users\vlad\desktop\chakracore-1.8.0\lib\runtime\language\interpreterstackframe.cpp @ 5756] 
+07 000000db`9defe110 00007ff9`024189d2     chakracore!Js::InterpreterStackFrame::OP_ProfiledLoopBodyStart<0,1>+0x49 [c:\users\vlad\desktop\chakracore-1.8.0\lib\runtime\language\interpreterstackframe.cpp @ 5727] 
+08 (Inline Function) --------`--------     chakracore!Js::InterpreterStackFrame::OP_ProfiledLoopBodyStart+0x18 [c:\users\vlad\desktop\chakracore-1.8.0\lib\runtime\language\interpreterstackframe.cpp @ 5598] 
+09 000000db`9defe140 00007ff9`024567d0     chakracore!Js::InterpreterStackFrame::ProcessProfiled+0x132 [c:\users\vlad\desktop\chakracore-1.8.0\lib\runtime\language\interpreterhandler.inl @ 51] 
+0a 000000db`9defe1b0 00007ff9`0240dfa6     chakracore!Js::InterpreterStackFrame::Process+0x1c0 [c:\users\vlad\desktop\chakracore-1.8.0\lib\runtime\language\interpreterstackframe.cpp @ 3427] 
+0b 000000db`9defe200 00007ff9`0240d63b     chakracore!Js::InterpreterStackFrame::InterpreterHelper+0x966 [c:\users\vlad\desktop\chakracore-1.8.0\lib\runtime\language\interpreterstackframe.cpp @ 2002] 
+0c 000000db`9defe730 0000028e`69d40fa2     chakracore!Js::InterpreterStackFrame::InterpreterThunk+0x5b [c:\users\vlad\desktop\chakracore-1.8.0\lib\runtime\language\interpreterstackframe.cpp @ 1734] 
+0d 000000db`9defe780 00007ff9`02772352     0x0000028e`69d40fa2
+0e 000000db`9defe7b0 00007ff9`024a2084     chakracore!amd64_CallFunction+0x82 [C:\Users\Vlad\Desktop\ChakraCore-1.8.0\lib\Runtime\Library\amd64\JavascriptFunctionA.asm @ 208] 
+0f 000000db`9defe800 00007ff9`02472302     chakracore!Js::JavascriptFunction::CallFunction<1>+0xc4 [c:\users\vlad\desktop\chakracore-1.8.0\lib\runtime\library\javascriptfunction.cpp @ 1314] 
+10 000000db`9defe840 00007ff9`0246807d     chakracore!Js::InterpreterStackFrame::OP_CallCommon<Js::OpLayoutDynamicProfile<Js::OpLayoutT_CallIWithICIndex<Js::LayoutSizePolicy<0> > > >+0x92 [c:\users\vlad\desktop\chakracore-1.8.0\lib\runtime\language\interpreterstackframe.cpp @ 3868] 
+11 (Inline Function) --------`--------     chakracore!Js::InterpreterStackFrame::OP_ProfileCallCommon+0x80 [c:\users\vlad\desktop\chakracore-1.8.0\lib\runtime\language\interpreterstackframe.cpp @ 3904] 
+12 000000db`9defe890 00007ff9`02418ec7     chakracore!Js::InterpreterStackFrame::OP_ProfiledCallIWithICIndex<Js::OpLayoutT_CallIWithICIndex<Js::LayoutSizePolicy<0> > >+0xad [c:\users\vlad\desktop\chakracore-1.8.0\lib\runtime\language\interpreterstackframe.h @ 499] 
+13 000000db`9defe8f0 00007ff9`0245678c     chakracore!Js::InterpreterStackFrame::ProcessProfiled+0x627 [c:\users\vlad\desktop\chakracore-1.8.0\lib\runtime\language\interpreterhandler.inl @ 87] 
+14 000000db`9defe960 00007ff9`0240dfa6     chakracore!Js::InterpreterStackFrame::Process+0x17c [c:\users\vlad\desktop\chakracore-1.8.0\lib\runtime\language\interpreterstackframe.cpp @ 3379] 
+15 000000db`9defe9b0 00007ff9`0240d63b     chakracore!Js::InterpreterStackFrame::InterpreterHelper+0x966 [c:\users\vlad\desktop\chakracore-1.8.0\lib\runtime\language\interpreterstackframe.cpp @ 2002] 
+16 000000db`9defedc0 0000028e`69d40fc2     chakracore!Js::InterpreterStackFrame::InterpreterThunk+0x5b [c:\users\vlad\desktop\chakracore-1.8.0\lib\runtime\language\interpreterstackframe.cpp @ 1734] 
+17 000000db`9defee10 00007ff9`02772352     0x0000028e`69d40fc2
+18 000000db`9defee40 00007ff9`024a2084     chakracore!amd64_CallFunction+0x82 [C:\Users\Vlad\Desktop\ChakraCore-1.8.0\lib\Runtime\Library\amd64\JavascriptFunctionA.asm @ 208] 
+19 000000db`9defee90 00007ff9`0249dbe3     chakracore!Js::JavascriptFunction::CallFunction<1>+0xc4 [c:\users\vlad\desktop\chakracore-1.8.0\lib\runtime\library\javascriptfunction.cpp @ 1314] 
+1a 000000db`9defeed0 00007ff9`0249db68     chakracore!Js::JavascriptFunction::CallRootFunctionInternal+0x33 [c:\users\vlad\desktop\chakracore-1.8.0\lib\runtime\library\javascriptfunction.cpp @ 795] 
+1b 000000db`9defef20 00007ff9`0275c7f8     chakracore!Js::JavascriptFunction::CallRootFunction+0x68 [c:\users\vlad\desktop\chakracore-1.8.0\lib\runtime\library\javascriptfunction.cpp @ 706] 
+1c (Inline Function) --------`--------     chakracore!Js::JavascriptFunction::CallRootFunction+0x20 [c:\users\vlad\desktop\chakracore-1.8.0\lib\runtime\library\javascriptfunction.cpp @ 799] 
+1d 000000db`9defefd0 00007ff9`02769b5a     chakracore!<lambda_d9d913193f16c76af67dccc92ba74003>::operator()+0x178 [c:\users\vlad\desktop\chakracore-1.8.0\lib\jsrt\jsrt.cpp @ 3501] 
+1e (Inline Function) --------`--------     chakracore!ContextAPIWrapper::__l2::<lambda_804b8f123c62072aad5c2c0062288ca9>::operator()+0xf [c:\users\vlad\desktop\chakracore-1.8.0\lib\jsrt\jsrtinternal.h @ 237] 
+1f 000000db`9deff050 00007ff9`0275c071     chakracore!ContextAPIWrapper_Core<0,<lambda_804b8f123c62072aad5c2c0062288ca9> >+0x13a [c:\users\vlad\desktop\chakracore-1.8.0\lib\jsrt\jsrtinternal.h @ 192] 
+20 (Inline Function) --------`--------     chakracore!ContextAPIWrapper+0x2e [c:\users\vlad\desktop\chakracore-1.8.0\lib\jsrt\jsrtinternal.h @ 235] 
+21 000000db`9deff110 00007ff9`0275f49b     chakracore!RunScriptCore+0x1f1 [c:\users\vlad\desktop\chakracore-1.8.0\lib\jsrt\jsrt.cpp @ 3451] 
+22 (Inline Function) --------`--------     chakracore!CompileRun+0xea [c:\users\vlad\desktop\chakracore-1.8.0\lib\jsrt\jsrt.cpp @ 4752] 
+23 000000db`9deff310 00007ff7`8ac71eeb     chakracore!JsRun+0x10b [c:\users\vlad\desktop\chakracore-1.8.0\lib\jsrt\jsrt.cpp @ 4774] 
+24 (Inline Function) --------`--------     CH!ChakraRTInterface::JsRun+0x1e [c:\users\vlad\desktop\chakracore-1.8.0\bin\ch\chakrartinterface.h @ 399] 
+25 000000db`9deff400 00007ff7`8ac7287c     CH!RunScript+0x43b [c:\users\vlad\desktop\chakracore-1.8.0\bin\ch\ch.cpp @ 465] 
+26 000000db`9deff4a0 00007ff7`8ac72933     CH!ExecuteTest+0x50c [c:\users\vlad\desktop\chakracore-1.8.0\bin\ch\ch.cpp @ 788] 
+27 000000db`9deff870 00007ff7`8ac85455     CH!ExecuteTestWithMemoryCheck+0x13 [c:\users\vlad\desktop\chakracore-1.8.0\bin\ch\ch.cpp @ 826] 
+28 (Inline Function) --------`--------     CH!invoke_thread_procedure+0xe [d:\th\minkernel\crts\ucrt\src\appcrt\startup\thread.cpp @ 91] 
+29 000000db`9deff8b0 00007ff9`8c7a257d     CH!thread_start<unsigned int (__cdecl*)(void * __ptr64)>+0x5d [d:\th\minkernel\crts\ucrt\src\appcrt\startup\thread.cpp @ 115] 
+2a 000000db`9deff8e0 00007ff9`8da0af28     KERNEL32!BaseThreadInitThunk+0x1d
+2b 000000db`9deff910 00000000`00000000     ntdll!RtlUserThreadStart+0x28

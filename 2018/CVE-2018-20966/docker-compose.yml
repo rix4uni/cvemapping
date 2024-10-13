@@ -1,0 +1,27 @@
+version: '2'
+
+services:
+  wordpress:
+    build: wordpress
+    depends_on:
+      - wordpress_db
+    environment:
+      WORDPRESS_DB_PASSWORD: example
+      WORDPRESS_DB_HOST: wordpress_db
+      WORDPRESS_DEBUG: "0"
+      WORDPRESS_CONFIG_EXTRA: define( 'AUTOMATIC_UPDATER_DISABLED', true );
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./wordpress/plugins:/var/www/html/wp-content/plugins/
+
+  wordpress_db:
+    image: mariadb:10.2
+    volumes:
+      - wordpress_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: wordpress
+volumes:
+  wordpress_data:

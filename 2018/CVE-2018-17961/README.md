@@ -1,0 +1,5 @@
+- build the image
+- run the container with port forwarding
+- ssh -X into it
+- run evince executeonly_bypass.ps
+- check exploit has written into ~/.bashrc

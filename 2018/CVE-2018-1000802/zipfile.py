@@ -1,0 +1,1 @@
+raise ImportError("Zipfile ImportError simulation")

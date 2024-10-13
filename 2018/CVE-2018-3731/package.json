@@ -1,0 +1,20 @@
+{
+  "author": "tnantoka <bornneet@livedoor.com> (http://blog.bornneet.com/)",
+  "name": "public",
+  "description": "Run http server hosting static files with specified public dir & port",
+  "version": "0.1.2",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tnantoka/public.git"
+  },
+  "engines": {
+    "node": ">= 0.4.11"
+  },
+  "dependencies": {
+    "mime": "~1.2.4"
+  },
+  "devDependencies": {},
+  "bin": {
+    "public": "bin/public"
+  }
+}
