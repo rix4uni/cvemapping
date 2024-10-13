@@ -1,0 +1,12 @@
+
+<html>
+    <script>
+        function reqListener () {
+            console.log(this.responseText);
+        }
+        var oReq = new XMLHttpRequest();
+        oReq.addEventListener("load", reqListener);
+        oReq.open("GET", "http://106.55.240.79:4444");
+        oReq.send();
+    </script>
+</html>

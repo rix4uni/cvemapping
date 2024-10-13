@@ -1,0 +1,23 @@
+version: '3.1'
+
+services:
+
+  wordpress:
+    image: wordpress:5.2.3
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: mypassword
+      WORDPRESS_DB_NAME: wordpress
+
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: mypassword
+      MYSQL_RANDOM_ROOT_PASSWORD: '1'

