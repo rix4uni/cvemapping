@@ -1,0 +1,63 @@
+Run with no arguments to see help menu, should appear similar to this:
+
+MySQL-Fu Client
+By: MrGreen
+
+Usage:./SQLfu.rb [OPTIONS]
+
+EX: ./SQLfu.rb -H site.com -U root -P Sup3rs3ecr3t -D FunHouseDB
+EX: ./SQLfu.rb --host 192.168.2.13 --username root --password sup3rs3cr3t
+
+Options: 
+    -H, --host <HOST>                
+	Target MySQL Host to Connect to
+    -U, --username <USER>            
+	MySQL Username to Connect as
+    -P, --password <PASS>            
+	MySQL Password to use for Connectiong
+    -D, --database <DB_NAME>         
+	MySQL Database to Connect to (Optional Argument)
+    -h, --help                       
+	Help Menu
+
+Once Connected to the Database with valid credentials you will be greeted with some overview information and a menu with a list of options to choose from. Most of the options should be fairly self explanatory or additional directions are given when option selected. Here is a snapshot of what you would see post connection:
+
+MySQL-Fu Client
+By: MrGreen
+
+w00t - Connected to MySQL Server!
+Hostname: localhost.localdomain
+Loged in as: root@192.168.2.2
+Using Pass: sup3rs3cr3t
+MySQL Version: 5.0.95
+Data Dir: /var/lib/mysql/
+Compiled on *nix: redhat-linux-gnu
+
+Please enter the number for the option you want to run: 
+0)   Get Me Out of Here!
+1)   SHOW Available Database(s)
+2)   SHOW Tables for Known Database
+3)   SHOW Tables for All Databases
+4)   SHOW Columns for Known Table & Database
+5)   CREATE DB
+6)   DROP DB
+7)   DROP Table
+8)   SHOW MySQL User Privileges
+9)   SHOW MySQL Users, Passwords & Special Privileges
+10a) CREATE New User w/Pass & GRANT Full Privileges
+10b) INSERT New User & Pass with full privileges to mysql.user
+10c) DELETE MySQL DB User
+11)  UPDATE Column Data of Known Database + Table
+12a) READ File using LOAD_FILE()
+12b) READ File using LOAD DATA INFILE + TEMP TABLE
+13)  WRITE REMOTE Shell/File using INTO OUTFILE()
+14)  WRITE LOCAL File 2 Remote Server via LOAD DATA LOCAL INFILE + TEMP TABLE + INTO OUTFILE
+15)  Pentestmonkey's PHP Reverse Shell via LOAD DATA LOCAL INFILE + TEMP TABLE + INTO OUTFILE
+16)  DROP to SQL Shell for Custom SQL Queries
+17)  DROP to LOCAL OS Shell for running quick LOCAL commands
+18)  DUMP Table
+19)  DUMP Database
+20)  DUMP All
+21)  KINGCOPE - CVE-2012-5613: Linux MySQL Privilege Escalation
+
+DEMO VIDEO: http://youtu.be/Q3-dh73VG9I

