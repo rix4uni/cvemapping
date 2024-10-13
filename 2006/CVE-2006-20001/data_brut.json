@@ -1,0 +1,28 @@
+{
+    "Published": "2023-01-17T20:15:00",
+    "Modified": "2023-01-17T20:15:00",
+    "access": {
+        "authentication": "not available",
+        "complexity": "not available",
+        "vector": "not available"
+    },
+    "assigner": "security@apache.org",
+    "cvss": "not available",
+    "cvss_time": "not available",
+    "cvss_vector": "not available",
+    "cwe": "CWE-787",
+    "id": "CVE-2006-20001",
+    "impact": {
+        "availability": "not available",
+        "confidentiality": "not available",
+        "integrity": "not available"
+    },
+    "last_modified": "2023-01-17T20:15:00",
+    "references": [
+        "https://httpd.apache.org/security/vulnerabilities_24.html"
+    ],
+    "summary": "A carefully crafted If: request header can cause a memory read, or write of a single zero byte, in a pool (heap) memory location beyond the header value sent. This could cause the process to crash. This issue affects Apache HTTP Server 2.4.54 and earlier.",
+    "vulnerable_configuration": [],
+    "vulnerable_configuration_cpe_2_2": [],
+    "vulnerable_product": []
+}

