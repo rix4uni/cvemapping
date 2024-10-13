@@ -1,0 +1,22 @@
+version: "3"
+services:
+    nginx-web:
+        image: nginx
+        volumes:
+        - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+        ports:
+        - "8080:80"
+    haproxy-web:
+        image: haproxy:1.9.10
+        volumes:
+            - ./haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
+        expose: [80]
+        ports:
+            - "8081:80"
+        command: ["haproxy", "-f", "/usr/local/etc/haproxy/haproxy.cfg"]
+    ruby-app:
+        image: ruby:2.6.5
+        volumes:
+        - ./ruby-app/server.rb:/usr/server.rb
+        working_dir: /usr
+        command: ["./server.rb"]

