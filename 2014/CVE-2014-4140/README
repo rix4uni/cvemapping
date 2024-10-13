@@ -1,0 +1,165 @@
+Some rough notes
+
+0:007> u
+MSHTML!CHtmRootParseCtx::AddText+0x104:
+6efff0a5 8b8e88000000    mov     ecx,dword ptr [esi+88h]
+6efff0ab 898d70ffffff    mov     dword ptr [ebp-90h],ecx
+6efff0b1 8945ac          mov     dword ptr [ebp-54h],eax
+6efff0b4 8b5118          mov     edx,dword ptr [ecx+18h]
+6efff0b7 8bca            mov     ecx,edx
+6efff0b9 83e103          and     ecx,3
+6efff0bc 83f902          cmp     ecx,2
+6efff0bf 0f8531050000    jne     MSHTML!CHtmRootParseCtx::AddText+0x2d7 (6efff5f6)
+0:007> g
+Breakpoint 2 hit
+eax=0dc8aff0 ebx=00000006 ecx=0600005a edx=0e842fd0 esi=0eb34f18 edi=00000006
+eip=6efff0a5 esp=09bcbdd0 ebp=09bcbe84 iopl=0         nv up ei pl nz na pe nc
+cs=0023  ss=002b  ds=002b  es=002b  fs=0053  gs=002b             efl=00000206
+MSHTML!CHtmRootParseCtx::AddText+0x104:
+6efff0a5 8b8e88000000    mov     ecx,dword ptr [esi+88h] ds:002b:0eb34fa0=0e842fd0
+0:007> g
+Breakpoint 2 hit
+eax=0eb2c800 ebx=00000001 ecx=0600005b edx=0e842fd0 esi=0eb34f18 edi=00000001
+eip=6efff0a5 esp=09bcbdd8 ebp=09bcbe8c iopl=0         nv up ei pl nz na po nc
+cs=0023  ss=002b  ds=002b  es=002b  fs=0053  gs=002b             efl=00000202
+MSHTML!CHtmRootParseCtx::AddText+0x104:
+6efff0a5 8b8e88000000    mov     ecx,dword ptr [esi+88h] ds:002b:0eb34fa0=0e842fd0
+0:007> g
+Breakpoint 2 hit
+eax=0600005c ebx=0e842fd0 ecx=00000001 edx=09bcbcd6 esi=0eb34f18 edi=00000000
+eip=6f01ac7a esp=09bcbb78 ebp=09bcbc2c iopl=0         nv up ei pl nz na pe nc
+cs=0023  ss=002b  ds=002b  es=002b  fs=0053  gs=002b             efl=00000206
+MSHTML!CHtmRootParseCtx::AddText+0x969:
+6f01ac7a 8b8688000000    mov     eax,dword ptr [esi+88h] ds:002b:0eb34fa0=0e842fd0
+0:007> g
+Breakpoint 1 hit
+eax=00000001 ebx=00000000 ecx=77c338aa edx=03c31078 esi=0e9def40 edi=0e842fd0
+eip=6ef7c11c esp=09bcc698 ebp=09bcc6a0 iopl=0         nv up ei pl nz na po nc
+cs=0023  ss=002b  ds=002b  es=002b  fs=0053  gs=002b             efl=00000202
+MSHTML!CTreeDataPos::SetTextData+0x1c:
+6ef7c11c 5f              pop     edi
+0:007> dd e842ff0
+0e842ff0  0e9def40 0600005c 00000000 d0d0d0d0
+0e843000  ???????? ???????? ???????? ????????
+0e843010  ???????? ???????? ???????? ????????
+0e843020  ???????? ???????? ???????? ????????
+0e843030  ???????? ???????? ???????? ????????
+0e843040  ???????? ???????? ???????? ????????
+0e843050  ???????? ???????? ???????? ????????
+0e843060  ???????? ???????? ???????? ????????
+0:007> g
+SetContext failed, 0x80070005
+MachineInfo::SetContext failed - Thread: 0C74BC20  Handle: 2f8  Id: b58 - Error == 0x80070005
+SetContext failed, 0x80070005
+MachineInfo::SetContext failed - Thread: 0C74B520  Handle: 810  Id: 7b0 - Error == 0x80070005
+SetContext failed, 0x80070005
+MachineInfo::SetContext failed - Thread: 0C74B420  Handle: 8c8  Id: 604 - Error == 0x80070005
+(a04.9b8): Unknown exception - code 80010108 (first chance)
+(a04.8f4): Access violation - code c0000005 (first chance)
+First chance exceptions are reported before any exception handling.
+This exception may be expected and handled.
+eax=0000000a ebx=0bd78ffa ecx=0e9deffe edx=00000000 esi=0bd78fb2 edi=0e9df000
+eip=6f5a1f54 esp=09bcc6bc ebp=09bcc6d0 iopl=0         nv up ei ng nz ac po cy
+cs=0023  ss=002b  ds=002b  es=002b  fs=0053  gs=002b             efl=00010293
+MSHTML!CTreeDataPos::GetPlainText+0x536828:
+6f5a1f54 66394102        cmp     word ptr [ecx+2],ax      ds:002b:0e9df000=????
+0:007> dd e842ff0
+0e842ff0  0e9def40 0600005c 00000000 d0d0d0d0
+0e843000  ???????? ???????? ???????? ????????
+0e843010  ???????? ???????? ???????? ????????
+0e843020  ???????? ???????? ???????? ????????
+0e843030  ???????? ???????? ???????? ????????
+0e843040  ???????? ???????? ???????? ????????
+0e843050  ???????? ???????? ???????? ????????
+0e843060  ???????? ???????? ???????? ????????
+0:007> dd poi(e842ff0)
+0e9def40  00000001 0000005c 0062003c 00730061
+0e9def50  00660065 006e006f 00200074 00740073
+0e9def60  006c0079 003d0065 00640022 00730069
+0e9def70  006c0070 00790061 0066003a 006f006c
+0e9def80  00740061 0020003a 00690072 00680067
+0e9def90  003b0074 006f0062 00740074 006d006f
+0e9defa0  0020003a 0031002d 00650030 003b006d
+0e9defb0  006d0065 00740070 002d0079 00650063
+0:007> u mshtml + 0x2af33f
+MSHTML!CHtmRootParseCtx::AddText+0x460:
+6efff33f 8bf8            mov     edi,eax
+6efff341 85ff            test    edi,edi
+6efff343 0f849e805500    je      MSHTML!CHtmRootParseCtx::AddText+0x558452 (6f5573e7)
+6efff349 8b4718          mov     eax,dword ptr [edi+18h]
+6efff34c 810fc0000000    or      dword ptr [edi],0C0h
+6efff352 83e037          and     eax,37h
+6efff355 83c840          or      eax,40h
+6efff358 c7471c00000000  mov     dword ptr [edi+1Ch],0
+
+
+MSHTML!CTreeDataPos::GetPlainText+0x536828:
+709b1f54 66394102        cmp     word ptr [ecx+2],ax      ds:002b:0ffa0000=????
+
+bp mshtml + 0x31b799
+pointer to CTextArea dd poi(poi(poi(ecx+1c)+0c+14)+20)=5c
+dds poi(poi(poi(9b3c58c)+14)+20)
+
+0:007> k
+ChildEBP RetAddr  
+096fc4a8 6e17a317 MSHTML!CTreeDataPos::GetPlainText
+096fc4dc 6e08f968 MSHTML!CElement::GetPlainTextInternal+0xda
+096fc514 6e18fea7 MSHTML!CElement::GetPlainTextInScope+0x41
+096fc53c 6e18fe47 MSHTML!CRichtext::Notify+0x81
+096fc550 6ddd1a09 MSHTML!CTextArea::Notify+0x12
+096fc5d0 6df6be6f MSHTML!CHtmParseBase::Execute+0xee
+096fc6f4 6dde7ec9 MSHTML!CHtmPost::Exec+0x474
+096fc70c 6dde7e4d MSHTML!CHtmPost::Run+0x1c
+096fc72c 6dde8daf MSHTML!PostManExecute+0x61
+096fc740 6dde8d10 MSHTML!PostManResume+0x7b
+096fc770 6ddf2e3c MSHTML!CHtmPost::OnDwnChanCallback+0x38
+096fc780 6dd40d01 MSHTML!CDwnChan::OnMethodCall+0x19
+096fc7c4 6dd29a5a MSHTML!GlobalWndOnMethodCall+0x12c
+096fc810 75e362fa MSHTML!GlobalWndProc+0x115
+096fc83c 75e36d3a user32!InternalCallWinProc+0x23
+096fc8b4 75e377c4 user32!UserCallWinProcCheckWow+0x109
+096fc914 75e3788a user32!DispatchMessageWorker+0x3bc
+096fc924 7148bdfc user32!DispatchMessageW+0xf
+096ffae4 715d602f IEFRAME!CTabWindow::_TabWindowThreadProc+0x445
+096ffb9c 7649d14c IEFRAME!LCIETab_ThreadProc+0x31c
+096ffbac 72ef31cc iertutil!_IsoThreadProc_WrapperToReleaseScope+0xe
+096ffbd8 7696338a IEShims!NS_CreateThread::DesktopIE_ThreadProc+0x71
+096ffbe4 77c39f72 kernel32!BaseThreadInitThunk+0xe
+096ffc24 77c39f45 ntdll!__RtlUserThreadStart+0x70
+096ffc3c 00000000 ntdll!_RtlUserThreadStart+0x1b
+
+edi comes from...
+0:007> !heap -p -a edi
+    address 0e714fd0 found in
+    _DPH_HEAP_ROOT @ 2c61000
+    in busy allocation (  DPH_HEAP_BLOCK:         UserAddr         UserSize -         VirtAddr         VirtSize)
+                                 e611340:          e714fd0               2c -          e714000             2000
+    72a78e89 verifier!AVrfDebugPageHeapAllocate+0x00000229
+    77cd0d96 ntdll!RtlDebugAllocateHeap+0x00000030
+    77c8af0d ntdll!RtlpAllocateHeap+0x000000c4
+    77c33cfe ntdll!RtlAllocateHeap+0x0000023a
+    6e5af33f MSHTML!CHtmRootParseCtx::AddText+0x00000460
+    6e5aef8b MSHTML!CHtmRootParseCtxRouter::AddText+0x0000001d
+    6e5333f0 MSHTML!CInsertionMode::HandleCharacterToken+0x0000005b
+    6e5347b6 MSHTML!CHtml5Tokenizer::RCDATALessThanSign_StateHandler+0x000000c7
+    6e5b4455 MSHTML!CHtml5Tokenizer::ParseBuffer+0x0000023c
+    6e5b4be7 MSHTML!CHtml5Parse::ParseToken+0x0000010e
+    6e5ac7c9 MSHTML!CHtmPost::ProcessTokens+0x000001d2
+    6e5abbbf MSHTML!CHtmPost::Exec+0x0000017f
+    6e427ec9 MSHTML!CHtmPost::Run+0x0000001c
+    6e427e4d MSHTML!PostManExecute+0x00000061
+    6e428daf MSHTML!PostManResume+0x0000007b
+    6e432e3c MSHTML!CDwnChan::OnMethodCall+0x00000019
+    6e380d01 MSHTML!GlobalWndOnMethodCall+0x0000012c
+    6e369a5a MSHTML!GlobalWndProc+0x00000115
+    75e362fa user32!InternalCallWinProc+0x00000023
+    75e36d3a user32!UserCallWinProcCheckWow+0x00000109
+    75e377c4 user32!DispatchMessageWorker+0x000003bc
+    75e3788a user32!DispatchMessageW+0x0000000f
+    7148bdfc IEFRAME!CTabWindow::_TabWindowThreadProc+0x00000445
+    715d602f IEFRAME!LCIETab_ThreadProc+0x0000031c
+    7649d14c iertutil!_IsoThreadProc_WrapperToReleaseScope+0x0000000e
+    72ef31cc IEShims!NS_CreateThread::DesktopIE_ThreadProc+0x00000071
+    7696338a kernel32!BaseThreadInitThunk+0x0000000e
+    77c39f72 ntdll!__RtlUserThreadStart+0x00000070
+    77c39f45 ntdll!_RtlUserThreadStart+0x0000001b

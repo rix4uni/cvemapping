@@ -1,0 +1,30 @@
+<html>
+    <head>
+      <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+  <script>
+
+  function boom(){
+		var first = document.getElementById("myCanvas");
+		var second = first.getContext('2d');
+
+    
+		second.quadraticCurveTo(4294967295,2147483647,65536,2147483646);
+		second.shadowOffsetX = 4096;
+    
+    second.shadowColor = "blue";
+		second.shadowBlur = 2147483648;
+		second.globalCompositeOperation = "destination-in";
+		
+    second.quadraticCurveTo(0,65536,1,1048576);
+		
+    second.stroke();
+		second.lineWidth = 2147483646;
+
+    second.strokeRect(0,0,256,0);
+
+	}
+</script>
+</head>
+  <body onload='boom();'>
+    <canvas id="myCanvas" width='300px' height='300px'>aaa</canvas>
+  </body></html>

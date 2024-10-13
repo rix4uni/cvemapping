@@ -1,0 +1,20 @@
+FROM mcr.microsoft.com/windows/servercore:ltsc2016
+
+RUN setx PACKAGE zulu-7-azure-jre_7.24.0.2-7.0.191-win_x64.msi
+RUN setx PACKAGE_DIR zulu-7/7u191
+RUN setx ZULU_DIR zulu\zulu-7-jre
+RUN setx /m PATH "%PATH%;C:\Program Files\%ZULU_DIR%\bin"
+
+RUN powershell -Command (new-object System.Net.WebClient).DownloadFile('http://repos.azul.com/azure-only/zulu/packages/%PACKAGE_DIR%/%PACKAGE%', 'C:\%PACKAGE%')
+RUN msiexec /quiet /i C:\%PACKAGE%
+RUN del C:\%PACKAGE%
+
+RUN setx /m CATALINA_HOME C:\apache-tomcat
+RUN setx /m JRE_HOME "C:\Program Files\%ZULU_DIR%"
+
+# https://archive.apache.org/dist/tomcat/tomcat-8/v8.0.5/bin/apache-tomcat-8.0.5.zip
+COPY apache-tomcat-8.0.5 C:\\apache-tomcat
+# https://archive.apache.org/dist/struts/binaries/struts-2.3.16-all.zip
+COPY struts-2.3.16/apps/struts2-blank.war C:\\apache-tomcat\\webapps
+
+CMD [ "apache-tomcat\\bin\\catalina.bat", "run" ]

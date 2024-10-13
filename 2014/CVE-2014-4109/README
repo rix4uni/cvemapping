@@ -1,0 +1,117 @@
+This crash is difficult to reproduce.  The included proof of concept makes it a little easier to trigger the crashing code path.  My super scientific process of checking the crash was to click on the url with one hand and press enter with the other.  It usually crashes within 15 attempts.  "IE=9" also helps but isnt needed.
+
+Its is a use after free of a script element.
+
+		eax=00000000 ebx=00000000 ecx=094c9bd8 edx=00000000 esi=00000000 edi=094c9bd8
+		eip=6d94ab83 esp=0943ca7c ebp=0943caa8 iopl=0         nv up ei pl zr na pe nc
+		cs=0023  ss=002b  ds=002b  es=002b  fs=0053  gs=002b             efl=00010246
+		MSHTML!CMarkup::IsPrimaryMarkup+0xa:
+		6d94ab83 8b87a4000000    mov     eax,dword ptr [edi+0A4h] ds:002b:094c9c7c=????????
+		0:007> !heap -p -a edi
+		    address 094c9bd8 found in
+		    _DPH_HEAP_ROOT @ 9441000
+		    in free-ed allocation (  DPH_HEAP_BLOCK:         VirtAddr         VirtSize)
+		                                    9442af8:          94c9000             2000
+		    754690b2 verifier!AVrfDebugPageHeapFree+0x000000c2
+		    77cd1564 ntdll!RtlDebugFreeHeap+0x0000002f
+		    77c8ac29 ntdll!RtlpFreeHeap+0x0000005d
+		    77c334a2 ntdll!RtlFreeHeap+0x00000142
+		    769614ad kernel32!HeapFree+0x00000014
+		    6df61fa7 MSHTML!CMarkup::`scalar deleting destructor'+0x00000036
+		    6db62649 MSHTML!CBase::SubRelease+0x0000002e
+		    6d9bf02f MSHTML!CEventMgr::Dispatch+0x000005ba
+		    6d9f5ae5 MSHTML!CEventMgr::DispatchEvent+0x00000115
+		    6d9edcec MSHTML!COmWindowProxy::Fire_onload+0x0000016b
+		    6e18cccc MSHTML!COmWindowProxy::DeferredFire_onload+0x0000000d  <---------------unique to crash stack trace
+		    6d9c05c9 MSHTML!CAsyncEventQueue::DispatchAllEvents+0x00000086
+		    6d9c0776 MSHTML!GlobalWndProc+0x000001df
+		    75e362fa user32!InternalCallWinProc+0x00000023
+		    75e36d3a user32!UserCallWinProcCheckWow+0x00000109
+		    75e377c4 user32!DispatchMessageWorker+0x000003bc
+		    75e3788a user32!DispatchMessageW+0x0000000f
+		    7148bdfc IEFRAME!CTabWindow::_TabWindowThreadProc+0x00000445
+		    715d602f IEFRAME!LCIETab_ThreadProc+0x0000031c
+		    7649d14c iertutil!_IsoThreadProc_WrapperToReleaseScope+0x0000000e
+		    754d31cc IEShims!NS_CreateThread::DesktopIE_ThreadProc+0x00000071
+		    7696338a kernel32!BaseThreadInitThunk+0x0000000e
+		    77c39f72 ntdll!__RtlUserThreadStart+0x00000070
+		    77c39f45 ntdll!_RtlUserThreadStart+0x0000001b
+
+The !heap command shows that edi was free'd.  This memory is then accessed in the crash.
+
+		0:007> kb
+		ChildEBP RetAddr  Args to Child              
+		0943ca80 6df774f2 0d3c6fd8 10045ff0 1029ff01 MSHTML!CMarkup::IsPrimaryMarkup+0xa
+		0943caa8 6e18cccc 0943cad8 6d9c05c9 0b6eff68 MSHTML!COmWindowProxy::Fire_onload+0x1bb
+		0943cab0 6d9c05c9 0b6eff68 00000000 0b584cd0 MSHTML!COmWindowProxy::DeferredFire_onload+0xd  <---------------boom
+		0943cad8 6d9c0776 00000001 10fbb424 00000000 MSHTML!CAsyncEventQueue::DispatchAllEvents+0x86
+		0943cb28 75e362fa 000d03e4 0000001c 1029fff0 MSHTML!GlobalWndProc+0x1df
+		0943cb54 75e36d3a 6d929676 000d03e4 00008003 user32!InternalCallWinProc+0x23
+		0943cbcc 75e377c4 00000000 6d929676 000d03e4 user32!UserCallWinProcCheckWow+0x109
+		0943cc2c 75e3788a 6d929676 00000000 0943fdfc user32!DispatchMessageWorker+0x3bc
+		0943cc3c 7148bdfc 0943cc84 08e35fe0 00000000 user32!DispatchMessageW+0xf
+		0943fdfc 715d602f 00000001 040e0ff0 08ab1fe8 IEFRAME!CTabWindow::_TabWindowThreadProc+0x445
+		0943feb4 7649d14c 040dee48 00000000 0943fef0 IEFRAME!LCIETab_ThreadProc+0x31c
+		0943fec4 754d31cc 040e0ff0 00000000 7649d13e iertutil!_IsoThreadProc_WrapperToReleaseScope+0xe
+		0943fef0 7696338a 08ab1fe8 0943ff3c 77c39f72 IEShims!NS_CreateThread::DesktopIE_ThreadProc+0x71
+		0943fefc 77c39f72 08ab1fe8 7bd40320 00000000 kernel32!BaseThreadInitThunk+0xe
+		0943ff3c 77c39f45 754d315b 08ab1fe8 ffffffff ntdll!__RtlUserThreadStart+0x70
+		0943ff54 00000000 754d315b 08ab1fe8 00000000 ntdll!_RtlUserThreadStart+0x1b
+
+The crash only occurs when the DeferredFire_onload code path is taken.  This does not always happen and I haven't tried to figure out why.
+
+In windbg you can use something like bp mshtml + 0x2a2635 "!heap -p -a ecx;dds @ecx L1;g" to print out the object being sent to CBase::SubRelease() and you'll see the following:
+
+		0f368f38  704625b0 MSHTML!CScriptElement::`vftable'  <----dds shows a script element
+		    address 0f36cbd8 found in
+		    _DPH_HEAP_ROOT @ b0f1000
+		    in busy allocation (  DPH_HEAP_BLOCK:         UserAddr         UserSize -         VirtAddr         VirtSize)
+		                                 b0f39f4:          f36cbd8              428 -          f36c000             2000
+		          MSHTML!CMarkup::`vftable'
+		    75528e89 verifier!AVrfDebugPageHeapAllocate+0x00000229
+		    77cd0d96 ntdll!RtlDebugAllocateHeap+0x00000030
+		    77c8af0d ntdll!RtlpAllocateHeap+0x000000c4
+		    77c33cfe ntdll!RtlAllocateHeap+0x0000023a
+		    754a1504 vfbasics!AVrfpRtlAllocateHeap+0x000000c3
+		    70c4e993 MSHTML!_MemIsolatedAllocClear+0x00000010
+		    704830b1 MSHTML!CDoc::DoNavigate_CreateMarkupForExistingWindow+0x00000057
+		    708716e8 MSHTML!CDoc::DoNavigate+0x000008ae
+		    704804e5 MSHTML!CDoc::FollowHyperlink2+0x0000096c
+		    70483748 MSHTML!CWindow::SuperNavigateInternal+0x00000213
+		    704837f0 MSHTML!CWindow::SuperNavigate2WithBindFlags+0x00000034
+		    72637ba8 IEFRAME!CDocObjectHost::_NavigateDocument+0x0000019e
+		    726379e1 IEFRAME!CDocObjectHost::SetTarget+0x00000411
+		    7251eb63 IEFRAME!CDocObjectView::_CreateViewWindow+0x000000f5
+		    7251ea1b IEFRAME!CDocObjectView::CreateViewWindow3+0x00000073
+		    724de827 IEFRAME!FileCabinet_CreateViewWindow2+0x00000132
+		    7251f667 IEFRAME!CBaseBrowser2::_CreateViewWindow+0x0000003a
+		    7251f57a IEFRAME!CBaseBrowser2::_CreateNewShellView+0x0000016a
+		    7251f3e5 IEFRAME!CBaseBrowser2::_CreateNewShellViewPidl+0x00000099
+		    7251f29b IEFRAME!CBaseBrowser2::v_NavigateToPidl+0x0000019d
+		    72638131 IEFRAME!CBaseBrowser2::_OnGoto+0x0000024c
+		    72637edb IEFRAME!CBaseBrowser2::_OnAsyncOperation+0x00000043
+		    724e1274 IEFRAME!CBaseBrowser2::v_WndProc+0x00000160
+		    724dcace IEFRAME!CShellBrowser2::v_WndProc+0x000001ae
+		    724c872d IEFRAME!CShellBrowser2::s_WndProc+0x00000058
+		    75e362fa user32!InternalCallWinProc+0x00000023
+		    75e36d3a user32!UserCallWinProcCheckWow+0x00000109
+		    75e377c4 user32!DispatchMessageWorker+0x000003bc
+		    75e3788a user32!DispatchMessageW+0x0000000f
+		    724cbdfc IEFRAME!CTabWindow::_TabWindowThreadProc+0x00000445
+		    7261602f IEFRAME!LCIETab_ThreadProc+0x0000031c
+		    7649d14c iertutil!_IsoThreadProc_WrapperToReleaseScope+0x0000000e
+
+		 
+		0f36cbd8  70199aa0 MSHTML!CMarkup::`vftable'
+		(674.338): Access violation - code c0000005 (first chance)
+		First chance exceptions are reported before any exception handling.
+		This exception may be expected and handled.
+		eax=00000000 ebx=00000000 ecx=0f36cbd8 edx=00000000 esi=00000000 edi=0f36cbd8
+		eip=701eab83 esp=0aeec674 ebp=0aeec6a0 iopl=0         nv up ei pl zr na pe nc
+		cs=0023  ss=002b  ds=002b  es=002b  fs=0053  gs=002b             efl=00010246
+		MSHTML!CMarkup::IsPrimaryMarkup+0xa:
+		701eab83 8b87a4000000    mov     eax,dword ptr [edi+0A4h] ds:002b:0f36cc7c=????????
+
+The document.write() call in the proof of concept have nothing to do with the vulnerability, its just something that eats cycles.
+
+@day6reak

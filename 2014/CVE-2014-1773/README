@@ -1,0 +1,129 @@
+CClipStack::PushClipRect() Invalid Array Indexing
+
+First, starting with the callstack from the crash with pageheap enabled:
+
+ChildEBP RetAddr 
+0919aac8 6b58459f MSHTML!CWorldTransform::IsAxisAligned
+0919ab40 6ba228e9 MSHTML!CDispSurface::CClipStack::PushClipRect+0x1a2
+0919aba4 6be25b58 MSHTML!CDispSurface::PushClipRectInternal+0x2f
+0919abc0 6bf1118f MSHTML!CDispSurface::PushClipRectUser+0x26
+0919ac24 6bf1157e MSHTML!CCanvasCompositor::ClearRightAndBelowRenderedRegion+0xcd
+0919acd8 6b28108c MSHTML!CCanvasCompositor::ExecuteCompositionEffects+0x34d
+0919ace0 6b2802f4 MSHTML!CCanvasCompositor::Flush+0x3d
+0919ace8 6bf0c867 MSHTML!CCanvasCompositor::~CCanvasCompositor+0x10
+0919ae28 6bf0b668 MSHTML!CCanvasRenderingContext2D::StrokeRectInternal+0x1b3
+0919ae70 6bf0e032 MSHTML!CCanvasRenderingContext2D::ExecuteStrokeRect+0x1c5
+0919aebc 6bd74b6f MSHTML!CCanvasRenderingContext2D::Var_strokeRect+0xac
+0919aee0 6ae7056e MSHTML!CFastDOM::CCanvasRenderingContext2D::Trampoline_strokeRect+0x3b
+0919af50 6ae6cdda jscript9!Js::JavascriptExternalFunction::ExternalFunctionThunk+0x165
+0919b328 6ae6dc86 jscript9!Js::InterpreterStackFrame::Process+0x1e74
+0919b474 09560fd9 jscript9!Js::InterpreterStackFrame::InterpreterThunk<1>+0x1e7
+
+If we step back one function, this guy sets the object pointer that is used by the crash:
+
+.text:63CDE575 ; public: long __thiscall CDispSurface::CClipStack::PushClipRect(class CRectF const &, class CWorldTransform const *, bool, bool)
+.text:63CDE575 mov edi, edi
+.text:63CDE577 push ebp
+.text:63CDE578 mov ebp, esp
+.text:63CDE57A sub esp, 64h
+.text:63CDE57D and [ebp+var_8], 0
+.text:63CDE581 mov edx, ecx
+.text:63CDE583 push ebx
+.text:63CDE584 push esi
+.text:63CDE585 mov esi, [ebp+arg_0]
+.text:63CDE588 push edi
+.text:63CDE589 lea edi, [ebp+var_28]
+.text:63CDE58C mov [ebp+var_4], edx
+.text:63CDE58F movsd
+.text:63CDE590 movsd
+.text:63CDE591 movsd
+.text:63CDE592 movsd
+.text:63CDE593 mov esi, [ebp+arg_4]
+.text:63CDE596 test esi, esi
+.text:63CDE598 jnz loc_63B1A8DF
+.text:63CDE59E
+.text:63CDE59E loc_63CDE59E:
+.text:63CDE59E imul ecx, [edx+4], 18h
+.text:63CDE5A2 xor bl, bl
+.text:63CDE5A4 mov eax, [edx+8] 
+.text:63CDE5A7 add eax, 0FFFFFFE8h
+.text:63CDE5AA add eax, ecx
+.text:63CDE5AC mov [ebp+arg_0], eax
+.text:63CDE5AF mov edi, [eax+14h]
+
+The outer object, CDispSurface, contains a CClipStack object inside of it. The CClipStack
+object starts at offset 0x64 into the CDispSurface object. CClipStack is basically just
+a subclass of CImplAry it seems, which is a generic array class that Internet Explorer
+uses all over the place for arrays. In the above function, CDispSurface::CClipStack::PushClipRect,
+the 'this' pointer is the subobject CClipStack inside of the outer CDispSurface.
+
+The CClipStack object looks something liek this:
+
+DWORD dwMaxElems;
+DWORD dwCurElems;
+VOID *pElems;
+
+So, looking at the above code, you can guess what is going on. What the above code is doing is
+extracting the last element from the CClipStack array. Each element in the array is 0x18 bytes in size,
+hence:
+
+imul ecx, [edx+4], 18h ; dwCurElems * 0x18
+mov eax, [edx+8] ;pElems
+
+But then you can see the following:
+
+add eax, 0FFFFFFE8h ; subtract 0x18 from pElems
+add eax, ecx ; pElems += (dwCurElems * 0x18)
+
+However, if the array is empty, dwCurElems * 0x18 '==' 0, and so pElems
+will actually point BEHIND the start of the array, into the adjacent heap chunk
+below it. The array itself contains objects of the type CWorldTransform, which you can
+infer from the code that crashes shortly after extract the object from the array. ecx
+is the object pointer taken from the 'mov edi, [eax+14h]' operation:
+
+.text:63B1A940 ; public: bool __thiscall CWorldTransform::IsAxisAligned(void)const
+
+.text:63B1A940 test dword ptr [ecx+8], 80000000h ;ecx == BAD
+
+So, where is the array allocated:
+
+MSHTML!CDispSurface::CClipStack::PushClipRect+0x32:
+6b97e5a7 83c0e8 add eax,0FFFFFFE8h
+0:013> !heap -p -a eax
+address 0c4b0fa0 found in
+_DPH_HEAP_ROOT @ 211000
+in busy allocation ( DPH_HEAP_BLOCK: UserAddr UserSize - VirtAddr VirtSize)
+c45123c: c4b0fa0 60 - c4b0000 2000
+739f8e89 verifier!AVrfDebugPageHeapAllocate+0x00000229
+77a95e7a ntdll!RtlDebugAllocateHeap+0x00000030
+77a5a3ba ntdll!RtlpAllocateHeap+0x000000c4
+77a25a70 ntdll!RtlAllocateHeap+0x0000023a
+6b55c592 MSHTML!CImplAry::EnsureSizeWorker+0x00000061
+6b584513 MSHTML!CDispSurface::BeginDraw+0x00000122
+6b2847a0 MSHTML!CCanvasRenderingContext2D::BeginDraw+0x00000041
+6b286155 MSHTML!CCanvasContextBase::OpenBitmapRenderTarget+0x00000014
+6b283b77 MSHTML!CCanvasCompositor::Initialize+0x0000102f
+6b285cf7 MSHTML!CCanvasRenderingContext2D::StrokeGeometry+0x00000131
+6b285090 MSHTML!CCanvasRenderingContext2D::ExecuteStroke+0x000002c4
+6b284dae MSHTML!CFastDOM::CCanvasRenderingContext2D::Trampoline_stroke+0x00000035
+6ae7056e jscript9!Js::JavascriptExternalFunction::ExternalFunctionThunk+0x00000165
+6ae6cdda jscript9!Js::InterpreterStackFrame::Process+0x00001e74
+6ae6dc86 jscript9!Js::InterpreterStackFrame::InterpreterThunk<1>+0x000001e7
+
+It is in the 0x60 LFH bin. We can control the chunk behind the array by doing some heap crafting.
+But the bad part of that code above is that the calculation for extracting the object used is
+this:
+
+(BYTE *)pArrayStart - 0x18 + 0x14 => (BYTE *)pArrayStart - 0x4
+
+That results in using the flags/index field of the LFH chunk header as an object pointer.
+That's not really good as the bytes in that field are not super controllable (I think).
+
+
+
+For seeing how to possibly control that second dword of the LFH header:
+
+http://illmatics.com/Understanding_the_LFH.pdf
+
+
+Collaboration with Sean Larsson

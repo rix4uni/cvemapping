@@ -1,0 +1,23 @@
+#!/bin/python3
+#python test.py | findstr "<i>" | findstr /V AAAA | findstr /V "{}" | findstr /v "notables"
+import http.client
+import threading
+import random
+class StatusHandler(threading.Thread):
+  def run(self):
+    while True:
+      r = http.client.HTTPConnection('192.168.1.4',80)
+      r.request("GET","/server-status?notables")
+      print(r.getresponse().read().decode())
+      r.close()
+class Random(threading.Thread):
+  def run(self):
+    while True:
+      ran = ''.join('A' for i in range(random.randint(0, 500)))
+      k = http.client.HTTPConnection('192.168.1.4',80).request(ran,ran)
+      k.close()
+if __name__ == "__main__":
+  b = StatusHandler()
+  b.start()
+  c = Random()
+  c.start()

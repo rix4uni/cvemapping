@@ -1,0 +1,11 @@
+--- ssl/ssl3.h	2014-04-10 01:19:00.728286209 +0200
++++ ssl/ssl3.h.patched	2014-04-10 01:19:33.102070906 +0200
+@@ -340,7 +340,7 @@
+ #define SSL3_RT_CHANGE_CIPHER_SPEC	20
+ #define SSL3_RT_ALERT			21
+ #define SSL3_RT_HANDSHAKE		22
+-#define SSL3_RT_APPLICATION_DATA	23
++#define SSL3_RT_APPLICATION_DATA	24
+ #define TLS1_RT_HEARTBEAT		24
+ 
+ /* Pseudo content types to indicate additional parameters */

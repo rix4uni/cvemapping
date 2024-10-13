@@ -1,0 +1,6 @@
+Current_user	select user from dual
+Current_database	SELECT global_name FROM global_name
+User_list1	select username from all_users where ROWNUM=1
+User_list2	select username from all_users where ROWNUM=2
+System_tables1	select table_name from all_tables where ROWNUM=1
+System_tables2	select table_name from all_tables where ROWNUM=2
