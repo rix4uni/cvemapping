@@ -1,0 +1,1 @@
+Reupload of an old Linux/Firefox port of an exploit for CVE-2015-0311 (Use-after-free in Adobe Flash Player) I created for educational purposes.

@@ -1,0 +1,27 @@
+- hosts: all
+  user: your_remote_user
+  tasks:
+    - name: check for gcc
+      stat: path=/usr/bin/gcc
+      register: gcc
+
+    - name: copy the GHOST script to the machine
+      copy: src=GHOST.c dest=/tmp/GHOST.c
+      when: gcc.stat.exists
+
+    - name: compile it
+      raw: gcc /tmp/GHOST.c -o /tmp/GHOST
+      when: gcc.stat.exists
+
+    - name: run it!
+      raw: /tmp/GHOST
+      register: ghost
+      when: gcc.stat.exists
+
+    - name: show me the results
+      debug: var=ghost.stdout_lines[0]
+      when: gcc.stat.exists
+
+    - name: no gcc
+      debug: msg="no gcc found"
+      when: not gcc.stat.exists

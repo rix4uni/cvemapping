@@ -1,0 +1,44 @@
+<!DOCTYPE support_files [
+<!ELEMENT support_files (manifest_date, support_contract, message?, base_url,file*)>
+<!ELEMENT manifest_date (#PCDATA)>
+<!ELEMENT support_contract (#PCDATA)>
+<!ELEMENT message (#PCDATA)>
+<!ELEMENT base_url (#PCDATA)>
+<!ELEMENT file (requires, name, release_date,lsm_date*,file_name, file_path,notes_path?,type,provides?,md5sum,features?,model*)>
+<!ELEMENT requires (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT file_name (#PCDATA)>
+<!ELEMENT release_date (#PCDATA)>
+<!ELEMENT lsm_date (#PCDATA)>
+<!ELEMENT file_path (#PCDATA)>
+<!ELEMENT notes_path (#PCDATA)>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT provides (#PCDATA)>
+<!ELEMENT md5sum (#PCDATA)>
+<!ELEMENT features (#PCDATA)>
+
+<!ELEMENT model (#PCDATA)>
+]>
+<support_files>
+<manifest_date>2015-08-27</manifest_date>
+<support_contract>1</support_contract>
+<message>Valid Support Contract</message>
+<base_url>https://support.sourcefire.com/auto-update/auto-dl.cgi/Download/</base_url>
+<file>
+  <requires>5.0</requires>
+  <name>Sourcefire Rule Update 2015-08-27-001</name>
+  <file_name>firepwner.sh</file_name>
+  <release_date>2015-08-27</release_date>
+  <lsm_date>2015-08-27 18:45:34</lsm_date>
+  <file_path>files/firepwner.sh</file_path>
+  <notes_path></notes_path>
+  <type>SRU</type>
+  <provides>2015-08-27-001-vrt</provides>
+  <md5sum>2d4caf2fcb3144101f7954e8eb7358c1</md5sum>
+  <sha512sum></sha512sum>
+  <sw_version></sw_version>
+  <features>none</features>
+  <model>02</model><model>12</model><model>23</model><model>24</model><model>49</model><model>50</model><model>55</model><model>66</model><model>72</model>
+</file>
+
+</support_files>

@@ -1,0 +1,57 @@
+#pragma once
+#include <Windows.h>
+#include <iostream>
+#include <atlstr.h>
+
+
+namespace intel
+{
+
+	const uint32_t ioctl = 0x80862007;
+	const char* driver_name = "iqvw64e.sys";
+	const char szDevice[] = "\\\\.\\Nal";
+
+	typedef struct _MEMSET_BUFFER_INFO 
+	{
+		uint64_t switch_num;
+		uint64_t reserved;
+		uint64_t value;
+		uint64_t dest;
+		uint64_t len;
+	}MEMSET_MEMORY_BUFFER, * PMEMSET_MEMORY_BUFFER;
+
+	typedef struct _MEMCPY_BUFFER_INFO
+	{
+		uint64_t switch_num;
+		uint64_t reserved;
+		uint64_t source;
+		uint64_t dest;
+		uint64_t count;
+	}MEMCPY_BUFFER, * PMEMCPY_BUFFER;
+
+	typedef struct _GETPHYSICAL_BUFFER_INFO
+	{
+		uint64_t switch_num;
+		uint64_t reserved1;
+		uint64_t physicalAddr;
+		uint64_t virtualAddr;
+		uint64_t reserved2;
+	}GETPHYSICAL_BUFFER, * PGETPHYSICAL_BUFFER;
+
+	typedef struct _MmapIOSpace_BUFFER_INFO
+	{
+		uint64_t switch_num;
+		uint64_t reserved;
+		uint64_t returnValue;
+		uint64_t returnedVirtualAddr;
+		uint64_t physicalAddr;
+		uint64_t nBytes;
+		uint64_t cachingType = 0x0;
+	}MmapIOSpace_BUFFER, * MmapIOSpace_BUFFER_INFO;
+
+bool SetMemory(HANDLE device_handle, uint64_t address, uint64_t value, uint64_t size);
+bool KernelMemCpy(HANDLE device_handle, uint64_t dest, uint64_t source, uint64_t count);
+bool writeReadOnlyMemory(HANDLE device_handle, uint64_t dest, uint64_t source);
+uint64_t GetPhysicalAddr(HANDLE device_handle, uint64_t virtualAddr);
+uint64_t MapIOSpace(HANDLE device_handle, uint64_t physicalAddr, uint64_t nBytes);
+}

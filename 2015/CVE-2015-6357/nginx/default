@@ -1,0 +1,29 @@
+
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    listen 443 ssl;
+
+    root /var/www/html;
+
+    index index.html index.htm index.nginx-debian.html;
+
+    server_name support.sourcefire.com;
+    ssl_certificate /etc/nginx/ssl/nginx.crt;
+    ssl_certificate_key /etc/nginx/ssl/nginx.key;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    # rewrite requests that contain the clients license key
+    location ~* /auto-update/auto-dl.cgi/[A-F0-9][A-F0-9]:.* {
+        rewrite ^(/auto-update/auto-dl.cgi)/[A-F0-9][A-F0-9]:[A-F0-9][A-F0-9]:[A-F0-9][A-F0-9]:[A-F0-9][A-F0-9]:[A-F0-9][A-F0-9]:[A-F0-9][A-F0-9]:[A-F0-9][A-F0-9]/(.*)$ $1/$2;
+    }
+
+    location /auto-update {
+        root /var/www/html/firepwner;
+    }
+
+}

