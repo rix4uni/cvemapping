@@ -193,13 +193,23 @@ func cloneRepo(cloneURL string, cveName string, stargazersCount int, year string
 
 	fmt.Printf("[CLONED] [%d] %s into %s\n", stargazersCount, cloneURL, cloneDir)
 
-	// Remove the .git directory
-	gitDir := fmt.Sprintf("%s/.git", cloneDir)
-	if err := os.RemoveAll(gitDir); err != nil {
-		return fmt.Errorf("failed to remove .git directory: %w", err)
+	// List of items to remove
+	itemsToRemove := []string{
+		".git",
+		".github",
+		".gitignore",
+		".gitattributes",
+		"LICENSE",
 	}
 
-	fmt.Printf("[REMOVED .git] from %s\n", cloneDir)
+	// Remove the .git directory and other specified files/directories
+	for _, item := range itemsToRemove {
+		itemPath := filepath.Join(cloneDir, item)
+		if err := os.RemoveAll(itemPath); err != nil {
+			return fmt.Errorf("failed to remove %s: %w", item, err)
+		}
+		fmt.Printf("[REMOVED %s] from %s\n", item, cloneDir)
+	}
 
 	// Check directory size and file count
 	dirSize, fileCount, err := getDirSizeAndFileCount(cloneDir)
