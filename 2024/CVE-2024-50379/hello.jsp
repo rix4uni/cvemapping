@@ -1,0 +1,19 @@
+<%@ page import="java.io.*" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello World JSP</title>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <%
+        try {
+            // Execute the command to open calc.exe
+            Process process = Runtime.getRuntime().exec("cmd /c start calc.exe");
+            out.println("<p>Calculator has been opened successfully (if the server is running on Windows).</p>");
+        } catch (Exception e) {
+            out.println("<p>Error while opening calculator: " + e.getMessage() + "</p>");
+        }
+    %>
+</body>
+</html>

