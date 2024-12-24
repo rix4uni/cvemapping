@@ -1,0 +1,32 @@
+# CVE-2024-10511
+
+##### CWE-287: Improper Authentication
+
+### Summary
+
+Schneider Electric PowerChute Serial Shutdown product is a UPS management software enabling graceful system shutdown
+and energy management capabilities for desktop, servers and workstations
+
+PowerChute Serial Shutdown **v1.2.0.301 and prior** contains a mechanism to “lock out” for 2 minutes after three unsuccessful login attempts to prevent brute force password cracking. PowerChute allows only one account to be created and one login session active at a time.
+
+An unauthenticated attacker can repeatedly perform HTTP GET request to the exposed URL that ends with */accessdenied* (which increments the number of login attempts), causing constant account lock out, therefore preventing legitimate user from logging in.
+
+
+### Remediation
+
+PowerChute Serial Shutdown version 1.3 includes a fix for this vulnerability and is available for download here:
+
+[https://www.apc.com/us/en/product-range/137943580-powerchute-serial-shutdown/#software-and-firmware](https://www.apc.com/us/en/product-range/137943580-powerchute-serial-shutdown/#software-and-firmware)
+
+### References
+
+[https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2024-345-01&p_enDocType=Security+and+Safety+Notice&p_File_Name=SEVD-2024-345-01.pdf](https://download.schneider-electric.com/files?p_Doc_Ref=SEVD-2024-345-01&p_enDocType=Security+and+Safety+Notice&p_File_Name=SEVD-2024-345-01.pdf) 
+
+[https://www.se.com/us/en/download/document/SEVD-2024-345-01/](https://www.se.com/us/en/download/document/SEVD-2024-345-01/)
+
+### Timeline
+
+28-05-2024 - Vulnerability reported to the vendor.\
+21-11-2024 - Vendor issued a patch.\
+10-12-2024 - Coordinated public release of Security Notification (SEVD).
+
