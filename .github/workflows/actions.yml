@@ -2,10 +2,11 @@ name: CVE Check
 
 on:
   schedule:
-    - cron: '*/10 * * * *'
-  # push:
-  #   branches:
-  #     - main
+    # Run every 1 hour
+    - cron: '0 * * * *'
+  push:
+    branches:
+      - main
 
 # Actions project permission
 permissions:
@@ -29,6 +30,11 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         echo '"CVE-2025-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page 1 -year 2025
+        echo '"CVE-2024-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page 1 -year 2024
+        echo '"CVE-2023-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page 1 -year 2023
+        echo '"CVE-2022-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page 1 -year 2022
+        echo '"CVE-2021-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page 1 -year 2021
+        echo '"CVE-2020-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page 1 -year 2020
 
     - name: Commit and push changes if there are any
       run: |
