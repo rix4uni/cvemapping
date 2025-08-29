@@ -1,0 +1,47 @@
+id: freepbx-zeroday-august25
+
+info:
+  name: FreePBX Zero Day
+  author: rxerium
+  severity: critical
+  description: Nuclei template to detect recently disclosed zero day vulnerability affecting FreePBX.
+  metadata:
+    verified: true
+    max-request: 1
+    shodan-query:
+      - http.title:"FreePBX Administration"
+  tags: freepbx,panel,sangoma,zeroday
+
+
+http:
+  - method: GET
+    path:
+      - '{{BaseURL}}/admin/config.php#'
+
+    extractors:
+      - type: regex
+        part: body
+        name: version
+        regex:
+          - 'FreePBX\s+([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+)'
+        group: 1
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        part: body
+        words:
+          - 'FreePBX Administration'
+          - 'Operator Panel'
+          - 'User Control Panel'
+        condition: and
+
+      - type: status
+        status:
+          - 200
+
+      - type: dsl
+        dsl:
+          - (compare_versions(version, "> 16.0.0.0") && compare_versions(version, "< 16.0.88.19"))
+          - (compare_versions(version, "> 17.0.0.0") && compare_versions(version, "< 17.0.2.31"))
+        condition: or
