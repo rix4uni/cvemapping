@@ -1,0 +1,4 @@
+$ nuclei -t network/cves/2020/CVE-2020-0610.yaml -u rdg.lab.local -var rdg_port=3391 -var dtls_timeout=6 -debug
+
+DEBUG_HEX: 160303...ffff0080
+NUCLEI_RESULT:NOT_VULNERABLE
