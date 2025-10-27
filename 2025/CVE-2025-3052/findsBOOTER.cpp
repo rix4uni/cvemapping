@@ -1,0 +1,101 @@
+#include <windows.h>
+#include <stdio.h>
+#include <Uefi.h>
+#include <Library/UefiLib.h>
+#include <Library/UefiBootServicesTableLib.h>
+#include <Library/UefiRuntimeServicesTableLib.h>
+#include <Library/MemoryAllocationLib.h>
+#include <Library/DevicePathLib.h>
+#include <Protocol/SimpleFileSystem.h>
+#include <Protocol/LoadedImage.h>
+#include <Guid/FileInfo.h>
+
+//hook function for 
+// Windows Boot Manager path
+#define WINDOWS_BOOTMGR_PATH L"\\EFI\\Microsoft\\Boot\\bootmgfw.efi"
+
+// Boot order variable name
+#define EFI_BOOT_ORDER_VARIABLE_NAME L"BootOrder"
+
+EFI_DEVICE_PATH_PROTOCOL* giveMeTHeBOOTER(VOID) {//finds the booter location in memory and return a physical HANDLE to it
+    EFI_STATUS Status;
+    EFI_HANDLE* Handles = NULL;//all handles to simple file system files
+    UINTN HandleCount = 0;
+    EFI_DEVICE_PATH_PROTOCOL* DevicePath = NULL;
+
+
+    Status = gBS->LocateHandleBuffer(
+        ByProtocol,
+        &gEfiSimpleFileSystemProtocolGuid,
+        NULL,
+        &HandleCount,
+        &Handles
+    );
+
+    if (EFI_ERROR(Status)) {
+        Print(L"Failed to get filesystem handles: %r\n", Status);
+        return NULL;
+    }
+
+    // Check each filesystem for bootmgfw.efi
+    for (UINTN i = 0; i < HandleCount && !DevicePath; ++i) {
+        EFI_SIMPLE_FILE_SYSTEM_PROTOCOL* FileSystem;
+
+        // Open the SimpleFileSystem protocol
+        Status = gBS->OpenProtocol(
+            Handles[i],
+            &gEfiSimpleFileSystemProtocolGuid,
+            (VOID**)&FileSystem,
+            gImageHandle,
+            NULL,
+            EFI_OPEN_PROTOCOL_GET_PROTOCOL
+        );
+
+        if (EFI_ERROR(Status)) {
+            continue;
+        }
+
+        // Open the root volume
+        EFI_FILE_PROTOCOL* Volume;
+        Status = FileSystem->OpenVolume(FileSystem, &Volume);
+
+        if (!EFI_ERROR(Status)) {
+            // Try to open the Windows Boot Manager file
+            EFI_FILE_PROTOCOL* File;
+            Status = Volume->Open(
+                Volume,
+                &File,
+                WINDOWS_BOOTMGR_PATH,
+                EFI_FILE_MODE_READ,
+                EFI_FILE_READ_ONLY
+            );
+
+            if (!EFI_ERROR(Status)) {
+                // Found it! Close the file and create device path
+                File->Close(File);
+                DevicePath = FileDevicePath(Handles[i], WINDOWS_BOOTMGR_PATH);
+                Print(L"[+] Found Windows Boot Manager at: %s\n", WINDOWS_BOOTMGR_PATH);
+            }
+
+            Volume->Close(Volume);
+        }
+
+        // Close the protocol
+        gBS->CloseProtocol(
+            Handles[i],
+            &gEfiSimpleFileSystemProtocolGuid,
+            gImageHandle,
+            NULL
+        );
+    }
+
+    // Free the handle buffer
+    if (Handles) {
+        gBS->FreePool(Handles);
+    }
+
+    return DevicePath;
+
+
+
+}
