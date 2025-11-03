@@ -23,7 +23,7 @@ cd cvemapping; go install
 ```
 
 ## Usage
-```
+```yaml
 Usage of cvemapping:
   -github-token string
         GitHub Token for authentication
@@ -34,6 +34,6 @@ Usage of cvemapping:
 ```
 
 ## Usage Examples
-```
+```yaml
 echo '"CVE-2024-"' | cvemapping -github-token "TOKEN" -page all -year 2024
 ```
