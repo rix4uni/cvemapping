@@ -1,0 +1,31 @@
+# CVE-2025-10161
+Authentication Bypass in Turkguven's Perfektive
+
+# Description
+Improper Restriction of Excessive Authentication Attempts, Client-Side Enforcement of Server-Side Security, Reliance on Untrusted Inputs in a Security Decision vulnerability in Turkguven Software Technologies Inc. Perfektive allows Brute Force, Authentication Bypass, Functionality Bypass.This issue affects Perfektive: before Version: 12574 Build: 2701.
+
+# CWE
+CWE-307: CWE-307 Improper Restriction of Excessive Authentication Attempts
+CWE-602: CWE-602 Client-Side Enforcement of Server-Side Security
+CWE-807: CWE-807 Reliance on Untrusted Inputs in a Security Decision
+
+# CVSS
+| Score | Severity | Version | Vector String                              |
+|--------|-----------|----------|--------------------------------------------|
+| 7.3    | HIGH      | 3.1      | CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L |
+
+# Versions
+- Affected from 0 before Version: 12574 Build: 2701
+
+# Credits
+- Ferit ÖZNER
+
+# References
+https://www.usom.gov.tr/bildirim/tr-25-0387
+
+### CVE 
+https://www.cve.org/CVERecord?id=CVE-2025-10161
+
+### NIST
+https://nvd.nist.gov/vuln/detail/CVE-2025-10161
+
