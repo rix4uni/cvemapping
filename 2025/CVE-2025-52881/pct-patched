@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# pct-patched - Wrapper for pct command that automatically applies AppArmor fix
+# Part of the CVE-2025-52881 workaround for Docker in Proxmox LXC containers
+
+# Find the real pct command
+REAL_PCT="/usr/sbin/pct"
+
+# Check if this is a 'pct create' command
+if [[ "$1" == "create" ]]; then
+    CTID="$2"
+
+    # Run the real pct create command
+    "$REAL_PCT" "$@"
+    PCT_EXIT_CODE=$?
+
+    # If creation was successful, inject AppArmor fix
+    if [[ $PCT_EXIT_CODE -eq 0 ]] && [[ -n "$CTID" ]] && [[ -f "/etc/pve/lxc/${CTID}.conf" ]]; then
+        # Check if fix is already applied
+        if ! grep -q "lxc.apparmor.profile: unconfined" "/etc/pve/lxc/${CTID}.conf" 2>/dev/null; then
+            echo "[pct-patched] Applying AppArmor workaround for CVE-2025-52881 to container ${CTID}..."
+            cat <<EOF >> /etc/pve/lxc/${CTID}.conf
+# AppArmor workaround for CVE-2025-52881 (Docker/runc compatibility)
+# Added automatically by pve-script-wrapper
+lxc.apparmor.profile: unconfined
+lxc.mount.entry: /dev/null sys/module/apparmor/parameters/enabled none bind 0 0
+EOF
+            echo "[pct-patched] AppArmor configuration applied to container ${CTID}"
+        fi
+    fi
+
+    exit $PCT_EXIT_CODE
+else
+    # For all other commands, just pass through to real pct
+    exec "$REAL_PCT" "$@"
+fi

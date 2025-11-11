@@ -1,0 +1,135 @@
+#!/bin/bash
+
+# pve-docker-fix - Apply AppArmor workaround to existing Proxmox LXC containers
+# Fixes CVE-2025-52881 Docker/runc incompatibility
+#
+# Usage: pve-docker-fix <CTID>
+# Example: pve-docker-fix 105
+
+set -e
+
+CTID="${1:-}"
+
+show_usage() {
+    cat <<EOF
+Usage: $(basename "$0") <CTID> [options]
+
+Apply AppArmor workaround for Docker/container compatibility to an LXC container.
+
+Arguments:
+  CTID          Container ID to fix
+
+Options:
+  --no-restart  Don't restart the container (config will apply on next start)
+  -h, --help    Show this help message
+
+Examples:
+  $(basename "$0") 105
+  $(basename "$0") 105 --no-restart
+
+This tool fixes CVE-2025-52881 which breaks Docker in LXC containers.
+See: https://github.com/opencontainers/runc/issues/4968
+EOF
+}
+
+# Parse arguments
+NO_RESTART=false
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        -h|--help)
+            show_usage
+            exit 0
+            ;;
+        --no-restart)
+            NO_RESTART=true
+            shift
+            ;;
+        *)
+            if [[ -z "$CTID" ]]; then
+                CTID="$1"
+            else
+                echo "Error: Unknown argument: $1"
+                show_usage
+                exit 1
+            fi
+            shift
+            ;;
+    esac
+done
+
+if [[ -z "$CTID" ]]; then
+    echo "Error: Container ID required"
+    echo ""
+    show_usage
+    exit 1
+fi
+
+# Verify we're running on Proxmox
+if [[ ! -f "/usr/sbin/pct" ]]; then
+    echo "Error: This script must be run on a Proxmox VE host"
+    exit 1
+fi
+
+# Check if container exists
+if [[ ! -f "/etc/pve/lxc/${CTID}.conf" ]]; then
+    echo "Error: Container $CTID not found"
+    echo "Config file does not exist: /etc/pve/lxc/${CTID}.conf"
+    exit 1
+fi
+
+# Check if fix is already applied
+if grep -q "lxc.apparmor.profile: unconfined" "/etc/pve/lxc/${CTID}.conf"; then
+    echo "AppArmor workaround is already applied to container $CTID"
+    echo "No changes needed."
+    exit 0
+fi
+
+echo "=========================================="
+echo "Applying AppArmor Fix to Container $CTID"
+echo "=========================================="
+echo ""
+
+# Check if container is running
+CONTAINER_STATUS=$(pct status "$CTID" 2>/dev/null | awk '{print $2}' || echo "unknown")
+
+if [[ "$CONTAINER_STATUS" == "running" ]] && [[ "$NO_RESTART" == false ]]; then
+    echo "Container is currently running. It will be restarted for the fix to take effect."
+    read -p "Continue? [y/N] " -n 1 -r
+    echo
+    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+        echo "Aborted."
+        exit 0
+    fi
+
+    echo "Stopping container $CTID..."
+    pct stop "$CTID"
+fi
+
+echo "Applying AppArmor workaround for CVE-2025-52881..."
+
+# Append the fix to the config file
+cat <<EOF >> /etc/pve/lxc/${CTID}.conf
+# AppArmor workaround for CVE-2025-52881 (Docker/runc compatibility)
+# Added by pve-docker-fix on $(date +%Y-%m-%d)
+lxc.apparmor.profile: unconfined
+lxc.mount.entry: /dev/null sys/module/apparmor/parameters/enabled none bind 0 0
+EOF
+
+echo "Configuration updated successfully."
+
+if [[ "$CONTAINER_STATUS" == "running" ]] && [[ "$NO_RESTART" == false ]]; then
+    echo "Starting container $CTID..."
+    pct start "$CTID"
+    echo ""
+    echo "Container started with AppArmor fix applied."
+elif [[ "$NO_RESTART" == true ]]; then
+    echo ""
+    echo "Fix applied. Container will use new configuration on next start."
+fi
+
+echo ""
+echo "=========================================="
+echo "✓ AppArmor workaround applied successfully"
+echo "=========================================="
+echo ""
+echo "Docker and containers should now work properly in container $CTID"
