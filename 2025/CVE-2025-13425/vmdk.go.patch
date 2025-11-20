@@ -1,0 +1,763 @@
+diff --git a/extractor/filesystem/embeddedfs/vmdk/vmdk.go b/extractor/filesystem/embeddedfs/vmdk/vmdk.go
+index 1998fa86..214b7e3b 100644
+--- a/extractor/filesystem/embeddedfs/vmdk/vmdk.go
++++ b/extractor/filesystem/embeddedfs/vmdk/vmdk.go
+@@ -20,35 +20,38 @@ import (
+ 	"compress/zlib"
+ 	"context"
+ 	"encoding/binary"
+-	"errors"
+ 	"fmt"
+ 	"io"
++	"io/fs"
+ 	"os"
+-	"path/filepath"
++	"path"
+ 	"strings"
+ 	"sync"
++	"time"
+ 
++	"github.com/diskfs/go-diskfs"
++	diskfsfilesystem "github.com/diskfs/go-diskfs/filesystem"
++	"github.com/diskfs/go-diskfs/filesystem/fat32"
+ 	"github.com/google/osv-scalibr/extractor/filesystem"
+-	"github.com/google/osv-scalibr/extractor/filesystem/embeddedfs/common"
++	scalibrfs "github.com/google/osv-scalibr/fs"
+ 	"github.com/google/osv-scalibr/inventory"
+ 	"github.com/google/osv-scalibr/plugin"
++	"github.com/masahiro331/go-ext4-filesystem/ext4"
+ )
+ 
+ const (
+ 	// Name is the unique identifier for the vmdk extractor.
+-	Name = "embeddedfs/vmdk"
+-	// SectorSize is the default sector size (512 bytes).
+-	SectorSize = 512
+-	// SparseMagic is always 'KDMV'.
+-	SparseMagic = 0x564d444b
+-	// GDAtEnd indicates that the Grain Directory is stored in the footer at the end of the VMDK file.
+-	GDAtEnd = 0xFFFFFFFFFFFFFFFF
+-	// DefaultGrainSec is default sectors if header invalid (64KiB).
+-	DefaultGrainSec = 128
++	Name             = "embeddedfs/vmdk"
++	SectorSize       = 512
++	SPARSE_MAGIC     = 0x564d444b // 'KDMV'
++	GDAtEnd          = 0xFFFFFFFFFFFFFFFF
++	DefaultGrainSec  = 128 // sectors if header invalid (64KiB)
++	defaultPageSize  = 1024 * 1024
++	defaultCacheSize = 100 * 1024 * 1024
+ )
+ 
+-// sparseExtentHeader defines the VMDK sparse extent header structure.
+-type sparseExtentHeader struct {
++// SparseExtentHeader defines the VMDK sparse extent header structure.
++type SparseExtentHeader struct {
+ 	MagicNumber        uint32
+ 	Version            uint32
+ 	Flags              uint32
+@@ -57,8 +60,8 @@ type sparseExtentHeader struct {
+ 	DescriptorOffset   uint64
+ 	DescriptorSize     uint64
+ 	NumGTEsPerGT       uint32
+-	RGDOffset          uint64
+-	GDOffset           uint64
++	RgdOffset          uint64
++	GdOffset           uint64
+ 	OverHead           uint64
+ 	UncleanShutdown    byte
+ 	SingleEndLineChar  byte
+@@ -69,8 +72,8 @@ type sparseExtentHeader struct {
+ 	Pad                [433]byte
+ }
+ 
+-// gdgtInfo holds GD/GT allocation information.
+-type gdgtInfo struct {
++// GDGTInfo holds GD/GT allocation information.
++type GDGTInfo struct {
+ 	GTEs      uint64
+ 	GTs       uint32
+ 	GDsectors uint32
+@@ -81,7 +84,7 @@ type gdgtInfo struct {
+ // Extractor implements the filesystem.Extractor interface for vmdk.
+ type Extractor struct{}
+ 
+-// New returns a new VMDK extractor.
++// New returns a new ova extractor.
+ func New() filesystem.Extractor {
+ 	return &Extractor{}
+ }
+@@ -103,7 +106,13 @@ func (e *Extractor) Version() int {
+ 
+ // Requirements returns the requirements for the extractor.
+ func (e *Extractor) Requirements() *plugin.Capabilities {
+-	return &plugin.Capabilities{}
++	return &plugin.Capabilities{
++		OS:              plugin.OSAny,
++		Network:         plugin.NetworkAny,
++		DirectFS:        true, // Requires direct filesystem access for GetRealPath
++		RunningSystem:   false,
++		ExtractFromDirs: false,
++	}
+ }
+ 
+ // FileRequired checks if the file is a .vmdk file based on its extension.
+@@ -112,52 +121,118 @@ func (e *Extractor) FileRequired(api filesystem.FileAPI) bool {
+ 	return strings.HasSuffix(strings.ToLower(path), ".vmdk")
+ }
+ 
+-// Extract returns an Inventory with embedded filesystems which contains mount functions for each filesystem in the .vmdk file.
++// Extract returns an Inventory with a DiskImage for each partition in the .vmdk file.
+ func (e *Extractor) Extract(ctx context.Context, input *filesystem.ScanInput) (inventory.Inventory, error) {
+ 	vmdkPath, err := input.GetRealPath()
+ 	if err != nil {
+-		return inventory.Inventory{}, fmt.Errorf("failed to get real path for %s: %w", input.Path, err)
+-	}
+-	// If called on a virtual FS, clean up the temporary directory
+-	if input.Root == "" {
+-		defer func() {
+-			dir := filepath.Dir(vmdkPath)
+-			if err := os.RemoveAll(dir); err != nil {
+-				fmt.Printf("os.RemoveAll(%q): %v\n", dir, err)
+-			}
+-		}()
++		return inventory.Inventory{}, fmt.Errorf("failed to get real path for %s: %v", input.Path, err)
+ 	}
+ 
+ 	// Create a temporary file for the raw disk image
+ 	tmpRaw, err := os.CreateTemp("", "scalibr-vmdk-raw-*.raw")
+ 	if err != nil {
+-		return inventory.Inventory{}, fmt.Errorf("failed to create temporary raw file: %w", err)
++		return inventory.Inventory{}, fmt.Errorf("failed to create temporary raw file: %v", err)
+ 	}
+ 	tmpRawPath := tmpRaw.Name()
+ 
+ 	// Convert VMDK to raw
+ 	if err := convertVMDKToRaw(vmdkPath, tmpRawPath); err != nil {
+ 		os.Remove(tmpRawPath)
+-		return inventory.Inventory{}, fmt.Errorf("failed to convert %s to raw image: %w", vmdkPath, err)
++		return inventory.Inventory{}, fmt.Errorf("failed to convert %s to raw image: %v", vmdkPath, err)
++	}
++
++	// Open the raw disk image with go-diskfs
++	disk, err := diskfs.Open(tmpRawPath, diskfs.WithOpenMode(diskfs.ReadOnly))
++	if err != nil {
++		os.Remove(tmpRawPath)
++		return inventory.Inventory{}, fmt.Errorf("failed to open raw disk image %s: %v", tmpRawPath, err)
+ 	}
+ 
+-	// Retrieve all partitions and the associated disk handle from the raw disk image.
+-	partitionList, disk, err := common.GetDiskPartitions(tmpRawPath)
++	// Get the partition table
++	partitions, err := disk.GetPartitionTable()
+ 	if err != nil {
+ 		disk.Close()
+ 		os.Remove(tmpRawPath)
+-		return inventory.Inventory{}, err
++		return inventory.Inventory{}, fmt.Errorf("failed to get partition table: %v", err)
++	}
++	partitionList := partitions.GetPartitions()
++	if len(partitionList) == 0 {
++		disk.Close()
++		os.Remove(tmpRawPath)
++		return inventory.Inventory{}, fmt.Errorf("no partitions found in raw disk image")
+ 	}
+ 
+ 	// Create a reference counter for the temporary file
+ 	var refCount int32
+ 	var refMu sync.Mutex
+ 
+-	// Create an Embedded filesystem for each valid partition
++	// Create a DiskImage for each valid partition
+ 	var embeddedFSs []*inventory.EmbeddedFS
+ 	for i, p := range partitionList {
+ 		partitionIndex := i + 1 // go-diskfs uses 1-based indexing
+-		getEmbeddedFS := common.NewPartitionEmbeddedFSGetter("vmdk", partitionIndex, p, disk, tmpRawPath, &refMu, &refCount)
++
++		getEmbeddedFS := func(ctx context.Context) (scalibrfs.FS, error) {
++
++			// Open raw image for ext4 parser
++			f, err := os.Open(tmpRawPath)
++			if err != nil {
++				return nil, fmt.Errorf("failed to open raw image %s: %v", tmpRawPath, err)
++			}
++
++			// Get partition offset and size (They are already multiplied by sector size)
++			offset := p.GetStart()
++			size := p.GetSize()
++			section := io.NewSectionReader(f, offset, size)
++			fsType := detectFilesystem(section, 0)
++
++			switch fsType {
++			case "ext4":
++				fs, err := ext4.NewFS(*section, nil)
++				if err != nil {
++					f.Close()
++					return nil, fmt.Errorf("failed to create ext4 filesystem for partition %d: %v", partitionIndex, err)
++				}
++				refMu.Lock()
++				refCount++
++				refMu.Unlock()
++				ext4fs := &ext4FS{
++					fs:         fs,
++					file:       f,
++					tmpRawPath: tmpRawPath,
++					refCount:   &refCount,
++					refMu:      &refMu,
++				}
++				return ext4fs, nil
++			case "FAT32":
++				f.Close() // Close the file as GetFilesystem reopens it
++				fs, err := disk.GetFilesystem(partitionIndex)
++				if err != nil {
++					return nil, fmt.Errorf("failed to get filesystem for partition %d: %v", partitionIndex, err)
++				}
++				fat32fs, ok := fs.(*fat32.FileSystem)
++				if !ok {
++					return nil, fmt.Errorf("partition %d is not a FAT32 filesystem", partitionIndex)
++				}
++				f, err = os.Open(tmpRawPath)
++				if err != nil {
++					return nil, fmt.Errorf("failed to reopen raw image %s: %v", tmpRawPath, err)
++				}
++				refMu.Lock()
++				refCount++
++				refMu.Unlock()
++				return &fat32FS{
++					fs:         fat32fs,
++					file:       f,
++					tmpRawPath: tmpRawPath,
++					refCount:   &refCount,
++					refMu:      &refMu,
++				}, nil
++			default:
++				f.Close()
++				return nil, fmt.Errorf("unsupported filesystem type %s for partition %d", fsType, partitionIndex)
++			}
++		}
++
+ 		embeddedFSs = append(embeddedFSs, &inventory.EmbeddedFS{
+ 			Path:          fmt.Sprintf("%s:%d", vmdkPath, partitionIndex),
+ 			GetEmbeddedFS: getEmbeddedFS,
+@@ -166,14 +241,302 @@ func (e *Extractor) Extract(ctx context.Context, input *filesystem.ScanInput) (i
+ 	return inventory.Inventory{EmbeddedFSs: embeddedFSs}, nil
+ }
+ 
++// detectFilesystem identifies the filesystem type by magic bytes
++func detectFilesystem(r io.ReaderAt, offset int64) string {
++	buf := make([]byte, 4096)
++	_, err := r.ReadAt(buf, offset)
++	if err != nil {
++		return fmt.Sprintf("read error: %v", err)
++	}
++	// EXT4 magic at offset 0x438
++	if len(buf) > 0x438+2 {
++		if binary.LittleEndian.Uint16(buf[0x438:0x43A]) == 0xEF53 {
++			return "ext4"
++		}
++	}
++	// FAT32: "FAT32   " at offset 0x52
++	if len(buf) > 0x52+8 {
++		if string(buf[0x52:0x52+8]) == "FAT32   " {
++			return "FAT32"
++		}
++	}
++	return "unknown"
++}
++
++// ext4FS wraps go-ext4-filesystem to implement scalibrfs.FS
++type ext4FS struct {
++	fs         *ext4.FileSystem
++	file       *os.File
++	tmpRawPath string
++	refCount   *int32
++	refMu      *sync.Mutex
++}
++
++func (e *ext4FS) Open(name string) (fs.File, error) {
++	//fmt.Printf("ext4FS Open(%s)", name)
++	file, err := e.fs.Open(name)
++	if err != nil {
++		//fmt.Printf("ext4FS.Open(%q) failed: %v\n", name, err)
++		return nil, fmt.Errorf("failed to open file %s: %v", name, err)
++	}
++	ext4File, ok := file.(*ext4.File)
++	if !ok {
++		return nil, fmt.Errorf("opened file %s is not an ext4.File", name)
++	}
++	return &ext4FileWrapper{file: ext4File, name: name}, nil
++}
++
++func (e *ext4FS) ReadDir(name string) ([]fs.DirEntry, error) {
++	entries, err := e.fs.ReadDir(name)
++	if err != nil {
++		fmt.Printf("ext4.ReadDir(%q) failed: %v\n", name, err)
++		return nil, fmt.Errorf("failed to read directory %s: %v", name, err)
++	}
++	return entries, nil
++}
++
++func (e *ext4FS) Stat(name string) (fs.FileInfo, error) {
++	if name == "." || name == "" || name == "/" {
++		// Return synthetic FileInfo for root directory
++		return &fileInfo{
++			name:    name,
++			isDir:   true,
++			modTime: time.Now(),
++		}, nil
++	}
++	info, err := e.fs.Stat(name)
++	if err != nil {
++		fmt.Printf("ext4FS.Stat(%q) failed: %v\n", name, err)
++		return nil, fmt.Errorf("failed to stat %s: %v", name, err)
++	}
++	return info, nil
++}
++
++func (e *ext4FS) Close() error {
++	e.refMu.Lock()
++	defer e.refMu.Unlock()
++	if e.file == nil {
++		return nil // Already closed
++	}
++	*e.refCount--
++	if *e.refCount == 0 {
++		err := e.file.Close()
++		e.file = nil // Prevent double close
++		if err != nil {
++			return fmt.Errorf("failed to close raw file %s: %v", e.tmpRawPath, err)
++		}
++		if err := os.Remove(e.tmpRawPath); err != nil {
++			return fmt.Errorf("failed to remove temporary raw file %s: %v", e.tmpRawPath, err)
++		}
++	}
++	return nil
++}
++
++// ext4FileWrapper wraps ext4.File to implement fs.File and io.ReaderAt
++type ext4FileWrapper struct {
++	file *ext4.File
++	name string
++}
++
++func (e *ext4FileWrapper) Read(p []byte) (int, error) {
++	return e.file.Read(p)
++}
++
++func (e *ext4FileWrapper) Close() error {
++	return e.file.Close()
++}
++
++func (e *ext4FileWrapper) Stat() (fs.FileInfo, error) {
++	return e.file.Stat()
++}
++
++// Implement io.ReaderAt for scalibrfs.File (assumed to require it)
++func (e *ext4FileWrapper) ReadAt(p []byte, off int64) (int, error) {
++	// Read the entire file into memory (suitable for small files like private-key.pem)
++	data, err := io.ReadAll(e.file)
++	if err != nil {
++		return 0, fmt.Errorf("failed to read file %s: %v", e.name, err)
++	}
++	if off >= int64(len(data)) {
++		return 0, io.EOF
++	}
++	n := copy(p, data[off:])
++	if n < len(p) {
++		return n, io.EOF
++	}
++	return n, nil
++}
++
++// fat32FS wraps go-diskfs fat32.FileSystem to implement scalibrfs.FS
++type fat32FS struct {
++	fs         *fat32.FileSystem
++	file       *os.File
++	tmpRawPath string
++	refCount   *int32
++	refMu      *sync.Mutex
++}
++
++func (f *fat32FS) Open(name string) (fs.File, error) {
++	file, err := f.fs.OpenFile(name, os.O_RDONLY)
++	if err != nil {
++		//fmt.Printf("fat32FS.Open(%q) failed: %v\n", name, err)
++		return nil, fmt.Errorf("failed to open file %s: %v", name, err)
++	}
++	return &fat32FileWrapper{file: file, name: name, fs: f.fs}, nil
++}
++
++func (f *fat32FS) ReadDir(name string) ([]fs.DirEntry, error) {
++	if name == "." || name == "" {
++		// Return synthetic FileInfo for root directory
++		name = "/"
++	}
++	fis, err := f.fs.ReadDir(name)
++	if err != nil {
++		//fmt.Printf("fat32FS.ReadDir(%q) failed: %v\n", name, err)
++		return nil, fmt.Errorf("failed to read directory %s: %v", name, err)
++	}
++	entries := make([]fs.DirEntry, 0, len(fis))
++	for _, fi := range fis {
++		entries = append(entries, fs.FileInfoToDirEntry(fi))
++	}
++	return entries, nil
++}
++
++func (f *fat32FS) Stat(name string) (fs.FileInfo, error) {
++	if name == "/" || name == "" || name == "." {
++		// Return synthetic FileInfo for root directory
++		return &fileInfo{
++			name:    name,
++			isDir:   true,
++			modTime: time.Now(),
++		}, nil
++	}
++	fis, err := f.fs.ReadDir(path.Dir(name))
++	if err != nil {
++		//fmt.Printf("fat32FS.Stat(%q) failed: %v\n", name, err)
++		return nil, fmt.Errorf("failed to stat %s: %v", name, err)
++	}
++	base := path.Base(name)
++	for _, fi := range fis {
++		if fi.Name() == base {
++			return fi, nil
++		}
++	}
++	return nil, fmt.Errorf("file %s not found", name)
++}
++
++func (f *fat32FS) Close() error {
++	f.refMu.Lock()
++	defer f.refMu.Unlock()
++	if f.file == nil {
++		return nil
++	}
++	*f.refCount--
++	if *f.refCount == 0 {
++		err := f.file.Close()
++		f.file = nil
++		if err != nil {
++			return fmt.Errorf("failed to close raw file %s: %v", f.tmpRawPath, err)
++		}
++		if err := os.Remove(f.tmpRawPath); err != nil {
++			return fmt.Errorf("failed to remove temporary raw file %s: %v", f.tmpRawPath, err)
++		}
++	}
++	return nil
++}
++
++// fat32FileWrapper wraps diskfsfilesystem.File to implement scalibrfs.FS and io.ReaderAt
++type fat32FileWrapper struct {
++	file diskfsfilesystem.File
++	name string
++	fs   *fat32.FileSystem
++}
++
++func (f *fat32FileWrapper) Read(p []byte) (int, error) {
++	return f.file.Read(p)
++}
++
++func (f *fat32FileWrapper) Close() error {
++	return f.file.Close()
++}
++
++func (f *fat32FileWrapper) Stat() (fs.FileInfo, error) {
++	if f.name == "/" || f.name == "" || f.name == "." {
++		// Return synthetic FileInfo for root directory
++		return &fileInfo{
++			name:    f.name,
++			isDir:   true,
++			modTime: time.Now(),
++		}, nil
++	}
++	fis, err := f.fs.ReadDir(path.Dir(f.name))
++	if err != nil {
++		return nil, fmt.Errorf("failed to read directory %s: %v", path.Dir(f.name), err)
++	}
++	base := path.Base(f.name)
++	for _, fi := range fis {
++		if fi.Name() == base {
++			return fi, nil
++		}
++	}
++	return nil, fmt.Errorf("file %s not found", f.name)
++}
++
++func (f *fat32FileWrapper) ReadAt(p []byte, off int64) (int, error) {
++	// diskfsfilesystem.File implements io.ReadWriteSeeker, so we can use Seek and Read
++	_, err := f.file.Seek(off, io.SeekStart)
++	if err != nil {
++		return 0, fmt.Errorf("failed to seek to offset %d in file %s: %v", off, f.name, err)
++	}
++	n, err := f.file.Read(p)
++	if err != nil {
++		return n, fmt.Errorf("failed to read at offset %d in file %s: %v", off, f.name, err)
++	}
++	return n, nil
++}
++
++// fileInfo is a simple implementation of fs.FileInfo for the root directory
++type fileInfo struct {
++	name    string
++	isDir   bool
++	modTime time.Time
++}
++
++func (fi *fileInfo) Name() string {
++	return fi.name
++}
++
++func (fi *fileInfo) Size() int64 {
++	return 0
++}
++
++func (fi *fileInfo) Mode() fs.FileMode {
++	if fi.isDir {
++		return fs.ModeDir | 0755
++	}
++	return 0644
++}
++
++func (fi *fileInfo) ModTime() time.Time {
++	return fi.modTime
++}
++
++func (fi *fileInfo) IsDir() bool {
++	return fi.isDir
++}
++
++func (fi *fileInfo) Sys() interface{} {
++	return nil
++}
++
+ // VMDK conversion functions
+ 
+ // readHeaderAt reads the 512-byte header at the given offset.
+-func readHeaderAt(r io.ReaderAt, offset int64) (sparseExtentHeader, error) {
+-	var hdr sparseExtentHeader
++func readHeaderAt(r io.ReaderAt, offset int64) (SparseExtentHeader, error) {
++	var hdr SparseExtentHeader
+ 	buf := make([]byte, SectorSize)
+ 	n, err := r.ReadAt(buf, offset)
+-	if err != nil && !errors.Is(err, io.EOF) {
++	if err != nil && err != io.EOF {
+ 		return hdr, fmt.Errorf("read header at %d: %w", offset, err)
+ 	}
+ 	if n < SectorSize {
+@@ -183,15 +546,15 @@ func readHeaderAt(r io.ReaderAt, offset int64) (sparseExtentHeader, error) {
+ 	if err := binary.Read(br, binary.LittleEndian, &hdr); err != nil {
+ 		return hdr, fmt.Errorf("parse header: %w", err)
+ 	}
+-	if hdr.MagicNumber != SparseMagic {
++	if hdr.MagicNumber != SPARSE_MAGIC {
+ 		return hdr, fmt.Errorf("invalid magic: 0x%x", hdr.MagicNumber)
+ 	}
+ 	return hdr, nil
+ }
+ 
+-// readFooterIfGDAtEnd reads the footer header near EOF if GDOffset is GDAtEnd.
+-func readFooterIfGDAtEnd(f *os.File, hdr *sparseExtentHeader) error {
+-	if hdr.GDOffset != GDAtEnd {
++// readFooterIfGDAtEnd reads the footer header near EOF if GdOffset is GDAtEnd.
++func readFooterIfGDAtEnd(f *os.File, hdr *SparseExtentHeader) error {
++	if hdr.GdOffset != GDAtEnd {
+ 		return nil
+ 	}
+ 	fi, err := f.Stat()
+@@ -199,17 +562,17 @@ func readFooterIfGDAtEnd(f *os.File, hdr *sparseExtentHeader) error {
+ 		return err
+ 	}
+ 	if fi.Size() < 1536 {
+-		return errors.New("file too small to contain footer/EOS")
++		return fmt.Errorf("file too small to contain footer/EOS")
+ 	}
+ 	base := fi.Size() - 1536
+ 	footerHeaderBlock := make([]byte, 512)
+ 	if _, err := f.ReadAt(footerHeaderBlock, base+512); err != nil {
+ 		return fmt.Errorf("read footer header block: %w", err)
+ 	}
+-	if binary.LittleEndian.Uint32(footerHeaderBlock[0:4]) != SparseMagic {
++	if binary.LittleEndian.Uint32(footerHeaderBlock[0:4]) != SPARSE_MAGIC {
+ 		return fmt.Errorf("footer magic mismatch: 0x%x", binary.LittleEndian.Uint32(footerHeaderBlock[0:4]))
+ 	}
+-	var foot sparseExtentHeader
++	var foot SparseExtentHeader
+ 	r := bytes.NewReader(footerHeaderBlock[4:])
+ 	if err := binary.Read(r, binary.LittleEndian, &foot); err != nil {
+ 		return fmt.Errorf("parse footer header: %w", err)
+@@ -218,6 +581,46 @@ func readFooterIfGDAtEnd(f *os.File, hdr *sparseExtentHeader) error {
+ 	return nil
+ }
+ 
++// alignUp aligns to sector boundary (upwards).
++func alignUp(x int64, sector int64) int64 {
++	if x%sector == 0 {
++		return x
++	}
++	return ((x / sector) + 1) * sector
++}
++
++// copyNToFileAt copies n bytes from src to out at offset.
++func copyNToFileAt(out *os.File, src io.Reader, offset int64, n int64) error {
++	const chunk = 1 << 20 // 1MiB
++	buf := make([]byte, chunk)
++	written := int64(0)
++	for written < n {
++		toRead := chunk
++		if n-written < int64(toRead) {
++			toRead = int(n - written)
++		}
++		read, rerr := io.ReadFull(src, buf[:toRead])
++		if read > 0 {
++			if wn, werr := out.WriteAt(buf[:read], offset+written); werr != nil {
++				return werr
++			} else if wn != read {
++				return io.ErrShortWrite
++			}
++			written += int64(read)
++		}
++		if rerr != nil {
++			if rerr == io.EOF || rerr == io.ErrUnexpectedEOF {
++				if written == n {
++					break
++				}
++				return rerr
++			}
++			return rerr
++		}
++	}
++	return nil
++}
++
+ // readStreamMarker reads a VMDK stream marker.
+ func readStreamMarker(f *os.File) (val uint64, size uint32, typ uint32, data []byte, err error) {
+ 	head := make([]byte, 12)
+@@ -259,8 +662,8 @@ func readStreamMarker(f *os.File) (val uint64, size uint32, typ uint32, data []b
+ }
+ 
+ // convertStreamOptimizedExtent converts a stream-optimized VMDK extent.
+-func convertStreamOptimizedExtent(f *os.File, out *os.File, hdr sparseExtentHeader) error {
+-	if hdr.GDOffset == GDAtEnd {
++func convertStreamOptimizedExtent(f *os.File, out *os.File, hdr SparseExtentHeader) error {
++	if hdr.GdOffset == GDAtEnd {
+ 		if err := readFooterIfGDAtEnd(f, &hdr); err != nil {
+ 			return fmt.Errorf("read footer: %w", err)
+ 		}
+@@ -282,7 +685,7 @@ func convertStreamOptimizedExtent(f *os.File, out *os.File, hdr sparseExtentHead
+ 	for {
+ 		val, size, typ, payload, err := readStreamMarker(f)
+ 		if err != nil {
+-			if errors.Is(err, io.EOF) {
++			if err == io.EOF {
+ 				break
+ 			}
+ 			return fmt.Errorf("read marker: %w", err)
+@@ -301,7 +704,7 @@ func convertStreamOptimizedExtent(f *os.File, out *os.File, hdr sparseExtentHead
+ 				}
+ 				dec, derr := io.ReadAll(zr)
+ 				zr.Close()
+-				if derr != nil && !errors.Is(derr, io.EOF) {
++				if derr != nil && derr != io.EOF {
+ 					return fmt.Errorf("zlib read at lba %d: %w", lba, derr)
+ 				}
+ 				if int64(len(dec)) < grainBytes {
+@@ -342,8 +745,8 @@ func convertStreamOptimizedExtent(f *os.File, out *os.File, hdr sparseExtentHead
+ 				if _, err := io.ReadFull(f, meta); err != nil {
+ 					return fmt.Errorf("read footer meta: %w", err)
+ 				}
+-				if len(meta) >= 4 && binary.LittleEndian.Uint32(meta[0:4]) == SparseMagic {
+-					var foot sparseExtentHeader
++				if len(meta) >= 4 && binary.LittleEndian.Uint32(meta[0:4]) == SPARSE_MAGIC {
++					var foot SparseExtentHeader
+ 					br := bytes.NewReader(meta[4:])
+ 					if err := binary.Read(br, binary.LittleEndian, &foot); err == nil {
+ 						hdr = foot
+@@ -375,7 +778,7 @@ func convertStreamOptimizedExtent(f *os.File, out *os.File, hdr sparseExtentHead
+ }
+ 
+ // getGDGT computes GD/GT sizes and allocates structures.
+-func getGDGT(hdr sparseExtentHeader) (*gdgtInfo, error) {
++func getGDGT(hdr SparseExtentHeader) (*GDGTInfo, error) {
+ 	if hdr.GrainSize < 1 || hdr.GrainSize > 128 || (hdr.GrainSize&(hdr.GrainSize-1)) != 0 {
+ 		return nil, fmt.Errorf("invalid grainSize %d", hdr.GrainSize)
+ 	}
+@@ -402,7 +805,7 @@ func getGDGT(hdr sparseExtentHeader) (*gdgtInfo, error) {
+ 		return nil, fmt.Errorf("gd/gt allocation too large: %d bytes", totalBytes)
+ 	}
+ 	gdarr := make([]uint32, (GDsectors*SectorSize)/4+(GTsectors*GTs*SectorSize)/4)
+-	info := &gdgtInfo{
++	info := &GDGTInfo{
+ 		GTEs:      GTEs,
+ 		GTs:       GTs,
+ 		GDsectors: GDsectors,
+@@ -413,34 +816,34 @@ func getGDGT(hdr sparseExtentHeader) (*gdgtInfo, error) {
+ }
+ 
+ // readGD reads GD sectors from file.
+-func readGD(f *os.File, hdr sparseExtentHeader, info *gdgtInfo) error {
+-	if hdr.GDOffset == 0 {
+-		return errors.New("no GD offset")
++func readGD(f *os.File, hdr SparseExtentHeader, info *GDGTInfo) error {
++	if hdr.GdOffset == 0 {
++		return fmt.Errorf("no GD offset")
+ 	}
+-	start := int64(hdr.GDOffset) * SectorSize
++	start := int64(hdr.GdOffset) * SectorSize
+ 	totalBytes := int64(info.GDsectors) * SectorSize
+ 	buf := make([]byte, totalBytes)
+ 	if _, err := f.ReadAt(buf, start); err != nil {
+ 		return fmt.Errorf("read GD at %d: %w", start, err)
+ 	}
+-	for i := range int(info.GDsectors * SectorSize / 4) {
++	for i := 0; i < int(info.GDsectors*SectorSize/4); i++ {
+ 		info.gd[i] = binary.LittleEndian.Uint32(buf[i*4 : i*4+4])
+ 	}
+ 	return nil
+ }
+ 
+ // convertMonolithicSparse converts a monolithic sparse VMDK.
+-func convertMonolithicSparse(f *os.File, out *os.File, hdr sparseExtentHeader) error {
++func convertMonolithicSparse(f *os.File, out *os.File, hdr SparseExtentHeader) error {
+ 	info, err := getGDGT(hdr)
+ 	if err != nil {
+ 		return err
+ 	}
+-	GDOffset := hdr.GDOffset
+-	if hdr.RGDOffset != 0 {
+-		GDOffset = hdr.RGDOffset
++	gdOffset := hdr.GdOffset
++	if hdr.RgdOffset != 0 {
++		gdOffset = hdr.RgdOffset
+ 	}
+-	if GDOffset == 0 || GDOffset == GDAtEnd {
+-		return errors.New("gd offset missing for monolithicSparse")
++	if gdOffset == 0 || gdOffset == GDAtEnd {
++		return fmt.Errorf("gd offset missing for monolithicSparse")
+ 	}
+ 	if err := readGD(f, hdr, info); err != nil {
+ 		return fmt.Errorf("readGD: %w", err)
+@@ -451,7 +854,7 @@ func convertMonolithicSparse(f *os.File, out *os.File, hdr sparseExtentHeader) e
+ 		return fmt.Errorf("truncate out: %w", err)
+ 	}
+ 	numGTEsPerGT := int64(hdr.NumGTEsPerGT)
+-	for g := range totalGrains {
++	for g := int64(0); g < totalGrains; g++ {
+ 		gdIdx := int(g / numGTEsPerGT)
+ 		gtIdx := int(g % numGTEsPerGT)
+ 		if gdIdx >= len(info.gd) {
+@@ -492,13 +895,13 @@ func convertMonolithicSparse(f *os.File, out *os.File, hdr sparseExtentHeader) e
+ 		}
+ 		grainSector := int64(gte)
+ 		grainOffset := grainSector * SectorSize
+-		var toRead = grainBytes
++		var toRead int64 = grainBytes
+ 		if g == totalGrains-1 {
+ 			lastSectors := int64(hdr.Capacity % hdr.GrainSize)
+ 			if lastSectors == 0 {
+ 				lastSectors = int64(hdr.GrainSize)
+ 			}
+-			toRead = lastSectors * SectorSize
++			toRead = int64(lastSectors) * SectorSize
+ 		}
+ 		grainData := make([]byte, toRead)
+ 		if _, err := f.ReadAt(grainData, grainOffset); err != nil {
