@@ -25,6 +25,10 @@ jobs:
       with:
         go-version: '1.23.0'  # Specify the version of Go you want to use
 
+    - name: Clear new directories tracking file
+      run: |
+        echo "[]" > new_directories.json
+
     - name: Run CVE mapping command
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -35,6 +39,42 @@ jobs:
         echo '"CVE-2022-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page 1 -year 2022
         echo '"CVE-2021-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page 1 -year 2021
         echo '"CVE-2020-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page 1 -year 2020
+
+    - name: Send Discord notification for new directories
+      env:
+        DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+      run: |
+        if [ ! -f new_directories.json ]; then
+          echo "No new_directories.json file found"
+          exit 0
+        fi
+        
+        # Check if file has content (more than just "[]")
+        DIR_COUNT=$(jq 'length' new_directories.json)
+        if [ "$DIR_COUNT" = "0" ] || [ -z "$DIR_COUNT" ]; then
+          echo "No new directories to notify"
+          exit 0
+        fi
+        
+        # Check if webhook URL is set
+        if [ -z "$DISCORD_WEBHOOK_URL" ]; then
+          echo "DISCORD_WEBHOOK_URL not set, skipping notification"
+          exit 0
+        fi
+        
+        # Build the message content - each directory on a new line
+        MESSAGE=$(jq -r '.[] | "NEW ALERT: https://github.com/rix4uni/cvemapping/tree/main/\(.year)/\(.cvename)"' new_directories.json)
+        
+        # Build JSON payload with jq to properly handle newlines and escaping
+        PAYLOAD=$(echo "$MESSAGE" | jq -Rs '{content: .}')
+        
+        # Send to Discord webhook
+        curl -H "Content-Type: application/json" \
+             -d "$PAYLOAD" \
+             "$DISCORD_WEBHOOK_URL" || echo "Failed to send Discord notification"
+        
+        # Clean up the temporary tracking file
+        rm -f new_directories.json
 
     - name: Commit and push changes if there are any
       run: |
