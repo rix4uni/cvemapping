@@ -296,6 +296,7 @@ func uniqueStrings(input []string) []string {
 }
 
 // Function to append new directories to JSON file
+// Only writes directories from the current run - does not read/append from existing file
 func writeNewDirectories(newDirs []NewDirectory) {
 	if len(newDirs) == 0 {
 		return
@@ -304,12 +305,12 @@ func writeNewDirectories(newDirs []NewDirectory) {
 	jsonFile := "new_directories.json"
 	var existingDirs []NewDirectory
 
-	// Read existing entries if file exists
+	// Read existing entries if file exists (from other year runs in same workflow execution)
 	if data, err := ioutil.ReadFile(jsonFile); err == nil {
 		json.Unmarshal(data, &existingDirs)
 	}
 
-	// Append new directories to existing ones
+	// Append new directories to existing ones (only from current workflow run)
 	allDirs := append(existingDirs, newDirs...)
 
 	// Write back to file

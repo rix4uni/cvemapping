@@ -28,7 +28,16 @@ jobs:
 
     - name: Clear new directories tracking file
       run: |
+        # Remove file if it exists (from git or previous runs)
+        rm -f new_directories.json
+        # Create fresh empty JSON array
         echo "[]" > new_directories.json
+        # Verify file is empty
+        if [ "$(cat new_directories.json)" != "[]" ]; then
+          echo "❌ Error: Failed to clear new_directories.json"
+          exit 1
+        fi
+        echo "✅ Cleared new_directories.json"
 
     - name: Run CVE mapping command
       env:
@@ -50,10 +59,16 @@ jobs:
           exit 0
         fi
         
+        # Verify file is valid JSON and check content
+        if ! jq empty new_directories.json 2>/dev/null; then
+          echo "❌ Error: new_directories.json is not valid JSON"
+          exit 1
+        fi
+        
         # Check if file has content (more than just "[]")
         DIR_COUNT=$(jq 'length' new_directories.json)
         if [ "$DIR_COUNT" = "0" ] || [ -z "$DIR_COUNT" ]; then
-          echo "No new directories to notify"
+          echo "No new directories to notify (file contains $DIR_COUNT entries)"
           exit 0
         fi
         
@@ -102,7 +117,13 @@ jobs:
       run: |
         git config --global user.name 'GitHub Actions'
         git config --global user.email 'actions@users.noreply.github.com'
+        
+        # Remove new_directories.json from git if it was previously tracked
+        git rm --cached new_directories.json 2>/dev/null || true
+        
+        # Add all changes except new_directories.json
         git add .
+        git reset -- new_directories.json 2>/dev/null || true
         
         # Check if there are changes before committing
         if ! git diff --cached --exit-code; then
