@@ -1,0 +1,40 @@
+During an authorized intrusion assessment, it was identified that the Intelbras CFTV IP NVD 9032 R Ftd device, operating with Firmware V2.800.00IB00C.0.T, Build Date 2022-08-17 and Web Version V3.2.1.1136058, contains a flaw in the password recovery workflow.
+The mechanism responsible for validating the multi-factor authentication (MFA) confirmation within the recovery process does not properly enforce server-side validation. As a result, the system accepts altered MFA validation responses during transmission.
+When the response that should indicate an unsuccessful MFA verification is intercepted and its JSON content modified to indicate a successful verification, the device improperly accepts the MFA step as valid. This behavior allows an attacker to proceed with unauthorized password reset operations, including redefining the administrator account’s password.
+The flaw can be exploited remotely and without prior authentication, compromising the integrity of the authentication process and enabling complete administrative takeover of the device.
+
+PoC Steps
+1. Environment Preparation
+During the evaluation, the testing team ensured that the operational environment allowed visibility of the communication occurring between the client interface and the Intelbras device.
+The password recovery functionality of the equipment was confirmed to be enabled, and access to the device’s web interface was available. These conditions allowed the team to observe the full authentication recovery workflow, including the MFA validation stage.
+2. Execution of the Attack
+The evaluation began by initiating the standard password recovery process through the device’s web interface, specifically targeting the administrator account.
+During the recovery flow, the interface requested MFA confirmation, expecting the device to validate whether the user-provided verification code was legitimate.
+At this stage, the communication between the interface and the device was monitored. The MFA validation response transmitted by the device was intercepted during transit.
+Instead of delivering the original server response, which indicated that the MFA verification was unsuccessful, the response was modified so that it represented a successful validation.
+Once this altered response was delivered back to the interface, the system treated the MFA confirmation as approved and proceeded with the administrative password reset process.
+The password was then redefined through the recovery interface, and the system concluded the procedure as if the recovery workflow had been legitimately validated.
+3. Verification of the Result
+After completion of the recovery procedure, authentication was attempted using the newly defined administrator password.
+The login was accepted by the device without restriction, confirming that the manipulated MFA validation allowed the unauthorized takeover of the administrative account.
+Full access to the administrative panel and all management functionalities validated that the authentication safeguards were bypassed successfully.
+
+
+Useful Information
+– The vulnerability resides in the handling of MFA validation responses within the password recovery workflow.
+– Validation occurs primarily on the client side, without proper enforcement on the server side.
+– Interception and alteration of the response are sufficient to deceive the recovery mechanism.
+– The issue affects the MFA confirmation stage exclusively and does not require interaction with other authentication components.
+– The process does not require knowledge of any valid verification code, user credentials, or session tokens.
+
+Associated Risks
+The exploitation of this flaw enables unauthorized redefinition of the administrator account password, providing unrestricted access to the device’s administrative interface.
+This control grants the attacker the ability to modify configurations, disable security measures, alter video retention policies, or manipulate surveillance data.
+In environments where the affected device is part of a larger monitoring infrastructure, exploitation may compromise operational integrity, monitoring continuity, and the confidentiality of recorded footage.
+Additionally, unauthorized administrative access can serve as a stepping stone for lateral movement within internal networks where the device is deployed.
+Conclusion of the Report
+The evaluation identified that the Intelbras CFTV IP NVD 9032 R Ftd device contains a flaw in its password recovery workflow, specifically in the validation process of multi-factor authentication responses.
+The improper enforcement of server-side validation allows manipulation of the MFA verification response, granting unauthorized access to the administrative password reset function.
+Through this weakness, an attacker can redefine the administrator credentials and obtain complete control of the device, compromising the confidentiality, integrity, and availability of the surveillance environment.
+We reinforce the importance of implementing strict server-side validation for all MFA-related operations and ensuring that authentication workflows cannot be influenced through client-side modification.
+Maintaining strong security controls within authentication and recovery mechanisms is essential for preserving device integrity and protecting critical infrastructure assets.
