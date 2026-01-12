@@ -2,7 +2,8 @@
 
 
 # Hardcoded Discord webhook URL
-DISCORD_WEBHOOK_URL="https://discord.com/api/webhooks/"
+# DISCORD_WEBHOOK_URL="https://discord.com/api/webhooks/"
+DISCORD_WEBHOOK_URL="${DISCORD_WEBHOOK_URL:?Webhook URL not set}"
 
 # Function to run the main logic
 run_check() {

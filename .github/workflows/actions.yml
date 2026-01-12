@@ -16,6 +16,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    env: DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+
     steps:
     - name: Check out repository
       uses: actions/checkout@v3
@@ -36,6 +38,12 @@ jobs:
         echo '"CVE-2022-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page 1 -year 2022
         echo '"CVE-2021-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page 1 -year 2021
         echo '"CVE-2020-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page 1 -year 2020
+
+    - name: Run cvemapping monitor
+      run: |
+        chmod +x cvemapping.sh
+        bash cvemapping.sh
+
 
     - name: Commit and push changes if there are any
       run: |
