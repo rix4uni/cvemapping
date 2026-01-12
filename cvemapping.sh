@@ -71,12 +71,12 @@ run_check() {
   fi
 }
 
-# Run forever, every 3600 seconds (1 hour)
-echo "[$(date '+%Y-%m-%d %H:%M:%S')] Starting cvemapping monitor (runs every 3600 seconds)..." >&2
-echo "[$(date '+%Y-%m-%d %H:%M:%S')] Press Ctrl+C to stop" >&2
+# # Run forever, every 3600 seconds (1 hour)
+# echo "[$(date '+%Y-%m-%d %H:%M:%S')] Starting cvemapping monitor (runs every 3600 seconds)..." >&2
+# echo "[$(date '+%Y-%m-%d %H:%M:%S')] Press Ctrl+C to stop" >&2
 
-while true; do
-  run_check
-  echo "[$(date '+%Y-%m-%d %H:%M:%S')] Waiting 3600 seconds until next check..." >&2
-  sleep 3600
-done
+# while true; do
+#   run_check
+#   echo "[$(date '+%Y-%m-%d %H:%M:%S')] Waiting 3600 seconds until next check..." >&2
+#   sleep 3600
+# done
