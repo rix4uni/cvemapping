@@ -19,7 +19,7 @@ run_check() {
   fi
 
   # Capture output from unew command
-  OUTPUT=$(ls cvemapping/{2020,2021,2022,2023,2024,2025} \
+  OUTPUT=$(ls cvemapping/{2024,2025,2026} \
     | egrep -v ":" \
     | awk -v base="https://github.com/rix4uni/cvemapping/tree/main" '
         {

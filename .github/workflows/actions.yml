@@ -16,7 +16,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    env: DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+    env:
+      DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
 
     steps:
     - name: Check out repository
