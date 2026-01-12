@@ -29,6 +29,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
+        echo '"CVE-2026-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page 1 -year 2025
         echo '"CVE-2025-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page 1 -year 2025
         echo '"CVE-2024-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page 1 -year 2024
         echo '"CVE-2023-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page 1 -year 2023
