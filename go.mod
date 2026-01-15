@@ -1,3 +1,3 @@
-module github.com/rix4uni/cve
+module github.com/rix4uni/cvemapping
 
-go 1.23.0
+go 1.25.5
