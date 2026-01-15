@@ -26,25 +26,47 @@ jobs:
     - name: Set up Go
       uses: actions/setup-go@v4
       with:
-        go-version: '1.23.0'  # Specify the version of Go you want to use
+        go-version: '1.25.5'  # Specify the version of Go you want to use
 
     - name: Run CVE mapping command
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        echo '"CVE-2026-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page 1 -year 2026
-        echo '"CVE-2025-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page 1 -year 2025
-        echo '"CVE-2024-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page 1 -year 2024
-        echo '"CVE-2023-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page 1 -year 2023
-        echo '"CVE-2022-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page 1 -year 2022
-        echo '"CVE-2021-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page 1 -year 2021
-        echo '"CVE-2020-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page 1 -year 2020
+        rm -rf data/
 
-    - name: Run cvemapping monitor
-      run: |
-        chmod +x cvemapping.sh
-        bash cvemapping.sh
+        echo '"CVE-2026-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page all -year 2026 -export-json
+        echo '"CVE-2025-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page all -year 2025 -export-json
+        echo '"CVE-2024-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page all -year 2024 -export-json
+        echo '"CVE-2023-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page all -year 2023 -export-json
+        echo '"CVE-2022-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page all -year 2022 -export-json
+        echo '"CVE-2021-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page all -year 2021 -export-json
+        echo '"CVE-2020-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page all -year 2020 -export-json
+        echo '"CVE-2019-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page all -year 2019 -export-json
+        echo '"CVE-2018-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page all -year 2018 -export-json
+        echo '"CVE-2017-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page all -year 2017 -export-json
+        echo '"CVE-2016-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page all -year 2016 -export-json
+        echo '"CVE-2015-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page all -year 2015 -export-json
+        echo '"CVE-2014-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page all -year 2014 -export-json
+        echo '"CVE-2013-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page all -year 2013 -export-json
+        echo '"CVE-2012-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page all -year 2012 -export-json
+        echo '"CVE-2011-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page all -year 2011 -export-json
+        echo '"CVE-2010-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page all -year 2010 -export-json
+        echo '"CVE-2009-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page all -year 2009 -export-json
+        echo '"CVE-2008-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page all -year 2008 -export-json
+        echo '"CVE-2007-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page all -year 2007 -export-json
+        echo '"CVE-2006-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page all -year 2006 -export-json
+        echo '"CVE-2005-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page all -year 2005 -export-json
+        echo '"CVE-2004-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page all -year 2004 -export-json
+        echo '"CVE-2003-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page all -year 2003 -export-json
+        echo '"CVE-2002-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page all -year 2002 -export-json
+        echo '"CVE-2001-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page all -year 2001 -export-json
+        echo '"CVE-2000-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page all -year 2000 -export-json
+        echo '"CVE-1999-"' | go run cvemapping.go -github-token "$GITHUB_TOKEN" -page all -year 1999 -export-json
 
+    # - name: Run cvemapping monitor
+    #   run: |
+    #     chmod +x cvemapping.sh
+    #     bash cvemapping.sh
 
     - name: Commit and push changes if there are any
       run: |
