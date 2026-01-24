@@ -5563,29 +5563,6 @@
       "cve_id": "CVE-2021-23017",
       "repositories": [
         {
-          "id": 1050343736,
-          "name": "EVIL-CVE-2021-23017-Update-2025",
-          "full_name": "6lj/EVIL-CVE-2021-23017-Update-2025",
-          "html_url": "https://github.com/6lj/EVIL-CVE-2021-23017-Update-2025",
-          "description": "vulnerability in NGINX servers (versions 0.6.18–1.20.0). The scripts aim to cause a Denial of Service (DoS) by sending malicious DNS responses, with enhancements to bypass firewalls.",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2025-09-13T06:09:07Z",
-          "pushed_at": "2025-09-05T22:21:30Z",
-          "created_at": "2025-09-04T09:49:22Z",
-          "topics": [
-            "cve",
-            "cve-2021-23017",
-            "poc"
-          ],
-          "owner": {
-            "login": "6lj",
-            "html_url": "https://github.com/6lj"
-          },
-          "clone_url": "https://github.com/6lj/EVIL-CVE-2021-23017-Update-2025.git"
-        },
-        {
           "id": 439285309,
           "name": "nginx-patch",
           "full_name": "niandy/nginx-patch",
@@ -15986,7 +15963,7 @@
           "html_url": "https://github.com/JohnHammond/CVE-2021-34527",
           "description": "",
           "stargazers_count": 300,
-          "forks_count": 73,
+          "forks_count": 74,
           "language": "PowerShell",
           "updated_at": "2026-01-21T14:52:20Z",
           "pushed_at": "2021-07-02T12:17:50Z",
@@ -19975,8 +19952,8 @@
           "stargazers_count": 1,
           "forks_count": 1,
           "language": "Python",
-          "updated_at": "2026-01-24T14:04:45Z",
-          "pushed_at": "2026-01-24T14:04:41Z",
+          "updated_at": "2026-01-24T18:01:50Z",
+          "pushed_at": "2026-01-24T18:01:47Z",
           "created_at": "2025-10-01T09:53:03Z",
           "topics": [
             "bash",
@@ -24820,6 +24797,25 @@
           "clone_url": "https://github.com/zerodaywolf/CVE-2021-41773_42013.git"
         },
         {
+          "id": 414848372,
+          "name": "Sigma-Rule-for-CVE-2021-41773-and-CVE-2021-42013-exploitation-attempt",
+          "full_name": "pisut4152/Sigma-Rule-for-CVE-2021-41773-and-CVE-2021-42013-exploitation-attempt",
+          "html_url": "https://github.com/pisut4152/Sigma-Rule-for-CVE-2021-41773-and-CVE-2021-42013-exploitation-attempt",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 1,
+          "language": "",
+          "updated_at": "2024-08-12T20:17:05Z",
+          "pushed_at": "2021-10-08T04:46:08Z",
+          "created_at": "2021-10-08T04:43:27Z",
+          "topics": [],
+          "owner": {
+            "login": "pisut4152",
+            "html_url": "https://github.com/pisut4152"
+          },
+          "clone_url": "https://github.com/pisut4152/Sigma-Rule-for-CVE-2021-41773-and-CVE-2021-42013-exploitation-attempt.git"
+        },
+        {
           "id": 427958357,
           "name": "CVE-2021-42013-ApacheRCE",
           "full_name": "xMohamed0/CVE-2021-42013-ApacheRCE",
@@ -24837,44 +24833,6 @@
             "html_url": "https://github.com/xMohamed0"
           },
           "clone_url": "https://github.com/xMohamed0/CVE-2021-42013-ApacheRCE.git"
-        },
-        {
-          "id": 419389200,
-          "name": "CVE-2021-42013",
-          "full_name": "LayarKacaSiber/CVE-2021-42013",
-          "html_url": "https://github.com/LayarKacaSiber/CVE-2021-42013",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2021-10-23T13:16:56Z",
-          "pushed_at": "2021-10-23T13:16:53Z",
-          "created_at": "2021-10-20T15:32:39Z",
-          "topics": [],
-          "owner": {
-            "login": "LayarKacaSiber",
-            "html_url": "https://github.com/LayarKacaSiber"
-          },
-          "clone_url": "https://github.com/LayarKacaSiber/CVE-2021-42013.git"
-        },
-        {
-          "id": 1084952924,
-          "name": "Apache-CVE-2021-42013-RCE-Exploit",
-          "full_name": "FakhriCRD/Apache-CVE-2021-42013-RCE-Exploit",
-          "html_url": "https://github.com/FakhriCRD/Apache-CVE-2021-42013-RCE-Exploit",
-          "description": "A powerful and reliable exploit tool for Apache HTTP Server vulnerabilities CVE-2021-41773 and CVE-2021-42013. This tool provides remote code execution capabilities on vulnerable Apache 2.4.49 and 2.4.50 servers.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2025-11-09T16:10:20Z",
-          "pushed_at": "2025-10-28T17:52:24Z",
-          "created_at": "2025-10-28T11:45:54Z",
-          "topics": [],
-          "owner": {
-            "login": "FakhriCRD",
-            "html_url": "https://github.com/FakhriCRD"
-          },
-          "clone_url": "https://github.com/FakhriCRD/Apache-CVE-2021-42013-RCE-Exploit.git"
         },
         {
           "id": 1051368120,
@@ -24896,23 +24854,61 @@
           "clone_url": "https://github.com/Makavellik/POC-CVE-2021-42013-EXPLOIT.git"
         },
         {
-          "id": 414848372,
-          "name": "Sigma-Rule-for-CVE-2021-41773-and-CVE-2021-42013-exploitation-attempt",
-          "full_name": "pisut4152/Sigma-Rule-for-CVE-2021-41773-and-CVE-2021-42013-exploitation-attempt",
-          "html_url": "https://github.com/pisut4152/Sigma-Rule-for-CVE-2021-41773-and-CVE-2021-42013-exploitation-attempt",
+          "id": 1141313094,
+          "name": "cve-2021-42013",
+          "full_name": "ranasen-rat/cve-2021-42013",
+          "html_url": "https://github.com/ranasen-rat/cve-2021-42013",
           "description": "",
           "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "",
-          "updated_at": "2024-08-12T20:17:05Z",
-          "pushed_at": "2021-10-08T04:46:08Z",
-          "created_at": "2021-10-08T04:43:27Z",
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-01-24T16:36:40Z",
+          "pushed_at": "2026-01-24T16:36:36Z",
+          "created_at": "2026-01-24T16:34:34Z",
           "topics": [],
           "owner": {
-            "login": "pisut4152",
-            "html_url": "https://github.com/pisut4152"
+            "login": "ranasen-rat",
+            "html_url": "https://github.com/ranasen-rat"
           },
-          "clone_url": "https://github.com/pisut4152/Sigma-Rule-for-CVE-2021-41773-and-CVE-2021-42013-exploitation-attempt.git"
+          "clone_url": "https://github.com/ranasen-rat/cve-2021-42013.git"
+        },
+        {
+          "id": 1084952924,
+          "name": "Apache-CVE-2021-42013-RCE-Exploit",
+          "full_name": "FakhriCRD/Apache-CVE-2021-42013-RCE-Exploit",
+          "html_url": "https://github.com/FakhriCRD/Apache-CVE-2021-42013-RCE-Exploit",
+          "description": "A powerful and reliable exploit tool for Apache HTTP Server vulnerabilities CVE-2021-41773 and CVE-2021-42013. This tool provides remote code execution capabilities on vulnerable Apache 2.4.49 and 2.4.50 servers.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2025-11-09T16:10:20Z",
+          "pushed_at": "2025-10-28T17:52:24Z",
+          "created_at": "2025-10-28T11:45:54Z",
+          "topics": [],
+          "owner": {
+            "login": "FakhriCRD",
+            "html_url": "https://github.com/FakhriCRD"
+          },
+          "clone_url": "https://github.com/FakhriCRD/Apache-CVE-2021-42013-RCE-Exploit.git"
+        },
+        {
+          "id": 419389200,
+          "name": "CVE-2021-42013",
+          "full_name": "LayarKacaSiber/CVE-2021-42013",
+          "html_url": "https://github.com/LayarKacaSiber/CVE-2021-42013",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Shell",
+          "updated_at": "2021-10-23T13:16:56Z",
+          "pushed_at": "2021-10-23T13:16:53Z",
+          "created_at": "2021-10-20T15:32:39Z",
+          "topics": [],
+          "owner": {
+            "login": "LayarKacaSiber",
+            "html_url": "https://github.com/LayarKacaSiber"
+          },
+          "clone_url": "https://github.com/LayarKacaSiber/CVE-2021-42013.git"
         }
       ]
     },
