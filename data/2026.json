@@ -383,23 +383,23 @@
       "cve_id": "CVE-2026-1457",
       "repositories": [
         {
-          "id": 1145648118,
-          "name": "CVE-2026-1457-TP-Link-VIGI-C385-Authenticated-Remote-Code-Execution",
-          "full_name": "ii4gsp/CVE-2026-1457-TP-Link-VIGI-C385-Authenticated-Remote-Code-Execution",
-          "html_url": "https://github.com/ii4gsp/CVE-2026-1457-TP-Link-VIGI-C385-Authenticated-Remote-Code-Execution",
+          "id": 1145705782,
+          "name": "CVE-2026-1457",
+          "full_name": "ii4gsp/CVE-2026-1457",
+          "html_url": "https://github.com/ii4gsp/CVE-2026-1457",
           "description": "CVE-2026-1457 is an authenticated buffer overflow vulnerability in the web API of TP-Link VIGI C385 V1. This vulnerability allows authenticated attackers to perform remote code execution (RCE).",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-01-30T03:30:17Z",
-          "pushed_at": "2026-01-30T03:30:14Z",
-          "created_at": "2026-01-30T03:28:29Z",
+          "language": "Python",
+          "updated_at": "2026-01-30T05:45:51Z",
+          "pushed_at": "2026-01-30T05:45:47Z",
+          "created_at": "2026-01-30T05:34:28Z",
           "topics": [],
           "owner": {
             "login": "ii4gsp",
             "html_url": "https://github.com/ii4gsp"
           },
-          "clone_url": "https://github.com/ii4gsp/CVE-2026-1457-TP-Link-VIGI-C385-Authenticated-Remote-Code-Execution.git"
+          "clone_url": "https://github.com/ii4gsp/CVE-2026-1457.git"
         }
       ]
     },
@@ -1825,7 +1825,7 @@
           "html_url": "https://github.com/SafeBreach-Labs/CVE-2026-24061",
           "description": "Exploitation of CVE-2026-24061",
           "stargazers_count": 175,
-          "forks_count": 38,
+          "forks_count": 39,
           "language": "Python",
           "updated_at": "2026-01-30T02:48:46Z",
           "pushed_at": "2026-01-22T19:37:20Z",
@@ -2651,6 +2651,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2026-24102",
+      "repositories": [
+        {
+          "id": 1145695212,
+          "name": "CTT-Kernel-Resonance-io_uring-Temporal-Phase-Transition",
+          "full_name": "SimoesCTT/CTT-Kernel-Resonance-io_uring-Temporal-Phase-Transition",
+          "html_url": "https://github.com/SimoesCTT/CTT-Kernel-Resonance-io_uring-Temporal-Phase-Transition",
+          "description": "CVE-2026-24102 is a Use-After-Free (UAF) vulnerability within the Linux Kernel io_uring subsystem. While traditional exploits attempt to win a race condition through brute-force CPU pinning, SimoesCTT-Kernel-Resonance uses Temporal Layering to ensure the race is won deterministically.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-01-30T05:15:30Z",
+          "pushed_at": "2026-01-30T05:15:26Z",
+          "created_at": "2026-01-30T05:12:51Z",
+          "topics": [],
+          "owner": {
+            "login": "SimoesCTT",
+            "html_url": "https://github.com/SimoesCTT"
+          },
+          "clone_url": "https://github.com/SimoesCTT/CTT-Kernel-Resonance-io_uring-Temporal-Phase-Transition.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2026-24134",
       "repositories": [
         {
@@ -2750,6 +2774,25 @@
       "cve_id": "CVE-2026-24858",
       "repositories": [
         {
+          "id": 1145648365,
+          "name": "CVE-2026-24858-FortiCloud-SSO-Authentication-Bypass",
+          "full_name": "absholi7ly/CVE-2026-24858-FortiCloud-SSO-Authentication-Bypass",
+          "html_url": "https://github.com/absholi7ly/CVE-2026-24858-FortiCloud-SSO-Authentication-Bypass",
+          "description": "CVE-2026-24858 FortiCloud Single Sign On (SSO)  a factory default enabled feature once you register any FortiGate/FortiManager/FortiAnalyzer  contains a critical authentication bypass flaw.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-01-30T05:25:44Z",
+          "pushed_at": "2026-01-30T05:25:41Z",
+          "created_at": "2026-01-30T03:29:04Z",
+          "topics": [],
+          "owner": {
+            "login": "absholi7ly",
+            "html_url": "https://github.com/absholi7ly"
+          },
+          "clone_url": "https://github.com/absholi7ly/CVE-2026-24858-FortiCloud-SSO-Authentication-Bypass.git"
+        },
+        {
           "id": 1145674135,
           "name": "-CTT-NSP-Convergent-Time-Theory---Network-Stack-Projection-CVE-2026-24858-",
           "full_name": "SimoesCTT/-CTT-NSP-Convergent-Time-Theory---Network-Stack-Projection-CVE-2026-24858-",
@@ -2767,25 +2810,6 @@
             "html_url": "https://github.com/SimoesCTT"
           },
           "clone_url": "https://github.com/SimoesCTT/-CTT-NSP-Convergent-Time-Theory---Network-Stack-Projection-CVE-2026-24858-.git"
-        },
-        {
-          "id": 1145648365,
-          "name": "CVE-2026-24858-FortiCloud-SSO-Authentication-Bypass",
-          "full_name": "absholi7ly/CVE-2026-24858-FortiCloud-SSO-Authentication-Bypass",
-          "html_url": "https://github.com/absholi7ly/CVE-2026-24858-FortiCloud-SSO-Authentication-Bypass",
-          "description": "CVE-2026-24858 FortiCloud Single Sign On (SSO)  a factory default enabled feature once you register any FortiGate/FortiManager/FortiAnalyzer  contains a critical authentication bypass flaw.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-01-30T03:29:08Z",
-          "pushed_at": "2026-01-30T03:29:04Z",
-          "created_at": "2026-01-30T03:29:04Z",
-          "topics": [],
-          "owner": {
-            "login": "absholi7ly",
-            "html_url": "https://github.com/absholi7ly"
-          },
-          "clone_url": "https://github.com/absholi7ly/CVE-2026-24858-FortiCloud-SSO-Authentication-Bypass.git"
         },
         {
           "id": 1145287521,
