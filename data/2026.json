@@ -158,10 +158,10 @@
           "full_name": "sastraadiwiguna-purpleeliteteaming/Dissecting-CVE-2026-0628-Chromium-Extension-Privilege-Escalation",
           "html_url": "https://github.com/sastraadiwiguna-purpleeliteteaming/Dissecting-CVE-2026-0628-Chromium-Extension-Privilege-Escalation",
           "description": "Origin CyberAnatomy Spoofing via Malicious WebView - Dissecting CVE-2026-0628 Chromium Extension Privilege Escalation This research provides a comprehensive technical dissection of CVE-2026-0628, a high-severity privilege escalation vulnerability (CVSS v3.1: 8.8) in Chromium's WebView policy enforcement mechanism. ",
-          "stargazers_count": 0,
+          "stargazers_count": 1,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-01-31T12:34:32Z",
+          "updated_at": "2026-01-31T14:07:45Z",
           "pushed_at": "2026-01-31T12:35:20Z",
           "created_at": "2026-01-31T12:31:00Z",
           "topics": [],
@@ -850,10 +850,10 @@
           "full_name": "Ashwesker/Ashwesker-CVE-2026-21509",
           "html_url": "https://github.com/Ashwesker/Ashwesker-CVE-2026-21509",
           "description": "CVE-2026-21509",
-          "stargazers_count": 10,
-          "forks_count": 6,
+          "stargazers_count": 14,
+          "forks_count": 7,
           "language": "Python",
-          "updated_at": "2026-01-31T11:16:19Z",
+          "updated_at": "2026-01-31T15:52:28Z",
           "pushed_at": "2026-01-27T09:42:58Z",
           "created_at": "2026-01-27T09:26:41Z",
           "topics": [],
@@ -869,10 +869,10 @@
           "full_name": "SimoesCTT/CTT-NFS-Vortex-RCE",
           "html_url": "https://github.com/SimoesCTT/CTT-NFS-Vortex-RCE",
           "description": "New Physics Disclosure This repository contains a full weaponized exploit for **CVE-2026-21509**, targeting the Windows Network File System (NFSv4.1) kernel-mode driver (`nfssvr.sys`). ",
-          "stargazers_count": 1,
+          "stargazers_count": 2,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-01-31T05:38:05Z",
+          "updated_at": "2026-01-31T16:05:07Z",
           "pushed_at": "2026-01-31T04:57:20Z",
           "created_at": "2026-01-31T04:52:13Z",
           "topics": [],
@@ -881,6 +881,44 @@
             "html_url": "https://github.com/SimoesCTT"
           },
           "clone_url": "https://github.com/SimoesCTT/CTT-NFS-Vortex-RCE.git"
+        },
+        {
+          "id": 1144709571,
+          "name": "CVE-2026-21509-PoC",
+          "full_name": "gavz/CVE-2026-21509-PoC",
+          "html_url": "https://github.com/gavz/CVE-2026-21509-PoC",
+          "description": "Educational PoC for CVE‑2026‑21509 (Microsoft Office security feature bypass). Generates a harmless DOCX with dummy OLE artifacts to study EDR/AV visibility. Not an exploit. For isolated labs only; see README for 7‑Zip inspection steps and mitigation references.",
+          "stargazers_count": 1,
+          "forks_count": 1,
+          "language": "",
+          "updated_at": "2026-01-31T16:03:48Z",
+          "pushed_at": "2026-01-28T20:33:28Z",
+          "created_at": "2026-01-29T00:51:18Z",
+          "topics": [],
+          "owner": {
+            "login": "gavz",
+            "html_url": "https://github.com/gavz"
+          },
+          "clone_url": "https://github.com/gavz/CVE-2026-21509-PoC.git"
+        },
+        {
+          "id": 1146561861,
+          "name": "SCTT-2026-33-0007-The-OLE-Vortex-Laminar-Bypass-",
+          "full_name": "SimoesCTT/SCTT-2026-33-0007-The-OLE-Vortex-Laminar-Bypass-",
+          "html_url": "https://github.com/SimoesCTT/SCTT-2026-33-0007-The-OLE-Vortex-Laminar-Bypass-",
+          "description": "Microsoft just released emergency patches for CVE-2026-21509, a zero-day in the Office Suite that bypasses OLE/COM mitigations when a user simply opens a file. They think their \"Service-side change\" for Office 2021+ is a solid wall. ",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-01-31T16:08:36Z",
+          "pushed_at": "2026-01-31T09:58:19Z",
+          "created_at": "2026-01-31T09:50:23Z",
+          "topics": [],
+          "owner": {
+            "login": "SimoesCTT",
+            "html_url": "https://github.com/SimoesCTT"
+          },
+          "clone_url": "https://github.com/SimoesCTT/SCTT-2026-33-0007-The-OLE-Vortex-Laminar-Bypass-.git"
         },
         {
           "id": 1145070024,
@@ -900,44 +938,6 @@
             "html_url": "https://github.com/ksk-itdk"
           },
           "clone_url": "https://github.com/ksk-itdk/KSK-ITDK-CVE-2026-21509-Mitigation.git"
-        },
-        {
-          "id": 1144709571,
-          "name": "CVE-2026-21509-PoC",
-          "full_name": "gavz/CVE-2026-21509-PoC",
-          "html_url": "https://github.com/gavz/CVE-2026-21509-PoC",
-          "description": "Educational PoC for CVE‑2026‑21509 (Microsoft Office security feature bypass). Generates a harmless DOCX with dummy OLE artifacts to study EDR/AV visibility. Not an exploit. For isolated labs only; see README for 7‑Zip inspection steps and mitigation references.",
-          "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "",
-          "updated_at": "2026-01-29T00:51:19Z",
-          "pushed_at": "2026-01-28T20:33:28Z",
-          "created_at": "2026-01-29T00:51:18Z",
-          "topics": [],
-          "owner": {
-            "login": "gavz",
-            "html_url": "https://github.com/gavz"
-          },
-          "clone_url": "https://github.com/gavz/CVE-2026-21509-PoC.git"
-        },
-        {
-          "id": 1146561861,
-          "name": "SCTT-2026-33-0007-The-OLE-Vortex-Laminar-Bypass-",
-          "full_name": "SimoesCTT/SCTT-2026-33-0007-The-OLE-Vortex-Laminar-Bypass-",
-          "html_url": "https://github.com/SimoesCTT/SCTT-2026-33-0007-The-OLE-Vortex-Laminar-Bypass-",
-          "description": "Microsoft just released emergency patches for CVE-2026-21509, a zero-day in the Office Suite that bypasses OLE/COM mitigations when a user simply opens a file. They think their \"Service-side change\" for Office 2021+ is a solid wall. ",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-01-31T09:58:23Z",
-          "pushed_at": "2026-01-31T09:58:19Z",
-          "created_at": "2026-01-31T09:50:23Z",
-          "topics": [],
-          "owner": {
-            "login": "SimoesCTT",
-            "html_url": "https://github.com/SimoesCTT"
-          },
-          "clone_url": "https://github.com/SimoesCTT/SCTT-2026-33-0007-The-OLE-Vortex-Laminar-Bypass-.git"
         }
       ]
     },
@@ -1047,8 +1047,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-01-31T12:19:38Z",
-          "pushed_at": "2026-01-31T12:19:35Z",
+          "updated_at": "2026-01-31T16:51:41Z",
+          "pushed_at": "2026-01-31T16:51:38Z",
           "created_at": "2023-10-12T01:36:00Z",
           "topics": [
             "cve",
