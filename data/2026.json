@@ -798,7 +798,7 @@
           "html_url": "https://github.com/gavz/CVE-2026-21509-PoC",
           "description": "Educational PoC for CVE‑2026‑21509 (Microsoft Office security feature bypass). Generates a harmless DOCX with dummy OLE artifacts to study EDR/AV visibility. Not an exploit. For isolated labs only; see README for 7‑Zip inspection steps and mitigation references.",
           "stargazers_count": 3,
-          "forks_count": 3,
+          "forks_count": 4,
           "language": "",
           "updated_at": "2026-02-02T16:01:12Z",
           "pushed_at": "2026-01-28T20:33:28Z",
@@ -889,6 +889,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2026-21721",
+      "repositories": [
+        {
+          "id": 1148860220,
+          "name": "Exploit-LPE-CVE-2026-21721",
+          "full_name": "Leonideath/Exploit-LPE-CVE-2026-21721",
+          "html_url": "https://github.com/Leonideath/Exploit-LPE-CVE-2026-21721",
+          "description": "Эксплоит на CVE-2026-21721",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-02-03T13:25:01Z",
+          "pushed_at": "2026-02-03T13:14:25Z",
+          "created_at": "2026-02-03T13:01:28Z",
+          "topics": [],
+          "owner": {
+            "login": "Leonideath",
+            "html_url": "https://github.com/Leonideath"
+          },
+          "clone_url": "https://github.com/Leonideath/Exploit-LPE-CVE-2026-21721.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2026-21858",
       "repositories": [
         {
@@ -900,7 +924,7 @@
           "stargazers_count": 231,
           "forks_count": 46,
           "language": "Python",
-          "updated_at": "2026-02-02T23:42:02Z",
+          "updated_at": "2026-02-03T11:26:02Z",
           "pushed_at": "2026-01-09T02:50:22Z",
           "created_at": "2026-01-07T19:32:42Z",
           "topics": [
@@ -994,8 +1018,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-03T08:27:02Z",
-          "pushed_at": "2026-02-03T08:26:59Z",
+          "updated_at": "2026-02-03T18:21:34Z",
+          "pushed_at": "2026-02-03T18:21:30Z",
           "created_at": "2023-10-12T01:36:00Z",
           "topics": [
             "cve",
@@ -1171,8 +1195,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-02-03T08:35:26Z",
-          "pushed_at": "2026-02-03T08:35:22Z",
+          "updated_at": "2026-02-03T08:43:25Z",
+          "pushed_at": "2026-02-03T08:43:21Z",
           "created_at": "2026-02-03T08:35:22Z",
           "topics": [],
           "owner": {
@@ -2068,25 +2092,6 @@
           "clone_url": "https://github.com/leonjza/inetutils-telnetd-auth-bypass.git"
         },
         {
-          "id": 1139869296,
-          "name": "CVE-2026-24061",
-          "full_name": "Chocapikk/CVE-2026-24061",
-          "html_url": "https://github.com/Chocapikk/CVE-2026-24061",
-          "description": "",
-          "stargazers_count": 3,
-          "forks_count": 1,
-          "language": "Go",
-          "updated_at": "2026-02-03T04:10:08Z",
-          "pushed_at": "2026-01-22T15:15:10Z",
-          "created_at": "2026-01-22T14:24:19Z",
-          "topics": [],
-          "owner": {
-            "login": "Chocapikk",
-            "html_url": "https://github.com/Chocapikk"
-          },
-          "clone_url": "https://github.com/Chocapikk/CVE-2026-24061.git"
-        },
-        {
           "id": 1141386138,
           "name": "CVE-2026-24061-setup",
           "full_name": "DeadlyHollows/CVE-2026-24061-setup",
@@ -2104,6 +2109,44 @@
             "html_url": "https://github.com/DeadlyHollows"
           },
           "clone_url": "https://github.com/DeadlyHollows/CVE-2026-24061-setup.git"
+        },
+        {
+          "id": 1148398832,
+          "name": "CVE-2026-24061-PoC",
+          "full_name": "ibrahmsql/CVE-2026-24061-PoC",
+          "html_url": "https://github.com/ibrahmsql/CVE-2026-24061-PoC",
+          "description": "CVE-2026-24061  PoC and walkthrough",
+          "stargazers_count": 3,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-02-03T14:56:23Z",
+          "pushed_at": "2026-02-02T23:31:32Z",
+          "created_at": "2026-02-02T23:20:01Z",
+          "topics": [],
+          "owner": {
+            "login": "ibrahmsql",
+            "html_url": "https://github.com/ibrahmsql"
+          },
+          "clone_url": "https://github.com/ibrahmsql/CVE-2026-24061-PoC.git"
+        },
+        {
+          "id": 1139869296,
+          "name": "CVE-2026-24061",
+          "full_name": "Chocapikk/CVE-2026-24061",
+          "html_url": "https://github.com/Chocapikk/CVE-2026-24061",
+          "description": "",
+          "stargazers_count": 3,
+          "forks_count": 1,
+          "language": "Go",
+          "updated_at": "2026-02-03T04:10:08Z",
+          "pushed_at": "2026-01-22T15:15:10Z",
+          "created_at": "2026-01-22T14:24:19Z",
+          "topics": [],
+          "owner": {
+            "login": "Chocapikk",
+            "html_url": "https://github.com/Chocapikk"
+          },
+          "clone_url": "https://github.com/Chocapikk/CVE-2026-24061.git"
         },
         {
           "id": 1139928415,
@@ -2144,61 +2187,35 @@
           "clone_url": "https://github.com/duy-31/CVE-2026-24061---telnetd.git"
         },
         {
-          "id": 1147490725,
-          "name": "CVE-2026-24061_POC",
-          "full_name": "X-croot/CVE-2026-24061_POC",
-          "html_url": "https://github.com/X-croot/CVE-2026-24061_POC",
-          "description": "POC Script for CVE-2026-24061 (GNU Telnetd Exploit) ",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2026-02-02T05:11:13Z",
-          "pushed_at": "2026-02-01T21:01:36Z",
-          "created_at": "2026-02-01T20:32:26Z",
-          "topics": [
-            "cve-2026-24061",
-            "exploit",
-            "poc",
-            "telnet-exploit",
-            "telnetd-rce"
-          ],
-          "owner": {
-            "login": "X-croot",
-            "html_url": "https://github.com/X-croot"
-          },
-          "clone_url": "https://github.com/X-croot/CVE-2026-24061_POC.git"
-        },
-        {
-          "id": 1141454492,
-          "name": "Twenty-Three-Scanner",
-          "full_name": "madfxr/Twenty-Three-Scanner",
-          "html_url": "https://github.com/madfxr/Twenty-Three-Scanner",
-          "description": "CVE-2026-24061 - GNU InetUtils Telnetd Remote Authentication Bypass",
+          "id": 1145881675,
+          "name": "Terrminus-CVE-2026-2406",
+          "full_name": "ridpath/Terrminus-CVE-2026-2406",
+          "html_url": "https://github.com/ridpath/Terrminus-CVE-2026-2406",
+          "description": " AsyncIO Scanner \u0026 Exploitation Framework for CVE-2026-24061 (Telnet NEW_ENVIRON Auth Bypass). Features high-concurrency discovery, passive fingerprinting, and authorized root shell escalation",
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-01-31T00:49:56Z",
-          "pushed_at": "2026-01-31T00:49:53Z",
-          "created_at": "2026-01-24T21:47:29Z",
+          "updated_at": "2026-01-30T20:26:50Z",
+          "pushed_at": "2026-01-30T20:26:46Z",
+          "created_at": "2026-01-30T10:33:34Z",
           "topics": [
             "cve-2026-24061",
-            "ethical-hacking",
-            "exploit",
-            "gnu",
-            "inetutils",
-            "linux",
-            "offensive-security",
-            "poc",
-            "python",
+            "cybersecurity-tools",
+            "pentesting-tools",
+            "privelage-escalation",
+            "python-asyncio",
             "rce",
-            "red-team",
-            "telnetd"
+            "red-teaming",
+            "red-teaming-tools",
+            "telnet-exploit",
+            "telnet-scanner",
+            "vulnerability-scanners"
           ],
           "owner": {
-            "login": "madfxr",
-            "html_url": "https://github.com/madfxr"
+            "login": "ridpath",
+            "html_url": "https://github.com/ridpath"
           },
-          "clone_url": "https://github.com/madfxr/Twenty-Three-Scanner.git"
+          "clone_url": "https://github.com/ridpath/Terrminus-CVE-2026-2406.git"
         },
         {
           "id": 1140733735,
@@ -2232,37 +2249,6 @@
           "clone_url": "https://github.com/SystemVll/CVE-2026-24061.git"
         },
         {
-          "id": 1145881675,
-          "name": "Terrminus-CVE-2026-2406",
-          "full_name": "ridpath/Terrminus-CVE-2026-2406",
-          "html_url": "https://github.com/ridpath/Terrminus-CVE-2026-2406",
-          "description": " AsyncIO Scanner \u0026 Exploitation Framework for CVE-2026-24061 (Telnet NEW_ENVIRON Auth Bypass). Features high-concurrency discovery, passive fingerprinting, and authorized root shell escalation",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-01-30T20:26:50Z",
-          "pushed_at": "2026-01-30T20:26:46Z",
-          "created_at": "2026-01-30T10:33:34Z",
-          "topics": [
-            "cve-2026-24061",
-            "cybersecurity-tools",
-            "pentesting-tools",
-            "privelage-escalation",
-            "python-asyncio",
-            "rce",
-            "red-teaming",
-            "red-teaming-tools",
-            "telnet-exploit",
-            "telnet-scanner",
-            "vulnerability-scanners"
-          ],
-          "owner": {
-            "login": "ridpath",
-            "html_url": "https://github.com/ridpath"
-          },
-          "clone_url": "https://github.com/ridpath/Terrminus-CVE-2026-2406.git"
-        },
-        {
           "id": 1144639519,
           "name": "telnetd_CVE-2026-24061_tester",
           "full_name": "dotelpenguin/telnetd_CVE-2026-24061_tester",
@@ -2280,44 +2266,6 @@
             "html_url": "https://github.com/dotelpenguin"
           },
           "clone_url": "https://github.com/dotelpenguin/telnetd_CVE-2026-24061_tester.git"
-        },
-        {
-          "id": 1148398832,
-          "name": "CVE-2026-24061-PoC",
-          "full_name": "ibrahmsql/CVE-2026-24061-PoC",
-          "html_url": "https://github.com/ibrahmsql/CVE-2026-24061-PoC",
-          "description": "CVE-2026-24061  PoC and walkthrough",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-02-03T02:39:05Z",
-          "pushed_at": "2026-02-02T23:31:32Z",
-          "created_at": "2026-02-02T23:20:01Z",
-          "topics": [],
-          "owner": {
-            "login": "ibrahmsql",
-            "html_url": "https://github.com/ibrahmsql"
-          },
-          "clone_url": "https://github.com/ibrahmsql/CVE-2026-24061-PoC.git"
-        },
-        {
-          "id": 1143158630,
-          "name": "CVE-2026-24061-telnet2root",
-          "full_name": "FurkanKAYAPINAR/CVE-2026-24061-telnet2root",
-          "html_url": "https://github.com/FurkanKAYAPINAR/CVE-2026-24061-telnet2root",
-          "description": "",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-01-27T19:04:20Z",
-          "pushed_at": "2026-01-27T08:39:02Z",
-          "created_at": "2026-01-27T08:32:42Z",
-          "topics": [],
-          "owner": {
-            "login": "FurkanKAYAPINAR",
-            "html_url": "https://github.com/FurkanKAYAPINAR"
-          },
-          "clone_url": "https://github.com/FurkanKAYAPINAR/CVE-2026-24061-telnet2root.git"
         },
         {
           "id": 1147892492,
@@ -2340,6 +2288,50 @@
             "html_url": "https://github.com/franckferman"
           },
           "clone_url": "https://github.com/franckferman/CVE_2026_24061_PoC.git"
+        },
+        {
+          "id": 1143158630,
+          "name": "CVE-2026-24061-telnet2root",
+          "full_name": "FurkanKAYAPINAR/CVE-2026-24061-telnet2root",
+          "html_url": "https://github.com/FurkanKAYAPINAR/CVE-2026-24061-telnet2root",
+          "description": "",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-01-27T19:04:20Z",
+          "pushed_at": "2026-01-27T08:39:02Z",
+          "created_at": "2026-01-27T08:32:42Z",
+          "topics": [],
+          "owner": {
+            "login": "FurkanKAYAPINAR",
+            "html_url": "https://github.com/FurkanKAYAPINAR"
+          },
+          "clone_url": "https://github.com/FurkanKAYAPINAR/CVE-2026-24061-telnet2root.git"
+        },
+        {
+          "id": 1147490725,
+          "name": "CVE-2026-24061_POC",
+          "full_name": "X-croot/CVE-2026-24061_POC",
+          "html_url": "https://github.com/X-croot/CVE-2026-24061_POC",
+          "description": "POC Script for CVE-2026-24061 (GNU Telnetd Exploit) ",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Shell",
+          "updated_at": "2026-02-02T05:11:13Z",
+          "pushed_at": "2026-02-01T21:01:36Z",
+          "created_at": "2026-02-01T20:32:26Z",
+          "topics": [
+            "cve-2026-24061",
+            "exploit",
+            "poc",
+            "telnet-exploit",
+            "telnetd-rce"
+          ],
+          "owner": {
+            "login": "X-croot",
+            "html_url": "https://github.com/X-croot"
+          },
+          "clone_url": "https://github.com/X-croot/CVE-2026-24061_POC.git"
         },
         {
           "id": 1141353816,
@@ -2389,6 +2381,38 @@
           "clone_url": "https://github.com/infat0x/CVE-2026-24061.git"
         },
         {
+          "id": 1141454492,
+          "name": "Twenty-Three-Scanner",
+          "full_name": "madfxr/Twenty-Three-Scanner",
+          "html_url": "https://github.com/madfxr/Twenty-Three-Scanner",
+          "description": "CVE-2026-24061 - GNU InetUtils Telnetd Remote Authentication Bypass",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-01-31T00:49:56Z",
+          "pushed_at": "2026-01-31T00:49:53Z",
+          "created_at": "2026-01-24T21:47:29Z",
+          "topics": [
+            "cve-2026-24061",
+            "ethical-hacking",
+            "exploit",
+            "gnu",
+            "inetutils",
+            "linux",
+            "offensive-security",
+            "poc",
+            "python",
+            "rce",
+            "red-team",
+            "telnetd"
+          ],
+          "owner": {
+            "login": "madfxr",
+            "html_url": "https://github.com/madfxr"
+          },
+          "clone_url": "https://github.com/madfxr/Twenty-Three-Scanner.git"
+        },
+        {
           "id": 1143391754,
           "name": "CVE-2026-24061-PoC-Telnetd",
           "full_name": "androidteacher/CVE-2026-24061-PoC-Telnetd",
@@ -2408,39 +2432,23 @@
           "clone_url": "https://github.com/androidteacher/CVE-2026-24061-PoC-Telnetd.git"
         },
         {
-          "id": 1148619445,
-          "name": "Tell-Me-Root",
-          "full_name": "Moxxic1/Tell-Me-Root",
-          "html_url": "https://github.com/Moxxic1/Tell-Me-Root",
-          "description": "🔍 Automate bulk detection of the CVE-2026-24061 Telnet authentication bypass vulnerability using this lightweight Python tool.",
+          "id": 1148623043,
+          "name": "moxxic1.github.io",
+          "full_name": "Moxxic1/moxxic1.github.io",
+          "html_url": "https://github.com/Moxxic1/moxxic1.github.io",
+          "description": "🔍 Scan networks for CVE-2026-24061 vulnerabilities with this lightweight Python tool, enabling quick and easy batch detection of telnet authentication bypass.",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-02-03T07:08:47Z",
-          "pushed_at": "2026-02-03T07:03:43Z",
-          "created_at": "2026-02-03T07:03:26Z",
-          "topics": [
-            "code-completion",
-            "form-builder",
-            "front-end",
-            "google-forms",
-            "gpt",
-            "mscoco-image-dataset",
-            "multi-agent",
-            "secret-management",
-            "secrets",
-            "semantic-engine",
-            "show-attend-and-tell",
-            "telethon-bot",
-            "telnetd-rce",
-            "vault",
-            "vim"
-          ],
+          "language": "",
+          "updated_at": "2026-02-03T07:09:44Z",
+          "pushed_at": "2026-02-03T07:09:41Z",
+          "created_at": "2026-02-03T07:09:12Z",
+          "topics": [],
           "owner": {
             "login": "Moxxic1",
             "html_url": "https://github.com/Moxxic1"
           },
-          "clone_url": "https://github.com/Moxxic1/Tell-Me-Root.git"
+          "clone_url": "https://github.com/Moxxic1/moxxic1.github.io.git"
         },
         {
           "id": 1142770099,
@@ -2607,8 +2615,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-03T08:36:38Z",
-          "pushed_at": "2026-02-03T08:36:34Z",
+          "updated_at": "2026-02-03T18:32:15Z",
+          "pushed_at": "2026-02-03T18:32:11Z",
           "created_at": "2025-07-03T09:13:14Z",
           "topics": [
             "cve",
@@ -2937,23 +2945,39 @@
           "clone_url": "https://github.com/MY0723/GNU-Inetutils-telnet-CVE-2026-24061-.git"
         },
         {
-          "id": 1148623043,
-          "name": "moxxic1.github.io",
-          "full_name": "Moxxic1/moxxic1.github.io",
-          "html_url": "https://github.com/Moxxic1/moxxic1.github.io",
-          "description": "🔍 Scan networks for CVE-2026-24061 vulnerabilities with this lightweight Python tool, enabling quick and easy batch detection of telnet authentication bypass.",
+          "id": 1148619445,
+          "name": "Tell-Me-Root",
+          "full_name": "Moxxic1/Tell-Me-Root",
+          "html_url": "https://github.com/Moxxic1/Tell-Me-Root",
+          "description": "🔍 Automate bulk detection of the CVE-2026-24061 Telnet authentication bypass vulnerability using this lightweight Python tool.",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-02-03T07:09:44Z",
-          "pushed_at": "2026-02-03T07:09:41Z",
-          "created_at": "2026-02-03T07:09:12Z",
-          "topics": [],
+          "language": "Python",
+          "updated_at": "2026-02-03T18:31:48Z",
+          "pushed_at": "2026-02-03T18:31:44Z",
+          "created_at": "2026-02-03T07:03:26Z",
+          "topics": [
+            "code-completion",
+            "form-builder",
+            "front-end",
+            "google-forms",
+            "gpt",
+            "mscoco-image-dataset",
+            "multi-agent",
+            "secret-management",
+            "secrets",
+            "semantic-engine",
+            "show-attend-and-tell",
+            "telethon-bot",
+            "telnetd-rce",
+            "vault",
+            "vim"
+          ],
           "owner": {
             "login": "Moxxic1",
             "html_url": "https://github.com/Moxxic1"
           },
-          "clone_url": "https://github.com/Moxxic1/moxxic1.github.io.git"
+          "clone_url": "https://github.com/Moxxic1/Tell-Me-Root.git"
         },
         {
           "id": 1143759834,
@@ -3191,23 +3215,23 @@
       "cve_id": "CVE-2026-24858",
       "repositories": [
         {
-          "id": 1146557505,
-          "name": "SCTT-2026-33-0004-FortiCloud-SSO-Identity-Singularity",
-          "full_name": "SimoesCTT/SCTT-2026-33-0004-FortiCloud-SSO-Identity-Singularity",
-          "html_url": "https://github.com/SimoesCTT/SCTT-2026-33-0004-FortiCloud-SSO-Identity-Singularity",
-          "description": "While Fortinet's January 27, 2026 mitigation for **CVE-2026-24858** focuses on blocking specific accounts like `cloud-noc@mail.io`, it fails to address the **Temporal Vulnerability** of the SAML state machine. ",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-01-31T09:47:07Z",
-          "pushed_at": "2026-01-31T09:47:04Z",
-          "created_at": "2026-01-31T09:41:04Z",
+          "id": 1145648365,
+          "name": "CVE-2026-24858-FortiCloud-SSO-Authentication-Bypass",
+          "full_name": "absholi7ly/CVE-2026-24858-FortiCloud-SSO-Authentication-Bypass",
+          "html_url": "https://github.com/absholi7ly/CVE-2026-24858-FortiCloud-SSO-Authentication-Bypass",
+          "description": "CVE-2026-24858 FortiCloud Single Sign On (SSO)  a factory default enabled feature once you register any FortiGate/FortiManager/FortiAnalyzer  contains a critical authentication bypass flaw.",
+          "stargazers_count": 1,
+          "forks_count": 1,
+          "language": "",
+          "updated_at": "2026-02-03T14:54:09Z",
+          "pushed_at": "2026-01-30T05:25:41Z",
+          "created_at": "2026-01-30T03:29:04Z",
           "topics": [],
           "owner": {
-            "login": "SimoesCTT",
-            "html_url": "https://github.com/SimoesCTT"
+            "login": "absholi7ly",
+            "html_url": "https://github.com/absholi7ly"
           },
-          "clone_url": "https://github.com/SimoesCTT/SCTT-2026-33-0004-FortiCloud-SSO-Identity-Singularity.git"
+          "clone_url": "https://github.com/absholi7ly/CVE-2026-24858-FortiCloud-SSO-Authentication-Bypass.git"
         },
         {
           "id": 1145674135,
@@ -3229,23 +3253,23 @@
           "clone_url": "https://github.com/SimoesCTT/-CTT-NSP-Convergent-Time-Theory---Network-Stack-Projection-CVE-2026-24858-.git"
         },
         {
-          "id": 1145648365,
-          "name": "CVE-2026-24858-FortiCloud-SSO-Authentication-Bypass",
-          "full_name": "absholi7ly/CVE-2026-24858-FortiCloud-SSO-Authentication-Bypass",
-          "html_url": "https://github.com/absholi7ly/CVE-2026-24858-FortiCloud-SSO-Authentication-Bypass",
-          "description": "CVE-2026-24858 FortiCloud Single Sign On (SSO)  a factory default enabled feature once you register any FortiGate/FortiManager/FortiAnalyzer  contains a critical authentication bypass flaw.",
+          "id": 1146557505,
+          "name": "SCTT-2026-33-0004-FortiCloud-SSO-Identity-Singularity",
+          "full_name": "SimoesCTT/SCTT-2026-33-0004-FortiCloud-SSO-Identity-Singularity",
+          "html_url": "https://github.com/SimoesCTT/SCTT-2026-33-0004-FortiCloud-SSO-Identity-Singularity",
+          "description": "While Fortinet's January 27, 2026 mitigation for **CVE-2026-24858** focuses on blocking specific accounts like `cloud-noc@mail.io`, it fails to address the **Temporal Vulnerability** of the SAML state machine. ",
           "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "",
-          "updated_at": "2026-01-30T05:25:44Z",
-          "pushed_at": "2026-01-30T05:25:41Z",
-          "created_at": "2026-01-30T03:29:04Z",
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-01-31T09:47:07Z",
+          "pushed_at": "2026-01-31T09:47:04Z",
+          "created_at": "2026-01-31T09:41:04Z",
           "topics": [],
           "owner": {
-            "login": "absholi7ly",
-            "html_url": "https://github.com/absholi7ly"
+            "login": "SimoesCTT",
+            "html_url": "https://github.com/SimoesCTT"
           },
-          "clone_url": "https://github.com/absholi7ly/CVE-2026-24858-FortiCloud-SSO-Authentication-Bypass.git"
+          "clone_url": "https://github.com/SimoesCTT/SCTT-2026-33-0004-FortiCloud-SSO-Identity-Singularity.git"
         },
         {
           "id": 1145287521,
@@ -3368,10 +3392,10 @@
           "full_name": "ethiack/moltbot-1click-rce",
           "html_url": "https://github.com/ethiack/moltbot-1click-rce",
           "description": "Clawdbot/Moltbot/OpenClaw One-click RCE PoC 🦞 (CVE-2026-25253)",
-          "stargazers_count": 52,
-          "forks_count": 9,
+          "stargazers_count": 55,
+          "forks_count": 10,
           "language": "Python",
-          "updated_at": "2026-02-03T07:20:14Z",
+          "updated_at": "2026-02-03T17:06:49Z",
           "pushed_at": "2026-01-27T01:32:52Z",
           "created_at": "2026-01-27T00:11:25Z",
           "topics": [],
@@ -3458,6 +3482,44 @@
     {
       "cve_id": "OTHER-2026",
       "repositories": [
+        {
+          "id": 1141081263,
+          "name": "CTI_CVE_2026",
+          "full_name": "Bhanu6576/CTI_CVE_2026",
+          "html_url": "https://github.com/Bhanu6576/CTI_CVE_2026",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-02-03T18:39:50Z",
+          "pushed_at": "2026-02-03T18:39:45Z",
+          "created_at": "2026-01-24T07:55:13Z",
+          "topics": [],
+          "owner": {
+            "login": "Bhanu6576",
+            "html_url": "https://github.com/Bhanu6576"
+          },
+          "clone_url": "https://github.com/Bhanu6576/CTI_CVE_2026.git"
+        },
+        {
+          "id": 1148732379,
+          "name": "OAuth2-Proxy-Path-Traversal-Exploit-Tool",
+          "full_name": "zwanski2019/OAuth2-Proxy-Path-Traversal-Exploit-Tool",
+          "html_url": "https://github.com/zwanski2019/OAuth2-Proxy-Path-Traversal-Exploit-Tool",
+          "description": "exploit the OAuth2 Proxy path traversal vulnerability (CVE-2026-XXXXX):  Tool Features Automatic path traversal detection OIDC endpoint enumeration Unauthorized flow initiation Report generation Multi-target support",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-02-03T10:48:54Z",
+          "pushed_at": "2026-02-03T11:11:36Z",
+          "created_at": "2026-02-03T09:54:19Z",
+          "topics": [],
+          "owner": {
+            "login": "zwanski2019",
+            "html_url": "https://github.com/zwanski2019"
+          },
+          "clone_url": "https://github.com/zwanski2019/OAuth2-Proxy-Path-Traversal-Exploit-Tool.git"
+        },
         {
           "id": 1141585396,
           "name": "CVE-2026-Apple-V2",
