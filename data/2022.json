@@ -1241,10 +1241,10 @@
           "full_name": "AlexisAhmed/CVE-2022-0847-DirtyPipe-Exploits",
           "html_url": "https://github.com/AlexisAhmed/CVE-2022-0847-DirtyPipe-Exploits",
           "description": "A collection of exploits and documentation that can be used to exploit the Linux Dirty Pipe vulnerability.",
-          "stargazers_count": 682,
+          "stargazers_count": 683,
           "forks_count": 161,
           "language": "C",
-          "updated_at": "2026-02-05T01:24:38Z",
+          "updated_at": "2026-02-05T15:30:03Z",
           "pushed_at": "2023-05-20T05:55:45Z",
           "created_at": "2022-03-12T20:57:24Z",
           "topics": [],
@@ -1893,23 +1893,42 @@
           "clone_url": "https://github.com/Shotokhan/cve_2022_0847_shellcode.git"
         },
         {
-          "id": 467552702,
-          "name": "CVE-2022-0847",
-          "full_name": "puckiestyle/CVE-2022-0847",
-          "html_url": "https://github.com/puckiestyle/CVE-2022-0847",
-          "description": "",
+          "id": 478388812,
+          "name": "dirtypipe",
+          "full_name": "mhanief/dirtypipe",
+          "html_url": "https://github.com/mhanief/dirtypipe",
+          "description": "Dirty Pipe Vulnerability Detection Script - RHSB-2022-002 Dirty Pipe - kernel arbitrary file manipulation - (CVE-2022-0847) ",
           "stargazers_count": 2,
-          "forks_count": 1,
-          "language": "C",
-          "updated_at": "2024-01-20T21:30:04Z",
-          "pushed_at": "2022-03-10T08:10:40Z",
-          "created_at": "2022-03-08T14:46:21Z",
+          "forks_count": 2,
+          "language": "Shell",
+          "updated_at": "2024-08-12T20:22:10Z",
+          "pushed_at": "2022-04-06T03:32:39Z",
+          "created_at": "2022-04-06T03:29:03Z",
           "topics": [],
           "owner": {
-            "login": "puckiestyle",
-            "html_url": "https://github.com/puckiestyle"
+            "login": "mhanief",
+            "html_url": "https://github.com/mhanief"
           },
-          "clone_url": "https://github.com/puckiestyle/CVE-2022-0847.git"
+          "clone_url": "https://github.com/mhanief/dirtypipe.git"
+        },
+        {
+          "id": 467468720,
+          "name": "CVE-2022-0847-dirty-pipe-exploit",
+          "full_name": "cspshivam/CVE-2022-0847-dirty-pipe-exploit",
+          "html_url": "https://github.com/cspshivam/CVE-2022-0847-dirty-pipe-exploit",
+          "description": "An exploit for CVE-2022-0847 dirty-pipe vulnerability",
+          "stargazers_count": 2,
+          "forks_count": 3,
+          "language": "C",
+          "updated_at": "2025-11-01T14:08:46Z",
+          "pushed_at": "2022-03-08T11:15:00Z",
+          "created_at": "2022-03-08T10:40:07Z",
+          "topics": [],
+          "owner": {
+            "login": "cspshivam",
+            "html_url": "https://github.com/cspshivam"
+          },
+          "clone_url": "https://github.com/cspshivam/CVE-2022-0847-dirty-pipe-exploit.git"
         },
         {
           "id": 494818180,
@@ -1950,23 +1969,23 @@
           "clone_url": "https://github.com/VinuKalana/DirtyPipe-CVE-2022-0847.git"
         },
         {
-          "id": 469743112,
-          "name": "CVE-2022-0847-POC",
-          "full_name": "CYB3RK1D/CVE-2022-0847-POC",
-          "html_url": "https://github.com/CYB3RK1D/CVE-2022-0847-POC",
-          "description": "dirtypipe",
+          "id": 467741460,
+          "name": "CVE-2022-0847_DirtyPipeExploit",
+          "full_name": "dadhee/CVE-2022-0847_DirtyPipeExploit",
+          "html_url": "https://github.com/dadhee/CVE-2022-0847_DirtyPipeExploit",
+          "description": "A “Dirty Pipe” vulnerability with CVE-2022-0847 and a CVSS score of 7.8 has been identified, affecting Linux Kernel 5.8 and higher. The vulnerability allows attackers to overwrite data in read-only files. Threat actors can exploit this vulnerability to privilege themselves with code injection.",
           "stargazers_count": 2,
-          "forks_count": 1,
+          "forks_count": 4,
           "language": "C",
-          "updated_at": "2022-03-17T15:54:57Z",
-          "pushed_at": "2022-03-15T17:41:13Z",
-          "created_at": "2022-03-14T13:21:25Z",
+          "updated_at": "2024-08-12T20:21:23Z",
+          "pushed_at": "2022-03-09T02:01:28Z",
+          "created_at": "2022-03-09T01:55:04Z",
           "topics": [],
           "owner": {
-            "login": "CYB3RK1D",
-            "html_url": "https://github.com/CYB3RK1D"
+            "login": "dadhee",
+            "html_url": "https://github.com/dadhee"
           },
-          "clone_url": "https://github.com/CYB3RK1D/CVE-2022-0847-POC.git"
+          "clone_url": "https://github.com/dadhee/CVE-2022-0847_DirtyPipeExploit.git"
         },
         {
           "id": 510867863,
@@ -2007,6 +2026,50 @@
           "clone_url": "https://github.com/tmoneypenny/CVE-2022-0847.git"
         },
         {
+          "id": 467552702,
+          "name": "CVE-2022-0847",
+          "full_name": "puckiestyle/CVE-2022-0847",
+          "html_url": "https://github.com/puckiestyle/CVE-2022-0847",
+          "description": "",
+          "stargazers_count": 2,
+          "forks_count": 1,
+          "language": "C",
+          "updated_at": "2024-01-20T21:30:04Z",
+          "pushed_at": "2022-03-10T08:10:40Z",
+          "created_at": "2022-03-08T14:46:21Z",
+          "topics": [],
+          "owner": {
+            "login": "puckiestyle",
+            "html_url": "https://github.com/puckiestyle"
+          },
+          "clone_url": "https://github.com/puckiestyle/CVE-2022-0847.git"
+        },
+        {
+          "id": 470139953,
+          "name": "CVE-2022-0847-DirtyPipe-Container-Breakout",
+          "full_name": "jpts/CVE-2022-0847-DirtyPipe-Container-Breakout",
+          "html_url": "https://github.com/jpts/CVE-2022-0847-DirtyPipe-Container-Breakout",
+          "description": "PoC Container Breakout for DirtyPipe Vulnerability CVE-2022-0847 ",
+          "stargazers_count": 2,
+          "forks_count": 1,
+          "language": "C",
+          "updated_at": "2026-02-05T15:31:00Z",
+          "pushed_at": "2022-04-20T22:07:12Z",
+          "created_at": "2022-03-15T12:00:17Z",
+          "topics": [
+            "breakout",
+            "container",
+            "cve-2022-0847",
+            "dirtypipe",
+            "docker"
+          ],
+          "owner": {
+            "login": "jpts",
+            "html_url": "https://github.com/jpts"
+          },
+          "clone_url": "https://github.com/jpts/CVE-2022-0847-DirtyPipe-Container-Breakout.git"
+        },
+        {
           "id": 467990193,
           "name": "CVE-2022-0847",
           "full_name": "gyaansastra/CVE-2022-0847",
@@ -2024,44 +2087,6 @@
             "html_url": "https://github.com/gyaansastra"
           },
           "clone_url": "https://github.com/gyaansastra/CVE-2022-0847.git"
-        },
-        {
-          "id": 467741460,
-          "name": "CVE-2022-0847_DirtyPipeExploit",
-          "full_name": "dadhee/CVE-2022-0847_DirtyPipeExploit",
-          "html_url": "https://github.com/dadhee/CVE-2022-0847_DirtyPipeExploit",
-          "description": "A “Dirty Pipe” vulnerability with CVE-2022-0847 and a CVSS score of 7.8 has been identified, affecting Linux Kernel 5.8 and higher. The vulnerability allows attackers to overwrite data in read-only files. Threat actors can exploit this vulnerability to privilege themselves with code injection.",
-          "stargazers_count": 2,
-          "forks_count": 4,
-          "language": "C",
-          "updated_at": "2024-08-12T20:21:23Z",
-          "pushed_at": "2022-03-09T02:01:28Z",
-          "created_at": "2022-03-09T01:55:04Z",
-          "topics": [],
-          "owner": {
-            "login": "dadhee",
-            "html_url": "https://github.com/dadhee"
-          },
-          "clone_url": "https://github.com/dadhee/CVE-2022-0847_DirtyPipeExploit.git"
-        },
-        {
-          "id": 467468720,
-          "name": "CVE-2022-0847-dirty-pipe-exploit",
-          "full_name": "cspshivam/CVE-2022-0847-dirty-pipe-exploit",
-          "html_url": "https://github.com/cspshivam/CVE-2022-0847-dirty-pipe-exploit",
-          "description": "An exploit for CVE-2022-0847 dirty-pipe vulnerability",
-          "stargazers_count": 2,
-          "forks_count": 3,
-          "language": "C",
-          "updated_at": "2025-11-01T14:08:46Z",
-          "pushed_at": "2022-03-08T11:15:00Z",
-          "created_at": "2022-03-08T10:40:07Z",
-          "topics": [],
-          "owner": {
-            "login": "cspshivam",
-            "html_url": "https://github.com/cspshivam"
-          },
-          "clone_url": "https://github.com/cspshivam/CVE-2022-0847-dirty-pipe-exploit.git"
         },
         {
           "id": 535409119,
@@ -2083,105 +2108,23 @@
           "clone_url": "https://github.com/Gustavo-Nogueira/Dirty-Pipe-Exploits.git"
         },
         {
-          "id": 478388812,
-          "name": "dirtypipe",
-          "full_name": "mhanief/dirtypipe",
-          "html_url": "https://github.com/mhanief/dirtypipe",
-          "description": "Dirty Pipe Vulnerability Detection Script - RHSB-2022-002 Dirty Pipe - kernel arbitrary file manipulation - (CVE-2022-0847) ",
+          "id": 469743112,
+          "name": "CVE-2022-0847-POC",
+          "full_name": "CYB3RK1D/CVE-2022-0847-POC",
+          "html_url": "https://github.com/CYB3RK1D/CVE-2022-0847-POC",
+          "description": "dirtypipe",
           "stargazers_count": 2,
-          "forks_count": 2,
-          "language": "Shell",
-          "updated_at": "2024-08-12T20:22:10Z",
-          "pushed_at": "2022-04-06T03:32:39Z",
-          "created_at": "2022-04-06T03:29:03Z",
-          "topics": [],
-          "owner": {
-            "login": "mhanief",
-            "html_url": "https://github.com/mhanief"
-          },
-          "clone_url": "https://github.com/mhanief/dirtypipe.git"
-        },
-        {
-          "id": 467570864,
-          "name": "CVE-2022-0847-DirtyPipe-Exploit",
-          "full_name": "ITMarcin2211/CVE-2022-0847-DirtyPipe-Exploit",
-          "html_url": "https://github.com/ITMarcin2211/CVE-2022-0847-DirtyPipe-Exploit",
-          "description": "",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "C",
-          "updated_at": "2022-03-17T16:07:23Z",
-          "pushed_at": "2022-03-08T15:36:53Z",
-          "created_at": "2022-03-08T15:33:39Z",
-          "topics": [],
-          "owner": {
-            "login": "ITMarcin2211",
-            "html_url": "https://github.com/ITMarcin2211"
-          },
-          "clone_url": "https://github.com/ITMarcin2211/CVE-2022-0847-DirtyPipe-Exploit.git"
-        },
-        {
-          "id": 789035235,
-          "name": "DirtyPipe-Exploit",
-          "full_name": "karanlvm/DirtyPipe-Exploit",
-          "html_url": "https://github.com/karanlvm/DirtyPipe-Exploit",
-          "description": "Proof of concept for CVE-2022-0847",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "C",
-          "updated_at": "2025-10-14T06:11:05Z",
-          "pushed_at": "2025-10-14T06:11:02Z",
-          "created_at": "2024-04-19T15:21:57Z",
-          "topics": [],
-          "owner": {
-            "login": "karanlvm",
-            "html_url": "https://github.com/karanlvm"
-          },
-          "clone_url": "https://github.com/karanlvm/DirtyPipe-Exploit.git"
-        },
-        {
-          "id": 470139953,
-          "name": "CVE-2022-0847-DirtyPipe-Container-Breakout",
-          "full_name": "jpts/CVE-2022-0847-DirtyPipe-Container-Breakout",
-          "html_url": "https://github.com/jpts/CVE-2022-0847-DirtyPipe-Container-Breakout",
-          "description": "PoC Container Breakout for DirtyPipe Vulnerability CVE-2022-0847 ",
-          "stargazers_count": 1,
           "forks_count": 1,
           "language": "C",
-          "updated_at": "2022-12-02T03:11:16Z",
-          "pushed_at": "2022-04-20T22:07:12Z",
-          "created_at": "2022-03-15T12:00:17Z",
-          "topics": [
-            "breakout",
-            "container",
-            "cve-2022-0847",
-            "dirtypipe",
-            "docker"
-          ],
-          "owner": {
-            "login": "jpts",
-            "html_url": "https://github.com/jpts"
-          },
-          "clone_url": "https://github.com/jpts/CVE-2022-0847-DirtyPipe-Container-Breakout.git"
-        },
-        {
-          "id": 469473653,
-          "name": "dirtypipetester",
-          "full_name": "realbatuhan/dirtypipetester",
-          "html_url": "https://github.com/realbatuhan/dirtypipetester",
-          "description": "Dirty Pipe (CVE-2022-0847) zafiyeti kontrolü ",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2022-03-14T05:00:16Z",
-          "pushed_at": "2022-03-13T19:49:29Z",
-          "created_at": "2022-03-13T19:30:14Z",
+          "updated_at": "2022-03-17T15:54:57Z",
+          "pushed_at": "2022-03-15T17:41:13Z",
+          "created_at": "2022-03-14T13:21:25Z",
           "topics": [],
           "owner": {
-            "login": "realbatuhan",
-            "html_url": "https://github.com/realbatuhan"
+            "login": "CYB3RK1D",
+            "html_url": "https://github.com/CYB3RK1D"
           },
-          "clone_url": "https://github.com/realbatuhan/dirtypipetester.git"
+          "clone_url": "https://github.com/CYB3RK1D/CVE-2022-0847-POC.git"
         },
         {
           "id": 467602577,
@@ -2222,23 +2165,80 @@
           "clone_url": "https://github.com/xiaoLvChen/CVE-2022-0847.git"
         },
         {
-          "id": 476289719,
-          "name": "dirty-pipe",
-          "full_name": "scopion/dirty-pipe",
-          "html_url": "https://github.com/scopion/dirty-pipe",
-          "description": "Exploit for Dirty-Pipe (CVE-2022-0847) ",
+          "id": 789035235,
+          "name": "DirtyPipe-Exploit",
+          "full_name": "karanlvm/DirtyPipe-Exploit",
+          "html_url": "https://github.com/karanlvm/DirtyPipe-Exploit",
+          "description": "Proof of concept for CVE-2022-0847",
           "stargazers_count": 1,
-          "forks_count": 3,
-          "language": "",
-          "updated_at": "2023-06-19T02:24:44Z",
-          "pushed_at": "2022-03-31T11:48:45Z",
-          "created_at": "2022-03-31T12:10:52Z",
+          "forks_count": 0,
+          "language": "C",
+          "updated_at": "2025-10-14T06:11:05Z",
+          "pushed_at": "2025-10-14T06:11:02Z",
+          "created_at": "2024-04-19T15:21:57Z",
           "topics": [],
           "owner": {
-            "login": "scopion",
-            "html_url": "https://github.com/scopion"
+            "login": "karanlvm",
+            "html_url": "https://github.com/karanlvm"
           },
-          "clone_url": "https://github.com/scopion/dirty-pipe.git"
+          "clone_url": "https://github.com/karanlvm/DirtyPipe-Exploit.git"
+        },
+        {
+          "id": 467570864,
+          "name": "CVE-2022-0847-DirtyPipe-Exploit",
+          "full_name": "ITMarcin2211/CVE-2022-0847-DirtyPipe-Exploit",
+          "html_url": "https://github.com/ITMarcin2211/CVE-2022-0847-DirtyPipe-Exploit",
+          "description": "",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "C",
+          "updated_at": "2022-03-17T16:07:23Z",
+          "pushed_at": "2022-03-08T15:36:53Z",
+          "created_at": "2022-03-08T15:33:39Z",
+          "topics": [],
+          "owner": {
+            "login": "ITMarcin2211",
+            "html_url": "https://github.com/ITMarcin2211"
+          },
+          "clone_url": "https://github.com/ITMarcin2211/CVE-2022-0847-DirtyPipe-Exploit.git"
+        },
+        {
+          "id": 467317090,
+          "name": "CVE-2022-0847",
+          "full_name": "lucksec/CVE-2022-0847",
+          "html_url": "https://github.com/lucksec/CVE-2022-0847",
+          "description": "",
+          "stargazers_count": 1,
+          "forks_count": 3,
+          "language": "C++",
+          "updated_at": "2022-12-26T10:39:25Z",
+          "pushed_at": "2022-03-08T01:50:39Z",
+          "created_at": "2022-03-08T01:17:09Z",
+          "topics": [],
+          "owner": {
+            "login": "lucksec",
+            "html_url": "https://github.com/lucksec"
+          },
+          "clone_url": "https://github.com/lucksec/CVE-2022-0847.git"
+        },
+        {
+          "id": 469473653,
+          "name": "dirtypipetester",
+          "full_name": "realbatuhan/dirtypipetester",
+          "html_url": "https://github.com/realbatuhan/dirtypipetester",
+          "description": "Dirty Pipe (CVE-2022-0847) zafiyeti kontrolü ",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Shell",
+          "updated_at": "2022-03-14T05:00:16Z",
+          "pushed_at": "2022-03-13T19:49:29Z",
+          "created_at": "2022-03-13T19:30:14Z",
+          "topics": [],
+          "owner": {
+            "login": "realbatuhan",
+            "html_url": "https://github.com/realbatuhan"
+          },
+          "clone_url": "https://github.com/realbatuhan/dirtypipetester.git"
         },
         {
           "id": 549750916,
@@ -2279,23 +2279,23 @@
           "clone_url": "https://github.com/Turzum/ps-lab-cve-2022-0847.git"
         },
         {
-          "id": 467317090,
-          "name": "CVE-2022-0847",
-          "full_name": "lucksec/CVE-2022-0847",
-          "html_url": "https://github.com/lucksec/CVE-2022-0847",
-          "description": "",
+          "id": 476289719,
+          "name": "dirty-pipe",
+          "full_name": "scopion/dirty-pipe",
+          "html_url": "https://github.com/scopion/dirty-pipe",
+          "description": "Exploit for Dirty-Pipe (CVE-2022-0847) ",
           "stargazers_count": 1,
           "forks_count": 3,
-          "language": "C++",
-          "updated_at": "2022-12-26T10:39:25Z",
-          "pushed_at": "2022-03-08T01:50:39Z",
-          "created_at": "2022-03-08T01:17:09Z",
+          "language": "",
+          "updated_at": "2023-06-19T02:24:44Z",
+          "pushed_at": "2022-03-31T11:48:45Z",
+          "created_at": "2022-03-31T12:10:52Z",
           "topics": [],
           "owner": {
-            "login": "lucksec",
-            "html_url": "https://github.com/lucksec"
+            "login": "scopion",
+            "html_url": "https://github.com/scopion"
           },
-          "clone_url": "https://github.com/lucksec/CVE-2022-0847.git"
+          "clone_url": "https://github.com/scopion/dirty-pipe.git"
         },
         {
           "id": 1112624381,
