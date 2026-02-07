@@ -1372,17 +1372,17 @@
       "cve_id": "CVE-2024-0670",
       "repositories": [
         {
-          "id": 1120365953,
+          "id": 1130065844,
           "name": "Fsociety-CVE-2024-0670-CheckMK-LPE",
-          "full_name": "fsoc-ghost-0x/Fsociety-CVE-2024-0670-CheckMK-LPE",
-          "html_url": "https://github.com/fsoc-ghost-0x/Fsociety-CVE-2024-0670-CheckMK-LPE",
-          "description": "Hello friend. This is the key to the kingdom. Advanced LPE exploit for CheckMK (CVE-2024-0670). Abuses insecure file handling for SYSTEM access. Includes surgical persistence module. Written in C++. They thought they were safe. They were wrong. The 5/9 revolution starts with a root shell. \u003e We Are Fsociety_",
-          "stargazers_count": 1,
-          "forks_count": 0,
+          "full_name": "Nikopmpm/Fsociety-CVE-2024-0670-CheckMK-LPE",
+          "html_url": "https://github.com/Nikopmpm/Fsociety-CVE-2024-0670-CheckMK-LPE",
+          "description": "🔍 Exploit CVE-2024-0670 in CheckMK agents for local privilege escalation using a robust C++ tool designed for security professionals.",
+          "stargazers_count": 0,
+          "forks_count": 1,
           "language": "C++",
-          "updated_at": "2025-12-21T04:50:27Z",
-          "pushed_at": "2025-12-21T04:50:24Z",
-          "created_at": "2025-12-21T03:54:48Z",
+          "updated_at": "2026-02-07T22:52:15Z",
+          "pushed_at": "2026-02-07T22:52:12Z",
+          "created_at": "2026-01-08T01:32:09Z",
           "topics": [
             "c0deghost",
             "checkmk-agent",
@@ -1401,15 +1401,13 @@
             "offsensive-security",
             "red-team",
             "windows",
-            "windows-10",
-            "windows-11",
             "windows-exploit"
           ],
           "owner": {
-            "login": "fsoc-ghost-0x",
-            "html_url": "https://github.com/fsoc-ghost-0x"
+            "login": "Nikopmpm",
+            "html_url": "https://github.com/Nikopmpm"
           },
-          "clone_url": "https://github.com/fsoc-ghost-0x/Fsociety-CVE-2024-0670-CheckMK-LPE.git"
+          "clone_url": "https://github.com/Nikopmpm/Fsociety-CVE-2024-0670-CheckMK-LPE.git"
         },
         {
           "id": 1133853228,
@@ -1448,44 +1446,6 @@
             "html_url": "https://github.com/Nikopmpm"
           },
           "clone_url": "https://github.com/Nikopmpm/nikopmpm.github.io.git"
-        },
-        {
-          "id": 1130065844,
-          "name": "Fsociety-CVE-2024-0670-CheckMK-LPE",
-          "full_name": "Nikopmpm/Fsociety-CVE-2024-0670-CheckMK-LPE",
-          "html_url": "https://github.com/Nikopmpm/Fsociety-CVE-2024-0670-CheckMK-LPE",
-          "description": "🔍 Exploit CVE-2024-0670 in CheckMK agents for local privilege escalation using a robust C++ tool designed for security professionals.",
-          "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "C++",
-          "updated_at": "2026-02-07T15:01:59Z",
-          "pushed_at": "2026-02-07T15:01:55Z",
-          "created_at": "2026-01-08T01:32:09Z",
-          "topics": [
-            "c0deghost",
-            "checkmk-agent",
-            "cpp",
-            "cpp-malware",
-            "cve-2024-0670",
-            "edr",
-            "escalate-privilages",
-            "fsociety",
-            "fsociety-hacking",
-            "low-level",
-            "low-level-programming",
-            "microsoft",
-            "mr-robot",
-            "nt-authority-system",
-            "offsensive-security",
-            "red-team",
-            "windows",
-            "windows-exploit"
-          ],
-          "owner": {
-            "login": "Nikopmpm",
-            "html_url": "https://github.com/Nikopmpm"
-          },
-          "clone_url": "https://github.com/Nikopmpm/Fsociety-CVE-2024-0670-CheckMK-LPE.git"
         }
       ]
     },
@@ -8818,6 +8778,30 @@
             "html_url": "https://github.com/hrtowii"
           },
           "clone_url": "https://github.com/hrtowii/CVE-2024-23208-test.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-23296",
+      "repositories": [
+        {
+          "id": 1152415901,
+          "name": "lCTT-Apple-Silicon--Resonance-Vulnerability-CVE-2024-23296",
+          "full_name": "SimoesCTT/lCTT-Apple-Silicon--Resonance-Vulnerability-CVE-2024-23296",
+          "html_url": "https://github.com/SimoesCTT/lCTT-Apple-Silicon--Resonance-Vulnerability-CVE-2024-23296",
+          "description": "Apple Silicon runs at frequencies that are golden ratio harmonics of 587 kHz:  · Performance cores: 3.2 GHz = 587 kHz × 5451 (≈ φ⁸ × 1000) · Efficiency cores: 2.0 GHz = 587 kHz × 3407 (≈ φ⁷ × 1000) · Neural Engine: 11.0 GHz = 587 kHz × 18739 (≈ φ¹⁰ × 1000) · ALL are φ-harmonics of 587 kHz",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "C",
+          "updated_at": "2026-02-07T21:03:17Z",
+          "pushed_at": "2026-02-07T21:03:14Z",
+          "created_at": "2026-02-07T20:59:38Z",
+          "topics": [],
+          "owner": {
+            "login": "SimoesCTT",
+            "html_url": "https://github.com/SimoesCTT"
+          },
+          "clone_url": "https://github.com/SimoesCTT/lCTT-Apple-Silicon--Resonance-Vulnerability-CVE-2024-23296.git"
         }
       ]
     },
@@ -40230,8 +40214,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-05T18:05:49Z",
-          "pushed_at": "2026-02-05T17:49:55Z",
+          "updated_at": "2026-02-07T18:17:58Z",
+          "pushed_at": "2026-02-07T18:17:55Z",
           "created_at": "2026-02-05T17:34:06Z",
           "topics": [],
           "owner": {
@@ -48511,8 +48495,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Visual Basic .NET",
-          "updated_at": "2026-02-07T16:29:07Z",
-          "pushed_at": "2026-02-07T16:29:04Z",
+          "updated_at": "2026-02-07T23:15:02Z",
+          "pushed_at": "2026-02-07T23:14:58Z",
           "created_at": "2025-10-21T19:42:27Z",
           "topics": [
             "cmd",
