@@ -967,7 +967,7 @@
           "html_url": "https://github.com/kimstars/Ashwesker-CVE-2026-21509",
           "description": "CVE-2026-21509",
           "stargazers_count": 7,
-          "forks_count": 16,
+          "forks_count": 15,
           "language": "",
           "updated_at": "2026-02-05T05:42:39Z",
           "pushed_at": "2026-01-27T09:42:58Z",
@@ -999,44 +999,6 @@
           "clone_url": "https://github.com/SimoesCTT/CTT-NFS-Vortex-RCE.git"
         },
         {
-          "id": 1145070024,
-          "name": "KSK-ITDK-CVE-2026-21509-Mitigation",
-          "full_name": "ksk-itdk/KSK-ITDK-CVE-2026-21509-Mitigation",
-          "html_url": "https://github.com/ksk-itdk/KSK-ITDK-CVE-2026-21509-Mitigation",
-          "description": "Powershell script with Detection and Remediation for CVE-2026-21509",
-          "stargazers_count": 1,
-          "forks_count": 2,
-          "language": "PowerShell",
-          "updated_at": "2026-02-02T15:46:51Z",
-          "pushed_at": "2026-01-29T11:49:04Z",
-          "created_at": "2026-01-29T11:40:30Z",
-          "topics": [],
-          "owner": {
-            "login": "ksk-itdk",
-            "html_url": "https://github.com/ksk-itdk"
-          },
-          "clone_url": "https://github.com/ksk-itdk/KSK-ITDK-CVE-2026-21509-Mitigation.git"
-        },
-        {
-          "id": 1146561861,
-          "name": "SCTT-2026-33-0007-The-OLE-Vortex-Laminar-Bypass-",
-          "full_name": "SimoesCTT/SCTT-2026-33-0007-The-OLE-Vortex-Laminar-Bypass-",
-          "html_url": "https://github.com/SimoesCTT/SCTT-2026-33-0007-The-OLE-Vortex-Laminar-Bypass-",
-          "description": "Microsoft just released emergency patches for CVE-2026-21509, a zero-day in the Office Suite that bypasses OLE/COM mitigations when a user simply opens a file. They think their \"Service-side change\" for Office 2021+ is a solid wall. ",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-01-31T16:08:36Z",
-          "pushed_at": "2026-01-31T09:58:19Z",
-          "created_at": "2026-01-31T09:50:23Z",
-          "topics": [],
-          "owner": {
-            "login": "SimoesCTT",
-            "html_url": "https://github.com/SimoesCTT"
-          },
-          "clone_url": "https://github.com/SimoesCTT/SCTT-2026-33-0007-The-OLE-Vortex-Laminar-Bypass-.git"
-        },
-        {
           "id": 1149781000,
           "name": "detect_CVE-2026-21509",
           "full_name": "decalage2/detect_CVE-2026-21509",
@@ -1056,15 +1018,34 @@
           "clone_url": "https://github.com/decalage2/detect_CVE-2026-21509.git"
         },
         {
+          "id": 1145070024,
+          "name": "KSK-ITDK-CVE-2026-21509-Mitigation",
+          "full_name": "ksk-itdk/KSK-ITDK-CVE-2026-21509-Mitigation",
+          "html_url": "https://github.com/ksk-itdk/KSK-ITDK-CVE-2026-21509-Mitigation",
+          "description": "Powershell script with Detection and Remediation for CVE-2026-21509",
+          "stargazers_count": 1,
+          "forks_count": 2,
+          "language": "PowerShell",
+          "updated_at": "2026-02-02T15:46:51Z",
+          "pushed_at": "2026-01-29T11:49:04Z",
+          "created_at": "2026-01-29T11:40:30Z",
+          "topics": [],
+          "owner": {
+            "login": "ksk-itdk",
+            "html_url": "https://github.com/ksk-itdk"
+          },
+          "clone_url": "https://github.com/ksk-itdk/KSK-ITDK-CVE-2026-21509-Mitigation.git"
+        },
+        {
           "id": 1147401424,
           "name": "CTT-MICROSOFT-OFFICE-OLE-MANIFOLD-BYPASS-CVE-2026-21509",
           "full_name": "SimoesCTT/CTT-MICROSOFT-OFFICE-OLE-MANIFOLD-BYPASS-CVE-2026-21509",
           "html_url": "https://github.com/SimoesCTT/CTT-MICROSOFT-OFFICE-OLE-MANIFOLD-BYPASS-CVE-2026-21509",
           "description": "CVE-2026-21509 is a critical bypass in the Microsoft Office OLE (Object Linking and Embedding) validation engine. While standard \"laminar\" exploits attempt to manipulate static COM objects, this repository utilizes Theorem 4.2 to achieve a speculative race-condition bypass of the Object Definition Rule (ODR).",
-          "stargazers_count": 0,
+          "stargazers_count": 1,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-03T03:18:59Z",
+          "updated_at": "2026-02-08T20:23:13Z",
           "pushed_at": "2026-02-01T17:41:29Z",
           "created_at": "2026-02-01T17:31:24Z",
           "topics": [],
@@ -1073,6 +1054,25 @@
             "html_url": "https://github.com/SimoesCTT"
           },
           "clone_url": "https://github.com/SimoesCTT/CTT-MICROSOFT-OFFICE-OLE-MANIFOLD-BYPASS-CVE-2026-21509.git"
+        },
+        {
+          "id": 1146561861,
+          "name": "SCTT-2026-33-0007-The-OLE-Vortex-Laminar-Bypass-",
+          "full_name": "SimoesCTT/SCTT-2026-33-0007-The-OLE-Vortex-Laminar-Bypass-",
+          "html_url": "https://github.com/SimoesCTT/SCTT-2026-33-0007-The-OLE-Vortex-Laminar-Bypass-",
+          "description": "Microsoft just released emergency patches for CVE-2026-21509, a zero-day in the Office Suite that bypasses OLE/COM mitigations when a user simply opens a file. They think their \"Service-side change\" for Office 2021+ is a solid wall. ",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-01-31T16:08:36Z",
+          "pushed_at": "2026-01-31T09:58:19Z",
+          "created_at": "2026-01-31T09:50:23Z",
+          "topics": [],
+          "owner": {
+            "login": "SimoesCTT",
+            "html_url": "https://github.com/SimoesCTT"
+          },
+          "clone_url": "https://github.com/SimoesCTT/SCTT-2026-33-0007-The-OLE-Vortex-Laminar-Bypass-.git"
         },
         {
           "id": 1150570492,
@@ -1268,8 +1268,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-08T15:15:18Z",
-          "pushed_at": "2026-02-08T15:15:14Z",
+          "updated_at": "2026-02-08T20:18:24Z",
+          "pushed_at": "2026-02-08T20:18:21Z",
           "created_at": "2023-10-12T01:36:00Z",
           "topics": [
             "cve",
@@ -1485,10 +1485,10 @@
           "full_name": "horizon3ai/CVE-2026-22200",
           "html_url": "https://github.com/horizon3ai/CVE-2026-22200",
           "description": "CVE-2026-22200: Arbitrary file read + CNEXT RCE in osTicket",
-          "stargazers_count": 7,
+          "stargazers_count": 8,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-05T17:24:24Z",
+          "updated_at": "2026-02-08T20:30:58Z",
           "pushed_at": "2026-01-22T15:55:17Z",
           "created_at": "2026-01-21T18:13:57Z",
           "topics": [],
@@ -2024,6 +2024,25 @@
       "cve_id": "CVE-2026-23760",
       "repositories": [
         {
+          "id": 1141194973,
+          "name": "smartermail-CVE-2026-23760-poc",
+          "full_name": "MaxMnMl/smartermail-CVE-2026-23760-poc",
+          "html_url": "https://github.com/MaxMnMl/smartermail-CVE-2026-23760-poc",
+          "description": "CVE-2026-23760 - An authentication bypass via password reset API in SmarterMail.",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-02-08T17:59:59Z",
+          "pushed_at": "2026-01-24T13:39:14Z",
+          "created_at": "2026-01-24T12:30:34Z",
+          "topics": [],
+          "owner": {
+            "login": "MaxMnMl",
+            "html_url": "https://github.com/MaxMnMl"
+          },
+          "clone_url": "https://github.com/MaxMnMl/smartermail-CVE-2026-23760-poc.git"
+        },
+        {
           "id": 1140484504,
           "name": "CVE-2026-23760_SmarterMail-Auth-Bypass-and-RCE",
           "full_name": "hilwa24/CVE-2026-23760_SmarterMail-Auth-Bypass-and-RCE",
@@ -2046,25 +2065,6 @@
             "html_url": "https://github.com/hilwa24"
           },
           "clone_url": "https://github.com/hilwa24/CVE-2026-23760_SmarterMail-Auth-Bypass-and-RCE.git"
-        },
-        {
-          "id": 1141194973,
-          "name": "smartermail-CVE-2026-23760-poc",
-          "full_name": "MaxMnMl/smartermail-CVE-2026-23760-poc",
-          "html_url": "https://github.com/MaxMnMl/smartermail-CVE-2026-23760-poc",
-          "description": "CVE-2026-23760 - An authentication bypass via password reset API in SmarterMail.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-01-24T13:39:17Z",
-          "pushed_at": "2026-01-24T13:39:14Z",
-          "created_at": "2026-01-24T12:30:34Z",
-          "topics": [],
-          "owner": {
-            "login": "MaxMnMl",
-            "html_url": "https://github.com/MaxMnMl"
-          },
-          "clone_url": "https://github.com/MaxMnMl/smartermail-CVE-2026-23760-poc.git"
         }
       ]
     },
@@ -2467,7 +2467,7 @@
           "html_url": "https://github.com/cyberpoul/CVE-2026-24061-POC",
           "description": "CVE-2026-24061's poc : a critical authentication bypass in telnetd leading to RCE as root Affects systems with telnetd versions containing the vulnerability from 2015 onwards.",
           "stargazers_count": 2,
-          "forks_count": 3,
+          "forks_count": 4,
           "language": "Python",
           "updated_at": "2026-02-05T01:21:54Z",
           "pushed_at": "2026-01-26T13:04:05Z",
@@ -3049,8 +3049,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-08T15:25:34Z",
-          "pushed_at": "2026-02-08T15:25:31Z",
+          "updated_at": "2026-02-08T20:28:47Z",
+          "pushed_at": "2026-02-08T20:28:44Z",
           "created_at": "2026-02-03T19:46:10Z",
           "topics": [
             "agent",
@@ -3238,8 +3238,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-08T15:25:04Z",
-          "pushed_at": "2026-02-08T15:25:01Z",
+          "updated_at": "2026-02-08T20:28:17Z",
+          "pushed_at": "2026-02-08T20:28:13Z",
           "created_at": "2026-02-03T07:03:26Z",
           "topics": [
             "code-completion",
@@ -3311,8 +3311,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-08T15:25:00Z",
-          "pushed_at": "2026-02-08T15:24:57Z",
+          "updated_at": "2026-02-08T20:28:14Z",
+          "pushed_at": "2026-02-08T20:28:10Z",
           "created_at": "2025-07-03T09:13:14Z",
           "topics": [
             "cve",
@@ -3956,10 +3956,10 @@
           "full_name": "adibirzu/openclaw-security-monitor",
           "html_url": "https://github.com/adibirzu/openclaw-security-monitor",
           "description": "Proactive security monitoring for OpenClaw deployments. Detects ClawHavoc, AMOS stealer, CVE-2026-25253, memory poisoning, and supply chain attacks.",
-          "stargazers_count": 1,
+          "stargazers_count": 2,
           "forks_count": 0,
           "language": "Shell",
-          "updated_at": "2026-02-06T23:59:00Z",
+          "updated_at": "2026-02-08T21:15:44Z",
           "pushed_at": "2026-02-05T18:07:50Z",
           "created_at": "2026-02-05T07:31:07Z",
           "topics": [],
