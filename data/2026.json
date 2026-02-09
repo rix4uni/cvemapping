@@ -231,10 +231,10 @@
           "full_name": "DeathShotXD/0xKern3lCrush-Foreverday-BYOVD-CVE-2026-0828",
           "html_url": "https://github.com/DeathShotXD/0xKern3lCrush-Foreverday-BYOVD-CVE-2026-0828",
           "description": "Advanced PoC \u0026 Research for CVE-2026-0828 (Safetica) and CVE-2025-7771 (ThrottleStop). Analysis of BYOVD (Bring Your Own Vulnerable Driver) TTPs for Ring 0 process termination and physical memory R/W. Researching EDR-Killer patterns, PPL bypasses, and kernel-mode primitives used by MedusaLocker and other threat actors.",
-          "stargazers_count": 19,
+          "stargazers_count": 20,
           "forks_count": 2,
           "language": "C",
-          "updated_at": "2026-02-07T09:20:51Z",
+          "updated_at": "2026-02-09T02:13:18Z",
           "pushed_at": "2026-02-04T02:20:21Z",
           "created_at": "2026-02-04T01:47:36Z",
           "topics": [],
@@ -384,10 +384,10 @@
           "full_name": "ch4r0nn/CVE-2026-1056-POC",
           "html_url": "https://github.com/ch4r0nn/CVE-2026-1056-POC",
           "description": "Snow Monkey Forms \u003c= 12.0.3 - Unauthenticated Arbitrary File Deletion via Path Traversal (CVE-2026-1056)",
-          "stargazers_count": 5,
+          "stargazers_count": 6,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-01-30T12:21:07Z",
+          "updated_at": "2026-02-09T03:36:28Z",
           "pushed_at": "2026-01-28T15:03:34Z",
           "created_at": "2026-01-28T14:29:36Z",
           "topics": [],
@@ -459,7 +459,7 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-07T16:33:35Z",
+          "updated_at": "2026-02-09T09:09:28Z",
           "pushed_at": "2026-02-07T14:27:13Z",
           "created_at": "2026-02-07T11:28:47Z",
           "topics": [],
@@ -507,7 +507,7 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-07T16:33:35Z",
+          "updated_at": "2026-02-09T09:09:28Z",
           "pushed_at": "2026-02-07T14:27:13Z",
           "created_at": "2026-02-07T11:28:47Z",
           "topics": [],
@@ -600,10 +600,10 @@
           "full_name": "dkstar11q/Ashwesker-CVE-2026-20045",
           "html_url": "https://github.com/dkstar11q/Ashwesker-CVE-2026-20045",
           "description": "CVE-2026-20045",
-          "stargazers_count": 2,
+          "stargazers_count": 4,
           "forks_count": 2,
           "language": "",
-          "updated_at": "2026-02-06T08:30:17Z",
+          "updated_at": "2026-02-09T07:01:38Z",
           "pushed_at": "2026-01-22T13:01:22Z",
           "created_at": "2026-01-25T01:01:31Z",
           "topics": [],
@@ -947,10 +947,10 @@
           "full_name": "gavz/CVE-2026-21509-PoC",
           "html_url": "https://github.com/gavz/CVE-2026-21509-PoC",
           "description": "Educational PoC for CVE‑2026‑21509 (Microsoft Office security feature bypass). Generates a harmless DOCX with dummy OLE artifacts to study EDR/AV visibility. Not an exploit. For isolated labs only; see README for 7‑Zip inspection steps and mitigation references.",
-          "stargazers_count": 8,
+          "stargazers_count": 9,
           "forks_count": 4,
           "language": "",
-          "updated_at": "2026-02-08T06:19:50Z",
+          "updated_at": "2026-02-09T15:21:47Z",
           "pushed_at": "2026-01-28T20:33:28Z",
           "created_at": "2026-01-29T00:51:18Z",
           "topics": [],
@@ -1171,10 +1171,10 @@
           "full_name": "Chocapikk/CVE-2026-21858",
           "html_url": "https://github.com/Chocapikk/CVE-2026-21858",
           "description": "n8n Ni8mare - Unauthenticated Arbitrary File Read to RCE Chain (CVSS 10.0)",
-          "stargazers_count": 240,
+          "stargazers_count": 241,
           "forks_count": 47,
           "language": "Python",
-          "updated_at": "2026-02-08T03:43:37Z",
+          "updated_at": "2026-02-09T08:07:34Z",
           "pushed_at": "2026-01-09T02:50:22Z",
           "created_at": "2026-01-07T19:32:42Z",
           "topics": [
@@ -1268,8 +1268,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-08T20:18:24Z",
-          "pushed_at": "2026-02-08T20:18:21Z",
+          "updated_at": "2026-02-09T13:23:31Z",
+          "pushed_at": "2026-02-09T13:23:27Z",
           "created_at": "2023-10-12T01:36:00Z",
           "topics": [
             "cve",
@@ -1963,6 +1963,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2026-23723",
+      "repositories": [
+        {
+          "id": 1153172706,
+          "name": "CVE-2026-23723-POC",
+          "full_name": "Ch35h1r3c47/CVE-2026-23723-POC",
+          "html_url": "https://github.com/Ch35h1r3c47/CVE-2026-23723-POC",
+          "description": "This is a lightweight Python helper script designed to automate the generation of sqlmap-compatible PoC files for the authenticated error-based SQL injection vulnerability in WeGIA (≤ 3.6.1), identified as GHSA-xfmp-2hf9-gfjp.",
+          "stargazers_count": 3,
+          "forks_count": 1,
+          "language": "Python",
+          "updated_at": "2026-02-09T06:03:55Z",
+          "pushed_at": "2026-02-09T02:13:29Z",
+          "created_at": "2026-02-09T01:43:55Z",
+          "topics": [],
+          "owner": {
+            "login": "Ch35h1r3c47",
+            "html_url": "https://github.com/Ch35h1r3c47"
+          },
+          "clone_url": "https://github.com/Ch35h1r3c47/CVE-2026-23723-POC.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2026-23744",
       "repositories": [
         {
@@ -2252,10 +2276,10 @@
           "full_name": "SafeBreach-Labs/CVE-2026-24061",
           "html_url": "https://github.com/SafeBreach-Labs/CVE-2026-24061",
           "description": "Exploitation of CVE-2026-24061",
-          "stargazers_count": 188,
+          "stargazers_count": 189,
           "forks_count": 41,
           "language": "Python",
-          "updated_at": "2026-02-06T06:33:20Z",
+          "updated_at": "2026-02-09T10:38:00Z",
           "pushed_at": "2026-01-22T19:37:20Z",
           "created_at": "2026-01-22T18:30:17Z",
           "topics": [],
@@ -2489,34 +2513,15 @@
           "clone_url": "https://github.com/cyberpoul/CVE-2026-24061-POC.git"
         },
         {
-          "id": 1139728682,
-          "name": "CVE-2026-24061---telnetd",
-          "full_name": "duy-31/CVE-2026-24061---telnetd",
-          "html_url": "https://github.com/duy-31/CVE-2026-24061---telnetd",
-          "description": "Bypass d’authentification Telnet menant à un accès root",
-          "stargazers_count": 2,
-          "forks_count": 1,
-          "language": "Python",
-          "updated_at": "2026-01-25T09:55:09Z",
-          "pushed_at": "2026-01-25T09:55:06Z",
-          "created_at": "2026-01-22T10:38:31Z",
-          "topics": [],
-          "owner": {
-            "login": "duy-31",
-            "html_url": "https://github.com/duy-31"
-          },
-          "clone_url": "https://github.com/duy-31/CVE-2026-24061---telnetd.git"
-        },
-        {
           "id": 1140733735,
           "name": "CVE-2026-24061",
           "full_name": "SystemVll/CVE-2026-24061",
           "html_url": "https://github.com/SystemVll/CVE-2026-24061",
           "description": "Proof of Concept: CVE-2026-24061 is a critical authentication bypass vulnerability in GNU inetutils-telnetd allowing unauthenticated remote attackers to gain instant root shell access via malicious NEW_ENVIRON telnet option exploitation.",
-          "stargazers_count": 1,
+          "stargazers_count": 2,
           "forks_count": 1,
           "language": "Python",
-          "updated_at": "2026-01-23T17:36:50Z",
+          "updated_at": "2026-02-09T14:21:14Z",
           "pushed_at": "2026-01-23T17:34:47Z",
           "created_at": "2026-01-23T17:26:43Z",
           "topics": [
@@ -2539,45 +2544,23 @@
           "clone_url": "https://github.com/SystemVll/CVE-2026-24061.git"
         },
         {
-          "id": 1147892492,
-          "name": "CVE_2026_24061_PoC",
-          "full_name": "franckferman/CVE_2026_24061_PoC",
-          "html_url": "https://github.com/franckferman/CVE_2026_24061_PoC",
-          "description": "Native Python Exploit \u0026 Mass Scanner for CVE-2026-24061 (GNU InetUtils Telnetd). Bypasses authentication via NEW-ENVIRON injection (USER=-f root) to get immediate root shell. Features parallel scanning (CIDR support) and robust result logging.",
-          "stargazers_count": 1,
-          "forks_count": 0,
+          "id": 1139728682,
+          "name": "CVE-2026-24061---telnetd",
+          "full_name": "duy-31/CVE-2026-24061---telnetd",
+          "html_url": "https://github.com/duy-31/CVE-2026-24061---telnetd",
+          "description": "Bypass d’authentification Telnet menant à un accès root",
+          "stargazers_count": 2,
+          "forks_count": 1,
           "language": "Python",
-          "updated_at": "2026-02-02T14:52:15Z",
-          "pushed_at": "2026-02-02T14:47:51Z",
-          "created_at": "2026-02-02T10:30:25Z",
-          "topics": [
-            "cve-2026-24061",
-            "telnet-exploit"
-          ],
-          "owner": {
-            "login": "franckferman",
-            "html_url": "https://github.com/franckferman"
-          },
-          "clone_url": "https://github.com/franckferman/CVE_2026_24061_PoC.git"
-        },
-        {
-          "id": 1140236389,
-          "name": "CVE-2026-24061",
-          "full_name": "xuemian168/CVE-2026-24061",
-          "html_url": "https://github.com/xuemian168/CVE-2026-24061",
-          "description": "",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Dockerfile",
-          "updated_at": "2026-02-04T14:16:18Z",
-          "pushed_at": "2026-01-23T02:30:36Z",
-          "created_at": "2026-01-23T02:14:15Z",
+          "updated_at": "2026-01-25T09:55:09Z",
+          "pushed_at": "2026-01-25T09:55:06Z",
+          "created_at": "2026-01-22T10:38:31Z",
           "topics": [],
           "owner": {
-            "login": "xuemian168",
-            "html_url": "https://github.com/xuemian168"
+            "login": "duy-31",
+            "html_url": "https://github.com/duy-31"
           },
-          "clone_url": "https://github.com/xuemian168/CVE-2026-24061.git"
+          "clone_url": "https://github.com/duy-31/CVE-2026-24061---telnetd.git"
         },
         {
           "id": 1143158630,
@@ -2597,6 +2580,25 @@
             "html_url": "https://github.com/FurkanKAYAPINAR"
           },
           "clone_url": "https://github.com/FurkanKAYAPINAR/CVE-2026-24061-telnet2root.git"
+        },
+        {
+          "id": 1140236389,
+          "name": "CVE-2026-24061",
+          "full_name": "xuemian168/CVE-2026-24061",
+          "html_url": "https://github.com/xuemian168/CVE-2026-24061",
+          "description": "",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Dockerfile",
+          "updated_at": "2026-02-04T14:16:18Z",
+          "pushed_at": "2026-01-23T02:30:36Z",
+          "created_at": "2026-01-23T02:14:15Z",
+          "topics": [],
+          "owner": {
+            "login": "xuemian168",
+            "html_url": "https://github.com/xuemian168"
+          },
+          "clone_url": "https://github.com/xuemian168/CVE-2026-24061.git"
         },
         {
           "id": 1147490725,
@@ -2723,6 +2725,28 @@
             "html_url": "https://github.com/dotelpenguin"
           },
           "clone_url": "https://github.com/dotelpenguin/telnetd_CVE-2026-24061_tester.git"
+        },
+        {
+          "id": 1147892492,
+          "name": "CVE_2026_24061_PoC",
+          "full_name": "franckferman/CVE_2026_24061_PoC",
+          "html_url": "https://github.com/franckferman/CVE_2026_24061_PoC",
+          "description": "Native Python Exploit \u0026 Mass Scanner for CVE-2026-24061 (GNU InetUtils Telnetd). Bypasses authentication via NEW-ENVIRON injection (USER=-f root) to get immediate root shell. Features parallel scanning (CIDR support) and robust result logging.",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-02-02T14:52:15Z",
+          "pushed_at": "2026-02-02T14:47:51Z",
+          "created_at": "2026-02-02T10:30:25Z",
+          "topics": [
+            "cve-2026-24061",
+            "telnet-exploit"
+          ],
+          "owner": {
+            "login": "franckferman",
+            "html_url": "https://github.com/franckferman"
+          },
+          "clone_url": "https://github.com/franckferman/CVE_2026_24061_PoC.git"
         },
         {
           "id": 1144002432,
@@ -3049,8 +3073,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-08T20:28:47Z",
-          "pushed_at": "2026-02-08T20:28:44Z",
+          "updated_at": "2026-02-09T13:33:24Z",
+          "pushed_at": "2026-02-09T13:33:21Z",
           "created_at": "2026-02-03T19:46:10Z",
           "topics": [
             "agent",
@@ -3238,8 +3262,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-08T20:28:17Z",
-          "pushed_at": "2026-02-08T20:28:13Z",
+          "updated_at": "2026-02-09T13:33:00Z",
+          "pushed_at": "2026-02-09T13:32:56Z",
           "created_at": "2026-02-03T07:03:26Z",
           "topics": [
             "code-completion",
@@ -3311,8 +3335,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-08T20:28:14Z",
-          "pushed_at": "2026-02-08T20:28:10Z",
+          "updated_at": "2026-02-09T13:32:49Z",
+          "pushed_at": "2026-02-09T13:32:45Z",
           "created_at": "2025-07-03T09:13:14Z",
           "topics": [
             "cve",
@@ -3833,6 +3857,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2026-25049",
+      "repositories": [
+        {
+          "id": 1153346322,
+          "name": "Expression-Sandbox-Escape-Simulation-Lab",
+          "full_name": "otakuliu/Expression-Sandbox-Escape-Simulation-Lab",
+          "html_url": "https://github.com/otakuliu/Expression-Sandbox-Escape-Simulation-Lab",
+          "description": "有关CVE-2026-25049做了一个模拟沙盒来理解",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "JavaScript",
+          "updated_at": "2026-02-09T07:35:19Z",
+          "pushed_at": "2026-02-09T07:35:15Z",
+          "created_at": "2026-02-09T07:34:28Z",
+          "topics": [],
+          "owner": {
+            "login": "otakuliu",
+            "html_url": "https://github.com/otakuliu"
+          },
+          "clone_url": "https://github.com/otakuliu/Expression-Sandbox-Escape-Simulation-Lab.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2026-25050",
       "repositories": [
         {
@@ -3937,10 +3985,10 @@
           "full_name": "ethiack/moltbot-1click-rce",
           "html_url": "https://github.com/ethiack/moltbot-1click-rce",
           "description": "Clawdbot/Moltbot/OpenClaw One-click RCE PoC 🦞 (CVE-2026-25253)",
-          "stargazers_count": 64,
+          "stargazers_count": 65,
           "forks_count": 12,
           "language": "Python",
-          "updated_at": "2026-02-06T23:41:45Z",
+          "updated_at": "2026-02-09T07:10:23Z",
           "pushed_at": "2026-01-27T01:32:52Z",
           "created_at": "2026-01-27T00:11:25Z",
           "topics": [],
@@ -4221,6 +4269,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2026-25916",
+      "repositories": [
+        {
+          "id": 1153455916,
+          "name": "CVE-2026-25916-Roundcube-Webmail-DOM-based-XSS-Exploit-via-SVG-href-Attribute",
+          "full_name": "mbanyamer/CVE-2026-25916-Roundcube-Webmail-DOM-based-XSS-Exploit-via-SVG-href-Attribute",
+          "html_url": "https://github.com/mbanyamer/CVE-2026-25916-Roundcube-Webmail-DOM-based-XSS-Exploit-via-SVG-href-Attribute",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-02-09T10:20:44Z",
+          "pushed_at": "2026-02-09T10:20:38Z",
+          "created_at": "2026-02-09T10:17:48Z",
+          "topics": [],
+          "owner": {
+            "login": "mbanyamer",
+            "html_url": "https://github.com/mbanyamer"
+          },
+          "clone_url": "https://github.com/mbanyamer/CVE-2026-25916-Roundcube-Webmail-DOM-based-XSS-Exploit-via-SVG-href-Attribute.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2026-5000",
       "repositories": [
         {
@@ -4304,8 +4376,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-08T12:23:06Z",
-          "pushed_at": "2026-02-08T12:23:02Z",
+          "updated_at": "2026-02-09T12:38:45Z",
+          "pushed_at": "2026-02-09T12:38:41Z",
           "created_at": "2026-01-24T07:55:13Z",
           "topics": [],
           "owner": {
@@ -4313,6 +4385,25 @@
             "html_url": "https://github.com/Bhanu6576"
           },
           "clone_url": "https://github.com/Bhanu6576/CTI_CVE_2026.git"
+        },
+        {
+          "id": 1153368200,
+          "name": "CVEDO2026",
+          "full_name": "edobagusp14/CVEDO2026",
+          "html_url": "https://github.com/edobagusp14/CVEDO2026",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-02-09T08:18:45Z",
+          "pushed_at": "2026-02-09T08:18:41Z",
+          "created_at": "2026-02-09T08:09:52Z",
+          "topics": [],
+          "owner": {
+            "login": "edobagusp14",
+            "html_url": "https://github.com/edobagusp14"
+          },
+          "clone_url": "https://github.com/edobagusp14/CVEDO2026.git"
         },
         {
           "id": 1149902392,
