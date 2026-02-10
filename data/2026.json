@@ -231,10 +231,10 @@
           "full_name": "DeathShotXD/0xKern3lCrush-Foreverday-BYOVD-CVE-2026-0828",
           "html_url": "https://github.com/DeathShotXD/0xKern3lCrush-Foreverday-BYOVD-CVE-2026-0828",
           "description": "Advanced PoC \u0026 Research for CVE-2026-0828 (Safetica) and CVE-2025-7771 (ThrottleStop). Analysis of BYOVD (Bring Your Own Vulnerable Driver) TTPs for Ring 0 process termination and physical memory R/W. Researching EDR-Killer patterns, PPL bypasses, and kernel-mode primitives used by MedusaLocker and other threat actors.",
-          "stargazers_count": 20,
+          "stargazers_count": 21,
           "forks_count": 2,
           "language": "C",
-          "updated_at": "2026-02-09T02:13:18Z",
+          "updated_at": "2026-02-10T12:08:42Z",
           "pushed_at": "2026-02-04T02:20:21Z",
           "created_at": "2026-02-04T01:47:36Z",
           "topics": [],
@@ -544,6 +544,40 @@
       ]
     },
     {
+      "cve_id": "CVE-2026-1529",
+      "repositories": [
+        {
+          "id": 1154563956,
+          "name": "CVE-2026-1529-PoC-keycloak-unauthorized-registration-via-improper-invitation-token-validation",
+          "full_name": "ninjazan420/CVE-2026-1529-PoC-keycloak-unauthorized-registration-via-improper-invitation-token-validation",
+          "html_url": "https://github.com/ninjazan420/CVE-2026-1529-PoC-keycloak-unauthorized-registration-via-improper-invitation-token-validation",
+          "description": "CVE-2026-1529 (PoC) is a critical vulnerability in Keycloak that allows unauthorized organization registration through improper invitation token validation. This exploit tool demonstrates the vulnerability by manipulating JWT tokens to register users in unauthorized organizations.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-02-10T14:54:27Z",
+          "pushed_at": "2026-02-10T14:35:09Z",
+          "created_at": "2026-02-10T14:31:22Z",
+          "topics": [
+            "concept",
+            "cve",
+            "cve-2026-1529",
+            "keycloak",
+            "keycloak-poc",
+            "of",
+            "poc",
+            "proof",
+            "proofofconcept"
+          ],
+          "owner": {
+            "login": "ninjazan420",
+            "html_url": "https://github.com/ninjazan420"
+          },
+          "clone_url": "https://github.com/ninjazan420/CVE-2026-1529-PoC-keycloak-unauthorized-registration-via-improper-invitation-token-validation.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2026-1862",
       "repositories": [
         {
@@ -612,6 +646,30 @@
             "html_url": "https://github.com/dkstar11q"
           },
           "clone_url": "https://github.com/dkstar11q/Ashwesker-CVE-2026-20045.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2026-20404",
+      "repositories": [
+        {
+          "id": 1154018176,
+          "name": "CVE-2026-20404-MediaTek-modem-remote-DoS-rogue-base-station-scenario-",
+          "full_name": "George0Papasotiriou/CVE-2026-20404-MediaTek-modem-remote-DoS-rogue-base-station-scenario-",
+          "html_url": "https://github.com/George0Papasotiriou/CVE-2026-20404-MediaTek-modem-remote-DoS-rogue-base-station-scenario-",
+          "description": "A MediaTek modem input validation issue can cause a system crash (remote DoS) when a UE connects to a rogue base station controlled by an attacker with no user interaction required.",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Shell",
+          "updated_at": "2026-02-10T00:13:50Z",
+          "pushed_at": "2026-02-10T00:13:47Z",
+          "created_at": "2026-02-09T23:32:38Z",
+          "topics": [],
+          "owner": {
+            "login": "George0Papasotiriou",
+            "html_url": "https://github.com/George0Papasotiriou"
+          },
+          "clone_url": "https://github.com/George0Papasotiriou/CVE-2026-20404-MediaTek-modem-remote-DoS-rogue-base-station-scenario-.git"
         }
       ]
     },
@@ -767,6 +825,30 @@
             "html_url": "https://github.com/SimoesCTT"
           },
           "clone_url": "https://github.com/SimoesCTT/-SCTT-2026-33-0002-DWM-Visual-Field-Singularity.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2026-2113",
+      "repositories": [
+        {
+          "id": 1154434448,
+          "name": "tpadmin-CVE-2026-2113-poc",
+          "full_name": "MaxMnMl/tpadmin-CVE-2026-2113-poc",
+          "html_url": "https://github.com/MaxMnMl/tpadmin-CVE-2026-2113-poc",
+          "description": "A Remote Code Execution vulnerability allowing unauthenticated attackers to upload arbitrary PHP files directly to the web server. This results in immediate Remote Code Execution with web server privileges.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-02-10T12:11:27Z",
+          "pushed_at": "2026-02-10T12:08:48Z",
+          "created_at": "2026-02-10T11:37:40Z",
+          "topics": [],
+          "owner": {
+            "login": "MaxMnMl",
+            "html_url": "https://github.com/MaxMnMl"
+          },
+          "clone_url": "https://github.com/MaxMnMl/tpadmin-CVE-2026-2113-poc.git"
         }
       ]
     },
@@ -967,7 +1049,7 @@
           "html_url": "https://github.com/kimstars/Ashwesker-CVE-2026-21509",
           "description": "CVE-2026-21509",
           "stargazers_count": 7,
-          "forks_count": 15,
+          "forks_count": 16,
           "language": "",
           "updated_at": "2026-02-05T05:42:39Z",
           "pushed_at": "2026-01-27T09:42:58Z",
@@ -980,13 +1062,32 @@
           "clone_url": "https://github.com/kimstars/Ashwesker-CVE-2026-21509.git"
         },
         {
+          "id": 1147401424,
+          "name": "CTT-MICROSOFT-OFFICE-OLE-MANIFOLD-BYPASS-CVE-2026-21509",
+          "full_name": "SimoesCTT/CTT-MICROSOFT-OFFICE-OLE-MANIFOLD-BYPASS-CVE-2026-21509",
+          "html_url": "https://github.com/SimoesCTT/CTT-MICROSOFT-OFFICE-OLE-MANIFOLD-BYPASS-CVE-2026-21509",
+          "description": "CVE-2026-21509 is a critical bypass in the Microsoft Office OLE (Object Linking and Embedding) validation engine. While standard \"laminar\" exploits attempt to manipulate static COM objects, this repository utilizes Theorem 4.2 to achieve a speculative race-condition bypass of the Object Definition Rule (ODR).",
+          "stargazers_count": 3,
+          "forks_count": 1,
+          "language": "Python",
+          "updated_at": "2026-02-10T13:23:55Z",
+          "pushed_at": "2026-02-10T06:11:54Z",
+          "created_at": "2026-02-01T17:31:24Z",
+          "topics": [],
+          "owner": {
+            "login": "SimoesCTT",
+            "html_url": "https://github.com/SimoesCTT"
+          },
+          "clone_url": "https://github.com/SimoesCTT/CTT-MICROSOFT-OFFICE-OLE-MANIFOLD-BYPASS-CVE-2026-21509.git"
+        },
+        {
           "id": 1146434087,
           "name": "CTT-NFS-Vortex-RCE",
           "full_name": "SimoesCTT/CTT-NFS-Vortex-RCE",
           "html_url": "https://github.com/SimoesCTT/CTT-NFS-Vortex-RCE",
           "description": "New Physics Disclosure This repository contains a full weaponized exploit for **CVE-2026-21509**, targeting the Windows Network File System (NFSv4.1) kernel-mode driver (`nfssvr.sys`). ",
           "stargazers_count": 3,
-          "forks_count": 0,
+          "forks_count": 1,
           "language": "Python",
           "updated_at": "2026-02-08T22:29:34Z",
           "pushed_at": "2026-01-31T04:57:20Z",
@@ -997,6 +1098,44 @@
             "html_url": "https://github.com/SimoesCTT"
           },
           "clone_url": "https://github.com/SimoesCTT/CTT-NFS-Vortex-RCE.git"
+        },
+        {
+          "id": 1149781000,
+          "name": "detect_CVE-2026-21509",
+          "full_name": "decalage2/detect_CVE-2026-21509",
+          "html_url": "https://github.com/decalage2/detect_CVE-2026-21509",
+          "description": "YARA rule and python script to detect potential exploits for the CVE-2026-21509 vulnerability in MS Office",
+          "stargazers_count": 2,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-02-10T13:22:40Z",
+          "pushed_at": "2026-02-04T15:35:45Z",
+          "created_at": "2026-02-04T14:13:02Z",
+          "topics": [],
+          "owner": {
+            "login": "decalage2",
+            "html_url": "https://github.com/decalage2"
+          },
+          "clone_url": "https://github.com/decalage2/detect_CVE-2026-21509.git"
+        },
+        {
+          "id": 1146561861,
+          "name": "SCTT-2026-33-0007-The-OLE-Vortex-Laminar-Bypass-",
+          "full_name": "SimoesCTT/SCTT-2026-33-0007-The-OLE-Vortex-Laminar-Bypass-",
+          "html_url": "https://github.com/SimoesCTT/SCTT-2026-33-0007-The-OLE-Vortex-Laminar-Bypass-",
+          "description": "Microsoft just released emergency patches for CVE-2026-21509, a zero-day in the Office Suite that bypasses OLE/COM mitigations when a user simply opens a file. They think their \"Service-side change\" for Office 2021+ is a solid wall. ",
+          "stargazers_count": 1,
+          "forks_count": 1,
+          "language": "Python",
+          "updated_at": "2026-01-31T16:08:36Z",
+          "pushed_at": "2026-01-31T09:58:19Z",
+          "created_at": "2026-01-31T09:50:23Z",
+          "topics": [],
+          "owner": {
+            "login": "SimoesCTT",
+            "html_url": "https://github.com/SimoesCTT"
+          },
+          "clone_url": "https://github.com/SimoesCTT/SCTT-2026-33-0007-The-OLE-Vortex-Laminar-Bypass-.git"
         },
         {
           "id": 1145070024,
@@ -1018,63 +1157,6 @@
           "clone_url": "https://github.com/ksk-itdk/KSK-ITDK-CVE-2026-21509-Mitigation.git"
         },
         {
-          "id": 1146561861,
-          "name": "SCTT-2026-33-0007-The-OLE-Vortex-Laminar-Bypass-",
-          "full_name": "SimoesCTT/SCTT-2026-33-0007-The-OLE-Vortex-Laminar-Bypass-",
-          "html_url": "https://github.com/SimoesCTT/SCTT-2026-33-0007-The-OLE-Vortex-Laminar-Bypass-",
-          "description": "Microsoft just released emergency patches for CVE-2026-21509, a zero-day in the Office Suite that bypasses OLE/COM mitigations when a user simply opens a file. They think their \"Service-side change\" for Office 2021+ is a solid wall. ",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-01-31T16:08:36Z",
-          "pushed_at": "2026-01-31T09:58:19Z",
-          "created_at": "2026-01-31T09:50:23Z",
-          "topics": [],
-          "owner": {
-            "login": "SimoesCTT",
-            "html_url": "https://github.com/SimoesCTT"
-          },
-          "clone_url": "https://github.com/SimoesCTT/SCTT-2026-33-0007-The-OLE-Vortex-Laminar-Bypass-.git"
-        },
-        {
-          "id": 1149781000,
-          "name": "detect_CVE-2026-21509",
-          "full_name": "decalage2/detect_CVE-2026-21509",
-          "html_url": "https://github.com/decalage2/detect_CVE-2026-21509",
-          "description": "YARA rule and python script to detect potential exploits for the CVE-2026-21509 vulnerability in MS Office",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-02-04T16:37:13Z",
-          "pushed_at": "2026-02-04T15:35:45Z",
-          "created_at": "2026-02-04T14:13:02Z",
-          "topics": [],
-          "owner": {
-            "login": "decalage2",
-            "html_url": "https://github.com/decalage2"
-          },
-          "clone_url": "https://github.com/decalage2/detect_CVE-2026-21509.git"
-        },
-        {
-          "id": 1147401424,
-          "name": "CTT-MICROSOFT-OFFICE-OLE-MANIFOLD-BYPASS-CVE-2026-21509",
-          "full_name": "SimoesCTT/CTT-MICROSOFT-OFFICE-OLE-MANIFOLD-BYPASS-CVE-2026-21509",
-          "html_url": "https://github.com/SimoesCTT/CTT-MICROSOFT-OFFICE-OLE-MANIFOLD-BYPASS-CVE-2026-21509",
-          "description": "CVE-2026-21509 is a critical bypass in the Microsoft Office OLE (Object Linking and Embedding) validation engine. While standard \"laminar\" exploits attempt to manipulate static COM objects, this repository utilizes Theorem 4.2 to achieve a speculative race-condition bypass of the Object Definition Rule (ODR).",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-02-08T22:29:19Z",
-          "pushed_at": "2026-02-01T17:41:29Z",
-          "created_at": "2026-02-01T17:31:24Z",
-          "topics": [],
-          "owner": {
-            "login": "SimoesCTT",
-            "html_url": "https://github.com/SimoesCTT"
-          },
-          "clone_url": "https://github.com/SimoesCTT/CTT-MICROSOFT-OFFICE-OLE-MANIFOLD-BYPASS-CVE-2026-21509.git"
-        },
-        {
           "id": 1150570492,
           "name": "CVE-2026-21509",
           "full_name": "kaizensecurity/CVE-2026-21509",
@@ -1092,25 +1174,6 @@
             "html_url": "https://github.com/kaizensecurity"
           },
           "clone_url": "https://github.com/kaizensecurity/CVE-2026-21509.git"
-        },
-        {
-          "id": 1152367614,
-          "name": "cve-2026-21509",
-          "full_name": "PinPin1140/cve-2026-21509",
-          "html_url": "https://github.com/PinPin1140/cve-2026-21509",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-02-07T19:14:24Z",
-          "pushed_at": "2026-02-07T19:14:24Z",
-          "created_at": "2026-02-07T19:14:24Z",
-          "topics": [],
-          "owner": {
-            "login": "PinPin1140",
-            "html_url": "https://github.com/PinPin1140"
-          },
-          "clone_url": "https://github.com/PinPin1140/cve-2026-21509.git"
         }
       ]
     },
@@ -1171,10 +1234,10 @@
           "full_name": "Chocapikk/CVE-2026-21858",
           "html_url": "https://github.com/Chocapikk/CVE-2026-21858",
           "description": "n8n Ni8mare - Unauthenticated Arbitrary File Read to RCE Chain (CVSS 10.0)",
-          "stargazers_count": 241,
+          "stargazers_count": 242,
           "forks_count": 47,
           "language": "Python",
-          "updated_at": "2026-02-09T08:07:34Z",
+          "updated_at": "2026-02-10T03:29:51Z",
           "pushed_at": "2026-01-09T02:50:22Z",
           "created_at": "2026-01-07T19:32:42Z",
           "topics": [
@@ -1268,8 +1331,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-09T21:00:34Z",
-          "pushed_at": "2026-02-09T21:00:26Z",
+          "updated_at": "2026-02-10T12:15:02Z",
+          "pushed_at": "2026-02-10T12:14:59Z",
           "created_at": "2023-10-12T01:36:00Z",
           "topics": [
             "cve",
@@ -1418,6 +1481,25 @@
           "clone_url": "https://github.com/samael0x4/CVE-2026-21962.git"
         },
         {
+          "id": 1154023167,
+          "name": "CVE-2026-21962-Oracle-HTTP-Server-WebLogic-Proxy-Plug-in-Critical-",
+          "full_name": "George0Papasotiriou/CVE-2026-21962-Oracle-HTTP-Server-WebLogic-Proxy-Plug-in-Critical-",
+          "html_url": "https://github.com/George0Papasotiriou/CVE-2026-21962-Oracle-HTTP-Server-WebLogic-Proxy-Plug-in-Critical-",
+          "description": "Oracle Fusion Middleware Oracle HTTP Server / WebLogic Server Proxy Plug-in has an easily exploitable, unauthenticated, network-reachable flaw allowing compromise over HTTP. Affected supported versions include 12.2.1.4.0, 14.1.1.0.0, 14.1.2.0.0.",
+          "stargazers_count": 2,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-02-10T09:08:39Z",
+          "pushed_at": "2026-02-10T00:08:17Z",
+          "created_at": "2026-02-09T23:43:42Z",
+          "topics": [],
+          "owner": {
+            "login": "George0Papasotiriou",
+            "html_url": "https://github.com/George0Papasotiriou"
+          },
+          "clone_url": "https://github.com/George0Papasotiriou/CVE-2026-21962-Oracle-HTTP-Server-WebLogic-Proxy-Plug-in-Critical-.git"
+        },
+        {
           "id": 1139605716,
           "name": "Ashwesker-CVE-2026-21962",
           "full_name": "boroeurnprach/Ashwesker-CVE-2026-21962",
@@ -1473,6 +1555,30 @@
             "html_url": "https://github.com/ThumpBo"
           },
           "clone_url": "https://github.com/ThumpBo/CVE-2026-21962.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2026-22187",
+      "repositories": [
+        {
+          "id": 1154021361,
+          "name": "CVE-2026-22187-Bio-Formats-unsafe-Java-deserialization-via-.bfmemo",
+          "full_name": "George0Papasotiriou/CVE-2026-22187-Bio-Formats-unsafe-Java-deserialization-via-.bfmemo",
+          "html_url": "https://github.com/George0Papasotiriou/CVE-2026-22187-Bio-Formats-unsafe-Java-deserialization-via-.bfmemo",
+          "description": "Bio-Formats ≤ 8.3.0 performs unsafe Java deserialization of attacker-controlled .bfmemo cache files during image processing; crafted .bfmemo can trigger deserialization of untrusted data (DoS/logic manipulation; potentially RCE if gadget chains exist).",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Java",
+          "updated_at": "2026-02-10T00:09:23Z",
+          "pushed_at": "2026-02-09T23:41:22Z",
+          "created_at": "2026-02-09T23:39:31Z",
+          "topics": [],
+          "owner": {
+            "login": "George0Papasotiriou",
+            "html_url": "https://github.com/George0Papasotiriou"
+          },
+          "clone_url": "https://github.com/George0Papasotiriou/CVE-2026-22187-Bio-Formats-unsafe-Java-deserialization-via-.bfmemo.git"
         }
       ]
     },
@@ -1746,6 +1852,25 @@
           "clone_url": "https://github.com/rohmatariow/CVE-2026-22812-exploit.git"
         },
         {
+          "id": 1137223601,
+          "name": "opencode-secure",
+          "full_name": "barrersoftware/opencode-secure",
+          "html_url": "https://github.com/barrersoftware/opencode-secure",
+          "description": "Security-hardened fork of OpenCode - Fixes CVE-2026-22812 (CVSS 8.8 RCE) that upstream refuses to patch",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "TypeScript",
+          "updated_at": "2026-02-10T01:14:26Z",
+          "pushed_at": "2026-01-19T06:09:50Z",
+          "created_at": "2026-01-19T04:52:22Z",
+          "topics": [],
+          "owner": {
+            "login": "barrersoftware",
+            "html_url": "https://github.com/barrersoftware"
+          },
+          "clone_url": "https://github.com/barrersoftware/opencode-secure.git"
+        },
+        {
           "id": 1137801274,
           "name": "CVE-2026-22812",
           "full_name": "0xgh057r3c0n/CVE-2026-22812",
@@ -1784,25 +1909,6 @@
           "clone_url": "https://github.com/Udyz/CVE-2026-22812-Exp.git"
         },
         {
-          "id": 1136742611,
-          "name": "CVE-2026-22812",
-          "full_name": "mad12wader/CVE-2026-22812",
-          "html_url": "https://github.com/mad12wader/CVE-2026-22812",
-          "description": "CVE-2026-22812 - OpenCode Unauthenticated RCE-Nuclei template for scan",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-01-18T09:55:36Z",
-          "pushed_at": "2026-01-18T09:55:33Z",
-          "created_at": "2026-01-18T09:11:31Z",
-          "topics": [],
-          "owner": {
-            "login": "mad12wader",
-            "html_url": "https://github.com/mad12wader"
-          },
-          "clone_url": "https://github.com/mad12wader/CVE-2026-22812.git"
-        },
-        {
           "id": 1138245160,
           "name": "CVE-2026-22812-POC",
           "full_name": "CayberMods/CVE-2026-22812-POC",
@@ -1822,23 +1928,23 @@
           "clone_url": "https://github.com/CayberMods/CVE-2026-22812-POC.git"
         },
         {
-          "id": 1137223601,
-          "name": "opencode-secure",
-          "full_name": "barrersoftware/opencode-secure",
-          "html_url": "https://github.com/barrersoftware/opencode-secure",
-          "description": "Security-hardened fork of OpenCode - Fixes CVE-2026-22812 (CVSS 8.8 RCE) that upstream refuses to patch",
+          "id": 1136742611,
+          "name": "CVE-2026-22812",
+          "full_name": "mad12wader/CVE-2026-22812",
+          "html_url": "https://github.com/mad12wader/CVE-2026-22812",
+          "description": "CVE-2026-22812 - OpenCode Unauthenticated RCE-Nuclei template for scan",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "TypeScript",
-          "updated_at": "2026-01-19T06:09:54Z",
-          "pushed_at": "2026-01-19T06:09:50Z",
-          "created_at": "2026-01-19T04:52:22Z",
+          "language": "",
+          "updated_at": "2026-01-18T09:55:36Z",
+          "pushed_at": "2026-01-18T09:55:33Z",
+          "created_at": "2026-01-18T09:11:31Z",
           "topics": [],
           "owner": {
-            "login": "barrersoftware",
-            "html_url": "https://github.com/barrersoftware"
+            "login": "mad12wader",
+            "html_url": "https://github.com/mad12wader"
           },
-          "clone_url": "https://github.com/barrersoftware/opencode-secure.git"
+          "clone_url": "https://github.com/mad12wader/CVE-2026-22812.git"
         }
       ]
     },
@@ -1959,6 +2065,25 @@
             "html_url": "https://github.com/cyberdudebivash"
           },
           "clone_url": "https://github.com/cyberdudebivash/CYBERDUDEBIVASH-Modular-DS-CVE-2026-23550-Detector.git"
+        },
+        {
+          "id": 1154472684,
+          "name": "EpSiLoNPoInT-",
+          "full_name": "epsilonpoint88-glitch/EpSiLoNPoInT-",
+          "html_url": "https://github.com/epsilonpoint88-glitch/EpSiLoNPoInT-",
+          "description": "🔴 EpSiLoNPoInT - CVE-2026-23550 Modular DS Zero-Click  **Framework d'exploitation Modular DS Admin Bypass**  ## 🎯 CVE Ciblée Principale **CVE-2026-23550** : Modular DS WordPress Plugin - 40 000+ sites affectés  - Accès admin **zéro-clic** non authentifié - `exploitmass.py` (48KB) - Exploit massif  ## Modules",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "PHP",
+          "updated_at": "2026-02-10T14:52:54Z",
+          "pushed_at": "2026-02-10T14:52:50Z",
+          "created_at": "2026-02-10T12:33:19Z",
+          "topics": [],
+          "owner": {
+            "login": "epsilonpoint88-glitch",
+            "html_url": "https://github.com/epsilonpoint88-glitch"
+          },
+          "clone_url": "https://github.com/epsilonpoint88-glitch/EpSiLoNPoInT-.git"
         }
       ]
     },
@@ -2056,7 +2181,7 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-02-08T17:59:59Z",
+          "updated_at": "2026-02-10T12:09:22Z",
           "pushed_at": "2026-01-24T13:39:14Z",
           "created_at": "2026-01-24T12:30:34Z",
           "topics": [],
@@ -2276,10 +2401,10 @@
           "full_name": "SafeBreach-Labs/CVE-2026-24061",
           "html_url": "https://github.com/SafeBreach-Labs/CVE-2026-24061",
           "description": "Exploitation of CVE-2026-24061",
-          "stargazers_count": 189,
+          "stargazers_count": 190,
           "forks_count": 41,
           "language": "Python",
-          "updated_at": "2026-02-09T10:38:00Z",
+          "updated_at": "2026-02-10T12:52:02Z",
           "pushed_at": "2026-01-22T19:37:20Z",
           "created_at": "2026-01-22T18:30:17Z",
           "topics": [],
@@ -2315,7 +2440,7 @@
           "html_url": "https://github.com/parameciumzhang/Tell-Me-Root",
           "description": "基于cve-2026-24061 telnet远程认证绕过漏洞的批量检测利用工具",
           "stargazers_count": 18,
-          "forks_count": 2,
+          "forks_count": 3,
           "language": "Python",
           "updated_at": "2026-02-04T03:24:37Z",
           "pushed_at": "2026-01-23T08:08:59Z",
@@ -2414,10 +2539,10 @@
           "full_name": "Chocapikk/CVE-2026-24061",
           "html_url": "https://github.com/Chocapikk/CVE-2026-24061",
           "description": "",
-          "stargazers_count": 3,
+          "stargazers_count": 4,
           "forks_count": 1,
           "language": "Go",
-          "updated_at": "2026-02-03T04:10:08Z",
+          "updated_at": "2026-02-10T13:30:46Z",
           "pushed_at": "2026-01-22T15:15:10Z",
           "created_at": "2026-01-22T14:24:19Z",
           "topics": [],
@@ -2426,25 +2551,6 @@
             "html_url": "https://github.com/Chocapikk"
           },
           "clone_url": "https://github.com/Chocapikk/CVE-2026-24061.git"
-        },
-        {
-          "id": 1148398832,
-          "name": "CVE-2026-24061-PoC",
-          "full_name": "ibrahmsql/CVE-2026-24061-PoC",
-          "html_url": "https://github.com/ibrahmsql/CVE-2026-24061-PoC",
-          "description": "CVE-2026-24061  PoC and walkthrough",
-          "stargazers_count": 3,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-02-03T14:56:23Z",
-          "pushed_at": "2026-02-02T23:31:32Z",
-          "created_at": "2026-02-02T23:20:01Z",
-          "topics": [],
-          "owner": {
-            "login": "ibrahmsql",
-            "html_url": "https://github.com/ibrahmsql"
-          },
-          "clone_url": "https://github.com/ibrahmsql/CVE-2026-24061-PoC.git"
         },
         {
           "id": 1139928415,
@@ -2483,6 +2589,25 @@
             "html_url": "https://github.com/shivam-bathla"
           },
           "clone_url": "https://github.com/shivam-bathla/CVE-2026-24061-setup.git"
+        },
+        {
+          "id": 1148398832,
+          "name": "CVE-2026-24061-PoC",
+          "full_name": "ibrahmsql/CVE-2026-24061-PoC",
+          "html_url": "https://github.com/ibrahmsql/CVE-2026-24061-PoC",
+          "description": "CVE-2026-24061  PoC and walkthrough",
+          "stargazers_count": 3,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-02-03T14:56:23Z",
+          "pushed_at": "2026-02-02T23:31:32Z",
+          "created_at": "2026-02-02T23:20:01Z",
+          "topics": [],
+          "owner": {
+            "login": "ibrahmsql",
+            "html_url": "https://github.com/ibrahmsql"
+          },
+          "clone_url": "https://github.com/ibrahmsql/CVE-2026-24061-PoC.git"
         },
         {
           "id": 1141353816,
@@ -3073,8 +3198,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-09T21:10:34Z",
-          "pushed_at": "2026-02-09T21:10:30Z",
+          "updated_at": "2026-02-10T12:25:11Z",
+          "pushed_at": "2026-02-10T12:25:08Z",
           "created_at": "2026-02-03T19:46:10Z",
           "topics": [
             "agent",
@@ -3262,8 +3387,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-09T21:10:01Z",
-          "pushed_at": "2026-02-09T21:09:57Z",
+          "updated_at": "2026-02-10T12:24:31Z",
+          "pushed_at": "2026-02-10T12:24:27Z",
           "created_at": "2026-02-03T07:03:26Z",
           "topics": [
             "code-completion",
@@ -3335,8 +3460,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-09T21:09:52Z",
-          "pushed_at": "2026-02-09T21:09:49Z",
+          "updated_at": "2026-02-10T12:24:26Z",
+          "pushed_at": "2026-02-10T12:24:22Z",
           "created_at": "2025-07-03T09:13:14Z",
           "topics": [
             "cve",
@@ -3905,6 +4030,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2026-25053",
+      "repositories": [
+        {
+          "id": 1122447685,
+          "name": "CVE-2026-25053",
+          "full_name": "yadhukrishnam/CVE-2026-25053",
+          "html_url": "https://github.com/yadhukrishnam/CVE-2026-25053",
+          "description": "Vulnerabilities in the Git node allowed authenticated users with permission to create or modify workflows to execute arbitrary system commands or read arbitrary files on the n8n host.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-02-10T05:16:22Z",
+          "pushed_at": "2026-02-10T05:16:18Z",
+          "created_at": "2025-12-24T18:43:29Z",
+          "topics": [],
+          "owner": {
+            "login": "yadhukrishnam",
+            "html_url": "https://github.com/yadhukrishnam"
+          },
+          "clone_url": "https://github.com/yadhukrishnam/CVE-2026-25053.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2026-25126",
       "repositories": [
         {
@@ -4101,6 +4250,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2026-25526",
+      "repositories": [
+        {
+          "id": 1154384232,
+          "name": "jinjava-cve-2026-25526-poc",
+          "full_name": "av4nth1ka/jinjava-cve-2026-25526-poc",
+          "html_url": "https://github.com/av4nth1ka/jinjava-cve-2026-25526-poc",
+          "description": "lab setup + exploits for CVE-2026-25526",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-02-10T10:25:33Z",
+          "pushed_at": "2026-02-10T10:25:29Z",
+          "created_at": "2026-02-10T10:24:52Z",
+          "topics": [],
+          "owner": {
+            "login": "av4nth1ka",
+            "html_url": "https://github.com/av4nth1ka"
+          },
+          "clone_url": "https://github.com/av4nth1ka/jinjava-cve-2026-25526-poc.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2026-25546",
       "repositories": [
         {
@@ -4197,6 +4370,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2026-25807",
+      "repositories": [
+        {
+          "id": 1154111630,
+          "name": "CVE-2026-25807-Exploit",
+          "full_name": "ibrahmsql/CVE-2026-25807-Exploit",
+          "html_url": "https://github.com/ibrahmsql/CVE-2026-25807-Exploit",
+          "description": "CVE-2026-25807  Unauthenticated Remote Code Execution via P2P Sharing in ZAI-Shell Exploit and PoC",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-02-10T05:13:35Z",
+          "pushed_at": "2026-02-10T03:03:43Z",
+          "created_at": "2026-02-10T02:54:13Z",
+          "topics": [],
+          "owner": {
+            "login": "ibrahmsql",
+            "html_url": "https://github.com/ibrahmsql"
+          },
+          "clone_url": "https://github.com/ibrahmsql/CVE-2026-25807-Exploit.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2026-25828",
       "repositories": [
         {
@@ -4277,10 +4474,10 @@
           "full_name": "mbanyamer/CVE-2026-25916-Roundcube-Webmail-DOM-based-XSS-Exploit-via-SVG-href-Attribute",
           "html_url": "https://github.com/mbanyamer/CVE-2026-25916-Roundcube-Webmail-DOM-based-XSS-Exploit-via-SVG-href-Attribute",
           "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
+          "stargazers_count": 1,
+          "forks_count": 1,
           "language": "Python",
-          "updated_at": "2026-02-09T10:20:44Z",
+          "updated_at": "2026-02-10T09:08:55Z",
           "pushed_at": "2026-02-09T10:20:38Z",
           "created_at": "2026-02-09T10:17:48Z",
           "topics": [],
@@ -4289,6 +4486,54 @@
             "html_url": "https://github.com/mbanyamer"
           },
           "clone_url": "https://github.com/mbanyamer/CVE-2026-25916-Roundcube-Webmail-DOM-based-XSS-Exploit-via-SVG-href-Attribute.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2026-25939",
+      "repositories": [
+        {
+          "id": 1154396057,
+          "name": "CVE-2026-25939-SCADA-FUXA-Unauthenticated-Remote-Arbitrary",
+          "full_name": "mbanyamer/CVE-2026-25939-SCADA-FUXA-Unauthenticated-Remote-Arbitrary",
+          "html_url": "https://github.com/mbanyamer/CVE-2026-25939-SCADA-FUXA-Unauthenticated-Remote-Arbitrary",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-02-10T10:47:58Z",
+          "pushed_at": "2026-02-10T10:47:54Z",
+          "created_at": "2026-02-10T10:41:44Z",
+          "topics": [],
+          "owner": {
+            "login": "mbanyamer",
+            "html_url": "https://github.com/mbanyamer"
+          },
+          "clone_url": "https://github.com/mbanyamer/CVE-2026-25939-SCADA-FUXA-Unauthenticated-Remote-Arbitrary.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2026-25961",
+      "repositories": [
+        {
+          "id": 1154306774,
+          "name": "CVE-2026-25961-SumatraPDF-3.5.0---3.5.2-RCE",
+          "full_name": "mbanyamer/CVE-2026-25961-SumatraPDF-3.5.0---3.5.2-RCE",
+          "html_url": "https://github.com/mbanyamer/CVE-2026-25961-SumatraPDF-3.5.0---3.5.2-RCE",
+          "description": "SumatraPDF versions 3.5.0 to 3.5.2 disable TLS hostname verification during update checks #   (using INTERNET_FLAG_IGNORE_CERT_CN_INVALID) and do not perform any signature or integrity #   validation on the downloaded installer.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-02-10T08:40:12Z",
+          "pushed_at": "2026-02-10T08:40:08Z",
+          "created_at": "2026-02-10T08:36:32Z",
+          "topics": [],
+          "owner": {
+            "login": "mbanyamer",
+            "html_url": "https://github.com/mbanyamer"
+          },
+          "clone_url": "https://github.com/mbanyamer/CVE-2026-25961-SumatraPDF-3.5.0---3.5.2-RCE.git"
         }
       ]
     },
@@ -4368,6 +4613,25 @@
       "cve_id": "OTHER-2026",
       "repositories": [
         {
+          "id": 1141081263,
+          "name": "CTI_CVE_2026",
+          "full_name": "Bhanu6576/CTI_CVE_2026",
+          "html_url": "https://github.com/Bhanu6576/CTI_CVE_2026",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-02-10T12:43:52Z",
+          "pushed_at": "2026-02-10T12:43:49Z",
+          "created_at": "2026-01-24T07:55:13Z",
+          "topics": [],
+          "owner": {
+            "login": "Bhanu6576",
+            "html_url": "https://github.com/Bhanu6576"
+          },
+          "clone_url": "https://github.com/Bhanu6576/CTI_CVE_2026.git"
+        },
+        {
           "id": 1153891245,
           "name": "poutils-CVE-scanner",
           "full_name": "mathewjseelan/poutils-CVE-scanner",
@@ -4385,25 +4649,6 @@
             "html_url": "https://github.com/mathewjseelan"
           },
           "clone_url": "https://github.com/mathewjseelan/poutils-CVE-scanner.git"
-        },
-        {
-          "id": 1141081263,
-          "name": "CTI_CVE_2026",
-          "full_name": "Bhanu6576/CTI_CVE_2026",
-          "html_url": "https://github.com/Bhanu6576/CTI_CVE_2026",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-02-09T18:41:57Z",
-          "pushed_at": "2026-02-09T18:40:57Z",
-          "created_at": "2026-01-24T07:55:13Z",
-          "topics": [],
-          "owner": {
-            "login": "Bhanu6576",
-            "html_url": "https://github.com/Bhanu6576"
-          },
-          "clone_url": "https://github.com/Bhanu6576/CTI_CVE_2026.git"
         },
         {
           "id": 1153368200,
