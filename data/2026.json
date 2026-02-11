@@ -1145,7 +1145,7 @@
           "html_url": "https://github.com/gavz/CVE-2026-21509-PoC",
           "description": "Educational PoC for CVE‑2026‑21509 (Microsoft Office security feature bypass). Generates a harmless DOCX with dummy OLE artifacts to study EDR/AV visibility. Not an exploit. For isolated labs only; see README for 7‑Zip inspection steps and mitigation references.",
           "stargazers_count": 9,
-          "forks_count": 4,
+          "forks_count": 5,
           "language": "",
           "updated_at": "2026-02-09T15:21:47Z",
           "pushed_at": "2026-01-28T20:33:28Z",
@@ -2687,6 +2687,56 @@
           "clone_url": "https://github.com/Chocapikk/CVE-2026-24061.git"
         },
         {
+          "id": 1140733735,
+          "name": "CVE-2026-24061",
+          "full_name": "SystemVll/CVE-2026-24061",
+          "html_url": "https://github.com/SystemVll/CVE-2026-24061",
+          "description": "Proof of Concept: CVE-2026-24061 is a critical authentication bypass vulnerability in GNU inetutils-telnetd allowing unauthenticated remote attackers to gain instant root shell access via malicious NEW_ENVIRON telnet option exploitation.",
+          "stargazers_count": 3,
+          "forks_count": 1,
+          "language": "Python",
+          "updated_at": "2026-02-11T08:05:53Z",
+          "pushed_at": "2026-01-23T17:34:47Z",
+          "created_at": "2026-01-23T17:26:43Z",
+          "topics": [
+            "auth-bypass",
+            "cve",
+            "cve-2026-24061",
+            "cwe",
+            "exploit",
+            "flaw",
+            "nuclei",
+            "poc",
+            "proof-of-concept",
+            "telnet",
+            "telnetd"
+          ],
+          "owner": {
+            "login": "SystemVll",
+            "html_url": "https://github.com/SystemVll"
+          },
+          "clone_url": "https://github.com/SystemVll/CVE-2026-24061.git"
+        },
+        {
+          "id": 1148398832,
+          "name": "CVE-2026-24061-PoC",
+          "full_name": "ibrahmsql/CVE-2026-24061-PoC",
+          "html_url": "https://github.com/ibrahmsql/CVE-2026-24061-PoC",
+          "description": "CVE-2026-24061  PoC and walkthrough",
+          "stargazers_count": 3,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-02-03T14:56:23Z",
+          "pushed_at": "2026-02-02T23:31:32Z",
+          "created_at": "2026-02-02T23:20:01Z",
+          "topics": [],
+          "owner": {
+            "login": "ibrahmsql",
+            "html_url": "https://github.com/ibrahmsql"
+          },
+          "clone_url": "https://github.com/ibrahmsql/CVE-2026-24061-PoC.git"
+        },
+        {
           "id": 1139928415,
           "name": "CVE-2026-24061--telnetd",
           "full_name": "yanxinwu946/CVE-2026-24061--telnetd",
@@ -2725,23 +2775,23 @@
           "clone_url": "https://github.com/shivam-bathla/CVE-2026-24061-setup.git"
         },
         {
-          "id": 1148398832,
-          "name": "CVE-2026-24061-PoC",
-          "full_name": "ibrahmsql/CVE-2026-24061-PoC",
-          "html_url": "https://github.com/ibrahmsql/CVE-2026-24061-PoC",
-          "description": "CVE-2026-24061  PoC and walkthrough",
-          "stargazers_count": 3,
-          "forks_count": 0,
+          "id": 1139728682,
+          "name": "CVE-2026-24061---telnetd",
+          "full_name": "duy-31/CVE-2026-24061---telnetd",
+          "html_url": "https://github.com/duy-31/CVE-2026-24061---telnetd",
+          "description": "Bypass d’authentification Telnet menant à un accès root",
+          "stargazers_count": 2,
+          "forks_count": 1,
           "language": "Python",
-          "updated_at": "2026-02-03T14:56:23Z",
-          "pushed_at": "2026-02-02T23:31:32Z",
-          "created_at": "2026-02-02T23:20:01Z",
+          "updated_at": "2026-01-25T09:55:09Z",
+          "pushed_at": "2026-01-25T09:55:06Z",
+          "created_at": "2026-01-22T10:38:31Z",
           "topics": [],
           "owner": {
-            "login": "ibrahmsql",
-            "html_url": "https://github.com/ibrahmsql"
+            "login": "duy-31",
+            "html_url": "https://github.com/duy-31"
           },
-          "clone_url": "https://github.com/ibrahmsql/CVE-2026-24061-PoC.git"
+          "clone_url": "https://github.com/duy-31/CVE-2026-24061---telnetd.git"
         },
         {
           "id": 1141353816,
@@ -2770,56 +2820,6 @@
             "html_url": "https://github.com/cyberpoul"
           },
           "clone_url": "https://github.com/cyberpoul/CVE-2026-24061-POC.git"
-        },
-        {
-          "id": 1140733735,
-          "name": "CVE-2026-24061",
-          "full_name": "SystemVll/CVE-2026-24061",
-          "html_url": "https://github.com/SystemVll/CVE-2026-24061",
-          "description": "Proof of Concept: CVE-2026-24061 is a critical authentication bypass vulnerability in GNU inetutils-telnetd allowing unauthenticated remote attackers to gain instant root shell access via malicious NEW_ENVIRON telnet option exploitation.",
-          "stargazers_count": 2,
-          "forks_count": 1,
-          "language": "Python",
-          "updated_at": "2026-02-09T14:21:14Z",
-          "pushed_at": "2026-01-23T17:34:47Z",
-          "created_at": "2026-01-23T17:26:43Z",
-          "topics": [
-            "auth-bypass",
-            "cve",
-            "cve-2026-24061",
-            "cwe",
-            "exploit",
-            "flaw",
-            "nuclei",
-            "poc",
-            "proof-of-concept",
-            "telnet",
-            "telnetd"
-          ],
-          "owner": {
-            "login": "SystemVll",
-            "html_url": "https://github.com/SystemVll"
-          },
-          "clone_url": "https://github.com/SystemVll/CVE-2026-24061.git"
-        },
-        {
-          "id": 1139728682,
-          "name": "CVE-2026-24061---telnetd",
-          "full_name": "duy-31/CVE-2026-24061---telnetd",
-          "html_url": "https://github.com/duy-31/CVE-2026-24061---telnetd",
-          "description": "Bypass d’authentification Telnet menant à un accès root",
-          "stargazers_count": 2,
-          "forks_count": 1,
-          "language": "Python",
-          "updated_at": "2026-01-25T09:55:09Z",
-          "pushed_at": "2026-01-25T09:55:06Z",
-          "created_at": "2026-01-22T10:38:31Z",
-          "topics": [],
-          "owner": {
-            "login": "duy-31",
-            "html_url": "https://github.com/duy-31"
-          },
-          "clone_url": "https://github.com/duy-31/CVE-2026-24061---telnetd.git"
         },
         {
           "id": 1143158630,
