@@ -691,10 +691,10 @@
           "full_name": "ninjazan420/CVE-2026-1729-PoC-AdForest-WordPress-Authentication-Bypass",
           "html_url": "https://github.com/ninjazan420/CVE-2026-1729-PoC-AdForest-WordPress-Authentication-Bypass",
           "description": "The AdForest theme for WordPress is vulnerable to authentication bypass in all versions including, 6.0.12. This is due to the plugin not properly verifying a user's identity prior to authenticating them through the 'sb_login_user_with_otp_fun' function. This makes it possible for unauthenticated attackers to log in, including admin",
-          "stargazers_count": 0,
+          "stargazers_count": 1,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-12T13:03:56Z",
+          "updated_at": "2026-02-12T16:57:56Z",
           "pushed_at": "2026-02-12T12:43:07Z",
           "created_at": "2026-02-12T12:40:22Z",
           "topics": [
@@ -723,10 +723,10 @@
           "full_name": "win3zz/CVE-2026-1731",
           "html_url": "https://github.com/win3zz/CVE-2026-1731",
           "description": "CVE-2026-1731 - Critical command injection vulnerability in BeyondTrust Remote Support and Privileged Remote Access due to unsafe Bash arithmetic evaluation in a WebSocket-reachable script",
-          "stargazers_count": 5,
+          "stargazers_count": 7,
           "forks_count": 1,
           "language": "Python",
-          "updated_at": "2026-02-12T01:53:22Z",
+          "updated_at": "2026-02-12T18:31:39Z",
           "pushed_at": "2026-02-11T12:46:15Z",
           "created_at": "2026-02-11T09:18:33Z",
           "topics": [
@@ -998,10 +998,10 @@
           "full_name": "BTtea/CVE-2026-20841-PoC",
           "html_url": "https://github.com/BTtea/CVE-2026-20841-PoC",
           "description": "PoC",
-          "stargazers_count": 56,
-          "forks_count": 11,
+          "stargazers_count": 77,
+          "forks_count": 13,
           "language": "",
-          "updated_at": "2026-02-12T13:02:39Z",
+          "updated_at": "2026-02-12T19:09:25Z",
           "pushed_at": "2026-02-11T05:56:43Z",
           "created_at": "2026-02-11T02:39:30Z",
           "topics": [],
@@ -1017,10 +1017,10 @@
           "full_name": "patchpoint/CVE-2026-20841",
           "html_url": "https://github.com/patchpoint/CVE-2026-20841",
           "description": "",
-          "stargazers_count": 3,
+          "stargazers_count": 5,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-02-12T11:16:08Z",
+          "updated_at": "2026-02-12T17:37:32Z",
           "pushed_at": "2026-02-12T05:13:05Z",
           "created_at": "2026-02-12T03:58:28Z",
           "topics": [],
@@ -1050,6 +1050,30 @@
           "clone_url": "https://github.com/uky007/CVE-2026-20841_notepad_analysis.git"
         },
         {
+          "id": 1156247662,
+          "name": "CVE-2026-20841-PoC",
+          "full_name": "dogukankurnaz/CVE-2026-20841-PoC",
+          "html_url": "https://github.com/dogukankurnaz/CVE-2026-20841-PoC",
+          "description": "CVE-2026-20841",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-02-12T14:49:34Z",
+          "pushed_at": "2026-02-12T13:25:10Z",
+          "created_at": "2026-02-12T12:38:45Z",
+          "topics": [
+            "cve-2026-20841",
+            "microsoft",
+            "notepad",
+            "poc"
+          ],
+          "owner": {
+            "login": "dogukankurnaz",
+            "html_url": "https://github.com/dogukankurnaz"
+          },
+          "clone_url": "https://github.com/dogukankurnaz/CVE-2026-20841-PoC.git"
+        },
+        {
           "id": 1155472947,
           "name": "CVE-2026-20841",
           "full_name": "tangent65536/CVE-2026-20841",
@@ -1069,28 +1093,53 @@
           "clone_url": "https://github.com/tangent65536/CVE-2026-20841.git"
         },
         {
-          "id": 1156247662,
-          "name": "CVE-2026-20841-PoC",
-          "full_name": "dogukankurnaz/CVE-2026-20841-PoC",
-          "html_url": "https://github.com/dogukankurnaz/CVE-2026-20841-PoC",
-          "description": "CVE-2026-20841",
-          "stargazers_count": 0,
+          "id": 1156380448,
+          "name": "CVE-2026-20841",
+          "full_name": "SecureWithUmer/CVE-2026-20841",
+          "html_url": "https://github.com/SecureWithUmer/CVE-2026-20841",
+          "description": "PoC for a remote code execution flaw in Windows Notepad's markdown renderer. The markdown engine does not restrict URL protocols, allowing arbitrary protocol handlers to be triggered via clickable links",
+          "stargazers_count": 1,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-02-12T12:59:15Z",
-          "pushed_at": "2026-02-12T12:57:29Z",
-          "created_at": "2026-02-12T12:38:45Z",
+          "updated_at": "2026-02-12T17:52:13Z",
+          "pushed_at": "2026-02-12T15:38:13Z",
+          "created_at": "2026-02-12T15:29:58Z",
           "topics": [
+            "2026",
+            "command-injection",
+            "cve",
             "cve-2026-20841",
-            "microsoft",
+            "exploit",
             "notepad",
-            "poc"
+            "notepad-exoploit",
+            "notepad-vulnerability",
+            "securewithumer",
+            "windows-notepad"
           ],
           "owner": {
-            "login": "dogukankurnaz",
-            "html_url": "https://github.com/dogukankurnaz"
+            "login": "SecureWithUmer",
+            "html_url": "https://github.com/SecureWithUmer"
           },
-          "clone_url": "https://github.com/dogukankurnaz/CVE-2026-20841-PoC.git"
+          "clone_url": "https://github.com/SecureWithUmer/CVE-2026-20841.git"
+        },
+        {
+          "id": 1156535306,
+          "name": "CVE-2026-20841-PoC",
+          "full_name": "hackfaiz/CVE-2026-20841-PoC",
+          "html_url": "https://github.com/hackfaiz/CVE-2026-20841-PoC",
+          "description": "Proof of Concept for CVE-2026-20841",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Batchfile",
+          "updated_at": "2026-02-12T19:24:35Z",
+          "pushed_at": "2026-02-12T19:24:31Z",
+          "created_at": "2026-02-12T18:59:16Z",
+          "topics": [],
+          "owner": {
+            "login": "hackfaiz",
+            "html_url": "https://github.com/hackfaiz"
+          },
+          "clone_url": "https://github.com/hackfaiz/CVE-2026-20841-PoC.git"
         },
         {
           "id": 1155349188,
@@ -1377,7 +1426,7 @@
           "html_url": "https://github.com/0xc4r/CVE-2026-21508_POC",
           "description": "",
           "stargazers_count": 5,
-          "forks_count": 8,
+          "forks_count": 10,
           "language": "C++",
           "updated_at": "2026-02-12T12:22:10Z",
           "pushed_at": "2026-02-11T13:30:38Z",
@@ -1788,8 +1837,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-12T10:26:50Z",
-          "pushed_at": "2026-02-12T10:26:46Z",
+          "updated_at": "2026-02-12T19:06:36Z",
+          "pushed_at": "2026-02-12T19:06:19Z",
           "created_at": "2023-10-12T01:36:00Z",
           "topics": [
             "cve",
@@ -1962,10 +2011,10 @@
           "full_name": "boroeurnprach/Ashwesker-CVE-2026-21962",
           "html_url": "https://github.com/boroeurnprach/Ashwesker-CVE-2026-21962",
           "description": "CVE-2026-21962",
-          "stargazers_count": 1,
+          "stargazers_count": 2,
           "forks_count": 5,
           "language": "",
-          "updated_at": "2026-02-03T21:00:03Z",
+          "updated_at": "2026-02-12T14:59:33Z",
           "pushed_at": "2026-01-21T20:06:39Z",
           "created_at": "2026-01-22T07:10:59Z",
           "topics": [],
@@ -2018,6 +2067,25 @@
     {
       "cve_id": "CVE-2026-22153",
       "repositories": [
+        {
+          "id": 1156515426,
+          "name": "CVE-2026-22153",
+          "full_name": "glitchhawks/CVE-2026-22153",
+          "html_url": "https://github.com/glitchhawks/CVE-2026-22153",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-02-12T18:34:37Z",
+          "pushed_at": "2026-02-12T18:34:33Z",
+          "created_at": "2026-02-12T18:29:37Z",
+          "topics": [],
+          "owner": {
+            "login": "glitchhawks",
+            "html_url": "https://github.com/glitchhawks"
+          },
+          "clone_url": "https://github.com/glitchhawks/CVE-2026-22153.git"
+        },
         {
           "id": 1156214122,
           "name": "CVE-2026-22153-exp",
@@ -2154,6 +2222,30 @@
             "html_url": "https://github.com/dptsec"
           },
           "clone_url": "https://github.com/dptsec/CVE-2026-22444.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2026-2249",
+      "repositories": [
+        {
+          "id": 1156508113,
+          "name": "CVE-2026-2249",
+          "full_name": "taylorwerno/CVE-2026-2249",
+          "html_url": "https://github.com/taylorwerno/CVE-2026-2249",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-02-12T18:23:09Z",
+          "pushed_at": "2026-02-12T18:23:06Z",
+          "created_at": "2026-02-12T18:19:16Z",
+          "topics": [],
+          "owner": {
+            "login": "taylorwerno",
+            "html_url": "https://github.com/taylorwerno"
+          },
+          "clone_url": "https://github.com/taylorwerno/CVE-2026-2249.git"
         }
       ]
     },
@@ -2877,6 +2969,25 @@
           "clone_url": "https://github.com/ridpath/Terrminus-CVE-2026-2406.git"
         },
         {
+          "id": 1156104900,
+          "name": "hyu164.github.io",
+          "full_name": "hyu164/hyu164.github.io",
+          "html_url": "https://github.com/hyu164/hyu164.github.io",
+          "description": "🔍 Analyze and detect CVE-2026-2406 vulnerabilities in Telnet with this powerful research engine designed for security experts and pentesters.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-02-12T09:12:19Z",
+          "pushed_at": "2026-02-12T09:12:16Z",
+          "created_at": "2026-02-12T09:11:40Z",
+          "topics": [],
+          "owner": {
+            "login": "hyu164",
+            "html_url": "https://github.com/hyu164"
+          },
+          "clone_url": "https://github.com/hyu164/hyu164.github.io.git"
+        },
+        {
           "id": 967261651,
           "name": "Terrminus-CVE-2026-2406",
           "full_name": "hyu164/Terrminus-CVE-2026-2406",
@@ -2885,8 +2996,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-12T09:11:32Z",
-          "pushed_at": "2026-02-12T09:10:43Z",
+          "updated_at": "2026-02-12T19:19:21Z",
+          "pushed_at": "2026-02-12T19:19:17Z",
           "created_at": "2025-04-16T07:20:12Z",
           "topics": [
             "cve-2026-24061",
@@ -2906,25 +3017,6 @@
             "html_url": "https://github.com/hyu164"
           },
           "clone_url": "https://github.com/hyu164/Terrminus-CVE-2026-2406.git"
-        },
-        {
-          "id": 1156104900,
-          "name": "hyu164.github.io",
-          "full_name": "hyu164/hyu164.github.io",
-          "html_url": "https://github.com/hyu164/hyu164.github.io",
-          "description": "🔍 Analyze and detect CVE-2026-2406 vulnerabilities in Telnet with this powerful research engine designed for security experts and pentesters.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-02-12T09:12:19Z",
-          "pushed_at": "2026-02-12T09:12:16Z",
-          "created_at": "2026-02-12T09:11:40Z",
-          "topics": [],
-          "owner": {
-            "login": "hyu164",
-            "html_url": "https://github.com/hyu164"
-          },
-          "clone_url": "https://github.com/hyu164/hyu164.github.io.git"
         },
         {
           "id": 1145930302,
@@ -2975,10 +3067,10 @@
           "full_name": "JayGLXR/CVE-2026-24061-POC",
           "html_url": "https://github.com/JayGLXR/CVE-2026-24061-POC",
           "description": "",
-          "stargazers_count": 60,
+          "stargazers_count": 61,
           "forks_count": 9,
           "language": "Python",
-          "updated_at": "2026-02-11T14:49:33Z",
+          "updated_at": "2026-02-12T19:49:43Z",
           "pushed_at": "2026-01-22T14:33:43Z",
           "created_at": "2026-01-22T14:27:50Z",
           "topics": [],
@@ -3094,10 +3186,10 @@
           "full_name": "Chocapikk/CVE-2026-24061",
           "html_url": "https://github.com/Chocapikk/CVE-2026-24061",
           "description": "",
-          "stargazers_count": 4,
-          "forks_count": 1,
+          "stargazers_count": 5,
+          "forks_count": 2,
           "language": "Go",
-          "updated_at": "2026-02-10T13:30:46Z",
+          "updated_at": "2026-02-12T14:37:03Z",
           "pushed_at": "2026-01-22T15:15:10Z",
           "created_at": "2026-01-22T14:24:19Z",
           "topics": [],
@@ -3935,39 +4027,41 @@
           "clone_url": "https://github.com/z3n70/CVE-2026-24061.git"
         },
         {
-          "id": 1148619445,
-          "name": "Tell-Me-Root",
-          "full_name": "Moxxic1/Tell-Me-Root",
-          "html_url": "https://github.com/Moxxic1/Tell-Me-Root",
-          "description": "🔍 Automate bulk detection of the CVE-2026-24061 Telnet authentication bypass vulnerability using this lightweight Python tool.",
+          "id": 1149163272,
+          "name": "CVE-2026-24061",
+          "full_name": "obrunolima1910/CVE-2026-24061",
+          "html_url": "https://github.com/obrunolima1910/CVE-2026-24061",
+          "description": "🚨 Exploit CVE-2026-24061, a critical remote authentication bypass in GNU inetutils-telnetd, for instant root shell access without authentication.",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-12T10:40:43Z",
-          "pushed_at": "2026-02-12T10:40:20Z",
-          "created_at": "2026-02-03T07:03:26Z",
+          "updated_at": "2026-02-12T19:16:03Z",
+          "pushed_at": "2026-02-12T19:16:00Z",
+          "created_at": "2026-02-03T19:46:10Z",
           "topics": [
-            "code-completion",
-            "form-builder",
-            "front-end",
-            "google-forms",
-            "gpt",
-            "mscoco-image-dataset",
-            "multi-agent",
-            "secret-management",
-            "secrets",
-            "semantic-engine",
-            "show-attend-and-tell",
-            "telethon-bot",
-            "telnetd-rce",
-            "vault",
-            "vim"
+            "agent",
+            "auth",
+            "book",
+            "computer-vision",
+            "cv",
+            "deep-learning",
+            "gluon",
+            "image-classification",
+            "jupyter-notebook",
+            "machine-learning",
+            "mxnet",
+            "neural-network",
+            "person-reid",
+            "pose-estimation",
+            "root",
+            "semantic-segmentation",
+            "telnet"
           ],
           "owner": {
-            "login": "Moxxic1",
-            "html_url": "https://github.com/Moxxic1"
+            "login": "obrunolima1910",
+            "html_url": "https://github.com/obrunolima1910"
           },
-          "clone_url": "https://github.com/Moxxic1/Tell-Me-Root.git"
+          "clone_url": "https://github.com/obrunolima1910/CVE-2026-24061.git"
         },
         {
           "id": 1148243886,
@@ -4008,35 +4102,39 @@
           "clone_url": "https://github.com/r00tuser111/CVE-2026-24061.git"
         },
         {
-          "id": 1013041336,
-          "name": "CVE-2026-24061-POC",
-          "full_name": "Good123321-bot/CVE-2026-24061-POC",
-          "html_url": "https://github.com/Good123321-bot/CVE-2026-24061-POC",
-          "description": "",
+          "id": 1148619445,
+          "name": "Tell-Me-Root",
+          "full_name": "Moxxic1/Tell-Me-Root",
+          "html_url": "https://github.com/Moxxic1/Tell-Me-Root",
+          "description": "🔍 Automate bulk detection of the CVE-2026-24061 Telnet authentication bypass vulnerability using this lightweight Python tool.",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-12T10:40:39Z",
-          "pushed_at": "2026-02-12T10:40:15Z",
-          "created_at": "2025-07-03T09:13:14Z",
+          "updated_at": "2026-02-12T19:15:47Z",
+          "pushed_at": "2026-02-12T19:15:33Z",
+          "created_at": "2026-02-03T07:03:26Z",
           "topics": [
-            "cve",
-            "cve-2026-24061",
-            "exploit",
-            "poc",
-            "rce",
-            "root",
-            "telnet",
-            "telnet-exploit",
-            "telnet-server",
+            "code-completion",
+            "form-builder",
+            "front-end",
+            "google-forms",
+            "gpt",
+            "mscoco-image-dataset",
+            "multi-agent",
+            "secret-management",
+            "secrets",
+            "semantic-engine",
+            "show-attend-and-tell",
+            "telethon-bot",
             "telnetd-rce",
-            "unauthenticated-rce"
+            "vault",
+            "vim"
           ],
           "owner": {
-            "login": "Good123321-bot",
-            "html_url": "https://github.com/Good123321-bot"
+            "login": "Moxxic1",
+            "html_url": "https://github.com/Moxxic1"
           },
-          "clone_url": "https://github.com/Good123321-bot/CVE-2026-24061-POC.git"
+          "clone_url": "https://github.com/Moxxic1/Tell-Me-Root.git"
         },
         {
           "id": 1141692144,
@@ -4058,35 +4156,35 @@
           "clone_url": "https://github.com/Mefhika120/Ashwesker-CVE-2026-24061.git"
         },
         {
-          "id": 967261651,
-          "name": "Terrminus-CVE-2026-2406",
-          "full_name": "hyu164/Terrminus-CVE-2026-2406",
-          "html_url": "https://github.com/hyu164/Terrminus-CVE-2026-2406",
-          "description": "🔍 Analyze and detect CVE-2026-2406 vulnerabilities in Telnet to enhance security and prevent unauthorized access with this professional research engine.",
+          "id": 1013041336,
+          "name": "CVE-2026-24061-POC",
+          "full_name": "Good123321-bot/CVE-2026-24061-POC",
+          "html_url": "https://github.com/Good123321-bot/CVE-2026-24061-POC",
+          "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-12T09:11:32Z",
-          "pushed_at": "2026-02-12T09:10:43Z",
-          "created_at": "2025-04-16T07:20:12Z",
+          "updated_at": "2026-02-12T19:15:32Z",
+          "pushed_at": "2026-02-12T19:15:28Z",
+          "created_at": "2025-07-03T09:13:14Z",
           "topics": [
+            "cve",
             "cve-2026-24061",
-            "cybersecurity-tools",
-            "pentesting-tools",
-            "privelage-escalation",
-            "python-asyncio",
+            "exploit",
+            "poc",
             "rce",
-            "red-teaming",
-            "red-teaming-tools",
+            "root",
+            "telnet",
             "telnet-exploit",
-            "telnet-scanner",
-            "vulnerability-scanners"
+            "telnet-server",
+            "telnetd-rce",
+            "unauthenticated-rce"
           ],
           "owner": {
-            "login": "hyu164",
-            "html_url": "https://github.com/hyu164"
+            "login": "Good123321-bot",
+            "html_url": "https://github.com/Good123321-bot"
           },
-          "clone_url": "https://github.com/hyu164/Terrminus-CVE-2026-2406.git"
+          "clone_url": "https://github.com/Good123321-bot/CVE-2026-24061-POC.git"
         },
         {
           "id": 1146360267,
@@ -4108,41 +4206,35 @@
           "clone_url": "https://github.com/buzz075/CVE-2026-24061.git"
         },
         {
-          "id": 1149163272,
-          "name": "CVE-2026-24061",
-          "full_name": "obrunolima1910/CVE-2026-24061",
-          "html_url": "https://github.com/obrunolima1910/CVE-2026-24061",
-          "description": "🚨 Exploit CVE-2026-24061, a critical remote authentication bypass in GNU inetutils-telnetd, for instant root shell access without authentication.",
+          "id": 967261651,
+          "name": "Terrminus-CVE-2026-2406",
+          "full_name": "hyu164/Terrminus-CVE-2026-2406",
+          "html_url": "https://github.com/hyu164/Terrminus-CVE-2026-2406",
+          "description": "🔍 Analyze and detect CVE-2026-2406 vulnerabilities in Telnet to enhance security and prevent unauthorized access with this professional research engine.",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-12T10:41:57Z",
-          "pushed_at": "2026-02-12T10:41:05Z",
-          "created_at": "2026-02-03T19:46:10Z",
+          "updated_at": "2026-02-12T19:19:21Z",
+          "pushed_at": "2026-02-12T19:19:17Z",
+          "created_at": "2025-04-16T07:20:12Z",
           "topics": [
-            "agent",
-            "auth",
-            "book",
-            "computer-vision",
-            "cv",
-            "deep-learning",
-            "gluon",
-            "image-classification",
-            "jupyter-notebook",
-            "machine-learning",
-            "mxnet",
-            "neural-network",
-            "person-reid",
-            "pose-estimation",
-            "root",
-            "semantic-segmentation",
-            "telnet"
+            "cve-2026-24061",
+            "cybersecurity-tools",
+            "pentesting-tools",
+            "privelage-escalation",
+            "python-asyncio",
+            "rce",
+            "red-teaming",
+            "red-teaming-tools",
+            "telnet-exploit",
+            "telnet-scanner",
+            "vulnerability-scanners"
           ],
           "owner": {
-            "login": "obrunolima1910",
-            "html_url": "https://github.com/obrunolima1910"
+            "login": "hyu164",
+            "html_url": "https://github.com/hyu164"
           },
-          "clone_url": "https://github.com/obrunolima1910/CVE-2026-24061.git"
+          "clone_url": "https://github.com/hyu164/Terrminus-CVE-2026-2406.git"
         },
         {
           "id": 1146350782,
@@ -4742,10 +4834,10 @@
           "full_name": "adibirzu/openclaw-security-monitor",
           "html_url": "https://github.com/adibirzu/openclaw-security-monitor",
           "description": "Proactive security monitoring for OpenClaw deployments. Detects ClawHavoc, AMOS stealer, CVE-2026-25253, memory poisoning, and supply chain attacks.",
-          "stargazers_count": 3,
+          "stargazers_count": 4,
           "forks_count": 0,
           "language": "Shell",
-          "updated_at": "2026-02-11T14:38:41Z",
+          "updated_at": "2026-02-12T16:01:56Z",
           "pushed_at": "2026-02-05T18:07:50Z",
           "created_at": "2026-02-05T07:31:07Z",
           "topics": [],
@@ -5039,17 +5131,17 @@
       "cve_id": "CVE-2026-25857",
       "repositories": [
         {
-          "id": 1151914792,
+          "id": 1156554988,
           "name": "CVE-2026-25857",
           "full_name": "eeeeeeeeeevan/CVE-2026-25857",
           "html_url": "https://github.com/eeeeeeeeeevan/CVE-2026-25857",
-          "description": "one of many nodays. trivial to find",
+          "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-08T04:18:28Z",
-          "pushed_at": "2026-02-08T04:18:24Z",
-          "created_at": "2026-02-07T04:28:59Z",
+          "updated_at": "2026-02-12T19:32:52Z",
+          "pushed_at": "2026-02-12T19:32:48Z",
+          "created_at": "2026-02-12T19:30:10Z",
           "topics": [],
           "owner": {
             "login": "eeeeeeeeeevan",
@@ -5263,8 +5355,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-12T06:48:12Z",
-          "pushed_at": "2026-02-12T06:48:08Z",
+          "updated_at": "2026-02-12T18:44:13Z",
+          "pushed_at": "2026-02-12T18:44:09Z",
           "created_at": "2026-01-24T07:55:13Z",
           "topics": [],
           "owner": {
@@ -5314,8 +5406,8 @@
         {
           "id": 1149902392,
           "name": "CVE-2026-XXXX-NPrinting-On-Demand-Exploit",
-          "full_name": "Sanmiir/CVE-2026-XXXX-NPrinting-On-Demand-Exploit",
-          "html_url": "https://github.com/Sanmiir/CVE-2026-XXXX-NPrinting-On-Demand-Exploit",
+          "full_name": "sanmirgabriel/CVE-2026-XXXX-NPrinting-On-Demand-Exploit",
+          "html_url": "https://github.com/sanmirgabriel/CVE-2026-XXXX-NPrinting-On-Demand-Exploit",
           "description": "Vulnerability in \"NPrinting On-Demand\" Extension for Qlik Sense",
           "stargazers_count": 0,
           "forks_count": 0,
@@ -5325,16 +5417,16 @@
           "created_at": "2026-02-04T16:49:37Z",
           "topics": [],
           "owner": {
-            "login": "Sanmiir",
-            "html_url": "https://github.com/Sanmiir"
+            "login": "sanmirgabriel",
+            "html_url": "https://github.com/sanmirgabriel"
           },
-          "clone_url": "https://github.com/Sanmiir/CVE-2026-XXXX-NPrinting-On-Demand-Exploit.git"
+          "clone_url": "https://github.com/sanmirgabriel/CVE-2026-XXXX-NPrinting-On-Demand-Exploit.git"
         },
         {
           "id": 1149173466,
           "name": "CVE-2026-XXXX-Pixeon-WebLaudos-AuthBypass",
-          "full_name": "Sanmiir/CVE-2026-XXXX-Pixeon-WebLaudos-AuthBypass",
-          "html_url": "https://github.com/Sanmiir/CVE-2026-XXXX-Pixeon-WebLaudos-AuthBypass",
+          "full_name": "sanmirgabriel/CVE-2026-XXXX-Pixeon-WebLaudos-AuthBypass",
+          "html_url": "https://github.com/sanmirgabriel/CVE-2026-XXXX-Pixeon-WebLaudos-AuthBypass",
           "description": "critical vulnerability,  Authentication Bypass via Client-Side + Unauthenticated IDOR, discovered in Pixeon WebLaudos",
           "stargazers_count": 0,
           "forks_count": 0,
@@ -5344,10 +5436,10 @@
           "created_at": "2026-02-03T20:03:25Z",
           "topics": [],
           "owner": {
-            "login": "Sanmiir",
-            "html_url": "https://github.com/Sanmiir"
+            "login": "sanmirgabriel",
+            "html_url": "https://github.com/sanmirgabriel"
           },
-          "clone_url": "https://github.com/Sanmiir/CVE-2026-XXXX-Pixeon-WebLaudos-AuthBypass.git"
+          "clone_url": "https://github.com/sanmirgabriel/CVE-2026-XXXX-Pixeon-WebLaudos-AuthBypass.git"
         },
         {
           "id": 1148732379,
