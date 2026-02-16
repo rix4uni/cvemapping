@@ -11363,10 +11363,10 @@
           "full_name": "jakabakos/CVE-2023-27524-Apache-Superset-Auth-Bypass-and-RCE",
           "html_url": "https://github.com/jakabakos/CVE-2023-27524-Apache-Superset-Auth-Bypass-and-RCE",
           "description": "",
-          "stargazers_count": 27,
-          "forks_count": 7,
+          "stargazers_count": 28,
+          "forks_count": 8,
           "language": "Python",
-          "updated_at": "2025-12-12T06:29:54Z",
+          "updated_at": "2026-02-16T07:00:49Z",
           "pushed_at": "2023-09-11T06:49:19Z",
           "created_at": "2023-09-08T06:15:00Z",
           "topics": [],
@@ -17260,8 +17260,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "C",
-          "updated_at": "2026-02-15T18:34:35Z",
-          "pushed_at": "2026-02-15T18:34:31Z",
+          "updated_at": "2026-02-16T14:32:06Z",
+          "pushed_at": "2026-02-16T14:32:02Z",
           "created_at": "2025-08-13T09:19:29Z",
           "topics": [
             "oob-entry-lookup",
@@ -19234,10 +19234,10 @@
           "full_name": "vi3t1/qq-tim-elevation",
           "html_url": "https://github.com/vi3t1/qq-tim-elevation",
           "description": "CVE-2023-34312",
-          "stargazers_count": 420,
+          "stargazers_count": 421,
           "forks_count": 74,
           "language": "Rust",
-          "updated_at": "2025-12-16T06:50:17Z",
+          "updated_at": "2026-02-16T08:23:03Z",
           "pushed_at": "2023-05-27T12:45:10Z",
           "created_at": "2023-05-27T12:44:42Z",
           "topics": [],
@@ -24346,25 +24346,6 @@
           "clone_url": "https://github.com/Chocapikk/CVE-2023-38646.git"
         },
         {
-          "id": 709928112,
-          "name": "CVE-2023-38646",
-          "full_name": "Red4mber/CVE-2023-38646",
-          "html_url": "https://github.com/Red4mber/CVE-2023-38646",
-          "description": "Python script to exploit CVE-2023-38646 Metabase Pre-Auth RCE via SQL injection",
-          "stargazers_count": 2,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2025-02-10T06:39:43Z",
-          "pushed_at": "2023-10-26T10:32:23Z",
-          "created_at": "2023-10-25T17:10:53Z",
-          "topics": [],
-          "owner": {
-            "login": "Red4mber",
-            "html_url": "https://github.com/Red4mber"
-          },
-          "clone_url": "https://github.com/Red4mber/CVE-2023-38646.git"
-        },
-        {
           "id": 672496252,
           "name": "CVE-2023-38646-Poc",
           "full_name": "Xuxfff/CVE-2023-38646-Poc",
@@ -24384,6 +24365,50 @@
           "clone_url": "https://github.com/Xuxfff/CVE-2023-38646-Poc.git"
         },
         {
+          "id": 702259752,
+          "name": "metabase-pre-auth-rce-poc",
+          "full_name": "m3m0o/metabase-pre-auth-rce-poc",
+          "html_url": "https://github.com/m3m0o/metabase-pre-auth-rce-poc",
+          "description": "This is a script written in Python that allows the exploitation of the Metabase's software security flaw described in CVE-2023-38646.",
+          "stargazers_count": 2,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-02-16T11:48:10Z",
+          "pushed_at": "2024-07-07T17:44:16Z",
+          "created_at": "2023-10-09T00:26:38Z",
+          "topics": [
+            "cve-2023-38646",
+            "exploit",
+            "metabase",
+            "poc",
+            "rce-exploit"
+          ],
+          "owner": {
+            "login": "m3m0o",
+            "html_url": "https://github.com/m3m0o"
+          },
+          "clone_url": "https://github.com/m3m0o/metabase-pre-auth-rce-poc.git"
+        },
+        {
+          "id": 709928112,
+          "name": "CVE-2023-38646",
+          "full_name": "Red4mber/CVE-2023-38646",
+          "html_url": "https://github.com/Red4mber/CVE-2023-38646",
+          "description": "Python script to exploit CVE-2023-38646 Metabase Pre-Auth RCE via SQL injection",
+          "stargazers_count": 2,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2025-02-10T06:39:43Z",
+          "pushed_at": "2023-10-26T10:32:23Z",
+          "created_at": "2023-10-25T17:10:53Z",
+          "topics": [],
+          "owner": {
+            "login": "Red4mber",
+            "html_url": "https://github.com/Red4mber"
+          },
+          "clone_url": "https://github.com/Red4mber/CVE-2023-38646.git"
+        },
+        {
           "id": 674132744,
           "name": "CVE-2023-38646-POC",
           "full_name": "fidjiw/CVE-2023-38646-POC",
@@ -24401,31 +24426,6 @@
             "html_url": "https://github.com/fidjiw"
           },
           "clone_url": "https://github.com/fidjiw/CVE-2023-38646-POC.git"
-        },
-        {
-          "id": 702259752,
-          "name": "metabase-pre-auth-rce-poc",
-          "full_name": "m3m0o/metabase-pre-auth-rce-poc",
-          "html_url": "https://github.com/m3m0o/metabase-pre-auth-rce-poc",
-          "description": "This is a script written in Python that allows the exploitation of the Metabase's software security flaw described in CVE-2023-38646.",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2025-11-14T03:41:25Z",
-          "pushed_at": "2024-07-07T17:44:16Z",
-          "created_at": "2023-10-09T00:26:38Z",
-          "topics": [
-            "cve-2023-38646",
-            "exploit",
-            "metabase",
-            "poc",
-            "rce-exploit"
-          ],
-          "owner": {
-            "login": "m3m0o",
-            "html_url": "https://github.com/m3m0o"
-          },
-          "clone_url": "https://github.com/m3m0o/metabase-pre-auth-rce-poc.git"
         },
         {
           "id": 672876505,
@@ -26306,8 +26306,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-02-15T19:56:23Z",
-          "pushed_at": "2026-02-15T19:56:19Z",
+          "updated_at": "2026-02-16T12:35:58Z",
+          "pushed_at": "2026-02-16T12:35:54Z",
           "created_at": "2026-01-07T14:24:08Z",
           "topics": [
             "bitcoin",
@@ -36641,8 +36641,8 @@
           "stargazers_count": 719,
           "forks_count": 125,
           "language": "Shell",
-          "updated_at": "2026-02-15T01:54:17Z",
-          "pushed_at": "2026-02-15T01:54:13Z",
+          "updated_at": "2026-02-16T01:50:23Z",
+          "pushed_at": "2026-02-16T01:50:19Z",
           "created_at": "2022-03-19T01:54:15Z",
           "topics": [
             "bugbounty",
