@@ -1378,36 +1378,6 @@
           "clone_url": "https://github.com/ruppde/rdg_scanner_cve-2020-0609.git"
         },
         {
-          "id": 1049488130,
-          "name": "lab-cve-2020-0610",
-          "full_name": "ImBIOS/lab-cve-2020-0610",
-          "html_url": "https://github.com/ImBIOS/lab-cve-2020-0610",
-          "description": "Reproducible lab for CVE-2020-0610 (BlueGate) - Windows RD Gateway UDP/DTLS remote code execution vulnerability. Includes PowerShell scripts, setup guide, and nuclei template validation examples.",
-          "stargazers_count": 2,
-          "forks_count": 0,
-          "language": "PowerShell",
-          "updated_at": "2025-09-17T16:48:57Z",
-          "pushed_at": "2025-09-03T08:42:51Z",
-          "created_at": "2025-09-03T03:59:34Z",
-          "topics": [
-            "bluegate",
-            "cve-2020-0610",
-            "dtls",
-            "nuclei",
-            "rd-gateway",
-            "rdp",
-            "security-lab",
-            "udp",
-            "vulnerability-research",
-            "windows-server"
-          ],
-          "owner": {
-            "login": "ImBIOS",
-            "html_url": "https://github.com/ImBIOS"
-          },
-          "clone_url": "https://github.com/ImBIOS/lab-cve-2020-0610.git"
-        },
-        {
           "id": 1050464920,
           "name": "lab-cve-2020-0610",
           "full_name": "Riocipta75/lab-cve-2020-0610",
@@ -1416,8 +1386,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "PowerShell",
-          "updated_at": "2026-02-17T08:16:45Z",
-          "pushed_at": "2026-02-17T08:16:42Z",
+          "updated_at": "2026-02-17T11:13:00Z",
+          "pushed_at": "2026-02-17T11:12:57Z",
           "created_at": "2025-09-04T13:21:35Z",
           "topics": [],
           "owner": {
@@ -2985,23 +2955,83 @@
           "clone_url": "https://github.com/MasterSploit/LPE---CVE-2020-0796.git"
         },
         {
-          "id": 252494911,
-          "name": "CVE-2020-0796-EXP",
-          "full_name": "LabDookhtegan/CVE-2020-0796-EXP",
-          "html_url": "https://github.com/LabDookhtegan/CVE-2020-0796-EXP",
-          "description": "CVE-2020-0796-EXP",
+          "id": 249034829,
+          "name": "CVE-2020-0796-DoS",
+          "full_name": "cory-zajicek/CVE-2020-0796-DoS",
+          "html_url": "https://github.com/cory-zajicek/CVE-2020-0796-DoS",
+          "description": "DoS PoC for CVE-2020-0796 (SMBGhost)",
           "stargazers_count": 1,
           "forks_count": 2,
-          "language": "",
-          "updated_at": "2024-08-12T19:59:36Z",
-          "pushed_at": "2020-04-03T00:19:21Z",
-          "created_at": "2020-04-02T15:32:10Z",
+          "language": "Python",
+          "updated_at": "2024-08-12T19:59:06Z",
+          "pushed_at": "2020-03-24T05:52:37Z",
+          "created_at": "2020-03-21T18:17:10Z",
+          "topics": [
+            "cve-2020-0796",
+            "smbghost"
+          ],
+          "owner": {
+            "login": "cory-zajicek",
+            "html_url": "https://github.com/cory-zajicek"
+          },
+          "clone_url": "https://github.com/cory-zajicek/CVE-2020-0796-DoS.git"
+        },
+        {
+          "id": 246900063,
+          "name": "SMBGhost",
+          "full_name": "netscylla/SMBGhost",
+          "html_url": "https://github.com/netscylla/SMBGhost",
+          "description": "SMBGhost (CVE-2020-0796) threaded scanner",
+          "stargazers_count": 1,
+          "forks_count": 2,
+          "language": "Python",
+          "updated_at": "2024-08-12T19:58:44Z",
+          "pushed_at": "2020-03-12T22:20:11Z",
+          "created_at": "2020-03-12T18:03:45Z",
           "topics": [],
           "owner": {
-            "login": "LabDookhtegan",
-            "html_url": "https://github.com/LabDookhtegan"
+            "login": "netscylla",
+            "html_url": "https://github.com/netscylla"
           },
-          "clone_url": "https://github.com/LabDookhtegan/CVE-2020-0796-EXP.git"
+          "clone_url": "https://github.com/netscylla/SMBGhost.git"
+        },
+        {
+          "id": 247147253,
+          "name": "SMBv3.1.1-scan---CVE-2020-0796",
+          "full_name": "BinaryShadow94/SMBv3.1.1-scan---CVE-2020-0796",
+          "html_url": "https://github.com/BinaryShadow94/SMBv3.1.1-scan---CVE-2020-0796",
+          "description": "Little scanner to know if a machine is runnig SMBv3 (possible vulnerability CVE-2020-0796)",
+          "stargazers_count": 1,
+          "forks_count": 1,
+          "language": "Python",
+          "updated_at": "2024-08-12T19:58:46Z",
+          "pushed_at": "2020-03-13T20:01:40Z",
+          "created_at": "2020-03-13T19:27:30Z",
+          "topics": [],
+          "owner": {
+            "login": "BinaryShadow94",
+            "html_url": "https://github.com/BinaryShadow94"
+          },
+          "clone_url": "https://github.com/BinaryShadow94/SMBv3.1.1-scan---CVE-2020-0796.git"
+        },
+        {
+          "id": 246883669,
+          "name": "Scanners-for-CVE-2020-0796-Testing",
+          "full_name": "Dhoomralochana/Scanners-for-CVE-2020-0796-Testing",
+          "html_url": "https://github.com/Dhoomralochana/Scanners-for-CVE-2020-0796-Testing",
+          "description": "Scanners List - Microsoft Windows SMBv3 Remote Code Execution Vulnerability (CVE-2020-0796) ",
+          "stargazers_count": 1,
+          "forks_count": 1,
+          "language": "",
+          "updated_at": "2024-08-12T19:58:44Z",
+          "pushed_at": "2020-03-12T16:44:46Z",
+          "created_at": "2020-03-12T16:39:41Z",
+          "topics": [],
+          "owner": {
+            "login": "Dhoomralochana",
+            "html_url": "https://github.com/Dhoomralochana"
+          },
+          "clone_url": "https://github.com/Dhoomralochana/Scanners-for-CVE-2020-0796-Testing.git"
         },
         {
           "id": 247578292,
@@ -3061,82 +3091,6 @@
           "clone_url": "https://github.com/julixsalas/CVE-2020-0796.git"
         },
         {
-          "id": 246900063,
-          "name": "SMBGhost",
-          "full_name": "netscylla/SMBGhost",
-          "html_url": "https://github.com/netscylla/SMBGhost",
-          "description": "SMBGhost (CVE-2020-0796) threaded scanner",
-          "stargazers_count": 1,
-          "forks_count": 2,
-          "language": "Python",
-          "updated_at": "2024-08-12T19:58:44Z",
-          "pushed_at": "2020-03-12T22:20:11Z",
-          "created_at": "2020-03-12T18:03:45Z",
-          "topics": [],
-          "owner": {
-            "login": "netscylla",
-            "html_url": "https://github.com/netscylla"
-          },
-          "clone_url": "https://github.com/netscylla/SMBGhost.git"
-        },
-        {
-          "id": 1061361590,
-          "name": "-CVE-2020-0796-SMBGhost-Windows-10-SMBv3-Remote-Code-Execution-Vulnerability",
-          "full_name": "Jagadeesh7532/-CVE-2020-0796-SMBGhost-Windows-10-SMBv3-Remote-Code-Execution-Vulnerability",
-          "html_url": "https://github.com/Jagadeesh7532/-CVE-2020-0796-SMBGhost-Windows-10-SMBv3-Remote-Code-Execution-Vulnerability",
-          "description": "CVE-2020-0796 (SMBGhost) is a critical RCE vulnerability in Windows 10 SMBv3 protocol. It allows attackers to execute code remotely via crafted SMB packets, making it wormable. Affects Windows 10 v1903/v1909 and Server 2019. Exploit targets srv2.sys via buffer overflow",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2025-10-29T16:09:18Z",
-          "pushed_at": "2025-09-21T18:57:24Z",
-          "created_at": "2025-09-21T18:52:58Z",
-          "topics": [],
-          "owner": {
-            "login": "Jagadeesh7532",
-            "html_url": "https://github.com/Jagadeesh7532"
-          },
-          "clone_url": "https://github.com/Jagadeesh7532/-CVE-2020-0796-SMBGhost-Windows-10-SMBv3-Remote-Code-Execution-Vulnerability.git"
-        },
-        {
-          "id": 246883669,
-          "name": "Scanners-for-CVE-2020-0796-Testing",
-          "full_name": "Dhoomralochana/Scanners-for-CVE-2020-0796-Testing",
-          "html_url": "https://github.com/Dhoomralochana/Scanners-for-CVE-2020-0796-Testing",
-          "description": "Scanners List - Microsoft Windows SMBv3 Remote Code Execution Vulnerability (CVE-2020-0796) ",
-          "stargazers_count": 1,
-          "forks_count": 1,
-          "language": "",
-          "updated_at": "2024-08-12T19:58:44Z",
-          "pushed_at": "2020-03-12T16:44:46Z",
-          "created_at": "2020-03-12T16:39:41Z",
-          "topics": [],
-          "owner": {
-            "login": "Dhoomralochana",
-            "html_url": "https://github.com/Dhoomralochana"
-          },
-          "clone_url": "https://github.com/Dhoomralochana/Scanners-for-CVE-2020-0796-Testing.git"
-        },
-        {
-          "id": 247147253,
-          "name": "SMBv3.1.1-scan---CVE-2020-0796",
-          "full_name": "BinaryShadow94/SMBv3.1.1-scan---CVE-2020-0796",
-          "html_url": "https://github.com/BinaryShadow94/SMBv3.1.1-scan---CVE-2020-0796",
-          "description": "Little scanner to know if a machine is runnig SMBv3 (possible vulnerability CVE-2020-0796)",
-          "stargazers_count": 1,
-          "forks_count": 1,
-          "language": "Python",
-          "updated_at": "2024-08-12T19:58:46Z",
-          "pushed_at": "2020-03-13T20:01:40Z",
-          "created_at": "2020-03-13T19:27:30Z",
-          "topics": [],
-          "owner": {
-            "login": "BinaryShadow94",
-            "html_url": "https://github.com/BinaryShadow94"
-          },
-          "clone_url": "https://github.com/BinaryShadow94/SMBv3.1.1-scan---CVE-2020-0796.git"
-        },
-        {
           "id": 311524122,
           "name": "CVE-2020-0796",
           "full_name": "datntsec/CVE-2020-0796",
@@ -3156,26 +3110,23 @@
           "clone_url": "https://github.com/datntsec/CVE-2020-0796.git"
         },
         {
-          "id": 249034829,
-          "name": "CVE-2020-0796-DoS",
-          "full_name": "cory-zajicek/CVE-2020-0796-DoS",
-          "html_url": "https://github.com/cory-zajicek/CVE-2020-0796-DoS",
-          "description": "DoS PoC for CVE-2020-0796 (SMBGhost)",
+          "id": 252494911,
+          "name": "CVE-2020-0796-EXP",
+          "full_name": "LabDookhtegan/CVE-2020-0796-EXP",
+          "html_url": "https://github.com/LabDookhtegan/CVE-2020-0796-EXP",
+          "description": "CVE-2020-0796-EXP",
           "stargazers_count": 1,
           "forks_count": 2,
-          "language": "Python",
-          "updated_at": "2024-08-12T19:59:06Z",
-          "pushed_at": "2020-03-24T05:52:37Z",
-          "created_at": "2020-03-21T18:17:10Z",
-          "topics": [
-            "cve-2020-0796",
-            "smbghost"
-          ],
+          "language": "",
+          "updated_at": "2024-08-12T19:59:36Z",
+          "pushed_at": "2020-04-03T00:19:21Z",
+          "created_at": "2020-04-02T15:32:10Z",
+          "topics": [],
           "owner": {
-            "login": "cory-zajicek",
-            "html_url": "https://github.com/cory-zajicek"
+            "login": "LabDookhtegan",
+            "html_url": "https://github.com/LabDookhtegan"
           },
-          "clone_url": "https://github.com/cory-zajicek/CVE-2020-0796-DoS.git"
+          "clone_url": "https://github.com/LabDookhtegan/CVE-2020-0796-EXP.git"
         },
         {
           "id": 246927086,
@@ -3197,23 +3148,23 @@
           "clone_url": "https://github.com/Almorabea/SMBGhost-WorkaroundApplier.git"
         },
         {
-          "id": 1124973342,
-          "name": "Microsoft-Windows-SMBGhost-Vulnerability-Checker---CVE-2020-0796---SMBv3-RCE",
-          "full_name": "nyambiblaise/Microsoft-Windows-SMBGhost-Vulnerability-Checker---CVE-2020-0796---SMBv3-RCE",
-          "html_url": "https://github.com/nyambiblaise/Microsoft-Windows-SMBGhost-Vulnerability-Checker---CVE-2020-0796---SMBv3-RCE",
+          "id": 1149687490,
+          "name": "cve-2020-0796",
+          "full_name": "thai1012/cve-2020-0796",
+          "html_url": "https://github.com/thai1012/cve-2020-0796",
           "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2025-12-30T00:06:20Z",
-          "pushed_at": "2025-12-30T00:06:17Z",
-          "created_at": "2025-12-30T00:01:30Z",
+          "language": "",
+          "updated_at": "2026-02-04T12:04:23Z",
+          "pushed_at": "2026-02-04T12:04:19Z",
+          "created_at": "2026-02-04T12:01:22Z",
           "topics": [],
           "owner": {
-            "login": "nyambiblaise",
-            "html_url": "https://github.com/nyambiblaise"
+            "login": "thai1012",
+            "html_url": "https://github.com/thai1012"
           },
-          "clone_url": "https://github.com/nyambiblaise/Microsoft-Windows-SMBGhost-Vulnerability-Checker---CVE-2020-0796---SMBv3-RCE.git"
+          "clone_url": "https://github.com/thai1012/cve-2020-0796.git"
         },
         {
           "id": 263364082,
@@ -3296,23 +3247,23 @@
           "clone_url": "https://github.com/ysyyrps123/CVE-2020-0796-exp.git"
         },
         {
-          "id": 1149687490,
-          "name": "cve-2020-0796",
-          "full_name": "thai1012/cve-2020-0796",
-          "html_url": "https://github.com/thai1012/cve-2020-0796",
+          "id": 1124973342,
+          "name": "Microsoft-Windows-SMBGhost-Vulnerability-Checker---CVE-2020-0796---SMBv3-RCE",
+          "full_name": "nyambiblaise/Microsoft-Windows-SMBGhost-Vulnerability-Checker---CVE-2020-0796---SMBv3-RCE",
+          "html_url": "https://github.com/nyambiblaise/Microsoft-Windows-SMBGhost-Vulnerability-Checker---CVE-2020-0796---SMBv3-RCE",
           "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-02-04T12:04:23Z",
-          "pushed_at": "2026-02-04T12:04:19Z",
-          "created_at": "2026-02-04T12:01:22Z",
+          "language": "Python",
+          "updated_at": "2025-12-30T00:06:20Z",
+          "pushed_at": "2025-12-30T00:06:17Z",
+          "created_at": "2025-12-30T00:01:30Z",
           "topics": [],
           "owner": {
-            "login": "thai1012",
-            "html_url": "https://github.com/thai1012"
+            "login": "nyambiblaise",
+            "html_url": "https://github.com/nyambiblaise"
           },
-          "clone_url": "https://github.com/thai1012/cve-2020-0796.git"
+          "clone_url": "https://github.com/nyambiblaise/Microsoft-Windows-SMBGhost-Vulnerability-Checker---CVE-2020-0796---SMBv3-RCE.git"
         },
         {
           "id": 246870588,
@@ -5125,6 +5076,25 @@
             "html_url": "https://github.com/Al1ex"
           },
           "clone_url": "https://github.com/Al1ex/CVE-2020-11113.git"
+        },
+        {
+          "id": 1159988269,
+          "name": "CVE-2020-11113-jackson-databind-vulnerable",
+          "full_name": "andikahilmy/CVE-2020-11113-jackson-databind-vulnerable",
+          "html_url": "https://github.com/andikahilmy/CVE-2020-11113-jackson-databind-vulnerable",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Java",
+          "updated_at": "2026-02-17T12:09:43Z",
+          "pushed_at": "2026-02-17T12:09:35Z",
+          "created_at": "2026-02-17T12:08:57Z",
+          "topics": [],
+          "owner": {
+            "login": "andikahilmy",
+            "html_url": "https://github.com/andikahilmy"
+          },
+          "clone_url": "https://github.com/andikahilmy/CVE-2020-11113-jackson-databind-vulnerable.git"
         }
       ]
     },
@@ -5389,6 +5359,30 @@
             "html_url": "https://github.com/ShielderSec"
           },
           "clone_url": "https://github.com/ShielderSec/CVE-2020-11579.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2020-11619",
+      "repositories": [
+        {
+          "id": 1159987183,
+          "name": "CVE-2020-11619-jackson-databind-vulnerable",
+          "full_name": "andikahilmy/CVE-2020-11619-jackson-databind-vulnerable",
+          "html_url": "https://github.com/andikahilmy/CVE-2020-11619-jackson-databind-vulnerable",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Java",
+          "updated_at": "2026-02-17T12:07:59Z",
+          "pushed_at": "2026-02-17T12:07:53Z",
+          "created_at": "2026-02-17T12:07:16Z",
+          "topics": [],
+          "owner": {
+            "login": "andikahilmy",
+            "html_url": "https://github.com/andikahilmy"
+          },
+          "clone_url": "https://github.com/andikahilmy/CVE-2020-11619-jackson-databind-vulnerable.git"
         }
       ]
     },
@@ -7968,6 +7962,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2020-14062",
+      "repositories": [
+        {
+          "id": 1160015525,
+          "name": "CVE-2020-14062-jackson-databind-vulnerable",
+          "full_name": "andikahilmy/CVE-2020-14062-jackson-databind-vulnerable",
+          "html_url": "https://github.com/andikahilmy/CVE-2020-14062-jackson-databind-vulnerable",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-02-17T12:49:39Z",
+          "pushed_at": "2026-02-17T12:49:39Z",
+          "created_at": "2026-02-17T12:49:38Z",
+          "topics": [],
+          "owner": {
+            "login": "andikahilmy",
+            "html_url": "https://github.com/andikahilmy"
+          },
+          "clone_url": "https://github.com/andikahilmy/CVE-2020-14062-jackson-databind-vulnerable.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2020-14064",
       "repositories": [
         {
@@ -8130,6 +8148,25 @@
             "html_url": "https://github.com/Al1ex"
           },
           "clone_url": "https://github.com/Al1ex/CVE-2020-14195.git"
+        },
+        {
+          "id": 1159964614,
+          "name": "CVE-2020-14195-jackson-databind-vulnerable",
+          "full_name": "andikahilmy/CVE-2020-14195-jackson-databind-vulnerable",
+          "html_url": "https://github.com/andikahilmy/CVE-2020-14195-jackson-databind-vulnerable",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Java",
+          "updated_at": "2026-02-17T12:06:41Z",
+          "pushed_at": "2026-02-17T12:06:35Z",
+          "created_at": "2026-02-17T11:32:46Z",
+          "topics": [],
+          "owner": {
+            "login": "andikahilmy",
+            "html_url": "https://github.com/andikahilmy"
+          },
+          "clone_url": "https://github.com/andikahilmy/CVE-2020-14195-jackson-databind-vulnerable.git"
         }
       ]
     },
@@ -8894,8 +8931,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-17T10:32:10Z",
-          "pushed_at": "2026-02-17T10:32:07Z",
+          "updated_at": "2026-02-17T12:49:34Z",
+          "pushed_at": "2026-02-17T12:49:30Z",
           "created_at": "2025-12-06T10:17:38Z",
           "topics": [
             "active-directory",
@@ -11729,6 +11766,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2020-1695",
+      "repositories": [
+        {
+          "id": 1159957313,
+          "name": "CVE-2020-1695-Resteasy-vulnerable",
+          "full_name": "andikahilmy/CVE-2020-1695-Resteasy-vulnerable",
+          "html_url": "https://github.com/andikahilmy/CVE-2020-1695-Resteasy-vulnerable",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Java",
+          "updated_at": "2026-02-17T11:22:15Z",
+          "pushed_at": "2026-02-17T11:22:02Z",
+          "created_at": "2026-02-17T11:21:06Z",
+          "topics": [],
+          "owner": {
+            "login": "andikahilmy",
+            "html_url": "https://github.com/andikahilmy"
+          },
+          "clone_url": "https://github.com/andikahilmy/CVE-2020-1695-Resteasy-vulnerable.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2020-17008",
       "repositories": [
         {
@@ -12103,25 +12164,6 @@
           "clone_url": "https://github.com/secpool2000/CVE-2020-17530.git"
         },
         {
-          "id": 322516511,
-          "name": "freemarker_RCE_struts2_s2-061",
-          "full_name": "ludy-dev/freemarker_RCE_struts2_s2-061",
-          "html_url": "https://github.com/ludy-dev/freemarker_RCE_struts2_s2-061",
-          "description": "(cve-2020-17530) struts2_s2-061 freemarker_RCE testscript",
-          "stargazers_count": 0,
-          "forks_count": 2,
-          "language": "Python",
-          "updated_at": "2020-12-18T07:05:31Z",
-          "pushed_at": "2020-12-18T07:05:29Z",
-          "created_at": "2020-12-18T07:03:57Z",
-          "topics": [],
-          "owner": {
-            "login": "ludy-dev",
-            "html_url": "https://github.com/ludy-dev"
-          },
-          "clone_url": "https://github.com/ludy-dev/freemarker_RCE_struts2_s2-061.git"
-        },
-        {
           "id": 319884337,
           "name": "CVE-2020-17531",
           "full_name": "154802388/CVE-2020-17531",
@@ -12141,23 +12183,23 @@
           "clone_url": "https://github.com/154802388/CVE-2020-17531.git"
         },
         {
-          "id": 1070133321,
-          "name": "apache__struts_CVE-2020-17530_2-5-25",
-          "full_name": "shoucheng3/apache__struts_CVE-2020-17530_2-5-25",
-          "html_url": "https://github.com/shoucheng3/apache__struts_CVE-2020-17530_2-5-25",
-          "description": "",
+          "id": 322516511,
+          "name": "freemarker_RCE_struts2_s2-061",
+          "full_name": "ludy-dev/freemarker_RCE_struts2_s2-061",
+          "html_url": "https://github.com/ludy-dev/freemarker_RCE_struts2_s2-061",
+          "description": "(cve-2020-17530) struts2_s2-061 freemarker_RCE testscript",
           "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2025-10-05T10:37:37Z",
-          "pushed_at": "2025-10-05T10:37:37Z",
-          "created_at": "2025-10-05T10:37:37Z",
+          "forks_count": 2,
+          "language": "Python",
+          "updated_at": "2020-12-18T07:05:31Z",
+          "pushed_at": "2020-12-18T07:05:29Z",
+          "created_at": "2020-12-18T07:03:57Z",
           "topics": [],
           "owner": {
-            "login": "shoucheng3",
-            "html_url": "https://github.com/shoucheng3"
+            "login": "ludy-dev",
+            "html_url": "https://github.com/ludy-dev"
           },
-          "clone_url": "https://github.com/shoucheng3/apache__struts_CVE-2020-17530_2-5-25.git"
+          "clone_url": "https://github.com/ludy-dev/freemarker_RCE_struts2_s2-061.git"
         }
       ]
     },
@@ -12589,25 +12631,6 @@
             "html_url": "https://github.com/shaunmclernon"
           },
           "clone_url": "https://github.com/shaunmclernon/ghostcat-verification.git"
-        },
-        {
-          "id": 1059138513,
-          "name": "CNVD",
-          "full_name": "Joshua8821/CNVD",
-          "html_url": "https://github.com/Joshua8821/CNVD",
-          "description": "Ghostcat read file/code execute,CNVD-2020-10487(CVE-2020-1938)",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "TypeScript",
-          "updated_at": "2025-09-20T13:12:13Z",
-          "pushed_at": "2025-09-20T13:12:06Z",
-          "created_at": "2025-09-18T03:50:05Z",
-          "topics": [],
-          "owner": {
-            "login": "Joshua8821",
-            "html_url": "https://github.com/Joshua8821"
-          },
-          "clone_url": "https://github.com/Joshua8821/CNVD.git"
         },
         {
           "id": 244516769,
@@ -13373,6 +13396,25 @@
             "html_url": "https://github.com/Al1ex"
           },
           "clone_url": "https://github.com/Al1ex/CVE-2020-24750.git"
+        },
+        {
+          "id": 1159987615,
+          "name": "CVE-2020-24750-jackson-databind-vulnerable",
+          "full_name": "andikahilmy/CVE-2020-24750-jackson-databind-vulnerable",
+          "html_url": "https://github.com/andikahilmy/CVE-2020-24750-jackson-databind-vulnerable",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Java",
+          "updated_at": "2026-02-17T12:08:39Z",
+          "pushed_at": "2026-02-17T12:08:32Z",
+          "created_at": "2026-02-17T12:07:54Z",
+          "topics": [],
+          "owner": {
+            "login": "andikahilmy",
+            "html_url": "https://github.com/andikahilmy"
+          },
+          "clone_url": "https://github.com/andikahilmy/CVE-2020-24750-jackson-databind-vulnerable.git"
         }
       ]
     },
@@ -14652,6 +14694,25 @@
             "html_url": "https://github.com/Kairo-one"
           },
           "clone_url": "https://github.com/Kairo-one/CVE-2020-26217-XStream.git"
+        },
+        {
+          "id": 1159963613,
+          "name": "CVE-2020-26217-xstream-vulnerable",
+          "full_name": "andikahilmy/CVE-2020-26217-xstream-vulnerable",
+          "html_url": "https://github.com/andikahilmy/CVE-2020-26217-xstream-vulnerable",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Java",
+          "updated_at": "2026-02-17T11:31:38Z",
+          "pushed_at": "2026-02-17T11:31:32Z",
+          "created_at": "2026-02-17T11:31:10Z",
+          "topics": [],
+          "owner": {
+            "login": "andikahilmy",
+            "html_url": "https://github.com/andikahilmy"
+          },
+          "clone_url": "https://github.com/andikahilmy/CVE-2020-26217-xstream-vulnerable.git"
         }
       ]
     },
@@ -16759,23 +16820,23 @@
           "clone_url": "https://github.com/paran0id34/CVE-2020-3452.git"
         },
         {
-          "id": 1062779514,
-          "name": "CVE-2020-3452_Cisco_ASA_PathTraversal",
-          "full_name": "abrewer251/CVE-2020-3452_Cisco_ASA_PathTraversal",
-          "html_url": "https://github.com/abrewer251/CVE-2020-3452_Cisco_ASA_PathTraversal",
-          "description": "Proof-of-concept script for CVE-2020-3452 — Cisco ASA/FTD Path Traversal vulnerability. Supports automated extraction of known file targets with a hard limit on successful downloads for safety. Intended for authorized security testing and research purposes only.",
+          "id": 282267605,
+          "name": "CVE-2020-3452",
+          "full_name": "mr-r3b00t/CVE-2020-3452",
+          "html_url": "https://github.com/mr-r3b00t/CVE-2020-3452",
+          "description": "",
           "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2025-09-23T18:07:17Z",
-          "pushed_at": "2025-09-23T18:07:14Z",
-          "created_at": "2025-09-23T18:03:45Z",
+          "forks_count": 2,
+          "language": "PowerShell",
+          "updated_at": "2024-08-12T20:04:04Z",
+          "pushed_at": "2020-07-24T17:11:05Z",
+          "created_at": "2020-07-24T16:26:52Z",
           "topics": [],
           "owner": {
-            "login": "abrewer251",
-            "html_url": "https://github.com/abrewer251"
+            "login": "mr-r3b00t",
+            "html_url": "https://github.com/mr-r3b00t"
           },
-          "clone_url": "https://github.com/abrewer251/CVE-2020-3452_Cisco_ASA_PathTraversal.git"
+          "clone_url": "https://github.com/mr-r3b00t/CVE-2020-3452.git"
         },
         {
           "id": 283542069,
@@ -16795,56 +16856,6 @@
             "html_url": "https://github.com/Gh0st0ne"
           },
           "clone_url": "https://github.com/Gh0st0ne/http-vuln-cve2020-3452.nse.git"
-        },
-        {
-          "id": 282267605,
-          "name": "CVE-2020-3452",
-          "full_name": "mr-r3b00t/CVE-2020-3452",
-          "html_url": "https://github.com/mr-r3b00t/CVE-2020-3452",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 2,
-          "language": "PowerShell",
-          "updated_at": "2024-08-12T20:04:04Z",
-          "pushed_at": "2020-07-24T17:11:05Z",
-          "created_at": "2020-07-24T16:26:52Z",
-          "topics": [],
-          "owner": {
-            "login": "mr-r3b00t",
-            "html_url": "https://github.com/mr-r3b00t"
-          },
-          "clone_url": "https://github.com/mr-r3b00t/CVE-2020-3452.git"
-        }
-      ]
-    },
-    {
-      "cve_id": "CVE-2020-35391",
-      "repositories": [
-        {
-          "id": 941664376,
-          "name": "Tenda-F3-V4",
-          "full_name": "4d000/Tenda-F3-V4",
-          "html_url": "https://github.com/4d000/Tenda-F3-V4",
-          "description": "Python script to exploit CVE-2020-35391 on Tenda F3 V3/V4 routers, enabling unauthorized download of configuration, flash, and syslog files.",
-          "stargazers_count": 3,
-          "forks_count": 2,
-          "language": "Python",
-          "updated_at": "2026-02-14T10:20:55Z",
-          "pushed_at": "2025-09-17T07:58:55Z",
-          "created_at": "2025-03-02T20:12:14Z",
-          "topics": [
-            "embedded-linux",
-            "firmware",
-            "networking",
-            "router",
-            "router-hacking",
-            "tenda-f3-v4"
-          ],
-          "owner": {
-            "login": "4d000",
-            "html_url": "https://github.com/4d000"
-          },
-          "clone_url": "https://github.com/4d000/Tenda-F3-V4.git"
         }
       ]
     },
@@ -16899,6 +16910,30 @@
             "html_url": "https://github.com/dn9uy3n"
           },
           "clone_url": "https://github.com/dn9uy3n/Check-WP-CVE-2020-35489.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2020-35490",
+      "repositories": [
+        {
+          "id": 1159957939,
+          "name": "CVE-2020-35490-jackson-databind-vulnerable",
+          "full_name": "andikahilmy/CVE-2020-35490-jackson-databind-vulnerable",
+          "html_url": "https://github.com/andikahilmy/CVE-2020-35490-jackson-databind-vulnerable",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Java",
+          "updated_at": "2026-02-17T11:22:56Z",
+          "pushed_at": "2026-02-17T11:22:48Z",
+          "created_at": "2026-02-17T11:22:04Z",
+          "topics": [],
+          "owner": {
+            "login": "andikahilmy",
+            "html_url": "https://github.com/andikahilmy"
+          },
+          "clone_url": "https://github.com/andikahilmy/CVE-2020-35490-jackson-databind-vulnerable.git"
         }
       ]
     },
@@ -17096,6 +17131,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2020-36182",
+      "repositories": [
+        {
+          "id": 1160001250,
+          "name": "CVE-2020-36182-jackson-databind-vulnerable",
+          "full_name": "andikahilmy/CVE-2020-36182-jackson-databind-vulnerable",
+          "html_url": "https://github.com/andikahilmy/CVE-2020-36182-jackson-databind-vulnerable",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Java",
+          "updated_at": "2026-02-17T12:29:25Z",
+          "pushed_at": "2026-02-17T12:29:18Z",
+          "created_at": "2026-02-17T12:28:40Z",
+          "topics": [],
+          "owner": {
+            "login": "andikahilmy",
+            "html_url": "https://github.com/andikahilmy"
+          },
+          "clone_url": "https://github.com/andikahilmy/CVE-2020-36182-jackson-databind-vulnerable.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2020-36184",
       "repositories": [
         {
@@ -17116,6 +17175,30 @@
             "html_url": "https://github.com/andikahilmy"
           },
           "clone_url": "https://github.com/andikahilmy/CVE-2020-36184-jackson-databind-vulnerable.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2020-36186",
+      "repositories": [
+        {
+          "id": 1159963190,
+          "name": "CVE-2020-36186-jackson-databind-vulnerable",
+          "full_name": "andikahilmy/CVE-2020-36186-jackson-databind-vulnerable",
+          "html_url": "https://github.com/andikahilmy/CVE-2020-36186-jackson-databind-vulnerable",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Java",
+          "updated_at": "2026-02-17T11:31:16Z",
+          "pushed_at": "2026-02-17T11:31:09Z",
+          "created_at": "2026-02-17T11:30:32Z",
+          "topics": [],
+          "owner": {
+            "login": "andikahilmy",
+            "html_url": "https://github.com/andikahilmy"
+          },
+          "clone_url": "https://github.com/andikahilmy/CVE-2020-36186-jackson-databind-vulnerable.git"
         }
       ]
     },
@@ -19961,6 +20044,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2020-7692",
+      "repositories": [
+        {
+          "id": 1159963843,
+          "name": "CVE-2020-7692-google-oauth-java-client-vulnerable",
+          "full_name": "andikahilmy/CVE-2020-7692-google-oauth-java-client-vulnerable",
+          "html_url": "https://github.com/andikahilmy/CVE-2020-7692-google-oauth-java-client-vulnerable",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Java",
+          "updated_at": "2026-02-17T11:32:09Z",
+          "pushed_at": "2026-02-17T11:31:43Z",
+          "created_at": "2026-02-17T11:31:34Z",
+          "topics": [],
+          "owner": {
+            "login": "andikahilmy",
+            "html_url": "https://github.com/andikahilmy"
+          },
+          "clone_url": "https://github.com/andikahilmy/CVE-2020-7692-google-oauth-java-client-vulnerable.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2020-7693",
       "repositories": [
         {
@@ -20356,25 +20463,6 @@
             "html_url": "https://github.com/wcxxxxx"
           },
           "clone_url": "https://github.com/wcxxxxx/CVE-2020-7961.git"
-        },
-        {
-          "id": 1050587655,
-          "name": "CVE-2020-7961",
-          "full_name": "neverhavenamee/CVE-2020-7961",
-          "html_url": "https://github.com/neverhavenamee/CVE-2020-7961",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2025-09-13T23:14:09Z",
-          "pushed_at": "2025-09-13T23:14:06Z",
-          "created_at": "2025-09-04T16:36:37Z",
-          "topics": [],
-          "owner": {
-            "login": "neverhavenamee",
-            "html_url": "https://github.com/neverhavenamee"
-          },
-          "clone_url": "https://github.com/neverhavenamee/CVE-2020-7961.git"
         }
       ]
     },
@@ -21486,30 +21574,6 @@
             "html_url": "https://github.com/tabbysable"
           },
           "clone_url": "https://github.com/tabbysable/POC-2020-8559.git"
-        }
-      ]
-    },
-    {
-      "cve_id": "CVE-2020-8570",
-      "repositories": [
-        {
-          "id": 1051631956,
-          "name": "kubernetes-client__java_CVE-2020-8570_client-java-parent-9_0_2_fixed",
-          "full_name": "shoucheng3/kubernetes-client__java_CVE-2020-8570_client-java-parent-9_0_2_fixed",
-          "html_url": "https://github.com/shoucheng3/kubernetes-client__java_CVE-2020-8570_client-java-parent-9_0_2_fixed",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Java",
-          "updated_at": "2025-09-06T12:05:40Z",
-          "pushed_at": "2025-11-21T03:22:27Z",
-          "created_at": "2025-09-06T12:04:11Z",
-          "topics": [],
-          "owner": {
-            "login": "shoucheng3",
-            "html_url": "https://github.com/shoucheng3"
-          },
-          "clone_url": "https://github.com/shoucheng3/kubernetes-client__java_CVE-2020-8570_client-java-parent-9_0_2_fixed.git"
         }
       ]
     },
@@ -23433,44 +23497,6 @@
           "clone_url": "https://github.com/optionalg/OpenSMTPD.git"
         },
         {
-          "id": 248239275,
-          "name": "cve2020-0796",
-          "full_name": "kernelkill/cve2020-0796",
-          "html_url": "https://github.com/kernelkill/cve2020-0796",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "Python",
-          "updated_at": "2020-03-18T13:31:02Z",
-          "pushed_at": "2020-03-18T13:31:00Z",
-          "created_at": "2020-03-18T13:28:49Z",
-          "topics": [],
-          "owner": {
-            "login": "kernelkill",
-            "html_url": "https://github.com/kernelkill"
-          },
-          "clone_url": "https://github.com/kernelkill/cve2020-0796.git"
-        },
-        {
-          "id": 1124456089,
-          "name": "bias",
-          "full_name": "BrainsBook/bias",
-          "html_url": "https://github.com/BrainsBook/bias",
-          "description": "Bluetooth Impersonation AttackS (BIAS) [CVE 2020-10135]",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "JavaScript",
-          "updated_at": "2026-01-05T15:58:26Z",
-          "pushed_at": "2026-01-05T15:58:11Z",
-          "created_at": "2025-12-29T03:53:19Z",
-          "topics": [],
-          "owner": {
-            "login": "BrainsBook",
-            "html_url": "https://github.com/BrainsBook"
-          },
-          "clone_url": "https://github.com/BrainsBook/bias.git"
-        },
-        {
           "id": 256385058,
           "name": "Docker",
           "full_name": "scxiaotan1/Docker",
@@ -23515,25 +23541,6 @@
           "clone_url": "https://github.com/kiyamehram/CVE_2020_35489_EnhancedExploit.php.git"
         },
         {
-          "id": 268830270,
-          "name": "cve2020",
-          "full_name": "haneline/cve2020",
-          "html_url": "https://github.com/haneline/cve2020",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2020-06-02T14:55:22Z",
-          "pushed_at": "2020-06-02T14:55:23Z",
-          "created_at": "2020-06-02T14:55:22Z",
-          "topics": [],
-          "owner": {
-            "login": "haneline",
-            "html_url": "https://github.com/haneline"
-          },
-          "clone_url": "https://github.com/haneline/cve2020.git"
-        },
-        {
           "id": 258993063,
           "name": "cve-2020-test",
           "full_name": "zhang192073/cve-2020-test",
@@ -23553,23 +23560,23 @@
           "clone_url": "https://github.com/zhang192073/cve-2020-test.git"
         },
         {
-          "id": 1068928119,
-          "name": "pocpoc_bypass_cve_2020-11023",
-          "full_name": "paktiko1986/pocpoc_bypass_cve_2020-11023",
-          "html_url": "https://github.com/paktiko1986/pocpoc_bypass_cve_2020-11023",
+          "id": 268830270,
+          "name": "cve2020",
+          "full_name": "haneline/cve2020",
+          "html_url": "https://github.com/haneline/cve2020",
           "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "HTML",
-          "updated_at": "2025-10-03T06:09:06Z",
-          "pushed_at": "2025-10-03T06:09:03Z",
-          "created_at": "2025-10-03T06:08:27Z",
+          "language": "",
+          "updated_at": "2020-06-02T14:55:22Z",
+          "pushed_at": "2020-06-02T14:55:23Z",
+          "created_at": "2020-06-02T14:55:22Z",
           "topics": [],
           "owner": {
-            "login": "paktiko1986",
-            "html_url": "https://github.com/paktiko1986"
+            "login": "haneline",
+            "html_url": "https://github.com/haneline"
           },
-          "clone_url": "https://github.com/paktiko1986/pocpoc_bypass_cve_2020-11023.git"
+          "clone_url": "https://github.com/haneline/cve2020.git"
         },
         {
           "id": 243260988,
@@ -23591,6 +23598,44 @@
           "clone_url": "https://github.com/b1cat/CVE_2020_1938_ajp_poc.git"
         },
         {
+          "id": 1150028520,
+          "name": "poc_strandhogg2_cve_2020_0096",
+          "full_name": "it4ch1-007/poc_strandhogg2_cve_2020_0096",
+          "html_url": "https://github.com/it4ch1-007/poc_strandhogg2_cve_2020_0096",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Java",
+          "updated_at": "2026-02-04T19:56:00Z",
+          "pushed_at": "2026-02-04T19:55:57Z",
+          "created_at": "2026-02-04T19:53:07Z",
+          "topics": [],
+          "owner": {
+            "login": "it4ch1-007",
+            "html_url": "https://github.com/it4ch1-007"
+          },
+          "clone_url": "https://github.com/it4ch1-007/poc_strandhogg2_cve_2020_0096.git"
+        },
+        {
+          "id": 239535677,
+          "name": "CVenligne2020",
+          "full_name": "StephaneLegrand/CVenligne2020",
+          "html_url": "https://github.com/StephaneLegrand/CVenligne2020",
+          "description": "Mon cv en ligne pour Openclassrooms",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "HTML",
+          "updated_at": "2020-02-10T14:51:41Z",
+          "pushed_at": "2020-02-10T14:51:39Z",
+          "created_at": "2020-02-10T14:47:05Z",
+          "topics": [],
+          "owner": {
+            "login": "StephaneLegrand",
+            "html_url": "https://github.com/StephaneLegrand"
+          },
+          "clone_url": "https://github.com/StephaneLegrand/CVenligne2020.git"
+        },
+        {
           "id": 285362364,
           "name": "CVE-2020-BIG-IP",
           "full_name": "Revanthinfosec/CVE-2020-BIG-IP",
@@ -23610,23 +23655,23 @@
           "clone_url": "https://github.com/Revanthinfosec/CVE-2020-BIG-IP.git"
         },
         {
-          "id": 1150028520,
-          "name": "poc_strandhogg2_cve_2020_0096",
-          "full_name": "it4ch1-007/poc_strandhogg2_cve_2020_0096",
-          "html_url": "https://github.com/it4ch1-007/poc_strandhogg2_cve_2020_0096",
+          "id": 248239275,
+          "name": "cve2020-0796",
+          "full_name": "kernelkill/cve2020-0796",
+          "html_url": "https://github.com/kernelkill/cve2020-0796",
           "description": "",
           "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Java",
-          "updated_at": "2026-02-04T19:56:00Z",
-          "pushed_at": "2026-02-04T19:55:57Z",
-          "created_at": "2026-02-04T19:53:07Z",
+          "forks_count": 1,
+          "language": "Python",
+          "updated_at": "2020-03-18T13:31:02Z",
+          "pushed_at": "2020-03-18T13:31:00Z",
+          "created_at": "2020-03-18T13:28:49Z",
           "topics": [],
           "owner": {
-            "login": "it4ch1-007",
-            "html_url": "https://github.com/it4ch1-007"
+            "login": "kernelkill",
+            "html_url": "https://github.com/kernelkill"
           },
-          "clone_url": "https://github.com/it4ch1-007/poc_strandhogg2_cve_2020_0096.git"
+          "clone_url": "https://github.com/kernelkill/cve2020-0796.git"
         },
         {
           "id": 297053063,
@@ -23648,23 +23693,23 @@
           "clone_url": "https://github.com/dima5455/CVE2020.git"
         },
         {
-          "id": 239535677,
-          "name": "CVenligne2020",
-          "full_name": "StephaneLegrand/CVenligne2020",
-          "html_url": "https://github.com/StephaneLegrand/CVenligne2020",
-          "description": "Mon cv en ligne pour Openclassrooms",
+          "id": 263410426,
+          "name": "SNP_report_assignement_IT19009278",
+          "full_name": "Caj6r/SNP_report_assignement_IT19009278",
+          "html_url": "https://github.com/Caj6r/SNP_report_assignement_IT19009278",
+          "description": "Report for Exploit Assignment. Topic Selected: CVE 2020-7274",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "HTML",
-          "updated_at": "2020-02-10T14:51:41Z",
-          "pushed_at": "2020-02-10T14:51:39Z",
-          "created_at": "2020-02-10T14:47:05Z",
+          "language": "",
+          "updated_at": "2020-05-12T17:55:33Z",
+          "pushed_at": "2020-05-12T17:55:31Z",
+          "created_at": "2020-05-12T17:52:00Z",
           "topics": [],
           "owner": {
-            "login": "StephaneLegrand",
-            "html_url": "https://github.com/StephaneLegrand"
+            "login": "Caj6r",
+            "html_url": "https://github.com/Caj6r"
           },
-          "clone_url": "https://github.com/StephaneLegrand/CVenligne2020.git"
+          "clone_url": "https://github.com/Caj6r/SNP_report_assignement_IT19009278.git"
         },
         {
           "id": 298454102,
@@ -23838,23 +23883,23 @@
           "clone_url": "https://github.com/arvind2022/isac_rconfig3.9.git"
         },
         {
-          "id": 263410426,
-          "name": "SNP_report_assignement_IT19009278",
-          "full_name": "Caj6r/SNP_report_assignement_IT19009278",
-          "html_url": "https://github.com/Caj6r/SNP_report_assignement_IT19009278",
-          "description": "Report for Exploit Assignment. Topic Selected: CVE 2020-7274",
+          "id": 1124456089,
+          "name": "bias",
+          "full_name": "BrainsBook/bias",
+          "html_url": "https://github.com/BrainsBook/bias",
+          "description": "Bluetooth Impersonation AttackS (BIAS) [CVE 2020-10135]",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "",
-          "updated_at": "2020-05-12T17:55:33Z",
-          "pushed_at": "2020-05-12T17:55:31Z",
-          "created_at": "2020-05-12T17:52:00Z",
+          "language": "JavaScript",
+          "updated_at": "2026-01-05T15:58:26Z",
+          "pushed_at": "2026-01-05T15:58:11Z",
+          "created_at": "2025-12-29T03:53:19Z",
           "topics": [],
           "owner": {
-            "login": "Caj6r",
-            "html_url": "https://github.com/Caj6r"
+            "login": "BrainsBook",
+            "html_url": "https://github.com/BrainsBook"
           },
-          "clone_url": "https://github.com/Caj6r/SNP_report_assignement_IT19009278.git"
+          "clone_url": "https://github.com/BrainsBook/bias.git"
         }
       ]
     }
