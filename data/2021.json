@@ -126,6 +126,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2021-1480",
+      "repositories": [
+        {
+          "id": 390713933,
+          "name": "sdwan-cve-2021-1480",
+          "full_name": "xmco/sdwan-cve-2021-1480",
+          "html_url": "https://github.com/xmco/sdwan-cve-2021-1480",
+          "description": "PoC materials to exploit the CVE-2021-1480 on Cico SD-WAN.",
+          "stargazers_count": 4,
+          "forks_count": 4,
+          "language": "Python",
+          "updated_at": "2024-08-12T20:15:06Z",
+          "pushed_at": "2021-08-02T16:14:44Z",
+          "created_at": "2021-07-29T12:17:50Z",
+          "topics": [],
+          "owner": {
+            "login": "xmco",
+            "html_url": "https://github.com/xmco"
+          },
+          "clone_url": "https://github.com/xmco/sdwan-cve-2021-1480.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2021-1647",
       "repositories": [
         {
@@ -196,6 +220,53 @@
           "clone_url": "https://github.com/cube0x0/CVE-2021-1675.git"
         },
         {
+          "id": 382182179,
+          "name": "CVE-2021-1675",
+          "full_name": "calebstewart/CVE-2021-1675",
+          "html_url": "https://github.com/calebstewart/CVE-2021-1675",
+          "description": "Pure PowerShell implementation of CVE-2021-1675 Print Spooler Local Privilege Escalation (PrintNightmare)",
+          "stargazers_count": 1089,
+          "forks_count": 230,
+          "language": "PowerShell",
+          "updated_at": "2026-02-14T20:00:25Z",
+          "pushed_at": "2021-07-05T08:54:06Z",
+          "created_at": "2021-07-01T23:45:58Z",
+          "topics": [],
+          "owner": {
+            "login": "calebstewart",
+            "html_url": "https://github.com/calebstewart"
+          },
+          "clone_url": "https://github.com/calebstewart/CVE-2021-1675.git"
+        },
+        {
+          "id": 381984439,
+          "name": "CVE-2021-1675-LPE",
+          "full_name": "hlldz/CVE-2021-1675-LPE",
+          "html_url": "https://github.com/hlldz/CVE-2021-1675-LPE",
+          "description": "Local Privilege Escalation Edition for CVE-2021-1675/CVE-2021-34527",
+          "stargazers_count": 327,
+          "forks_count": 77,
+          "language": "C",
+          "updated_at": "2026-01-13T11:22:07Z",
+          "pushed_at": "2021-07-05T06:46:12Z",
+          "created_at": "2021-07-01T09:47:13Z",
+          "topics": [
+            "cobaltstrike",
+            "cve-2021-1675",
+            "cve-2021-34527",
+            "exploit",
+            "lpe",
+            "printnightmare",
+            "reflectivedll",
+            "windows"
+          ],
+          "owner": {
+            "login": "hlldz",
+            "html_url": "https://github.com/hlldz"
+          },
+          "clone_url": "https://github.com/hlldz/CVE-2021-1675-LPE.git"
+        },
+        {
           "id": 381799016,
           "name": "CVE-2021-1675",
           "full_name": "LaresLLC/CVE-2021-1675",
@@ -237,6 +308,32 @@
           "clone_url": "https://github.com/ly4k/PrintNightmare.git"
         },
         {
+          "id": 382645654,
+          "name": "PrintNightmare-CVE-2021-34527",
+          "full_name": "nemo-wq/PrintNightmare-CVE-2021-34527",
+          "html_url": "https://github.com/nemo-wq/PrintNightmare-CVE-2021-34527",
+          "description": "PrintNightmare - Windows Print Spooler RCE/LPE Vulnerability (CVE-2021-34527, CVE-2021-1675) proof of concept exploits",
+          "stargazers_count": 166,
+          "forks_count": 41,
+          "language": "C",
+          "updated_at": "2026-02-21T21:34:00Z",
+          "pushed_at": "2021-09-13T12:12:17Z",
+          "created_at": "2021-07-03T15:15:12Z",
+          "topics": [
+            "cve-2021-1675",
+            "cve-2021-34527",
+            "howto-tutorial",
+            "printnightmare",
+            "rce",
+            "windowsexploits"
+          ],
+          "owner": {
+            "login": "nemo-wq",
+            "html_url": "https://github.com/nemo-wq"
+          },
+          "clone_url": "https://github.com/nemo-wq/PrintNightmare-CVE-2021-34527.git"
+        },
+        {
           "id": 402035048,
           "name": "CVE-2021-1675_RDL_LPE",
           "full_name": "mstxq17/CVE-2021-1675_RDL_LPE",
@@ -254,6 +351,96 @@
             "html_url": "https://github.com/mstxq17"
           },
           "clone_url": "https://github.com/mstxq17/CVE-2021-1675_RDL_LPE.git"
+        },
+        {
+          "id": 383165321,
+          "name": "PrintNightmare-LPE",
+          "full_name": "sailay1996/PrintNightmare-LPE",
+          "html_url": "https://github.com/sailay1996/PrintNightmare-LPE",
+          "description": "CVE-2021-1675 (PrintNightmare)",
+          "stargazers_count": 77,
+          "forks_count": 29,
+          "language": "C++",
+          "updated_at": "2025-12-06T04:48:18Z",
+          "pushed_at": "2021-07-05T14:34:34Z",
+          "created_at": "2021-07-05T14:17:03Z",
+          "topics": [
+            "local-privilege-escalation",
+            "printnightmare",
+            "windows-exploitation",
+            "windows-privilege-escalation"
+          ],
+          "owner": {
+            "login": "sailay1996",
+            "html_url": "https://github.com/sailay1996"
+          },
+          "clone_url": "https://github.com/sailay1996/PrintNightmare-LPE.git"
+        },
+        {
+          "id": 381971547,
+          "name": "CVE-2021-1675-LPE-EXP",
+          "full_name": "evilashz/CVE-2021-1675-LPE-EXP",
+          "html_url": "https://github.com/evilashz/CVE-2021-1675-LPE-EXP",
+          "description": "PrintNightmare , Local Privilege Escalation of CVE-2021-1675 or CVE-2021-34527",
+          "stargazers_count": 58,
+          "forks_count": 19,
+          "language": "C++",
+          "updated_at": "2025-12-09T13:46:20Z",
+          "pushed_at": "2021-07-02T10:47:36Z",
+          "created_at": "2021-07-01T09:00:31Z",
+          "topics": [
+            "cve-2021-1675",
+            "cve-2021-34527",
+            "hacktool",
+            "lpe",
+            "printnightmare",
+            "redteam",
+            "redteam-tools",
+            "windows"
+          ],
+          "owner": {
+            "login": "evilashz",
+            "html_url": "https://github.com/evilashz"
+          },
+          "clone_url": "https://github.com/evilashz/CVE-2021-1675-LPE-EXP.git"
+        },
+        {
+          "id": 382050919,
+          "name": "CVE-2021-1675_PrintNightMare",
+          "full_name": "cybersecurityworks553/CVE-2021-1675_PrintNightMare",
+          "html_url": "https://github.com/cybersecurityworks553/CVE-2021-1675_PrintNightMare",
+          "description": "",
+          "stargazers_count": 23,
+          "forks_count": 14,
+          "language": "Python",
+          "updated_at": "2024-08-12T20:14:22Z",
+          "pushed_at": "2021-11-18T16:46:46Z",
+          "created_at": "2021-07-01T13:58:01Z",
+          "topics": [],
+          "owner": {
+            "login": "cybersecurityworks553",
+            "html_url": "https://github.com/cybersecurityworks553"
+          },
+          "clone_url": "https://github.com/cybersecurityworks553/CVE-2021-1675_PrintNightMare.git"
+        },
+        {
+          "id": 383728669,
+          "name": "PrintNightmare",
+          "full_name": "JumpsecLabs/PrintNightmare",
+          "html_url": "https://github.com/JumpsecLabs/PrintNightmare",
+          "description": "Information on the Windows Spooler vulnerability - CVE-2021-1675; CVE 2021 34527",
+          "stargazers_count": 19,
+          "forks_count": 8,
+          "language": "",
+          "updated_at": "2025-12-28T01:41:35Z",
+          "pushed_at": "2021-07-12T09:28:16Z",
+          "created_at": "2021-07-07T08:32:09Z",
+          "topics": [],
+          "owner": {
+            "login": "JumpsecLabs",
+            "html_url": "https://github.com/JumpsecLabs"
+          },
+          "clone_url": "https://github.com/JumpsecLabs/PrintNightmare.git"
         },
         {
           "id": 435194981,
@@ -275,6 +462,25 @@
           "clone_url": "https://github.com/eversinc33/NimNightmare.git"
         },
         {
+          "id": 384854320,
+          "name": "cve-2021-1675",
+          "full_name": "k8gege/cve-2021-1675",
+          "html_url": "https://github.com/k8gege/cve-2021-1675",
+          "description": "",
+          "stargazers_count": 16,
+          "forks_count": 3,
+          "language": "",
+          "updated_at": "2024-08-12T20:14:37Z",
+          "pushed_at": "2021-07-11T03:49:44Z",
+          "created_at": "2021-07-11T03:48:25Z",
+          "topics": [],
+          "owner": {
+            "login": "k8gege",
+            "html_url": "https://github.com/k8gege"
+          },
+          "clone_url": "https://github.com/k8gege/cve-2021-1675.git"
+        },
+        {
           "id": 410658843,
           "name": "SharpPN",
           "full_name": "Wra7h/SharpPN",
@@ -292,6 +498,159 @@
             "html_url": "https://github.com/Wra7h"
           },
           "clone_url": "https://github.com/Wra7h/SharpPN.git"
+        },
+        {
+          "id": 382407157,
+          "name": "CVE-2021-1675",
+          "full_name": "corelight/CVE-2021-1675",
+          "html_url": "https://github.com/corelight/CVE-2021-1675",
+          "description": "",
+          "stargazers_count": 9,
+          "forks_count": 4,
+          "language": "Shell",
+          "updated_at": "2024-10-12T10:29:08Z",
+          "pushed_at": "2024-09-03T18:23:07Z",
+          "created_at": "2021-07-02T16:44:24Z",
+          "topics": [],
+          "owner": {
+            "login": "corelight",
+            "html_url": "https://github.com/corelight"
+          },
+          "clone_url": "https://github.com/corelight/CVE-2021-1675.git"
+        },
+        {
+          "id": 382200984,
+          "name": "CVE-2021-1675-SCANNER",
+          "full_name": "Leonidus0x10/CVE-2021-1675-SCANNER",
+          "html_url": "https://github.com/Leonidus0x10/CVE-2021-1675-SCANNER",
+          "description": "Vulnerability Scanner for CVE-2021-1675/PrintNightmare",
+          "stargazers_count": 9,
+          "forks_count": 3,
+          "language": "Python",
+          "updated_at": "2025-12-09T13:46:22Z",
+          "pushed_at": "2021-07-02T01:52:46Z",
+          "created_at": "2021-07-02T01:45:00Z",
+          "topics": [
+            "cve-2021-1675",
+            "exploit",
+            "hacktheplanet",
+            "python",
+            "scanner"
+          ],
+          "owner": {
+            "login": "Leonidus0x10",
+            "html_url": "https://github.com/Leonidus0x10"
+          },
+          "clone_url": "https://github.com/Leonidus0x10/CVE-2021-1675-SCANNER.git"
+        },
+        {
+          "id": 382894525,
+          "name": "CVE-2021-34527-1675",
+          "full_name": "CnOxx1/CVE-2021-34527-1675",
+          "html_url": "https://github.com/CnOxx1/CVE-2021-34527-1675",
+          "description": "Cve-2021-1675 or cve-2021-34527? Detailed analysis and exploitation of windows print spooler 0day vulnerability！！！",
+          "stargazers_count": 5,
+          "forks_count": 1,
+          "language": "",
+          "updated_at": "2025-10-04T17:41:50Z",
+          "pushed_at": "2021-07-04T16:31:21Z",
+          "created_at": "2021-07-04T16:09:18Z",
+          "topics": [],
+          "owner": {
+            "login": "CnOxx1",
+            "html_url": "https://github.com/CnOxx1"
+          },
+          "clone_url": "https://github.com/CnOxx1/CVE-2021-34527-1675.git"
+        },
+        {
+          "id": 382815972,
+          "name": "PrintNightmare-CVE-2021-1675",
+          "full_name": "exploitblizzard/PrintNightmare-CVE-2021-1675",
+          "html_url": "https://github.com/exploitblizzard/PrintNightmare-CVE-2021-1675",
+          "description": "Youtube : https://youtu.be/Zr0KjYDSFKQ",
+          "stargazers_count": 5,
+          "forks_count": 4,
+          "language": "",
+          "updated_at": "2024-08-12T20:14:26Z",
+          "pushed_at": "2021-07-04T09:57:46Z",
+          "created_at": "2021-07-04T09:50:39Z",
+          "topics": [],
+          "owner": {
+            "login": "exploitblizzard",
+            "html_url": "https://github.com/exploitblizzard"
+          },
+          "clone_url": "https://github.com/exploitblizzard/PrintNightmare-CVE-2021-1675.git"
+        },
+        {
+          "id": 382249207,
+          "name": "CVE-2021-1675",
+          "full_name": "thomasgeens/CVE-2021-1675",
+          "html_url": "https://github.com/thomasgeens/CVE-2021-1675",
+          "description": "",
+          "stargazers_count": 3,
+          "forks_count": 2,
+          "language": "PowerShell",
+          "updated_at": "2024-08-12T20:14:23Z",
+          "pushed_at": "2021-07-02T06:14:39Z",
+          "created_at": "2021-07-02T06:14:29Z",
+          "topics": [],
+          "owner": {
+            "login": "thomasgeens",
+            "html_url": "https://github.com/thomasgeens"
+          },
+          "clone_url": "https://github.com/thomasgeens/CVE-2021-1675.git"
+        },
+        {
+          "id": 390263988,
+          "name": "PrintNightmare",
+          "full_name": "Tomparte/PrintNightmare",
+          "html_url": "https://github.com/Tomparte/PrintNightmare",
+          "description": "To fight against Windows security breach PrintNightmare! (CVE-2021-34527, CVE-2021-1675)",
+          "stargazers_count": 3,
+          "forks_count": 0,
+          "language": "PowerShell",
+          "updated_at": "2023-08-01T13:42:52Z",
+          "pushed_at": "2021-08-20T11:41:18Z",
+          "created_at": "2021-07-28T07:55:42Z",
+          "topics": [
+            "batch-script",
+            "cve-2021-1675",
+            "cve-2021-34527",
+            "cve-2021-36958",
+            "cve-2021-40447",
+            "cybersecurity",
+            "powershell-script",
+            "print",
+            "printnightmare",
+            "security",
+            "spooler",
+            "to-do",
+            "windows"
+          ],
+          "owner": {
+            "login": "Tomparte",
+            "html_url": "https://github.com/Tomparte"
+          },
+          "clone_url": "https://github.com/Tomparte/PrintNightmare.git"
+        },
+        {
+          "id": 388427598,
+          "name": "my-CVE-2021-1675",
+          "full_name": "hahaleyile/my-CVE-2021-1675",
+          "html_url": "https://github.com/hahaleyile/my-CVE-2021-1675",
+          "description": "see https://github.com/cube0x0/CVE-2021-1675",
+          "stargazers_count": 3,
+          "forks_count": 3,
+          "language": "Python",
+          "updated_at": "2024-08-12T20:14:53Z",
+          "pushed_at": "2021-08-13T15:15:05Z",
+          "created_at": "2021-07-22T10:49:30Z",
+          "topics": [],
+          "owner": {
+            "login": "hahaleyile",
+            "html_url": "https://github.com/hahaleyile"
+          },
+          "clone_url": "https://github.com/hahaleyile/my-CVE-2021-1675.git"
         },
         {
           "id": 381858715,
@@ -313,6 +672,63 @@
           "clone_url": "https://github.com/kondah/patch-cve-2021-1675.git"
         },
         {
+          "id": 382609559,
+          "name": "PrintNightmare",
+          "full_name": "ozergoker/PrintNightmare",
+          "html_url": "https://github.com/ozergoker/PrintNightmare",
+          "description": "Windows Print Spooler Service RCE CVE-2021-1675 (PrintNightmare)",
+          "stargazers_count": 2,
+          "forks_count": 1,
+          "language": "",
+          "updated_at": "2024-08-12T20:14:26Z",
+          "pushed_at": "2021-07-03T12:43:26Z",
+          "created_at": "2021-07-03T12:25:21Z",
+          "topics": [],
+          "owner": {
+            "login": "ozergoker",
+            "html_url": "https://github.com/ozergoker"
+          },
+          "clone_url": "https://github.com/ozergoker/PrintNightmare.git"
+        },
+        {
+          "id": 382399375,
+          "name": "CVE-2021-1675-PrintNightmare",
+          "full_name": "killtr0/CVE-2021-1675-PrintNightmare",
+          "html_url": "https://github.com/killtr0/CVE-2021-1675-PrintNightmare",
+          "description": "",
+          "stargazers_count": 2,
+          "forks_count": 1,
+          "language": "PowerShell",
+          "updated_at": "2024-08-12T20:14:25Z",
+          "pushed_at": "2021-07-02T16:12:59Z",
+          "created_at": "2021-07-02T16:12:15Z",
+          "topics": [],
+          "owner": {
+            "login": "killtr0",
+            "html_url": "https://github.com/killtr0"
+          },
+          "clone_url": "https://github.com/killtr0/CVE-2021-1675-PrintNightmare.git"
+        },
+        {
+          "id": 384183711,
+          "name": "CVE-2021-1675-Yara",
+          "full_name": "bartimusprimed/CVE-2021-1675-Yara",
+          "html_url": "https://github.com/bartimusprimed/CVE-2021-1675-Yara",
+          "description": "",
+          "stargazers_count": 2,
+          "forks_count": 1,
+          "language": "YARA",
+          "updated_at": "2024-08-12T20:14:33Z",
+          "pushed_at": "2021-07-08T16:19:45Z",
+          "created_at": "2021-07-08T16:18:52Z",
+          "topics": [],
+          "owner": {
+            "login": "bartimusprimed",
+            "html_url": "https://github.com/bartimusprimed"
+          },
+          "clone_url": "https://github.com/bartimusprimed/CVE-2021-1675-Yara.git"
+        },
+        {
           "id": 381392691,
           "name": "CVE-2021-1675",
           "full_name": "yu2u/CVE-2021-1675",
@@ -330,6 +746,44 @@
             "html_url": "https://github.com/yu2u"
           },
           "clone_url": "https://github.com/yu2u/CVE-2021-1675.git"
+        },
+        {
+          "id": 382418030,
+          "name": "CVE-2021-1675",
+          "full_name": "kougyokugentou/CVE-2021-1675",
+          "html_url": "https://github.com/kougyokugentou/CVE-2021-1675",
+          "description": "A small powershell script to disable print spooler service using desired state configuration",
+          "stargazers_count": 1,
+          "forks_count": 1,
+          "language": "PowerShell",
+          "updated_at": "2021-12-22T20:12:23Z",
+          "pushed_at": "2021-07-02T17:40:09Z",
+          "created_at": "2021-07-02T17:29:04Z",
+          "topics": [],
+          "owner": {
+            "login": "kougyokugentou",
+            "html_url": "https://github.com/kougyokugentou"
+          },
+          "clone_url": "https://github.com/kougyokugentou/CVE-2021-1675.git"
+        },
+        {
+          "id": 387694592,
+          "name": "CVE-2021-1675",
+          "full_name": "Winter3un/CVE-2021-1675",
+          "html_url": "https://github.com/Winter3un/CVE-2021-1675",
+          "description": "",
+          "stargazers_count": 1,
+          "forks_count": 1,
+          "language": "",
+          "updated_at": "2024-08-12T20:14:50Z",
+          "pushed_at": "2021-07-20T06:46:12Z",
+          "created_at": "2021-07-20T06:26:45Z",
+          "topics": [],
+          "owner": {
+            "login": "Winter3un",
+            "html_url": "https://github.com/Winter3un"
+          },
+          "clone_url": "https://github.com/Winter3un/CVE-2021-1675.git"
         },
         {
           "id": 413951914,
@@ -351,6 +805,164 @@
           "clone_url": "https://github.com/OppressionBreedsResistance/CVE-2021-1675-PrintNightmare.git"
         },
         {
+          "id": 382024474,
+          "name": "CVE-2021-1675",
+          "full_name": "puckiestyle/CVE-2021-1675",
+          "html_url": "https://github.com/puckiestyle/CVE-2021-1675",
+          "description": "",
+          "stargazers_count": 1,
+          "forks_count": 5,
+          "language": "PowerShell",
+          "updated_at": "2024-08-12T20:14:22Z",
+          "pushed_at": "2021-10-31T15:29:21Z",
+          "created_at": "2021-07-01T12:24:19Z",
+          "topics": [],
+          "owner": {
+            "login": "puckiestyle",
+            "html_url": "https://github.com/puckiestyle"
+          },
+          "clone_url": "https://github.com/puckiestyle/CVE-2021-1675.git"
+        },
+        {
+          "id": 382266932,
+          "name": "CVE-2021-1675_CarbonBlack_HuntingQuery",
+          "full_name": "mrezqi/CVE-2021-1675_CarbonBlack_HuntingQuery",
+          "html_url": "https://github.com/mrezqi/CVE-2021-1675_CarbonBlack_HuntingQuery",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 1,
+          "language": "",
+          "updated_at": "2024-08-12T20:14:24Z",
+          "pushed_at": "2021-07-02T08:01:07Z",
+          "created_at": "2021-07-02T07:30:24Z",
+          "topics": [],
+          "owner": {
+            "login": "mrezqi",
+            "html_url": "https://github.com/mrezqi"
+          },
+          "clone_url": "https://github.com/mrezqi/CVE-2021-1675_CarbonBlack_HuntingQuery.git"
+        },
+        {
+          "id": 382021281,
+          "name": "CVE-2021-34527",
+          "full_name": "DenizSe/CVE-2021-34527",
+          "html_url": "https://github.com/DenizSe/CVE-2021-34527",
+          "description": "Small Powershell Script to detect Running Printer Spoolers on Domain Controller",
+          "stargazers_count": 0,
+          "forks_count": 2,
+          "language": "PowerShell",
+          "updated_at": "2021-07-02T07:49:06Z",
+          "pushed_at": "2021-07-02T07:45:59Z",
+          "created_at": "2021-07-01T12:12:16Z",
+          "topics": [
+            "cve-2021-1675",
+            "cve-2021-34527",
+            "domaincontroller",
+            "printnightmare",
+            "printspooler"
+          ],
+          "owner": {
+            "login": "DenizSe",
+            "html_url": "https://github.com/DenizSe"
+          },
+          "clone_url": "https://github.com/DenizSe/CVE-2021-34527.git"
+        },
+        {
+          "id": 383128850,
+          "name": "CVE-2021-1675",
+          "full_name": "edsonjt81/CVE-2021-1675",
+          "html_url": "https://github.com/edsonjt81/CVE-2021-1675",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 1,
+          "language": "C#",
+          "updated_at": "2024-08-12T20:14:28Z",
+          "pushed_at": "2022-12-27T14:15:54Z",
+          "created_at": "2021-07-05T12:10:43Z",
+          "topics": [],
+          "owner": {
+            "login": "edsonjt81",
+            "html_url": "https://github.com/edsonjt81"
+          },
+          "clone_url": "https://github.com/edsonjt81/CVE-2021-1675.git"
+        },
+        {
+          "id": 382141130,
+          "name": "CVE-2021-1675",
+          "full_name": "tanarchytan/CVE-2021-1675",
+          "html_url": "https://github.com/tanarchytan/CVE-2021-1675",
+          "description": "Fix without disabling Print Spooler",
+          "stargazers_count": 0,
+          "forks_count": 3,
+          "language": "PowerShell",
+          "updated_at": "2024-08-12T20:14:23Z",
+          "pushed_at": "2021-07-02T04:32:18Z",
+          "created_at": "2021-07-01T19:50:46Z",
+          "topics": [],
+          "owner": {
+            "login": "tanarchytan",
+            "html_url": "https://github.com/tanarchytan"
+          },
+          "clone_url": "https://github.com/tanarchytan/CVE-2021-1675.git"
+        },
+        {
+          "id": 387202198,
+          "name": "Microsoft-CVE-2021-1675",
+          "full_name": "zha0/Microsoft-CVE-2021-1675",
+          "html_url": "https://github.com/zha0/Microsoft-CVE-2021-1675",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 2,
+          "language": "",
+          "updated_at": "2021-12-07T10:08:12Z",
+          "pushed_at": "2021-07-18T14:03:05Z",
+          "created_at": "2021-07-18T15:00:27Z",
+          "topics": [],
+          "owner": {
+            "login": "zha0",
+            "html_url": "https://github.com/zha0"
+          },
+          "clone_url": "https://github.com/zha0/Microsoft-CVE-2021-1675.git"
+        },
+        {
+          "id": 382496518,
+          "name": "cve-2021-1675-printnightmare",
+          "full_name": "initconf/cve-2021-1675-printnightmare",
+          "html_url": "https://github.com/initconf/cve-2021-1675-printnightmare",
+          "description": "to catch cve-2021-1675-printnightmare",
+          "stargazers_count": 0,
+          "forks_count": 1,
+          "language": "Zeek",
+          "updated_at": "2024-08-12T20:14:25Z",
+          "pushed_at": "2021-07-03T01:08:43Z",
+          "created_at": "2021-07-03T01:04:06Z",
+          "topics": [],
+          "owner": {
+            "login": "initconf",
+            "html_url": "https://github.com/initconf"
+          },
+          "clone_url": "https://github.com/initconf/cve-2021-1675-printnightmare.git"
+        },
+        {
+          "id": 382425733,
+          "name": "CVE-2021-1675",
+          "full_name": "ptter23/CVE-2021-1675",
+          "html_url": "https://github.com/ptter23/CVE-2021-1675",
+          "description": "CVE-2021-1675: ZERO-DAY VULNERABILITY IN WINDOWS PRINTER SERVICE WITH AN EXPLOIT AVAILABLE IN ALL OPERATING SYSTEM VERSIONS",
+          "stargazers_count": 0,
+          "forks_count": 1,
+          "language": "",
+          "updated_at": "2024-08-12T20:14:25Z",
+          "pushed_at": "2021-07-02T18:07:45Z",
+          "created_at": "2021-07-02T18:01:21Z",
+          "topics": [],
+          "owner": {
+            "login": "ptter23",
+            "html_url": "https://github.com/ptter23"
+          },
+          "clone_url": "https://github.com/ptter23/CVE-2021-1675.git"
+        },
+        {
           "id": 1099673899,
           "name": "CVE-2021-1675",
           "full_name": "ccordeiro/CVE-2021-1675",
@@ -368,6 +980,44 @@
             "html_url": "https://github.com/ccordeiro"
           },
           "clone_url": "https://github.com/ccordeiro/CVE-2021-1675.git"
+        },
+        {
+          "id": 385174791,
+          "name": "PrintNightmare-CVE-2021-1675-CVE-2021-34527",
+          "full_name": "galoget/PrintNightmare-CVE-2021-1675-CVE-2021-34527",
+          "html_url": "https://github.com/galoget/PrintNightmare-CVE-2021-1675-CVE-2021-34527",
+          "description": "CVE-2021-1675 / CVE-2021-34527 - PrintNightmare Python, C# and PowerShell Exploits Implementations (LPE \u0026 RCE)",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "PowerShell",
+          "updated_at": "2024-08-12T20:14:38Z",
+          "pushed_at": "2021-07-12T08:35:30Z",
+          "created_at": "2021-07-12T08:18:40Z",
+          "topics": [],
+          "owner": {
+            "login": "galoget",
+            "html_url": "https://github.com/galoget"
+          },
+          "clone_url": "https://github.com/galoget/PrintNightmare-CVE-2021-1675-CVE-2021-34527.git"
+        },
+        {
+          "id": 386724774,
+          "name": "Microsoft-CVE-2021-1675",
+          "full_name": "thalpius/Microsoft-CVE-2021-1675",
+          "html_url": "https://github.com/thalpius/Microsoft-CVE-2021-1675",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "C#",
+          "updated_at": "2024-05-27T19:04:19Z",
+          "pushed_at": "2024-05-27T19:04:08Z",
+          "created_at": "2021-07-16T18:06:05Z",
+          "topics": [],
+          "owner": {
+            "login": "thalpius",
+            "html_url": "https://github.com/thalpius"
+          },
+          "clone_url": "https://github.com/thalpius/Microsoft-CVE-2021-1675.git"
         }
       ]
     },
@@ -923,6 +1573,25 @@
       "cve_id": "CVE-2021-21",
       "repositories": [
         {
+          "id": 381893993,
+          "name": "cve-2021-21",
+          "full_name": "zhongjiao01/cve-2021-21",
+          "html_url": "https://github.com/zhongjiao01/cve-2021-21",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2021-07-01T03:08:11Z",
+          "pushed_at": "2021-07-01T03:08:12Z",
+          "created_at": "2021-07-01T03:08:11Z",
+          "topics": [],
+          "owner": {
+            "login": "zhongjiao01",
+            "html_url": "https://github.com/zhongjiao01"
+          },
+          "clone_url": "https://github.com/zhongjiao01/cve-2021-21.git"
+        },
+        {
           "id": 433322631,
           "name": "test",
           "full_name": "zhongjiao01/test",
@@ -1411,25 +2080,6 @@
           "clone_url": "https://github.com/Maskhe/CVE-2021-21300.git"
         },
         {
-          "id": 346425578,
-          "name": "CVE-2021-21300",
-          "full_name": "Faisal78123/CVE-2021-21300",
-          "html_url": "https://github.com/Faisal78123/CVE-2021-21300",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2021-03-18T10:37:28Z",
-          "pushed_at": "2021-03-18T10:37:26Z",
-          "created_at": "2021-03-10T16:45:46Z",
-          "topics": [],
-          "owner": {
-            "login": "Faisal78123",
-            "html_url": "https://github.com/Faisal78123"
-          },
-          "clone_url": "https://github.com/Faisal78123/CVE-2021-21300.git"
-        },
-        {
           "id": 347847778,
           "name": "cve-2021-21300",
           "full_name": "ETOCheney/cve-2021-21300",
@@ -1487,23 +2137,23 @@
           "clone_url": "https://github.com/1uanWu/CVE-2021-21300.git"
         },
         {
-          "id": 1085240130,
-          "name": "cve-2021-21300",
-          "full_name": "the-chivalrousZ/cve-2021-21300",
-          "html_url": "https://github.com/the-chivalrousZ/cve-2021-21300",
-          "description": "CVE-2021-21300 test",
+          "id": 346425578,
+          "name": "CVE-2021-21300",
+          "full_name": "Faisal78123/CVE-2021-21300",
+          "html_url": "https://github.com/Faisal78123/CVE-2021-21300",
+          "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "",
-          "updated_at": "2025-10-28T19:18:53Z",
-          "pushed_at": "2025-10-28T19:18:49Z",
-          "created_at": "2025-10-28T19:11:58Z",
+          "language": "Shell",
+          "updated_at": "2021-03-18T10:37:28Z",
+          "pushed_at": "2021-03-18T10:37:26Z",
+          "created_at": "2021-03-10T16:45:46Z",
           "topics": [],
           "owner": {
-            "login": "the-chivalrousZ",
-            "html_url": "https://github.com/the-chivalrousZ"
+            "login": "Faisal78123",
+            "html_url": "https://github.com/Faisal78123"
           },
-          "clone_url": "https://github.com/the-chivalrousZ/cve-2021-21300.git"
+          "clone_url": "https://github.com/Faisal78123/CVE-2021-21300.git"
         },
         {
           "id": 346434188,
@@ -1702,6 +2352,25 @@
             "html_url": "https://github.com/G01d3nW01f"
           },
           "clone_url": "https://github.com/G01d3nW01f/CVE-2021-21315.git"
+        },
+        {
+          "id": 387065961,
+          "name": "CVE-2021-21315-exploit",
+          "full_name": "MazX0p/CVE-2021-21315-exploit",
+          "html_url": "https://github.com/MazX0p/CVE-2021-21315-exploit",
+          "description": "systeminformation",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2021-07-18T16:23:04Z",
+          "pushed_at": "2021-07-18T16:23:02Z",
+          "created_at": "2021-07-18T01:18:31Z",
+          "topics": [],
+          "owner": {
+            "login": "MazX0p",
+            "html_url": "https://github.com/MazX0p"
+          },
+          "clone_url": "https://github.com/MazX0p/CVE-2021-21315-exploit.git"
         },
         {
           "id": 427956887,
@@ -2409,6 +3078,25 @@
           "clone_url": "https://github.com/ByZain/CVE-2021-21972.git"
         },
         {
+          "id": 389736878,
+          "name": "CVE-2021-21972",
+          "full_name": "haidv35/CVE-2021-21972",
+          "html_url": "https://github.com/haidv35/CVE-2021-21972",
+          "description": "",
+          "stargazers_count": 3,
+          "forks_count": 2,
+          "language": "Python",
+          "updated_at": "2023-03-08T02:48:17Z",
+          "pushed_at": "2021-08-02T17:45:59Z",
+          "created_at": "2021-07-26T18:48:28Z",
+          "topics": [],
+          "owner": {
+            "login": "haidv35",
+            "html_url": "https://github.com/haidv35"
+          },
+          "clone_url": "https://github.com/haidv35/CVE-2021-21972.git"
+        },
+        {
           "id": 360539179,
           "name": "vSphereyeeter",
           "full_name": "pettyhacks/vSphereyeeter",
@@ -2445,25 +3133,6 @@
             "html_url": "https://github.com/renini"
           },
           "clone_url": "https://github.com/renini/CVE-2021-21972.git"
-        },
-        {
-          "id": 342109140,
-          "name": "westone-CVE-2021-21972-scanner",
-          "full_name": "Osyanina/westone-CVE-2021-21972-scanner",
-          "html_url": "https://github.com/Osyanina/westone-CVE-2021-21972-scanner",
-          "description": "A vulnerability scanner that detects CVE-2021-21972 vulnerabilities.",
-          "stargazers_count": 1,
-          "forks_count": 1,
-          "language": "",
-          "updated_at": "2021-03-20T07:55:11Z",
-          "pushed_at": "2021-03-20T07:55:09Z",
-          "created_at": "2021-02-25T03:19:25Z",
-          "topics": [],
-          "owner": {
-            "login": "Osyanina",
-            "html_url": "https://github.com/Osyanina"
-          },
-          "clone_url": "https://github.com/Osyanina/westone-CVE-2021-21972-scanner.git"
         },
         {
           "id": 342829114,
@@ -2504,23 +3173,23 @@
           "clone_url": "https://github.com/L-pin/CVE-2021-21972.git"
         },
         {
-          "id": 342822880,
-          "name": "Detect-CVE-2021-21972",
-          "full_name": "JMousqueton/Detect-CVE-2021-21972",
-          "html_url": "https://github.com/JMousqueton/Detect-CVE-2021-21972",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2021-02-27T10:00:17Z",
-          "pushed_at": "2021-02-27T10:00:15Z",
-          "created_at": "2021-02-27T09:53:57Z",
+          "id": 342109140,
+          "name": "westone-CVE-2021-21972-scanner",
+          "full_name": "Osyanina/westone-CVE-2021-21972-scanner",
+          "html_url": "https://github.com/Osyanina/westone-CVE-2021-21972-scanner",
+          "description": "A vulnerability scanner that detects CVE-2021-21972 vulnerabilities.",
+          "stargazers_count": 1,
+          "forks_count": 1,
+          "language": "",
+          "updated_at": "2021-03-20T07:55:11Z",
+          "pushed_at": "2021-03-20T07:55:09Z",
+          "created_at": "2021-02-25T03:19:25Z",
           "topics": [],
           "owner": {
-            "login": "JMousqueton",
-            "html_url": "https://github.com/JMousqueton"
+            "login": "Osyanina",
+            "html_url": "https://github.com/Osyanina"
           },
-          "clone_url": "https://github.com/JMousqueton/Detect-CVE-2021-21972.git"
+          "clone_url": "https://github.com/Osyanina/westone-CVE-2021-21972-scanner.git"
         },
         {
           "id": 1143292650,
@@ -2542,6 +3211,25 @@
           "clone_url": "https://github.com/SimoesCTT/CTT-enhanced-VMware-vCenter.git"
         },
         {
+          "id": 343983949,
+          "name": "cve-2021-21972",
+          "full_name": "d3sh1n/cve-2021-21972",
+          "html_url": "https://github.com/d3sh1n/cve-2021-21972",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 1,
+          "language": "Python",
+          "updated_at": "2021-12-27T05:40:13Z",
+          "pushed_at": "2021-03-11T08:21:04Z",
+          "created_at": "2021-03-03T03:01:46Z",
+          "topics": [],
+          "owner": {
+            "login": "d3sh1n",
+            "html_url": "https://github.com/d3sh1n"
+          },
+          "clone_url": "https://github.com/d3sh1n/cve-2021-21972.git"
+        },
+        {
           "id": 405565320,
           "name": "CVE-2021-21972",
           "full_name": "TAI-REx/CVE-2021-21972",
@@ -2561,23 +3249,23 @@
           "clone_url": "https://github.com/TAI-REx/CVE-2021-21972.git"
         },
         {
-          "id": 343983949,
-          "name": "cve-2021-21972",
-          "full_name": "d3sh1n/cve-2021-21972",
-          "html_url": "https://github.com/d3sh1n/cve-2021-21972",
+          "id": 342822880,
+          "name": "Detect-CVE-2021-21972",
+          "full_name": "JMousqueton/Detect-CVE-2021-21972",
+          "html_url": "https://github.com/JMousqueton/Detect-CVE-2021-21972",
           "description": "",
           "stargazers_count": 0,
-          "forks_count": 1,
+          "forks_count": 0,
           "language": "Python",
-          "updated_at": "2021-12-27T05:40:13Z",
-          "pushed_at": "2021-03-11T08:21:04Z",
-          "created_at": "2021-03-03T03:01:46Z",
+          "updated_at": "2021-02-27T10:00:17Z",
+          "pushed_at": "2021-02-27T10:00:15Z",
+          "created_at": "2021-02-27T09:53:57Z",
           "topics": [],
           "owner": {
-            "login": "d3sh1n",
-            "html_url": "https://github.com/d3sh1n"
+            "login": "JMousqueton",
+            "html_url": "https://github.com/JMousqueton"
           },
-          "clone_url": "https://github.com/d3sh1n/cve-2021-21972.git"
+          "clone_url": "https://github.com/JMousqueton/Detect-CVE-2021-21972.git"
         }
       ]
     },
@@ -3131,6 +3819,25 @@
           "clone_url": "https://github.com/daedalus/CVE-2021-21985.git"
         },
         {
+          "id": 384003238,
+          "name": "CVE-2021-21985",
+          "full_name": "haidv35/CVE-2021-21985",
+          "html_url": "https://github.com/haidv35/CVE-2021-21985",
+          "description": "",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2023-03-08T02:48:17Z",
+          "pushed_at": "2021-07-12T11:04:36Z",
+          "created_at": "2021-07-08T04:45:19Z",
+          "topics": [],
+          "owner": {
+            "login": "haidv35",
+            "html_url": "https://github.com/haidv35"
+          },
+          "clone_url": "https://github.com/haidv35/CVE-2021-21985.git"
+        },
+        {
           "id": 371223609,
           "name": "CVE-2021-21985",
           "full_name": "bigbroke/CVE-2021-21985",
@@ -3148,6 +3855,25 @@
             "html_url": "https://github.com/bigbroke"
           },
           "clone_url": "https://github.com/bigbroke/CVE-2021-21985.git"
+        },
+        {
+          "id": 385047792,
+          "name": "CVE-2021-21985",
+          "full_name": "aristosMiliaressis/CVE-2021-21985",
+          "html_url": "https://github.com/aristosMiliaressis/CVE-2021-21985",
+          "description": "cve-2021-21985 powershell poc",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "PowerShell",
+          "updated_at": "2024-06-21T00:09:25Z",
+          "pushed_at": "2021-07-11T20:39:37Z",
+          "created_at": "2021-07-11T20:38:19Z",
+          "topics": [],
+          "owner": {
+            "login": "aristosMiliaressis",
+            "html_url": "https://github.com/aristosMiliaressis"
+          },
+          "clone_url": "https://github.com/aristosMiliaressis/CVE-2021-21985.git"
         },
         {
           "id": 372936761,
@@ -3552,6 +4278,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2021-22146",
+      "repositories": [
+        {
+          "id": 388358547,
+          "name": "cve-2021-22146",
+          "full_name": "magichk/cve-2021-22146",
+          "html_url": "https://github.com/magichk/cve-2021-22146",
+          "description": "",
+          "stargazers_count": 3,
+          "forks_count": 6,
+          "language": "Python",
+          "updated_at": "2024-08-12T20:14:53Z",
+          "pushed_at": "2021-07-26T16:27:49Z",
+          "created_at": "2021-07-22T06:50:34Z",
+          "topics": [],
+          "owner": {
+            "login": "magichk",
+            "html_url": "https://github.com/magichk"
+          },
+          "clone_url": "https://github.com/magichk/cve-2021-22146.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2021-22192",
       "repositories": [
         {
@@ -3652,7 +4402,7 @@
           "html_url": "https://github.com/convisolabs/CVE-2021-22204-exiftool",
           "description": "Python exploit for the CVE-2021-22204 vulnerability in Exiftool",
           "stargazers_count": 94,
-          "forks_count": 25,
+          "forks_count": 26,
           "language": "Perl",
           "updated_at": "2025-10-04T17:41:45Z",
           "pushed_at": "2021-05-20T21:42:43Z",
@@ -4297,6 +5047,63 @@
       "cve_id": "CVE-2021-22555",
       "repositories": [
         {
+          "id": 386476892,
+          "name": "CVE-2021-22555-Exploit",
+          "full_name": "xyjl-ly/CVE-2021-22555-Exploit",
+          "html_url": "https://github.com/xyjl-ly/CVE-2021-22555-Exploit",
+          "description": "CVE-2021-22555 Exploit",
+          "stargazers_count": 13,
+          "forks_count": 17,
+          "language": "",
+          "updated_at": "2025-10-10T16:33:24Z",
+          "pushed_at": "2022-07-28T01:56:07Z",
+          "created_at": "2021-07-16T01:54:01Z",
+          "topics": [],
+          "owner": {
+            "login": "xyjl-ly",
+            "html_url": "https://github.com/xyjl-ly"
+          },
+          "clone_url": "https://github.com/xyjl-ly/CVE-2021-22555-Exploit.git"
+        },
+        {
+          "id": 386739997,
+          "name": "container-cve-2021-22555",
+          "full_name": "cgwalters/container-cve-2021-22555",
+          "html_url": "https://github.com/cgwalters/container-cve-2021-22555",
+          "description": "",
+          "stargazers_count": 4,
+          "forks_count": 2,
+          "language": "C",
+          "updated_at": "2021-12-01T15:38:51Z",
+          "pushed_at": "2021-07-19T20:05:49Z",
+          "created_at": "2021-07-16T19:12:57Z",
+          "topics": [],
+          "owner": {
+            "login": "cgwalters",
+            "html_url": "https://github.com/cgwalters"
+          },
+          "clone_url": "https://github.com/cgwalters/container-cve-2021-22555.git"
+        },
+        {
+          "id": 386247610,
+          "name": "cve-2021-22555",
+          "full_name": "JoneyJunior/cve-2021-22555",
+          "html_url": "https://github.com/JoneyJunior/cve-2021-22555",
+          "description": "",
+          "stargazers_count": 1,
+          "forks_count": 1,
+          "language": "",
+          "updated_at": "2022-02-16T11:36:19Z",
+          "pushed_at": "2021-07-15T10:18:03Z",
+          "created_at": "2021-07-15T10:17:42Z",
+          "topics": [],
+          "owner": {
+            "login": "JoneyJunior",
+            "html_url": "https://github.com/JoneyJunior"
+          },
+          "clone_url": "https://github.com/JoneyJunior/cve-2021-22555.git"
+        },
+        {
           "id": 412296277,
           "name": "CVE-2021-22555-esc-priv",
           "full_name": "daletoniris/CVE-2021-22555-esc-priv",
@@ -4404,6 +5211,25 @@
             "html_url": "https://github.com/CsEnox"
           },
           "clone_url": "https://github.com/CsEnox/CVE-2021-22911.git"
+        },
+        {
+          "id": 391193611,
+          "name": "Rocket.Chat-Automated-Account-Takeover-RCE-CVE-2021-22911",
+          "full_name": "optionalCTF/Rocket.Chat-Automated-Account-Takeover-RCE-CVE-2021-22911",
+          "html_url": "https://github.com/optionalCTF/Rocket.Chat-Automated-Account-Takeover-RCE-CVE-2021-22911",
+          "description": "Full unauthenticated RCE proof of concept for Rocket.Chat 3.12.1 CVE-2021-22911",
+          "stargazers_count": 9,
+          "forks_count": 1,
+          "language": "Python",
+          "updated_at": "2025-03-20T18:23:53Z",
+          "pushed_at": "2021-07-30T22:00:52Z",
+          "created_at": "2021-07-30T21:44:18Z",
+          "topics": [],
+          "owner": {
+            "login": "optionalCTF",
+            "html_url": "https://github.com/optionalCTF"
+          },
+          "clone_url": "https://github.com/optionalCTF/Rocket.Chat-Automated-Account-Takeover-RCE-CVE-2021-22911.git"
         },
         {
           "id": 408111498,
@@ -4832,6 +5658,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2021-23410",
+      "repositories": [
+        {
+          "id": 388965552,
+          "name": "msgpack-CVE-2021-23410-test",
+          "full_name": "azu/msgpack-CVE-2021-23410-test",
+          "html_url": "https://github.com/azu/msgpack-CVE-2021-23410-test",
+          "description": "",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "JavaScript",
+          "updated_at": "2021-07-24T07:08:19Z",
+          "pushed_at": "2021-07-24T01:19:04Z",
+          "created_at": "2021-07-24T01:05:02Z",
+          "topics": [],
+          "owner": {
+            "login": "azu",
+            "html_url": "https://github.com/azu"
+          },
+          "clone_url": "https://github.com/azu/msgpack-CVE-2021-23410-test.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2021-23758",
       "repositories": [
         {
@@ -5145,6 +5995,30 @@
             "html_url": "https://github.com/dnr6419"
           },
           "clone_url": "https://github.com/dnr6419/CVE-2021-24145.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2021-24155",
+      "repositories": [
+        {
+          "id": 391040356,
+          "name": "CVE-2021-24155.rb",
+          "full_name": "0dayNinja/CVE-2021-24155.rb",
+          "html_url": "https://github.com/0dayNinja/CVE-2021-24155.rb",
+          "description": "WordPress Backup Guard Authenticated Remote Code Execution Exploit",
+          "stargazers_count": 10,
+          "forks_count": 7,
+          "language": "Ruby",
+          "updated_at": "2026-01-05T17:19:42Z",
+          "pushed_at": "2021-07-30T11:35:54Z",
+          "created_at": "2021-07-30T11:28:53Z",
+          "topics": [],
+          "owner": {
+            "login": "0dayNinja",
+            "html_url": "https://github.com/0dayNinja"
+          },
+          "clone_url": "https://github.com/0dayNinja/CVE-2021-24155.rb.git"
         }
       ]
     },
@@ -6853,6 +7727,54 @@
       ]
     },
     {
+      "cve_id": "CVE-2021-26690",
+      "repositories": [
+        {
+          "id": 386164563,
+          "name": "CVE-2021-26690",
+          "full_name": "dja2TaqkGEEfA45/CVE-2021-26690",
+          "html_url": "https://github.com/dja2TaqkGEEfA45/CVE-2021-26690",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2021-07-15T04:38:43Z",
+          "pushed_at": "2021-07-15T04:38:44Z",
+          "created_at": "2021-07-15T04:38:43Z",
+          "topics": [],
+          "owner": {
+            "login": "dja2TaqkGEEfA45",
+            "html_url": "https://github.com/dja2TaqkGEEfA45"
+          },
+          "clone_url": "https://github.com/dja2TaqkGEEfA45/CVE-2021-26690.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2021-26691",
+      "repositories": [
+        {
+          "id": 386164410,
+          "name": "CVE-2021-26691",
+          "full_name": "dja2TaqkGEEfA45/CVE-2021-26691",
+          "html_url": "https://github.com/dja2TaqkGEEfA45/CVE-2021-26691",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2021-07-15T04:37:58Z",
+          "pushed_at": "2021-07-15T04:37:59Z",
+          "created_at": "2021-07-15T04:37:58Z",
+          "topics": [],
+          "owner": {
+            "login": "dja2TaqkGEEfA45",
+            "html_url": "https://github.com/dja2TaqkGEEfA45"
+          },
+          "clone_url": "https://github.com/dja2TaqkGEEfA45/CVE-2021-26691.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2021-26700",
       "repositories": [
         {
@@ -6983,6 +7905,28 @@
             "html_url": "https://github.com/CYS4srl"
           },
           "clone_url": "https://github.com/CYS4srl/CVE-2021-26814.git"
+        },
+        {
+          "id": 384737658,
+          "name": "Internet-Security-Project---CVE-2021-26814",
+          "full_name": "paolorabbito/Internet-Security-Project---CVE-2021-26814",
+          "html_url": "https://github.com/paolorabbito/Internet-Security-Project---CVE-2021-26814",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2021-12-03T14:48:22Z",
+          "pushed_at": "2021-12-03T14:48:19Z",
+          "created_at": "2021-07-10T16:04:28Z",
+          "topics": [
+            "cve",
+            "security"
+          ],
+          "owner": {
+            "login": "paolorabbito",
+            "html_url": "https://github.com/paolorabbito"
+          },
+          "clone_url": "https://github.com/paolorabbito/Internet-Security-Project---CVE-2021-26814.git"
         }
       ]
     },
@@ -9439,6 +10383,25 @@
             "html_url": "https://github.com/dorkerdevil"
           },
           "clone_url": "https://github.com/dorkerdevil/CVE-2021-27850_POC.git"
+        },
+        {
+          "id": 382309693,
+          "name": "CVE_2021_27850_POC",
+          "full_name": "Ovi3/CVE_2021_27850_POC",
+          "html_url": "https://github.com/Ovi3/CVE_2021_27850_POC",
+          "description": "Apache Tapestry CVE-2021-27850 PoC",
+          "stargazers_count": 2,
+          "forks_count": 2,
+          "language": "Java",
+          "updated_at": "2024-06-07T22:14:37Z",
+          "pushed_at": "2021-07-02T10:22:46Z",
+          "created_at": "2021-07-02T10:21:58Z",
+          "topics": [],
+          "owner": {
+            "login": "Ovi3",
+            "html_url": "https://github.com/Ovi3"
+          },
+          "clone_url": "https://github.com/Ovi3/CVE_2021_27850_POC.git"
         }
       ]
     },
@@ -10813,6 +11776,25 @@
             "html_url": "https://github.com/daedalus"
           },
           "clone_url": "https://github.com/daedalus/CVE-2021-30461.git"
+        },
+        {
+          "id": 386052413,
+          "name": "CVE-2021-30461",
+          "full_name": "puckiestyle/CVE-2021-30461",
+          "html_url": "https://github.com/puckiestyle/CVE-2021-30461",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2023-01-10T03:22:58Z",
+          "pushed_at": "2021-07-14T19:20:21Z",
+          "created_at": "2021-07-14T19:20:11Z",
+          "topics": [],
+          "owner": {
+            "login": "puckiestyle",
+            "html_url": "https://github.com/puckiestyle"
+          },
+          "clone_url": "https://github.com/puckiestyle/CVE-2021-30461.git"
         }
       ]
     },
@@ -10867,6 +11849,25 @@
     {
       "cve_id": "CVE-2021-30573",
       "repositories": [
+        {
+          "id": 390723249,
+          "name": "CVE-2021-30573-PoC-Google-Chrome",
+          "full_name": "s4eio/CVE-2021-30573-PoC-Google-Chrome",
+          "html_url": "https://github.com/s4eio/CVE-2021-30573-PoC-Google-Chrome",
+          "description": "Google Chrome Use After Free vulnerability reported by S4E Team",
+          "stargazers_count": 14,
+          "forks_count": 2,
+          "language": "HTML",
+          "updated_at": "2025-07-22T02:39:57Z",
+          "pushed_at": "2021-07-29T13:18:38Z",
+          "created_at": "2021-07-29T12:53:13Z",
+          "topics": [],
+          "owner": {
+            "login": "s4eio",
+            "html_url": "https://github.com/s4eio"
+          },
+          "clone_url": "https://github.com/s4eio/CVE-2021-30573-PoC-Google-Chrome.git"
+        },
         {
           "id": 421034424,
           "name": "CVE-2021-30573",
@@ -10960,6 +11961,30 @@
             "html_url": "https://github.com/CrackerCat"
           },
           "clone_url": "https://github.com/CrackerCat/CVE-2021-30632.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2021-30641",
+      "repositories": [
+        {
+          "id": 386163197,
+          "name": "CVE-2021-30641",
+          "full_name": "dja2TaqkGEEfA45/CVE-2021-30641",
+          "html_url": "https://github.com/dja2TaqkGEEfA45/CVE-2021-30641",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2021-07-15T04:31:58Z",
+          "pushed_at": "2021-07-15T04:31:59Z",
+          "created_at": "2021-07-15T04:31:58Z",
+          "topics": [],
+          "owner": {
+            "login": "dja2TaqkGEEfA45",
+            "html_url": "https://github.com/dja2TaqkGEEfA45"
+          },
+          "clone_url": "https://github.com/dja2TaqkGEEfA45/CVE-2021-30641.git"
         }
       ]
     },
@@ -11276,6 +12301,37 @@
           "clone_url": "https://github.com/zha0gongz1/CVE-2021-31166.git"
         },
         {
+          "id": 382641118,
+          "name": "CVE-2021-31166-Exploit",
+          "full_name": "y0g3sh-99/CVE-2021-31166-Exploit",
+          "html_url": "https://github.com/y0g3sh-99/CVE-2021-31166-Exploit",
+          "description": "Exploit for MS Http Protocol Stack RCE vulnerability (CVE-2021-31166)",
+          "stargazers_count": 7,
+          "forks_count": 2,
+          "language": "Python",
+          "updated_at": "2025-08-14T12:51:03Z",
+          "pushed_at": "2021-07-03T15:27:28Z",
+          "created_at": "2021-07-03T14:54:59Z",
+          "topics": [
+            "accept-encoding",
+            "cve-2021-31166",
+            "dos",
+            "exploit",
+            "http",
+            "kernel",
+            "python3",
+            "rce",
+            "request-header",
+            "vulnerability",
+            "windows"
+          ],
+          "owner": {
+            "login": "y0g3sh-99",
+            "html_url": "https://github.com/y0g3sh-99"
+          },
+          "clone_url": "https://github.com/y0g3sh-99/CVE-2021-31166-Exploit.git"
+        },
+        {
           "id": 368786720,
           "name": "CVE-2021-31166",
           "full_name": "zecopro/CVE-2021-31166",
@@ -11333,25 +12389,6 @@
           "clone_url": "https://github.com/iranzai/CVE-2021-31166-exploit.git"
         },
         {
-          "id": 1084330898,
-          "name": "CVE-2021",
-          "full_name": "qazbnme/CVE-2021",
-          "html_url": "https://github.com/qazbnme/CVE-2021",
-          "description": "Proof of concept for CVE-2021-31166, a remote HTTP.sys use-after-free triggered remotely.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "TypeScript",
-          "updated_at": "2025-11-01T03:55:57Z",
-          "pushed_at": "2025-11-01T03:55:41Z",
-          "created_at": "2025-10-27T14:37:49Z",
-          "topics": [],
-          "owner": {
-            "login": "qazbnme",
-            "html_url": "https://github.com/qazbnme"
-          },
-          "clone_url": "https://github.com/qazbnme/CVE-2021.git"
-        },
-        {
           "id": 370131263,
           "name": "WIn-CVE-2021-31166",
           "full_name": "bgsilvait/WIn-CVE-2021-31166",
@@ -11369,6 +12406,25 @@
             "html_url": "https://github.com/bgsilvait"
           },
           "clone_url": "https://github.com/bgsilvait/WIn-CVE-2021-31166.git"
+        },
+        {
+          "id": 1084330898,
+          "name": "CVE-2021",
+          "full_name": "qazbnme/CVE-2021",
+          "html_url": "https://github.com/qazbnme/CVE-2021",
+          "description": "Proof of concept for CVE-2021-31166, a remote HTTP.sys use-after-free triggered remotely.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "TypeScript",
+          "updated_at": "2025-11-01T03:55:57Z",
+          "pushed_at": "2025-11-01T03:55:41Z",
+          "created_at": "2025-10-27T14:37:49Z",
+          "topics": [],
+          "owner": {
+            "login": "qazbnme",
+            "html_url": "https://github.com/qazbnme"
+          },
+          "clone_url": "https://github.com/qazbnme/CVE-2021.git"
         }
       ]
     },
@@ -11722,6 +12778,25 @@
             "html_url": "https://github.com/FunPhishing"
           },
           "clone_url": "https://github.com/FunPhishing/Laravel-8.4.2-rce-CVE-2021-3129.git"
+        },
+        {
+          "id": 388370396,
+          "name": "laravel-CVE-2021-3129-EXP",
+          "full_name": "idea-oss/laravel-CVE-2021-3129-EXP",
+          "html_url": "https://github.com/idea-oss/laravel-CVE-2021-3129-EXP",
+          "description": "",
+          "stargazers_count": 1,
+          "forks_count": 2,
+          "language": "Python",
+          "updated_at": "2024-08-12T20:14:53Z",
+          "pushed_at": "2021-07-22T09:18:27Z",
+          "created_at": "2021-07-22T07:35:04Z",
+          "topics": [],
+          "owner": {
+            "login": "idea-oss",
+            "html_url": "https://github.com/idea-oss"
+          },
+          "clone_url": "https://github.com/idea-oss/laravel-CVE-2021-3129-EXP.git"
         },
         {
           "id": 356778327,
@@ -12623,6 +13698,25 @@
             "html_url": "https://github.com/perlun"
           },
           "clone_url": "https://github.com/perlun/sudo-1.8.3p1-patched.git"
+        },
+        {
+          "id": 389541328,
+          "name": "CVE-2021-3156",
+          "full_name": "Exodusro/CVE-2021-3156",
+          "html_url": "https://github.com/Exodusro/CVE-2021-3156",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2021-10-21T21:30:42Z",
+          "pushed_at": "2021-07-25T23:01:24Z",
+          "created_at": "2021-07-26T07:08:55Z",
+          "topics": [],
+          "owner": {
+            "login": "Exodusro",
+            "html_url": "https://github.com/Exodusro"
+          },
+          "clone_url": "https://github.com/Exodusro/CVE-2021-3156.git"
         },
         {
           "id": 333450928,
@@ -13599,6 +14693,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2021-3281",
+      "repositories": [
+        {
+          "id": 383067956,
+          "name": "CVE-2021-3281",
+          "full_name": "lwzSoviet/CVE-2021-3281",
+          "html_url": "https://github.com/lwzSoviet/CVE-2021-3281",
+          "description": "",
+          "stargazers_count": 2,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2022-01-31T11:44:07Z",
+          "pushed_at": "2021-07-05T08:47:14Z",
+          "created_at": "2021-07-05T08:25:26Z",
+          "topics": [],
+          "owner": {
+            "login": "lwzSoviet",
+            "html_url": "https://github.com/lwzSoviet"
+          },
+          "clone_url": "https://github.com/lwzSoviet/CVE-2021-3281.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2021-32819",
       "repositories": [
         {
@@ -13928,6 +15046,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2021-33560",
+      "repositories": [
+        {
+          "id": 386681813,
+          "name": "PGP-client-checker-CVE-2021-33560",
+          "full_name": "IBM/PGP-client-checker-CVE-2021-33560",
+          "html_url": "https://github.com/IBM/PGP-client-checker-CVE-2021-33560",
+          "description": "Tool to check whether a PGP client is affected by CVE-2021-33560",
+          "stargazers_count": 1,
+          "forks_count": 1,
+          "language": "Python",
+          "updated_at": "2023-07-19T16:23:56Z",
+          "pushed_at": "2025-09-17T22:30:50Z",
+          "created_at": "2021-07-16T15:24:11Z",
+          "topics": [],
+          "owner": {
+            "login": "IBM",
+            "html_url": "https://github.com/IBM"
+          },
+          "clone_url": "https://github.com/IBM/PGP-client-checker-CVE-2021-33560.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2021-33564",
       "repositories": [
         {
@@ -14196,6 +15338,25 @@
       "cve_id": "CVE-2021-33909",
       "repositories": [
         {
+          "id": 387988488,
+          "name": "CVE-2021-33909",
+          "full_name": "Liang2580/CVE-2021-33909",
+          "html_url": "https://github.com/Liang2580/CVE-2021-33909",
+          "description": "Sequoia exploit (7/20/21)",
+          "stargazers_count": 78,
+          "forks_count": 62,
+          "language": "",
+          "updated_at": "2025-09-25T10:45:32Z",
+          "pushed_at": "2021-07-20T23:04:13Z",
+          "created_at": "2021-07-21T04:04:49Z",
+          "topics": [],
+          "owner": {
+            "login": "Liang2580",
+            "html_url": "https://github.com/Liang2580"
+          },
+          "clone_url": "https://github.com/Liang2580/CVE-2021-33909.git"
+        },
+        {
           "id": 402293370,
           "name": "CVE-2021-33909",
           "full_name": "ChrisTheCoolHut/CVE-2021-33909",
@@ -14213,6 +15374,44 @@
             "html_url": "https://github.com/ChrisTheCoolHut"
           },
           "clone_url": "https://github.com/ChrisTheCoolHut/CVE-2021-33909.git"
+        },
+        {
+          "id": 388209239,
+          "name": "cve-2021-33909",
+          "full_name": "baerwolf/cve-2021-33909",
+          "html_url": "https://github.com/baerwolf/cve-2021-33909",
+          "description": "This module fixes an issue in the kernels filesystem layer (CVE-2021-33909) by kprobe-replacing vulnerable functions during runtime",
+          "stargazers_count": 6,
+          "forks_count": 4,
+          "language": "C",
+          "updated_at": "2023-09-08T18:24:32Z",
+          "pushed_at": "2021-07-25T21:56:30Z",
+          "created_at": "2021-07-21T18:22:55Z",
+          "topics": [],
+          "owner": {
+            "login": "baerwolf",
+            "html_url": "https://github.com/baerwolf"
+          },
+          "clone_url": "https://github.com/baerwolf/cve-2021-33909.git"
+        },
+        {
+          "id": 389496562,
+          "name": "CVE-2021-33909",
+          "full_name": "bbinfosec43/CVE-2021-33909",
+          "html_url": "https://github.com/bbinfosec43/CVE-2021-33909",
+          "description": "Exploit code for CVE-2021-33909,Just a dump of removed https://github.com/AmIAHuman/ repo",
+          "stargazers_count": 5,
+          "forks_count": 7,
+          "language": "C",
+          "updated_at": "2022-07-12T14:51:35Z",
+          "pushed_at": "2021-07-26T03:29:36Z",
+          "created_at": "2021-07-26T03:24:35Z",
+          "topics": [],
+          "owner": {
+            "login": "bbinfosec43",
+            "html_url": "https://github.com/bbinfosec43"
+          },
+          "clone_url": "https://github.com/bbinfosec43/CVE-2021-33909.git"
         }
       ]
     },
@@ -14243,6 +15442,25 @@
     {
       "cve_id": "CVE-2021-34045",
       "repositories": [
+        {
+          "id": 381879818,
+          "name": "CVE-2021-34045",
+          "full_name": "Al1ex/CVE-2021-34045",
+          "html_url": "https://github.com/Al1ex/CVE-2021-34045",
+          "description": "Novel-plus-install-v3.5.3-Druid Unauthorized access",
+          "stargazers_count": 3,
+          "forks_count": 1,
+          "language": "",
+          "updated_at": "2024-08-12T20:14:21Z",
+          "pushed_at": "2021-07-01T02:07:39Z",
+          "created_at": "2021-07-01T01:52:49Z",
+          "topics": [],
+          "owner": {
+            "login": "Al1ex",
+            "html_url": "https://github.com/Al1ex"
+          },
+          "clone_url": "https://github.com/Al1ex/CVE-2021-34045.git"
+        },
         {
           "id": 438706438,
           "name": "CVE-2021-34045",
@@ -14285,6 +15503,30 @@
             "html_url": "https://github.com/zwjjustdoit"
           },
           "clone_url": "https://github.com/zwjjustdoit/CVE-2021-34371.jar.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2021-3438",
+      "repositories": [
+        {
+          "id": 390295076,
+          "name": "CVE-2021-3438",
+          "full_name": "TobiasS1402/CVE-2021-3438",
+          "html_url": "https://github.com/TobiasS1402/CVE-2021-3438",
+          "description": "Detection and remediation for CVE-2021-3438 with Powershell",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "PowerShell",
+          "updated_at": "2021-07-28T14:51:57Z",
+          "pushed_at": "2021-07-28T14:41:17Z",
+          "created_at": "2021-07-28T09:36:42Z",
+          "topics": [],
+          "owner": {
+            "login": "TobiasS1402",
+            "html_url": "https://github.com/TobiasS1402"
+          },
+          "clone_url": "https://github.com/TobiasS1402/CVE-2021-3438.git"
         }
       ]
     },
@@ -14346,6 +15588,30 @@
             "html_url": "https://github.com/ColdFusionX"
           },
           "clone_url": "https://github.com/ColdFusionX/CVE-2021-34429.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2021-34470",
+      "repositories": [
+        {
+          "id": 390877656,
+          "name": "CVE-2021-34470scanner",
+          "full_name": "technion/CVE-2021-34470scanner",
+          "html_url": "https://github.com/technion/CVE-2021-34470scanner",
+          "description": "A Powrshell script to scan for CVE-2021-34470",
+          "stargazers_count": 2,
+          "forks_count": 0,
+          "language": "PowerShell",
+          "updated_at": "2022-08-18T06:30:57Z",
+          "pushed_at": "2021-07-29T23:51:22Z",
+          "created_at": "2021-07-29T23:50:31Z",
+          "topics": [],
+          "owner": {
+            "login": "technion",
+            "html_url": "https://github.com/technion"
+          },
+          "clone_url": "https://github.com/technion/CVE-2021-34470scanner.git"
         }
       ]
     },
@@ -14585,6 +15851,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2021-34496",
+      "repositories": [
+        {
+          "id": 386161559,
+          "name": "CVE-2021-34496",
+          "full_name": "dja2TaqkGEEfA45/CVE-2021-34496",
+          "html_url": "https://github.com/dja2TaqkGEEfA45/CVE-2021-34496",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2021-07-15T04:23:58Z",
+          "pushed_at": "2021-07-15T04:23:59Z",
+          "created_at": "2021-07-15T04:23:58Z",
+          "topics": [],
+          "owner": {
+            "login": "dja2TaqkGEEfA45",
+            "html_url": "https://github.com/dja2TaqkGEEfA45"
+          },
+          "clone_url": "https://github.com/dja2TaqkGEEfA45/CVE-2021-34496.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2021-34523",
       "repositories": [
         {
@@ -14669,6 +15959,72 @@
           "clone_url": "https://github.com/cube0x0/CVE-2021-1675.git"
         },
         {
+          "id": 383254488,
+          "name": "ItWasAllADream",
+          "full_name": "byt3bl33d3r/ItWasAllADream",
+          "html_url": "https://github.com/byt3bl33d3r/ItWasAllADream",
+          "description": "A PrintNightmare (CVE-2021-34527) Python Scanner. Scan entire subnets for hosts vulnerable to the PrintNightmare RCE",
+          "stargazers_count": 805,
+          "forks_count": 119,
+          "language": "Python",
+          "updated_at": "2026-02-20T13:19:18Z",
+          "pushed_at": "2024-05-19T16:25:52Z",
+          "created_at": "2021-07-05T20:13:49Z",
+          "topics": [],
+          "owner": {
+            "login": "byt3bl33d3r",
+            "html_url": "https://github.com/byt3bl33d3r"
+          },
+          "clone_url": "https://github.com/byt3bl33d3r/ItWasAllADream.git"
+        },
+        {
+          "id": 381984439,
+          "name": "CVE-2021-1675-LPE",
+          "full_name": "hlldz/CVE-2021-1675-LPE",
+          "html_url": "https://github.com/hlldz/CVE-2021-1675-LPE",
+          "description": "Local Privilege Escalation Edition for CVE-2021-1675/CVE-2021-34527",
+          "stargazers_count": 327,
+          "forks_count": 77,
+          "language": "C",
+          "updated_at": "2026-01-13T11:22:07Z",
+          "pushed_at": "2021-07-05T06:46:12Z",
+          "created_at": "2021-07-01T09:47:13Z",
+          "topics": [
+            "cobaltstrike",
+            "cve-2021-1675",
+            "cve-2021-34527",
+            "exploit",
+            "lpe",
+            "printnightmare",
+            "reflectivedll",
+            "windows"
+          ],
+          "owner": {
+            "login": "hlldz",
+            "html_url": "https://github.com/hlldz"
+          },
+          "clone_url": "https://github.com/hlldz/CVE-2021-1675-LPE.git"
+        },
+        {
+          "id": 382335385,
+          "name": "CVE-2021-34527",
+          "full_name": "JohnHammond/CVE-2021-34527",
+          "html_url": "https://github.com/JohnHammond/CVE-2021-34527",
+          "description": "",
+          "stargazers_count": 305,
+          "forks_count": 75,
+          "language": "PowerShell",
+          "updated_at": "2026-02-21T11:12:38Z",
+          "pushed_at": "2021-07-02T12:17:50Z",
+          "created_at": "2021-07-02T12:10:49Z",
+          "topics": [],
+          "owner": {
+            "login": "JohnHammond",
+            "html_url": "https://github.com/JohnHammond"
+          },
+          "clone_url": "https://github.com/JohnHammond/CVE-2021-34527.git"
+        },
+        {
           "id": 410565318,
           "name": "PrintNightmare",
           "full_name": "ly4k/PrintNightmare",
@@ -14691,6 +16047,60 @@
           "clone_url": "https://github.com/ly4k/PrintNightmare.git"
         },
         {
+          "id": 382645654,
+          "name": "PrintNightmare-CVE-2021-34527",
+          "full_name": "nemo-wq/PrintNightmare-CVE-2021-34527",
+          "html_url": "https://github.com/nemo-wq/PrintNightmare-CVE-2021-34527",
+          "description": "PrintNightmare - Windows Print Spooler RCE/LPE Vulnerability (CVE-2021-34527, CVE-2021-1675) proof of concept exploits",
+          "stargazers_count": 166,
+          "forks_count": 41,
+          "language": "C",
+          "updated_at": "2026-02-21T21:34:00Z",
+          "pushed_at": "2021-09-13T12:12:17Z",
+          "created_at": "2021-07-03T15:15:12Z",
+          "topics": [
+            "cve-2021-1675",
+            "cve-2021-34527",
+            "howto-tutorial",
+            "printnightmare",
+            "rce",
+            "windowsexploits"
+          ],
+          "owner": {
+            "login": "nemo-wq",
+            "html_url": "https://github.com/nemo-wq"
+          },
+          "clone_url": "https://github.com/nemo-wq/PrintNightmare-CVE-2021-34527.git"
+        },
+        {
+          "id": 381971547,
+          "name": "CVE-2021-1675-LPE-EXP",
+          "full_name": "evilashz/CVE-2021-1675-LPE-EXP",
+          "html_url": "https://github.com/evilashz/CVE-2021-1675-LPE-EXP",
+          "description": "PrintNightmare , Local Privilege Escalation of CVE-2021-1675 or CVE-2021-34527",
+          "stargazers_count": 58,
+          "forks_count": 19,
+          "language": "C++",
+          "updated_at": "2025-12-09T13:46:20Z",
+          "pushed_at": "2021-07-02T10:47:36Z",
+          "created_at": "2021-07-01T09:00:31Z",
+          "topics": [
+            "cve-2021-1675",
+            "cve-2021-34527",
+            "hacktool",
+            "lpe",
+            "printnightmare",
+            "redteam",
+            "redteam-tools",
+            "windows"
+          ],
+          "owner": {
+            "login": "evilashz",
+            "html_url": "https://github.com/evilashz"
+          },
+          "clone_url": "https://github.com/evilashz/CVE-2021-1675-LPE-EXP.git"
+        },
+        {
           "id": 533095208,
           "name": "cve-2021-34527",
           "full_name": "hackerhouse-opensource/cve-2021-34527",
@@ -14708,6 +16118,161 @@
             "html_url": "https://github.com/hackerhouse-opensource"
           },
           "clone_url": "https://github.com/hackerhouse-opensource/cve-2021-34527.git"
+        },
+        {
+          "id": 382894525,
+          "name": "CVE-2021-34527-1675",
+          "full_name": "CnOxx1/CVE-2021-34527-1675",
+          "html_url": "https://github.com/CnOxx1/CVE-2021-34527-1675",
+          "description": "Cve-2021-1675 or cve-2021-34527? Detailed analysis and exploitation of windows print spooler 0day vulnerability！！！",
+          "stargazers_count": 5,
+          "forks_count": 1,
+          "language": "",
+          "updated_at": "2025-10-04T17:41:50Z",
+          "pushed_at": "2021-07-04T16:31:21Z",
+          "created_at": "2021-07-04T16:09:18Z",
+          "topics": [],
+          "owner": {
+            "login": "CnOxx1",
+            "html_url": "https://github.com/CnOxx1"
+          },
+          "clone_url": "https://github.com/CnOxx1/CVE-2021-34527-1675.git"
+        },
+        {
+          "id": 384372251,
+          "name": "CVE-2021-34527-Scanner-Based-On-cube0x0-POC",
+          "full_name": "dywhoami/CVE-2021-34527-Scanner-Based-On-cube0x0-POC",
+          "html_url": "https://github.com/dywhoami/CVE-2021-34527-Scanner-Based-On-cube0x0-POC",
+          "description": "",
+          "stargazers_count": 3,
+          "forks_count": 1,
+          "language": "Python",
+          "updated_at": "2025-02-22T15:06:13Z",
+          "pushed_at": "2021-07-11T00:23:19Z",
+          "created_at": "2021-07-09T08:27:36Z",
+          "topics": [],
+          "owner": {
+            "login": "dywhoami",
+            "html_url": "https://github.com/dywhoami"
+          },
+          "clone_url": "https://github.com/dywhoami/CVE-2021-34527-Scanner-Based-On-cube0x0-POC.git"
+        },
+        {
+          "id": 390263988,
+          "name": "PrintNightmare",
+          "full_name": "Tomparte/PrintNightmare",
+          "html_url": "https://github.com/Tomparte/PrintNightmare",
+          "description": "To fight against Windows security breach PrintNightmare! (CVE-2021-34527, CVE-2021-1675)",
+          "stargazers_count": 3,
+          "forks_count": 0,
+          "language": "PowerShell",
+          "updated_at": "2023-08-01T13:42:52Z",
+          "pushed_at": "2021-08-20T11:41:18Z",
+          "created_at": "2021-07-28T07:55:42Z",
+          "topics": [
+            "batch-script",
+            "cve-2021-1675",
+            "cve-2021-34527",
+            "cve-2021-36958",
+            "cve-2021-40447",
+            "cybersecurity",
+            "powershell-script",
+            "print",
+            "printnightmare",
+            "security",
+            "spooler",
+            "to-do",
+            "windows"
+          ],
+          "owner": {
+            "login": "Tomparte",
+            "html_url": "https://github.com/Tomparte"
+          },
+          "clone_url": "https://github.com/Tomparte/PrintNightmare.git"
+        },
+        {
+          "id": 385271497,
+          "name": "PrintNightmare-Patcher",
+          "full_name": "0xirison/PrintNightmare-Patcher",
+          "html_url": "https://github.com/0xirison/PrintNightmare-Patcher",
+          "description": "A patch for PrintNightmare vulnerability that occurs to print spooler service for Windows machines [CVE-2021-34527]",
+          "stargazers_count": 2,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2024-08-24T16:05:05Z",
+          "pushed_at": "2021-07-23T05:03:06Z",
+          "created_at": "2021-07-12T14:14:29Z",
+          "topics": [
+            "cve-2021-34527",
+            "printnightmare",
+            "python3",
+            "security",
+            "security-tools",
+            "vulnerability",
+            "windows"
+          ],
+          "owner": {
+            "login": "0xirison",
+            "html_url": "https://github.com/0xirison"
+          },
+          "clone_url": "https://github.com/0xirison/PrintNightmare-Patcher.git"
+        },
+        {
+          "id": 383207766,
+          "name": "disable-RegisterSpoolerRemoteRpcEndPoint",
+          "full_name": "rdboboia/disable-RegisterSpoolerRemoteRpcEndPoint",
+          "html_url": "https://github.com/rdboboia/disable-RegisterSpoolerRemoteRpcEndPoint",
+          "description": "Workaround for Windows Print Spooler Remote Code Execution Vulnerability(CVE-2021-34527). See: https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-34527",
+          "stargazers_count": 2,
+          "forks_count": 0,
+          "language": "Batchfile",
+          "updated_at": "2025-07-21T12:19:02Z",
+          "pushed_at": "2021-07-08T21:11:40Z",
+          "created_at": "2021-07-05T16:49:32Z",
+          "topics": [],
+          "owner": {
+            "login": "rdboboia",
+            "html_url": "https://github.com/rdboboia"
+          },
+          "clone_url": "https://github.com/rdboboia/disable-RegisterSpoolerRemoteRpcEndPoint.git"
+        },
+        {
+          "id": 383719689,
+          "name": "PrintNightmare-CVE-2021-34527",
+          "full_name": "powershellpr0mpt/PrintNightmare-CVE-2021-34527",
+          "html_url": "https://github.com/powershellpr0mpt/PrintNightmare-CVE-2021-34527",
+          "description": "How to fix the PrintNightmare vulnerability",
+          "stargazers_count": 2,
+          "forks_count": 0,
+          "language": "PowerShell",
+          "updated_at": "2025-05-12T20:45:26Z",
+          "pushed_at": "2021-07-07T10:00:32Z",
+          "created_at": "2021-07-07T07:58:53Z",
+          "topics": [],
+          "owner": {
+            "login": "powershellpr0mpt",
+            "html_url": "https://github.com/powershellpr0mpt"
+          },
+          "clone_url": "https://github.com/powershellpr0mpt/PrintNightmare-CVE-2021-34527.git"
+        },
+        {
+          "id": 382267064,
+          "name": "PrintNightmare",
+          "full_name": "thomas-lauer/PrintNightmare",
+          "html_url": "https://github.com/thomas-lauer/PrintNightmare",
+          "description": "Kritische Sicherheitslücke PrintNightmare CVE-2021-34527",
+          "stargazers_count": 2,
+          "forks_count": 4,
+          "language": "PowerShell",
+          "updated_at": "2024-08-12T20:14:24Z",
+          "pushed_at": "2021-07-12T15:07:05Z",
+          "created_at": "2021-07-02T07:30:52Z",
+          "topics": [],
+          "owner": {
+            "login": "thomas-lauer",
+            "html_url": "https://github.com/thomas-lauer"
+          },
+          "clone_url": "https://github.com/thomas-lauer/PrintNightmare.git"
         },
         {
           "id": 437822133,
@@ -14746,6 +16311,188 @@
             "html_url": "https://github.com/ccordeiro"
           },
           "clone_url": "https://github.com/ccordeiro/CVE-2021-1675.git"
+        },
+        {
+          "id": 383699836,
+          "name": "Disable-Spooler-Service-PrintNightmare-CVE-2021-34527",
+          "full_name": "vinaysudheer/Disable-Spooler-Service-PrintNightmare-CVE-2021-34527",
+          "html_url": "https://github.com/vinaysudheer/Disable-Spooler-Service-PrintNightmare-CVE-2021-34527",
+          "description": "Simple batch script to disable the Microsoft Print Spooler service from system",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Batchfile",
+          "updated_at": "2021-07-07T06:47:16Z",
+          "pushed_at": "2021-07-07T06:47:13Z",
+          "created_at": "2021-07-07T06:41:15Z",
+          "topics": [],
+          "owner": {
+            "login": "vinaysudheer",
+            "html_url": "https://github.com/vinaysudheer"
+          },
+          "clone_url": "https://github.com/vinaysudheer/Disable-Spooler-Service-PrintNightmare-CVE-2021-34527.git"
+        },
+        {
+          "id": 384554464,
+          "name": "PowerShell-PrintNightmare",
+          "full_name": "syntaxbearror/PowerShell-PrintNightmare",
+          "html_url": "https://github.com/syntaxbearror/PowerShell-PrintNightmare",
+          "description": "A collection of scripts to help set the appropriate registry keys for CVE-2021-34527",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "PowerShell",
+          "updated_at": "2021-07-11T16:21:00Z",
+          "pushed_at": "2021-07-09T21:46:57Z",
+          "created_at": "2021-07-09T21:28:16Z",
+          "topics": [],
+          "owner": {
+            "login": "syntaxbearror",
+            "html_url": "https://github.com/syntaxbearror"
+          },
+          "clone_url": "https://github.com/syntaxbearror/PowerShell-PrintNightmare.git"
+        },
+        {
+          "id": 384385967,
+          "name": "Printnightmare",
+          "full_name": "Eutectico/Printnightmare",
+          "html_url": "https://github.com/Eutectico/Printnightmare",
+          "description": "Fix for PrintNightmare CVE-2021-34527",
+          "stargazers_count": 0,
+          "forks_count": 1,
+          "language": "PowerShell",
+          "updated_at": "2021-07-09T11:02:54Z",
+          "pushed_at": "2021-07-09T11:02:51Z",
+          "created_at": "2021-07-09T09:22:03Z",
+          "topics": [],
+          "owner": {
+            "login": "Eutectico",
+            "html_url": "https://github.com/Eutectico"
+          },
+          "clone_url": "https://github.com/Eutectico/Printnightmare.git"
+        },
+        {
+          "id": 383968301,
+          "name": "CVE-2021-34527_ACL_mitigation",
+          "full_name": "WidespreadPandemic/CVE-2021-34527_ACL_mitigation",
+          "html_url": "https://github.com/WidespreadPandemic/CVE-2021-34527_ACL_mitigation",
+          "description": "Mitigation for CVE-2021-34527 RCE by setting WRITE ACLs",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "PowerShell",
+          "updated_at": "2021-07-09T03:54:14Z",
+          "pushed_at": "2021-07-09T03:54:12Z",
+          "created_at": "2021-07-08T01:32:18Z",
+          "topics": [],
+          "owner": {
+            "login": "WidespreadPandemic",
+            "html_url": "https://github.com/WidespreadPandemic"
+          },
+          "clone_url": "https://github.com/WidespreadPandemic/CVE-2021-34527_ACL_mitigation.git"
+        },
+        {
+          "id": 385174791,
+          "name": "PrintNightmare-CVE-2021-1675-CVE-2021-34527",
+          "full_name": "galoget/PrintNightmare-CVE-2021-1675-CVE-2021-34527",
+          "html_url": "https://github.com/galoget/PrintNightmare-CVE-2021-1675-CVE-2021-34527",
+          "description": "CVE-2021-1675 / CVE-2021-34527 - PrintNightmare Python, C# and PowerShell Exploits Implementations (LPE \u0026 RCE)",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "PowerShell",
+          "updated_at": "2024-08-12T20:14:38Z",
+          "pushed_at": "2021-07-12T08:35:30Z",
+          "created_at": "2021-07-12T08:18:40Z",
+          "topics": [],
+          "owner": {
+            "login": "galoget",
+            "html_url": "https://github.com/galoget"
+          },
+          "clone_url": "https://github.com/galoget/PrintNightmare-CVE-2021-1675-CVE-2021-34527.git"
+        },
+        {
+          "id": 382021281,
+          "name": "CVE-2021-34527",
+          "full_name": "DenizSe/CVE-2021-34527",
+          "html_url": "https://github.com/DenizSe/CVE-2021-34527",
+          "description": "Small Powershell Script to detect Running Printer Spoolers on Domain Controller",
+          "stargazers_count": 0,
+          "forks_count": 2,
+          "language": "PowerShell",
+          "updated_at": "2021-07-02T07:49:06Z",
+          "pushed_at": "2021-07-02T07:45:59Z",
+          "created_at": "2021-07-01T12:12:16Z",
+          "topics": [
+            "cve-2021-1675",
+            "cve-2021-34527",
+            "domaincontroller",
+            "printnightmare",
+            "printspooler"
+          ],
+          "owner": {
+            "login": "DenizSe",
+            "html_url": "https://github.com/DenizSe"
+          },
+          "clone_url": "https://github.com/DenizSe/CVE-2021-34527.git"
+        },
+        {
+          "id": 384221697,
+          "name": "printnightmare",
+          "full_name": "glorisonlai/printnightmare",
+          "html_url": "https://github.com/glorisonlai/printnightmare",
+          "description": "CVE-2021-34527 implementation",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2021-07-08T18:56:07Z",
+          "pushed_at": "2021-07-08T18:56:05Z",
+          "created_at": "2021-07-08T18:56:04Z",
+          "topics": [],
+          "owner": {
+            "login": "glorisonlai",
+            "html_url": "https://github.com/glorisonlai"
+          },
+          "clone_url": "https://github.com/glorisonlai/printnightmare.git"
+        },
+        {
+          "id": 383223006,
+          "name": "CVE-2021-34527-PrintNightmare-Workaround",
+          "full_name": "geekbrett/CVE-2021-34527-PrintNightmare-Workaround",
+          "html_url": "https://github.com/geekbrett/CVE-2021-34527-PrintNightmare-Workaround",
+          "description": "This simple PowerShell script is in response to the \"PrintNightmare\" vulnerability. This was designed to give a end user the ability to stop and disable the \"Print Spooler\" service on their computer while awaiting a fix from Microsoft.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "PowerShell",
+          "updated_at": "2024-08-24T16:04:56Z",
+          "pushed_at": "2021-07-07T17:18:07Z",
+          "created_at": "2021-07-05T17:50:56Z",
+          "topics": [],
+          "owner": {
+            "login": "geekbrett",
+            "html_url": "https://github.com/geekbrett"
+          },
+          "clone_url": "https://github.com/geekbrett/CVE-2021-34527-PrintNightmare-Workaround.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2021-34558",
+      "repositories": [
+        {
+          "id": 385496417,
+          "name": "cve-2021-34558",
+          "full_name": "alexzorin/cve-2021-34558",
+          "html_url": "https://github.com/alexzorin/cve-2021-34558",
+          "description": "",
+          "stargazers_count": 46,
+          "forks_count": 4,
+          "language": "Go",
+          "updated_at": "2025-01-03T19:14:41Z",
+          "pushed_at": "2021-07-13T06:16:11Z",
+          "created_at": "2021-07-13T06:15:21Z",
+          "topics": [],
+          "owner": {
+            "login": "alexzorin",
+            "html_url": "https://github.com/alexzorin"
+          },
+          "clone_url": "https://github.com/alexzorin/cve-2021-34558.git"
         }
       ]
     },
@@ -14868,6 +16615,31 @@
           "clone_url": "https://github.com/briskets/CVE-2021-3493.git"
         },
         {
+          "id": 383693831,
+          "name": "CVE-2021-3493",
+          "full_name": "inspiringz/CVE-2021-3493",
+          "html_url": "https://github.com/inspiringz/CVE-2021-3493",
+          "description": "CVE-2021-3493 Ubuntu OverlayFS Local Privesc (Interactive Bash Shell \u0026 Execute Command Entered)",
+          "stargazers_count": 39,
+          "forks_count": 9,
+          "language": "C",
+          "updated_at": "2026-01-14T02:31:32Z",
+          "pushed_at": "2021-07-07T07:19:03Z",
+          "created_at": "2021-07-07T06:16:48Z",
+          "topics": [
+            "cve-2021-3493",
+            "exploit",
+            "linux",
+            "privesc",
+            "ubuntu"
+          ],
+          "owner": {
+            "login": "inspiringz",
+            "html_url": "https://github.com/inspiringz"
+          },
+          "clone_url": "https://github.com/inspiringz/CVE-2021-3493.git"
+        },
+        {
           "id": 360363904,
           "name": "CVE-2021-3493",
           "full_name": "oneoy/CVE-2021-3493",
@@ -14906,23 +16678,23 @@
           "clone_url": "https://github.com/cerodah/overlayFS-CVE-2021-3493.git"
         },
         {
-          "id": 363546140,
+          "id": 386503700,
           "name": "CVE-2021-3493",
-          "full_name": "Abdennour-py/CVE-2021-3493",
-          "html_url": "https://github.com/Abdennour-py/CVE-2021-3493",
-          "description": "",
+          "full_name": "derek-turing/CVE-2021-3493",
+          "html_url": "https://github.com/derek-turing/CVE-2021-3493",
+          "description": "CVE-2021-3493 Ubuntu漏洞",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "C",
-          "updated_at": "2021-05-02T01:58:40Z",
-          "pushed_at": "2021-05-02T01:58:38Z",
-          "created_at": "2021-05-02T01:58:29Z",
+          "updated_at": "2021-07-16T04:04:35Z",
+          "pushed_at": "2021-07-16T04:04:33Z",
+          "created_at": "2021-07-16T04:02:54Z",
           "topics": [],
           "owner": {
-            "login": "Abdennour-py",
-            "html_url": "https://github.com/Abdennour-py"
+            "login": "derek-turing",
+            "html_url": "https://github.com/derek-turing"
           },
-          "clone_url": "https://github.com/Abdennour-py/CVE-2021-3493.git"
+          "clone_url": "https://github.com/derek-turing/CVE-2021-3493.git"
         },
         {
           "id": 1121728205,
@@ -14942,6 +16714,25 @@
             "html_url": "https://github.com/George-Yanni"
           },
           "clone_url": "https://github.com/George-Yanni/DeepRoot.git"
+        },
+        {
+          "id": 363546140,
+          "name": "CVE-2021-3493",
+          "full_name": "Abdennour-py/CVE-2021-3493",
+          "html_url": "https://github.com/Abdennour-py/CVE-2021-3493",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "C",
+          "updated_at": "2021-05-02T01:58:40Z",
+          "pushed_at": "2021-05-02T01:58:38Z",
+          "created_at": "2021-05-02T01:58:29Z",
+          "topics": [],
+          "owner": {
+            "login": "Abdennour-py",
+            "html_url": "https://github.com/Abdennour-py"
+          },
+          "clone_url": "https://github.com/Abdennour-py/CVE-2021-3493.git"
         },
         {
           "id": 412824012,
@@ -14967,6 +16758,25 @@
     {
       "cve_id": "CVE-2021-35042",
       "repositories": [
+        {
+          "id": 384694670,
+          "name": "CVE-2021-35042",
+          "full_name": "YouGina/CVE-2021-35042",
+          "html_url": "https://github.com/YouGina/CVE-2021-35042",
+          "description": "SQL injection via unsanitized QuerySet.order_by() input",
+          "stargazers_count": 13,
+          "forks_count": 5,
+          "language": "Python",
+          "updated_at": "2026-01-31T00:25:57Z",
+          "pushed_at": "2021-07-10T13:43:54Z",
+          "created_at": "2021-07-10T12:38:52Z",
+          "topics": [],
+          "owner": {
+            "login": "YouGina",
+            "html_url": "https://github.com/YouGina"
+          },
+          "clone_url": "https://github.com/YouGina/CVE-2021-35042.git"
+        },
         {
           "id": 410014595,
           "name": "CVE-2021-35042",
@@ -15004,6 +16814,30 @@
             "html_url": "https://github.com/mrlihd"
           },
           "clone_url": "https://github.com/mrlihd/CVE-2021-35042.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2021-3516",
+      "repositories": [
+        {
+          "id": 386162783,
+          "name": "CVE-2021-3516",
+          "full_name": "dja2TaqkGEEfA45/CVE-2021-3516",
+          "html_url": "https://github.com/dja2TaqkGEEfA45/CVE-2021-3516",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2021-07-15T04:29:56Z",
+          "pushed_at": "2021-07-15T04:29:57Z",
+          "created_at": "2021-07-15T04:29:56Z",
+          "topics": [],
+          "owner": {
+            "login": "dja2TaqkGEEfA45",
+            "html_url": "https://github.com/dja2TaqkGEEfA45"
+          },
+          "clone_url": "https://github.com/dja2TaqkGEEfA45/CVE-2021-3516.git"
         }
       ]
     },
@@ -15101,6 +16935,25 @@
     {
       "cve_id": "CVE-2021-35464",
       "repositories": [
+        {
+          "id": 381902138,
+          "name": "openam-CVE-2021-35464",
+          "full_name": "Y4er/openam-CVE-2021-35464",
+          "html_url": "https://github.com/Y4er/openam-CVE-2021-35464",
+          "description": "openam-CVE-2021-35464 tomcat 执行命令回显",
+          "stargazers_count": 87,
+          "forks_count": 14,
+          "language": "Java",
+          "updated_at": "2025-08-12T13:45:00Z",
+          "pushed_at": "2022-12-15T00:35:40Z",
+          "created_at": "2021-07-01T03:51:32Z",
+          "topics": [],
+          "owner": {
+            "login": "Y4er",
+            "html_url": "https://github.com/Y4er"
+          },
+          "clone_url": "https://github.com/Y4er/openam-CVE-2021-35464.git"
+        },
         {
           "id": 398670596,
           "name": "CVE-2021-35464",
@@ -15314,10 +17167,10 @@
           "full_name": "hakivvi/CVE-2021-3560",
           "html_url": "https://github.com/hakivvi/CVE-2021-3560",
           "description": "a reliable C based exploit and writeup for CVE-2021-3560.",
-          "stargazers_count": 38,
+          "stargazers_count": 39,
           "forks_count": 12,
           "language": "C",
-          "updated_at": "2026-01-06T07:03:10Z",
+          "updated_at": "2026-02-21T21:50:28Z",
           "pushed_at": "2021-06-23T11:07:32Z",
           "created_at": "2021-06-12T05:22:35Z",
           "topics": [
@@ -15350,6 +17203,25 @@
           "clone_url": "https://github.com/AssassinUKG/Polkit-CVE-2021-3560.git"
         },
         {
+          "id": 391043530,
+          "name": "CVE-2021-3560",
+          "full_name": "0dayNinja/CVE-2021-3560",
+          "html_url": "https://github.com/0dayNinja/CVE-2021-3560",
+          "description": "Polkit D-Bus Authentication Bypass Exploit",
+          "stargazers_count": 9,
+          "forks_count": 7,
+          "language": "Ruby",
+          "updated_at": "2026-01-05T17:19:42Z",
+          "pushed_at": "2021-07-30T11:43:32Z",
+          "created_at": "2021-07-30T11:41:34Z",
+          "topics": [],
+          "owner": {
+            "login": "0dayNinja",
+            "html_url": "https://github.com/0dayNinja"
+          },
+          "clone_url": "https://github.com/0dayNinja/CVE-2021-3560.git"
+        },
+        {
           "id": 376019552,
           "name": "polkit-auto-exploit",
           "full_name": "aancw/polkit-auto-exploit",
@@ -15367,6 +17239,82 @@
             "html_url": "https://github.com/aancw"
           },
           "clone_url": "https://github.com/aancw/polkit-auto-exploit.git"
+        },
+        {
+          "id": 382305236,
+          "name": "CVE-2021-3560",
+          "full_name": "cpu0x00/CVE-2021-3560",
+          "html_url": "https://github.com/cpu0x00/CVE-2021-3560",
+          "description": "ubuntu new PrivEsc race condition vulnerability",
+          "stargazers_count": 2,
+          "forks_count": 3,
+          "language": "Shell",
+          "updated_at": "2024-08-26T07:05:52Z",
+          "pushed_at": "2021-08-05T02:07:12Z",
+          "created_at": "2021-07-02T10:03:26Z",
+          "topics": [],
+          "owner": {
+            "login": "cpu0x00",
+            "html_url": "https://github.com/cpu0x00"
+          },
+          "clone_url": "https://github.com/cpu0x00/CVE-2021-3560.git"
+        },
+        {
+          "id": 390233864,
+          "name": "CVE-2021-3560",
+          "full_name": "BizarreLove/CVE-2021-3560",
+          "html_url": "https://github.com/BizarreLove/CVE-2021-3560",
+          "description": "NYCY_homework_\u0026_meeting",
+          "stargazers_count": 2,
+          "forks_count": 2,
+          "language": "C",
+          "updated_at": "2021-07-29T08:24:46Z",
+          "pushed_at": "2021-07-29T08:24:43Z",
+          "created_at": "2021-07-28T06:05:46Z",
+          "topics": [],
+          "owner": {
+            "login": "BizarreLove",
+            "html_url": "https://github.com/BizarreLove"
+          },
+          "clone_url": "https://github.com/BizarreLove/CVE-2021-3560.git"
+        },
+        {
+          "id": 377076931,
+          "name": "CVE-2021-3560",
+          "full_name": "curtishoughton/CVE-2021-3560",
+          "html_url": "https://github.com/curtishoughton/CVE-2021-3560",
+          "description": "Polkit - Local Privilege Escalation (CVE-2021-3560)",
+          "stargazers_count": 0,
+          "forks_count": 2,
+          "language": "",
+          "updated_at": "2021-07-26T07:06:22Z",
+          "pushed_at": "2021-06-14T14:54:05Z",
+          "created_at": "2021-06-15T07:37:15Z",
+          "topics": [],
+          "owner": {
+            "login": "curtishoughton",
+            "html_url": "https://github.com/curtishoughton"
+          },
+          "clone_url": "https://github.com/curtishoughton/CVE-2021-3560.git"
+        },
+        {
+          "id": 1087881548,
+          "name": "CVE-2021-3560_Polkit",
+          "full_name": "SeimuPVE/CVE-2021-3560_Polkit",
+          "html_url": "https://github.com/SeimuPVE/CVE-2021-3560_Polkit",
+          "description": "Exploit for CVE-2021-3560 Polkit Local Privilege Escalation Vulnerability",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2025-11-01T20:51:43Z",
+          "pushed_at": "2025-11-01T20:51:38Z",
+          "created_at": "2025-11-01T20:48:35Z",
+          "topics": [],
+          "owner": {
+            "login": "SeimuPVE",
+            "html_url": "https://github.com/SeimuPVE"
+          },
+          "clone_url": "https://github.com/SeimuPVE/CVE-2021-3560_Polkit.git"
         },
         {
           "id": 1134443072,
@@ -15424,44 +17372,6 @@
             "html_url": "https://github.com/iSTAR-Lab"
           },
           "clone_url": "https://github.com/iSTAR-Lab/CVE-2021-3560_PoC.git"
-        },
-        {
-          "id": 377076931,
-          "name": "CVE-2021-3560",
-          "full_name": "curtishoughton/CVE-2021-3560",
-          "html_url": "https://github.com/curtishoughton/CVE-2021-3560",
-          "description": "Polkit - Local Privilege Escalation (CVE-2021-3560)",
-          "stargazers_count": 0,
-          "forks_count": 2,
-          "language": "",
-          "updated_at": "2021-07-26T07:06:22Z",
-          "pushed_at": "2021-06-14T14:54:05Z",
-          "created_at": "2021-06-15T07:37:15Z",
-          "topics": [],
-          "owner": {
-            "login": "curtishoughton",
-            "html_url": "https://github.com/curtishoughton"
-          },
-          "clone_url": "https://github.com/curtishoughton/CVE-2021-3560.git"
-        },
-        {
-          "id": 1087881548,
-          "name": "CVE-2021-3560_Polkit",
-          "full_name": "SeimuPVE/CVE-2021-3560_Polkit",
-          "html_url": "https://github.com/SeimuPVE/CVE-2021-3560_Polkit",
-          "description": "Exploit for CVE-2021-3560 Polkit Local Privilege Escalation Vulnerability",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2025-11-01T20:51:43Z",
-          "pushed_at": "2025-11-01T20:51:38Z",
-          "created_at": "2025-11-01T20:48:35Z",
-          "topics": [],
-          "owner": {
-            "login": "SeimuPVE",
-            "html_url": "https://github.com/SeimuPVE"
-          },
-          "clone_url": "https://github.com/SeimuPVE/CVE-2021-3560_Polkit.git"
         },
         {
           "id": 427315131,
@@ -15529,6 +17439,37 @@
             "html_url": "https://github.com/frenzymadness"
           },
           "clone_url": "https://github.com/frenzymadness/CVE-2021-3572.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2021-35956",
+      "repositories": [
+        {
+          "id": 382029870,
+          "name": "CVE-2021-35956",
+          "full_name": "tcbutler320/CVE-2021-35956",
+          "html_url": "https://github.com/tcbutler320/CVE-2021-35956",
+          "description": "Proof of Concept Exploit for CVE-2021-35956, AKCP sensorProbe - 'Multiple' Cross Site Scripting (XSS)",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2021-07-02T03:55:56Z",
+          "pushed_at": "2021-07-01T12:46:54Z",
+          "created_at": "2021-07-01T12:44:05Z",
+          "topics": [
+            "cve",
+            "cve-2021-35956",
+            "exploit",
+            "exploit-code",
+            "exploit-db",
+            "proof-of-concept"
+          ],
+          "owner": {
+            "login": "tcbutler320",
+            "html_url": "https://github.com/tcbutler320"
+          },
+          "clone_url": "https://github.com/tcbutler320/CVE-2021-35956.git"
         }
       ]
     },
@@ -15766,6 +17707,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2021-36563",
+      "repositories": [
+        {
+          "id": 389955098,
+          "name": "CVE-2021-36563",
+          "full_name": "Edgarloyola/CVE-2021-36563",
+          "html_url": "https://github.com/Edgarloyola/CVE-2021-36563",
+          "description": "",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2024-05-21T15:43:55Z",
+          "pushed_at": "2022-09-16T17:53:44Z",
+          "created_at": "2021-07-27T11:22:21Z",
+          "topics": [],
+          "owner": {
+            "login": "Edgarloyola",
+            "html_url": "https://github.com/Edgarloyola"
+          },
+          "clone_url": "https://github.com/Edgarloyola/CVE-2021-36563.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2021-36581",
       "repositories": [
         {
@@ -15810,6 +17775,30 @@
             "html_url": "https://github.com/l00neyhacker"
           },
           "clone_url": "https://github.com/l00neyhacker/CVE-2021-36582.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2021-36747",
+      "repositories": [
+        {
+          "id": 387884646,
+          "name": "CVE-2021-36747",
+          "full_name": "cseasholtz/CVE-2021-36747",
+          "html_url": "https://github.com/cseasholtz/CVE-2021-36747",
+          "description": "",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2022-09-14T16:21:49Z",
+          "pushed_at": "2021-07-20T19:32:56Z",
+          "created_at": "2021-07-20T18:45:30Z",
+          "topics": [],
+          "owner": {
+            "login": "cseasholtz",
+            "html_url": "https://github.com/cseasholtz"
+          },
+          "clone_url": "https://github.com/cseasholtz/CVE-2021-36747.git"
         }
       ]
     },
@@ -15923,6 +17912,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2021-3679",
+      "repositories": [
+        {
+          "id": 387712955,
+          "name": "RingBufferDetonator",
+          "full_name": "aegistudio/RingBufferDetonator",
+          "html_url": "https://github.com/aegistudio/RingBufferDetonator",
+          "description": "Exploitation for CVE-2021-3679 and document for its fix",
+          "stargazers_count": 9,
+          "forks_count": 1,
+          "language": "Shell",
+          "updated_at": "2025-08-25T16:59:50Z",
+          "pushed_at": "2021-07-21T14:09:46Z",
+          "created_at": "2021-07-20T07:42:25Z",
+          "topics": [],
+          "owner": {
+            "login": "aegistudio",
+            "html_url": "https://github.com/aegistudio"
+          },
+          "clone_url": "https://github.com/aegistudio/RingBufferDetonator.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2021-36798",
       "repositories": [
         {
@@ -15968,6 +17981,35 @@
       ]
     },
     {
+      "cve_id": "CVE-2021-36799",
+      "repositories": [
+        {
+          "id": 387188990,
+          "name": "ets5-password-recovery",
+          "full_name": "robertguetzkow/ets5-password-recovery",
+          "html_url": "https://github.com/robertguetzkow/ets5-password-recovery",
+          "description": "ETS5 Password Recovery Tool is a PoC for CVE-2021-36799",
+          "stargazers_count": 33,
+          "forks_count": 4,
+          "language": "C#",
+          "updated_at": "2025-06-09T14:12:21Z",
+          "pushed_at": "2022-07-23T14:08:41Z",
+          "created_at": "2021-07-18T13:59:43Z",
+          "topics": [
+            "cve",
+            "decryption",
+            "poc",
+            "security"
+          ],
+          "owner": {
+            "login": "robertguetzkow",
+            "html_url": "https://github.com/robertguetzkow"
+          },
+          "clone_url": "https://github.com/robertguetzkow/ets5-password-recovery.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2021-36808",
       "repositories": [
         {
@@ -15995,6 +18037,182 @@
       "cve_id": "CVE-2021-36934",
       "repositories": [
         {
+          "id": 387926337,
+          "name": "ShadowSteal",
+          "full_name": "HuskyHacks/ShadowSteal",
+          "html_url": "https://github.com/HuskyHacks/ShadowSteal",
+          "description": "Pure Nim implementation for exploiting CVE-2021-36934, the SeriousSAM local privilege escalation",
+          "stargazers_count": 213,
+          "forks_count": 37,
+          "language": "Nim",
+          "updated_at": "2026-02-12T18:34:06Z",
+          "pushed_at": "2022-01-16T02:09:46Z",
+          "created_at": "2021-07-20T22:16:49Z",
+          "topics": [
+            "exploit",
+            "exploit-development",
+            "nim",
+            "windows"
+          ],
+          "owner": {
+            "login": "HuskyHacks",
+            "html_url": "https://github.com/HuskyHacks"
+          },
+          "clone_url": "https://github.com/HuskyHacks/ShadowSteal.git"
+        },
+        {
+          "id": 388311709,
+          "name": "Invoke-HiveNightmare",
+          "full_name": "WiredPulse/Invoke-HiveNightmare",
+          "html_url": "https://github.com/WiredPulse/Invoke-HiveNightmare",
+          "description": "PoC for CVE-2021-36934, which enables a standard user to be able to retrieve the SAM, Security, and Software Registry hives in Windows 10 version 1809 or newer",
+          "stargazers_count": 35,
+          "forks_count": 15,
+          "language": "PowerShell",
+          "updated_at": "2025-04-15T17:38:21Z",
+          "pushed_at": "2022-09-24T20:40:17Z",
+          "created_at": "2021-07-22T03:07:56Z",
+          "topics": [],
+          "owner": {
+            "login": "WiredPulse",
+            "html_url": "https://github.com/WiredPulse"
+          },
+          "clone_url": "https://github.com/WiredPulse/Invoke-HiveNightmare.git"
+        },
+        {
+          "id": 388119730,
+          "name": "CVE-2021-36934",
+          "full_name": "JoranSlingerland/CVE-2021-36934",
+          "html_url": "https://github.com/JoranSlingerland/CVE-2021-36934",
+          "description": "Fix for the CVE-2021-36934",
+          "stargazers_count": 10,
+          "forks_count": 5,
+          "language": "PowerShell",
+          "updated_at": "2023-01-22T08:49:14Z",
+          "pushed_at": "2021-10-15T23:44:37Z",
+          "created_at": "2021-07-21T13:06:51Z",
+          "topics": [],
+          "owner": {
+            "login": "JoranSlingerland",
+            "html_url": "https://github.com/JoranSlingerland"
+          },
+          "clone_url": "https://github.com/JoranSlingerland/CVE-2021-36934.git"
+        },
+        {
+          "id": 388374451,
+          "name": "SeriousSam",
+          "full_name": "romarroca/SeriousSam",
+          "html_url": "https://github.com/romarroca/SeriousSam",
+          "description": "HiveNightmare a.k.a. SeriousSam Local Privilege Escalation in Windows – CVE-2021-36934",
+          "stargazers_count": 9,
+          "forks_count": 2,
+          "language": "PowerShell",
+          "updated_at": "2025-06-26T12:28:23Z",
+          "pushed_at": "2021-07-22T11:39:31Z",
+          "created_at": "2021-07-22T07:49:29Z",
+          "topics": [],
+          "owner": {
+            "login": "romarroca",
+            "html_url": "https://github.com/romarroca"
+          },
+          "clone_url": "https://github.com/romarroca/SeriousSam.git"
+        },
+        {
+          "id": 388286318,
+          "name": "VSSCopy",
+          "full_name": "Wh04m1001/VSSCopy",
+          "html_url": "https://github.com/Wh04m1001/VSSCopy",
+          "description": "Small and dirty PoC for CVE-2021-36934",
+          "stargazers_count": 8,
+          "forks_count": 5,
+          "language": "C++",
+          "updated_at": "2025-04-15T17:37:51Z",
+          "pushed_at": "2021-07-22T02:15:27Z",
+          "created_at": "2021-07-22T00:55:23Z",
+          "topics": [],
+          "owner": {
+            "login": "Wh04m1001",
+            "html_url": "https://github.com/Wh04m1001"
+          },
+          "clone_url": "https://github.com/Wh04m1001/VSSCopy.git"
+        },
+        {
+          "id": 389878651,
+          "name": "CVE-2021-36934",
+          "full_name": "exploitblizzard/CVE-2021-36934",
+          "html_url": "https://github.com/exploitblizzard/CVE-2021-36934",
+          "description": "HiveNightmare aka SeriousSAM ",
+          "stargazers_count": 7,
+          "forks_count": 2,
+          "language": "",
+          "updated_at": "2023-04-21T05:37:19Z",
+          "pushed_at": "2021-07-27T06:56:18Z",
+          "created_at": "2021-07-27T06:54:30Z",
+          "topics": [],
+          "owner": {
+            "login": "exploitblizzard",
+            "html_url": "https://github.com/exploitblizzard"
+          },
+          "clone_url": "https://github.com/exploitblizzard/CVE-2021-36934.git"
+        },
+        {
+          "id": 389226743,
+          "name": "PyNightmare",
+          "full_name": "Sp00kySkelet0n/PyNightmare",
+          "html_url": "https://github.com/Sp00kySkelet0n/PyNightmare",
+          "description": "PoC for CVE-2021-36934 Aka HiveNightmare/SeriousSAM written in python3",
+          "stargazers_count": 5,
+          "forks_count": 2,
+          "language": "Python",
+          "updated_at": "2025-04-26T22:43:17Z",
+          "pushed_at": "2021-07-25T01:19:31Z",
+          "created_at": "2021-07-25T00:31:11Z",
+          "topics": [],
+          "owner": {
+            "login": "Sp00kySkelet0n",
+            "html_url": "https://github.com/Sp00kySkelet0n"
+          },
+          "clone_url": "https://github.com/Sp00kySkelet0n/PyNightmare.git"
+        },
+        {
+          "id": 388194766,
+          "name": "CVE-2021-36934",
+          "full_name": "n3tsurge/CVE-2021-36934",
+          "html_url": "https://github.com/n3tsurge/CVE-2021-36934",
+          "description": "Detection and Mitigation script for CVE-2021-36934 (HiveNightmare aka. SeriousSam)",
+          "stargazers_count": 5,
+          "forks_count": 4,
+          "language": "PowerShell",
+          "updated_at": "2025-04-15T17:38:01Z",
+          "pushed_at": "2021-07-22T02:10:56Z",
+          "created_at": "2021-07-21T17:24:44Z",
+          "topics": [],
+          "owner": {
+            "login": "n3tsurge",
+            "html_url": "https://github.com/n3tsurge"
+          },
+          "clone_url": "https://github.com/n3tsurge/CVE-2021-36934.git"
+        },
+        {
+          "id": 389125344,
+          "name": "CVE-2021-36934",
+          "full_name": "Preventions/CVE-2021-36934",
+          "html_url": "https://github.com/Preventions/CVE-2021-36934",
+          "description": "C# PoC for CVE-2021-36934/HiveNightmare/SeriousSAM",
+          "stargazers_count": 3,
+          "forks_count": 60,
+          "language": "",
+          "updated_at": "2025-04-15T17:38:20Z",
+          "pushed_at": "2021-07-24T13:01:47Z",
+          "created_at": "2021-07-24T14:58:10Z",
+          "topics": [],
+          "owner": {
+            "login": "Preventions",
+            "html_url": "https://github.com/Preventions"
+          },
+          "clone_url": "https://github.com/Preventions/CVE-2021-36934.git"
+        },
+        {
           "id": 395403990,
           "name": "oxide_hive",
           "full_name": "chron1k/oxide_hive",
@@ -16019,6 +18237,25 @@
             "html_url": "https://github.com/chron1k"
           },
           "clone_url": "https://github.com/chron1k/oxide_hive.git"
+        },
+        {
+          "id": 388499292,
+          "name": "CVE-2021-36934",
+          "full_name": "VertigoRay/CVE-2021-36934",
+          "html_url": "https://github.com/VertigoRay/CVE-2021-36934",
+          "description": "Windows Elevation of Privilege Vulnerability (SeriousSAM)",
+          "stargazers_count": 2,
+          "forks_count": 1,
+          "language": "PowerShell",
+          "updated_at": "2025-04-15T17:38:04Z",
+          "pushed_at": "2021-07-24T12:03:28Z",
+          "created_at": "2021-07-22T14:53:09Z",
+          "topics": [],
+          "owner": {
+            "login": "VertigoRay",
+            "html_url": "https://github.com/VertigoRay"
+          },
+          "clone_url": "https://github.com/VertigoRay/CVE-2021-36934.git"
         },
         {
           "id": 391724401,
@@ -16059,6 +18296,82 @@
           "clone_url": "https://github.com/grishinpv/poc_CVE-2021-36934.git"
         },
         {
+          "id": 390844451,
+          "name": "CVE-2021-36934",
+          "full_name": "irissentinel/CVE-2021-36934",
+          "html_url": "https://github.com/irissentinel/CVE-2021-36934",
+          "description": "CVE-2021-36934 HiveNightmare vulnerability checker and workaround",
+          "stargazers_count": 1,
+          "forks_count": 1,
+          "language": "PowerShell",
+          "updated_at": "2021-07-30T12:29:18Z",
+          "pushed_at": "2021-07-30T12:29:15Z",
+          "created_at": "2021-07-29T20:35:22Z",
+          "topics": [],
+          "owner": {
+            "login": "irissentinel",
+            "html_url": "https://github.com/irissentinel"
+          },
+          "clone_url": "https://github.com/irissentinel/CVE-2021-36934.git"
+        },
+        {
+          "id": 389555386,
+          "name": "CVE-2021-36934",
+          "full_name": "0x0D1n/CVE-2021-36934",
+          "html_url": "https://github.com/0x0D1n/CVE-2021-36934",
+          "description": "",
+          "stargazers_count": 1,
+          "forks_count": 2,
+          "language": "C++",
+          "updated_at": "2025-04-15T17:37:44Z",
+          "pushed_at": "2021-07-26T08:18:34Z",
+          "created_at": "2021-07-26T08:01:08Z",
+          "topics": [],
+          "owner": {
+            "login": "0x0D1n",
+            "html_url": "https://github.com/0x0D1n"
+          },
+          "clone_url": "https://github.com/0x0D1n/CVE-2021-36934.git"
+        },
+        {
+          "id": 388607076,
+          "name": "CVE-2021-36934",
+          "full_name": "bytesizedalex/CVE-2021-36934",
+          "html_url": "https://github.com/bytesizedalex/CVE-2021-36934",
+          "description": "CVE-2021-36934 PowerShell scripts",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "PowerShell",
+          "updated_at": "2021-07-28T01:48:39Z",
+          "pushed_at": "2021-07-23T19:14:19Z",
+          "created_at": "2021-07-22T21:54:45Z",
+          "topics": [],
+          "owner": {
+            "login": "bytesizedalex",
+            "html_url": "https://github.com/bytesizedalex"
+          },
+          "clone_url": "https://github.com/bytesizedalex/CVE-2021-36934.git"
+        },
+        {
+          "id": 388449471,
+          "name": "Invoke-HiveDreams",
+          "full_name": "WiredPulse/Invoke-HiveDreams",
+          "html_url": "https://github.com/WiredPulse/Invoke-HiveDreams",
+          "description": "A capability to identify and remediate CVE-2021-36934 (HiveNightmare)",
+          "stargazers_count": 1,
+          "forks_count": 1,
+          "language": "PowerShell",
+          "updated_at": "2023-05-18T04:28:59Z",
+          "pushed_at": "2021-07-22T14:42:51Z",
+          "created_at": "2021-07-22T12:10:41Z",
+          "topics": [],
+          "owner": {
+            "login": "WiredPulse",
+            "html_url": "https://github.com/WiredPulse"
+          },
+          "clone_url": "https://github.com/WiredPulse/Invoke-HiveDreams.git"
+        },
+        {
           "id": 394763090,
           "name": "CVE-2021-36934-export-shadow-volume-POC",
           "full_name": "OlivierLaflamme/CVE-2021-36934-export-shadow-volume-POC",
@@ -16078,6 +18391,25 @@
           "clone_url": "https://github.com/OlivierLaflamme/CVE-2021-36934-export-shadow-volume-POC.git"
         },
         {
+          "id": 388453276,
+          "name": "CVE-2021-36934",
+          "full_name": "tda90/CVE-2021-36934",
+          "html_url": "https://github.com/tda90/CVE-2021-36934",
+          "description": "CVE-2021-36934 PowerShell Fix",
+          "stargazers_count": 1,
+          "forks_count": 4,
+          "language": "PowerShell",
+          "updated_at": "2025-04-15T17:38:06Z",
+          "pushed_at": "2021-07-29T06:47:20Z",
+          "created_at": "2021-07-22T12:24:24Z",
+          "topics": [],
+          "owner": {
+            "login": "tda90",
+            "html_url": "https://github.com/tda90"
+          },
+          "clone_url": "https://github.com/tda90/CVE-2021-36934.git"
+        },
+        {
           "id": 392648426,
           "name": "SeriousSam",
           "full_name": "shaktavist/SeriousSam",
@@ -16095,6 +18427,25 @@
             "html_url": "https://github.com/shaktavist"
           },
           "clone_url": "https://github.com/shaktavist/SeriousSam.git"
+        },
+        {
+          "id": 389410092,
+          "name": "Serious-Sam---CVE-2021-36934-Mitigation-for-Datto-RMM",
+          "full_name": "jmaddington/Serious-Sam---CVE-2021-36934-Mitigation-for-Datto-RMM",
+          "html_url": "https://github.com/jmaddington/Serious-Sam---CVE-2021-36934-Mitigation-for-Datto-RMM",
+          "description": "This PowerShell script will take the mitigation measures for CVE-2021-36934 described by Microsoft and the US CERT team.  https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-36934 https://kb.cert.org/vuls/id/506989  USE AT YOUR OWN RISK -- BACKUPS MAY BREAK.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "PowerShell",
+          "updated_at": "2024-04-09T12:36:03Z",
+          "pushed_at": "2021-07-25T18:10:15Z",
+          "created_at": "2021-07-25T18:00:35Z",
+          "topics": [],
+          "owner": {
+            "login": "jmaddington",
+            "html_url": "https://github.com/jmaddington"
+          },
+          "clone_url": "https://github.com/jmaddington/Serious-Sam---CVE-2021-36934-Mitigation-for-Datto-RMM.git"
         }
       ]
     },
@@ -16119,6 +18470,44 @@
             "html_url": "https://github.com/Maxwitat"
           },
           "clone_url": "https://github.com/Maxwitat/Check-AAD-Connect-for-CVE-2021-36949-vulnerability.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2021-36958",
+      "repositories": [
+        {
+          "id": 390263988,
+          "name": "PrintNightmare",
+          "full_name": "Tomparte/PrintNightmare",
+          "html_url": "https://github.com/Tomparte/PrintNightmare",
+          "description": "To fight against Windows security breach PrintNightmare! (CVE-2021-34527, CVE-2021-1675)",
+          "stargazers_count": 3,
+          "forks_count": 0,
+          "language": "PowerShell",
+          "updated_at": "2023-08-01T13:42:52Z",
+          "pushed_at": "2021-08-20T11:41:18Z",
+          "created_at": "2021-07-28T07:55:42Z",
+          "topics": [
+            "batch-script",
+            "cve-2021-1675",
+            "cve-2021-34527",
+            "cve-2021-36958",
+            "cve-2021-40447",
+            "cybersecurity",
+            "powershell-script",
+            "print",
+            "printnightmare",
+            "security",
+            "spooler",
+            "to-do",
+            "windows"
+          ],
+          "owner": {
+            "login": "Tomparte",
+            "html_url": "https://github.com/Tomparte"
+          },
+          "clone_url": "https://github.com/Tomparte/PrintNightmare.git"
         }
       ]
     },
@@ -16553,6 +18942,36 @@
             "html_url": "https://github.com/jboogie15"
           },
           "clone_url": "https://github.com/jboogie15/CVE-2021-38149.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2021-38185",
+      "repositories": [
+        {
+          "id": 387582414,
+          "name": "cpiopwn",
+          "full_name": "fangqyi/cpiopwn",
+          "html_url": "https://github.com/fangqyi/cpiopwn",
+          "description": "ACE poc exploit for glibc cpio 2.13 through mmap chunk metadata curruption (CVE-2021-38185)",
+          "stargazers_count": 5,
+          "forks_count": 1,
+          "language": "Python",
+          "updated_at": "2025-11-08T15:38:21Z",
+          "pushed_at": "2021-08-11T08:59:33Z",
+          "created_at": "2021-07-19T20:10:13Z",
+          "topics": [
+            "cpio",
+            "cve",
+            "exploit",
+            "linux",
+            "poc"
+          ],
+          "owner": {
+            "login": "fangqyi",
+            "html_url": "https://github.com/fangqyi"
+          },
+          "clone_url": "https://github.com/fangqyi/cpiopwn.git"
         }
       ]
     },
@@ -17659,8 +20078,8 @@
           "stargazers_count": 1,
           "forks_count": 1,
           "language": "Python",
-          "updated_at": "2026-02-21T18:04:13Z",
-          "pushed_at": "2026-02-21T18:04:10Z",
+          "updated_at": "2026-02-22T05:47:12Z",
+          "pushed_at": "2026-02-22T05:47:09Z",
           "created_at": "2025-10-01T09:53:03Z",
           "topics": [
             "bash",
@@ -18736,6 +21155,44 @@
             "html_url": "https://github.com/jamesrep"
           },
           "clone_url": "https://github.com/jamesrep/cve-2021-40444.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2021-40447",
+      "repositories": [
+        {
+          "id": 390263988,
+          "name": "PrintNightmare",
+          "full_name": "Tomparte/PrintNightmare",
+          "html_url": "https://github.com/Tomparte/PrintNightmare",
+          "description": "To fight against Windows security breach PrintNightmare! (CVE-2021-34527, CVE-2021-1675)",
+          "stargazers_count": 3,
+          "forks_count": 0,
+          "language": "PowerShell",
+          "updated_at": "2023-08-01T13:42:52Z",
+          "pushed_at": "2021-08-20T11:41:18Z",
+          "created_at": "2021-07-28T07:55:42Z",
+          "topics": [
+            "batch-script",
+            "cve-2021-1675",
+            "cve-2021-34527",
+            "cve-2021-36958",
+            "cve-2021-40447",
+            "cybersecurity",
+            "powershell-script",
+            "print",
+            "printnightmare",
+            "security",
+            "spooler",
+            "to-do",
+            "windows"
+          ],
+          "owner": {
+            "login": "Tomparte",
+            "html_url": "https://github.com/Tomparte"
+          },
+          "clone_url": "https://github.com/Tomparte/PrintNightmare.git"
         }
       ]
     },
@@ -22737,6 +25194,40 @@
             "html_url": "https://github.com/cybersecurityworks553"
           },
           "clone_url": "https://github.com/cybersecurityworks553/noPac-detection.git"
+        },
+        {
+          "id": 974839209,
+          "name": "CVE-Scanner",
+          "full_name": "Chrisync/CVE-Scanner",
+          "html_url": "https://github.com/Chrisync/CVE-Scanner",
+          "description": "CVE-2021-42287/CVE-2021-42278/OTHER Scanner \u0026 Exploiter.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-02-21T23:12:00Z",
+          "pushed_at": "2026-02-21T23:11:56Z",
+          "created_at": "2025-04-29T11:39:11Z",
+          "topics": [
+            "bugbounty",
+            "cve",
+            "cve-2020-0796",
+            "cve-2021-44832",
+            "cve-2021-45046",
+            "cve-2022-23302",
+            "cve-scanning",
+            "cybersecurity",
+            "exploit",
+            "hacking",
+            "python",
+            "scanner",
+            "security",
+            "vulnerabilities"
+          ],
+          "owner": {
+            "login": "Chrisync",
+            "html_url": "https://github.com/Chrisync"
+          },
+          "clone_url": "https://github.com/Chrisync/CVE-Scanner.git"
         }
       ]
     },
@@ -22861,6 +25352,40 @@
             "html_url": "https://github.com/cybersecurityworks553"
           },
           "clone_url": "https://github.com/cybersecurityworks553/noPac-detection.git"
+        },
+        {
+          "id": 974839209,
+          "name": "CVE-Scanner",
+          "full_name": "Chrisync/CVE-Scanner",
+          "html_url": "https://github.com/Chrisync/CVE-Scanner",
+          "description": "CVE-2021-42287/CVE-2021-42278/OTHER Scanner \u0026 Exploiter.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-02-21T23:12:00Z",
+          "pushed_at": "2026-02-21T23:11:56Z",
+          "created_at": "2025-04-29T11:39:11Z",
+          "topics": [
+            "bugbounty",
+            "cve",
+            "cve-2020-0796",
+            "cve-2021-44832",
+            "cve-2021-45046",
+            "cve-2022-23302",
+            "cve-scanning",
+            "cybersecurity",
+            "exploit",
+            "hacking",
+            "python",
+            "scanner",
+            "security",
+            "vulnerabilities"
+          ],
+          "owner": {
+            "login": "Chrisync",
+            "html_url": "https://github.com/Chrisync"
+          },
+          "clone_url": "https://github.com/Chrisync/CVE-Scanner.git"
         }
       ]
     },
@@ -22981,6 +25506,30 @@
             "html_url": "https://github.com/kimusan"
           },
           "clone_url": "https://github.com/kimusan/goahead-webserver-pre-5.1.5-RCE-PoC-CVE-2021-42342-.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2021-42362",
+      "repositories": [
+        {
+          "id": 386012997,
+          "name": "CVE-2021-42362-PoC",
+          "full_name": "simonecris/CVE-2021-42362-PoC",
+          "html_url": "https://github.com/simonecris/CVE-2021-42362-PoC",
+          "description": "Wordpress Most Popular Post plugin vuln",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2022-03-04T14:51:09Z",
+          "pushed_at": "2021-07-14T23:41:15Z",
+          "created_at": "2021-07-14T16:55:50Z",
+          "topics": [],
+          "owner": {
+            "login": "simonecris",
+            "html_url": "https://github.com/simonecris"
+          },
+          "clone_url": "https://github.com/simonecris/CVE-2021-42362-PoC.git"
         }
       ]
     },
@@ -31716,6 +34265,40 @@
             "html_url": "https://github.com/andalik"
           },
           "clone_url": "https://github.com/andalik/log4j-filescan.git"
+        },
+        {
+          "id": 974839209,
+          "name": "CVE-Scanner",
+          "full_name": "Chrisync/CVE-Scanner",
+          "html_url": "https://github.com/Chrisync/CVE-Scanner",
+          "description": "CVE-2021-42287/CVE-2021-42278/OTHER Scanner \u0026 Exploiter.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-02-21T23:12:00Z",
+          "pushed_at": "2026-02-21T23:11:56Z",
+          "created_at": "2025-04-29T11:39:11Z",
+          "topics": [
+            "bugbounty",
+            "cve",
+            "cve-2020-0796",
+            "cve-2021-44832",
+            "cve-2021-45046",
+            "cve-2022-23302",
+            "cve-scanning",
+            "cybersecurity",
+            "exploit",
+            "hacking",
+            "python",
+            "scanner",
+            "security",
+            "vulnerabilities"
+          ],
+          "owner": {
+            "login": "Chrisync",
+            "html_url": "https://github.com/Chrisync"
+          },
+          "clone_url": "https://github.com/Chrisync/CVE-Scanner.git"
         }
       ]
     },
@@ -32340,25 +34923,6 @@
           "clone_url": "https://github.com/trickyearlobe/inspec-log4j.git"
         },
         {
-          "id": 439433330,
-          "name": "log4jjndilookupremove",
-          "full_name": "lukepasek/log4jjndilookupremove",
-          "html_url": "https://github.com/lukepasek/log4jjndilookupremove",
-          "description": "A simple script to remove Log4J JndiLookup.class from jars in a given directory, to temporarily protect from CVE-2021-45046 and CVE-2021-44228.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2022-01-04T14:24:23Z",
-          "pushed_at": "2022-01-04T14:24:19Z",
-          "created_at": "2021-12-17T18:59:16Z",
-          "topics": [],
-          "owner": {
-            "login": "lukepasek",
-            "html_url": "https://github.com/lukepasek"
-          },
-          "clone_url": "https://github.com/lukepasek/log4jjndilookupremove.git"
-        },
-        {
           "id": 439496578,
           "name": "PowerShell-Log4J-Scanner",
           "full_name": "DANSI/PowerShell-Log4J-Scanner",
@@ -32378,6 +34942,25 @@
           "clone_url": "https://github.com/DANSI/PowerShell-Log4J-Scanner.git"
         },
         {
+          "id": 439433330,
+          "name": "log4jjndilookupremove",
+          "full_name": "lukepasek/log4jjndilookupremove",
+          "html_url": "https://github.com/lukepasek/log4jjndilookupremove",
+          "description": "A simple script to remove Log4J JndiLookup.class from jars in a given directory, to temporarily protect from CVE-2021-45046 and CVE-2021-44228.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Shell",
+          "updated_at": "2022-01-04T14:24:23Z",
+          "pushed_at": "2022-01-04T14:24:19Z",
+          "created_at": "2021-12-17T18:59:16Z",
+          "topics": [],
+          "owner": {
+            "login": "lukepasek",
+            "html_url": "https://github.com/lukepasek"
+          },
+          "clone_url": "https://github.com/lukepasek/log4jjndilookupremove.git"
+        },
+        {
           "id": 441418197,
           "name": "Log4Shell-Sandbox-Signature",
           "full_name": "CaptanMoss/Log4Shell-Sandbox-Signature",
@@ -32395,6 +34978,40 @@
             "html_url": "https://github.com/CaptanMoss"
           },
           "clone_url": "https://github.com/CaptanMoss/Log4Shell-Sandbox-Signature.git"
+        },
+        {
+          "id": 974839209,
+          "name": "CVE-Scanner",
+          "full_name": "Chrisync/CVE-Scanner",
+          "html_url": "https://github.com/Chrisync/CVE-Scanner",
+          "description": "CVE-2021-42287/CVE-2021-42278/OTHER Scanner \u0026 Exploiter.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-02-21T23:12:00Z",
+          "pushed_at": "2026-02-21T23:11:56Z",
+          "created_at": "2025-04-29T11:39:11Z",
+          "topics": [
+            "bugbounty",
+            "cve",
+            "cve-2020-0796",
+            "cve-2021-44832",
+            "cve-2021-45046",
+            "cve-2022-23302",
+            "cve-scanning",
+            "cybersecurity",
+            "exploit",
+            "hacking",
+            "python",
+            "scanner",
+            "security",
+            "vulnerabilities"
+          ],
+          "owner": {
+            "login": "Chrisync",
+            "html_url": "https://github.com/Chrisync"
+          },
+          "clone_url": "https://github.com/Chrisync/CVE-Scanner.git"
         },
         {
           "id": 438697866,
@@ -33420,6 +36037,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2021-525",
+      "repositories": [
+        {
+          "id": 384083560,
+          "name": "FDEU-CVE-2021-525A",
+          "full_name": "full-disclosure/FDEU-CVE-2021-525A",
+          "html_url": "https://github.com/full-disclosure/FDEU-CVE-2021-525A",
+          "description": "D-Link credentials decryption tool poc",
+          "stargazers_count": 7,
+          "forks_count": 0,
+          "language": "C",
+          "updated_at": "2023-10-04T20:46:00Z",
+          "pushed_at": "2021-11-17T12:46:37Z",
+          "created_at": "2021-07-08T10:14:12Z",
+          "topics": [],
+          "owner": {
+            "login": "full-disclosure",
+            "html_url": "https://github.com/full-disclosure"
+          },
+          "clone_url": "https://github.com/full-disclosure/FDEU-CVE-2021-525A.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2021-6857",
       "repositories": [
         {
@@ -33515,6 +36156,25 @@
             "html_url": "https://github.com/yahoo"
           },
           "clone_url": "https://github.com/yahoo/check-log4j.git"
+        },
+        {
+          "id": 388701754,
+          "name": "hivenightmare",
+          "full_name": "firefart/hivenightmare",
+          "html_url": "https://github.com/firefart/hivenightmare",
+          "description": "Exploit for HiveNightmare - CVE-2021–36934",
+          "stargazers_count": 61,
+          "forks_count": 7,
+          "language": "Go",
+          "updated_at": "2025-11-11T03:24:02Z",
+          "pushed_at": "2025-08-22T08:43:36Z",
+          "created_at": "2021-07-23T06:36:08Z",
+          "topics": [],
+          "owner": {
+            "login": "firefart",
+            "html_url": "https://github.com/firefart"
+          },
+          "clone_url": "https://github.com/firefart/hivenightmare.git"
         },
         {
           "id": 439599795,
@@ -33671,23 +36331,23 @@
           "clone_url": "https://github.com/CyberCommands/CVE2021-23132.git"
         },
         {
-          "id": 344637422,
-          "name": "Invoke-HAFNIUMCheck.ps1",
-          "full_name": "WiredPulse/Invoke-HAFNIUMCheck.ps1",
-          "html_url": "https://github.com/WiredPulse/Invoke-HAFNIUMCheck.ps1",
-          "description": "Script used to identify compromise via CVEs 2021-26855, 26857, 26858, and 27065",
+          "id": 389536801,
+          "name": "HiveNightmare",
+          "full_name": "CrackerCat/HiveNightmare",
+          "html_url": "https://github.com/CrackerCat/HiveNightmare",
+          "description": "HiveNightmare/SeriousSAM（CVE_2021_36934）",
           "stargazers_count": 4,
-          "forks_count": 2,
-          "language": "PowerShell",
-          "updated_at": "2022-07-23T07:58:22Z",
-          "pushed_at": "2021-03-16T16:53:30Z",
-          "created_at": "2021-03-04T23:30:22Z",
+          "forks_count": 8,
+          "language": "",
+          "updated_at": "2025-04-15T17:37:48Z",
+          "pushed_at": "2021-07-25T14:40:25Z",
+          "created_at": "2021-07-26T06:51:37Z",
           "topics": [],
           "owner": {
-            "login": "WiredPulse",
-            "html_url": "https://github.com/WiredPulse"
+            "login": "CrackerCat",
+            "html_url": "https://github.com/CrackerCat"
           },
-          "clone_url": "https://github.com/WiredPulse/Invoke-HAFNIUMCheck.ps1.git"
+          "clone_url": "https://github.com/CrackerCat/HiveNightmare.git"
         },
         {
           "id": 416885380,
@@ -33709,6 +36369,25 @@
           "clone_url": "https://github.com/Nazky/PS4CVE202130858.git"
         },
         {
+          "id": 344637422,
+          "name": "Invoke-HAFNIUMCheck.ps1",
+          "full_name": "WiredPulse/Invoke-HAFNIUMCheck.ps1",
+          "html_url": "https://github.com/WiredPulse/Invoke-HAFNIUMCheck.ps1",
+          "description": "Script used to identify compromise via CVEs 2021-26855, 26857, 26858, and 27065",
+          "stargazers_count": 4,
+          "forks_count": 2,
+          "language": "PowerShell",
+          "updated_at": "2022-07-23T07:58:22Z",
+          "pushed_at": "2021-03-16T16:53:30Z",
+          "created_at": "2021-03-04T23:30:22Z",
+          "topics": [],
+          "owner": {
+            "login": "WiredPulse",
+            "html_url": "https://github.com/WiredPulse"
+          },
+          "clone_url": "https://github.com/WiredPulse/Invoke-HAFNIUMCheck.ps1.git"
+        },
+        {
           "id": 333665929,
           "name": "sudo-cve-2021",
           "full_name": "gh-Devin/sudo-cve-2021",
@@ -33726,63 +36405,6 @@
             "html_url": "https://github.com/gh-Devin"
           },
           "clone_url": "https://github.com/gh-Devin/sudo-cve-2021.git"
-        },
-        {
-          "id": 421251280,
-          "name": "ReadTeam-CVE-2021",
-          "full_name": "DD885/ReadTeam-CVE-2021",
-          "html_url": "https://github.com/DD885/ReadTeam-CVE-2021",
-          "description": "ReadTeam-CVE-2021",
-          "stargazers_count": 1,
-          "forks_count": 2,
-          "language": "",
-          "updated_at": "2023-04-28T05:33:13Z",
-          "pushed_at": "2021-10-26T05:55:36Z",
-          "created_at": "2021-10-26T02:23:12Z",
-          "topics": [],
-          "owner": {
-            "login": "DD885",
-            "html_url": "https://github.com/DD885"
-          },
-          "clone_url": "https://github.com/DD885/ReadTeam-CVE-2021.git"
-        },
-        {
-          "id": 358093591,
-          "name": "cve_2021_1732",
-          "full_name": "YOunGWebER/cve_2021_1732",
-          "html_url": "https://github.com/YOunGWebER/cve_2021_1732",
-          "description": "",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Rust",
-          "updated_at": "2024-04-22T06:06:50Z",
-          "pushed_at": "2021-04-15T01:46:54Z",
-          "created_at": "2021-04-15T01:43:46Z",
-          "topics": [],
-          "owner": {
-            "login": "YOunGWebER",
-            "html_url": "https://github.com/YOunGWebER"
-          },
-          "clone_url": "https://github.com/YOunGWebER/cve_2021_1732.git"
-        },
-        {
-          "id": 416334442,
-          "name": "PS4CVE20211879",
-          "full_name": "Nazky/PS4CVE20211879",
-          "html_url": "https://github.com/Nazky/PS4CVE20211879",
-          "description": "because people want to test it",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "HTML",
-          "updated_at": "2021-12-09T07:04:34Z",
-          "pushed_at": "2021-10-12T12:53:13Z",
-          "created_at": "2021-10-12T12:47:14Z",
-          "topics": [],
-          "owner": {
-            "login": "Nazky",
-            "html_url": "https://github.com/Nazky"
-          },
-          "clone_url": "https://github.com/Nazky/PS4CVE20211879.git"
         },
         {
           "id": 379977128,
@@ -33804,6 +36426,44 @@
           "clone_url": "https://github.com/KZMachine/CVERT-2021.git"
         },
         {
+          "id": 406504908,
+          "name": "CVE2021-40444-document-Scanner",
+          "full_name": "InfoSecPolkCounty/CVE2021-40444-document-Scanner",
+          "html_url": "https://github.com/InfoSecPolkCounty/CVE2021-40444-document-Scanner",
+          "description": "Scans Microsoft office documents for malicious xml entries",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2021-09-14T20:02:42Z",
+          "pushed_at": "2021-09-14T20:00:47Z",
+          "created_at": "2021-09-14T19:59:53Z",
+          "topics": [],
+          "owner": {
+            "login": "InfoSecPolkCounty",
+            "html_url": "https://github.com/InfoSecPolkCounty"
+          },
+          "clone_url": "https://github.com/InfoSecPolkCounty/CVE2021-40444-document-Scanner.git"
+        },
+        {
+          "id": 421251280,
+          "name": "ReadTeam-CVE-2021",
+          "full_name": "DD885/ReadTeam-CVE-2021",
+          "html_url": "https://github.com/DD885/ReadTeam-CVE-2021",
+          "description": "ReadTeam-CVE-2021",
+          "stargazers_count": 1,
+          "forks_count": 2,
+          "language": "",
+          "updated_at": "2023-04-28T05:33:13Z",
+          "pushed_at": "2021-10-26T05:55:36Z",
+          "created_at": "2021-10-26T02:23:12Z",
+          "topics": [],
+          "owner": {
+            "login": "DD885",
+            "html_url": "https://github.com/DD885"
+          },
+          "clone_url": "https://github.com/DD885/ReadTeam-CVE-2021.git"
+        },
+        {
           "id": 335289085,
           "name": "Baron-Samedit",
           "full_name": "AbdullahRizwan101/Baron-Samedit",
@@ -33821,6 +36481,44 @@
             "html_url": "https://github.com/AbdullahRizwan101"
           },
           "clone_url": "https://github.com/AbdullahRizwan101/Baron-Samedit.git"
+        },
+        {
+          "id": 416334442,
+          "name": "PS4CVE20211879",
+          "full_name": "Nazky/PS4CVE20211879",
+          "html_url": "https://github.com/Nazky/PS4CVE20211879",
+          "description": "because people want to test it",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "HTML",
+          "updated_at": "2021-12-09T07:04:34Z",
+          "pushed_at": "2021-10-12T12:53:13Z",
+          "created_at": "2021-10-12T12:47:14Z",
+          "topics": [],
+          "owner": {
+            "login": "Nazky",
+            "html_url": "https://github.com/Nazky"
+          },
+          "clone_url": "https://github.com/Nazky/PS4CVE20211879.git"
+        },
+        {
+          "id": 389690276,
+          "name": "PSHiveNightmare",
+          "full_name": "wolf0x/PSHiveNightmare",
+          "html_url": "https://github.com/wolf0x/PSHiveNightmare",
+          "description": "CVE-2021–36934. Exploit allowing you to read any registry hives as non-admin in powershell",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "PowerShell",
+          "updated_at": "2021-07-28T01:47:01Z",
+          "pushed_at": "2021-07-26T16:12:49Z",
+          "created_at": "2021-07-26T15:58:59Z",
+          "topics": [],
+          "owner": {
+            "login": "wolf0x",
+            "html_url": "https://github.com/wolf0x"
+          },
+          "clone_url": "https://github.com/wolf0x/PSHiveNightmare.git"
         },
         {
           "id": 346592585,
@@ -33842,118 +36540,42 @@
           "clone_url": "https://github.com/dorkerdevil/CVE_2021_26855_Exploit_Hub.git"
         },
         {
-          "id": 406504908,
-          "name": "CVE2021-40444-document-Scanner",
-          "full_name": "InfoSecPolkCounty/CVE2021-40444-document-Scanner",
-          "html_url": "https://github.com/InfoSecPolkCounty/CVE2021-40444-document-Scanner",
-          "description": "Scans Microsoft office documents for malicious xml entries",
+          "id": 383312410,
+          "name": "PrintNightMareChecker",
+          "full_name": "pyonghe/PrintNightMareChecker",
+          "html_url": "https://github.com/pyonghe/PrintNightMareChecker",
+          "description": "To check if Spooler is on and whether is it vulnerable to CVE 2021-34527",
+          "stargazers_count": 1,
+          "forks_count": 1,
+          "language": "PowerShell",
+          "updated_at": "2024-05-19T04:14:05Z",
+          "pushed_at": "2021-07-06T16:18:18Z",
+          "created_at": "2021-07-06T02:07:24Z",
+          "topics": [],
+          "owner": {
+            "login": "pyonghe",
+            "html_url": "https://github.com/pyonghe"
+          },
+          "clone_url": "https://github.com/pyonghe/PrintNightMareChecker.git"
+        },
+        {
+          "id": 358093591,
+          "name": "cve_2021_1732",
+          "full_name": "YOunGWebER/cve_2021_1732",
+          "html_url": "https://github.com/YOunGWebER/cve_2021_1732",
+          "description": "",
           "stargazers_count": 1,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2021-09-14T20:02:42Z",
-          "pushed_at": "2021-09-14T20:00:47Z",
-          "created_at": "2021-09-14T19:59:53Z",
+          "language": "Rust",
+          "updated_at": "2024-04-22T06:06:50Z",
+          "pushed_at": "2021-04-15T01:46:54Z",
+          "created_at": "2021-04-15T01:43:46Z",
           "topics": [],
           "owner": {
-            "login": "InfoSecPolkCounty",
-            "html_url": "https://github.com/InfoSecPolkCounty"
+            "login": "YOunGWebER",
+            "html_url": "https://github.com/YOunGWebER"
           },
-          "clone_url": "https://github.com/InfoSecPolkCounty/CVE2021-40444-document-Scanner.git"
-        },
-        {
-          "id": 1124728280,
-          "name": "CVE_2021_3711",
-          "full_name": "Truyen08/CVE_2021_3711",
-          "html_url": "https://github.com/Truyen08/CVE_2021_3711",
-          "description": "Demo CVE 2021-3711 showing a Docker container crash.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-02-08T18:30:07Z",
-          "pushed_at": "2026-02-08T18:22:02Z",
-          "created_at": "2025-12-29T14:10:04Z",
-          "topics": [],
-          "owner": {
-            "login": "Truyen08",
-            "html_url": "https://github.com/Truyen08"
-          },
-          "clone_url": "https://github.com/Truyen08/CVE_2021_3711.git"
-        },
-        {
-          "id": 357935628,
-          "name": "cve-2021-test",
-          "full_name": "dabaicaishinima/cve-2021-test",
-          "html_url": "https://github.com/dabaicaishinima/cve-2021-test",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2021-04-14T14:32:35Z",
-          "pushed_at": "2021-04-14T14:32:37Z",
-          "created_at": "2021-04-14T14:32:35Z",
-          "topics": [],
-          "owner": {
-            "login": "dabaicaishinima",
-            "html_url": "https://github.com/dabaicaishinima"
-          },
-          "clone_url": "https://github.com/dabaicaishinima/cve-2021-test.git"
-        },
-        {
-          "id": 368818454,
-          "name": "cve2021-3156-sudo-heap-overflow",
-          "full_name": "Jauler/cve2021-3156-sudo-heap-overflow",
-          "html_url": "https://github.com/Jauler/cve2021-3156-sudo-heap-overflow",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "C",
-          "updated_at": "2021-05-19T09:45:19Z",
-          "pushed_at": "2021-05-19T09:45:16Z",
-          "created_at": "2021-05-19T09:44:17Z",
-          "topics": [],
-          "owner": {
-            "login": "Jauler",
-            "html_url": "https://github.com/Jauler"
-          },
-          "clone_url": "https://github.com/Jauler/cve2021-3156-sudo-heap-overflow.git"
-        },
-        {
-          "id": 416096477,
-          "name": "FullstackAcademy-Printernightmare-writeup-2105-E.C.A.R.",
-          "full_name": "Sirius-RJ/FullstackAcademy-Printernightmare-writeup-2105-E.C.A.R.",
-          "html_url": "https://github.com/Sirius-RJ/FullstackAcademy-Printernightmare-writeup-2105-E.C.A.R.",
-          "description": "Currently on  a purple team project performing the Printernightmare also known as CVE 2021-1675: A vulnerability that allows an attacker with low access privileges to use a malicious DLL file to escalate privilege. Threat actors can only take advantage of the vulnerability if they have direct access to the vulnerable system, so Microsoft categorized it as low-risk. The June 2021 Security Updates included a successful patch for CVE 2021-1675.   remote code execution -cvs-2021-34527- A remote code execution (RCE) vulnerability that allows threat actors to remotely inject DLLs ",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2021-10-11T22:54:46Z",
-          "pushed_at": "2021-10-11T22:54:44Z",
-          "created_at": "2021-10-11T21:46:24Z",
-          "topics": [],
-          "owner": {
-            "login": "Sirius-RJ",
-            "html_url": "https://github.com/Sirius-RJ"
-          },
-          "clone_url": "https://github.com/Sirius-RJ/FullstackAcademy-Printernightmare-writeup-2105-E.C.A.R..git"
-        },
-        {
-          "id": 423377145,
-          "name": "Gitlab_RCE_CVE_2021_22205",
-          "full_name": "Qclover/Gitlab_RCE_CVE_2021_22205",
-          "html_url": "https://github.com/Qclover/Gitlab_RCE_CVE_2021_22205",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "Python",
-          "updated_at": "2021-11-02T04:21:41Z",
-          "pushed_at": "2021-11-02T04:19:55Z",
-          "created_at": "2021-11-01T07:38:45Z",
-          "topics": [],
-          "owner": {
-            "login": "Qclover",
-            "html_url": "https://github.com/Qclover"
-          },
-          "clone_url": "https://github.com/Qclover/Gitlab_RCE_CVE_2021_22205.git"
+          "clone_url": "https://github.com/YOunGWebER/cve_2021_1732.git"
         },
         {
           "id": 1105042485,
@@ -34013,23 +36635,61 @@
           "clone_url": "https://github.com/fazaroot/cve-2021-pwnkit.git"
         },
         {
-          "id": 439675746,
-          "name": "log4j",
-          "full_name": "initconf/log4j",
-          "html_url": "https://github.com/initconf/log4j",
-          "description": "Detections for CVE_2021_44228 aka Log4j",
+          "id": 389369078,
+          "name": "HiveNightmare",
+          "full_name": "wolf0x/HiveNightmare",
+          "html_url": "https://github.com/wolf0x/HiveNightmare",
+          "description": "CVE-2021–36934， Exploit allowing you to read any registry hives as non-admin.",
           "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "Zeek",
-          "updated_at": "2021-12-23T16:00:23Z",
-          "pushed_at": "2021-12-23T16:00:21Z",
-          "created_at": "2021-12-18T17:30:28Z",
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2021-07-25T15:09:04Z",
+          "pushed_at": "2021-07-25T15:09:01Z",
+          "created_at": "2021-07-25T14:39:31Z",
           "topics": [],
           "owner": {
-            "login": "initconf",
-            "html_url": "https://github.com/initconf"
+            "login": "wolf0x",
+            "html_url": "https://github.com/wolf0x"
           },
-          "clone_url": "https://github.com/initconf/log4j.git"
+          "clone_url": "https://github.com/wolf0x/HiveNightmare.git"
+        },
+        {
+          "id": 416096477,
+          "name": "FullstackAcademy-Printernightmare-writeup-2105-E.C.A.R.",
+          "full_name": "Sirius-RJ/FullstackAcademy-Printernightmare-writeup-2105-E.C.A.R.",
+          "html_url": "https://github.com/Sirius-RJ/FullstackAcademy-Printernightmare-writeup-2105-E.C.A.R.",
+          "description": "Currently on  a purple team project performing the Printernightmare also known as CVE 2021-1675: A vulnerability that allows an attacker with low access privileges to use a malicious DLL file to escalate privilege. Threat actors can only take advantage of the vulnerability if they have direct access to the vulnerable system, so Microsoft categorized it as low-risk. The June 2021 Security Updates included a successful patch for CVE 2021-1675.   remote code execution -cvs-2021-34527- A remote code execution (RCE) vulnerability that allows threat actors to remotely inject DLLs ",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2021-10-11T22:54:46Z",
+          "pushed_at": "2021-10-11T22:54:44Z",
+          "created_at": "2021-10-11T21:46:24Z",
+          "topics": [],
+          "owner": {
+            "login": "Sirius-RJ",
+            "html_url": "https://github.com/Sirius-RJ"
+          },
+          "clone_url": "https://github.com/Sirius-RJ/FullstackAcademy-Printernightmare-writeup-2105-E.C.A.R..git"
+        },
+        {
+          "id": 423377145,
+          "name": "Gitlab_RCE_CVE_2021_22205",
+          "full_name": "Qclover/Gitlab_RCE_CVE_2021_22205",
+          "html_url": "https://github.com/Qclover/Gitlab_RCE_CVE_2021_22205",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 1,
+          "language": "Python",
+          "updated_at": "2021-11-02T04:21:41Z",
+          "pushed_at": "2021-11-02T04:19:55Z",
+          "created_at": "2021-11-01T07:38:45Z",
+          "topics": [],
+          "owner": {
+            "login": "Qclover",
+            "html_url": "https://github.com/Qclover"
+          },
+          "clone_url": "https://github.com/Qclover/Gitlab_RCE_CVE_2021_22205.git"
         },
         {
           "id": 342738752,
@@ -34049,6 +36709,82 @@
             "html_url": "https://github.com/DougCarroll"
           },
           "clone_url": "https://github.com/DougCarroll/CVE_2021_21972.git"
+        },
+        {
+          "id": 1124728280,
+          "name": "CVE_2021_3711",
+          "full_name": "Truyen08/CVE_2021_3711",
+          "html_url": "https://github.com/Truyen08/CVE_2021_3711",
+          "description": "Demo CVE 2021-3711 showing a Docker container crash.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-02-08T18:30:07Z",
+          "pushed_at": "2026-02-08T18:22:02Z",
+          "created_at": "2025-12-29T14:10:04Z",
+          "topics": [],
+          "owner": {
+            "login": "Truyen08",
+            "html_url": "https://github.com/Truyen08"
+          },
+          "clone_url": "https://github.com/Truyen08/CVE_2021_3711.git"
+        },
+        {
+          "id": 357935628,
+          "name": "cve-2021-test",
+          "full_name": "dabaicaishinima/cve-2021-test",
+          "html_url": "https://github.com/dabaicaishinima/cve-2021-test",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2021-04-14T14:32:35Z",
+          "pushed_at": "2021-04-14T14:32:37Z",
+          "created_at": "2021-04-14T14:32:35Z",
+          "topics": [],
+          "owner": {
+            "login": "dabaicaishinima",
+            "html_url": "https://github.com/dabaicaishinima"
+          },
+          "clone_url": "https://github.com/dabaicaishinima/cve-2021-test.git"
+        },
+        {
+          "id": 439675746,
+          "name": "log4j",
+          "full_name": "initconf/log4j",
+          "html_url": "https://github.com/initconf/log4j",
+          "description": "Detections for CVE_2021_44228 aka Log4j",
+          "stargazers_count": 0,
+          "forks_count": 1,
+          "language": "Zeek",
+          "updated_at": "2021-12-23T16:00:23Z",
+          "pushed_at": "2021-12-23T16:00:21Z",
+          "created_at": "2021-12-18T17:30:28Z",
+          "topics": [],
+          "owner": {
+            "login": "initconf",
+            "html_url": "https://github.com/initconf"
+          },
+          "clone_url": "https://github.com/initconf/log4j.git"
+        },
+        {
+          "id": 368818454,
+          "name": "cve2021-3156-sudo-heap-overflow",
+          "full_name": "Jauler/cve2021-3156-sudo-heap-overflow",
+          "html_url": "https://github.com/Jauler/cve2021-3156-sudo-heap-overflow",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "C",
+          "updated_at": "2021-05-19T09:45:19Z",
+          "pushed_at": "2021-05-19T09:45:16Z",
+          "created_at": "2021-05-19T09:44:17Z",
+          "topics": [],
+          "owner": {
+            "login": "Jauler",
+            "html_url": "https://github.com/Jauler"
+          },
+          "clone_url": "https://github.com/Jauler/cve2021-3156-sudo-heap-overflow.git"
         },
         {
           "id": 437672047,
