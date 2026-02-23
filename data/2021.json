@@ -1342,6 +1342,41 @@
       ]
     },
     {
+      "cve_id": "CVE-2021-20038",
+      "repositories": [
+        {
+          "id": 1164971735,
+          "name": "sonicwall-audit-toolkit",
+          "full_name": "anir0y/sonicwall-audit-toolkit",
+          "html_url": "https://github.com/anir0y/sonicwall-audit-toolkit",
+          "description": "SonicWall security audit toolkit with vulnerable CTF lab (CVE-2021-20038, CVE-2024-53704)",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-02-23T17:28:33Z",
+          "pushed_at": "2026-02-23T17:28:01Z",
+          "created_at": "2026-02-23T17:27:58Z",
+          "topics": [
+            "authentication-bypass",
+            "buffer-overflow",
+            "ctf",
+            "cve",
+            "docker",
+            "exploit-development",
+            "penetration-testing",
+            "security-audit",
+            "sonicwall",
+            "vulnerable-lab"
+          ],
+          "owner": {
+            "login": "anir0y",
+            "html_url": "https://github.com/anir0y"
+          },
+          "clone_url": "https://github.com/anir0y/sonicwall-audit-toolkit.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2021-20190",
       "repositories": [
         {
@@ -20097,8 +20132,8 @@
           "stargazers_count": 1,
           "forks_count": 1,
           "language": "Python",
-          "updated_at": "2026-02-23T14:27:05Z",
-          "pushed_at": "2026-02-23T14:27:02Z",
+          "updated_at": "2026-02-23T16:31:39Z",
+          "pushed_at": "2026-02-23T16:31:36Z",
           "created_at": "2025-10-01T09:53:03Z",
           "topics": [
             "bash",
@@ -23513,61 +23548,23 @@
           "clone_url": "https://github.com/AssassinUKG/CVE-2021-41773.git"
         },
         {
-          "id": 414284449,
+          "id": 414804962,
           "name": "CVE-2021-41773",
-          "full_name": "r00tVen0m/CVE-2021-41773",
-          "html_url": "https://github.com/r00tVen0m/CVE-2021-41773",
-          "description": "",
+          "full_name": "shellreaper/CVE-2021-41773",
+          "html_url": "https://github.com/shellreaper/CVE-2021-41773",
+          "description": "This is a simple POC for Apache/2.4.49 Path Traversal Vulnerability",
           "stargazers_count": 1,
-          "forks_count": 1,
-          "language": "Shell",
-          "updated_at": "2024-08-12T20:17:02Z",
-          "pushed_at": "2021-10-06T19:05:07Z",
-          "created_at": "2021-10-06T16:15:21Z",
-          "topics": [],
-          "owner": {
-            "login": "r00tVen0m",
-            "html_url": "https://github.com/r00tVen0m"
-          },
-          "clone_url": "https://github.com/r00tVen0m/CVE-2021-41773.git"
-        },
-        {
-          "id": 1099937214,
-          "name": "CVE-2021-42013",
-          "full_name": "drackyjr/CVE-2021-42013",
-          "html_url": "https://github.com/drackyjr/CVE-2021-42013",
-          "description": "A comprehensive Python-based vulnerability scanner for detecting CVE-2021-41773 and CVE-2021-42013 path traversal and remote code execution vulnerabilities in Apache HTTP Server versions 2.4.49 and 2.4.50.",
-          "stargazers_count": 1,
-          "forks_count": 0,
+          "forks_count": 2,
           "language": "Python",
-          "updated_at": "2025-11-21T06:46:00Z",
-          "pushed_at": "2025-11-19T16:26:57Z",
-          "created_at": "2025-11-19T16:20:45Z",
+          "updated_at": "2024-12-04T10:08:03Z",
+          "pushed_at": "2021-11-12T00:03:34Z",
+          "created_at": "2021-10-08T01:13:33Z",
           "topics": [],
           "owner": {
-            "login": "drackyjr",
-            "html_url": "https://github.com/drackyjr"
+            "login": "shellreaper",
+            "html_url": "https://github.com/shellreaper"
           },
-          "clone_url": "https://github.com/drackyjr/CVE-2021-42013.git"
-        },
-        {
-          "id": 416511119,
-          "name": "httpd-2.4.49",
-          "full_name": "ksanchezcld/httpd-2.4.49",
-          "html_url": "https://github.com/ksanchezcld/httpd-2.4.49",
-          "description": "critical: Path Traversal and Remote Code Execution in Apache HTTP Server 2.4.49 and 2.4.50 (incomplete fix of CVE-2021-41773) (CVE-2021-42013)",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "C",
-          "updated_at": "2023-04-29T16:26:04Z",
-          "pushed_at": "2021-10-12T22:02:19Z",
-          "created_at": "2021-10-12T22:02:09Z",
-          "topics": [],
-          "owner": {
-            "login": "ksanchezcld",
-            "html_url": "https://github.com/ksanchezcld"
-          },
-          "clone_url": "https://github.com/ksanchezcld/httpd-2.4.49.git"
+          "clone_url": "https://github.com/shellreaper/CVE-2021-41773.git"
         },
         {
           "id": 414347675,
@@ -23589,42 +23586,73 @@
           "clone_url": "https://github.com/n3k00n3/CVE-2021-41773.git"
         },
         {
-          "id": 421138366,
+          "id": 414878778,
           "name": "CVE-2021-41773",
-          "full_name": "MazX0p/CVE-2021-41773",
-          "html_url": "https://github.com/MazX0p/CVE-2021-41773",
-          "description": "",
+          "full_name": "corelight/CVE-2021-41773",
+          "html_url": "https://github.com/corelight/CVE-2021-41773",
+          "description": "A Zeek package which raises notices for Path Traversal/RCE in Apache HTTP Server 2.4.49 (CVE-2021-41773) and 2.4.50 (CVE-2021-42013)",
           "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2022-07-01T21:33:34Z",
-          "pushed_at": "2021-10-25T18:39:11Z",
-          "created_at": "2021-10-25T18:21:43Z",
+          "forks_count": 2,
+          "language": "Zeek",
+          "updated_at": "2021-10-28T05:48:41Z",
+          "pushed_at": "2021-10-28T05:55:41Z",
+          "created_at": "2021-10-08T06:54:27Z",
           "topics": [],
           "owner": {
-            "login": "MazX0p",
-            "html_url": "https://github.com/MazX0p"
+            "login": "corelight",
+            "html_url": "https://github.com/corelight"
           },
-          "clone_url": "https://github.com/MazX0p/CVE-2021-41773.git"
+          "clone_url": "https://github.com/corelight/CVE-2021-41773.git"
         },
         {
-          "id": 1087071684,
-          "name": "CVE-2021-41773",
-          "full_name": "adrianmafandy/CVE-2021-41773",
-          "html_url": "https://github.com/adrianmafandy/CVE-2021-41773",
-          "description": "",
+          "id": 418481558,
+          "name": "CVE-2021-41773_42013",
+          "full_name": "zerodaywolf/CVE-2021-41773_42013",
+          "html_url": "https://github.com/zerodaywolf/CVE-2021-41773_42013",
+          "description": "Lab setup for CVE-2021-41773 (Apache httpd 2.4.49) and CVE-2021-42013 (Apache httpd 2.4.50).",
+          "stargazers_count": 1,
+          "forks_count": 2,
+          "language": "Dockerfile",
+          "updated_at": "2025-06-16T07:13:46Z",
+          "pushed_at": "2021-10-18T12:47:56Z",
+          "created_at": "2021-10-18T12:01:58Z",
+          "topics": [
+            "apache",
+            "cve",
+            "cve-2021-41773",
+            "cve-2021-42013",
+            "httpd",
+            "lfi",
+            "penetration-testing",
+            "rce",
+            "security",
+            "vulnerable",
+            "web"
+          ],
+          "owner": {
+            "login": "zerodaywolf",
+            "html_url": "https://github.com/zerodaywolf"
+          },
+          "clone_url": "https://github.com/zerodaywolf/CVE-2021-41773_42013.git"
+        },
+        {
+          "id": 1099937214,
+          "name": "CVE-2021-42013",
+          "full_name": "drackyjr/CVE-2021-42013",
+          "html_url": "https://github.com/drackyjr/CVE-2021-42013",
+          "description": "A comprehensive Python-based vulnerability scanner for detecting CVE-2021-41773 and CVE-2021-42013 path traversal and remote code execution vulnerabilities in Apache HTTP Server versions 2.4.49 and 2.4.50.",
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2025-11-06T19:02:29Z",
-          "pushed_at": "2025-10-31T10:52:20Z",
-          "created_at": "2025-10-31T10:34:12Z",
+          "updated_at": "2025-11-21T06:46:00Z",
+          "pushed_at": "2025-11-19T16:26:57Z",
+          "created_at": "2025-11-19T16:20:45Z",
           "topics": [],
           "owner": {
-            "login": "adrianmafandy",
-            "html_url": "https://github.com/adrianmafandy"
+            "login": "drackyjr",
+            "html_url": "https://github.com/drackyjr"
           },
-          "clone_url": "https://github.com/adrianmafandy/CVE-2021-41773.git"
+          "clone_url": "https://github.com/drackyjr/CVE-2021-42013.git"
         },
         {
           "id": 413943505,
@@ -23644,25 +23672,6 @@
             "html_url": "https://github.com/masahiro331"
           },
           "clone_url": "https://github.com/masahiro331/CVE-2021-41773.git"
-        },
-        {
-          "id": 414804962,
-          "name": "CVE-2021-41773",
-          "full_name": "shellreaper/CVE-2021-41773",
-          "html_url": "https://github.com/shellreaper/CVE-2021-41773",
-          "description": "This is a simple POC for Apache/2.4.49 Path Traversal Vulnerability",
-          "stargazers_count": 1,
-          "forks_count": 2,
-          "language": "Python",
-          "updated_at": "2024-12-04T10:08:03Z",
-          "pushed_at": "2021-11-12T00:03:34Z",
-          "created_at": "2021-10-08T01:13:33Z",
-          "topics": [],
-          "owner": {
-            "login": "shellreaper",
-            "html_url": "https://github.com/shellreaper"
-          },
-          "clone_url": "https://github.com/shellreaper/CVE-2021-41773.git"
         },
         {
           "id": 414514606,
@@ -23703,6 +23712,25 @@
           "clone_url": "https://github.com/PentesterGuruji/CVE-2021-41773.git"
         },
         {
+          "id": 421138366,
+          "name": "CVE-2021-41773",
+          "full_name": "MazX0p/CVE-2021-41773",
+          "html_url": "https://github.com/MazX0p/CVE-2021-41773",
+          "description": "",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Shell",
+          "updated_at": "2022-07-01T21:33:34Z",
+          "pushed_at": "2021-10-25T18:39:11Z",
+          "created_at": "2021-10-25T18:21:43Z",
+          "topics": [],
+          "owner": {
+            "login": "MazX0p",
+            "html_url": "https://github.com/MazX0p"
+          },
+          "clone_url": "https://github.com/MazX0p/CVE-2021-41773.git"
+        },
+        {
           "id": 427815832,
           "name": "POC-CVE-2021-41773",
           "full_name": "kubota/POC-CVE-2021-41773",
@@ -23722,35 +23750,23 @@
           "clone_url": "https://github.com/kubota/POC-CVE-2021-41773.git"
         },
         {
-          "id": 418481558,
-          "name": "CVE-2021-41773_42013",
-          "full_name": "zerodaywolf/CVE-2021-41773_42013",
-          "html_url": "https://github.com/zerodaywolf/CVE-2021-41773_42013",
-          "description": "Lab setup for CVE-2021-41773 (Apache httpd 2.4.49) and CVE-2021-42013 (Apache httpd 2.4.50).",
+          "id": 415357102,
+          "name": "CVE-2021-41773",
+          "full_name": "EagleTube/CVE-2021-41773",
+          "html_url": "https://github.com/EagleTube/CVE-2021-41773",
+          "description": "Apache 2.4.49 Path Traversal Vulnerability Checker ",
           "stargazers_count": 1,
-          "forks_count": 2,
-          "language": "Dockerfile",
-          "updated_at": "2025-06-16T07:13:46Z",
-          "pushed_at": "2021-10-18T12:47:56Z",
-          "created_at": "2021-10-18T12:01:58Z",
-          "topics": [
-            "apache",
-            "cve",
-            "cve-2021-41773",
-            "cve-2021-42013",
-            "httpd",
-            "lfi",
-            "penetration-testing",
-            "rce",
-            "security",
-            "vulnerable",
-            "web"
-          ],
+          "forks_count": 1,
+          "language": "Python",
+          "updated_at": "2024-08-12T20:17:08Z",
+          "pushed_at": "2021-10-09T16:32:08Z",
+          "created_at": "2021-10-09T16:07:57Z",
+          "topics": [],
           "owner": {
-            "login": "zerodaywolf",
-            "html_url": "https://github.com/zerodaywolf"
+            "login": "EagleTube",
+            "html_url": "https://github.com/EagleTube"
           },
-          "clone_url": "https://github.com/zerodaywolf/CVE-2021-41773_42013.git"
+          "clone_url": "https://github.com/EagleTube/CVE-2021-41773.git"
         },
         {
           "id": 426066790,
@@ -23779,42 +23795,42 @@
           "clone_url": "https://github.com/IcmpOff/Apache-2.4.49-2.4.50-Traversal-Remote-Code-Execution-Exploit.git"
         },
         {
-          "id": 414878778,
-          "name": "CVE-2021-41773",
-          "full_name": "corelight/CVE-2021-41773",
-          "html_url": "https://github.com/corelight/CVE-2021-41773",
-          "description": "A Zeek package which raises notices for Path Traversal/RCE in Apache HTTP Server 2.4.49 (CVE-2021-41773) and 2.4.50 (CVE-2021-42013)",
+          "id": 416511119,
+          "name": "httpd-2.4.49",
+          "full_name": "ksanchezcld/httpd-2.4.49",
+          "html_url": "https://github.com/ksanchezcld/httpd-2.4.49",
+          "description": "critical: Path Traversal and Remote Code Execution in Apache HTTP Server 2.4.49 and 2.4.50 (incomplete fix of CVE-2021-41773) (CVE-2021-42013)",
           "stargazers_count": 1,
-          "forks_count": 2,
-          "language": "Zeek",
-          "updated_at": "2021-10-28T05:48:41Z",
-          "pushed_at": "2021-10-28T05:55:41Z",
-          "created_at": "2021-10-08T06:54:27Z",
+          "forks_count": 0,
+          "language": "C",
+          "updated_at": "2023-04-29T16:26:04Z",
+          "pushed_at": "2021-10-12T22:02:19Z",
+          "created_at": "2021-10-12T22:02:09Z",
           "topics": [],
           "owner": {
-            "login": "corelight",
-            "html_url": "https://github.com/corelight"
+            "login": "ksanchezcld",
+            "html_url": "https://github.com/ksanchezcld"
           },
-          "clone_url": "https://github.com/corelight/CVE-2021-41773.git"
+          "clone_url": "https://github.com/ksanchezcld/httpd-2.4.49.git"
         },
         {
-          "id": 415357102,
+          "id": 414284449,
           "name": "CVE-2021-41773",
-          "full_name": "EagleTube/CVE-2021-41773",
-          "html_url": "https://github.com/EagleTube/CVE-2021-41773",
-          "description": "Apache 2.4.49 Path Traversal Vulnerability Checker ",
+          "full_name": "r00tVen0m/CVE-2021-41773",
+          "html_url": "https://github.com/r00tVen0m/CVE-2021-41773",
+          "description": "",
           "stargazers_count": 1,
           "forks_count": 1,
-          "language": "Python",
-          "updated_at": "2024-08-12T20:17:08Z",
-          "pushed_at": "2021-10-09T16:32:08Z",
-          "created_at": "2021-10-09T16:07:57Z",
+          "language": "Shell",
+          "updated_at": "2024-08-12T20:17:02Z",
+          "pushed_at": "2021-10-06T19:05:07Z",
+          "created_at": "2021-10-06T16:15:21Z",
           "topics": [],
           "owner": {
-            "login": "EagleTube",
-            "html_url": "https://github.com/EagleTube"
+            "login": "r00tVen0m",
+            "html_url": "https://github.com/r00tVen0m"
           },
-          "clone_url": "https://github.com/EagleTube/CVE-2021-41773.git"
+          "clone_url": "https://github.com/r00tVen0m/CVE-2021-41773.git"
         },
         {
           "id": 414646379,
@@ -23912,23 +23928,23 @@
           "clone_url": "https://github.com/wolf1892/CVE-2021-41773.git"
         },
         {
-          "id": 1135952705,
-          "name": "cve-2021-41773-checker",
-          "full_name": "sudo0xksh/cve-2021-41773-checker",
-          "html_url": "https://github.com/sudo0xksh/cve-2021-41773-checker",
-          "description": "A simple Python proof-of-concept tool to check for Apache path traversal vulnerability (CVE-2021-41773).  Detects vulnerable server versions and verifies exploitation by probing sensitive files.  Built for learning CVE analysis, not mass exploitation.",
+          "id": 1152398776,
+          "name": "Serdyuk-DO-homework-CVE-2021-41773",
+          "full_name": "dserdyk3-arch/Serdyuk-DO-homework-CVE-2021-41773",
+          "html_url": "https://github.com/dserdyk3-arch/Serdyuk-DO-homework-CVE-2021-41773",
+          "description": "PoC скрипт для CVE-2021-41773 - Path Traversal в Apache 2.4.49",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-01-16T20:55:02Z",
-          "pushed_at": "2026-01-16T20:54:58Z",
-          "created_at": "2026-01-16T20:39:02Z",
+          "updated_at": "2026-02-07T21:00:13Z",
+          "pushed_at": "2026-02-07T21:00:10Z",
+          "created_at": "2026-02-07T20:20:00Z",
           "topics": [],
           "owner": {
-            "login": "sudo0xksh",
-            "html_url": "https://github.com/sudo0xksh"
+            "login": "dserdyk3-arch",
+            "html_url": "https://github.com/dserdyk3-arch"
           },
-          "clone_url": "https://github.com/sudo0xksh/cve-2021-41773-checker.git"
+          "clone_url": "https://github.com/dserdyk3-arch/Serdyuk-DO-homework-CVE-2021-41773.git"
         },
         {
           "id": 414350527,
@@ -23950,23 +23966,23 @@
           "clone_url": "https://github.com/fnatalucci/CVE-2021-41773-RCE.git"
         },
         {
-          "id": 1132588885,
-          "name": "CVE-2021-41773-Analysis",
-          "full_name": "ChanaPCN/CVE-2021-41773-Analysis",
-          "html_url": "https://github.com/ChanaPCN/CVE-2021-41773-Analysis",
-          "description": "Technical analysis and reproduction lab for the Apache HTTP Server 2.4.49 Path Traversal and RCE vulnerability.",
+          "id": 1135952705,
+          "name": "cve-2021-41773-checker",
+          "full_name": "sudo0xksh/cve-2021-41773-checker",
+          "html_url": "https://github.com/sudo0xksh/cve-2021-41773-checker",
+          "description": "A simple Python proof-of-concept tool to check for Apache path traversal vulnerability (CVE-2021-41773).  Detects vulnerable server versions and verifies exploitation by probing sensitive files.  Built for learning CVE analysis, not mass exploitation.",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-01-12T07:11:25Z",
-          "pushed_at": "2026-01-12T07:16:57Z",
-          "created_at": "2026-01-12T07:11:21Z",
+          "language": "Python",
+          "updated_at": "2026-01-16T20:55:02Z",
+          "pushed_at": "2026-01-16T20:54:58Z",
+          "created_at": "2026-01-16T20:39:02Z",
           "topics": [],
           "owner": {
-            "login": "ChanaPCN",
-            "html_url": "https://github.com/ChanaPCN"
+            "login": "sudo0xksh",
+            "html_url": "https://github.com/sudo0xksh"
           },
-          "clone_url": "https://github.com/ChanaPCN/CVE-2021-41773-Analysis.git"
+          "clone_url": "https://github.com/sudo0xksh/cve-2021-41773-checker.git"
         },
         {
           "id": 421191229,
@@ -23988,23 +24004,23 @@
           "clone_url": "https://github.com/vida003/Scanner-CVE-2021-41773.git"
         },
         {
-          "id": 1129947096,
-          "name": "CVE-2021-41773",
-          "full_name": "rikdek/CVE-2021-41773",
-          "html_url": "https://github.com/rikdek/CVE-2021-41773",
-          "description": "Apache CVE-2021-41773",
+          "id": 1132588885,
+          "name": "CVE-2021-41773-Analysis",
+          "full_name": "ChanaPCN/CVE-2021-41773-Analysis",
+          "html_url": "https://github.com/ChanaPCN/CVE-2021-41773-Analysis",
+          "description": "Technical analysis and reproduction lab for the Apache HTTP Server 2.4.49 Path Traversal and RCE vulnerability.",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-01-07T20:11:17Z",
-          "pushed_at": "2026-01-07T20:11:17Z",
-          "created_at": "2026-01-07T20:11:17Z",
+          "updated_at": "2026-01-12T07:11:25Z",
+          "pushed_at": "2026-01-12T07:16:57Z",
+          "created_at": "2026-01-12T07:11:21Z",
           "topics": [],
           "owner": {
-            "login": "rikdek",
-            "html_url": "https://github.com/rikdek"
+            "login": "ChanaPCN",
+            "html_url": "https://github.com/ChanaPCN"
           },
-          "clone_url": "https://github.com/rikdek/CVE-2021-41773.git"
+          "clone_url": "https://github.com/ChanaPCN/CVE-2021-41773-Analysis.git"
         },
         {
           "id": 420528447,
@@ -24083,23 +24099,23 @@
           "clone_url": "https://github.com/TAI-REx/cve-2021-41773-nse.git"
         },
         {
-          "id": 1155188815,
-          "name": "PoC-Apache-CVE-2021-41773-Infrastructure-LAB",
-          "full_name": "ISabbiI/PoC-Apache-CVE-2021-41773-Infrastructure-LAB",
-          "html_url": "https://github.com/ISabbiI/PoC-Apache-CVE-2021-41773-Infrastructure-LAB",
-          "description": "",
+          "id": 1129947096,
+          "name": "CVE-2021-41773",
+          "full_name": "rikdek/CVE-2021-41773",
+          "html_url": "https://github.com/rikdek/CVE-2021-41773",
+          "description": "Apache CVE-2021-41773",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-02-14T23:43:01Z",
-          "pushed_at": "2026-02-14T23:42:58Z",
-          "created_at": "2026-02-11T08:18:27Z",
+          "language": "",
+          "updated_at": "2026-01-07T20:11:17Z",
+          "pushed_at": "2026-01-07T20:11:17Z",
+          "created_at": "2026-01-07T20:11:17Z",
           "topics": [],
           "owner": {
-            "login": "ISabbiI",
-            "html_url": "https://github.com/ISabbiI"
+            "login": "rikdek",
+            "html_url": "https://github.com/rikdek"
           },
-          "clone_url": "https://github.com/ISabbiI/PoC-Apache-CVE-2021-41773-Infrastructure-LAB.git"
+          "clone_url": "https://github.com/rikdek/CVE-2021-41773.git"
         },
         {
           "id": 414248192,
@@ -24159,23 +24175,23 @@
           "clone_url": "https://github.com/Jeromeyoung/CVE-2021-41784.git"
         },
         {
-          "id": 1104398243,
-          "name": "CVE-2021-41773",
-          "full_name": "faizdotid/CVE-2021-41773",
-          "html_url": "https://github.com/faizdotid/CVE-2021-41773",
-          "description": "Path Traversal Apache HTTP Server 2.4.49/2.4.50",
+          "id": 1155188815,
+          "name": "PoC-Apache-CVE-2021-41773-Infrastructure-LAB",
+          "full_name": "ISabbiI/PoC-Apache-CVE-2021-41773-Infrastructure-LAB",
+          "html_url": "https://github.com/ISabbiI/PoC-Apache-CVE-2021-41773-Infrastructure-LAB",
+          "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2025-11-26T06:54:58Z",
-          "pushed_at": "2025-11-26T06:54:55Z",
-          "created_at": "2025-11-26T06:50:58Z",
+          "updated_at": "2026-02-14T23:43:01Z",
+          "pushed_at": "2026-02-14T23:42:58Z",
+          "created_at": "2026-02-11T08:18:27Z",
           "topics": [],
           "owner": {
-            "login": "faizdotid",
-            "html_url": "https://github.com/faizdotid"
+            "login": "ISabbiI",
+            "html_url": "https://github.com/ISabbiI"
           },
-          "clone_url": "https://github.com/faizdotid/CVE-2021-41773.git"
+          "clone_url": "https://github.com/ISabbiI/PoC-Apache-CVE-2021-41773-Infrastructure-LAB.git"
         },
         {
           "id": 427956449,
@@ -24238,23 +24254,23 @@
           "clone_url": "https://github.com/pirenga/CVE-2021-41773.git"
         },
         {
-          "id": 1152398776,
-          "name": "Serdyuk-DO-homework-CVE-2021-41773",
-          "full_name": "dserdyk3-arch/Serdyuk-DO-homework-CVE-2021-41773",
-          "html_url": "https://github.com/dserdyk3-arch/Serdyuk-DO-homework-CVE-2021-41773",
-          "description": "PoC скрипт для CVE-2021-41773 - Path Traversal в Apache 2.4.49",
+          "id": 1104398243,
+          "name": "CVE-2021-41773",
+          "full_name": "faizdotid/CVE-2021-41773",
+          "html_url": "https://github.com/faizdotid/CVE-2021-41773",
+          "description": "Path Traversal Apache HTTP Server 2.4.49/2.4.50",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-07T21:00:13Z",
-          "pushed_at": "2026-02-07T21:00:10Z",
-          "created_at": "2026-02-07T20:20:00Z",
+          "updated_at": "2025-11-26T06:54:58Z",
+          "pushed_at": "2025-11-26T06:54:55Z",
+          "created_at": "2025-11-26T06:50:58Z",
           "topics": [],
           "owner": {
-            "login": "dserdyk3-arch",
-            "html_url": "https://github.com/dserdyk3-arch"
+            "login": "faizdotid",
+            "html_url": "https://github.com/faizdotid"
           },
-          "clone_url": "https://github.com/dserdyk3-arch/Serdyuk-DO-homework-CVE-2021-41773.git"
+          "clone_url": "https://github.com/faizdotid/CVE-2021-41773.git"
         },
         {
           "id": 414848372,
