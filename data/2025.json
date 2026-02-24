@@ -1460,6 +1460,34 @@
       "cve_id": "CVE-2025-1055",
       "repositories": [
         {
+          "id": 727775795,
+          "name": "BYOVD",
+          "full_name": "BlackSnufkin/BYOVD",
+          "html_url": "https://github.com/BlackSnufkin/BYOVD",
+          "description": "BYOVD research use cases featuring vulnerable driver discovery and reverse engineering methodology.  (CVE-2025-52915,  CVE-2025-1055,).",
+          "stargazers_count": 587,
+          "forks_count": 89,
+          "language": "Rust",
+          "updated_at": "2026-02-24T10:45:14Z",
+          "pushed_at": "2026-02-24T10:45:09Z",
+          "created_at": "2023-12-05T14:52:11Z",
+          "topics": [
+            "av-killer",
+            "byovd",
+            "exploit-development",
+            "loldrivers",
+            "malware-development",
+            "redteam",
+            "rust",
+            "vulnerable-driver"
+          ],
+          "owner": {
+            "login": "BlackSnufkin",
+            "html_url": "https://github.com/BlackSnufkin"
+          },
+          "clone_url": "https://github.com/BlackSnufkin/BYOVD.git"
+        },
+        {
           "id": 1050430030,
           "name": "CVE-2025-1055-poc",
           "full_name": "diego-tella/CVE-2025-1055-poc",
@@ -1653,10 +1681,10 @@
           "full_name": "aninfosec/CVE-2025-1094",
           "html_url": "https://github.com/aninfosec/CVE-2025-1094",
           "description": "It is an input sanitization flaw caused by an encoding mismatch, allowing crafted input to bypass filters. If a server is vulnerable, an attacker can inject malicious SQL that the backend executes.",
-          "stargazers_count": 0,
+          "stargazers_count": 1,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2025-06-26T04:45:45Z",
+          "updated_at": "2026-02-24T13:16:44Z",
           "pushed_at": "2025-06-26T04:45:42Z",
           "created_at": "2025-06-18T15:18:33Z",
           "topics": [],
@@ -4521,8 +4549,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-24T06:58:55Z",
-          "pushed_at": "2026-02-24T06:58:51Z",
+          "updated_at": "2026-02-24T15:40:53Z",
+          "pushed_at": "2026-02-24T15:38:24Z",
           "created_at": "2025-07-30T15:52:00Z",
           "topics": [
             "codeb0ss",
@@ -4599,8 +4627,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-24T06:58:00Z",
-          "pushed_at": "2026-02-24T06:57:57Z",
+          "updated_at": "2026-02-24T15:40:25Z",
+          "pushed_at": "2026-02-24T15:37:48Z",
           "created_at": "2026-01-14T06:05:44Z",
           "topics": [
             "cve-2025-14847",
@@ -6564,10 +6592,10 @@
           "full_name": "sarabpal-dev/cheese-cake",
           "html_url": "https://github.com/sarabpal-dev/cheese-cake",
           "description": "A proof-of-concept for CVE-2025-21479, chained with a Dirty Pagetable technique.",
-          "stargazers_count": 18,
+          "stargazers_count": 19,
           "forks_count": 5,
           "language": "C",
-          "updated_at": "2026-02-18T15:36:49Z",
+          "updated_at": "2026-02-24T13:30:23Z",
           "pushed_at": "2025-12-31T03:52:58Z",
           "created_at": "2025-11-16T09:08:06Z",
           "topics": [],
@@ -7129,6 +7157,25 @@
       "cve_id": "CVE-2025-22777",
       "repositories": [
         {
+          "id": 915301132,
+          "name": "CVE-2025-22777",
+          "full_name": "RandomRobbieBF/CVE-2025-22777",
+          "html_url": "https://github.com/RandomRobbieBF/CVE-2025-22777",
+          "description": "GiveWP – Donation Plugin and Fundraising Platform \u003c= 3.19.3 - Unauthenticated PHP Object Injection",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-02-24T12:59:28Z",
+          "pushed_at": "2025-01-11T13:53:05Z",
+          "created_at": "2025-01-11T13:52:31Z",
+          "topics": [],
+          "owner": {
+            "login": "RandomRobbieBF",
+            "html_url": "https://github.com/RandomRobbieBF"
+          },
+          "clone_url": "https://github.com/RandomRobbieBF/CVE-2025-22777.git"
+        },
+        {
           "id": 1124843964,
           "name": "CVE-2025-22777-GiveWP-Plugin-PHP-Object-Injection-Point-PoC-",
           "full_name": "SevDMG/CVE-2025-22777-GiveWP-Plugin-PHP-Object-Injection-Point-PoC-",
@@ -7146,25 +7193,6 @@
             "html_url": "https://github.com/SevDMG"
           },
           "clone_url": "https://github.com/SevDMG/CVE-2025-22777-GiveWP-Plugin-PHP-Object-Injection-Point-PoC-.git"
-        },
-        {
-          "id": 915301132,
-          "name": "CVE-2025-22777",
-          "full_name": "RandomRobbieBF/CVE-2025-22777",
-          "html_url": "https://github.com/RandomRobbieBF/CVE-2025-22777",
-          "description": "GiveWP – Donation Plugin and Fundraising Platform \u003c= 3.19.3 - Unauthenticated PHP Object Injection",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2025-09-26T18:37:21Z",
-          "pushed_at": "2025-01-11T13:53:05Z",
-          "created_at": "2025-01-11T13:52:31Z",
-          "topics": [],
-          "owner": {
-            "login": "RandomRobbieBF",
-            "html_url": "https://github.com/RandomRobbieBF"
-          },
-          "clone_url": "https://github.com/RandomRobbieBF/CVE-2025-22777.git"
         }
       ]
     },
@@ -7201,10 +7229,10 @@
           "full_name": "RandomRobbieBF/CVE-2025-22785",
           "html_url": "https://github.com/RandomRobbieBF/CVE-2025-22785",
           "description": "Course Booking System \u003c= 6.0.5 - Unauthenticated SQL Injection",
-          "stargazers_count": 0,
+          "stargazers_count": 1,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2025-02-24T15:45:04Z",
+          "updated_at": "2026-02-24T12:59:07Z",
           "pushed_at": "2025-01-23T10:21:58Z",
           "created_at": "2025-01-23T10:21:22Z",
           "topics": [],
@@ -7488,10 +7516,10 @@
           "full_name": "RandomRobbieBF/CVE-2025-22954",
           "html_url": "https://github.com/RandomRobbieBF/CVE-2025-22954",
           "description": "Koha CVE-2025-22954: SQL Injection in lateissues-export.pl",
-          "stargazers_count": 1,
+          "stargazers_count": 2,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2025-04-15T10:06:24Z",
+          "updated_at": "2026-02-24T12:58:54Z",
           "pushed_at": "2025-03-19T10:49:30Z",
           "created_at": "2025-03-19T10:47:09Z",
           "topics": [],
@@ -7687,8 +7715,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-24T07:20:51Z",
-          "pushed_at": "2026-02-24T07:20:48Z",
+          "updated_at": "2026-02-24T12:39:40Z",
+          "pushed_at": "2026-02-24T12:39:36Z",
           "created_at": "2026-02-14T20:01:20Z",
           "topics": [
             "action-recognition",
@@ -11982,10 +12010,10 @@
           "full_name": "RandomRobbieBF/CVE-2025-25163",
           "html_url": "https://github.com/RandomRobbieBF/CVE-2025-25163",
           "description": "Plugin A/B Image Optimizer \u003c= 3.3 - Authenticated (Subscriber+) Arbitrary File Download",
-          "stargazers_count": 0,
+          "stargazers_count": 1,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2025-02-18T10:26:41Z",
+          "updated_at": "2026-02-24T12:59:05Z",
           "pushed_at": "2025-02-18T10:26:37Z",
           "created_at": "2025-02-18T10:25:40Z",
           "topics": [],
@@ -19214,10 +19242,10 @@
           "full_name": "SafeBreach-Labs/EventLogin-CVE-2025-29969",
           "html_url": "https://github.com/SafeBreach-Labs/EventLogin-CVE-2025-29969",
           "description": "Exploitation of CVE-2025-29969",
-          "stargazers_count": 25,
+          "stargazers_count": 27,
           "forks_count": 7,
           "language": "Python",
-          "updated_at": "2026-02-23T18:57:52Z",
+          "updated_at": "2026-02-24T10:27:42Z",
           "pushed_at": "2026-02-20T18:25:25Z",
           "created_at": "2026-02-18T18:23:33Z",
           "topics": [],
@@ -20062,10 +20090,10 @@
           "full_name": "mchklt/CVE-2025-30406",
           "html_url": "https://github.com/mchklt/CVE-2025-30406",
           "description": "CVE-2025-30406 ViewState Exploit PoC",
-          "stargazers_count": 88,
+          "stargazers_count": 89,
           "forks_count": 17,
           "language": "Python",
-          "updated_at": "2026-02-13T11:57:40Z",
+          "updated_at": "2026-02-24T10:53:18Z",
           "pushed_at": "2025-07-31T19:26:42Z",
           "created_at": "2025-07-31T19:14:33Z",
           "topics": [],
@@ -21365,8 +21393,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Jupyter Notebook",
-          "updated_at": "2026-02-24T05:54:06Z",
-          "pushed_at": "2026-02-24T05:54:02Z",
+          "updated_at": "2026-02-24T14:25:20Z",
+          "pushed_at": "2026-02-24T14:22:53Z",
           "created_at": "2020-06-23T15:20:11Z",
           "topics": [
             "cve",
@@ -23226,42 +23254,61 @@
           "clone_url": "https://github.com/AntonieSoga/Erlang-OTP-PoC_CVE-2025-32433.git"
         },
         {
-          "id": 975139466,
-          "name": "CVE-2025-32433_PoC",
-          "full_name": "ODST-Forge/CVE-2025-32433_PoC",
-          "html_url": "https://github.com/ODST-Forge/CVE-2025-32433_PoC",
-          "description": "This script is a custom security tool designed to test for a critical pre-authentication vulnerability in systems running Erlang-based SSH servers",
+          "id": 969256192,
+          "name": "CVE-2025-32433-Remote-Shell",
+          "full_name": "meloppeitreet/CVE-2025-32433-Remote-Shell",
+          "html_url": "https://github.com/meloppeitreet/CVE-2025-32433-Remote-Shell",
+          "description": "Go-based exploit for CVE-2025-32433",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Go",
+          "updated_at": "2025-04-21T08:41:02Z",
+          "pushed_at": "2025-04-21T08:40:59Z",
+          "created_at": "2025-04-19T18:32:34Z",
+          "topics": [],
+          "owner": {
+            "login": "meloppeitreet",
+            "html_url": "https://github.com/meloppeitreet"
+          },
+          "clone_url": "https://github.com/meloppeitreet/CVE-2025-32433-Remote-Shell.git"
+        },
+        {
+          "id": 972057224,
+          "name": "lab_CVE-2025-32433",
+          "full_name": "ps-interactive/lab_CVE-2025-32433",
+          "html_url": "https://github.com/ps-interactive/lab_CVE-2025-32433",
+          "description": "CVE lab to accompany CVE course for CVE-2025-32433",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2025-05-13T14:32:53Z",
-          "pushed_at": "2025-05-13T14:32:49Z",
-          "created_at": "2025-04-29T21:06:37Z",
+          "updated_at": "2025-05-20T13:57:00Z",
+          "pushed_at": "2025-05-20T13:56:56Z",
+          "created_at": "2025-04-24T13:22:06Z",
           "topics": [],
           "owner": {
-            "login": "ODST-Forge",
-            "html_url": "https://github.com/ODST-Forge"
+            "login": "ps-interactive",
+            "html_url": "https://github.com/ps-interactive"
           },
-          "clone_url": "https://github.com/ODST-Forge/CVE-2025-32433_PoC.git"
+          "clone_url": "https://github.com/ps-interactive/lab_CVE-2025-32433.git"
         },
         {
-          "id": 973445755,
-          "name": "CVE-2025-32433",
-          "full_name": "MrDreamReal/CVE-2025-32433",
-          "html_url": "https://github.com/MrDreamReal/CVE-2025-32433",
-          "description": "CVE-2025-32433 Summary and Attack Overview",
+          "id": 975142960,
+          "name": "Erlang-OTP-SSH-CVE-2025-32433",
+          "full_name": "C9b3rD3vi1/Erlang-OTP-SSH-CVE-2025-32433",
+          "html_url": "https://github.com/C9b3rD3vi1/Erlang-OTP-SSH-CVE-2025-32433",
+          "description": " Exploit Erlang/OTP SSH CVE-2025-32433 in a lab setup.",
           "stargazers_count": 0,
-          "forks_count": 2,
-          "language": "Python",
-          "updated_at": "2025-04-27T02:33:34Z",
-          "pushed_at": "2025-04-27T02:33:31Z",
-          "created_at": "2025-04-27T02:18:55Z",
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2025-04-29T21:21:27Z",
+          "pushed_at": "2025-04-29T21:21:24Z",
+          "created_at": "2025-04-29T21:15:30Z",
           "topics": [],
           "owner": {
-            "login": "MrDreamReal",
-            "html_url": "https://github.com/MrDreamReal"
+            "login": "C9b3rD3vi1",
+            "html_url": "https://github.com/C9b3rD3vi1"
           },
-          "clone_url": "https://github.com/MrDreamReal/CVE-2025-32433.git"
+          "clone_url": "https://github.com/C9b3rD3vi1/Erlang-OTP-SSH-CVE-2025-32433.git"
         },
         {
           "id": 1046352510,
@@ -23302,25 +23349,6 @@
           "clone_url": "https://github.com/te0rwx/CVE-2025-32433-Detection.git"
         },
         {
-          "id": 972057224,
-          "name": "lab_CVE-2025-32433",
-          "full_name": "ps-interactive/lab_CVE-2025-32433",
-          "html_url": "https://github.com/ps-interactive/lab_CVE-2025-32433",
-          "description": "CVE lab to accompany CVE course for CVE-2025-32433",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2025-05-20T13:57:00Z",
-          "pushed_at": "2025-05-20T13:56:56Z",
-          "created_at": "2025-04-24T13:22:06Z",
-          "topics": [],
-          "owner": {
-            "login": "ps-interactive",
-            "html_url": "https://github.com/ps-interactive"
-          },
-          "clone_url": "https://github.com/ps-interactive/lab_CVE-2025-32433.git"
-        },
-        {
           "id": 975086958,
           "name": "CVE-2025-32433_Erlang-OTP_PoC",
           "full_name": "abrewer251/CVE-2025-32433_Erlang-OTP_PoC",
@@ -23340,23 +23368,61 @@
           "clone_url": "https://github.com/abrewer251/CVE-2025-32433_Erlang-OTP_PoC.git"
         },
         {
-          "id": 969256192,
-          "name": "CVE-2025-32433-Remote-Shell",
-          "full_name": "meloppeitreet/CVE-2025-32433-Remote-Shell",
-          "html_url": "https://github.com/meloppeitreet/CVE-2025-32433-Remote-Shell",
-          "description": "Go-based exploit for CVE-2025-32433",
+          "id": 973445755,
+          "name": "CVE-2025-32433",
+          "full_name": "MrDreamReal/CVE-2025-32433",
+          "html_url": "https://github.com/MrDreamReal/CVE-2025-32433",
+          "description": "CVE-2025-32433 Summary and Attack Overview",
           "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Go",
-          "updated_at": "2025-04-21T08:41:02Z",
-          "pushed_at": "2025-04-21T08:40:59Z",
-          "created_at": "2025-04-19T18:32:34Z",
+          "forks_count": 2,
+          "language": "Python",
+          "updated_at": "2025-04-27T02:33:34Z",
+          "pushed_at": "2025-04-27T02:33:31Z",
+          "created_at": "2025-04-27T02:18:55Z",
           "topics": [],
           "owner": {
-            "login": "meloppeitreet",
-            "html_url": "https://github.com/meloppeitreet"
+            "login": "MrDreamReal",
+            "html_url": "https://github.com/MrDreamReal"
           },
-          "clone_url": "https://github.com/meloppeitreet/CVE-2025-32433-Remote-Shell.git"
+          "clone_url": "https://github.com/MrDreamReal/CVE-2025-32433.git"
+        },
+        {
+          "id": 975139466,
+          "name": "CVE-2025-32433_PoC",
+          "full_name": "ODST-Forge/CVE-2025-32433_PoC",
+          "html_url": "https://github.com/ODST-Forge/CVE-2025-32433_PoC",
+          "description": "This script is a custom security tool designed to test for a critical pre-authentication vulnerability in systems running Erlang-based SSH servers",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2025-05-13T14:32:53Z",
+          "pushed_at": "2025-05-13T14:32:49Z",
+          "created_at": "2025-04-29T21:06:37Z",
+          "topics": [],
+          "owner": {
+            "login": "ODST-Forge",
+            "html_url": "https://github.com/ODST-Forge"
+          },
+          "clone_url": "https://github.com/ODST-Forge/CVE-2025-32433_PoC.git"
+        },
+        {
+          "id": 1165666577,
+          "name": "CVE-2025-32433",
+          "full_name": "carlosalbertotuma/CVE-2025-32433",
+          "html_url": "https://github.com/carlosalbertotuma/CVE-2025-32433",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-02-24T12:17:28Z",
+          "pushed_at": "2026-02-24T12:17:24Z",
+          "created_at": "2026-02-24T12:14:43Z",
+          "topics": [],
+          "owner": {
+            "login": "carlosalbertotuma",
+            "html_url": "https://github.com/carlosalbertotuma"
+          },
+          "clone_url": "https://github.com/carlosalbertotuma/CVE-2025-32433.git"
         },
         {
           "id": 968560860,
@@ -23376,25 +23442,6 @@
             "html_url": "https://github.com/Epivalent"
           },
           "clone_url": "https://github.com/Epivalent/CVE-2025-32433-detection.git"
-        },
-        {
-          "id": 977124082,
-          "name": "CVE-2025-32433",
-          "full_name": "vigilante-1337/CVE-2025-32433",
-          "html_url": "https://github.com/vigilante-1337/CVE-2025-32433",
-          "description": "A critical flaw has been discovered in Erlang/OTP's SSH server allows unauthenticated attackers to gain remote code execution. One malformed SSH handshake bypasses authentication and exploits improper handling of SSH protocol messages. ",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2025-05-03T23:08:19Z",
-          "pushed_at": "2025-05-03T23:08:16Z",
-          "created_at": "2025-05-03T13:32:34Z",
-          "topics": [],
-          "owner": {
-            "login": "vigilante-1337",
-            "html_url": "https://github.com/vigilante-1337"
-          },
-          "clone_url": "https://github.com/vigilante-1337/CVE-2025-32433.git"
         },
         {
           "id": 1079214126,
@@ -23473,23 +23520,23 @@
           "clone_url": "https://github.com/l1nuxkid/CVE-2025-32433-exploit.git"
         },
         {
-          "id": 975142960,
-          "name": "Erlang-OTP-SSH-CVE-2025-32433",
-          "full_name": "C9b3rD3vi1/Erlang-OTP-SSH-CVE-2025-32433",
-          "html_url": "https://github.com/C9b3rD3vi1/Erlang-OTP-SSH-CVE-2025-32433",
-          "description": " Exploit Erlang/OTP SSH CVE-2025-32433 in a lab setup.",
+          "id": 977124082,
+          "name": "CVE-2025-32433",
+          "full_name": "vigilante-1337/CVE-2025-32433",
+          "html_url": "https://github.com/vigilante-1337/CVE-2025-32433",
+          "description": "A critical flaw has been discovered in Erlang/OTP's SSH server allows unauthenticated attackers to gain remote code execution. One malformed SSH handshake bypasses authentication and exploits improper handling of SSH protocol messages. ",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "",
-          "updated_at": "2025-04-29T21:21:27Z",
-          "pushed_at": "2025-04-29T21:21:24Z",
-          "created_at": "2025-04-29T21:15:30Z",
+          "language": "Python",
+          "updated_at": "2025-05-03T23:08:19Z",
+          "pushed_at": "2025-05-03T23:08:16Z",
+          "created_at": "2025-05-03T13:32:34Z",
           "topics": [],
           "owner": {
-            "login": "C9b3rD3vi1",
-            "html_url": "https://github.com/C9b3rD3vi1"
+            "login": "vigilante-1337",
+            "html_url": "https://github.com/vigilante-1337"
           },
-          "clone_url": "https://github.com/C9b3rD3vi1/Erlang-OTP-SSH-CVE-2025-32433.git"
+          "clone_url": "https://github.com/vigilante-1337/CVE-2025-32433.git"
         },
         {
           "id": 1122668013,
@@ -24356,8 +24403,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Shell",
-          "updated_at": "2026-02-24T05:55:22Z",
-          "pushed_at": "2026-02-24T05:55:19Z",
+          "updated_at": "2026-02-24T14:26:34Z",
+          "pushed_at": "2026-02-24T14:24:31Z",
           "created_at": "2025-09-20T00:42:07Z",
           "topics": [
             "chroot",
@@ -24927,8 +24974,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Shell",
-          "updated_at": "2026-02-24T05:55:22Z",
-          "pushed_at": "2026-02-24T05:55:19Z",
+          "updated_at": "2026-02-24T14:26:48Z",
+          "pushed_at": "2026-02-24T14:24:32Z",
           "created_at": "2025-09-20T02:01:08Z",
           "topics": [
             "chroot",
@@ -25383,8 +25430,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Shell",
-          "updated_at": "2026-02-24T07:51:04Z",
-          "pushed_at": "2026-02-24T07:51:00Z",
+          "updated_at": "2026-02-24T14:14:54Z",
+          "pushed_at": "2026-02-24T14:14:50Z",
           "created_at": "2025-07-04T18:20:09Z",
           "topics": [],
           "owner": {
@@ -26085,10 +26132,10 @@
           "full_name": "kn0x0x/CVE-2025-32756-POC",
           "html_url": "https://github.com/kn0x0x/CVE-2025-32756-POC",
           "description": "Proof of Concept for CVE-2025-32756 - A critical stack-based buffer overflow vulnerability affecting multiple Fortinet products.",
-          "stargazers_count": 171,
+          "stargazers_count": 170,
           "forks_count": 29,
           "language": "Python",
-          "updated_at": "2026-02-23T12:26:02Z",
+          "updated_at": "2026-02-24T09:19:35Z",
           "pushed_at": "2025-06-13T07:55:34Z",
           "created_at": "2025-06-05T14:16:31Z",
           "topics": [
@@ -27476,8 +27523,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Kotlin",
-          "updated_at": "2026-02-24T07:10:09Z",
-          "pushed_at": "2026-02-24T07:10:06Z",
+          "updated_at": "2026-02-24T15:58:39Z",
+          "pushed_at": "2026-02-24T15:50:12Z",
           "created_at": "2026-01-29T01:59:47Z",
           "topics": [
             "aliases",
@@ -27848,8 +27895,8 @@
           "stargazers_count": 1,
           "forks_count": 1,
           "language": "C",
-          "updated_at": "2026-02-24T07:01:35Z",
-          "pushed_at": "2026-02-24T07:01:31Z",
+          "updated_at": "2026-02-24T15:42:59Z",
+          "pushed_at": "2026-02-24T15:41:23Z",
           "created_at": "2024-12-16T07:13:10Z",
           "topics": [
             "analytics-tool",
@@ -28899,10 +28946,10 @@
           "full_name": "NightBloodZ/CVE-2025-4123",
           "html_url": "https://github.com/NightBloodZ/CVE-2025-4123",
           "description": "Script to exploit Grafana CVE-2025-4123: XSS and Full-Read SSRF",
-          "stargazers_count": 54,
+          "stargazers_count": 55,
           "forks_count": 9,
           "language": "Python",
-          "updated_at": "2026-02-13T11:57:38Z",
+          "updated_at": "2026-02-24T10:53:17Z",
           "pushed_at": "2025-07-28T00:08:27Z",
           "created_at": "2025-05-22T15:34:03Z",
           "topics": [],
@@ -31061,10 +31108,10 @@
           "full_name": "RandomRobbieBF/CVE-2025-4578",
           "html_url": "https://github.com/RandomRobbieBF/CVE-2025-4578",
           "description": "File Provider \u003c= 1.2.3 - Unauthenticated SQL Injection",
-          "stargazers_count": 0,
+          "stargazers_count": 1,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2025-07-10T11:29:00Z",
+          "updated_at": "2026-02-24T12:58:47Z",
           "pushed_at": "2025-07-10T11:28:56Z",
           "created_at": "2025-07-10T11:28:21Z",
           "topics": [],
@@ -33999,10 +34046,10 @@
           "full_name": "RandomRobbieBF/CVE-2025-4840",
           "html_url": "https://github.com/RandomRobbieBF/CVE-2025-4840",
           "description": "Likes and Dislikes Plugin \u003c= 1.0.0 - Unauthenticated SQL Injection",
-          "stargazers_count": 0,
+          "stargazers_count": 1,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2025-09-26T18:38:49Z",
+          "updated_at": "2026-02-24T12:58:48Z",
           "pushed_at": "2025-07-10T10:11:54Z",
           "created_at": "2025-07-10T10:11:32Z",
           "topics": [],
@@ -34282,10 +34329,10 @@
           "full_name": "Skynoxk/CVE-2025-48703",
           "html_url": "https://github.com/Skynoxk/CVE-2025-48703",
           "description": "Remote Code execution in CentOS web panel ",
-          "stargazers_count": 3,
+          "stargazers_count": 4,
           "forks_count": 1,
           "language": "Python",
-          "updated_at": "2025-12-18T02:33:22Z",
+          "updated_at": "2026-02-24T12:55:26Z",
           "pushed_at": "2025-06-28T01:15:38Z",
           "created_at": "2025-06-26T14:19:36Z",
           "topics": [],
@@ -34722,10 +34769,10 @@
           "full_name": "fearsoff-org/CVE-2025-49113",
           "html_url": "https://github.com/fearsoff-org/CVE-2025-49113",
           "description": "",
-          "stargazers_count": 96,
+          "stargazers_count": 97,
           "forks_count": 19,
           "language": "PHP",
-          "updated_at": "2026-02-13T11:57:39Z",
+          "updated_at": "2026-02-24T10:53:17Z",
           "pushed_at": "2025-06-06T04:05:55Z",
           "created_at": "2025-06-04T15:49:43Z",
           "topics": [],
@@ -35465,8 +35512,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "C",
-          "updated_at": "2026-02-24T05:55:14Z",
-          "pushed_at": "2026-02-24T05:55:11Z",
+          "updated_at": "2026-02-24T14:26:29Z",
+          "pushed_at": "2026-02-24T14:24:21Z",
           "created_at": "2025-09-19T17:17:19Z",
           "topics": [
             "cve-2025-49144",
@@ -36046,10 +36093,10 @@
           "full_name": "dwisiswant0/CVE-2025-49844",
           "html_url": "https://github.com/dwisiswant0/CVE-2025-49844",
           "description": "CVE-2025-49844 – Redis Lua Parser Use-After-Free",
-          "stargazers_count": 63,
+          "stargazers_count": 64,
           "forks_count": 12,
           "language": "Lua",
-          "updated_at": "2025-12-24T01:40:47Z",
+          "updated_at": "2026-02-24T10:04:58Z",
           "pushed_at": "2025-10-07T05:07:52Z",
           "created_at": "2025-10-07T04:58:12Z",
           "topics": [],
@@ -36130,8 +36177,8 @@
           "stargazers_count": 2,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-24T06:13:49Z",
-          "pushed_at": "2026-02-24T06:13:45Z",
+          "updated_at": "2026-02-24T14:45:17Z",
+          "pushed_at": "2026-02-24T14:45:13Z",
           "created_at": "2019-04-13T07:51:09Z",
           "topics": [
             "ai-security",
@@ -36263,8 +36310,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "CSS",
-          "updated_at": "2026-02-24T06:14:41Z",
-          "pushed_at": "2026-02-24T06:14:36Z",
+          "updated_at": "2026-02-24T14:49:56Z",
+          "pushed_at": "2026-02-24T14:46:54Z",
           "created_at": "2022-04-06T09:27:39Z",
           "topics": [
             "ai-security",
@@ -38693,6 +38740,27 @@
           "clone_url": "https://github.com/yt2w/CVE-2025-52691.git"
         },
         {
+          "id": 1125688933,
+          "name": "CVE-2025-52691",
+          "full_name": "hilwa24/CVE-2025-52691",
+          "html_url": "https://github.com/hilwa24/CVE-2025-52691",
+          "description": "CVE‑2025‑52691 - SmarterMail Arbitrary File Upload Vulnerability",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-02-24T12:53:40Z",
+          "pushed_at": "2025-12-31T08:30:20Z",
+          "created_at": "2025-12-31T07:01:19Z",
+          "topics": [
+            "cve-2025-52691"
+          ],
+          "owner": {
+            "login": "hilwa24",
+            "html_url": "https://github.com/hilwa24"
+          },
+          "clone_url": "https://github.com/hilwa24/CVE-2025-52691.git"
+        },
+        {
           "id": 1125342349,
           "name": "CVE-2025-52691",
           "full_name": "you-ssef9/CVE-2025-52691",
@@ -38710,27 +38778,6 @@
             "html_url": "https://github.com/you-ssef9"
           },
           "clone_url": "https://github.com/you-ssef9/CVE-2025-52691.git"
-        },
-        {
-          "id": 1125688933,
-          "name": "CVE-2025-52691",
-          "full_name": "hilwa24/CVE-2025-52691",
-          "html_url": "https://github.com/hilwa24/CVE-2025-52691",
-          "description": "CVE‑2025‑52691 - SmarterMail Arbitrary File Upload Vulnerability",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2025-12-31T08:35:35Z",
-          "pushed_at": "2025-12-31T08:30:20Z",
-          "created_at": "2025-12-31T07:01:19Z",
-          "topics": [
-            "cve-2025-52691"
-          ],
-          "owner": {
-            "login": "hilwa24",
-            "html_url": "https://github.com/hilwa24"
-          },
-          "clone_url": "https://github.com/hilwa24/CVE-2025-52691.git"
         }
       ]
     },
@@ -38824,10 +38871,10 @@
           "full_name": "RandomRobbieBF/CVE-2025-5287",
           "html_url": "https://github.com/RandomRobbieBF/CVE-2025-5287",
           "description": "Likes and Dislikes Plugin \u003c= 1.0.0 - Unauthenticated SQL Injection",
-          "stargazers_count": 0,
+          "stargazers_count": 1,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2025-06-12T08:36:00Z",
+          "updated_at": "2026-02-24T12:58:50Z",
           "pushed_at": "2025-06-12T08:35:57Z",
           "created_at": "2025-06-12T08:34:40Z",
           "topics": [],
@@ -38930,6 +38977,34 @@
     {
       "cve_id": "CVE-2025-52915",
       "repositories": [
+        {
+          "id": 727775795,
+          "name": "BYOVD",
+          "full_name": "BlackSnufkin/BYOVD",
+          "html_url": "https://github.com/BlackSnufkin/BYOVD",
+          "description": "BYOVD research use cases featuring vulnerable driver discovery and reverse engineering methodology.  (CVE-2025-52915,  CVE-2025-1055,).",
+          "stargazers_count": 587,
+          "forks_count": 89,
+          "language": "Rust",
+          "updated_at": "2026-02-24T10:45:14Z",
+          "pushed_at": "2026-02-24T10:45:09Z",
+          "created_at": "2023-12-05T14:52:11Z",
+          "topics": [
+            "av-killer",
+            "byovd",
+            "exploit-development",
+            "loldrivers",
+            "malware-development",
+            "redteam",
+            "rust",
+            "vulnerable-driver"
+          ],
+          "owner": {
+            "login": "BlackSnufkin",
+            "html_url": "https://github.com/BlackSnufkin"
+          },
+          "clone_url": "https://github.com/BlackSnufkin/BYOVD.git"
+        },
         {
           "id": 1050430030,
           "name": "CVE-2025-1055-poc",
@@ -40870,8 +40945,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "JavaScript",
-          "updated_at": "2026-02-24T07:19:03Z",
-          "pushed_at": "2026-02-24T07:19:00Z",
+          "updated_at": "2026-02-24T16:00:26Z",
+          "pushed_at": "2026-02-24T16:00:07Z",
           "created_at": "2023-01-25T04:41:49Z",
           "topics": [
             "agent",
@@ -41090,8 +41165,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-24T05:49:33Z",
-          "pushed_at": "2026-02-24T05:49:30Z",
+          "updated_at": "2026-02-24T14:18:28Z",
+          "pushed_at": "2026-02-24T14:17:50Z",
           "created_at": "2025-08-17T22:04:33Z",
           "topics": [
             "aem-forms-on-jee",
@@ -41570,8 +41645,8 @@
           "stargazers_count": 1,
           "forks_count": 1,
           "language": "Python",
-          "updated_at": "2026-02-24T05:49:09Z",
-          "pushed_at": "2026-02-24T05:49:06Z",
+          "updated_at": "2026-02-24T14:18:26Z",
+          "pushed_at": "2026-02-24T14:17:50Z",
           "created_at": "2025-08-14T05:16:16Z",
           "topics": [
             "1panel",
@@ -41731,10 +41806,10 @@
           "full_name": "RandomRobbieBF/CVE-2025-54726",
           "html_url": "https://github.com/RandomRobbieBF/CVE-2025-54726",
           "description": "JS Archive List \u003c= 6.1.5 - Unauthenticated SQL Injection",
-          "stargazers_count": 0,
+          "stargazers_count": 1,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2025-09-25T15:39:29Z",
+          "updated_at": "2026-02-24T12:58:46Z",
           "pushed_at": "2025-09-25T15:39:26Z",
           "created_at": "2025-09-25T15:36:06Z",
           "topics": [],
@@ -42124,10 +42199,10 @@
           "full_name": "assetnote/react2shell-scanner",
           "html_url": "https://github.com/assetnote/react2shell-scanner",
           "description": "High Fidelity Detection Mechanism for RSC/Next.js RCE (CVE-2025-55182 \u0026 CVE-2025-66478)",
-          "stargazers_count": 2402,
+          "stargazers_count": 2403,
           "forks_count": 259,
           "language": "Python",
-          "updated_at": "2026-02-23T18:48:27Z",
+          "updated_at": "2026-02-24T10:53:22Z",
           "pushed_at": "2025-12-07T04:16:46Z",
           "created_at": "2025-12-04T06:55:04Z",
           "topics": [],
@@ -42198,34 +42273,15 @@
           "clone_url": "https://github.com/ejpir/CVE-2025-55182-research.git"
         },
         {
-          "id": 1110389869,
-          "name": "RSC_Detector",
-          "full_name": "mrknow001/RSC_Detector",
-          "html_url": "https://github.com/mrknow001/RSC_Detector",
-          "description": "Supports RSC fingerprinting and exploitation of the React component vulnerability CVE-2025-55182.",
-          "stargazers_count": 554,
-          "forks_count": 85,
-          "language": "JavaScript",
-          "updated_at": "2026-02-24T01:19:32Z",
-          "pushed_at": "2025-12-05T08:11:16Z",
-          "created_at": "2025-12-05T05:53:25Z",
-          "topics": [],
-          "owner": {
-            "login": "mrknow001",
-            "html_url": "https://github.com/mrknow001"
-          },
-          "clone_url": "https://github.com/mrknow001/RSC_Detector.git"
-        },
-        {
           "id": 1135906270,
           "name": "RSC-Detect-CVE-2025-55182",
           "full_name": "fBUZk2BH/RSC-Detect-CVE-2025-55182",
           "html_url": "https://github.com/fBUZk2BH/RSC-Detect-CVE-2025-55182",
           "description": "RSC Detect CVE 2025 55182",
-          "stargazers_count": 527,
+          "stargazers_count": 565,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-24T07:46:58Z",
+          "updated_at": "2026-02-24T15:23:32Z",
           "pushed_at": "2026-02-20T11:12:20Z",
           "created_at": "2026-01-16T19:02:49Z",
           "topics": [
@@ -42240,15 +42296,34 @@
           "clone_url": "https://github.com/fBUZk2BH/RSC-Detect-CVE-2025-55182.git"
         },
         {
+          "id": 1110389869,
+          "name": "RSC_Detector",
+          "full_name": "mrknow001/RSC_Detector",
+          "html_url": "https://github.com/mrknow001/RSC_Detector",
+          "description": "Supports RSC fingerprinting and exploitation of the React component vulnerability CVE-2025-55182.",
+          "stargazers_count": 556,
+          "forks_count": 85,
+          "language": "JavaScript",
+          "updated_at": "2026-02-24T11:59:19Z",
+          "pushed_at": "2025-12-05T08:11:16Z",
+          "created_at": "2025-12-05T05:53:25Z",
+          "topics": [],
+          "owner": {
+            "login": "mrknow001",
+            "html_url": "https://github.com/mrknow001"
+          },
+          "clone_url": "https://github.com/mrknow001/RSC_Detector.git"
+        },
+        {
           "id": 1110935853,
           "name": "CVE-2025-55182",
           "full_name": "emredavut/CVE-2025-55182",
           "html_url": "https://github.com/emredavut/CVE-2025-55182",
           "description": "RSC/Next.js RCE Vulnerability Detector \u0026 PoC Chrome Extension – CVE-2025-55182 \u0026 CVE-2025-66478",
-          "stargazers_count": 311,
+          "stargazers_count": 312,
           "forks_count": 59,
           "language": "JavaScript",
-          "updated_at": "2026-02-03T14:47:26Z",
+          "updated_at": "2026-02-24T13:22:54Z",
           "pushed_at": "2025-12-06T01:27:19Z",
           "created_at": "2025-12-06T00:36:16Z",
           "topics": [],
@@ -42264,10 +42339,10 @@
           "full_name": "zack0x01/CVE-2025-55182-advanced-scanner-",
           "html_url": "https://github.com/zack0x01/CVE-2025-55182-advanced-scanner-",
           "description": "",
-          "stargazers_count": 274,
+          "stargazers_count": 275,
           "forks_count": 49,
           "language": "Shell",
-          "updated_at": "2026-02-13T11:57:43Z",
+          "updated_at": "2026-02-24T10:53:22Z",
           "pushed_at": "2025-12-06T19:52:21Z",
           "created_at": "2025-12-06T14:36:55Z",
           "topics": [],
@@ -42283,10 +42358,10 @@
           "full_name": "ynsmroztas/NextRce",
           "html_url": "https://github.com/ynsmroztas/NextRce",
           "description": "React Shell \u0026 Next.js RSC Exploit Tool (CVE-2025-55182)",
-          "stargazers_count": 214,
+          "stargazers_count": 215,
           "forks_count": 54,
           "language": "Python",
-          "updated_at": "2026-02-23T06:52:15Z",
+          "updated_at": "2026-02-24T10:53:22Z",
           "pushed_at": "2025-12-12T11:11:17Z",
           "created_at": "2025-12-06T21:54:13Z",
           "topics": [],
@@ -42351,10 +42426,10 @@
           "full_name": "fatguru/CVE-2025-55182-scanner",
           "html_url": "https://github.com/fatguru/CVE-2025-55182-scanner",
           "description": "A non-intrusive surface scanner for CVE-2025-55182 (React Server Components RCE). Detects exposed RSC endpoints in React 19 and Next.js applications",
-          "stargazers_count": 112,
+          "stargazers_count": 113,
           "forks_count": 18,
           "language": "Python",
-          "updated_at": "2026-02-13T11:57:43Z",
+          "updated_at": "2026-02-24T10:53:22Z",
           "pushed_at": "2025-12-10T23:34:00Z",
           "created_at": "2025-12-03T21:52:18Z",
           "topics": [],
@@ -42949,6 +43024,25 @@
           "clone_url": "https://github.com/kOaDT/poc-cve-2025-55182.git"
         },
         {
+          "id": 1109349830,
+          "name": "Quickcheck-CVE-2025-55182-React-and-CVE-2025-66478-Next.js",
+          "full_name": "BankkRoll/Quickcheck-CVE-2025-55182-React-and-CVE-2025-66478-Next.js",
+          "html_url": "https://github.com/BankkRoll/Quickcheck-CVE-2025-55182-React-and-CVE-2025-66478-Next.js",
+          "description": "Script to quick check CVE-2025-55182 (React) and CVE-2025-66478 (Next.js)  - Critical unauthenticated RCE vulnerabilities in the React Server Components (RSC) “Flight” protocol.",
+          "stargazers_count": 12,
+          "forks_count": 6,
+          "language": "JavaScript",
+          "updated_at": "2026-02-24T10:53:22Z",
+          "pushed_at": "2025-12-09T03:22:29Z",
+          "created_at": "2025-12-03T17:21:52Z",
+          "topics": [],
+          "owner": {
+            "login": "BankkRoll",
+            "html_url": "https://github.com/BankkRoll"
+          },
+          "clone_url": "https://github.com/BankkRoll/Quickcheck-CVE-2025-55182-React-and-CVE-2025-66478-Next.js.git"
+        },
+        {
           "id": 1109477572,
           "name": "CVE-2025-55182",
           "full_name": "sickwell/CVE-2025-55182",
@@ -42966,25 +43060,6 @@
             "html_url": "https://github.com/sickwell"
           },
           "clone_url": "https://github.com/sickwell/CVE-2025-55182.git"
-        },
-        {
-          "id": 1109349830,
-          "name": "Quickcheck-CVE-2025-55182-React-and-CVE-2025-66478-Next.js",
-          "full_name": "BankkRoll/Quickcheck-CVE-2025-55182-React-and-CVE-2025-66478-Next.js",
-          "html_url": "https://github.com/BankkRoll/Quickcheck-CVE-2025-55182-React-and-CVE-2025-66478-Next.js",
-          "description": "Script to quick check CVE-2025-55182 (React) and CVE-2025-66478 (Next.js)  - Critical unauthenticated RCE vulnerabilities in the React Server Components (RSC) “Flight” protocol.",
-          "stargazers_count": 11,
-          "forks_count": 6,
-          "language": "JavaScript",
-          "updated_at": "2026-02-13T11:57:42Z",
-          "pushed_at": "2025-12-09T03:22:29Z",
-          "created_at": "2025-12-03T17:21:52Z",
-          "topics": [],
-          "owner": {
-            "login": "BankkRoll",
-            "html_url": "https://github.com/BankkRoll"
-          },
-          "clone_url": "https://github.com/BankkRoll/Quickcheck-CVE-2025-55182-React-and-CVE-2025-66478-Next.js.git"
         },
         {
           "id": 1113210770,
@@ -46075,8 +46150,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-24T06:43:28Z",
-          "pushed_at": "2026-02-24T06:43:25Z",
+          "updated_at": "2026-02-24T15:33:00Z",
+          "pushed_at": "2026-02-24T15:21:20Z",
           "created_at": "2024-05-28T16:48:51Z",
           "topics": [
             "cve",
@@ -46506,43 +46581,39 @@
           "clone_url": "https://github.com/simantchaudhari/CVE-2025-55182.git"
         },
         {
-          "id": 1130529237,
-          "name": "React2Shell",
-          "full_name": "Asder10/React2Shell",
-          "html_url": "https://github.com/Asder10/React2Shell",
-          "description": "🔍 Exploit CVE-2025-55182 vulnerabilities in Next.js and React with this efficient framework for rapid testing and assessment.",
+          "id": 1122448098,
+          "name": "Blackash-CVE-2025-55182",
+          "full_name": "Ghost121111/Blackash-CVE-2025-55182",
+          "html_url": "https://github.com/Ghost121111/Blackash-CVE-2025-55182",
+          "description": "🚨 Identify and address CVE-2025-55182, a critical React Server vulnerability allowing remote code execution without authentication.",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-24T06:54:40Z",
-          "pushed_at": "2026-02-24T06:54:36Z",
-          "created_at": "2026-01-08T16:28:04Z",
+          "updated_at": "2026-02-24T15:24:23Z",
+          "pushed_at": "2026-02-24T15:20:55Z",
+          "created_at": "2025-12-24T18:44:51Z",
           "topics": [
-            "bugbounty",
-            "cli",
-            "cve-2025-55182-ctf",
+            "blackash",
+            "bug-bounty",
+            "cve-2025-55182",
             "cybersecurity",
-            "docker",
+            "developer-tools",
+            "exploit",
+            "incident-response",
+            "information-security",
+            "open-source",
             "penetration-testing",
-            "proof-of-concept",
-            "rce",
-            "rce-scanner",
-            "react",
-            "react-dom",
-            "react2shell",
-            "redteam-tools",
-            "scanner",
-            "security-scanner",
-            "server-components",
-            "sql",
-            "vulnerability",
-            "waf"
+            "risk-assessment",
+            "security",
+            "software-security",
+            "threat-hunting",
+            "vulnerability"
           ],
           "owner": {
-            "login": "Asder10",
-            "html_url": "https://github.com/Asder10"
+            "login": "Ghost121111",
+            "html_url": "https://github.com/Ghost121111"
           },
-          "clone_url": "https://github.com/Asder10/React2Shell.git"
+          "clone_url": "https://github.com/Ghost121111/Blackash-CVE-2025-55182.git"
         },
         {
           "id": 1116753899,
@@ -46802,8 +46873,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Shell",
-          "updated_at": "2026-02-24T06:43:11Z",
-          "pushed_at": "2026-02-24T06:43:07Z",
+          "updated_at": "2026-02-24T15:32:41Z",
+          "pushed_at": "2026-02-24T15:20:55Z",
           "created_at": "2025-12-24T18:48:07Z",
           "topics": [
             "app-router-nextjs",
@@ -46908,39 +46979,42 @@
           "clone_url": "https://github.com/yaupunal/CVE-2025-55182-scanner.git"
         },
         {
-          "id": 1122448098,
-          "name": "Blackash-CVE-2025-55182",
-          "full_name": "Ghost121111/Blackash-CVE-2025-55182",
-          "html_url": "https://github.com/Ghost121111/Blackash-CVE-2025-55182",
-          "description": "🚨 Identify and address CVE-2025-55182, a critical React Server vulnerability allowing remote code execution without authentication.",
+          "id": 407729397,
+          "name": "CVE-2025-55182",
+          "full_name": "wiixx44/CVE-2025-55182",
+          "html_url": "https://github.com/wiixx44/CVE-2025-55182",
+          "description": "🔍 Demonstrate CVE-2025-55182, a critical vulnerability in React Server Components allowing unauthenticated arbitrary code execution.",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-02-24T06:43:05Z",
-          "pushed_at": "2026-02-24T06:43:02Z",
-          "created_at": "2025-12-24T18:44:51Z",
+          "language": "JavaScript",
+          "updated_at": "2026-02-24T12:00:36Z",
+          "pushed_at": "2026-02-24T12:00:22Z",
+          "created_at": "2021-09-18T02:04:33Z",
           "topics": [
-            "blackash",
-            "bug-bounty",
+            "app-router-nextjs",
+            "cve",
             "cve-2025-55182",
-            "cybersecurity",
-            "developer-tools",
+            "cve-2025-66478",
+            "cve-scanning",
+            "docker",
+            "docker-image",
             "exploit",
-            "incident-response",
-            "information-security",
-            "open-source",
-            "penetration-testing",
-            "risk-assessment",
+            "nextjs",
+            "poc",
+            "proof-of-concept",
+            "prototype-pollution",
+            "rce",
+            "react",
+            "react-dom",
+            "react2shell",
             "security",
-            "software-security",
-            "threat-hunting",
             "vulnerability"
           ],
           "owner": {
-            "login": "Ghost121111",
-            "html_url": "https://github.com/Ghost121111"
+            "login": "wiixx44",
+            "html_url": "https://github.com/wiixx44"
           },
-          "clone_url": "https://github.com/Ghost121111/Blackash-CVE-2025-55182.git"
+          "clone_url": "https://github.com/wiixx44/CVE-2025-55182.git"
         },
         {
           "id": 1112227260,
@@ -47570,8 +47644,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-24T06:49:11Z",
-          "pushed_at": "2026-02-24T06:49:07Z",
+          "updated_at": "2026-02-24T15:33:48Z",
+          "pushed_at": "2026-02-24T15:27:44Z",
           "created_at": "2026-01-02T01:28:57Z",
           "topics": [
             "appsec",
@@ -47808,8 +47882,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-24T06:47:53Z",
-          "pushed_at": "2026-02-24T06:47:49Z",
+          "updated_at": "2026-02-24T15:30:25Z",
+          "pushed_at": "2026-02-24T15:25:36Z",
           "created_at": "2025-04-21T22:04:31Z",
           "topics": [
             "ant-design-pro",
@@ -47840,42 +47914,38 @@
           "clone_url": "https://github.com/vick333-peniel/ReactExploitGUI.git"
         },
         {
-          "id": 1020357032,
-          "name": "CVE-2025-55182",
-          "full_name": "ahmed-dev-op/CVE-2025-55182",
-          "html_url": "https://github.com/ahmed-dev-op/CVE-2025-55182",
-          "description": "⚠️ Explore a vulnerable environment to test security scanners against the CVE-2025-55182 RCE flaw in React Server Components and Next.js applications.",
+          "id": 791056374,
+          "name": "CVE-2025-55182-exp",
+          "full_name": "iksanwkk/CVE-2025-55182-exp",
+          "html_url": "https://github.com/iksanwkk/CVE-2025-55182-exp",
+          "description": "🚨 Exploit CVE-2025-55182, a critical RCE vulnerability in React Server Components for Next.js apps; enables testing for prototype pollution risks.",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "JavaScript",
-          "updated_at": "2026-02-24T06:44:52Z",
-          "pushed_at": "2026-02-24T06:44:49Z",
-          "created_at": "2025-07-15T18:33:34Z",
+          "language": "Python",
+          "updated_at": "2026-02-24T15:27:51Z",
+          "pushed_at": "2026-02-24T15:23:44Z",
+          "created_at": "2024-04-24T02:36:56Z",
           "topics": [
-            "app-router-nextjs",
-            "cve",
             "cve-2025-55182",
-            "cve-2025-66478",
-            "cve-poc",
-            "cve-scanning",
-            "docker",
-            "docker-image",
+            "dify",
+            "exp",
             "exploit",
-            "lab",
+            "massive",
             "nextjs",
             "poc",
-            "proof-of-concept",
+            "python",
             "rce",
             "react",
+            "react-server-component",
             "react2shell",
-            "security",
+            "scanner",
             "vulnerability"
           ],
           "owner": {
-            "login": "ahmed-dev-op",
-            "html_url": "https://github.com/ahmed-dev-op"
+            "login": "iksanwkk",
+            "html_url": "https://github.com/iksanwkk"
           },
-          "clone_url": "https://github.com/ahmed-dev-op/CVE-2025-55182.git"
+          "clone_url": "https://github.com/iksanwkk/CVE-2025-55182-exp.git"
         },
         {
           "id": 1111579199,
@@ -48011,38 +48081,39 @@
           "clone_url": "https://github.com/faizdotid/rust-cve-2025-55182.git"
         },
         {
-          "id": 791056374,
-          "name": "CVE-2025-55182-exp",
-          "full_name": "iksanwkk/CVE-2025-55182-exp",
-          "html_url": "https://github.com/iksanwkk/CVE-2025-55182-exp",
-          "description": "🚨 Exploit CVE-2025-55182, a critical RCE vulnerability in React Server Components for Next.js apps; enables testing for prototype pollution risks.",
+          "id": 896042322,
+          "name": "CVE-2025-55182-shellinteractive",
+          "full_name": "alyaapm/CVE-2025-55182-shellinteractive",
+          "html_url": "https://github.com/alyaapm/CVE-2025-55182-shellinteractive",
+          "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-24T06:44:50Z",
-          "pushed_at": "2026-02-24T06:44:46Z",
-          "created_at": "2024-04-24T02:36:56Z",
+          "updated_at": "2026-02-24T15:27:22Z",
+          "pushed_at": "2026-02-24T15:22:58Z",
+          "created_at": "2024-11-29T12:32:19Z",
           "topics": [
+            "code-injection",
             "cve-2025-55182",
-            "dify",
-            "exp",
+            "cybersecurity",
             "exploit",
-            "massive",
-            "nextjs",
-            "poc",
-            "python",
-            "rce",
-            "react",
-            "react-server-component",
-            "react2shell",
-            "scanner",
-            "vulnerability"
+            "linux-shell",
+            "network-security",
+            "penetration-testing",
+            "remote-execution",
+            "security-patch",
+            "security-research",
+            "security-vulnerability",
+            "shell-interactive",
+            "software-bug",
+            "threat-hunting",
+            "vulnerability-management"
           ],
           "owner": {
-            "login": "iksanwkk",
-            "html_url": "https://github.com/iksanwkk"
+            "login": "alyaapm",
+            "html_url": "https://github.com/alyaapm"
           },
-          "clone_url": "https://github.com/iksanwkk/CVE-2025-55182-exp.git"
+          "clone_url": "https://github.com/alyaapm/CVE-2025-55182-shellinteractive.git"
         },
         {
           "id": 1114940905,
@@ -48235,23 +48306,42 @@
           "clone_url": "https://github.com/trax69/cve-2025-55182-poc.git"
         },
         {
-          "id": 1122904078,
-          "name": "Nextjs_RCE_Exploit_Tool",
-          "full_name": "sobuj0007/Nextjs_RCE_Exploit_Tool",
-          "html_url": "https://github.com/sobuj0007/Nextjs_RCE_Exploit_Tool",
-          "description": "🔍 Exploit CVE-2025-55182 in Next.js with this versatile tool for security research, featuring advanced payloads and WAF bypass techniques.",
+          "id": 1020357032,
+          "name": "CVE-2025-55182",
+          "full_name": "ahmed-dev-op/CVE-2025-55182",
+          "html_url": "https://github.com/ahmed-dev-op/CVE-2025-55182",
+          "description": "⚠️ Explore a vulnerable environment to test security scanners against the CVE-2025-55182 RCE flaw in React Server Components and Next.js applications.",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Go",
-          "updated_at": "2026-02-24T06:44:34Z",
-          "pushed_at": "2026-02-24T06:44:30Z",
-          "created_at": "2025-12-25T19:28:28Z",
-          "topics": [],
+          "language": "JavaScript",
+          "updated_at": "2026-02-24T15:29:39Z",
+          "pushed_at": "2026-02-24T15:22:57Z",
+          "created_at": "2025-07-15T18:33:34Z",
+          "topics": [
+            "app-router-nextjs",
+            "cve",
+            "cve-2025-55182",
+            "cve-2025-66478",
+            "cve-poc",
+            "cve-scanning",
+            "docker",
+            "docker-image",
+            "exploit",
+            "lab",
+            "nextjs",
+            "poc",
+            "proof-of-concept",
+            "rce",
+            "react",
+            "react2shell",
+            "security",
+            "vulnerability"
+          ],
           "owner": {
-            "login": "sobuj0007",
-            "html_url": "https://github.com/sobuj0007"
+            "login": "ahmed-dev-op",
+            "html_url": "https://github.com/ahmed-dev-op"
           },
-          "clone_url": "https://github.com/sobuj0007/Nextjs_RCE_Exploit_Tool.git"
+          "clone_url": "https://github.com/ahmed-dev-op/CVE-2025-55182.git"
         },
         {
           "id": 1111295386,
@@ -48349,29 +48439,23 @@
           "clone_url": "https://github.com/niokagi/react-cve-2025-55182.git"
         },
         {
-          "id": 1123446873,
-          "name": "CVE-2025-55182-POC-NEXTJS",
-          "full_name": "9988700/CVE-2025-55182-POC-NEXTJS",
-          "html_url": "https://github.com/9988700/CVE-2025-55182-POC-NEXTJS",
-          "description": "⚡ Discover and exploit CVE-2025-55182 with this PoC, offering reliable remote code execution tests for React Server Components in Next.js.",
+          "id": 1122904078,
+          "name": "Nextjs_RCE_Exploit_Tool",
+          "full_name": "sobuj0007/Nextjs_RCE_Exploit_Tool",
+          "html_url": "https://github.com/sobuj0007/Nextjs_RCE_Exploit_Tool",
+          "description": "🔍 Exploit CVE-2025-55182 in Next.js with this versatile tool for security research, featuring advanced payloads and WAF bypass techniques.",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-02-24T06:44:30Z",
-          "pushed_at": "2026-02-24T06:44:27Z",
-          "created_at": "2025-12-26T22:26:55Z",
-          "topics": [
-            "cve-2025-55182",
-            "exploit",
-            "nextjs",
-            "poc",
-            "react2shell"
-          ],
+          "language": "Go",
+          "updated_at": "2026-02-24T15:34:03Z",
+          "pushed_at": "2026-02-24T15:22:30Z",
+          "created_at": "2025-12-25T19:28:28Z",
+          "topics": [],
           "owner": {
-            "login": "9988700",
-            "html_url": "https://github.com/9988700"
+            "login": "sobuj0007",
+            "html_url": "https://github.com/sobuj0007"
           },
-          "clone_url": "https://github.com/9988700/CVE-2025-55182-POC-NEXTJS.git"
+          "clone_url": "https://github.com/sobuj0007/Nextjs_RCE_Exploit_Tool.git"
         },
         {
           "id": 1111208103,
@@ -48393,39 +48477,29 @@
           "clone_url": "https://github.com/MrSol0/CVE-2025-55182-Terminal.git"
         },
         {
-          "id": 896042322,
-          "name": "CVE-2025-55182-shellinteractive",
-          "full_name": "alyaapm/CVE-2025-55182-shellinteractive",
-          "html_url": "https://github.com/alyaapm/CVE-2025-55182-shellinteractive",
-          "description": "",
+          "id": 1123446873,
+          "name": "CVE-2025-55182-POC-NEXTJS",
+          "full_name": "9988700/CVE-2025-55182-POC-NEXTJS",
+          "html_url": "https://github.com/9988700/CVE-2025-55182-POC-NEXTJS",
+          "description": "⚡ Discover and exploit CVE-2025-55182 with this PoC, offering reliable remote code execution tests for React Server Components in Next.js.",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-02-24T06:44:28Z",
-          "pushed_at": "2026-02-24T06:44:25Z",
-          "created_at": "2024-11-29T12:32:19Z",
+          "language": "",
+          "updated_at": "2026-02-24T15:24:09Z",
+          "pushed_at": "2026-02-24T15:22:27Z",
+          "created_at": "2025-12-26T22:26:55Z",
           "topics": [
-            "code-injection",
             "cve-2025-55182",
-            "cybersecurity",
             "exploit",
-            "linux-shell",
-            "network-security",
-            "penetration-testing",
-            "remote-execution",
-            "security-patch",
-            "security-research",
-            "security-vulnerability",
-            "shell-interactive",
-            "software-bug",
-            "threat-hunting",
-            "vulnerability-management"
+            "nextjs",
+            "poc",
+            "react2shell"
           ],
           "owner": {
-            "login": "alyaapm",
-            "html_url": "https://github.com/alyaapm"
+            "login": "9988700",
+            "html_url": "https://github.com/9988700"
           },
-          "clone_url": "https://github.com/alyaapm/CVE-2025-55182-shellinteractive.git"
+          "clone_url": "https://github.com/9988700/CVE-2025-55182-POC-NEXTJS.git"
         },
         {
           "id": 1111207015,
@@ -48727,17 +48801,17 @@
           "clone_url": "https://github.com/mxm0z/r2s.git"
         },
         {
-          "id": 407729397,
+          "id": 997504794,
           "name": "CVE-2025-55182",
-          "full_name": "wiixx44/CVE-2025-55182",
-          "html_url": "https://github.com/wiixx44/CVE-2025-55182",
-          "description": "🔍 Demonstrate CVE-2025-55182, a critical vulnerability in React Server Components allowing unauthenticated arbitrary code execution.",
+          "full_name": "Mayca369/CVE-2025-55182",
+          "html_url": "https://github.com/Mayca369/CVE-2025-55182",
+          "description": "🚨 Exploit CVE-2025-55182 to demonstrate RCE in React Server Functions, highlighting risks from insecure prototype references in Next.js applications.",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "JavaScript",
-          "updated_at": "2026-02-24T06:44:11Z",
-          "pushed_at": "2026-02-24T06:44:08Z",
-          "created_at": "2021-09-18T02:04:33Z",
+          "language": "Python",
+          "updated_at": "2026-02-24T15:23:38Z",
+          "pushed_at": "2026-02-24T15:22:00Z",
+          "created_at": "2025-06-06T16:34:46Z",
           "topics": [
             "app-router-nextjs",
             "cve",
@@ -48747,10 +48821,10 @@
             "docker",
             "docker-image",
             "exploit",
+            "lab",
             "nextjs",
             "poc",
             "proof-of-concept",
-            "prototype-pollution",
             "rce",
             "react",
             "react-dom",
@@ -48759,10 +48833,10 @@
             "vulnerability"
           ],
           "owner": {
-            "login": "wiixx44",
-            "html_url": "https://github.com/wiixx44"
+            "login": "Mayca369",
+            "html_url": "https://github.com/Mayca369"
           },
-          "clone_url": "https://github.com/wiixx44/CVE-2025-55182.git"
+          "clone_url": "https://github.com/Mayca369/CVE-2025-55182.git"
         },
         {
           "id": 1119983607,
@@ -48841,42 +48915,42 @@
           "clone_url": "https://github.com/NathanJ60/react2shell-interactive.git"
         },
         {
-          "id": 997504794,
-          "name": "CVE-2025-55182",
-          "full_name": "Mayca369/CVE-2025-55182",
-          "html_url": "https://github.com/Mayca369/CVE-2025-55182",
-          "description": "🚨 Exploit CVE-2025-55182 to demonstrate RCE in React Server Functions, highlighting risks from insecure prototype references in Next.js applications.",
+          "id": 724263686,
+          "name": "react2shell-scanner",
+          "full_name": "meneim99/react2shell-scanner",
+          "html_url": "https://github.com/meneim99/react2shell-scanner",
+          "description": "🔍 Detect vulnerabilities CVE-2025-55182 and CVE-2025-66478 in Next.js apps with this reliable command-line scanner.",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-24T06:44:07Z",
-          "pushed_at": "2026-02-24T06:44:04Z",
-          "created_at": "2025-06-06T16:34:46Z",
+          "updated_at": "2026-02-24T15:24:02Z",
+          "pushed_at": "2026-02-24T15:21:46Z",
+          "created_at": "2023-11-27T18:17:43Z",
           "topics": [
-            "app-router-nextjs",
             "cve",
             "cve-2025-55182",
             "cve-2025-66478",
-            "cve-scanning",
-            "docker",
-            "docker-image",
+            "cybersecurity",
             "exploit",
-            "lab",
             "nextjs",
+            "penetration-testing",
             "poc",
-            "proof-of-concept",
+            "python",
             "rce",
             "react",
-            "react-dom",
+            "react-server-components",
             "react2shell",
+            "react2shell-scanner",
             "security",
-            "vulnerability"
+            "security-scanner",
+            "vulnerability",
+            "vulnerability-scanner"
           ],
           "owner": {
-            "login": "Mayca369",
-            "html_url": "https://github.com/Mayca369"
+            "login": "meneim99",
+            "html_url": "https://github.com/meneim99"
           },
-          "clone_url": "https://github.com/Mayca369/CVE-2025-55182.git"
+          "clone_url": "https://github.com/meneim99/react2shell-scanner.git"
         },
         {
           "id": 1110798864,
@@ -49136,42 +49210,42 @@
           "clone_url": "https://github.com/Legus-Yeung/CVE-2025-55182-exploit.git"
         },
         {
-          "id": 724263686,
-          "name": "react2shell-scanner",
-          "full_name": "meneim99/react2shell-scanner",
-          "html_url": "https://github.com/meneim99/react2shell-scanner",
-          "description": "🔍 Detect vulnerabilities CVE-2025-55182 and CVE-2025-66478 in Next.js apps with this reliable command-line scanner.",
+          "id": 1122350558,
+          "name": "CVE-2025-55182-research",
+          "full_name": "Farhan9488/CVE-2025-55182-research",
+          "html_url": "https://github.com/Farhan9488/CVE-2025-55182-research",
+          "description": "🛡️ Explore CVE-2025-55182, a critical RCE vulnerability in React's Flight Protocol, demonstrating exploitation techniques and mitigation strategies.",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-02-24T06:43:54Z",
-          "pushed_at": "2026-02-24T06:43:51Z",
-          "created_at": "2023-11-27T18:17:43Z",
+          "language": "JavaScript",
+          "updated_at": "2026-02-24T15:22:23Z",
+          "pushed_at": "2026-02-24T15:21:42Z",
+          "created_at": "2025-12-24T14:48:19Z",
           "topics": [
-            "cve",
+            "bugbounty",
             "cve-2025-55182",
-            "cve-2025-66478",
-            "cybersecurity",
+            "cve2025-55182",
+            "deserialization",
             "exploit",
             "nextjs",
-            "penetration-testing",
-            "poc",
-            "python",
+            "prototype-pollution",
             "rce",
             "react",
             "react-server-components",
-            "react2shell",
-            "react2shell-scanner",
-            "security",
-            "security-scanner",
+            "redteaming",
+            "remote-code-execution-rce",
+            "research",
+            "rsc",
+            "utf-16le",
             "vulnerability",
-            "vulnerability-scanner"
+            "waf-bypass",
+            "web-security"
           ],
           "owner": {
-            "login": "meneim99",
-            "html_url": "https://github.com/meneim99"
+            "login": "Farhan9488",
+            "html_url": "https://github.com/Farhan9488"
           },
-          "clone_url": "https://github.com/meneim99/react2shell-scanner.git"
+          "clone_url": "https://github.com/Farhan9488/CVE-2025-55182-research.git"
         },
         {
           "id": 1119109555,
@@ -49269,42 +49343,42 @@
           "clone_url": "https://github.com/dbwlsdnr95/CVE-2025-55182.git"
         },
         {
-          "id": 1122350558,
-          "name": "CVE-2025-55182-research",
-          "full_name": "Farhan9488/CVE-2025-55182-research",
-          "html_url": "https://github.com/Farhan9488/CVE-2025-55182-research",
-          "description": "🛡️ Explore CVE-2025-55182, a critical RCE vulnerability in React's Flight Protocol, demonstrating exploitation techniques and mitigation strategies.",
+          "id": 504489103,
+          "name": "CVE-2025-55182-scanner",
+          "full_name": "mayank729/CVE-2025-55182-scanner",
+          "html_url": "https://github.com/mayank729/CVE-2025-55182-scanner",
+          "description": "🔍 Scan for CVE-2025-55182 risks in React Server Components with this non-intrusive tool that helps detect critical vulnerabilities in your applications.",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "JavaScript",
-          "updated_at": "2026-02-24T06:43:44Z",
-          "pushed_at": "2026-02-24T06:43:41Z",
-          "created_at": "2025-12-24T14:48:19Z",
+          "language": "Python",
+          "updated_at": "2026-02-24T15:24:08Z",
+          "pushed_at": "2026-02-24T15:21:38Z",
+          "created_at": "2022-06-17T10:19:10Z",
           "topics": [
-            "bugbounty",
+            "appsec",
             "cve-2025-55182",
-            "cve2025-55182",
-            "deserialization",
+            "cve-2025-66478",
+            "cybersecurity",
+            "devsecops",
             "exploit",
+            "github-config",
+            "massive",
             "nextjs",
-            "prototype-pollution",
+            "python",
             "rce",
             "react",
             "react-server-components",
-            "redteaming",
-            "remote-code-execution-rce",
-            "research",
-            "rsc",
-            "utf-16le",
+            "react2shell",
+            "scanner",
             "vulnerability",
-            "waf-bypass",
-            "web-security"
+            "vulnerability-scanner",
+            "waku"
           ],
           "owner": {
-            "login": "Farhan9488",
-            "html_url": "https://github.com/Farhan9488"
+            "login": "mayank729",
+            "html_url": "https://github.com/mayank729"
           },
-          "clone_url": "https://github.com/Farhan9488/CVE-2025-55182-research.git"
+          "clone_url": "https://github.com/mayank729/CVE-2025-55182-scanner.git"
         },
         {
           "id": 1113218682,
@@ -50127,42 +50201,43 @@
           "clone_url": "https://github.com/rsch-io/CVE-2025-55182-React2Shell.git"
         },
         {
-          "id": 504489103,
-          "name": "CVE-2025-55182-scanner",
-          "full_name": "mayank729/CVE-2025-55182-scanner",
-          "html_url": "https://github.com/mayank729/CVE-2025-55182-scanner",
-          "description": "🔍 Scan for CVE-2025-55182 risks in React Server Components with this non-intrusive tool that helps detect critical vulnerabilities in your applications.",
+          "id": 1130529237,
+          "name": "React2Shell",
+          "full_name": "Asder10/React2Shell",
+          "html_url": "https://github.com/Asder10/React2Shell",
+          "description": "🔍 Exploit CVE-2025-55182 vulnerabilities in Next.js and React with this efficient framework for rapid testing and assessment.",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-24T06:43:43Z",
-          "pushed_at": "2026-02-24T06:43:40Z",
-          "created_at": "2022-06-17T10:19:10Z",
+          "updated_at": "2026-02-24T15:38:07Z",
+          "pushed_at": "2026-02-24T15:33:36Z",
+          "created_at": "2026-01-08T16:28:04Z",
           "topics": [
-            "appsec",
-            "cve-2025-55182",
-            "cve-2025-66478",
+            "bugbounty",
+            "cli",
+            "cve-2025-55182-ctf",
             "cybersecurity",
-            "devsecops",
-            "exploit",
-            "github-config",
-            "massive",
-            "nextjs",
-            "python",
+            "docker",
+            "penetration-testing",
+            "proof-of-concept",
             "rce",
+            "rce-scanner",
             "react",
-            "react-server-components",
+            "react-dom",
             "react2shell",
+            "redteam-tools",
             "scanner",
+            "security-scanner",
+            "server-components",
+            "sql",
             "vulnerability",
-            "vulnerability-scanner",
-            "waku"
+            "waf"
           ],
           "owner": {
-            "login": "mayank729",
-            "html_url": "https://github.com/mayank729"
+            "login": "Asder10",
+            "html_url": "https://github.com/Asder10"
           },
-          "clone_url": "https://github.com/mayank729/CVE-2025-55182-scanner.git"
+          "clone_url": "https://github.com/Asder10/React2Shell.git"
         },
         {
           "id": 1109504576,
@@ -50557,8 +50632,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-24T06:49:44Z",
-          "pushed_at": "2026-02-24T06:49:40Z",
+          "updated_at": "2026-02-24T15:31:31Z",
+          "pushed_at": "2026-02-24T15:28:11Z",
           "created_at": "2026-01-02T05:04:03Z",
           "topics": [
             "cve-2025-55184",
@@ -51257,10 +51332,10 @@
           "full_name": "krispybyte/CVE-2025-55763",
           "html_url": "https://github.com/krispybyte/CVE-2025-55763",
           "description": "Heap overflow PoC for CivetWeb CVE-2025-55763",
-          "stargazers_count": 3,
+          "stargazers_count": 4,
           "forks_count": 2,
           "language": "",
-          "updated_at": "2026-02-02T21:33:05Z",
+          "updated_at": "2026-02-24T13:24:50Z",
           "pushed_at": "2025-11-02T18:47:25Z",
           "created_at": "2025-08-29T09:46:07Z",
           "topics": [],
@@ -52678,10 +52753,10 @@
           "full_name": "RandomRobbieBF/CVE-2025-5701",
           "html_url": "https://github.com/RandomRobbieBF/CVE-2025-5701",
           "description": "HyperComments \u003c= 1.2.2 - Unauthenticated (Subscriber+) Arbitrary Options Update",
-          "stargazers_count": 1,
+          "stargazers_count": 2,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2025-06-16T14:07:28Z",
+          "updated_at": "2026-02-24T12:58:51Z",
           "pushed_at": "2025-06-12T08:29:04Z",
           "created_at": "2025-06-12T08:27:35Z",
           "topics": [
@@ -54110,10 +54185,10 @@
           "full_name": "lincemorado97/CVE-2025-64446_CVE-2025-58034",
           "html_url": "https://github.com/lincemorado97/CVE-2025-64446_CVE-2025-58034",
           "description": "FortiWeb Remote Code Execution (RCE) Exploit via CVE-2025-64446 + CVE-2025-58034 Chain",
-          "stargazers_count": 13,
+          "stargazers_count": 14,
           "forks_count": 4,
           "language": "Python",
-          "updated_at": "2026-02-24T02:36:45Z",
+          "updated_at": "2026-02-24T09:01:08Z",
           "pushed_at": "2025-11-20T03:54:32Z",
           "created_at": "2025-11-18T10:25:18Z",
           "topics": [
@@ -54603,6 +54678,29 @@
           "clone_url": "https://github.com/tecxx/CVE-2025-59287-WSUS.git"
         },
         {
+          "id": 1162405452,
+          "name": "CVE-2025-59287",
+          "full_name": "vatslaaeytoygag/CVE-2025-59287",
+          "html_url": "https://github.com/vatslaaeytoygag/CVE-2025-59287",
+          "description": "CVE 2025 59287",
+          "stargazers_count": 11,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-02-24T15:51:18Z",
+          "pushed_at": "2026-02-20T10:29:03Z",
+          "created_at": "2026-02-20T08:14:23Z",
+          "topics": [
+            "cve-2025-59287",
+            "snippets",
+            "tips"
+          ],
+          "owner": {
+            "login": "vatslaaeytoygag",
+            "html_url": "https://github.com/vatslaaeytoygag"
+          },
+          "clone_url": "https://github.com/vatslaaeytoygag/CVE-2025-59287.git"
+        },
+        {
           "id": 1084799740,
           "name": "CVE-2025-59287-When-your-patch-server-becomes-the-attack-vector",
           "full_name": "AdityaBhatt3010/CVE-2025-59287-When-your-patch-server-becomes-the-attack-vector",
@@ -54866,6 +54964,63 @@
           "clone_url": "https://github.com/keeganparr1/CVE-2025-59287-hawktrace.git"
         },
         {
+          "id": 1084176235,
+          "name": "CVE-2025-59287",
+          "full_name": "FurkanKAYAPINAR/CVE-2025-59287",
+          "html_url": "https://github.com/FurkanKAYAPINAR/CVE-2025-59287",
+          "description": "CVE-2025-59287",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2025-10-29T06:39:39Z",
+          "pushed_at": "2025-10-28T15:13:42Z",
+          "created_at": "2025-10-27T10:26:58Z",
+          "topics": [],
+          "owner": {
+            "login": "FurkanKAYAPINAR",
+            "html_url": "https://github.com/FurkanKAYAPINAR"
+          },
+          "clone_url": "https://github.com/FurkanKAYAPINAR/CVE-2025-59287.git"
+        },
+        {
+          "id": 1083425686,
+          "name": "WSUSploit.NET",
+          "full_name": "0xBruno/WSUSploit.NET",
+          "html_url": "https://github.com/0xBruno/WSUSploit.NET",
+          "description": "PoC for CVE-2025-59287",
+          "stargazers_count": 0,
+          "forks_count": 1,
+          "language": "C#",
+          "updated_at": "2025-10-31T20:20:32Z",
+          "pushed_at": "2025-10-31T20:20:29Z",
+          "created_at": "2025-10-26T01:39:27Z",
+          "topics": [],
+          "owner": {
+            "login": "0xBruno",
+            "html_url": "https://github.com/0xBruno"
+          },
+          "clone_url": "https://github.com/0xBruno/WSUSploit.NET.git"
+        },
+        {
+          "id": 1084368205,
+          "name": "WSUSResponder",
+          "full_name": "RadzaRr/WSUSResponder",
+          "html_url": "https://github.com/RadzaRr/WSUSResponder",
+          "description": "Module PowerShell de réponse à l'incident CVE-2025-59287 — WSUS Remote Code Execution (RCE)",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "PowerShell",
+          "updated_at": "2025-10-28T10:39:59Z",
+          "pushed_at": "2025-10-28T10:39:55Z",
+          "created_at": "2025-10-27T15:32:11Z",
+          "topics": [],
+          "owner": {
+            "login": "RadzaRr",
+            "html_url": "https://github.com/RadzaRr"
+          },
+          "clone_url": "https://github.com/RadzaRr/WSUSResponder.git"
+        },
+        {
           "id": 1144747955,
           "name": "CVE-2025-59287",
           "full_name": "salman5230/CVE-2025-59287",
@@ -54874,8 +55029,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-24T07:10:10Z",
-          "pushed_at": "2026-02-24T07:10:06Z",
+          "updated_at": "2026-02-24T15:58:46Z",
+          "pushed_at": "2026-02-24T15:50:12Z",
           "created_at": "2026-01-29T02:16:04Z",
           "topics": [
             "booklist",
@@ -54899,86 +55054,6 @@
             "html_url": "https://github.com/salman5230"
           },
           "clone_url": "https://github.com/salman5230/CVE-2025-59287.git"
-        },
-        {
-          "id": 1084368205,
-          "name": "WSUSResponder",
-          "full_name": "RadzaRr/WSUSResponder",
-          "html_url": "https://github.com/RadzaRr/WSUSResponder",
-          "description": "Module PowerShell de réponse à l'incident CVE-2025-59287 — WSUS Remote Code Execution (RCE)",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "PowerShell",
-          "updated_at": "2025-10-28T10:39:59Z",
-          "pushed_at": "2025-10-28T10:39:55Z",
-          "created_at": "2025-10-27T15:32:11Z",
-          "topics": [],
-          "owner": {
-            "login": "RadzaRr",
-            "html_url": "https://github.com/RadzaRr"
-          },
-          "clone_url": "https://github.com/RadzaRr/WSUSResponder.git"
-        },
-        {
-          "id": 1162405452,
-          "name": "CVE-2025-59287",
-          "full_name": "vatslaaeytoygag/CVE-2025-59287",
-          "html_url": "https://github.com/vatslaaeytoygag/CVE-2025-59287",
-          "description": "CVE 2025 59287",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-02-20T08:14:34Z",
-          "pushed_at": "2026-02-20T10:29:03Z",
-          "created_at": "2026-02-20T08:14:23Z",
-          "topics": [
-            "cve-2025-59287",
-            "snippets",
-            "tips"
-          ],
-          "owner": {
-            "login": "vatslaaeytoygag",
-            "html_url": "https://github.com/vatslaaeytoygag"
-          },
-          "clone_url": "https://github.com/vatslaaeytoygag/CVE-2025-59287.git"
-        },
-        {
-          "id": 1083425686,
-          "name": "WSUSploit.NET",
-          "full_name": "0xBruno/WSUSploit.NET",
-          "html_url": "https://github.com/0xBruno/WSUSploit.NET",
-          "description": "PoC for CVE-2025-59287",
-          "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "C#",
-          "updated_at": "2025-10-31T20:20:32Z",
-          "pushed_at": "2025-10-31T20:20:29Z",
-          "created_at": "2025-10-26T01:39:27Z",
-          "topics": [],
-          "owner": {
-            "login": "0xBruno",
-            "html_url": "https://github.com/0xBruno"
-          },
-          "clone_url": "https://github.com/0xBruno/WSUSploit.NET.git"
-        },
-        {
-          "id": 1084176235,
-          "name": "CVE-2025-59287",
-          "full_name": "FurkanKAYAPINAR/CVE-2025-59287",
-          "html_url": "https://github.com/FurkanKAYAPINAR/CVE-2025-59287",
-          "description": "CVE-2025-59287",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2025-10-29T06:39:39Z",
-          "pushed_at": "2025-10-28T15:13:42Z",
-          "created_at": "2025-10-27T10:26:58Z",
-          "topics": [],
-          "owner": {
-            "login": "FurkanKAYAPINAR",
-            "html_url": "https://github.com/FurkanKAYAPINAR"
-          },
-          "clone_url": "https://github.com/FurkanKAYAPINAR/CVE-2025-59287.git"
         },
         {
           "id": 1123100383,
@@ -57646,8 +57721,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-02-24T06:12:32Z",
-          "pushed_at": "2026-02-24T06:12:29Z",
+          "updated_at": "2026-02-24T14:47:23Z",
+          "pushed_at": "2026-02-24T14:43:30Z",
           "created_at": "2025-03-04T15:38:32Z",
           "topics": [
             "detection",
@@ -57736,8 +57811,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-02-24T06:12:32Z",
-          "pushed_at": "2026-02-24T06:12:29Z",
+          "updated_at": "2026-02-24T14:47:23Z",
+          "pushed_at": "2026-02-24T14:43:30Z",
           "created_at": "2025-03-04T15:38:32Z",
           "topics": [
             "detection",
@@ -59742,6 +59817,30 @@
           "clone_url": "https://github.com/sensepost/CVE-2025-64446.git"
         },
         {
+          "id": 1098927955,
+          "name": "CVE-2025-64446_CVE-2025-58034",
+          "full_name": "lincemorado97/CVE-2025-64446_CVE-2025-58034",
+          "html_url": "https://github.com/lincemorado97/CVE-2025-64446_CVE-2025-58034",
+          "description": "FortiWeb Remote Code Execution (RCE) Exploit via CVE-2025-64446 + CVE-2025-58034 Chain",
+          "stargazers_count": 14,
+          "forks_count": 4,
+          "language": "Python",
+          "updated_at": "2026-02-24T09:01:08Z",
+          "pushed_at": "2025-11-20T03:54:32Z",
+          "created_at": "2025-11-18T10:25:18Z",
+          "topics": [
+            "cve-2025-58034",
+            "cve-2025-64446",
+            "fortinet-vul",
+            "fortiweb-authbypass"
+          ],
+          "owner": {
+            "login": "lincemorado97",
+            "html_url": "https://github.com/lincemorado97"
+          },
+          "clone_url": "https://github.com/lincemorado97/CVE-2025-64446_CVE-2025-58034.git"
+        },
+        {
           "id": 1097196574,
           "name": "CVE-2025-64446-Exploit",
           "full_name": "soltanali0/CVE-2025-64446-Exploit",
@@ -59759,30 +59858,6 @@
             "html_url": "https://github.com/soltanali0"
           },
           "clone_url": "https://github.com/soltanali0/CVE-2025-64446-Exploit.git"
-        },
-        {
-          "id": 1098927955,
-          "name": "CVE-2025-64446_CVE-2025-58034",
-          "full_name": "lincemorado97/CVE-2025-64446_CVE-2025-58034",
-          "html_url": "https://github.com/lincemorado97/CVE-2025-64446_CVE-2025-58034",
-          "description": "FortiWeb Remote Code Execution (RCE) Exploit via CVE-2025-64446 + CVE-2025-58034 Chain",
-          "stargazers_count": 13,
-          "forks_count": 4,
-          "language": "Python",
-          "updated_at": "2026-02-24T02:36:45Z",
-          "pushed_at": "2025-11-20T03:54:32Z",
-          "created_at": "2025-11-18T10:25:18Z",
-          "topics": [
-            "cve-2025-58034",
-            "cve-2025-64446",
-            "fortinet-vul",
-            "fortiweb-authbypass"
-          ],
-          "owner": {
-            "login": "lincemorado97",
-            "html_url": "https://github.com/lincemorado97"
-          },
-          "clone_url": "https://github.com/lincemorado97/CVE-2025-64446_CVE-2025-58034.git"
         },
         {
           "id": 1096686833,
@@ -60799,8 +60874,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "JavaScript",
-          "updated_at": "2026-02-24T06:38:46Z",
-          "pushed_at": "2026-02-24T06:38:43Z",
+          "updated_at": "2026-02-24T15:25:35Z",
+          "pushed_at": "2026-02-24T15:16:11Z",
           "created_at": "2025-08-10T21:07:43Z",
           "topics": [
             "cve-2025-6554",
@@ -61077,30 +61152,6 @@
       ]
     },
     {
-      "cve_id": "CVE-2025-65717",
-      "repositories": [
-        {
-          "id": 1161725845,
-          "name": "live-server-evil-crawler",
-          "full_name": "natsuki-engr/live-server-evil-crawler",
-          "html_url": "https://github.com/natsuki-engr/live-server-evil-crawler",
-          "description": "Live Server VSCode Vulnerability (CVE-2025-65717) Demo",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "JavaScript",
-          "updated_at": "2026-02-19T13:04:36Z",
-          "pushed_at": "2026-02-19T13:04:32Z",
-          "created_at": "2026-02-19T12:54:13Z",
-          "topics": [],
-          "owner": {
-            "login": "natsuki-engr",
-            "html_url": "https://github.com/natsuki-engr"
-          },
-          "clone_url": "https://github.com/natsuki-engr/live-server-evil-crawler.git"
-        }
-      ]
-    },
-    {
       "cve_id": "CVE-2025-65741",
       "repositories": [
         {
@@ -61193,30 +61244,6 @@
             "html_url": "https://github.com/hunterxxx"
           },
           "clone_url": "https://github.com/hunterxxx/FuguHub-8.1-Reflected-SVG-XSS-CVE-2025-65790.git"
-        }
-      ]
-    },
-    {
-      "cve_id": "CVE-2025-65806",
-      "repositories": [
-        {
-          "id": 1108388293,
-          "name": "CVE-2025-65806",
-          "full_name": "Bidon47/CVE-2025-65806",
-          "html_url": "https://github.com/Bidon47/CVE-2025-65806",
-          "description": "Advisory for CVE-2025-65806 – nested ZIP file upload validation bypass in E-POINT CMS",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2025-12-02T11:56:25Z",
-          "pushed_at": "2025-12-02T11:56:21Z",
-          "created_at": "2025-12-02T11:39:44Z",
-          "topics": [],
-          "owner": {
-            "login": "Bidon47",
-            "html_url": "https://github.com/Bidon47"
-          },
-          "clone_url": "https://github.com/Bidon47/CVE-2025-65806.git"
         }
       ]
     },
@@ -61922,10 +61949,10 @@
           "full_name": "assetnote/react2shell-scanner",
           "html_url": "https://github.com/assetnote/react2shell-scanner",
           "description": "High Fidelity Detection Mechanism for RSC/Next.js RCE (CVE-2025-55182 \u0026 CVE-2025-66478)",
-          "stargazers_count": 2402,
+          "stargazers_count": 2403,
           "forks_count": 259,
           "language": "Python",
-          "updated_at": "2026-02-23T18:48:27Z",
+          "updated_at": "2026-02-24T10:53:22Z",
           "pushed_at": "2025-12-07T04:16:46Z",
           "created_at": "2025-12-04T06:55:04Z",
           "topics": [],
@@ -61984,10 +62011,10 @@
           "full_name": "emredavut/CVE-2025-55182",
           "html_url": "https://github.com/emredavut/CVE-2025-55182",
           "description": "RSC/Next.js RCE Vulnerability Detector \u0026 PoC Chrome Extension – CVE-2025-55182 \u0026 CVE-2025-66478",
-          "stargazers_count": 311,
+          "stargazers_count": 312,
           "forks_count": 59,
           "language": "JavaScript",
-          "updated_at": "2026-02-03T14:47:26Z",
+          "updated_at": "2026-02-24T13:22:54Z",
           "pushed_at": "2025-12-06T01:27:19Z",
           "created_at": "2025-12-06T00:36:16Z",
           "topics": [],
@@ -62204,6 +62231,25 @@
           "clone_url": "https://github.com/kOaDT/poc-cve-2025-55182.git"
         },
         {
+          "id": 1109349830,
+          "name": "Quickcheck-CVE-2025-55182-React-and-CVE-2025-66478-Next.js",
+          "full_name": "BankkRoll/Quickcheck-CVE-2025-55182-React-and-CVE-2025-66478-Next.js",
+          "html_url": "https://github.com/BankkRoll/Quickcheck-CVE-2025-55182-React-and-CVE-2025-66478-Next.js",
+          "description": "Script to quick check CVE-2025-55182 (React) and CVE-2025-66478 (Next.js)  - Critical unauthenticated RCE vulnerabilities in the React Server Components (RSC) “Flight” protocol.",
+          "stargazers_count": 12,
+          "forks_count": 6,
+          "language": "JavaScript",
+          "updated_at": "2026-02-24T10:53:22Z",
+          "pushed_at": "2025-12-09T03:22:29Z",
+          "created_at": "2025-12-03T17:21:52Z",
+          "topics": [],
+          "owner": {
+            "login": "BankkRoll",
+            "html_url": "https://github.com/BankkRoll"
+          },
+          "clone_url": "https://github.com/BankkRoll/Quickcheck-CVE-2025-55182-React-and-CVE-2025-66478-Next.js.git"
+        },
+        {
           "id": 1109394752,
           "name": "next-cve-2025-66478",
           "full_name": "abtonc/next-cve-2025-66478",
@@ -62221,25 +62267,6 @@
             "html_url": "https://github.com/abtonc"
           },
           "clone_url": "https://github.com/abtonc/next-cve-2025-66478.git"
-        },
-        {
-          "id": 1109349830,
-          "name": "Quickcheck-CVE-2025-55182-React-and-CVE-2025-66478-Next.js",
-          "full_name": "BankkRoll/Quickcheck-CVE-2025-55182-React-and-CVE-2025-66478-Next.js",
-          "html_url": "https://github.com/BankkRoll/Quickcheck-CVE-2025-55182-React-and-CVE-2025-66478-Next.js",
-          "description": "Script to quick check CVE-2025-55182 (React) and CVE-2025-66478 (Next.js)  - Critical unauthenticated RCE vulnerabilities in the React Server Components (RSC) “Flight” protocol.",
-          "stargazers_count": 11,
-          "forks_count": 6,
-          "language": "JavaScript",
-          "updated_at": "2026-02-13T11:57:42Z",
-          "pushed_at": "2025-12-09T03:22:29Z",
-          "created_at": "2025-12-03T17:21:52Z",
-          "topics": [],
-          "owner": {
-            "login": "BankkRoll",
-            "html_url": "https://github.com/BankkRoll"
-          },
-          "clone_url": "https://github.com/BankkRoll/Quickcheck-CVE-2025-55182-React-and-CVE-2025-66478-Next.js.git"
         },
         {
           "id": 1113210770,
@@ -62971,8 +62998,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-24T06:43:28Z",
-          "pushed_at": "2026-02-24T06:43:25Z",
+          "updated_at": "2026-02-24T15:33:00Z",
+          "pushed_at": "2026-02-24T15:21:20Z",
           "created_at": "2024-05-28T16:48:51Z",
           "topics": [
             "cve",
@@ -63775,42 +63802,42 @@
           "clone_url": "https://github.com/MoisesTapia/http-react2shell.git"
         },
         {
-          "id": 724263686,
-          "name": "react2shell-scanner",
-          "full_name": "meneim99/react2shell-scanner",
-          "html_url": "https://github.com/meneim99/react2shell-scanner",
-          "description": "🔍 Detect vulnerabilities CVE-2025-55182 and CVE-2025-66478 in Next.js apps with this reliable command-line scanner.",
+          "id": 504489103,
+          "name": "CVE-2025-55182-scanner",
+          "full_name": "mayank729/CVE-2025-55182-scanner",
+          "html_url": "https://github.com/mayank729/CVE-2025-55182-scanner",
+          "description": "🔍 Scan for CVE-2025-55182 risks in React Server Components with this non-intrusive tool that helps detect critical vulnerabilities in your applications.",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-24T06:43:54Z",
-          "pushed_at": "2026-02-24T06:43:51Z",
-          "created_at": "2023-11-27T18:17:43Z",
+          "updated_at": "2026-02-24T15:24:08Z",
+          "pushed_at": "2026-02-24T15:21:38Z",
+          "created_at": "2022-06-17T10:19:10Z",
           "topics": [
-            "cve",
+            "appsec",
             "cve-2025-55182",
             "cve-2025-66478",
             "cybersecurity",
+            "devsecops",
             "exploit",
+            "github-config",
+            "massive",
             "nextjs",
-            "penetration-testing",
-            "poc",
             "python",
             "rce",
             "react",
             "react-server-components",
             "react2shell",
-            "react2shell-scanner",
-            "security",
-            "security-scanner",
+            "scanner",
             "vulnerability",
-            "vulnerability-scanner"
+            "vulnerability-scanner",
+            "waku"
           ],
           "owner": {
-            "login": "meneim99",
-            "html_url": "https://github.com/meneim99"
+            "login": "mayank729",
+            "html_url": "https://github.com/mayank729"
           },
-          "clone_url": "https://github.com/meneim99/react2shell-scanner.git"
+          "clone_url": "https://github.com/mayank729/CVE-2025-55182-scanner.git"
         },
         {
           "id": 1121637493,
@@ -63983,63 +64010,6 @@
           "clone_url": "https://github.com/Letalandroid/cve-2025-66478_rce_vulnerable.git"
         },
         {
-          "id": 504489103,
-          "name": "CVE-2025-55182-scanner",
-          "full_name": "mayank729/CVE-2025-55182-scanner",
-          "html_url": "https://github.com/mayank729/CVE-2025-55182-scanner",
-          "description": "🔍 Scan for CVE-2025-55182 risks in React Server Components with this non-intrusive tool that helps detect critical vulnerabilities in your applications.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-02-24T06:43:43Z",
-          "pushed_at": "2026-02-24T06:43:40Z",
-          "created_at": "2022-06-17T10:19:10Z",
-          "topics": [
-            "appsec",
-            "cve-2025-55182",
-            "cve-2025-66478",
-            "cybersecurity",
-            "devsecops",
-            "exploit",
-            "github-config",
-            "massive",
-            "nextjs",
-            "python",
-            "rce",
-            "react",
-            "react-server-components",
-            "react2shell",
-            "scanner",
-            "vulnerability",
-            "vulnerability-scanner",
-            "waku"
-          ],
-          "owner": {
-            "login": "mayank729",
-            "html_url": "https://github.com/mayank729"
-          },
-          "clone_url": "https://github.com/mayank729/CVE-2025-55182-scanner.git"
-        },
-        {
-          "id": 1112082516,
-          "name": "cve-2025-66478",
-          "full_name": "abhirajranjan/cve-2025-66478",
-          "html_url": "https://github.com/abhirajranjan/cve-2025-66478",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "JavaScript",
-          "updated_at": "2025-12-08T08:54:03Z",
-          "pushed_at": "2025-12-08T08:53:59Z",
-          "created_at": "2025-12-08T05:59:27Z",
-          "topics": [],
-          "owner": {
-            "login": "abhirajranjan",
-            "html_url": "https://github.com/abhirajranjan"
-          },
-          "clone_url": "https://github.com/abhirajranjan/cve-2025-66478.git"
-        },
-        {
           "id": 1067662941,
           "name": "fix-react2shell-next",
           "full_name": "Saied25/fix-react2shell-next",
@@ -64048,8 +64018,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "JavaScript",
-          "updated_at": "2026-02-24T06:45:17Z",
-          "pushed_at": "2026-02-24T06:45:14Z",
+          "updated_at": "2026-02-24T15:27:57Z",
+          "pushed_at": "2026-02-24T15:23:45Z",
           "created_at": "2025-10-01T07:40:09Z",
           "topics": [
             "cli-tool",
@@ -64073,6 +64043,63 @@
             "html_url": "https://github.com/Saied25"
           },
           "clone_url": "https://github.com/Saied25/fix-react2shell-next.git"
+        },
+        {
+          "id": 1112082516,
+          "name": "cve-2025-66478",
+          "full_name": "abhirajranjan/cve-2025-66478",
+          "html_url": "https://github.com/abhirajranjan/cve-2025-66478",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "JavaScript",
+          "updated_at": "2025-12-08T08:54:03Z",
+          "pushed_at": "2025-12-08T08:53:59Z",
+          "created_at": "2025-12-08T05:59:27Z",
+          "topics": [],
+          "owner": {
+            "login": "abhirajranjan",
+            "html_url": "https://github.com/abhirajranjan"
+          },
+          "clone_url": "https://github.com/abhirajranjan/cve-2025-66478.git"
+        },
+        {
+          "id": 1122449249,
+          "name": "CVE-2025-55182-poc",
+          "full_name": "slreaperking/CVE-2025-55182-poc",
+          "html_url": "https://github.com/slreaperking/CVE-2025-55182-poc",
+          "description": "🚨 Demonstrate CVE-2025-55182, a critical React vulnerability allowing remote code execution via prototype chain pollution in `react-server-dom-webpack@19.0.0`.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Shell",
+          "updated_at": "2026-02-24T15:32:41Z",
+          "pushed_at": "2026-02-24T15:20:55Z",
+          "created_at": "2025-12-24T18:48:07Z",
+          "topics": [
+            "app-router-nextjs",
+            "cve-2025-55182-ctf",
+            "cve-2025-66478",
+            "cve-scanning",
+            "cybersecurity",
+            "docker",
+            "html",
+            "massive",
+            "proof-of-concept",
+            "python",
+            "rce",
+            "react-dom",
+            "react2shell",
+            "rsc",
+            "security",
+            "security-scanner",
+            "vulnerability",
+            "vulnerability-scanners"
+          ],
+          "owner": {
+            "login": "slreaperking",
+            "html_url": "https://github.com/slreaperking"
+          },
+          "clone_url": "https://github.com/slreaperking/CVE-2025-55182-poc.git"
         },
         {
           "id": 1112063421,
@@ -64117,42 +64144,42 @@
           "clone_url": "https://github.com/Code42Cate/nexts-cve-2025-66478-exploit.git"
         },
         {
-          "id": 1122449249,
-          "name": "CVE-2025-55182-poc",
-          "full_name": "slreaperking/CVE-2025-55182-poc",
-          "html_url": "https://github.com/slreaperking/CVE-2025-55182-poc",
-          "description": "🚨 Demonstrate CVE-2025-55182, a critical React vulnerability allowing remote code execution via prototype chain pollution in `react-server-dom-webpack@19.0.0`.",
+          "id": 407729397,
+          "name": "CVE-2025-55182",
+          "full_name": "wiixx44/CVE-2025-55182",
+          "html_url": "https://github.com/wiixx44/CVE-2025-55182",
+          "description": "🔍 Demonstrate CVE-2025-55182, a critical vulnerability in React Server Components allowing unauthenticated arbitrary code execution.",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2026-02-24T06:43:11Z",
-          "pushed_at": "2026-02-24T06:43:07Z",
-          "created_at": "2025-12-24T18:48:07Z",
+          "language": "JavaScript",
+          "updated_at": "2026-02-24T12:00:36Z",
+          "pushed_at": "2026-02-24T12:00:22Z",
+          "created_at": "2021-09-18T02:04:33Z",
           "topics": [
             "app-router-nextjs",
-            "cve-2025-55182-ctf",
+            "cve",
+            "cve-2025-55182",
             "cve-2025-66478",
             "cve-scanning",
-            "cybersecurity",
             "docker",
-            "html",
-            "massive",
+            "docker-image",
+            "exploit",
+            "nextjs",
+            "poc",
             "proof-of-concept",
-            "python",
+            "prototype-pollution",
             "rce",
+            "react",
             "react-dom",
             "react2shell",
-            "rsc",
             "security",
-            "security-scanner",
-            "vulnerability",
-            "vulnerability-scanners"
+            "vulnerability"
           ],
           "owner": {
-            "login": "slreaperking",
-            "html_url": "https://github.com/slreaperking"
+            "login": "wiixx44",
+            "html_url": "https://github.com/wiixx44"
           },
-          "clone_url": "https://github.com/slreaperking/CVE-2025-55182-poc.git"
+          "clone_url": "https://github.com/wiixx44/CVE-2025-55182.git"
         },
         {
           "id": 1111435778,
@@ -64251,8 +64278,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "JavaScript",
-          "updated_at": "2026-02-24T06:44:52Z",
-          "pushed_at": "2026-02-24T06:44:49Z",
+          "updated_at": "2026-02-24T15:29:39Z",
+          "pushed_at": "2026-02-24T15:22:57Z",
           "created_at": "2025-07-15T18:33:34Z",
           "topics": [
             "app-router-nextjs",
@@ -64395,63 +64422,6 @@
           "clone_url": "https://github.com/aseemyash/krle.git"
         },
         {
-          "id": 407729397,
-          "name": "CVE-2025-55182",
-          "full_name": "wiixx44/CVE-2025-55182",
-          "html_url": "https://github.com/wiixx44/CVE-2025-55182",
-          "description": "🔍 Demonstrate CVE-2025-55182, a critical vulnerability in React Server Components allowing unauthenticated arbitrary code execution.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "JavaScript",
-          "updated_at": "2026-02-24T06:44:11Z",
-          "pushed_at": "2026-02-24T06:44:08Z",
-          "created_at": "2021-09-18T02:04:33Z",
-          "topics": [
-            "app-router-nextjs",
-            "cve",
-            "cve-2025-55182",
-            "cve-2025-66478",
-            "cve-scanning",
-            "docker",
-            "docker-image",
-            "exploit",
-            "nextjs",
-            "poc",
-            "proof-of-concept",
-            "prototype-pollution",
-            "rce",
-            "react",
-            "react-dom",
-            "react2shell",
-            "security",
-            "vulnerability"
-          ],
-          "owner": {
-            "login": "wiixx44",
-            "html_url": "https://github.com/wiixx44"
-          },
-          "clone_url": "https://github.com/wiixx44/CVE-2025-55182.git"
-        },
-        {
-          "id": 1111170023,
-          "name": "CVE-2025-55182",
-          "full_name": "StillSoul/CVE-2025-55182",
-          "html_url": "https://github.com/StillSoul/CVE-2025-55182",
-          "description": "A critical-severity vulnerability in React Server Components (CVE-2025-55182) affects React 19 and frameworks that use it, including Next.js (CVE-2025-66478)",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2025-12-06T12:15:42Z",
-          "pushed_at": "2025-12-06T12:15:39Z",
-          "created_at": "2025-12-06T12:12:58Z",
-          "topics": [],
-          "owner": {
-            "login": "StillSoul",
-            "html_url": "https://github.com/StillSoul"
-          },
-          "clone_url": "https://github.com/StillSoul/CVE-2025-55182.git"
-        },
-        {
           "id": 997504794,
           "name": "CVE-2025-55182",
           "full_name": "Mayca369/CVE-2025-55182",
@@ -64460,8 +64430,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-24T06:44:07Z",
-          "pushed_at": "2026-02-24T06:44:04Z",
+          "updated_at": "2026-02-24T15:23:38Z",
+          "pushed_at": "2026-02-24T15:22:00Z",
           "created_at": "2025-06-06T16:34:46Z",
           "topics": [
             "app-router-nextjs",
@@ -64488,6 +64458,63 @@
             "html_url": "https://github.com/Mayca369"
           },
           "clone_url": "https://github.com/Mayca369/CVE-2025-55182.git"
+        },
+        {
+          "id": 1111170023,
+          "name": "CVE-2025-55182",
+          "full_name": "StillSoul/CVE-2025-55182",
+          "html_url": "https://github.com/StillSoul/CVE-2025-55182",
+          "description": "A critical-severity vulnerability in React Server Components (CVE-2025-55182) affects React 19 and frameworks that use it, including Next.js (CVE-2025-66478)",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2025-12-06T12:15:42Z",
+          "pushed_at": "2025-12-06T12:15:39Z",
+          "created_at": "2025-12-06T12:12:58Z",
+          "topics": [],
+          "owner": {
+            "login": "StillSoul",
+            "html_url": "https://github.com/StillSoul"
+          },
+          "clone_url": "https://github.com/StillSoul/CVE-2025-55182.git"
+        },
+        {
+          "id": 724263686,
+          "name": "react2shell-scanner",
+          "full_name": "meneim99/react2shell-scanner",
+          "html_url": "https://github.com/meneim99/react2shell-scanner",
+          "description": "🔍 Detect vulnerabilities CVE-2025-55182 and CVE-2025-66478 in Next.js apps with this reliable command-line scanner.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-02-24T15:24:02Z",
+          "pushed_at": "2026-02-24T15:21:46Z",
+          "created_at": "2023-11-27T18:17:43Z",
+          "topics": [
+            "cve",
+            "cve-2025-55182",
+            "cve-2025-66478",
+            "cybersecurity",
+            "exploit",
+            "nextjs",
+            "penetration-testing",
+            "poc",
+            "python",
+            "rce",
+            "react",
+            "react-server-components",
+            "react2shell",
+            "react2shell-scanner",
+            "security",
+            "security-scanner",
+            "vulnerability",
+            "vulnerability-scanner"
+          ],
+          "owner": {
+            "login": "meneim99",
+            "html_url": "https://github.com/meneim99"
+          },
+          "clone_url": "https://github.com/meneim99/react2shell-scanner.git"
         },
         {
           "id": 1113117459,
@@ -66412,8 +66439,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "C++",
-          "updated_at": "2026-02-24T07:06:54Z",
-          "pushed_at": "2026-02-24T07:06:51Z",
+          "updated_at": "2026-02-24T15:51:26Z",
+          "pushed_at": "2026-02-24T15:46:51Z",
           "created_at": "2026-01-24T21:00:41Z",
           "topics": [
             "action-recognition",
@@ -66773,10 +66800,10 @@
           "full_name": "RandomRobbieBF/CVE-2025-6970",
           "html_url": "https://github.com/RandomRobbieBF/CVE-2025-6970",
           "description": "Events Manager \u003c= 7.0.3 - Unauthenticated SQL Injection via `orderby` Parameter",
-          "stargazers_count": 0,
+          "stargazers_count": 1,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2025-07-09T20:45:26Z",
+          "updated_at": "2026-02-24T12:58:50Z",
           "pushed_at": "2025-07-09T20:45:23Z",
           "created_at": "2025-07-09T20:44:47Z",
           "topics": [],
@@ -67279,6 +67306,25 @@
           "clone_url": "https://github.com/fxrstor/ThrottleStopPoC.git"
         },
         {
+          "id": 1069246757,
+          "name": "CVE-2025-7771",
+          "full_name": "Gabriel-Lacorte/CVE-2025-7771",
+          "html_url": "https://github.com/Gabriel-Lacorte/CVE-2025-7771",
+          "description": "A exploit for the ThrottleStop driver.",
+          "stargazers_count": 10,
+          "forks_count": 3,
+          "language": "C++",
+          "updated_at": "2026-02-24T11:44:32Z",
+          "pushed_at": "2025-11-15T16:50:40Z",
+          "created_at": "2025-10-03T16:17:11Z",
+          "topics": [],
+          "owner": {
+            "login": "Gabriel-Lacorte",
+            "html_url": "https://github.com/Gabriel-Lacorte"
+          },
+          "clone_url": "https://github.com/Gabriel-Lacorte/CVE-2025-7771.git"
+        },
+        {
           "id": 1096063433,
           "name": "throttlestop-exploit-rw",
           "full_name": "AmrHuss/throttlestop-exploit-rw",
@@ -67296,25 +67342,6 @@
             "html_url": "https://github.com/AmrHuss"
           },
           "clone_url": "https://github.com/AmrHuss/throttlestop-exploit-rw.git"
-        },
-        {
-          "id": 1069246757,
-          "name": "CVE-2025-7771",
-          "full_name": "Gabriel-Lacorte/CVE-2025-7771",
-          "html_url": "https://github.com/Gabriel-Lacorte/CVE-2025-7771",
-          "description": "A exploit for the ThrottleStop driver.",
-          "stargazers_count": 9,
-          "forks_count": 3,
-          "language": "C++",
-          "updated_at": "2026-02-10T10:04:53Z",
-          "pushed_at": "2025-11-15T16:50:40Z",
-          "created_at": "2025-10-03T16:17:11Z",
-          "topics": [],
-          "owner": {
-            "login": "Gabriel-Lacorte",
-            "html_url": "https://github.com/Gabriel-Lacorte"
-          },
-          "clone_url": "https://github.com/Gabriel-Lacorte/CVE-2025-7771.git"
         },
         {
           "id": 1052093040,
@@ -68025,8 +68052,8 @@
           "stargazers_count": 1,
           "forks_count": 2,
           "language": "Python",
-          "updated_at": "2026-02-24T06:39:59Z",
-          "pushed_at": "2026-02-24T06:39:55Z",
+          "updated_at": "2026-02-24T15:19:44Z",
+          "pushed_at": "2026-02-24T15:17:22Z",
           "created_at": "2025-12-20T13:52:21Z",
           "topics": [
             "cve",
@@ -68371,8 +68398,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-02-24T06:49:05Z",
-          "pushed_at": "2026-02-24T06:49:02Z",
+          "updated_at": "2026-02-24T15:32:21Z",
+          "pushed_at": "2026-02-24T15:27:10Z",
           "created_at": "2025-12-31T13:25:07Z",
           "topics": [
             "action-recognition",
@@ -68525,10 +68552,10 @@
           "full_name": "RandomRobbieBF/CVE-2025-8422",
           "html_url": "https://github.com/RandomRobbieBF/CVE-2025-8422",
           "description": "Propovoice \u003c= 1.7.6.7 - Unauthenticated Arbitrary File Read",
-          "stargazers_count": 0,
+          "stargazers_count": 1,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2025-09-26T18:38:13Z",
+          "updated_at": "2026-02-24T12:58:45Z",
           "pushed_at": "2025-09-26T10:05:42Z",
           "created_at": "2025-09-26T10:04:32Z",
           "topics": [],
@@ -69372,8 +69399,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Shell",
-          "updated_at": "2026-02-24T06:50:16Z",
-          "pushed_at": "2026-02-24T06:50:12Z",
+          "updated_at": "2026-02-24T15:32:52Z",
+          "pushed_at": "2026-02-24T15:28:50Z",
           "created_at": "2024-06-19T23:21:41Z",
           "topics": [
             "bash",
