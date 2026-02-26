@@ -1380,8 +1380,8 @@
           "stargazers_count": 0,
           "forks_count": 1,
           "language": "C++",
-          "updated_at": "2026-02-26T15:11:43Z",
-          "pushed_at": "2026-02-26T15:11:26Z",
+          "updated_at": "2026-02-26T19:24:06Z",
+          "pushed_at": "2026-02-26T19:24:02Z",
           "created_at": "2026-01-08T01:32:09Z",
           "topics": [
             "c0deghost",
@@ -35063,6 +35063,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2024-45427",
+      "repositories": [
+        {
+          "id": 1129685606,
+          "name": "CVE-2024-45427-Exploit",
+          "full_name": "MHamdy24/CVE-2024-45427-Exploit",
+          "html_url": "https://github.com/MHamdy24/CVE-2024-45427-Exploit",
+          "description": "PoC for PhpSpreadsheet XSS",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-01-07T12:49:43Z",
+          "pushed_at": "2026-01-07T12:49:39Z",
+          "created_at": "2026-01-07T12:45:20Z",
+          "topics": [],
+          "owner": {
+            "login": "MHamdy24",
+            "html_url": "https://github.com/MHamdy24"
+          },
+          "clone_url": "https://github.com/MHamdy24/CVE-2024-45427-Exploit.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2024-45436",
       "repositories": [
         {
@@ -35186,10 +35210,10 @@
           "full_name": "Chocapikk/CVE-2024-45519",
           "html_url": "https://github.com/Chocapikk/CVE-2024-45519",
           "description": "Zimbra - Remote Command Execution (CVE-2024-45519)",
-          "stargazers_count": 135,
+          "stargazers_count": 136,
           "forks_count": 24,
           "language": "Python",
-          "updated_at": "2026-02-24T10:53:13Z",
+          "updated_at": "2026-02-26T19:33:36Z",
           "pushed_at": "2025-04-06T16:49:26Z",
           "created_at": "2024-10-05T00:15:18Z",
           "topics": [],
@@ -35205,10 +35229,10 @@
           "full_name": "p33d/CVE-2024-45519",
           "html_url": "https://github.com/p33d/CVE-2024-45519",
           "description": "",
-          "stargazers_count": 42,
+          "stargazers_count": 43,
           "forks_count": 17,
           "language": "Python",
-          "updated_at": "2025-08-28T00:38:34Z",
+          "updated_at": "2026-02-26T19:33:40Z",
           "pushed_at": "2024-09-28T08:34:05Z",
           "created_at": "2024-09-28T08:29:06Z",
           "topics": [],
@@ -39334,44 +39358,6 @@
           "clone_url": "https://github.com/yiliufeng168/CVE-2024-50379-POC.git"
         },
         {
-          "id": 906416890,
-          "name": "CVE-2024-50379",
-          "full_name": "Alchemist3dot14/CVE-2024-50379",
-          "html_url": "https://github.com/Alchemist3dot14/CVE-2024-50379",
-          "description": "CVE-2024-50379 is a critical vulnerability affecting multiple versions of Apache Tomcat, an open source web server and servlet container widely used for deploying Java-based web applications. The vulnerability arises from a  Time-of-Use (TOCTOU) race condition that occurs when compiling JavaServer Pages (JSPs).",
-          "stargazers_count": 0,
-          "forks_count": 2,
-          "language": "Python",
-          "updated_at": "2024-12-23T12:04:31Z",
-          "pushed_at": "2024-12-20T21:55:31Z",
-          "created_at": "2024-12-20T21:30:49Z",
-          "topics": [],
-          "owner": {
-            "login": "Alchemist3dot14",
-            "html_url": "https://github.com/Alchemist3dot14"
-          },
-          "clone_url": "https://github.com/Alchemist3dot14/CVE-2024-50379.git"
-        },
-        {
-          "id": 1165158236,
-          "name": "CVE-2024-50379-TOCTOU",
-          "full_name": "radzek15/CVE-2024-50379-TOCTOU",
-          "html_url": "https://github.com/radzek15/CVE-2024-50379-TOCTOU",
-          "description": "Time-of-check Time-of-use (TOCTOU) Race Condition vulnerability",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-02-23T22:10:47Z",
-          "pushed_at": "2026-02-23T22:10:47Z",
-          "created_at": "2026-02-23T22:10:47Z",
-          "topics": [],
-          "owner": {
-            "login": "radzek15",
-            "html_url": "https://github.com/radzek15"
-          },
-          "clone_url": "https://github.com/radzek15/CVE-2024-50379-TOCTOU.git"
-        },
-        {
           "id": 908387719,
           "name": "CVE-2024-50379-nuclei",
           "full_name": "dkstar11q/CVE-2024-50379-nuclei",
@@ -39389,6 +39375,25 @@
             "html_url": "https://github.com/dkstar11q"
           },
           "clone_url": "https://github.com/dkstar11q/CVE-2024-50379-nuclei.git"
+        },
+        {
+          "id": 906416890,
+          "name": "CVE-2024-50379",
+          "full_name": "Alchemist3dot14/CVE-2024-50379",
+          "html_url": "https://github.com/Alchemist3dot14/CVE-2024-50379",
+          "description": "CVE-2024-50379 is a critical vulnerability affecting multiple versions of Apache Tomcat, an open source web server and servlet container widely used for deploying Java-based web applications. The vulnerability arises from a  Time-of-Use (TOCTOU) race condition that occurs when compiling JavaServer Pages (JSPs).",
+          "stargazers_count": 0,
+          "forks_count": 2,
+          "language": "Python",
+          "updated_at": "2024-12-23T12:04:31Z",
+          "pushed_at": "2024-12-20T21:55:31Z",
+          "created_at": "2024-12-20T21:30:49Z",
+          "topics": [],
+          "owner": {
+            "login": "Alchemist3dot14",
+            "html_url": "https://github.com/Alchemist3dot14"
+          },
+          "clone_url": "https://github.com/Alchemist3dot14/CVE-2024-50379.git"
         }
       ]
     },
@@ -48467,8 +48472,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Visual Basic .NET",
-          "updated_at": "2026-02-26T16:28:24Z",
-          "pushed_at": "2026-02-26T16:28:18Z",
+          "updated_at": "2026-02-26T21:06:09Z",
+          "pushed_at": "2026-02-26T21:05:44Z",
           "created_at": "2025-10-21T19:42:27Z",
           "topics": [
             "cmd",
