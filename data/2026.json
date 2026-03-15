@@ -427,10 +427,10 @@
           "full_name": "KOSEC-LLC/BYOVD-Research",
           "html_url": "https://github.com/KOSEC-LLC/BYOVD-Research",
           "description": "BYOVD research performed by KOSEC. Includes vulnerable drivers and writeups (CVE-2026-0828).",
-          "stargazers_count": 2,
+          "stargazers_count": 3,
           "forks_count": 0,
           "language": "C",
-          "updated_at": "2026-03-03T10:27:36Z",
+          "updated_at": "2026-03-15T18:54:45Z",
           "pushed_at": "2026-02-16T15:51:05Z",
           "created_at": "2025-10-15T02:11:59Z",
           "topics": [],
@@ -449,8 +449,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "C++",
-          "updated_at": "2026-03-15T05:40:56Z",
-          "pushed_at": "2026-03-15T05:40:53Z",
+          "updated_at": "2026-03-15T23:25:48Z",
+          "pushed_at": "2026-03-15T23:25:45Z",
           "created_at": "2024-04-20T04:18:24Z",
           "topics": [
             "automation",
@@ -539,11 +539,11 @@
           "full_name": "mdshoaibuddinchanda/zombieguard",
           "html_url": "https://github.com/mdshoaibuddinchanda/zombieguard",
           "description": "ML-based detection of Zombie ZIP archive header evasion attacks (CVE-2026-0866)",
-          "stargazers_count": 1,
+          "stargazers_count": 2,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-03-15T03:44:55Z",
-          "pushed_at": "2026-03-15T03:21:14Z",
+          "updated_at": "2026-03-15T13:30:50Z",
+          "pushed_at": "2026-03-15T13:30:47Z",
           "created_at": "2026-03-14T06:15:49Z",
           "topics": [
             "archive-evasion",
@@ -1466,6 +1466,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2026-1999",
+      "repositories": [
+        {
+          "id": 1182620364,
+          "name": "automerge-test",
+          "full_name": "jwde/automerge-test",
+          "html_url": "https://github.com/jwde/automerge-test",
+          "description": "Testing auto-merge CVE-2026-1999 variant",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-03-15T21:15:56Z",
+          "pushed_at": "2026-03-15T21:15:53Z",
+          "created_at": "2026-03-15T18:59:19Z",
+          "topics": [],
+          "owner": {
+            "login": "jwde",
+            "html_url": "https://github.com/jwde"
+          },
+          "clone_url": "https://github.com/jwde/automerge-test.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2026-20045",
       "repositories": [
         {
@@ -1541,10 +1565,10 @@
           "full_name": "zerozenxlabs/CVE-2026-20127---Cisco-SD-WAN-Preauth-RCE",
           "html_url": "https://github.com/zerozenxlabs/CVE-2026-20127---Cisco-SD-WAN-Preauth-RCE",
           "description": "",
-          "stargazers_count": 28,
+          "stargazers_count": 29,
           "forks_count": 9,
           "language": "Python",
-          "updated_at": "2026-03-13T14:24:00Z",
+          "updated_at": "2026-03-15T16:50:34Z",
           "pushed_at": "2026-03-04T01:36:00Z",
           "created_at": "2026-03-04T01:20:17Z",
           "topics": [],
@@ -1949,6 +1973,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2026-20833",
+      "repositories": [
+        {
+          "id": 1182365361,
+          "name": "cve-2026-20833-rc4-kerberos",
+          "full_name": "v-jfanca/cve-2026-20833-rc4-kerberos",
+          "html_url": "https://github.com/v-jfanca/cve-2026-20833-rc4-kerberos",
+          "description": "Kerberos RC4 deprecation: detection, remediation and guidance (CVE-2026-20833)",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "PowerShell",
+          "updated_at": "2026-03-15T23:27:15Z",
+          "pushed_at": "2026-03-15T23:27:12Z",
+          "created_at": "2026-03-15T12:25:58Z",
+          "topics": [],
+          "owner": {
+            "login": "v-jfanca",
+            "html_url": "https://github.com/v-jfanca"
+          },
+          "clone_url": "https://github.com/v-jfanca/cve-2026-20833-rc4-kerberos.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2026-20841",
       "repositories": [
         {
@@ -2139,63 +2187,6 @@
           "clone_url": "https://github.com/EleniChristopoulou/PoC-CVE-2026-20841.git"
         },
         {
-          "id": 861253542,
-          "name": "CVE-2026-20841",
-          "full_name": "hamzamalik3461/CVE-2026-20841",
-          "html_url": "https://github.com/hamzamalik3461/CVE-2026-20841",
-          "description": "🛠 Demonstrate remote code execution in Windows Notepad via markdown links exploiting unsecured URL protocols.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-03-15T05:39:40Z",
-          "pushed_at": "2026-03-15T05:39:37Z",
-          "created_at": "2024-09-22T12:19:06Z",
-          "topics": [
-            "agent",
-            "command-injection",
-            "cv",
-            "cve",
-            "cve-2016-0856",
-            "cve-2026-20841",
-            "ethereum",
-            "exploit",
-            "microsoft",
-            "mxnet",
-            "notepad-vulnerability",
-            "php-obfuscator",
-            "poc",
-            "pose-estimation",
-            "rag",
-            "semantic-segmentation",
-            "sybil-resistance",
-            "windows-notepad"
-          ],
-          "owner": {
-            "login": "hamzamalik3461",
-            "html_url": "https://github.com/hamzamalik3461"
-          },
-          "clone_url": "https://github.com/hamzamalik3461/CVE-2026-20841.git"
-        },
-        {
-          "id": 1155349188,
-          "name": "CVE-2026-20841",
-          "full_name": "RajaUzairAbdullah/CVE-2026-20841",
-          "html_url": "https://github.com/RajaUzairAbdullah/CVE-2026-20841",
-          "description": "CVE-2026-20841 - Windows notepad.exe RCE",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-02-11T12:29:35Z",
-          "pushed_at": "2026-02-11T12:29:32Z",
-          "created_at": "2026-02-11T12:14:02Z",
-          "topics": [],
-          "owner": {
-            "login": "RajaUzairAbdullah",
-            "html_url": "https://github.com/RajaUzairAbdullah"
-          },
-          "clone_url": "https://github.com/RajaUzairAbdullah/CVE-2026-20841.git"
-        },
-        {
           "id": 1167260052,
           "name": "CVE-2026-20841-PoC",
           "full_name": "404godd/CVE-2026-20841-PoC",
@@ -2204,8 +2195,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-03-15T05:39:22Z",
-          "pushed_at": "2026-03-15T05:39:19Z",
+          "updated_at": "2026-03-15T23:25:09Z",
+          "pushed_at": "2026-03-15T23:25:06Z",
           "created_at": "2026-02-26T05:21:28Z",
           "topics": [
             "agent",
@@ -2234,6 +2225,63 @@
             "html_url": "https://github.com/404godd"
           },
           "clone_url": "https://github.com/404godd/CVE-2026-20841-PoC.git"
+        },
+        {
+          "id": 1155349188,
+          "name": "CVE-2026-20841",
+          "full_name": "RajaUzairAbdullah/CVE-2026-20841",
+          "html_url": "https://github.com/RajaUzairAbdullah/CVE-2026-20841",
+          "description": "CVE-2026-20841 - Windows notepad.exe RCE",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-02-11T12:29:35Z",
+          "pushed_at": "2026-02-11T12:29:32Z",
+          "created_at": "2026-02-11T12:14:02Z",
+          "topics": [],
+          "owner": {
+            "login": "RajaUzairAbdullah",
+            "html_url": "https://github.com/RajaUzairAbdullah"
+          },
+          "clone_url": "https://github.com/RajaUzairAbdullah/CVE-2026-20841.git"
+        },
+        {
+          "id": 861253542,
+          "name": "CVE-2026-20841",
+          "full_name": "hamzamalik3461/CVE-2026-20841",
+          "html_url": "https://github.com/hamzamalik3461/CVE-2026-20841",
+          "description": "🛠 Demonstrate remote code execution in Windows Notepad via markdown links exploiting unsecured URL protocols.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-03-15T23:25:01Z",
+          "pushed_at": "2026-03-15T23:24:58Z",
+          "created_at": "2024-09-22T12:19:06Z",
+          "topics": [
+            "agent",
+            "command-injection",
+            "cv",
+            "cve",
+            "cve-2016-0856",
+            "cve-2026-20841",
+            "ethereum",
+            "exploit",
+            "microsoft",
+            "mxnet",
+            "notepad-vulnerability",
+            "php-obfuscator",
+            "poc",
+            "pose-estimation",
+            "rag",
+            "semantic-segmentation",
+            "sybil-resistance",
+            "windows-notepad"
+          ],
+          "owner": {
+            "login": "hamzamalik3461",
+            "html_url": "https://github.com/hamzamalik3461"
+          },
+          "clone_url": "https://github.com/hamzamalik3461/CVE-2026-20841.git"
         }
       ]
     },
@@ -4526,8 +4574,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-03-15T05:31:39Z",
-          "pushed_at": "2026-03-15T05:31:35Z",
+          "updated_at": "2026-03-15T23:15:44Z",
+          "pushed_at": "2026-03-15T23:15:41Z",
           "created_at": "2025-04-16T07:20:12Z",
           "topics": [
             "cve-2026-24061",
@@ -5470,8 +5518,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-03-15T05:28:35Z",
-          "pushed_at": "2026-03-15T05:28:32Z",
+          "updated_at": "2026-03-15T23:12:34Z",
+          "pushed_at": "2026-03-15T23:12:31Z",
           "created_at": "2026-02-03T19:46:10Z",
           "topics": [
             "agent",
@@ -5735,8 +5783,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-03-15T05:31:39Z",
-          "pushed_at": "2026-03-15T05:31:35Z",
+          "updated_at": "2026-03-15T23:15:44Z",
+          "pushed_at": "2026-03-15T23:15:41Z",
           "created_at": "2025-04-16T07:20:12Z",
           "topics": [
             "cve-2026-24061",
@@ -6019,8 +6067,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-03-15T05:41:58Z",
-          "pushed_at": "2026-03-15T05:41:54Z",
+          "updated_at": "2026-03-15T23:27:27Z",
+          "pushed_at": "2026-03-15T23:27:24Z",
           "created_at": "2026-03-03T14:19:18Z",
           "topics": [
             "agent",
@@ -6236,8 +6284,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-03-15T05:46:40Z",
-          "pushed_at": "2026-03-15T05:46:37Z",
+          "updated_at": "2026-03-15T20:41:02Z",
+          "pushed_at": "2026-03-15T20:40:59Z",
           "created_at": "2026-03-10T14:40:04Z",
           "topics": [
             "colab",
@@ -6645,10 +6693,10 @@
           "full_name": "ethiack/moltbot-1click-rce",
           "html_url": "https://github.com/ethiack/moltbot-1click-rce",
           "description": "Clawdbot/Moltbot/OpenClaw One-click RCE PoC 🦞 (CVE-2026-25253)",
-          "stargazers_count": 84,
+          "stargazers_count": 85,
           "forks_count": 12,
           "language": "Python",
-          "updated_at": "2026-03-13T06:26:46Z",
+          "updated_at": "2026-03-15T15:09:21Z",
           "pushed_at": "2026-01-27T01:32:52Z",
           "created_at": "2026-01-27T00:11:25Z",
           "topics": [],
@@ -6667,8 +6715,8 @@
           "stargazers_count": 21,
           "forks_count": 1,
           "language": "Shell",
-          "updated_at": "2026-03-12T14:35:22Z",
-          "pushed_at": "2026-03-11T09:41:11Z",
+          "updated_at": "2026-03-15T22:22:43Z",
+          "pushed_at": "2026-03-15T22:22:40Z",
           "created_at": "2026-02-05T07:31:07Z",
           "topics": [],
           "owner": {
@@ -6883,6 +6931,102 @@
       ]
     },
     {
+      "cve_id": "CVE-2026-25548",
+      "repositories": [
+        {
+          "id": 1182545012,
+          "name": "CVE-2026-25548",
+          "full_name": "lagathos/CVE-2026-25548",
+          "html_url": "https://github.com/lagathos/CVE-2026-25548",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-03-15T17:39:08Z",
+          "pushed_at": "2026-03-15T17:39:05Z",
+          "created_at": "2026-03-15T17:01:07Z",
+          "topics": [],
+          "owner": {
+            "login": "lagathos",
+            "html_url": "https://github.com/lagathos"
+          },
+          "clone_url": "https://github.com/lagathos/CVE-2026-25548.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2026-25594",
+      "repositories": [
+        {
+          "id": 1182589524,
+          "name": "CVE-2026-25594",
+          "full_name": "lagathos/CVE-2026-25594",
+          "html_url": "https://github.com/lagathos/CVE-2026-25594",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-03-15T18:09:32Z",
+          "pushed_at": "2026-03-15T18:09:29Z",
+          "created_at": "2026-03-15T18:09:01Z",
+          "topics": [],
+          "owner": {
+            "login": "lagathos",
+            "html_url": "https://github.com/lagathos"
+          },
+          "clone_url": "https://github.com/lagathos/CVE-2026-25594.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2026-25595",
+      "repositories": [
+        {
+          "id": 1182590057,
+          "name": "CVE-2026-25595",
+          "full_name": "lagathos/CVE-2026-25595",
+          "html_url": "https://github.com/lagathos/CVE-2026-25595",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-03-15T18:10:11Z",
+          "pushed_at": "2026-03-15T18:10:08Z",
+          "created_at": "2026-03-15T18:09:55Z",
+          "topics": [],
+          "owner": {
+            "login": "lagathos",
+            "html_url": "https://github.com/lagathos"
+          },
+          "clone_url": "https://github.com/lagathos/CVE-2026-25595.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2026-25596",
+      "repositories": [
+        {
+          "id": 1182590472,
+          "name": "CVE-2026-25596",
+          "full_name": "lagathos/CVE-2026-25596",
+          "html_url": "https://github.com/lagathos/CVE-2026-25596",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-03-15T18:10:46Z",
+          "pushed_at": "2026-03-15T18:10:43Z",
+          "created_at": "2026-03-15T18:10:29Z",
+          "topics": [],
+          "owner": {
+            "login": "lagathos",
+            "html_url": "https://github.com/lagathos"
+          },
+          "clone_url": "https://github.com/lagathos/CVE-2026-25596.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2026-25643",
       "repositories": [
         {
@@ -6946,8 +7090,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-03-15T05:45:31Z",
-          "pushed_at": "2026-03-15T05:45:28Z",
+          "updated_at": "2026-03-15T23:31:20Z",
+          "pushed_at": "2026-03-15T23:31:17Z",
           "created_at": "2026-03-07T20:23:08Z",
           "topics": [
             "cve",
@@ -8791,6 +8935,25 @@
           "clone_url": "https://github.com/kernelzeroday/CVE-2026-29000.git"
         },
         {
+          "id": 1180413307,
+          "name": "CVE-2026-29000---pac4j-jwt-Authentication-Bypass-PoC",
+          "full_name": "manbahadurthapa1248/CVE-2026-29000---pac4j-jwt-Authentication-Bypass-PoC",
+          "html_url": "https://github.com/manbahadurthapa1248/CVE-2026-29000---pac4j-jwt-Authentication-Bypass-PoC",
+          "description": "CVE-2026-29000 - pac4j-jwt Authentication Bypass PoC",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-03-15T22:45:40Z",
+          "pushed_at": "2026-03-13T02:43:08Z",
+          "created_at": "2026-03-13T02:38:37Z",
+          "topics": [],
+          "owner": {
+            "login": "manbahadurthapa1248",
+            "html_url": "https://github.com/manbahadurthapa1248"
+          },
+          "clone_url": "https://github.com/manbahadurthapa1248/CVE-2026-29000---pac4j-jwt-Authentication-Bypass-PoC.git"
+        },
+        {
           "id": 1181119944,
           "name": "CVE-2026-29000",
           "full_name": "otuva/CVE-2026-29000",
@@ -8810,42 +8973,23 @@
           "clone_url": "https://github.com/otuva/CVE-2026-29000.git"
         },
         {
-          "id": 1180680792,
-          "name": "CVE-2026-29000",
-          "full_name": "Crims-on/CVE-2026-29000",
-          "html_url": "https://github.com/Crims-on/CVE-2026-29000",
+          "id": 1180708593,
+          "name": "CVE-2026-29000-Python-PoC-pac4j-JWT-AuthenticationBypass-Poc",
+          "full_name": "alihussainzada/CVE-2026-29000-Python-PoC-pac4j-JWT-AuthenticationBypass-Poc",
+          "html_url": "https://github.com/alihussainzada/CVE-2026-29000-Python-PoC-pac4j-JWT-AuthenticationBypass-Poc",
           "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-03-13T09:48:26Z",
-          "pushed_at": "2026-03-13T09:48:23Z",
-          "created_at": "2026-03-13T09:46:45Z",
+          "updated_at": "2026-03-13T10:32:31Z",
+          "pushed_at": "2026-03-13T10:27:07Z",
+          "created_at": "2026-03-13T10:23:19Z",
           "topics": [],
           "owner": {
-            "login": "Crims-on",
-            "html_url": "https://github.com/Crims-on"
+            "login": "alihussainzada",
+            "html_url": "https://github.com/alihussainzada"
           },
-          "clone_url": "https://github.com/Crims-on/CVE-2026-29000.git"
-        },
-        {
-          "id": 1180413307,
-          "name": "CVE-2026-29000---pac4j-jwt-Authentication-Bypass-PoC",
-          "full_name": "manbahadurthapa1248/CVE-2026-29000---pac4j-jwt-Authentication-Bypass-PoC",
-          "html_url": "https://github.com/manbahadurthapa1248/CVE-2026-29000---pac4j-jwt-Authentication-Bypass-PoC",
-          "description": "CVE-2026-29000 - pac4j-jwt Authentication Bypass PoC",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-03-13T02:43:11Z",
-          "pushed_at": "2026-03-13T02:43:08Z",
-          "created_at": "2026-03-13T02:38:37Z",
-          "topics": [],
-          "owner": {
-            "login": "manbahadurthapa1248",
-            "html_url": "https://github.com/manbahadurthapa1248"
-          },
-          "clone_url": "https://github.com/manbahadurthapa1248/CVE-2026-29000---pac4j-jwt-Authentication-Bypass-PoC.git"
+          "clone_url": "https://github.com/alihussainzada/CVE-2026-29000-Python-PoC-pac4j-JWT-AuthenticationBypass-Poc.git"
         },
         {
           "id": 1178685428,
@@ -8867,23 +9011,23 @@
           "clone_url": "https://github.com/rootdirective-sec/CVE-2026-29000-Lab.git"
         },
         {
-          "id": 1180708593,
-          "name": "CVE-2026-29000-Python-PoC-pac4j-JWT-AuthenticationBypass-Poc",
-          "full_name": "alihussainzada/CVE-2026-29000-Python-PoC-pac4j-JWT-AuthenticationBypass-Poc",
-          "html_url": "https://github.com/alihussainzada/CVE-2026-29000-Python-PoC-pac4j-JWT-AuthenticationBypass-Poc",
+          "id": 1180680792,
+          "name": "CVE-2026-29000",
+          "full_name": "Crims-on/CVE-2026-29000",
+          "html_url": "https://github.com/Crims-on/CVE-2026-29000",
           "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-03-13T10:32:31Z",
-          "pushed_at": "2026-03-13T10:27:07Z",
-          "created_at": "2026-03-13T10:23:19Z",
+          "updated_at": "2026-03-13T09:48:26Z",
+          "pushed_at": "2026-03-13T09:48:23Z",
+          "created_at": "2026-03-13T09:46:45Z",
           "topics": [],
           "owner": {
-            "login": "alihussainzada",
-            "html_url": "https://github.com/alihussainzada"
+            "login": "Crims-on",
+            "html_url": "https://github.com/Crims-on"
           },
-          "clone_url": "https://github.com/alihussainzada/CVE-2026-29000-Python-PoC-pac4j-JWT-AuthenticationBypass-Poc.git"
+          "clone_url": "https://github.com/Crims-on/CVE-2026-29000.git"
         }
       ]
     },
@@ -9043,10 +9187,10 @@
           "full_name": "Named1ess/CVE-2026-30741",
           "html_url": "https://github.com/Named1ess/CVE-2026-30741",
           "description": "",
-          "stargazers_count": 2,
+          "stargazers_count": 3,
           "forks_count": 0,
           "language": "JavaScript",
-          "updated_at": "2026-03-12T09:57:02Z",
+          "updated_at": "2026-03-15T13:30:50Z",
           "pushed_at": "2026-03-10T15:02:40Z",
           "created_at": "2026-03-10T14:40:51Z",
           "topics": [],
@@ -9335,6 +9479,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2026-31899",
+      "repositories": [
+        {
+          "id": 1182235473,
+          "name": "CVE-2026-31899",
+          "full_name": "SnailSploit/CVE-2026-31899",
+          "html_url": "https://github.com/SnailSploit/CVE-2026-31899",
+          "description": "CVE-2026-31899: Exponential DoS via Recursive \u003cuse\u003e Element Amplification in CairoSVG (CVSS 7.5 High)",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-03-15T08:59:05Z",
+          "pushed_at": "2026-03-15T08:59:02Z",
+          "created_at": "2026-03-15T08:25:43Z",
+          "topics": [],
+          "owner": {
+            "login": "SnailSploit",
+            "html_url": "https://github.com/SnailSploit"
+          },
+          "clone_url": "https://github.com/SnailSploit/CVE-2026-31899.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2026-32127",
       "repositories": [
         {
@@ -9390,6 +9558,30 @@
             "html_url": "https://github.com/NULL200OK"
           },
           "clone_url": "https://github.com/NULL200OK/CVE-2026-3228.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2026-32722",
+      "repositories": [
+        {
+          "id": 1182678842,
+          "name": "CVE-2026-32722",
+          "full_name": "0xmrma/CVE-2026-32722",
+          "html_url": "https://github.com/0xmrma/CVE-2026-32722",
+          "description": "CVE-2026-32722: Bloomberg Memray’s Stored XSS via Unescaped Command-Line Metadata",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-03-15T22:57:07Z",
+          "pushed_at": "2026-03-15T20:58:54Z",
+          "created_at": "2026-03-15T20:42:35Z",
+          "topics": [],
+          "owner": {
+            "login": "0xmrma",
+            "html_url": "https://github.com/0xmrma"
+          },
+          "clone_url": "https://github.com/0xmrma/CVE-2026-32722.git"
         }
       ]
     },
@@ -9541,6 +9733,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2026-3796",
+      "repositories": [
+        {
+          "id": 1158864623,
+          "name": "CVE-2026-3796",
+          "full_name": "cwjchoi01/CVE-2026-3796",
+          "html_url": "https://github.com/cwjchoi01/CVE-2026-3796",
+          "description": "CVE-2026-3796",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "C++",
+          "updated_at": "2026-03-15T16:15:15Z",
+          "pushed_at": "2026-03-15T16:14:54Z",
+          "created_at": "2026-02-16T02:33:05Z",
+          "topics": [],
+          "owner": {
+            "login": "cwjchoi01",
+            "html_url": "https://github.com/cwjchoi01"
+          },
+          "clone_url": "https://github.com/cwjchoi01/CVE-2026-3796.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2026-3891",
       "repositories": [
         {
@@ -9591,8 +9807,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-03-14T17:01:03Z",
-          "pushed_at": "2026-03-14T17:01:00Z",
+          "updated_at": "2026-03-15T10:20:28Z",
+          "pushed_at": "2026-03-15T10:20:24Z",
           "created_at": "2026-03-14T16:48:55Z",
           "topics": [],
           "owner": {
@@ -9751,6 +9967,25 @@
       "cve_id": "OTHER-2026",
       "repositories": [
         {
+          "id": 1154618984,
+          "name": "cve-2026-oracle",
+          "full_name": "compfaculty/cve-2026-oracle",
+          "html_url": "https://github.com/compfaculty/cve-2026-oracle",
+          "description": "",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Go",
+          "updated_at": "2026-03-15T18:20:36Z",
+          "pushed_at": "2026-02-10T16:08:59Z",
+          "created_at": "2026-02-10T15:40:34Z",
+          "topics": [],
+          "owner": {
+            "login": "compfaculty",
+            "html_url": "https://github.com/compfaculty"
+          },
+          "clone_url": "https://github.com/compfaculty/cve-2026-oracle.git"
+        },
+        {
           "id": 1140136337,
           "name": "cve_2026_21962_scanner",
           "full_name": "gglessner/cve_2026_21962_scanner",
@@ -9768,25 +10003,6 @@
             "html_url": "https://github.com/gglessner"
           },
           "clone_url": "https://github.com/gglessner/cve_2026_21962_scanner.git"
-        },
-        {
-          "id": 1141081263,
-          "name": "CTI_CVE_2026",
-          "full_name": "Bhanu6576/CTI_CVE_2026",
-          "html_url": "https://github.com/Bhanu6576/CTI_CVE_2026",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-03-14T01:01:23Z",
-          "pushed_at": "2026-03-14T01:01:20Z",
-          "created_at": "2026-01-24T07:55:13Z",
-          "topics": [],
-          "owner": {
-            "login": "Bhanu6576",
-            "html_url": "https://github.com/Bhanu6576"
-          },
-          "clone_url": "https://github.com/Bhanu6576/CTI_CVE_2026.git"
         },
         {
           "id": 1178071310,
@@ -9865,23 +10081,23 @@
           "clone_url": "https://github.com/dzmind2312/CVE_2026_25892.git"
         },
         {
-          "id": 1154618984,
-          "name": "cve-2026-oracle",
-          "full_name": "compfaculty/cve-2026-oracle",
-          "html_url": "https://github.com/compfaculty/cve-2026-oracle",
+          "id": 1181762567,
+          "name": "Cve_2026_29000_exploit",
+          "full_name": "FranzAlvis/Cve_2026_29000_exploit",
+          "html_url": "https://github.com/FranzAlvis/Cve_2026_29000_exploit",
           "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Go",
-          "updated_at": "2026-02-10T16:09:03Z",
-          "pushed_at": "2026-02-10T16:08:59Z",
-          "created_at": "2026-02-10T15:40:34Z",
+          "language": "Python",
+          "updated_at": "2026-03-14T16:12:04Z",
+          "pushed_at": "2026-03-14T16:12:01Z",
+          "created_at": "2026-03-14T15:37:43Z",
           "topics": [],
           "owner": {
-            "login": "compfaculty",
-            "html_url": "https://github.com/compfaculty"
+            "login": "FranzAlvis",
+            "html_url": "https://github.com/FranzAlvis"
           },
-          "clone_url": "https://github.com/compfaculty/cve-2026-oracle.git"
+          "clone_url": "https://github.com/FranzAlvis/Cve_2026_29000_exploit.git"
         },
         {
           "id": 1149902392,
@@ -10074,23 +10290,23 @@
           "clone_url": "https://github.com/m3ngx1ng/cve_2026_24061_cli.git"
         },
         {
-          "id": 1181762567,
-          "name": "Cve_2026_29000_exploit",
-          "full_name": "FranzAlvis/Cve_2026_29000_exploit",
-          "html_url": "https://github.com/FranzAlvis/Cve_2026_29000_exploit",
+          "id": 1141081263,
+          "name": "CTI_CVE_2026",
+          "full_name": "Bhanu6576/CTI_CVE_2026",
+          "html_url": "https://github.com/Bhanu6576/CTI_CVE_2026",
           "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-03-14T16:12:04Z",
-          "pushed_at": "2026-03-14T16:12:01Z",
-          "created_at": "2026-03-14T15:37:43Z",
+          "updated_at": "2026-03-14T01:01:23Z",
+          "pushed_at": "2026-03-14T01:01:20Z",
+          "created_at": "2026-01-24T07:55:13Z",
           "topics": [],
           "owner": {
-            "login": "FranzAlvis",
-            "html_url": "https://github.com/FranzAlvis"
+            "login": "Bhanu6576",
+            "html_url": "https://github.com/Bhanu6576"
           },
-          "clone_url": "https://github.com/FranzAlvis/Cve_2026_29000_exploit.git"
+          "clone_url": "https://github.com/Bhanu6576/CTI_CVE_2026.git"
         },
         {
           "id": 1140049404,
