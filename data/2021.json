@@ -2789,25 +2789,6 @@
             "html_url": "https://github.com/arnaudluti"
           },
           "clone_url": "https://github.com/arnaudluti/PS-CVE-2021-21551.git"
-        },
-        {
-          "id": 1108697063,
-          "name": "cve-2021-21551-PoC",
-          "full_name": "bengabay1994/cve-2021-21551-PoC",
-          "html_url": "https://github.com/bengabay1994/cve-2021-21551-PoC",
-          "description": "This repo contain a PoC I have done when blind analysis the dbutil_2_3.sys driver for vulnerability. This was created by personal analysis without looking at writeups or even know which CVE exist in this driver. All the knowledge I have is that this driver is vulnerable in some way.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2025-12-02T19:48:32Z",
-          "pushed_at": "2025-12-02T19:48:29Z",
-          "created_at": "2025-12-02T19:47:51Z",
-          "topics": [],
-          "owner": {
-            "login": "bengabay1994",
-            "html_url": "https://github.com/bengabay1994"
-          },
-          "clone_url": "https://github.com/bengabay1994/cve-2021-21551-PoC.git"
         }
       ]
     },
@@ -5889,7 +5870,7 @@
           "html_url": "https://github.com/0vercl0k/CVE-2021-24086",
           "description": "Proof of concept for CVE-2021-24086, a NULL dereference in tcpip.sys triggered remotely.",
           "stargazers_count": 236,
-          "forks_count": 52,
+          "forks_count": 53,
           "language": "Python",
           "updated_at": "2026-03-06T21:50:48Z",
           "pushed_at": "2021-04-15T12:46:54Z",
@@ -8728,51 +8709,6 @@
           "clone_url": "https://github.com/Immersive-Labs-Sec/ProxyLogon.git"
         },
         {
-          "id": 345955330,
-          "name": "ExchangeWeaknessTest",
-          "full_name": "mauricelambert/ExchangeWeaknessTest",
-          "html_url": "https://github.com/mauricelambert/ExchangeWeaknessTest",
-          "description": "This script test the CVE-2021-26855 vulnerability on Exchange Server.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2021-03-09T09:43:55Z",
-          "pushed_at": "2021-03-09T09:42:51Z",
-          "created_at": "2021-03-09T09:40:29Z",
-          "topics": [
-            "cve",
-            "exchange",
-            "microsoft",
-            "python3",
-            "security",
-            "security-tools"
-          ],
-          "owner": {
-            "login": "mauricelambert",
-            "html_url": "https://github.com/mauricelambert"
-          },
-          "clone_url": "https://github.com/mauricelambert/ExchangeWeaknessTest.git"
-        },
-        {
-          "id": 1109708695,
-          "name": "CVE-2021-26855",
-          "full_name": "Wercd/CVE-2021-26855",
-          "html_url": "https://github.com/Wercd/CVE-2021-26855",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2025-12-04T07:12:32Z",
-          "pushed_at": "2025-12-04T07:12:29Z",
-          "created_at": "2025-12-04T07:11:00Z",
-          "topics": [],
-          "owner": {
-            "login": "Wercd",
-            "html_url": "https://github.com/Wercd"
-          },
-          "clone_url": "https://github.com/Wercd/CVE-2021-26855.git"
-        },
-        {
           "id": 1143279829,
           "name": "CTT-ProxyLogon-RCE-v1.0---Convergent-Time-Theory-Enhanced-Microsoft-Exchange-Exploit",
           "full_name": "SimoesCTT/CTT-ProxyLogon-RCE-v1.0---Convergent-Time-Theory-Enhanced-Microsoft-Exchange-Exploit",
@@ -8790,44 +8726,6 @@
             "html_url": "https://github.com/SimoesCTT"
           },
           "clone_url": "https://github.com/SimoesCTT/CTT-ProxyLogon-RCE-v1.0---Convergent-Time-Theory-Enhanced-Microsoft-Exchange-Exploit.git"
-        },
-        {
-          "id": 350620709,
-          "name": "CVE-2021-26855-CVE-2021-27065",
-          "full_name": "hictf/CVE-2021-26855-CVE-2021-27065",
-          "html_url": "https://github.com/hictf/CVE-2021-26855-CVE-2021-27065",
-          "description": "analytics ProxyLogo Mail exchange RCE",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "JavaScript",
-          "updated_at": "2021-03-23T19:02:32Z",
-          "pushed_at": "2021-03-23T19:02:30Z",
-          "created_at": "2021-03-23T07:37:47Z",
-          "topics": [],
-          "owner": {
-            "login": "hictf",
-            "html_url": "https://github.com/hictf"
-          },
-          "clone_url": "https://github.com/hictf/CVE-2021-26855-CVE-2021-27065.git"
-        },
-        {
-          "id": 1144062752,
-          "name": "CTT-Exchange-RCE-v1.0---Microsoft-Exchange-Exploit-CVSS-10.0-CRITICAL-CVE-2021-26855-CVE-2021-27065",
-          "full_name": "SimoesCTT/CTT-Exchange-RCE-v1.0---Microsoft-Exchange-Exploit-CVSS-10.0-CRITICAL-CVE-2021-26855-CVE-2021-27065",
-          "html_url": "https://github.com/SimoesCTT/CTT-Exchange-RCE-v1.0---Microsoft-Exchange-Exploit-CVSS-10.0-CRITICAL-CVE-2021-26855-CVE-2021-27065",
-          "description": "CTT-enhanced version of the Microsoft Exchange Server SSRF to RCE exploit (ProxyShell/ProxyLogon), another CVSS 10.0 critical vulnerability that affected hundreds of thousands of organizations worldwide.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-01-28T08:47:16Z",
-          "pushed_at": "2026-01-28T08:47:13Z",
-          "created_at": "2026-01-28T08:45:23Z",
-          "topics": [],
-          "owner": {
-            "login": "SimoesCTT",
-            "html_url": "https://github.com/SimoesCTT"
-          },
-          "clone_url": "https://github.com/SimoesCTT/CTT-Exchange-RCE-v1.0---Microsoft-Exchange-Exploit-CVSS-10.0-CRITICAL-CVE-2021-26855-CVE-2021-27065.git"
         },
         {
           "id": 349063640,
@@ -8866,6 +8764,63 @@
             "html_url": "https://github.com/catmandx"
           },
           "clone_url": "https://github.com/catmandx/CVE-2021-26855-Exchange-RCE.git"
+        },
+        {
+          "id": 345970212,
+          "name": "Exchange_IOC_Hunter",
+          "full_name": "DCScoder/Exchange_IOC_Hunter",
+          "html_url": "https://github.com/DCScoder/Exchange_IOC_Hunter",
+          "description": "CVE-2021-26855, CVE-2021-26857, CVE-2021-26858, CVE-2021-27065",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "PowerShell",
+          "updated_at": "2021-03-17T10:22:07Z",
+          "pushed_at": "2021-03-17T10:22:05Z",
+          "created_at": "2021-03-09T10:36:44Z",
+          "topics": [],
+          "owner": {
+            "login": "DCScoder",
+            "html_url": "https://github.com/DCScoder"
+          },
+          "clone_url": "https://github.com/DCScoder/Exchange_IOC_Hunter.git"
+        },
+        {
+          "id": 1144062752,
+          "name": "CTT-Exchange-RCE-v1.0---Microsoft-Exchange-Exploit-CVSS-10.0-CRITICAL-CVE-2021-26855-CVE-2021-27065",
+          "full_name": "SimoesCTT/CTT-Exchange-RCE-v1.0---Microsoft-Exchange-Exploit-CVSS-10.0-CRITICAL-CVE-2021-26855-CVE-2021-27065",
+          "html_url": "https://github.com/SimoesCTT/CTT-Exchange-RCE-v1.0---Microsoft-Exchange-Exploit-CVSS-10.0-CRITICAL-CVE-2021-26855-CVE-2021-27065",
+          "description": "CTT-enhanced version of the Microsoft Exchange Server SSRF to RCE exploit (ProxyShell/ProxyLogon), another CVSS 10.0 critical vulnerability that affected hundreds of thousands of organizations worldwide.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-01-28T08:47:16Z",
+          "pushed_at": "2026-01-28T08:47:13Z",
+          "created_at": "2026-01-28T08:45:23Z",
+          "topics": [],
+          "owner": {
+            "login": "SimoesCTT",
+            "html_url": "https://github.com/SimoesCTT"
+          },
+          "clone_url": "https://github.com/SimoesCTT/CTT-Exchange-RCE-v1.0---Microsoft-Exchange-Exploit-CVSS-10.0-CRITICAL-CVE-2021-26855-CVE-2021-27065.git"
+        },
+        {
+          "id": 350620709,
+          "name": "CVE-2021-26855-CVE-2021-27065",
+          "full_name": "hictf/CVE-2021-26855-CVE-2021-27065",
+          "html_url": "https://github.com/hictf/CVE-2021-26855-CVE-2021-27065",
+          "description": "analytics ProxyLogo Mail exchange RCE",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "JavaScript",
+          "updated_at": "2021-03-23T19:02:32Z",
+          "pushed_at": "2021-03-23T19:02:30Z",
+          "created_at": "2021-03-23T07:37:47Z",
+          "topics": [],
+          "owner": {
+            "login": "hictf",
+            "html_url": "https://github.com/hictf"
+          },
+          "clone_url": "https://github.com/hictf/CVE-2021-26855-CVE-2021-27065.git"
         },
         {
           "id": 359403469,
@@ -8925,23 +8880,30 @@
           "clone_url": "https://github.com/yaoxiaoangry3/Flangvik.git"
         },
         {
-          "id": 345970212,
-          "name": "Exchange_IOC_Hunter",
-          "full_name": "DCScoder/Exchange_IOC_Hunter",
-          "html_url": "https://github.com/DCScoder/Exchange_IOC_Hunter",
-          "description": "CVE-2021-26855, CVE-2021-26857, CVE-2021-26858, CVE-2021-27065",
+          "id": 345955330,
+          "name": "ExchangeWeaknessTest",
+          "full_name": "mauricelambert/ExchangeWeaknessTest",
+          "html_url": "https://github.com/mauricelambert/ExchangeWeaknessTest",
+          "description": "This script test the CVE-2021-26855 vulnerability on Exchange Server.",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "PowerShell",
-          "updated_at": "2021-03-17T10:22:07Z",
-          "pushed_at": "2021-03-17T10:22:05Z",
-          "created_at": "2021-03-09T10:36:44Z",
-          "topics": [],
+          "language": "Python",
+          "updated_at": "2021-03-09T09:43:55Z",
+          "pushed_at": "2021-03-09T09:42:51Z",
+          "created_at": "2021-03-09T09:40:29Z",
+          "topics": [
+            "cve",
+            "exchange",
+            "microsoft",
+            "python3",
+            "security",
+            "security-tools"
+          ],
           "owner": {
-            "login": "DCScoder",
-            "html_url": "https://github.com/DCScoder"
+            "login": "mauricelambert",
+            "html_url": "https://github.com/mauricelambert"
           },
-          "clone_url": "https://github.com/DCScoder/Exchange_IOC_Hunter.git"
+          "clone_url": "https://github.com/mauricelambert/ExchangeWeaknessTest.git"
         }
       ]
     },
@@ -20158,8 +20120,8 @@
           "stargazers_count": 2,
           "forks_count": 2,
           "language": "Python",
-          "updated_at": "2026-03-18T13:51:55Z",
-          "pushed_at": "2026-03-18T13:51:51Z",
+          "updated_at": "2026-03-18T17:12:33Z",
+          "pushed_at": "2026-03-18T17:12:01Z",
           "created_at": "2025-10-01T09:53:03Z",
           "topics": [
             "bash",
@@ -23878,6 +23840,44 @@
           "clone_url": "https://github.com/n3k00n3/CVE-2021-41773.git"
         },
         {
+          "id": 1155188815,
+          "name": "PoC-Apache-CVE-2021-41773-Infrastructure-LAB",
+          "full_name": "ISabbiI/PoC-Apache-CVE-2021-41773-Infrastructure-LAB",
+          "html_url": "https://github.com/ISabbiI/PoC-Apache-CVE-2021-41773-Infrastructure-LAB",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-02-14T23:43:01Z",
+          "pushed_at": "2026-02-14T23:42:58Z",
+          "created_at": "2026-02-11T08:18:27Z",
+          "topics": [],
+          "owner": {
+            "login": "ISabbiI",
+            "html_url": "https://github.com/ISabbiI"
+          },
+          "clone_url": "https://github.com/ISabbiI/PoC-Apache-CVE-2021-41773-Infrastructure-LAB.git"
+        },
+        {
+          "id": 1185555365,
+          "name": "CVE-2021-41773-RedTeam",
+          "full_name": "sobanahmed6061/CVE-2021-41773-RedTeam",
+          "html_url": "https://github.com/sobanahmed6061/CVE-2021-41773-RedTeam",
+          "description": "Apache 2.4.49 Path Traversal RCE",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-03-18T18:09:07Z",
+          "pushed_at": "2026-03-18T18:09:04Z",
+          "created_at": "2026-03-18T17:51:01Z",
+          "topics": [],
+          "owner": {
+            "login": "sobanahmed6061",
+            "html_url": "https://github.com/sobanahmed6061"
+          },
+          "clone_url": "https://github.com/sobanahmed6061/CVE-2021-41773-RedTeam.git"
+        },
+        {
           "id": 414848372,
           "name": "Sigma-Rule-for-CVE-2021-41773-and-CVE-2021-42013-exploitation-attempt",
           "full_name": "pisut4152/Sigma-Rule-for-CVE-2021-41773-and-CVE-2021-42013-exploitation-attempt",
@@ -23916,46 +23916,42 @@
           "clone_url": "https://github.com/mohwahyudi/cve-2021-41773.git"
         },
         {
-          "id": 414248192,
-          "name": "CVE-2021-41773",
-          "full_name": "ranggaggngntt/CVE-2021-41773",
-          "html_url": "https://github.com/ranggaggngntt/CVE-2021-41773",
-          "description": "",
+          "id": 419148076,
+          "name": "CVE-2021-41784",
+          "full_name": "Jeromeyoung/CVE-2021-41784",
+          "html_url": "https://github.com/Jeromeyoung/CVE-2021-41784",
+          "description": "CVE-2021-41773 Docker lab",
           "stargazers_count": 0,
-          "forks_count": 2,
-          "language": "Python",
-          "updated_at": "2024-08-12T20:17:01Z",
-          "pushed_at": "2022-06-11T13:34:00Z",
-          "created_at": "2021-10-06T14:36:05Z",
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2023-01-25T05:12:20Z",
+          "pushed_at": "2021-10-20T01:21:34Z",
+          "created_at": "2021-10-20T01:40:53Z",
           "topics": [],
           "owner": {
-            "login": "ranggaggngntt",
-            "html_url": "https://github.com/ranggaggngntt"
+            "login": "Jeromeyoung",
+            "html_url": "https://github.com/Jeromeyoung"
           },
-          "clone_url": "https://github.com/ranggaggngntt/CVE-2021-41773.git"
+          "clone_url": "https://github.com/Jeromeyoung/CVE-2021-41784.git"
         },
         {
-          "id": 1182612184,
-          "name": "exploitApache",
-          "full_name": "Nanxsec/exploitApache",
-          "html_url": "https://github.com/Nanxsec/exploitApache",
-          "description": "exploit para a CVE-2021-41773:Path Traversal cgi-bin",
+          "id": 1152398776,
+          "name": "Serdyuk-DO-homework-CVE-2021-41773",
+          "full_name": "dserdyk3-arch/Serdyuk-DO-homework-CVE-2021-41773",
+          "html_url": "https://github.com/dserdyk3-arch/Serdyuk-DO-homework-CVE-2021-41773",
+          "description": "PoC скрипт для CVE-2021-41773 - Path Traversal в Apache 2.4.49",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-03-15T22:13:20Z",
-          "pushed_at": "2026-03-15T18:46:08Z",
-          "created_at": "2026-03-15T18:45:26Z",
-          "topics": [
-            "apache",
-            "exploit",
-            "exploitation"
-          ],
+          "updated_at": "2026-02-07T21:00:13Z",
+          "pushed_at": "2026-02-07T21:00:10Z",
+          "created_at": "2026-02-07T20:20:00Z",
+          "topics": [],
           "owner": {
-            "login": "Nanxsec",
-            "html_url": "https://github.com/Nanxsec"
+            "login": "dserdyk3-arch",
+            "html_url": "https://github.com/dserdyk3-arch"
           },
-          "clone_url": "https://github.com/Nanxsec/exploitApache.git"
+          "clone_url": "https://github.com/dserdyk3-arch/Serdyuk-DO-homework-CVE-2021-41773.git"
         },
         {
           "id": 414536267,
@@ -23996,6 +23992,63 @@
           "clone_url": "https://github.com/Hattan515/POC-CVE-2021-41773.git"
         },
         {
+          "id": 1135952705,
+          "name": "cve-2021-41773-checker",
+          "full_name": "sudo0xksh/cve-2021-41773-checker",
+          "html_url": "https://github.com/sudo0xksh/cve-2021-41773-checker",
+          "description": "A simple Python proof-of-concept tool to check for Apache path traversal vulnerability (CVE-2021-41773).  Detects vulnerable server versions and verifies exploitation by probing sensitive files.  Built for learning CVE analysis, not mass exploitation.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-01-16T20:55:02Z",
+          "pushed_at": "2026-01-16T20:54:58Z",
+          "created_at": "2026-01-16T20:39:02Z",
+          "topics": [],
+          "owner": {
+            "login": "sudo0xksh",
+            "html_url": "https://github.com/sudo0xksh"
+          },
+          "clone_url": "https://github.com/sudo0xksh/cve-2021-41773-checker.git"
+        },
+        {
+          "id": 1132588885,
+          "name": "CVE-2021-41773-Analysis",
+          "full_name": "ChanaPCN/CVE-2021-41773-Analysis",
+          "html_url": "https://github.com/ChanaPCN/CVE-2021-41773-Analysis",
+          "description": "Technical analysis and reproduction lab for the Apache HTTP Server 2.4.49 Path Traversal and RCE vulnerability.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-01-12T07:11:25Z",
+          "pushed_at": "2026-01-12T07:16:57Z",
+          "created_at": "2026-01-12T07:11:21Z",
+          "topics": [],
+          "owner": {
+            "login": "ChanaPCN",
+            "html_url": "https://github.com/ChanaPCN"
+          },
+          "clone_url": "https://github.com/ChanaPCN/CVE-2021-41773-Analysis.git"
+        },
+        {
+          "id": 414350527,
+          "name": "CVE-2021-41773-RCE",
+          "full_name": "fnatalucci/CVE-2021-41773-RCE",
+          "html_url": "https://github.com/fnatalucci/CVE-2021-41773-RCE",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 1,
+          "language": "Shell",
+          "updated_at": "2024-08-12T20:17:02Z",
+          "pushed_at": "2021-10-06T20:14:27Z",
+          "created_at": "2021-10-06T19:50:33Z",
+          "topics": [],
+          "owner": {
+            "login": "fnatalucci",
+            "html_url": "https://github.com/fnatalucci"
+          },
+          "clone_url": "https://github.com/fnatalucci/CVE-2021-41773-RCE.git"
+        },
+        {
           "id": 414646379,
           "name": "CVE-2021-41773",
           "full_name": "shiomiyan/CVE-2021-41773",
@@ -24034,23 +24087,42 @@
           "clone_url": "https://github.com/ch4os443/CVE-2021-41773.git"
         },
         {
-          "id": 414350527,
-          "name": "CVE-2021-41773-RCE",
-          "full_name": "fnatalucci/CVE-2021-41773-RCE",
-          "html_url": "https://github.com/fnatalucci/CVE-2021-41773-RCE",
+          "id": 414248192,
+          "name": "CVE-2021-41773",
+          "full_name": "ranggaggngntt/CVE-2021-41773",
+          "html_url": "https://github.com/ranggaggngntt/CVE-2021-41773",
           "description": "",
           "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "Shell",
-          "updated_at": "2024-08-12T20:17:02Z",
-          "pushed_at": "2021-10-06T20:14:27Z",
-          "created_at": "2021-10-06T19:50:33Z",
+          "forks_count": 2,
+          "language": "Python",
+          "updated_at": "2024-08-12T20:17:01Z",
+          "pushed_at": "2022-06-11T13:34:00Z",
+          "created_at": "2021-10-06T14:36:05Z",
           "topics": [],
           "owner": {
-            "login": "fnatalucci",
-            "html_url": "https://github.com/fnatalucci"
+            "login": "ranggaggngntt",
+            "html_url": "https://github.com/ranggaggngntt"
           },
-          "clone_url": "https://github.com/fnatalucci/CVE-2021-41773-RCE.git"
+          "clone_url": "https://github.com/ranggaggngntt/CVE-2021-41773.git"
+        },
+        {
+          "id": 1185561462,
+          "name": "APACHE-PATH-TRAVERSAL-RCE-CVE-2021-41773-",
+          "full_name": "abds059/APACHE-PATH-TRAVERSAL-RCE-CVE-2021-41773-",
+          "html_url": "https://github.com/abds059/APACHE-PATH-TRAVERSAL-RCE-CVE-2021-41773-",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-03-18T18:01:44Z",
+          "pushed_at": "2026-03-18T18:01:40Z",
+          "created_at": "2026-03-18T17:59:02Z",
+          "topics": [],
+          "owner": {
+            "login": "abds059",
+            "html_url": "https://github.com/abds059"
+          },
+          "clone_url": "https://github.com/abds059/APACHE-PATH-TRAVERSAL-RCE-CVE-2021-41773-.git"
         },
         {
           "id": 417227516,
@@ -24075,44 +24147,6 @@
           "clone_url": "https://github.com/twseptian/cve-2021-41773-docker-lab.git"
         },
         {
-          "id": 1155188815,
-          "name": "PoC-Apache-CVE-2021-41773-Infrastructure-LAB",
-          "full_name": "ISabbiI/PoC-Apache-CVE-2021-41773-Infrastructure-LAB",
-          "html_url": "https://github.com/ISabbiI/PoC-Apache-CVE-2021-41773-Infrastructure-LAB",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-02-14T23:43:01Z",
-          "pushed_at": "2026-02-14T23:42:58Z",
-          "created_at": "2026-02-11T08:18:27Z",
-          "topics": [],
-          "owner": {
-            "login": "ISabbiI",
-            "html_url": "https://github.com/ISabbiI"
-          },
-          "clone_url": "https://github.com/ISabbiI/PoC-Apache-CVE-2021-41773-Infrastructure-LAB.git"
-        },
-        {
-          "id": 422466104,
-          "name": "CVE-2021-41773",
-          "full_name": "wolf1892/CVE-2021-41773",
-          "html_url": "https://github.com/wolf1892/CVE-2021-41773",
-          "description": "Setup vulnerable enviornment",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Dockerfile",
-          "updated_at": "2021-10-29T06:33:41Z",
-          "pushed_at": "2021-10-29T06:33:39Z",
-          "created_at": "2021-10-29T06:31:57Z",
-          "topics": [],
-          "owner": {
-            "login": "wolf1892",
-            "html_url": "https://github.com/wolf1892"
-          },
-          "clone_url": "https://github.com/wolf1892/CVE-2021-41773.git"
-        },
-        {
           "id": 1185304167,
           "name": "CVE-2021-41773---Apache-Path-Traversal---RCE",
           "full_name": "Areeba-Zehra-Jafri/CVE-2021-41773---Apache-Path-Traversal---RCE",
@@ -24130,44 +24164,6 @@
             "html_url": "https://github.com/Areeba-Zehra-Jafri"
           },
           "clone_url": "https://github.com/Areeba-Zehra-Jafri/CVE-2021-41773---Apache-Path-Traversal---RCE.git"
-        },
-        {
-          "id": 1152398776,
-          "name": "Serdyuk-DO-homework-CVE-2021-41773",
-          "full_name": "dserdyk3-arch/Serdyuk-DO-homework-CVE-2021-41773",
-          "html_url": "https://github.com/dserdyk3-arch/Serdyuk-DO-homework-CVE-2021-41773",
-          "description": "PoC скрипт для CVE-2021-41773 - Path Traversal в Apache 2.4.49",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-02-07T21:00:13Z",
-          "pushed_at": "2026-02-07T21:00:10Z",
-          "created_at": "2026-02-07T20:20:00Z",
-          "topics": [],
-          "owner": {
-            "login": "dserdyk3-arch",
-            "html_url": "https://github.com/dserdyk3-arch"
-          },
-          "clone_url": "https://github.com/dserdyk3-arch/Serdyuk-DO-homework-CVE-2021-41773.git"
-        },
-        {
-          "id": 421191229,
-          "name": "Scanner-CVE-2021-41773",
-          "full_name": "vida003/Scanner-CVE-2021-41773",
-          "html_url": "https://github.com/vida003/Scanner-CVE-2021-41773",
-          "description": "A automatic scanner to apache 2.4.49",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Go",
-          "updated_at": "2021-10-25T22:17:23Z",
-          "pushed_at": "2021-10-25T22:17:21Z",
-          "created_at": "2021-10-25T21:34:08Z",
-          "topics": [],
-          "owner": {
-            "login": "vida003",
-            "html_url": "https://github.com/vida003"
-          },
-          "clone_url": "https://github.com/vida003/Scanner-CVE-2021-41773.git"
         },
         {
           "id": 414082633,
@@ -24189,23 +24185,122 @@
           "clone_url": "https://github.com/TAI-REx/cve-2021-41773-nse.git"
         },
         {
-          "id": 1135952705,
-          "name": "cve-2021-41773-checker",
-          "full_name": "sudo0xksh/cve-2021-41773-checker",
-          "html_url": "https://github.com/sudo0xksh/cve-2021-41773-checker",
-          "description": "A simple Python proof-of-concept tool to check for Apache path traversal vulnerability (CVE-2021-41773).  Detects vulnerable server versions and verifies exploitation by probing sensitive files.  Built for learning CVE analysis, not mass exploitation.",
+          "id": 422466104,
+          "name": "CVE-2021-41773",
+          "full_name": "wolf1892/CVE-2021-41773",
+          "html_url": "https://github.com/wolf1892/CVE-2021-41773",
+          "description": "Setup vulnerable enviornment",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Dockerfile",
+          "updated_at": "2021-10-29T06:33:41Z",
+          "pushed_at": "2021-10-29T06:33:39Z",
+          "created_at": "2021-10-29T06:31:57Z",
+          "topics": [],
+          "owner": {
+            "login": "wolf1892",
+            "html_url": "https://github.com/wolf1892"
+          },
+          "clone_url": "https://github.com/wolf1892/CVE-2021-41773.git"
+        },
+        {
+          "id": 1185073246,
+          "name": "cve-reproduction-lab",
+          "full_name": "tsiddiquea/cve-reproduction-lab",
+          "html_url": "https://github.com/tsiddiquea/cve-reproduction-lab",
+          "description": "Cybersecurity lab demonstrating Apache CVE-2021-41773 path traversal vulnerability with vulnerable server simulation, scanner, and security reporting.",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-01-16T20:55:02Z",
-          "pushed_at": "2026-01-16T20:54:58Z",
-          "created_at": "2026-01-16T20:39:02Z",
+          "updated_at": "2026-03-18T08:01:52Z",
+          "pushed_at": "2026-03-18T08:01:48Z",
+          "created_at": "2026-03-18T08:00:42Z",
           "topics": [],
           "owner": {
-            "login": "sudo0xksh",
-            "html_url": "https://github.com/sudo0xksh"
+            "login": "tsiddiquea",
+            "html_url": "https://github.com/tsiddiquea"
           },
-          "clone_url": "https://github.com/sudo0xksh/cve-2021-41773-checker.git"
+          "clone_url": "https://github.com/tsiddiquea/cve-reproduction-lab.git"
+        },
+        {
+          "id": 1183222316,
+          "name": "apache-cve-2021-41773-lab",
+          "full_name": "zubairahm3d/apache-cve-2021-41773-lab",
+          "html_url": "https://github.com/zubairahm3d/apache-cve-2021-41773-lab",
+          "description": "Vulnerable Docker lab and exploit for Apache HTTP Server 2.4.49 path traversal vulnerability (CVE‑2021‑41773)",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Shell",
+          "updated_at": "2026-03-16T12:13:44Z",
+          "pushed_at": "2026-03-16T12:13:40Z",
+          "created_at": "2026-03-16T11:51:27Z",
+          "topics": [],
+          "owner": {
+            "login": "zubairahm3d",
+            "html_url": "https://github.com/zubairahm3d"
+          },
+          "clone_url": "https://github.com/zubairahm3d/apache-cve-2021-41773-lab.git"
+        },
+        {
+          "id": 421191229,
+          "name": "Scanner-CVE-2021-41773",
+          "full_name": "vida003/Scanner-CVE-2021-41773",
+          "html_url": "https://github.com/vida003/Scanner-CVE-2021-41773",
+          "description": "A automatic scanner to apache 2.4.49",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Go",
+          "updated_at": "2021-10-25T22:17:23Z",
+          "pushed_at": "2021-10-25T22:17:21Z",
+          "created_at": "2021-10-25T21:34:08Z",
+          "topics": [],
+          "owner": {
+            "login": "vida003",
+            "html_url": "https://github.com/vida003"
+          },
+          "clone_url": "https://github.com/vida003/Scanner-CVE-2021-41773.git"
+        },
+        {
+          "id": 1182612184,
+          "name": "exploitApache",
+          "full_name": "Nanxsec/exploitApache",
+          "html_url": "https://github.com/Nanxsec/exploitApache",
+          "description": "exploit para a CVE-2021-41773:Path Traversal cgi-bin",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-03-15T22:13:20Z",
+          "pushed_at": "2026-03-15T18:46:08Z",
+          "created_at": "2026-03-15T18:45:26Z",
+          "topics": [
+            "apache",
+            "exploit",
+            "exploitation"
+          ],
+          "owner": {
+            "login": "Nanxsec",
+            "html_url": "https://github.com/Nanxsec"
+          },
+          "clone_url": "https://github.com/Nanxsec/exploitApache.git"
+        },
+        {
+          "id": 427956449,
+          "name": "CVE-2021-41773",
+          "full_name": "xMohamed0/CVE-2021-41773",
+          "html_url": "https://github.com/xMohamed0/CVE-2021-41773",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Shell",
+          "updated_at": "2021-11-14T14:55:20Z",
+          "pushed_at": "2021-11-14T14:55:18Z",
+          "created_at": "2021-11-14T14:50:45Z",
+          "topics": [],
+          "owner": {
+            "login": "xMohamed0",
+            "html_url": "https://github.com/xMohamed0"
+          },
+          "clone_url": "https://github.com/xMohamed0/CVE-2021-41773.git"
         },
         {
           "id": 420528447,
@@ -24225,6 +24320,44 @@
             "html_url": "https://github.com/TheLastVvV"
           },
           "clone_url": "https://github.com/TheLastVvV/CVE-2021-41773.git"
+        },
+        {
+          "id": 427005450,
+          "name": "CVE-2021-41773",
+          "full_name": "pirenga/CVE-2021-41773",
+          "html_url": "https://github.com/pirenga/CVE-2021-41773",
+          "description": "Ce programme permet de détecter une faille RCE sur les serveurs Apache 2.4.49 et Apache 2.4.50",
+          "stargazers_count": 0,
+          "forks_count": 3,
+          "language": "",
+          "updated_at": "2024-08-12T20:18:00Z",
+          "pushed_at": "2021-11-11T00:48:37Z",
+          "created_at": "2021-11-11T13:10:05Z",
+          "topics": [],
+          "owner": {
+            "login": "pirenga",
+            "html_url": "https://github.com/pirenga"
+          },
+          "clone_url": "https://github.com/pirenga/CVE-2021-41773.git"
+        },
+        {
+          "id": 414907601,
+          "name": "CVE-2021-41773",
+          "full_name": "b1tsec/CVE-2021-41773",
+          "html_url": "https://github.com/b1tsec/CVE-2021-41773",
+          "description": "A Python script to check if an Apache web server is vulnerable to CVE-2021-41773",
+          "stargazers_count": 0,
+          "forks_count": 1,
+          "language": "Python",
+          "updated_at": "2024-08-12T20:17:06Z",
+          "pushed_at": "2021-10-08T12:15:50Z",
+          "created_at": "2021-10-08T08:32:51Z",
+          "topics": [],
+          "owner": {
+            "login": "b1tsec",
+            "html_url": "https://github.com/b1tsec"
+          },
+          "clone_url": "https://github.com/b1tsec/CVE-2021-41773.git"
         },
         {
           "id": 419369252,
@@ -24263,139 +24396,6 @@
             "html_url": "https://github.com/BabyTeam1024"
           },
           "clone_url": "https://github.com/BabyTeam1024/CVE-2021-41773.git"
-        },
-        {
-          "id": 414907601,
-          "name": "CVE-2021-41773",
-          "full_name": "b1tsec/CVE-2021-41773",
-          "html_url": "https://github.com/b1tsec/CVE-2021-41773",
-          "description": "A Python script to check if an Apache web server is vulnerable to CVE-2021-41773",
-          "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "Python",
-          "updated_at": "2024-08-12T20:17:06Z",
-          "pushed_at": "2021-10-08T12:15:50Z",
-          "created_at": "2021-10-08T08:32:51Z",
-          "topics": [],
-          "owner": {
-            "login": "b1tsec",
-            "html_url": "https://github.com/b1tsec"
-          },
-          "clone_url": "https://github.com/b1tsec/CVE-2021-41773.git"
-        },
-        {
-          "id": 427956449,
-          "name": "CVE-2021-41773",
-          "full_name": "xMohamed0/CVE-2021-41773",
-          "html_url": "https://github.com/xMohamed0/CVE-2021-41773",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2021-11-14T14:55:20Z",
-          "pushed_at": "2021-11-14T14:55:18Z",
-          "created_at": "2021-11-14T14:50:45Z",
-          "topics": [],
-          "owner": {
-            "login": "xMohamed0",
-            "html_url": "https://github.com/xMohamed0"
-          },
-          "clone_url": "https://github.com/xMohamed0/CVE-2021-41773.git"
-        },
-        {
-          "id": 1132588885,
-          "name": "CVE-2021-41773-Analysis",
-          "full_name": "ChanaPCN/CVE-2021-41773-Analysis",
-          "html_url": "https://github.com/ChanaPCN/CVE-2021-41773-Analysis",
-          "description": "Technical analysis and reproduction lab for the Apache HTTP Server 2.4.49 Path Traversal and RCE vulnerability.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-01-12T07:11:25Z",
-          "pushed_at": "2026-01-12T07:16:57Z",
-          "created_at": "2026-01-12T07:11:21Z",
-          "topics": [],
-          "owner": {
-            "login": "ChanaPCN",
-            "html_url": "https://github.com/ChanaPCN"
-          },
-          "clone_url": "https://github.com/ChanaPCN/CVE-2021-41773-Analysis.git"
-        },
-        {
-          "id": 427005450,
-          "name": "CVE-2021-41773",
-          "full_name": "pirenga/CVE-2021-41773",
-          "html_url": "https://github.com/pirenga/CVE-2021-41773",
-          "description": "Ce programme permet de détecter une faille RCE sur les serveurs Apache 2.4.49 et Apache 2.4.50",
-          "stargazers_count": 0,
-          "forks_count": 3,
-          "language": "",
-          "updated_at": "2024-08-12T20:18:00Z",
-          "pushed_at": "2021-11-11T00:48:37Z",
-          "created_at": "2021-11-11T13:10:05Z",
-          "topics": [],
-          "owner": {
-            "login": "pirenga",
-            "html_url": "https://github.com/pirenga"
-          },
-          "clone_url": "https://github.com/pirenga/CVE-2021-41773.git"
-        },
-        {
-          "id": 1185073246,
-          "name": "cve-reproduction-lab",
-          "full_name": "tsiddiquea/cve-reproduction-lab",
-          "html_url": "https://github.com/tsiddiquea/cve-reproduction-lab",
-          "description": "Cybersecurity lab demonstrating Apache CVE-2021-41773 path traversal vulnerability with vulnerable server simulation, scanner, and security reporting.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-03-18T08:01:52Z",
-          "pushed_at": "2026-03-18T08:01:48Z",
-          "created_at": "2026-03-18T08:00:42Z",
-          "topics": [],
-          "owner": {
-            "login": "tsiddiquea",
-            "html_url": "https://github.com/tsiddiquea"
-          },
-          "clone_url": "https://github.com/tsiddiquea/cve-reproduction-lab.git"
-        },
-        {
-          "id": 419148076,
-          "name": "CVE-2021-41784",
-          "full_name": "Jeromeyoung/CVE-2021-41784",
-          "html_url": "https://github.com/Jeromeyoung/CVE-2021-41784",
-          "description": "CVE-2021-41773 Docker lab",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2023-01-25T05:12:20Z",
-          "pushed_at": "2021-10-20T01:21:34Z",
-          "created_at": "2021-10-20T01:40:53Z",
-          "topics": [],
-          "owner": {
-            "login": "Jeromeyoung",
-            "html_url": "https://github.com/Jeromeyoung"
-          },
-          "clone_url": "https://github.com/Jeromeyoung/CVE-2021-41784.git"
-        },
-        {
-          "id": 1183222316,
-          "name": "apache-cve-2021-41773-lab",
-          "full_name": "zubairahm3d/apache-cve-2021-41773-lab",
-          "html_url": "https://github.com/zubairahm3d/apache-cve-2021-41773-lab",
-          "description": "Vulnerable Docker lab and exploit for Apache HTTP Server 2.4.49 path traversal vulnerability (CVE‑2021‑41773)",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2026-03-16T12:13:44Z",
-          "pushed_at": "2026-03-16T12:13:40Z",
-          "created_at": "2026-03-16T11:51:27Z",
-          "topics": [],
-          "owner": {
-            "login": "zubairahm3d",
-            "html_url": "https://github.com/zubairahm3d"
-          },
-          "clone_url": "https://github.com/zubairahm3d/apache-cve-2021-41773-lab.git"
         },
         {
           "id": 438514241,
