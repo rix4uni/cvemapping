@@ -16016,7 +16016,7 @@
           "html_url": "https://github.com/JohnHammond/CVE-2021-34527",
           "description": "",
           "stargazers_count": 308,
-          "forks_count": 75,
+          "forks_count": 76,
           "language": "PowerShell",
           "updated_at": "2026-03-18T20:44:22Z",
           "pushed_at": "2021-07-02T12:17:50Z",
@@ -20101,8 +20101,8 @@
           "stargazers_count": 2,
           "forks_count": 2,
           "language": "Python",
-          "updated_at": "2026-03-21T05:52:29Z",
-          "pushed_at": "2026-03-21T05:52:25Z",
+          "updated_at": "2026-03-21T08:45:20Z",
+          "pushed_at": "2026-03-21T08:45:17Z",
           "created_at": "2025-10-01T09:53:03Z",
           "topics": [
             "bash",
@@ -27347,10 +27347,10 @@
           "full_name": "fullhunt/log4j-scan",
           "html_url": "https://github.com/fullhunt/log4j-scan",
           "description": "A fully automated, accurate, and extensive scanner for finding log4j RCE CVE-2021-44228 ",
-          "stargazers_count": 3434,
+          "stargazers_count": 3435,
           "forks_count": 733,
           "language": "Python",
-          "updated_at": "2026-03-15T23:59:12Z",
+          "updated_at": "2026-03-21T07:22:49Z",
           "pushed_at": "2022-11-23T18:23:24Z",
           "created_at": "2021-12-13T03:57:50Z",
           "topics": [],
@@ -27390,10 +27390,10 @@
           "full_name": "christophetd/log4shell-vulnerable-app",
           "html_url": "https://github.com/christophetd/log4shell-vulnerable-app",
           "description": "Spring Boot web application vulnerable to Log4Shell (CVE-2021-44228).",
-          "stargazers_count": 1139,
+          "stargazers_count": 1140,
           "forks_count": 556,
           "language": "Java",
-          "updated_at": "2026-02-27T08:03:05Z",
+          "updated_at": "2026-03-21T08:41:03Z",
           "pushed_at": "2024-04-26T03:16:26Z",
           "created_at": "2021-12-10T12:38:20Z",
           "topics": [
@@ -28309,6 +28309,44 @@
           "clone_url": "https://github.com/CodeShield-Security/Log4JShell-Bytecode-Detector.git"
         },
         {
+          "id": 438615335,
+          "name": "Log4JHunt",
+          "full_name": "redhuntlabs/Log4JHunt",
+          "html_url": "https://github.com/redhuntlabs/Log4JHunt",
+          "description": "An automated, reliable scanner for the Log4Shell (CVE-2021-44228) vulnerability.",
+          "stargazers_count": 46,
+          "forks_count": 8,
+          "language": "Python",
+          "updated_at": "2026-03-21T09:37:08Z",
+          "pushed_at": "2025-01-22T10:50:08Z",
+          "created_at": "2021-12-15T12:07:05Z",
+          "topics": [],
+          "owner": {
+            "login": "redhuntlabs",
+            "html_url": "https://github.com/redhuntlabs"
+          },
+          "clone_url": "https://github.com/redhuntlabs/Log4JHunt.git"
+        },
+        {
+          "id": 437536404,
+          "name": "divd-2021-00038--log4j-scanner",
+          "full_name": "dtact/divd-2021-00038--log4j-scanner",
+          "html_url": "https://github.com/dtact/divd-2021-00038--log4j-scanner",
+          "description": "Scan systems and docker images for potential log4j vulnerabilities. Able to patch (remove JndiLookup.class) from layered archives. Will detect in-depth (layered archives jar/zip/tar/war and scans for vulnerable Log4J versions (CVE-2021-44228, CVE-2021-45046 and CVE-2021-45105). Binaries for Windows, Linux and OsX, but can be build on each platform supported by supported Golang.",
+          "stargazers_count": 45,
+          "forks_count": 9,
+          "language": "Go",
+          "updated_at": "2026-02-13T11:57:11Z",
+          "pushed_at": "2021-12-28T22:21:52Z",
+          "created_at": "2021-12-12T12:16:07Z",
+          "topics": [],
+          "owner": {
+            "login": "dtact",
+            "html_url": "https://github.com/dtact"
+          },
+          "clone_url": "https://github.com/dtact/divd-2021-00038--log4j-scanner.git"
+        },
+        {
           "id": 437439106,
           "name": "Log4Shell_CVE-2021-44228_related_attacks_IOCs",
           "full_name": "RedDrip7/Log4Shell_CVE-2021-44228_related_attacks_IOCs",
@@ -28353,44 +28391,6 @@
             "html_url": "https://github.com/1lann"
           },
           "clone_url": "https://github.com/1lann/log4shelldetect.git"
-        },
-        {
-          "id": 438615335,
-          "name": "Log4JHunt",
-          "full_name": "redhuntlabs/Log4JHunt",
-          "html_url": "https://github.com/redhuntlabs/Log4JHunt",
-          "description": "An automated, reliable scanner for the Log4Shell (CVE-2021-44228) vulnerability.",
-          "stargazers_count": 45,
-          "forks_count": 8,
-          "language": "Python",
-          "updated_at": "2025-11-05T21:21:34Z",
-          "pushed_at": "2025-01-22T10:50:08Z",
-          "created_at": "2021-12-15T12:07:05Z",
-          "topics": [],
-          "owner": {
-            "login": "redhuntlabs",
-            "html_url": "https://github.com/redhuntlabs"
-          },
-          "clone_url": "https://github.com/redhuntlabs/Log4JHunt.git"
-        },
-        {
-          "id": 437536404,
-          "name": "divd-2021-00038--log4j-scanner",
-          "full_name": "dtact/divd-2021-00038--log4j-scanner",
-          "html_url": "https://github.com/dtact/divd-2021-00038--log4j-scanner",
-          "description": "Scan systems and docker images for potential log4j vulnerabilities. Able to patch (remove JndiLookup.class) from layered archives. Will detect in-depth (layered archives jar/zip/tar/war and scans for vulnerable Log4J versions (CVE-2021-44228, CVE-2021-45046 and CVE-2021-45105). Binaries for Windows, Linux and OsX, but can be build on each platform supported by supported Golang.",
-          "stargazers_count": 45,
-          "forks_count": 9,
-          "language": "Go",
-          "updated_at": "2026-02-13T11:57:11Z",
-          "pushed_at": "2021-12-28T22:21:52Z",
-          "created_at": "2021-12-12T12:16:07Z",
-          "topics": [],
-          "owner": {
-            "login": "dtact",
-            "html_url": "https://github.com/dtact"
-          },
-          "clone_url": "https://github.com/dtact/divd-2021-00038--log4j-scanner.git"
         },
         {
           "id": 438409343,
