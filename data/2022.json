@@ -3570,6 +3570,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2022-1271",
+      "repositories": [
+        {
+          "id": 1192316658,
+          "name": "xz",
+          "full_name": "greydoubt/xz",
+          "html_url": "https://github.com/greydoubt/xz",
+          "description": "Security issues      CVE-2025-31115: Threaded .xz decoder frees memory too early     CVE-2024-47611: Argument injection on Windows     CVE-2024-3094: liblzma backdoor     CVE-2022-1271: xzgrep filename handling     CVE-2020-22916: A bogus CVE",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "C",
+          "updated_at": "2026-03-26T05:09:45Z",
+          "pushed_at": "2026-03-26T05:09:42Z",
+          "created_at": "2026-03-26T05:06:33Z",
+          "topics": [],
+          "owner": {
+            "login": "greydoubt",
+            "html_url": "https://github.com/greydoubt"
+          },
+          "clone_url": "https://github.com/greydoubt/xz.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2022-1292",
       "repositories": [
         {
@@ -7275,25 +7299,6 @@
             "html_url": "https://github.com/tess-ss"
           },
           "clone_url": "https://github.com/tess-ss/SAP-memory-pipes-desynchronization-vulnerability-MPI-CVE-2022-22536.git"
-        },
-        {
-          "id": 1087349977,
-          "name": "CVE-2022-22536_SAP_Request_Smuggling_Scanner",
-          "full_name": "abrewer251/CVE-2022-22536_SAP_Request_Smuggling_Scanner",
-          "html_url": "https://github.com/abrewer251/CVE-2022-22536_SAP_Request_Smuggling_Scanner",
-          "description": "Fast, socket-level scanner for detecting CVE-2022-22536 in SAP ICM or Web Dispatcher instances. Performs request smuggling tests with a crafted MPI-desync payload. Supports batch scanning IP:PORT targets via plain text files.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2025-10-31T19:06:09Z",
-          "pushed_at": "2025-10-31T19:06:06Z",
-          "created_at": "2025-10-31T19:02:02Z",
-          "topics": [],
-          "owner": {
-            "login": "abrewer251",
-            "html_url": "https://github.com/abrewer251"
-          },
-          "clone_url": "https://github.com/abrewer251/CVE-2022-22536_SAP_Request_Smuggling_Scanner.git"
         }
       ]
     },
@@ -18444,32 +18449,6 @@
       ]
     },
     {
-      "cve_id": "CVE-2022-27913",
-      "repositories": [
-        {
-          "id": 1088456540,
-          "name": "Joomla-CVE-Detector-CVE-2022-27913-",
-          "full_name": "cameron-coding-projects/Joomla-CVE-Detector-CVE-2022-27913-",
-          "html_url": "https://github.com/cameron-coding-projects/Joomla-CVE-Detector-CVE-2022-27913-",
-          "description": "Identify instances of Joomla that are affected by CVE-2022-27913.",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2025-11-03T01:31:45Z",
-          "pushed_at": "2025-11-03T01:31:31Z",
-          "created_at": "2025-11-03T01:31:18Z",
-          "topics": [
-            "cyber-security"
-          ],
-          "owner": {
-            "login": "cameron-coding-projects",
-            "html_url": "https://github.com/cameron-coding-projects"
-          },
-          "clone_url": "https://github.com/cameron-coding-projects/Joomla-CVE-Detector-CVE-2022-27913-.git"
-        }
-      ]
-    },
-    {
       "cve_id": "CVE-2022-27925",
       "repositories": [
         {
@@ -21956,6 +21935,25 @@
           "clone_url": "https://github.com/amitniz/follina_cve_2022-30190.git"
         },
         {
+          "id": 501598812,
+          "name": "Clickstudio-compromised-certificate",
+          "full_name": "b401/Clickstudio-compromised-certificate",
+          "html_url": "https://github.com/b401/Clickstudio-compromised-certificate",
+          "description": "Repository containing the compromised certificate seen in recent CVE-2022-30190 (Follina) attacks.",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2024-02-03T15:41:02Z",
+          "pushed_at": "2022-06-09T10:06:41Z",
+          "created_at": "2022-06-09T10:03:06Z",
+          "topics": [],
+          "owner": {
+            "login": "b401",
+            "html_url": "https://github.com/b401"
+          },
+          "clone_url": "https://github.com/b401/Clickstudio-compromised-certificate.git"
+        },
+        {
           "id": 499027429,
           "name": "CVE-2022-30190",
           "full_name": "ITMarcin2211/CVE-2022-30190",
@@ -21973,6 +21971,25 @@
             "html_url": "https://github.com/ITMarcin2211"
           },
           "clone_url": "https://github.com/ITMarcin2211/CVE-2022-30190.git"
+        },
+        {
+          "id": 499073115,
+          "name": "mitigate-folina",
+          "full_name": "derco0n/mitigate-folina",
+          "html_url": "https://github.com/derco0n/mitigate-folina",
+          "description": "Mitigates the \"Folina\"-ZeroDay (CVE-2022-30190)",
+          "stargazers_count": 1,
+          "forks_count": 1,
+          "language": "PowerShell",
+          "updated_at": "2022-06-09T12:18:29Z",
+          "pushed_at": "2022-06-08T05:57:31Z",
+          "created_at": "2022-06-02T09:30:13Z",
+          "topics": [],
+          "owner": {
+            "login": "derco0n",
+            "html_url": "https://github.com/derco0n"
+          },
+          "clone_url": "https://github.com/derco0n/mitigate-folina.git"
         },
         {
           "id": 500786615,
@@ -22013,23 +22030,23 @@
           "clone_url": "https://github.com/IamVSM/msdt-follina.git"
         },
         {
-          "id": 498379315,
-          "name": "cve-2022-30190",
-          "full_name": "rickhenderson/cve-2022-30190",
-          "html_url": "https://github.com/rickhenderson/cve-2022-30190",
-          "description": "Aka Follina = benign POC.",
+          "id": 1191723752,
+          "name": "Static-Malware-Analysis-Follina-CVE-2022-30190",
+          "full_name": "ImVihanga03/Static-Malware-Analysis-Follina-CVE-2022-30190",
+          "html_url": "https://github.com/ImVihanga03/Static-Malware-Analysis-Follina-CVE-2022-30190",
+          "description": "Static Malware Analysis of Follina (CVE-2022-30190) from Blue Team Labs Online",
           "stargazers_count": 1,
           "forks_count": 0,
-          "language": "HTML",
-          "updated_at": "2022-06-30T03:54:18Z",
-          "pushed_at": "2022-05-31T15:59:25Z",
-          "created_at": "2022-05-31T14:50:55Z",
+          "language": "",
+          "updated_at": "2026-03-26T06:10:12Z",
+          "pushed_at": "2026-03-26T06:04:43Z",
+          "created_at": "2026-03-25T14:23:35Z",
           "topics": [],
           "owner": {
-            "login": "rickhenderson",
-            "html_url": "https://github.com/rickhenderson"
+            "login": "ImVihanga03",
+            "html_url": "https://github.com/ImVihanga03"
           },
-          "clone_url": "https://github.com/rickhenderson/cve-2022-30190.git"
+          "clone_url": "https://github.com/ImVihanga03/Static-Malware-Analysis-Follina-CVE-2022-30190.git"
         },
         {
           "id": 498441804,
@@ -22051,42 +22068,23 @@
           "clone_url": "https://github.com/kdk2933/msdt-CVE-2022-30190.git"
         },
         {
-          "id": 501598812,
-          "name": "Clickstudio-compromised-certificate",
-          "full_name": "b401/Clickstudio-compromised-certificate",
-          "html_url": "https://github.com/b401/Clickstudio-compromised-certificate",
-          "description": "Repository containing the compromised certificate seen in recent CVE-2022-30190 (Follina) attacks.",
+          "id": 498379315,
+          "name": "cve-2022-30190",
+          "full_name": "rickhenderson/cve-2022-30190",
+          "html_url": "https://github.com/rickhenderson/cve-2022-30190",
+          "description": "Aka Follina = benign POC.",
           "stargazers_count": 1,
           "forks_count": 0,
-          "language": "",
-          "updated_at": "2024-02-03T15:41:02Z",
-          "pushed_at": "2022-06-09T10:06:41Z",
-          "created_at": "2022-06-09T10:03:06Z",
+          "language": "HTML",
+          "updated_at": "2022-06-30T03:54:18Z",
+          "pushed_at": "2022-05-31T15:59:25Z",
+          "created_at": "2022-05-31T14:50:55Z",
           "topics": [],
           "owner": {
-            "login": "b401",
-            "html_url": "https://github.com/b401"
+            "login": "rickhenderson",
+            "html_url": "https://github.com/rickhenderson"
           },
-          "clone_url": "https://github.com/b401/Clickstudio-compromised-certificate.git"
-        },
-        {
-          "id": 499073115,
-          "name": "mitigate-folina",
-          "full_name": "derco0n/mitigate-folina",
-          "html_url": "https://github.com/derco0n/mitigate-folina",
-          "description": "Mitigates the \"Folina\"-ZeroDay (CVE-2022-30190)",
-          "stargazers_count": 1,
-          "forks_count": 1,
-          "language": "PowerShell",
-          "updated_at": "2022-06-09T12:18:29Z",
-          "pushed_at": "2022-06-08T05:57:31Z",
-          "created_at": "2022-06-02T09:30:13Z",
-          "topics": [],
-          "owner": {
-            "login": "derco0n",
-            "html_url": "https://github.com/derco0n"
-          },
-          "clone_url": "https://github.com/derco0n/mitigate-folina.git"
+          "clone_url": "https://github.com/rickhenderson/cve-2022-30190.git"
         },
         {
           "id": 583330434,
@@ -22127,25 +22125,6 @@
           "clone_url": "https://github.com/michealadams30/Cve-2022-30190.git"
         },
         {
-          "id": 1138974572,
-          "name": "Malware-Analysis-Follina-CVE-2022-30190",
-          "full_name": "nimesh895/Malware-Analysis-Follina-CVE-2022-30190",
-          "html_url": "https://github.com/nimesh895/Malware-Analysis-Follina-CVE-2022-30190",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-01-21T11:15:47Z",
-          "pushed_at": "2026-01-21T11:15:43Z",
-          "created_at": "2026-01-21T11:02:19Z",
-          "topics": [],
-          "owner": {
-            "login": "nimesh895",
-            "html_url": "https://github.com/nimesh895"
-          },
-          "clone_url": "https://github.com/nimesh895/Malware-Analysis-Follina-CVE-2022-30190.git"
-        },
-        {
           "id": 499192008,
           "name": "ms-msdt-vulnerability-pdq-package",
           "full_name": "castlesmadeofsand/ms-msdt-vulnerability-pdq-package",
@@ -22165,23 +22144,23 @@
           "clone_url": "https://github.com/castlesmadeofsand/ms-msdt-vulnerability-pdq-package.git"
         },
         {
-          "id": 502326888,
-          "name": "CVE-2022-30190_Temporary_Fix",
-          "full_name": "JotaQC/CVE-2022-30190_Temporary_Fix",
-          "html_url": "https://github.com/JotaQC/CVE-2022-30190_Temporary_Fix",
-          "description": "These are two Python scripts compiled to easily and quickly apply temporary protection against the CVE-2022-30190 vulnerability (Follina)",
+          "id": 1138974572,
+          "name": "Malware-Analysis-Follina-CVE-2022-30190",
+          "full_name": "nimesh895/Malware-Analysis-Follina-CVE-2022-30190",
+          "html_url": "https://github.com/nimesh895/Malware-Analysis-Follina-CVE-2022-30190",
+          "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2022-06-15T10:21:00Z",
-          "pushed_at": "2022-06-26T17:27:34Z",
-          "created_at": "2022-06-11T11:16:56Z",
+          "updated_at": "2026-01-21T11:15:47Z",
+          "pushed_at": "2026-01-21T11:15:43Z",
+          "created_at": "2026-01-21T11:02:19Z",
           "topics": [],
           "owner": {
-            "login": "JotaQC",
-            "html_url": "https://github.com/JotaQC"
+            "login": "nimesh895",
+            "html_url": "https://github.com/nimesh895"
           },
-          "clone_url": "https://github.com/JotaQC/CVE-2022-30190_Temporary_Fix.git"
+          "clone_url": "https://github.com/nimesh895/Malware-Analysis-Follina-CVE-2022-30190.git"
         },
         {
           "id": 500934660,
@@ -22203,23 +22182,23 @@
           "clone_url": "https://github.com/abhirules27/Follina.git"
         },
         {
-          "id": 498408278,
-          "name": "CVE-2022-30190-ASR-Senintel-Process-Pickup",
-          "full_name": "DOV3Y/CVE-2022-30190-ASR-Senintel-Process-Pickup",
-          "html_url": "https://github.com/DOV3Y/CVE-2022-30190-ASR-Senintel-Process-Pickup",
-          "description": "Picking up processes that have triggered ASR related to CVE-2022-30190",
+          "id": 502600692,
+          "name": "CVE-2022-30190_Temporary_Fix_Source_Code",
+          "full_name": "JotaQC/CVE-2022-30190_Temporary_Fix_Source_Code",
+          "html_url": "https://github.com/JotaQC/CVE-2022-30190_Temporary_Fix_Source_Code",
+          "description": "These are the source codes of the Python scripts to apply the temporary protection against the CVE-2022-30190 vulnerability (Follina)",
           "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2022-05-31T16:11:14Z",
-          "pushed_at": "2022-05-31T16:15:51Z",
-          "created_at": "2022-05-31T16:11:14Z",
+          "forks_count": 1,
+          "language": "Python",
+          "updated_at": "2025-04-23T12:38:53Z",
+          "pushed_at": "2022-06-21T17:29:25Z",
+          "created_at": "2022-06-12T11:48:22Z",
           "topics": [],
           "owner": {
-            "login": "DOV3Y",
-            "html_url": "https://github.com/DOV3Y"
+            "login": "JotaQC",
+            "html_url": "https://github.com/JotaQC"
           },
-          "clone_url": "https://github.com/DOV3Y/CVE-2022-30190-ASR-Senintel-Process-Pickup.git"
+          "clone_url": "https://github.com/JotaQC/CVE-2022-30190_Temporary_Fix_Source_Code.git"
         },
         {
           "id": 498686009,
@@ -22241,61 +22220,23 @@
           "clone_url": "https://github.com/hscorpion/CVE-2022-30190.git"
         },
         {
-          "id": 502600692,
-          "name": "CVE-2022-30190_Temporary_Fix_Source_Code",
-          "full_name": "JotaQC/CVE-2022-30190_Temporary_Fix_Source_Code",
-          "html_url": "https://github.com/JotaQC/CVE-2022-30190_Temporary_Fix_Source_Code",
-          "description": "These are the source codes of the Python scripts to apply the temporary protection against the CVE-2022-30190 vulnerability (Follina)",
-          "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "Python",
-          "updated_at": "2025-04-23T12:38:53Z",
-          "pushed_at": "2022-06-21T17:29:25Z",
-          "created_at": "2022-06-12T11:48:22Z",
-          "topics": [],
-          "owner": {
-            "login": "JotaQC",
-            "html_url": "https://github.com/JotaQC"
-          },
-          "clone_url": "https://github.com/JotaQC/CVE-2022-30190_Temporary_Fix_Source_Code.git"
-        },
-        {
-          "id": 1191723752,
-          "name": "Static-Malware-Analysis-Follina-CVE-2022-30190",
-          "full_name": "ImVihanga03/Static-Malware-Analysis-Follina-CVE-2022-30190",
-          "html_url": "https://github.com/ImVihanga03/Static-Malware-Analysis-Follina-CVE-2022-30190",
-          "description": "Static Malware Analysis of Follina (CVE-2022-30190) from Blue Team Labs Online",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-03-25T16:57:13Z",
-          "pushed_at": "2026-03-25T16:57:09Z",
-          "created_at": "2026-03-25T14:23:35Z",
-          "topics": [],
-          "owner": {
-            "login": "ImVihanga03",
-            "html_url": "https://github.com/ImVihanga03"
-          },
-          "clone_url": "https://github.com/ImVihanga03/Static-Malware-Analysis-Follina-CVE-2022-30190.git"
-        },
-        {
-          "id": 500045782,
-          "name": "CVE-2022-30190-Zero-Click-Zero-Day-in-msdt",
-          "full_name": "tej7gandhi/CVE-2022-30190-Zero-Click-Zero-Day-in-msdt",
-          "html_url": "https://github.com/tej7gandhi/CVE-2022-30190-Zero-Click-Zero-Day-in-msdt",
+          "id": 498253545,
+          "name": "CVE-2022-30190",
+          "full_name": "2867a0/CVE-2022-30190",
+          "html_url": "https://github.com/2867a0/CVE-2022-30190",
           "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Batchfile",
-          "updated_at": "2022-06-05T08:54:30Z",
-          "pushed_at": "2022-06-05T08:54:27Z",
-          "created_at": "2022-06-05T08:52:11Z",
+          "language": "HTML",
+          "updated_at": "2022-06-01T23:05:08Z",
+          "pushed_at": "2022-05-31T08:43:28Z",
+          "created_at": "2022-05-31T08:39:09Z",
           "topics": [],
           "owner": {
-            "login": "tej7gandhi",
-            "html_url": "https://github.com/tej7gandhi"
+            "login": "2867a0",
+            "html_url": "https://github.com/2867a0"
           },
-          "clone_url": "https://github.com/tej7gandhi/CVE-2022-30190-Zero-Click-Zero-Day-in-msdt.git"
+          "clone_url": "https://github.com/2867a0/CVE-2022-30190.git"
         },
         {
           "id": 503944049,
@@ -22317,6 +22258,25 @@
           "clone_url": "https://github.com/Cerebrovinny/follina-CVE-2022-30190.git"
         },
         {
+          "id": 500045782,
+          "name": "CVE-2022-30190-Zero-Click-Zero-Day-in-msdt",
+          "full_name": "tej7gandhi/CVE-2022-30190-Zero-Click-Zero-Day-in-msdt",
+          "html_url": "https://github.com/tej7gandhi/CVE-2022-30190-Zero-Click-Zero-Day-in-msdt",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Batchfile",
+          "updated_at": "2022-06-05T08:54:30Z",
+          "pushed_at": "2022-06-05T08:54:27Z",
+          "created_at": "2022-06-05T08:52:11Z",
+          "topics": [],
+          "owner": {
+            "login": "tej7gandhi",
+            "html_url": "https://github.com/tej7gandhi"
+          },
+          "clone_url": "https://github.com/tej7gandhi/CVE-2022-30190-Zero-Click-Zero-Day-in-msdt.git"
+        },
+        {
           "id": 503694177,
           "name": "follina-CVE-2022-30190",
           "full_name": "notherealhazard/follina-CVE-2022-30190",
@@ -22334,6 +22294,25 @@
             "html_url": "https://github.com/notherealhazard"
           },
           "clone_url": "https://github.com/notherealhazard/follina-CVE-2022-30190.git"
+        },
+        {
+          "id": 498408278,
+          "name": "CVE-2022-30190-ASR-Senintel-Process-Pickup",
+          "full_name": "DOV3Y/CVE-2022-30190-ASR-Senintel-Process-Pickup",
+          "html_url": "https://github.com/DOV3Y/CVE-2022-30190-ASR-Senintel-Process-Pickup",
+          "description": "Picking up processes that have triggered ASR related to CVE-2022-30190",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2022-05-31T16:11:14Z",
+          "pushed_at": "2022-05-31T16:15:51Z",
+          "created_at": "2022-05-31T16:11:14Z",
+          "topics": [],
+          "owner": {
+            "login": "DOV3Y",
+            "html_url": "https://github.com/DOV3Y"
+          },
+          "clone_url": "https://github.com/DOV3Y/CVE-2022-30190-ASR-Senintel-Process-Pickup.git"
         },
         {
           "id": 499410553,
@@ -22412,42 +22391,42 @@
           "clone_url": "https://github.com/bcarrulo/Lab-CVE-2022-30190.git"
         },
         {
-          "id": 498457928,
-          "name": "MSDT_CVE-2022-30190-follina-",
-          "full_name": "aymankhder/MSDT_CVE-2022-30190-follina-",
-          "html_url": "https://github.com/aymankhder/MSDT_CVE-2022-30190-follina-",
+          "id": 501283166,
+          "name": "Follina-Workaround-CVE-2022-30190",
+          "full_name": "sentrium-security/Follina-Workaround-CVE-2022-30190",
+          "html_url": "https://github.com/sentrium-security/Follina-Workaround-CVE-2022-30190",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 1,
+          "language": "PowerShell",
+          "updated_at": "2022-06-08T14:29:37Z",
+          "pushed_at": "2022-07-14T16:18:28Z",
+          "created_at": "2022-06-08T14:20:50Z",
+          "topics": [],
+          "owner": {
+            "login": "sentrium-security",
+            "html_url": "https://github.com/sentrium-security"
+          },
+          "clone_url": "https://github.com/sentrium-security/Follina-Workaround-CVE-2022-30190.git"
+        },
+        {
+          "id": 503292025,
+          "name": "Sigma-Rule-for-CVE-2022-30190",
+          "full_name": "ernestak/Sigma-Rule-for-CVE-2022-30190",
+          "html_url": "https://github.com/ernestak/Sigma-Rule-for-CVE-2022-30190",
           "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2022-05-31T18:45:34Z",
-          "pushed_at": "2022-05-31T18:51:30Z",
-          "created_at": "2022-05-31T18:45:34Z",
+          "updated_at": "2022-06-14T09:27:37Z",
+          "pushed_at": "2022-06-14T09:27:50Z",
+          "created_at": "2022-06-14T09:27:37Z",
           "topics": [],
           "owner": {
-            "login": "aymankhder",
-            "html_url": "https://github.com/aymankhder"
+            "login": "ernestak",
+            "html_url": "https://github.com/ernestak"
           },
-          "clone_url": "https://github.com/aymankhder/MSDT_CVE-2022-30190-follina-.git"
-        },
-        {
-          "id": 498253545,
-          "name": "CVE-2022-30190",
-          "full_name": "2867a0/CVE-2022-30190",
-          "html_url": "https://github.com/2867a0/CVE-2022-30190",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "HTML",
-          "updated_at": "2022-06-01T23:05:08Z",
-          "pushed_at": "2022-05-31T08:43:28Z",
-          "created_at": "2022-05-31T08:39:09Z",
-          "topics": [],
-          "owner": {
-            "login": "2867a0",
-            "html_url": "https://github.com/2867a0"
-          },
-          "clone_url": "https://github.com/2867a0/CVE-2022-30190.git"
+          "clone_url": "https://github.com/ernestak/Sigma-Rule-for-CVE-2022-30190.git"
         },
         {
           "id": 498924006,
@@ -22469,23 +22448,23 @@
           "clone_url": "https://github.com/ImproveCybersecurityJaro/2022_PoC-MSDT-Follina-CVE-2022-30190.git"
         },
         {
-          "id": 503292025,
-          "name": "Sigma-Rule-for-CVE-2022-30190",
-          "full_name": "ernestak/Sigma-Rule-for-CVE-2022-30190",
-          "html_url": "https://github.com/ernestak/Sigma-Rule-for-CVE-2022-30190",
+          "id": 503273195,
+          "name": "CVE-2022-30190",
+          "full_name": "ernestak/CVE-2022-30190",
+          "html_url": "https://github.com/ernestak/CVE-2022-30190",
           "description": "",
           "stargazers_count": 0,
-          "forks_count": 0,
+          "forks_count": 1,
           "language": "",
-          "updated_at": "2022-06-14T09:27:37Z",
-          "pushed_at": "2022-06-14T09:27:50Z",
-          "created_at": "2022-06-14T09:27:37Z",
+          "updated_at": "2024-08-12T20:24:08Z",
+          "pushed_at": "2022-06-14T08:44:15Z",
+          "created_at": "2022-06-14T08:29:40Z",
           "topics": [],
           "owner": {
             "login": "ernestak",
             "html_url": "https://github.com/ernestak"
           },
-          "clone_url": "https://github.com/ernestak/Sigma-Rule-for-CVE-2022-30190.git"
+          "clone_url": "https://github.com/ernestak/CVE-2022-30190.git"
         },
         {
           "id": 498904586,
@@ -22545,25 +22524,6 @@
           "clone_url": "https://github.com/mitespsoc/CVE-2022-30190-POC.git"
         },
         {
-          "id": 503273195,
-          "name": "CVE-2022-30190",
-          "full_name": "ernestak/CVE-2022-30190",
-          "html_url": "https://github.com/ernestak/CVE-2022-30190",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "",
-          "updated_at": "2024-08-12T20:24:08Z",
-          "pushed_at": "2022-06-14T08:44:15Z",
-          "created_at": "2022-06-14T08:29:40Z",
-          "topics": [],
-          "owner": {
-            "login": "ernestak",
-            "html_url": "https://github.com/ernestak"
-          },
-          "clone_url": "https://github.com/ernestak/CVE-2022-30190.git"
-        },
-        {
           "id": 503121339,
           "name": "CVE-2022-30190",
           "full_name": "XxToxicScriptxX/CVE-2022-30190",
@@ -22602,6 +22562,25 @@
           "clone_url": "https://github.com/nanaao/PicusSecurity4.Week.Repo.git"
         },
         {
+          "id": 498457928,
+          "name": "MSDT_CVE-2022-30190-follina-",
+          "full_name": "aymankhder/MSDT_CVE-2022-30190-follina-",
+          "html_url": "https://github.com/aymankhder/MSDT_CVE-2022-30190-follina-",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2022-05-31T18:45:34Z",
+          "pushed_at": "2022-05-31T18:51:30Z",
+          "created_at": "2022-05-31T18:45:34Z",
+          "topics": [],
+          "owner": {
+            "login": "aymankhder",
+            "html_url": "https://github.com/aymankhder"
+          },
+          "clone_url": "https://github.com/aymankhder/MSDT_CVE-2022-30190-follina-.git"
+        },
+        {
           "id": 546628423,
           "name": "Follina-attack-CVE-2022-30190-",
           "full_name": "Imeneallouche/Follina-attack-CVE-2022-30190-",
@@ -22619,44 +22598,6 @@
             "html_url": "https://github.com/Imeneallouche"
           },
           "clone_url": "https://github.com/Imeneallouche/Follina-attack-CVE-2022-30190-.git"
-        },
-        {
-          "id": 501283166,
-          "name": "Follina-Workaround-CVE-2022-30190",
-          "full_name": "sentrium-security/Follina-Workaround-CVE-2022-30190",
-          "html_url": "https://github.com/sentrium-security/Follina-Workaround-CVE-2022-30190",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "PowerShell",
-          "updated_at": "2022-06-08T14:29:37Z",
-          "pushed_at": "2022-07-14T16:18:28Z",
-          "created_at": "2022-06-08T14:20:50Z",
-          "topics": [],
-          "owner": {
-            "login": "sentrium-security",
-            "html_url": "https://github.com/sentrium-security"
-          },
-          "clone_url": "https://github.com/sentrium-security/Follina-Workaround-CVE-2022-30190.git"
-        },
-        {
-          "id": 564441217,
-          "name": "CVE-Smackdown",
-          "full_name": "mattjmillner/CVE-Smackdown",
-          "html_url": "https://github.com/mattjmillner/CVE-Smackdown",
-          "description": "Implementation of CVE-2022-30190 in C",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2022-11-10T18:15:57Z",
-          "pushed_at": "2022-11-10T18:59:57Z",
-          "created_at": "2022-11-10T18:15:57Z",
-          "topics": [],
-          "owner": {
-            "login": "mattjmillner",
-            "html_url": "https://github.com/mattjmillner"
-          },
-          "clone_url": "https://github.com/mattjmillner/CVE-Smackdown.git"
         },
         {
           "id": 502110629,
@@ -22678,6 +22619,25 @@
           "clone_url": "https://github.com/Abdibimantara/CVE-2022-30190-Analysis-With-LetsDefends-Lab.git"
         },
         {
+          "id": 564441217,
+          "name": "CVE-Smackdown",
+          "full_name": "mattjmillner/CVE-Smackdown",
+          "html_url": "https://github.com/mattjmillner/CVE-Smackdown",
+          "description": "Implementation of CVE-2022-30190 in C",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2022-11-10T18:15:57Z",
+          "pushed_at": "2022-11-10T18:59:57Z",
+          "created_at": "2022-11-10T18:15:57Z",
+          "topics": [],
+          "owner": {
+            "login": "mattjmillner",
+            "html_url": "https://github.com/mattjmillner"
+          },
+          "clone_url": "https://github.com/mattjmillner/CVE-Smackdown.git"
+        },
+        {
           "id": 501848298,
           "name": "CVE-2022-30190",
           "full_name": "cyberdashy/CVE-2022-30190",
@@ -22695,6 +22655,25 @@
             "html_url": "https://github.com/cyberdashy"
           },
           "clone_url": "https://github.com/cyberdashy/CVE-2022-30190.git"
+        },
+        {
+          "id": 502326888,
+          "name": "CVE-2022-30190_Temporary_Fix",
+          "full_name": "JotaQC/CVE-2022-30190_Temporary_Fix",
+          "html_url": "https://github.com/JotaQC/CVE-2022-30190_Temporary_Fix",
+          "description": "These are two Python scripts compiled to easily and quickly apply temporary protection against the CVE-2022-30190 vulnerability (Follina)",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2022-06-15T10:21:00Z",
+          "pushed_at": "2022-06-26T17:27:34Z",
+          "created_at": "2022-06-11T11:16:56Z",
+          "topics": [],
+          "owner": {
+            "login": "JotaQC",
+            "html_url": "https://github.com/JotaQC"
+          },
+          "clone_url": "https://github.com/JotaQC/CVE-2022-30190_Temporary_Fix.git"
         },
         {
           "id": 577118252,
@@ -27427,6 +27406,25 @@
       "cve_id": "CVE-2022-36883",
       "repositories": [
         {
+          "id": 1192348885,
+          "name": "CVE-2022-36883",
+          "full_name": "superjimmygou/CVE-2022-36883",
+          "html_url": "https://github.com/superjimmygou/CVE-2022-36883",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-03-26T06:00:46Z",
+          "pushed_at": "2026-03-26T06:00:43Z",
+          "created_at": "2026-03-26T05:59:51Z",
+          "topics": [],
+          "owner": {
+            "login": "superjimmygou",
+            "html_url": "https://github.com/superjimmygou"
+          },
+          "clone_url": "https://github.com/superjimmygou/CVE-2022-36883.git"
+        },
+        {
           "id": 1191785046,
           "name": "CVE-2022-36883-Poc",
           "full_name": "qoo7972365/CVE-2022-36883-Poc",
@@ -27995,10 +27993,10 @@
           "full_name": "MaherAzzouzi/CVE-2022-37706-LPE-exploit",
           "html_url": "https://github.com/MaherAzzouzi/CVE-2022-37706-LPE-exploit",
           "description": "A reliable exploit + write-up to elevate privileges to root. (Tested on Ubuntu 22.04)",
-          "stargazers_count": 324,
+          "stargazers_count": 325,
           "forks_count": 43,
           "language": "Shell",
-          "updated_at": "2026-03-15T08:06:52Z",
+          "updated_at": "2026-03-26T05:00:36Z",
           "pushed_at": "2022-09-19T19:41:34Z",
           "created_at": "2022-09-12T19:22:44Z",
           "topics": [],
