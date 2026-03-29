@@ -473,8 +473,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "C++",
-          "updated_at": "2026-03-29T05:05:40Z",
-          "pushed_at": "2026-03-29T05:05:37Z",
+          "updated_at": "2026-03-29T08:26:47Z",
+          "pushed_at": "2026-03-29T08:26:44Z",
           "created_at": "2024-04-20T04:18:24Z",
           "topics": [
             "automation",
@@ -555,6 +555,54 @@
       ]
     },
     {
+      "cve_id": "CVE-2026-0847",
+      "repositories": [
+        {
+          "id": 1195096200,
+          "name": "CVE-2026-0847",
+          "full_name": "HyperPS/CVE-2026-0847",
+          "html_url": "https://github.com/HyperPS/CVE-2026-0847",
+          "description": "A vulnerability in NLTK versions up to and including 3.9.2 allows arbitrary file read via path traversal in multiple CorpusReader classes, including WordListCorpusReader, TaggedCorpusReader, and BracketParseCorpusReader.",
+          "stargazers_count": 0,
+          "forks_count": 1,
+          "language": "",
+          "updated_at": "2026-03-29T08:13:49Z",
+          "pushed_at": "2026-03-29T08:13:46Z",
+          "created_at": "2026-03-29T08:00:18Z",
+          "topics": [],
+          "owner": {
+            "login": "HyperPS",
+            "html_url": "https://github.com/HyperPS"
+          },
+          "clone_url": "https://github.com/HyperPS/CVE-2026-0847.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2026-0848",
+      "repositories": [
+        {
+          "id": 1195105956,
+          "name": "CVE-2026-0848",
+          "full_name": "HyperPS/CVE-2026-0848",
+          "html_url": "https://github.com/HyperPS/CVE-2026-0848",
+          "description": "nltk.tokenize.StanfordSegmenter dynamically loads external Java .jar files without verification or sandboxing. If an attacker can supply or replace the JAR (e.g., a poisoned model download, MITM package swap, or dependency poisoning), arbitrary Java bytecode executes at import time.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-03-29T08:30:02Z",
+          "pushed_at": "2026-03-29T08:29:59Z",
+          "created_at": "2026-03-29T08:20:30Z",
+          "topics": [],
+          "owner": {
+            "login": "HyperPS",
+            "html_url": "https://github.com/HyperPS"
+          },
+          "clone_url": "https://github.com/HyperPS/CVE-2026-0848.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2026-0866",
       "repositories": [
         {
@@ -586,6 +634,30 @@
             "html_url": "https://github.com/mdshoaibuddinchanda"
           },
           "clone_url": "https://github.com/mdshoaibuddinchanda/zombieguard.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2026-0897",
+      "repositories": [
+        {
+          "id": 1195118577,
+          "name": "CVE-2026-0897",
+          "full_name": "HyperPS/CVE-2026-0897",
+          "html_url": "https://github.com/HyperPS/CVE-2026-0897",
+          "description": "Allocation of Resources Without Limits or Throttling in the HDF5 weight loading component in Google Keras 3.0.0 through 3.13.0 on all platforms allows a remote attacker to cause a Denial of Service (DoS) through memory exhaustion and a crash of the Python interpreter via a crafted .keras ",
+          "stargazers_count": 0,
+          "forks_count": 1,
+          "language": "",
+          "updated_at": "2026-03-29T09:27:44Z",
+          "pushed_at": "2026-03-29T09:27:41Z",
+          "created_at": "2026-03-29T08:44:34Z",
+          "topics": [],
+          "owner": {
+            "login": "HyperPS",
+            "html_url": "https://github.com/HyperPS"
+          },
+          "clone_url": "https://github.com/HyperPS/CVE-2026-0897.git"
         }
       ]
     },
@@ -2294,8 +2366,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-03-29T05:05:05Z",
-          "pushed_at": "2026-03-29T05:05:02Z",
+          "updated_at": "2026-03-29T08:26:11Z",
+          "pushed_at": "2026-03-29T08:26:08Z",
           "created_at": "2024-09-22T12:19:06Z",
           "topics": [
             "agent",
@@ -2351,8 +2423,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-03-29T05:03:56Z",
-          "pushed_at": "2026-03-29T05:03:53Z",
+          "updated_at": "2026-03-29T08:25:08Z",
+          "pushed_at": "2026-03-29T08:25:04Z",
           "created_at": "2026-02-26T05:21:28Z",
           "topics": [
             "agent",
@@ -5107,8 +5179,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-03-29T04:55:36Z",
-          "pushed_at": "2026-03-29T04:55:32Z",
+          "updated_at": "2026-03-29T08:16:34Z",
+          "pushed_at": "2026-03-29T08:16:31Z",
           "created_at": "2025-04-16T07:20:12Z",
           "topics": [
             "cve-2026-24061",
@@ -5753,8 +5825,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-03-29T04:55:36Z",
-          "pushed_at": "2026-03-29T04:55:32Z",
+          "updated_at": "2026-03-29T08:16:34Z",
+          "pushed_at": "2026-03-29T08:16:31Z",
           "created_at": "2025-04-16T07:20:12Z",
           "topics": [
             "cve-2026-24061",
@@ -6352,8 +6424,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-03-29T04:52:09Z",
-          "pushed_at": "2026-03-29T04:52:06Z",
+          "updated_at": "2026-03-29T08:13:11Z",
+          "pushed_at": "2026-03-29T08:13:07Z",
           "created_at": "2026-02-03T19:46:10Z",
           "topics": [
             "agent",
@@ -6609,8 +6681,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "C#",
-          "updated_at": "2026-03-29T03:01:11Z",
-          "pushed_at": "2026-03-29T03:01:08Z",
+          "updated_at": "2026-03-29T08:45:44Z",
+          "pushed_at": "2026-03-29T08:45:41Z",
           "created_at": "2026-03-26T04:38:27Z",
           "topics": [
             "assembly",
@@ -6714,8 +6786,8 @@
           "stargazers_count": 1,
           "forks_count": 1,
           "language": "",
-          "updated_at": "2026-03-29T05:07:30Z",
-          "pushed_at": "2026-03-29T05:07:27Z",
+          "updated_at": "2026-03-29T08:29:02Z",
+          "pushed_at": "2026-03-29T08:28:58Z",
           "created_at": "2026-03-03T14:19:18Z",
           "topics": [
             "agent",
@@ -7012,8 +7084,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-03-29T05:12:25Z",
-          "pushed_at": "2026-03-29T05:12:21Z",
+          "updated_at": "2026-03-29T08:33:52Z",
+          "pushed_at": "2026-03-29T08:33:49Z",
           "created_at": "2026-03-10T14:40:04Z",
           "topics": [
             "colab",
@@ -7885,8 +7957,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-03-29T05:11:06Z",
-          "pushed_at": "2026-03-29T05:11:03Z",
+          "updated_at": "2026-03-29T08:32:36Z",
+          "pushed_at": "2026-03-29T08:32:33Z",
           "created_at": "2026-03-07T20:23:08Z",
           "topics": [
             "cve",
@@ -10491,10 +10563,10 @@
           "html_url": "https://github.com/Tharooon/CVE-2026-29971",
           "description": "An attacker can execute arbitrary JavaScript in the victim's browser, potentially leading to session hijacking or privilege escalation.",
           "stargazers_count": 0,
-          "forks_count": 0,
+          "forks_count": 1,
           "language": "",
-          "updated_at": "2026-03-26T22:58:21Z",
-          "pushed_at": "2026-03-26T22:58:17Z",
+          "updated_at": "2026-03-29T07:59:07Z",
+          "pushed_at": "2026-03-29T07:59:04Z",
           "created_at": "2026-03-26T22:56:31Z",
           "topics": [],
           "owner": {
@@ -10966,8 +11038,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "JavaScript",
-          "updated_at": "2026-03-29T03:02:08Z",
-          "pushed_at": "2026-03-29T03:02:05Z",
+          "updated_at": "2026-03-29T08:46:55Z",
+          "pushed_at": "2026-03-29T08:46:51Z",
           "created_at": "2026-03-28T20:49:46Z",
           "topics": [
             "cve",
@@ -11095,10 +11167,10 @@
           "full_name": "hargabyte/cve-scanner",
           "html_url": "https://github.com/hargabyte/cve-scanner",
           "description": "OpenClaw CVE scanner. Tracks known vulnerabilities (CVE-2026-32013, CVE-2026-32015, etc.). Zero network calls, 100% local. Version checking, upgrade recommendations.",
-          "stargazers_count": 0,
+          "stargazers_count": 1,
           "forks_count": 0,
           "language": "Shell",
-          "updated_at": "2026-03-29T01:07:01Z",
+          "updated_at": "2026-03-29T08:54:47Z",
           "pushed_at": "2026-03-29T01:06:58Z",
           "created_at": "2026-03-29T01:06:48Z",
           "topics": [],
@@ -11119,10 +11191,10 @@
           "full_name": "hargabyte/cve-scanner",
           "html_url": "https://github.com/hargabyte/cve-scanner",
           "description": "OpenClaw CVE scanner. Tracks known vulnerabilities (CVE-2026-32013, CVE-2026-32015, etc.). Zero network calls, 100% local. Version checking, upgrade recommendations.",
-          "stargazers_count": 0,
+          "stargazers_count": 1,
           "forks_count": 0,
           "language": "Shell",
-          "updated_at": "2026-03-29T01:07:01Z",
+          "updated_at": "2026-03-29T08:54:47Z",
           "pushed_at": "2026-03-29T01:06:58Z",
           "created_at": "2026-03-29T01:06:48Z",
           "topics": [],
@@ -12693,8 +12765,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-03-28T18:23:05Z",
-          "pushed_at": "2026-03-28T18:23:02Z",
+          "updated_at": "2026-03-29T06:50:29Z",
+          "pushed_at": "2026-03-29T06:50:26Z",
           "created_at": "2026-01-24T07:55:13Z",
           "topics": [],
           "owner": {
