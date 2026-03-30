@@ -449,8 +449,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "C++",
-          "updated_at": "2026-03-30T19:39:42Z",
-          "pushed_at": "2026-03-30T19:39:38Z",
+          "updated_at": "2026-03-30T22:05:22Z",
+          "pushed_at": "2026-03-30T22:05:18Z",
           "created_at": "2024-04-20T04:18:24Z",
           "topics": [
             "automation",
@@ -1212,35 +1212,6 @@
       "cve_id": "CVE-2026-1529",
       "repositories": [
         {
-          "id": 1154563956,
-          "name": "CVE-2026-1529-PoC-keycloak-unauthorized-registration-via-improper-invitation-token-validation",
-          "full_name": "ninjazan420/CVE-2026-1529-PoC-keycloak-unauthorized-registration-via-improper-invitation-token-validation",
-          "html_url": "https://github.com/ninjazan420/CVE-2026-1529-PoC-keycloak-unauthorized-registration-via-improper-invitation-token-validation",
-          "description": "CVE-2026-1529 (PoC) is a critical vulnerability in Keycloak that allows unauthorized organization registration through improper invitation token validation. This exploit tool demonstrates the vulnerability by manipulating JWT tokens to register users in unauthorized organizations.",
-          "stargazers_count": 4,
-          "forks_count": 1,
-          "language": "Python",
-          "updated_at": "2026-03-30T12:04:27Z",
-          "pushed_at": "2026-02-10T14:35:09Z",
-          "created_at": "2026-02-10T14:31:22Z",
-          "topics": [
-            "concept",
-            "cve",
-            "cve-2026-1529",
-            "keycloak",
-            "keycloak-poc",
-            "of",
-            "poc",
-            "proof",
-            "proofofconcept"
-          ],
-          "owner": {
-            "login": "ninjazan420",
-            "html_url": "https://github.com/ninjazan420"
-          },
-          "clone_url": "https://github.com/ninjazan420/CVE-2026-1529-PoC-keycloak-unauthorized-registration-via-improper-invitation-token-validation.git"
-        },
-        {
           "id": 1155119337,
           "name": "CVE-2026-1529",
           "full_name": "0x240x23elu/CVE-2026-1529",
@@ -1258,6 +1229,25 @@
             "html_url": "https://github.com/0x240x23elu"
           },
           "clone_url": "https://github.com/0x240x23elu/CVE-2026-1529.git"
+        },
+        {
+          "id": 1156718921,
+          "name": "CVE-2026-1529-PoC-keycloak-unauthorized-registration-via-improper-invitation-token-validation",
+          "full_name": "ackemed/CVE-2026-1529-PoC-keycloak-unauthorized-registration-via-improper-invitation-token-validation",
+          "html_url": "https://github.com/ackemed/CVE-2026-1529-PoC-keycloak-unauthorized-registration-via-improper-invitation-token-validation",
+          "description": "CVE-2026-1529 (PoC) is a critical vulnerability in Keycloak that allows unauthorized organization registration through improper invitation token validation. This exploit tool demonstrates the vulnerability by manipulating JWT tokens to register users in unauthorized organizations.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-02-13T01:07:15Z",
+          "pushed_at": "2026-02-10T14:35:09Z",
+          "created_at": "2026-02-13T01:07:15Z",
+          "topics": [],
+          "owner": {
+            "login": "ackemed",
+            "html_url": "https://github.com/ackemed"
+          },
+          "clone_url": "https://github.com/ackemed/CVE-2026-1529-PoC-keycloak-unauthorized-registration-via-improper-invitation-token-validation.git"
         }
       ]
     },
@@ -1354,38 +1344,6 @@
             "html_url": "https://github.com/Vimash-Dilsara"
           },
           "clone_url": "https://github.com/Vimash-Dilsara/-CVE-2026-1657.git"
-        }
-      ]
-    },
-    {
-      "cve_id": "CVE-2026-1729",
-      "repositories": [
-        {
-          "id": 1156248769,
-          "name": "CVE-2026-1729-PoC-AdForest-WordPress-Authentication-Bypass",
-          "full_name": "ninjazan420/CVE-2026-1729-PoC-AdForest-WordPress-Authentication-Bypass",
-          "html_url": "https://github.com/ninjazan420/CVE-2026-1729-PoC-AdForest-WordPress-Authentication-Bypass",
-          "description": "The AdForest theme for WordPress is vulnerable to authentication bypass in all versions including, 6.0.12. This is due to the plugin not properly verifying a user's identity prior to authenticating them through the 'sb_login_user_with_otp_fun' function. This makes it possible for unauthenticated attackers to log in, including admin",
-          "stargazers_count": 2,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-03-23T09:55:38Z",
-          "pushed_at": "2026-02-12T12:43:07Z",
-          "created_at": "2026-02-12T12:40:22Z",
-          "topics": [
-            "adforest",
-            "admin",
-            "auth",
-            "exploit",
-            "poc",
-            "proof-of-concept",
-            "wordpress"
-          ],
-          "owner": {
-            "login": "ninjazan420",
-            "html_url": "https://github.com/ninjazan420"
-          },
-          "clone_url": "https://github.com/ninjazan420/CVE-2026-1729-PoC-AdForest-WordPress-Authentication-Bypass.git"
         }
       ]
     },
@@ -1960,6 +1918,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2026-20698",
+      "repositories": [
+        {
+          "id": 1196614265,
+          "name": "CVE-2026-20698-PF_ROUTE-Heap-Overflow",
+          "full_name": "Somisomair/CVE-2026-20698-PF_ROUTE-Heap-Overflow",
+          "html_url": "https://github.com/Somisomair/CVE-2026-20698-PF_ROUTE-Heap-Overflow",
+          "description": "CVE-2026-20698: XNU kernel heap overflow via PF_ROUTE RTA_GENMASK. PoC and analysis. Independently discovered.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "C",
+          "updated_at": "2026-03-30T21:46:41Z",
+          "pushed_at": "2026-03-30T21:46:38Z",
+          "created_at": "2026-03-30T21:44:45Z",
+          "topics": [],
+          "owner": {
+            "login": "Somisomair",
+            "html_url": "https://github.com/Somisomair"
+          },
+          "clone_url": "https://github.com/Somisomair/CVE-2026-20698-PF_ROUTE-Heap-Overflow.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2026-20805",
       "repositories": [
         {
@@ -2342,8 +2324,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-03-30T19:39:24Z",
-          "pushed_at": "2026-03-30T19:39:21Z",
+          "updated_at": "2026-03-30T22:04:33Z",
+          "pushed_at": "2026-03-30T22:04:30Z",
           "created_at": "2024-09-22T12:19:06Z",
           "topics": [
             "agent",
@@ -2399,8 +2381,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-03-30T19:37:54Z",
-          "pushed_at": "2026-03-30T19:37:51Z",
+          "updated_at": "2026-03-30T22:03:57Z",
+          "pushed_at": "2026-03-30T22:03:54Z",
           "created_at": "2026-02-26T05:21:28Z",
           "topics": [
             "agent",
@@ -5260,8 +5242,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-03-30T19:28:58Z",
-          "pushed_at": "2026-03-30T19:28:55Z",
+          "updated_at": "2026-03-30T21:55:37Z",
+          "pushed_at": "2026-03-30T21:55:34Z",
           "created_at": "2025-04-16T07:20:12Z",
           "topics": [
             "cve-2026-24061",
@@ -5906,8 +5888,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-03-30T19:28:58Z",
-          "pushed_at": "2026-03-30T19:28:55Z",
+          "updated_at": "2026-03-30T21:55:37Z",
+          "pushed_at": "2026-03-30T21:55:34Z",
           "created_at": "2025-04-16T07:20:12Z",
           "topics": [
             "cve-2026-24061",
@@ -6505,8 +6487,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-03-30T19:25:10Z",
-          "pushed_at": "2026-03-30T19:25:06Z",
+          "updated_at": "2026-03-30T21:52:41Z",
+          "pushed_at": "2026-03-30T21:52:38Z",
           "created_at": "2026-02-03T19:46:10Z",
           "topics": [
             "agent",
@@ -6762,8 +6744,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "C#",
-          "updated_at": "2026-03-30T20:00:17Z",
-          "pushed_at": "2026-03-30T20:00:12Z",
+          "updated_at": "2026-03-30T22:23:41Z",
+          "pushed_at": "2026-03-30T22:23:38Z",
           "created_at": "2026-03-26T04:38:27Z",
           "topics": [
             "assembly",
@@ -6867,8 +6849,8 @@
           "stargazers_count": 1,
           "forks_count": 1,
           "language": "",
-          "updated_at": "2026-03-30T19:41:41Z",
-          "pushed_at": "2026-03-30T19:41:37Z",
+          "updated_at": "2026-03-30T22:07:05Z",
+          "pushed_at": "2026-03-30T22:07:02Z",
           "created_at": "2026-03-03T14:19:18Z",
           "topics": [
             "agent",
@@ -7165,8 +7147,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-03-30T19:47:18Z",
-          "pushed_at": "2026-03-30T19:47:14Z",
+          "updated_at": "2026-03-30T22:12:10Z",
+          "pushed_at": "2026-03-30T22:12:06Z",
           "created_at": "2026-03-10T14:40:04Z",
           "topics": [
             "colab",
@@ -8038,8 +8020,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-03-30T19:45:58Z",
-          "pushed_at": "2026-03-30T19:45:54Z",
+          "updated_at": "2026-03-30T22:10:57Z",
+          "pushed_at": "2026-03-30T22:10:54Z",
           "created_at": "2026-03-07T20:23:08Z",
           "topics": [
             "cve",
@@ -11215,8 +11197,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "JavaScript",
-          "updated_at": "2026-03-30T20:01:31Z",
-          "pushed_at": "2026-03-30T20:01:28Z",
+          "updated_at": "2026-03-30T22:24:51Z",
+          "pushed_at": "2026-03-30T22:24:47Z",
           "created_at": "2026-03-28T20:49:46Z",
           "topics": [
             "cve",
