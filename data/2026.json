@@ -449,8 +449,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "C++",
-          "updated_at": "2026-03-30T22:05:22Z",
-          "pushed_at": "2026-03-30T22:05:18Z",
+          "updated_at": "2026-03-31T01:22:58Z",
+          "pushed_at": "2026-03-31T01:22:54Z",
           "created_at": "2024-04-20T04:18:24Z",
           "topics": [
             "automation",
@@ -2324,8 +2324,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-03-30T22:04:33Z",
-          "pushed_at": "2026-03-30T22:04:30Z",
+          "updated_at": "2026-03-31T01:21:58Z",
+          "pushed_at": "2026-03-31T01:21:55Z",
           "created_at": "2024-09-22T12:19:06Z",
           "topics": [
             "agent",
@@ -2381,8 +2381,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-03-30T22:03:57Z",
-          "pushed_at": "2026-03-30T22:03:54Z",
+          "updated_at": "2026-03-31T01:21:01Z",
+          "pushed_at": "2026-03-31T01:20:57Z",
           "created_at": "2026-02-26T05:21:28Z",
           "topics": [
             "agent",
@@ -3984,6 +3984,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2026-22777",
+      "repositories": [
+        {
+          "id": 1196731811,
+          "name": "CVE-2026-22777",
+          "full_name": "wcnmwcis/CVE-2026-22777",
+          "html_url": "https://github.com/wcnmwcis/CVE-2026-22777",
+          "description": "ComfyUI-Manager Remote Code Execution exploit. Covers CVE-2025-67303 (config file exposure) and CVE-2026-22777 (CRLF injection). Includes Python script, Nuclei template, and evil git server.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-03-31T02:04:35Z",
+          "pushed_at": "2026-03-31T01:42:13Z",
+          "created_at": "2026-03-31T01:42:12Z",
+          "topics": [],
+          "owner": {
+            "login": "wcnmwcis",
+            "html_url": "https://github.com/wcnmwcis"
+          },
+          "clone_url": "https://github.com/wcnmwcis/CVE-2026-22777.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2026-22785",
       "repositories": [
         {
@@ -4570,6 +4594,25 @@
           "clone_url": "https://github.com/ctzisme/CVE-2026-23744.git"
         },
         {
+          "id": 1191253199,
+          "name": "htb-kobold-writeup",
+          "full_name": "yassertioursi/htb-kobold-writeup",
+          "html_url": "https://github.com/yassertioursi/htb-kobold-writeup",
+          "description": "Hack The Box — Kobold writeup. Exploiting CVE-2026-23744 (MCPJam Inspector unauthenticated RCE) to gain initial access as ben, then escaping via Docker group misconfiguration to root.",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-03-31T01:37:40Z",
+          "pushed_at": "2026-03-25T04:12:48Z",
+          "created_at": "2026-03-25T04:06:05Z",
+          "topics": [],
+          "owner": {
+            "login": "yassertioursi",
+            "html_url": "https://github.com/yassertioursi"
+          },
+          "clone_url": "https://github.com/yassertioursi/htb-kobold-writeup.git"
+        },
+        {
           "id": 1189864734,
           "name": "CVE-2026-23744",
           "full_name": "FrenzisRed/CVE-2026-23744",
@@ -4606,25 +4649,6 @@
             "html_url": "https://github.com/0xg00se"
           },
           "clone_url": "https://github.com/0xg00se/CVE-2026-23744-script.git"
-        },
-        {
-          "id": 1193793261,
-          "name": "CVE-2026-23744-POC",
-          "full_name": "fcjaviergarcia/CVE-2026-23744-POC",
-          "html_url": "https://github.com/fcjaviergarcia/CVE-2026-23744-POC",
-          "description": "Proof of Concept (PoC) exploit for CVE-2026-23744, a vulnerability affecting MCPJam Inspector that allows remote command execution (RCE) through exposed internal debugging endpoints",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-03-27T15:35:49Z",
-          "pushed_at": "2026-03-27T15:35:45Z",
-          "created_at": "2026-03-27T15:31:08Z",
-          "topics": [],
-          "owner": {
-            "login": "fcjaviergarcia",
-            "html_url": "https://github.com/fcjaviergarcia"
-          },
-          "clone_url": "https://github.com/fcjaviergarcia/CVE-2026-23744-POC.git"
         },
         {
           "id": 1193724607,
@@ -4703,25 +4727,6 @@
           "clone_url": "https://github.com/z4yd3/PoC-CVE-2026-23744.git"
         },
         {
-          "id": 1191253199,
-          "name": "htb-kobold-writeup",
-          "full_name": "yassertioursi/htb-kobold-writeup",
-          "html_url": "https://github.com/yassertioursi/htb-kobold-writeup",
-          "description": "Hack The Box — Kobold writeup. Exploiting CVE-2026-23744 (MCPJam Inspector unauthenticated RCE) to gain initial access as ben, then escaping via Docker group misconfiguration to root.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-03-25T04:12:51Z",
-          "pushed_at": "2026-03-25T04:12:48Z",
-          "created_at": "2026-03-25T04:06:05Z",
-          "topics": [],
-          "owner": {
-            "login": "yassertioursi",
-            "html_url": "https://github.com/yassertioursi"
-          },
-          "clone_url": "https://github.com/yassertioursi/htb-kobold-writeup.git"
-        },
-        {
           "id": 1194480523,
           "name": "CVE-2026-23744-POC",
           "full_name": "d3vn0mi/CVE-2026-23744-POC",
@@ -4739,6 +4744,25 @@
             "html_url": "https://github.com/d3vn0mi"
           },
           "clone_url": "https://github.com/d3vn0mi/CVE-2026-23744-POC.git"
+        },
+        {
+          "id": 1195404718,
+          "name": "CVE-2026-23744",
+          "full_name": "CyLock11/CVE-2026-23744",
+          "html_url": "https://github.com/CyLock11/CVE-2026-23744",
+          "description": "CVE-2026-23744 - MCP Connect RCE via Unauthenticated Command Injection",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-03-29T16:34:12Z",
+          "pushed_at": "2026-03-29T16:31:26Z",
+          "created_at": "2026-03-29T16:26:01Z",
+          "topics": [],
+          "owner": {
+            "login": "CyLock11",
+            "html_url": "https://github.com/CyLock11"
+          },
+          "clone_url": "https://github.com/CyLock11/CVE-2026-23744.git"
         },
         {
           "id": 1189010725,
@@ -4817,23 +4841,23 @@
           "clone_url": "https://github.com/rootdirective-sec/CVE-2026-23744-Lab.git"
         },
         {
-          "id": 1195404718,
-          "name": "CVE-2026-23744",
-          "full_name": "CyLock11/CVE-2026-23744",
-          "html_url": "https://github.com/CyLock11/CVE-2026-23744",
-          "description": "CVE-2026-23744 - MCP Connect RCE via Unauthenticated Command Injection",
+          "id": 1193793261,
+          "name": "CVE-2026-23744-POC",
+          "full_name": "fcjaviergarcia/CVE-2026-23744-POC",
+          "html_url": "https://github.com/fcjaviergarcia/CVE-2026-23744-POC",
+          "description": "Proof of Concept (PoC) exploit for CVE-2026-23744, a vulnerability affecting MCPJam Inspector that allows remote command execution (RCE) through exposed internal debugging endpoints",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-03-29T16:34:12Z",
-          "pushed_at": "2026-03-29T16:31:26Z",
-          "created_at": "2026-03-29T16:26:01Z",
+          "updated_at": "2026-03-27T15:35:49Z",
+          "pushed_at": "2026-03-27T15:35:45Z",
+          "created_at": "2026-03-27T15:31:08Z",
           "topics": [],
           "owner": {
-            "login": "CyLock11",
-            "html_url": "https://github.com/CyLock11"
+            "login": "fcjaviergarcia",
+            "html_url": "https://github.com/fcjaviergarcia"
           },
-          "clone_url": "https://github.com/CyLock11/CVE-2026-23744.git"
+          "clone_url": "https://github.com/fcjaviergarcia/CVE-2026-23744-POC.git"
         }
       ]
     },
@@ -5242,8 +5266,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-03-30T21:55:37Z",
-          "pushed_at": "2026-03-30T21:55:34Z",
+          "updated_at": "2026-03-31T01:12:11Z",
+          "pushed_at": "2026-03-31T01:12:08Z",
           "created_at": "2025-04-16T07:20:12Z",
           "topics": [
             "cve-2026-24061",
@@ -5294,10 +5318,10 @@
           "full_name": "SafeBreach-Labs/CVE-2026-24061",
           "html_url": "https://github.com/SafeBreach-Labs/CVE-2026-24061",
           "description": "Exploitation of CVE-2026-24061",
-          "stargazers_count": 200,
+          "stargazers_count": 201,
           "forks_count": 46,
           "language": "Python",
-          "updated_at": "2026-03-24T09:03:39Z",
+          "updated_at": "2026-03-30T23:41:42Z",
           "pushed_at": "2026-01-22T19:37:20Z",
           "created_at": "2026-01-22T18:30:17Z",
           "topics": [],
@@ -5408,6 +5432,25 @@
           "clone_url": "https://github.com/h3athen/CVE-2026-24061.git"
         },
         {
+          "id": 1139869296,
+          "name": "CVE-2026-24061",
+          "full_name": "Chocapikk/CVE-2026-24061",
+          "html_url": "https://github.com/Chocapikk/CVE-2026-24061",
+          "description": "",
+          "stargazers_count": 7,
+          "forks_count": 3,
+          "language": "Go",
+          "updated_at": "2026-03-30T23:42:24Z",
+          "pushed_at": "2026-01-22T15:15:10Z",
+          "created_at": "2026-01-22T14:24:19Z",
+          "topics": [],
+          "owner": {
+            "login": "Chocapikk",
+            "html_url": "https://github.com/Chocapikk"
+          },
+          "clone_url": "https://github.com/Chocapikk/CVE-2026-24061.git"
+        },
+        {
           "id": 1139735177,
           "name": "CVE-2026-24061",
           "full_name": "TryA9ain/CVE-2026-24061",
@@ -5425,25 +5468,6 @@
             "html_url": "https://github.com/TryA9ain"
           },
           "clone_url": "https://github.com/TryA9ain/CVE-2026-24061.git"
-        },
-        {
-          "id": 1139869296,
-          "name": "CVE-2026-24061",
-          "full_name": "Chocapikk/CVE-2026-24061",
-          "html_url": "https://github.com/Chocapikk/CVE-2026-24061",
-          "description": "",
-          "stargazers_count": 6,
-          "forks_count": 3,
-          "language": "Go",
-          "updated_at": "2026-03-29T16:38:52Z",
-          "pushed_at": "2026-01-22T15:15:10Z",
-          "created_at": "2026-01-22T14:24:19Z",
-          "topics": [],
-          "owner": {
-            "login": "Chocapikk",
-            "html_url": "https://github.com/Chocapikk"
-          },
-          "clone_url": "https://github.com/Chocapikk/CVE-2026-24061.git"
         },
         {
           "id": 1140733735,
@@ -5888,8 +5912,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-03-30T21:55:37Z",
-          "pushed_at": "2026-03-30T21:55:34Z",
+          "updated_at": "2026-03-31T01:12:11Z",
+          "pushed_at": "2026-03-31T01:12:08Z",
           "created_at": "2025-04-16T07:20:12Z",
           "topics": [
             "cve-2026-24061",
@@ -6487,8 +6511,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-03-30T21:52:41Z",
-          "pushed_at": "2026-03-30T21:52:38Z",
+          "updated_at": "2026-03-31T01:08:39Z",
+          "pushed_at": "2026-03-31T01:08:36Z",
           "created_at": "2026-02-03T19:46:10Z",
           "topics": [
             "agent",
@@ -6744,8 +6768,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "C#",
-          "updated_at": "2026-03-30T22:23:41Z",
-          "pushed_at": "2026-03-30T22:23:38Z",
+          "updated_at": "2026-03-31T01:43:27Z",
+          "pushed_at": "2026-03-31T01:43:24Z",
           "created_at": "2026-03-26T04:38:27Z",
           "topics": [
             "assembly",
@@ -6849,8 +6873,8 @@
           "stargazers_count": 1,
           "forks_count": 1,
           "language": "",
-          "updated_at": "2026-03-30T22:07:05Z",
-          "pushed_at": "2026-03-30T22:07:02Z",
+          "updated_at": "2026-03-31T01:24:41Z",
+          "pushed_at": "2026-03-31T01:24:38Z",
           "created_at": "2026-03-03T14:19:18Z",
           "topics": [
             "agent",
@@ -7147,8 +7171,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-03-30T22:12:10Z",
-          "pushed_at": "2026-03-30T22:12:06Z",
+          "updated_at": "2026-03-31T01:30:17Z",
+          "pushed_at": "2026-03-31T01:30:13Z",
           "created_at": "2026-03-10T14:40:04Z",
           "topics": [
             "colab",
@@ -8020,8 +8044,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-03-30T22:10:57Z",
-          "pushed_at": "2026-03-30T22:10:54Z",
+          "updated_at": "2026-03-31T01:29:00Z",
+          "pushed_at": "2026-03-31T01:28:57Z",
           "created_at": "2026-03-07T20:23:08Z",
           "topics": [
             "cve",
@@ -10543,10 +10567,10 @@
           "full_name": "Stalin-143/CVE-2026-29905",
           "html_url": "https://github.com/Stalin-143/CVE-2026-29905",
           "description": "CVE-2026-29905",
-          "stargazers_count": 12,
+          "stargazers_count": 17,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-03-30T18:01:21Z",
+          "updated_at": "2026-03-31T02:21:09Z",
           "pushed_at": "2026-03-28T13:07:42Z",
           "created_at": "2026-03-26T16:15:08Z",
           "topics": [],
@@ -10709,6 +10733,30 @@
             "html_url": "https://github.com/tharunchidurala-cyber"
           },
           "clone_url": "https://github.com/tharunchidurala-cyber/BACkupCVE-2026-29971.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2026-30",
+      "repositories": [
+        {
+          "id": 1196656918,
+          "name": "ICS-MoxieManager-FileUpload-PoC",
+          "full_name": "itsismarcos/ICS-MoxieManager-FileUpload-PoC",
+          "html_url": "https://github.com/itsismarcos/ICS-MoxieManager-FileUpload-PoC",
+          "description": "CVE-2026-30-03 9.8 (Crítico) Possível RCE Jenzabar ICS + MoxieManager",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-03-31T00:25:28Z",
+          "pushed_at": "2026-03-31T00:22:12Z",
+          "created_at": "2026-03-30T23:06:10Z",
+          "topics": [],
+          "owner": {
+            "login": "itsismarcos",
+            "html_url": "https://github.com/itsismarcos"
+          },
+          "clone_url": "https://github.com/itsismarcos/ICS-MoxieManager-FileUpload-PoC.git"
         }
       ]
     },
@@ -11197,8 +11245,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "JavaScript",
-          "updated_at": "2026-03-30T22:24:51Z",
-          "pushed_at": "2026-03-30T22:24:47Z",
+          "updated_at": "2026-03-31T01:43:57Z",
+          "pushed_at": "2026-03-31T01:43:55Z",
           "created_at": "2026-03-28T20:49:46Z",
           "topics": [
             "cve",
@@ -11858,6 +11906,25 @@
             "html_url": "https://github.com/omer-efe-curkus"
           },
           "clone_url": "https://github.com/omer-efe-curkus/CVE-2026-33017-Langflow-RCE-PoC.git"
+        },
+        {
+          "id": 1196746927,
+          "name": "CVE-2026-33017",
+          "full_name": "EQSTLab/CVE-2026-33017",
+          "html_url": "https://github.com/EQSTLab/CVE-2026-33017",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-03-31T02:11:59Z",
+          "pushed_at": "2026-03-31T02:11:56Z",
+          "created_at": "2026-03-31T02:10:40Z",
+          "topics": [],
+          "owner": {
+            "login": "EQSTLab",
+            "html_url": "https://github.com/EQSTLab"
+          },
+          "clone_url": "https://github.com/EQSTLab/CVE-2026-33017.git"
         },
         {
           "id": 1188140782,
@@ -12997,8 +13064,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-03-30T18:43:05Z",
-          "pushed_at": "2026-03-30T18:43:01Z",
+          "updated_at": "2026-03-31T01:13:29Z",
+          "pushed_at": "2026-03-31T01:13:25Z",
           "created_at": "2026-01-24T07:55:13Z",
           "topics": [],
           "owner": {
