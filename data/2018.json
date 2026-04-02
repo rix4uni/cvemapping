@@ -164,10 +164,10 @@
           "full_name": "yassineaboukir/CVE-2018-0296",
           "html_url": "https://github.com/yassineaboukir/CVE-2018-0296",
           "description": "Script to test for Cisco ASA path traversal vulnerability (CVE-2018-0296) and extract system information.",
-          "stargazers_count": 205,
+          "stargazers_count": 204,
           "forks_count": 65,
           "language": "Python",
-          "updated_at": "2026-04-01T15:51:46Z",
+          "updated_at": "2026-04-02T21:45:34Z",
           "pushed_at": "2024-02-15T22:16:16Z",
           "created_at": "2018-06-21T15:44:29Z",
           "topics": [],
@@ -3171,6 +3171,25 @@
       "cve_id": "CVE-2018-13379",
       "repositories": [
         {
+          "id": 1150854170,
+          "name": "CVE-2018-13379",
+          "full_name": "Zierax/CVE-2018-13379",
+          "html_url": "https://github.com/Zierax/CVE-2018-13379",
+          "description": "CVE-2018-13379 fortiOS vulnerability POC",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-03-20T00:11:01Z",
+          "pushed_at": "2026-02-15T04:42:14Z",
+          "created_at": "2026-02-05T19:12:17Z",
+          "topics": [],
+          "owner": {
+            "login": "Zierax",
+            "html_url": "https://github.com/Zierax"
+          },
+          "clone_url": "https://github.com/Zierax/CVE-2018-13379.git"
+        },
+        {
           "id": 1193475376,
           "name": "conti-ransomware-writeup",
           "full_name": "Justjeff211/conti-ransomware-writeup",
@@ -3946,50 +3965,6 @@
           "clone_url": "https://github.com/JoeBlackSecurity/SSHUsernameBruter-SSHUB.git"
         },
         {
-          "id": 1196701934,
-          "name": "cve-2018-15473",
-          "full_name": "wtbacon/cve-2018-15473",
-          "html_url": "https://github.com/wtbacon/cve-2018-15473",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-03-31T12:22:55Z",
-          "pushed_at": "2026-03-31T12:22:52Z",
-          "created_at": "2026-03-31T00:42:32Z",
-          "topics": [],
-          "owner": {
-            "login": "wtbacon",
-            "html_url": "https://github.com/wtbacon"
-          },
-          "clone_url": "https://github.com/wtbacon/cve-2018-15473.git"
-        },
-        {
-          "id": 152145946,
-          "name": "CVE-2018-15473_exploit",
-          "full_name": "pyperanger/CVE-2018-15473_exploit",
-          "html_url": "https://github.com/pyperanger/CVE-2018-15473_exploit",
-          "description": "OpenSSH  \u003c 7.7 User Enumeration CVE-2018-15473 Exploit",
-          "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "Perl",
-          "updated_at": "2022-11-09T18:01:17Z",
-          "pushed_at": "2021-04-06T19:17:05Z",
-          "created_at": "2018-10-08T20:59:04Z",
-          "topics": [
-            "cve-2018-15473",
-            "openssh",
-            "perl",
-            "user-enumeration",
-            "vulnerability"
-          ],
-          "owner": {
-            "login": "pyperanger",
-            "html_url": "https://github.com/pyperanger"
-          },
-          "clone_url": "https://github.com/pyperanger/CVE-2018-15473_exploit.git"
-        },
-        {
           "id": 1192009811,
           "name": "Threaded-CVE-2018-15473",
           "full_name": "K3rn3l-32/Threaded-CVE-2018-15473",
@@ -4026,6 +4001,69 @@
             "html_url": "https://github.com/Remnant-DB"
           },
           "clone_url": "https://github.com/Remnant-DB/CVE-2018-15473.git"
+        },
+        {
+          "id": 152145946,
+          "name": "CVE-2018-15473_exploit",
+          "full_name": "pyperanger/CVE-2018-15473_exploit",
+          "html_url": "https://github.com/pyperanger/CVE-2018-15473_exploit",
+          "description": "OpenSSH  \u003c 7.7 User Enumeration CVE-2018-15473 Exploit",
+          "stargazers_count": 0,
+          "forks_count": 1,
+          "language": "Perl",
+          "updated_at": "2022-11-09T18:01:17Z",
+          "pushed_at": "2021-04-06T19:17:05Z",
+          "created_at": "2018-10-08T20:59:04Z",
+          "topics": [
+            "cve-2018-15473",
+            "openssh",
+            "perl",
+            "user-enumeration",
+            "vulnerability"
+          ],
+          "owner": {
+            "login": "pyperanger",
+            "html_url": "https://github.com/pyperanger"
+          },
+          "clone_url": "https://github.com/pyperanger/CVE-2018-15473_exploit.git"
+        },
+        {
+          "id": 1199928155,
+          "name": "SSH-Enum-CVE-2018-15473",
+          "full_name": "kikechans/SSH-Enum-CVE-2018-15473",
+          "html_url": "https://github.com/kikechans/SSH-Enum-CVE-2018-15473",
+          "description": "\"Exploit optimizado para la enumeración de usuarios en OpenSSH \u003c 7.7 (CVE-2018-15473). Reescrito para Python 3 con sistema de calibración anti-falsos positivos y ejecución multihilo en tiempo real.\"",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-04-02T21:25:35Z",
+          "pushed_at": "2026-04-02T21:25:32Z",
+          "created_at": "2026-04-02T21:21:38Z",
+          "topics": [],
+          "owner": {
+            "login": "kikechans",
+            "html_url": "https://github.com/kikechans"
+          },
+          "clone_url": "https://github.com/kikechans/SSH-Enum-CVE-2018-15473.git"
+        },
+        {
+          "id": 1196701934,
+          "name": "cve-2018-15473",
+          "full_name": "wtbacon/cve-2018-15473",
+          "html_url": "https://github.com/wtbacon/cve-2018-15473",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-03-31T12:22:55Z",
+          "pushed_at": "2026-03-31T12:22:52Z",
+          "created_at": "2026-03-31T00:42:32Z",
+          "topics": [],
+          "owner": {
+            "login": "wtbacon",
+            "html_url": "https://github.com/wtbacon"
+          },
+          "clone_url": "https://github.com/wtbacon/cve-2018-15473.git"
         }
       ]
     },
@@ -5976,28 +6014,6 @@
             "html_url": "https://github.com/labeebSabbah"
           },
           "clone_url": "https://github.com/labeebSabbah/CVE-2018-25031.git"
-        },
-        {
-          "id": 1060896534,
-          "name": "swagger-ui",
-          "full_name": "RelicHunt3r/swagger-ui",
-          "html_url": "https://github.com/RelicHunt3r/swagger-ui",
-          "description": "Swagger UI (CVE-2018-25031) POC, [HTMLi, XSS, SSRF].",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2025-10-27T16:30:27Z",
-          "pushed_at": "2025-10-27T16:28:43Z",
-          "created_at": "2025-09-20T20:17:10Z",
-          "topics": [
-            "swagger",
-            "swagger-ui"
-          ],
-          "owner": {
-            "login": "RelicHunt3r",
-            "html_url": "https://github.com/RelicHunt3r"
-          },
-          "clone_url": "https://github.com/RelicHunt3r/swagger-ui.git"
         }
       ]
     },
@@ -8008,10 +8024,10 @@
           "full_name": "Pa55w0rd/check_icmp_dos",
           "html_url": "https://github.com/Pa55w0rd/check_icmp_dos",
           "description": "iOS 12 / OS X Remote Kernel Heap Overflow (CVE-2018-4407) POC",
-          "stargazers_count": 60,
+          "stargazers_count": 61,
           "forks_count": 11,
           "language": "Python",
-          "updated_at": "2026-01-10T14:57:25Z",
+          "updated_at": "2026-04-02T17:13:02Z",
           "pushed_at": "2018-11-01T08:53:23Z",
           "created_at": "2018-11-01T08:21:59Z",
           "topics": [],
@@ -8710,6 +8726,25 @@
           "clone_url": "https://github.com/reswitched/rcm-modchips.git"
         },
         {
+          "id": 1087879734,
+          "name": "nxboot",
+          "full_name": "nikameru/nxboot",
+          "html_url": "https://github.com/nikameru/nxboot",
+          "description": "Payload injection tool for Nintendo Switch consoles vulnerable to CVE-2018-6242 (\"Fusée Gelée\")",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Zig",
+          "updated_at": "2026-04-02T21:14:57Z",
+          "pushed_at": "2026-04-02T21:14:51Z",
+          "created_at": "2025-11-01T20:42:47Z",
+          "topics": [],
+          "owner": {
+            "login": "nikameru",
+            "html_url": "https://github.com/nikameru"
+          },
+          "clone_url": "https://github.com/nikameru/nxboot.git"
+        },
+        {
           "id": 1120470026,
           "name": "NXLoader",
           "full_name": "Resi-le/NXLoader",
@@ -8727,25 +8762,6 @@
             "html_url": "https://github.com/Resi-le"
           },
           "clone_url": "https://github.com/Resi-le/NXLoader.git"
-        },
-        {
-          "id": 1087879734,
-          "name": "nxboot",
-          "full_name": "nikameru/nxboot",
-          "html_url": "https://github.com/nikameru/nxboot",
-          "description": "Payload injection tool for Nintendo Switch consoles vulnerable to CVE-2018-6242 (\"Fusée Gelée\")",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Zig",
-          "updated_at": "2026-01-10T12:26:03Z",
-          "pushed_at": "2025-11-02T11:23:28Z",
-          "created_at": "2025-11-01T20:42:47Z",
-          "topics": [],
-          "owner": {
-            "login": "nikameru",
-            "html_url": "https://github.com/nikameru"
-          },
-          "clone_url": "https://github.com/nikameru/nxboot.git"
         }
       ]
     },
@@ -12019,25 +12035,6 @@
             "html_url": "https://github.com/Cyb0r9"
           },
           "clone_url": "https://github.com/Cyb0r9/DVR-Exploiter.git"
-        },
-        {
-          "id": 1085101237,
-          "name": "CVE-2018-9995-rs",
-          "full_name": "0xDamian/CVE-2018-9995-rs",
-          "html_url": "https://github.com/0xDamian/CVE-2018-9995-rs",
-          "description": "POC of CVE-2018-9995 written in Rust.",
-          "stargazers_count": 96,
-          "forks_count": 14,
-          "language": "Rust",
-          "updated_at": "2026-04-01T04:40:04Z",
-          "pushed_at": "2025-11-01T22:39:23Z",
-          "created_at": "2025-10-28T15:30:18Z",
-          "topics": [],
-          "owner": {
-            "login": "0xDamian",
-            "html_url": "https://github.com/0xDamian"
-          },
-          "clone_url": "https://github.com/0xDamian/CVE-2018-9995-rs.git"
         },
         {
           "id": 132603275,
