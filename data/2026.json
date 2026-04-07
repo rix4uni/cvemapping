@@ -487,8 +487,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "C++",
-          "updated_at": "2026-04-06T17:10:26Z",
-          "pushed_at": "2026-04-06T17:10:21Z",
+          "updated_at": "2026-04-07T04:40:03Z",
+          "pushed_at": "2026-04-07T04:39:58Z",
           "created_at": "2024-04-20T04:18:24Z",
           "topics": [
             "automation",
@@ -1851,6 +1851,31 @@
           "clone_url": "https://github.com/Sushilsin/CVE-2026-20131.git"
         },
         {
+          "id": 1203445056,
+          "name": "Cisco-FMC-honeypot",
+          "full_name": "Hassan-Pouladi/Cisco-FMC-honeypot",
+          "html_url": "https://github.com/Hassan-Pouladi/Cisco-FMC-honeypot",
+          "description": "Originally a Honeypot for CVE-2026-20131",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-04-07T06:11:18Z",
+          "pushed_at": "2026-04-07T06:11:14Z",
+          "created_at": "2026-04-07T03:35:37Z",
+          "topics": [
+            "cve",
+            "honeypot",
+            "poc",
+            "threat-hunting",
+            "threat-intelligence"
+          ],
+          "owner": {
+            "login": "Hassan-Pouladi",
+            "html_url": "https://github.com/Hassan-Pouladi"
+          },
+          "clone_url": "https://github.com/Hassan-Pouladi/Cisco-FMC-honeypot.git"
+        },
+        {
           "id": 1174197428,
           "name": "CVE-2026-20131-POC",
           "full_name": "p3Nt3st3r-sTAr/CVE-2026-20131-POC",
@@ -1920,6 +1945,37 @@
       ]
     },
     {
+      "cve_id": "CVE-2026-20637",
+      "repositories": [
+        {
+          "id": 1133350075,
+          "name": "CVE-2026-20637-AppleSEPKeyStore-UAF",
+          "full_name": "zeroxjf/CVE-2026-20637-AppleSEPKeyStore-UAF",
+          "html_url": "https://github.com/zeroxjf/CVE-2026-20637-AppleSEPKeyStore-UAF",
+          "description": "CVE-2026-20637: AppleSEPKeyStore Use-After-Free — iOS/macOS kernel vulnerability (patched in 26.4)",
+          "stargazers_count": 49,
+          "forks_count": 6,
+          "language": "Objective-C",
+          "updated_at": "2026-04-06T20:26:35Z",
+          "pushed_at": "2026-04-06T20:26:26Z",
+          "created_at": "2026-01-13T08:21:42Z",
+          "topics": [
+            "cve-2026-20637",
+            "ios",
+            "kernel",
+            "macos",
+            "security-research",
+            "use-after-free"
+          ],
+          "owner": {
+            "login": "zeroxjf",
+            "html_url": "https://github.com/zeroxjf"
+          },
+          "clone_url": "https://github.com/zeroxjf/CVE-2026-20637-AppleSEPKeyStore-UAF.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2026-20643",
       "repositories": [
         {
@@ -1928,10 +1984,10 @@
           "full_name": "zeroxjf/WebKit-NavigationAPI-SOP-Bypass",
           "html_url": "https://github.com/zeroxjf/WebKit-NavigationAPI-SOP-Bypass",
           "description": "WebKit NavigateEvent.canIntercept SOP bypass via cross-port interception — iOS 26.3.1 BSI (CVE-2026-20643)",
-          "stargazers_count": 12,
+          "stargazers_count": 13,
           "forks_count": 2,
           "language": "HTML",
-          "updated_at": "2026-03-29T05:01:18Z",
+          "updated_at": "2026-04-06T21:52:12Z",
           "pushed_at": "2026-03-17T22:32:54Z",
           "created_at": "2026-03-17T20:32:03Z",
           "topics": [],
@@ -1990,30 +2046,33 @@
       "cve_id": "CVE-2026-20687",
       "repositories": [
         {
-          "id": 1133350075,
-          "name": "CVE-2026-20687-AppleSEPKeyStore-UAF",
-          "full_name": "zeroxjf/CVE-2026-20687-AppleSEPKeyStore-UAF",
-          "html_url": "https://github.com/zeroxjf/CVE-2026-20687-AppleSEPKeyStore-UAF",
-          "description": "CVE-2026-20687: AppleSEPKeyStore Use-After-Free — iOS/macOS kernel vulnerability (patched in 26.4)",
-          "stargazers_count": 48,
-          "forks_count": 6,
+          "id": 1153842616,
+          "name": "CVE-2026-20687-AppleJPEGDriver-UAF",
+          "full_name": "zeroxjf/CVE-2026-20687-AppleJPEGDriver-UAF",
+          "html_url": "https://github.com/zeroxjf/CVE-2026-20687-AppleJPEGDriver-UAF",
+          "description": "CVE-2026-20687: AppleJPEGDriver startDecoder Timeout UAF — iOS/macOS kernel vulnerability leading to deferred panic (A19 Pro, iOS 26.3 RC)",
+          "stargazers_count": 14,
+          "forks_count": 1,
           "language": "Objective-C",
-          "updated_at": "2026-04-03T23:17:41Z",
-          "pushed_at": "2026-03-24T19:05:38Z",
-          "created_at": "2026-01-13T08:21:42Z",
+          "updated_at": "2026-04-06T20:22:25Z",
+          "pushed_at": "2026-04-06T20:22:19Z",
+          "created_at": "2026-02-09T18:21:45Z",
           "topics": [
+            "apple",
+            "arm64",
             "cve-2026-20687",
             "ios",
             "kernel",
-            "macos",
-            "security-research",
-            "use-after-free"
+            "poc",
+            "security",
+            "use-after-free",
+            "vulnerability"
           ],
           "owner": {
             "login": "zeroxjf",
             "html_url": "https://github.com/zeroxjf"
           },
-          "clone_url": "https://github.com/zeroxjf/CVE-2026-20687-AppleSEPKeyStore-UAF.git"
+          "clone_url": "https://github.com/zeroxjf/CVE-2026-20687-AppleJPEGDriver-UAF.git"
         }
       ]
     },
@@ -2026,10 +2085,10 @@
           "full_name": "Somisomair/CVE-2026-20698-PF_ROUTE-Heap-Overflow",
           "html_url": "https://github.com/Somisomair/CVE-2026-20698-PF_ROUTE-Heap-Overflow",
           "description": "CVE-2026-20698: XNU kernel heap overflow via PF_ROUTE RTA_GENMASK. PoC and analysis. Independently discovered.",
-          "stargazers_count": 1,
+          "stargazers_count": 2,
           "forks_count": 0,
           "language": "C",
-          "updated_at": "2026-03-31T13:22:50Z",
+          "updated_at": "2026-04-06T20:04:01Z",
           "pushed_at": "2026-03-30T21:46:38Z",
           "created_at": "2026-03-30T21:44:45Z",
           "topics": [],
@@ -2424,8 +2483,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-04-06T17:09:55Z",
-          "pushed_at": "2026-04-06T17:09:46Z",
+          "updated_at": "2026-04-07T04:39:20Z",
+          "pushed_at": "2026-04-07T04:39:13Z",
           "created_at": "2024-09-22T12:19:06Z",
           "topics": [
             "agent",
@@ -2481,8 +2540,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-04-06T17:08:44Z",
-          "pushed_at": "2026-04-06T17:08:39Z",
+          "updated_at": "2026-04-07T04:38:27Z",
+          "pushed_at": "2026-04-07T04:38:22Z",
           "created_at": "2026-02-26T05:21:28Z",
           "topics": [
             "agent",
@@ -4103,6 +4162,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2026-22666",
+      "repositories": [
+        {
+          "id": 1184416504,
+          "name": "DOLIBARR-RCE-CVE-2026-22666",
+          "full_name": "JivaSecurity/DOLIBARR-RCE-CVE-2026-22666",
+          "html_url": "https://github.com/JivaSecurity/DOLIBARR-RCE-CVE-2026-22666",
+          "description": "dol_eval_standard() whitelist bypass eval() RCE, affecting Dolibarr 23.0.0 and below by jiva (jivasecurity.com)",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-04-06T23:44:04Z",
+          "pushed_at": "2026-04-06T23:42:34Z",
+          "created_at": "2026-03-17T15:09:09Z",
+          "topics": [],
+          "owner": {
+            "login": "JivaSecurity",
+            "html_url": "https://github.com/JivaSecurity"
+          },
+          "clone_url": "https://github.com/JivaSecurity/DOLIBARR-RCE-CVE-2026-22666.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2026-22686",
       "repositories": [
         {
@@ -4223,9 +4306,9 @@
           "description": "SpEL Injection via Unescaped Filter Key in SimpleVectorStore Leads to Remote Code Execution",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Java",
-          "updated_at": "2026-04-06T11:23:40Z",
-          "pushed_at": "2026-04-06T11:23:37Z",
+          "language": "Python",
+          "updated_at": "2026-04-07T05:30:13Z",
+          "pushed_at": "2026-04-07T05:30:08Z",
           "created_at": "2026-04-03T10:16:50Z",
           "topics": [],
           "owner": {
@@ -5567,8 +5650,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-04-06T16:59:44Z",
-          "pushed_at": "2026-04-06T16:59:40Z",
+          "updated_at": "2026-04-07T04:30:32Z",
+          "pushed_at": "2026-04-07T04:30:25Z",
           "created_at": "2025-04-16T07:20:12Z",
           "topics": [
             "cve-2026-24061",
@@ -5919,6 +6002,25 @@
           "clone_url": "https://github.com/shivam-bathla/CVE-2026-24061-setup.git"
         },
         {
+          "id": 1140546327,
+          "name": "CVE-2026-24061",
+          "full_name": "balgan/CVE-2026-24061",
+          "html_url": "https://github.com/balgan/CVE-2026-24061",
+          "description": "inetutils-telnetd Authentication Bypass - working",
+          "stargazers_count": 2,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-03-02T12:09:30Z",
+          "pushed_at": "2026-01-23T12:36:38Z",
+          "created_at": "2026-01-23T12:33:03Z",
+          "topics": [],
+          "owner": {
+            "login": "balgan",
+            "html_url": "https://github.com/balgan"
+          },
+          "clone_url": "https://github.com/balgan/CVE-2026-24061.git"
+        },
+        {
           "id": 1139728682,
           "name": "CVE-2026-24061---telnetd",
           "full_name": "duy-31/CVE-2026-24061---telnetd",
@@ -5938,23 +6040,23 @@
           "clone_url": "https://github.com/duy-31/CVE-2026-24061---telnetd.git"
         },
         {
-          "id": 1140546327,
-          "name": "CVE-2026-24061",
-          "full_name": "balgan/CVE-2026-24061",
-          "html_url": "https://github.com/balgan/CVE-2026-24061",
-          "description": "inetutils-telnetd Authentication Bypass - working",
+          "id": 1192668335,
+          "name": "telnet_scan",
+          "full_name": "ekomsSavior/telnet_scan",
+          "html_url": "https://github.com/ekomsSavior/telnet_scan",
+          "description": "scanner/exploiter CVE-2026-24061 \u0026 CVE-2026-32746",
           "stargazers_count": 2,
-          "forks_count": 0,
+          "forks_count": 2,
           "language": "Python",
-          "updated_at": "2026-03-02T12:09:30Z",
-          "pushed_at": "2026-01-23T12:36:38Z",
-          "created_at": "2026-01-23T12:33:03Z",
+          "updated_at": "2026-04-03T17:24:32Z",
+          "pushed_at": "2026-03-26T13:36:38Z",
+          "created_at": "2026-03-26T12:52:57Z",
           "topics": [],
           "owner": {
-            "login": "balgan",
-            "html_url": "https://github.com/balgan"
+            "login": "ekomsSavior",
+            "html_url": "https://github.com/ekomsSavior"
           },
-          "clone_url": "https://github.com/balgan/CVE-2026-24061.git"
+          "clone_url": "https://github.com/ekomsSavior/telnet_scan.git"
         },
         {
           "id": 1147892492,
@@ -6243,23 +6345,23 @@
           "clone_url": "https://github.com/MY0723/GNU-Inetutils-telnet-CVE-2026-24061-.git"
         },
         {
-          "id": 1201808799,
-          "name": "CVE-2026-24061-GNU-InetUtils-telnetd-Authentication-Bypass-Vulnerability",
-          "full_name": "Risma2025/CVE-2026-24061-GNU-InetUtils-telnetd-Authentication-Bypass-Vulnerability",
-          "html_url": "https://github.com/Risma2025/CVE-2026-24061-GNU-InetUtils-telnetd-Authentication-Bypass-Vulnerability",
-          "description": "",
+          "id": 1158491154,
+          "name": "chall2026-telneted",
+          "full_name": "athack-ctf/chall2026-telneted",
+          "html_url": "https://github.com/athack-ctf/chall2026-telneted",
+          "description": "[AtHack 2026] Pwn challenge about telnetd CVE-2026-24061",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-04-05T08:34:01Z",
-          "pushed_at": "2026-04-05T08:33:56Z",
-          "created_at": "2026-04-05T07:28:39Z",
+          "language": "Shell",
+          "updated_at": "2026-03-31T20:25:30Z",
+          "pushed_at": "2026-03-31T19:41:12Z",
+          "created_at": "2026-02-15T13:14:41Z",
           "topics": [],
           "owner": {
-            "login": "Risma2025",
-            "html_url": "https://github.com/Risma2025"
+            "login": "athack-ctf",
+            "html_url": "https://github.com/athack-ctf"
           },
-          "clone_url": "https://github.com/Risma2025/CVE-2026-24061-GNU-InetUtils-telnetd-Authentication-Bypass-Vulnerability.git"
+          "clone_url": "https://github.com/athack-ctf/chall2026-telneted.git"
         },
         {
           "id": 1143759834,
@@ -6343,23 +6445,35 @@
           "clone_url": "https://github.com/androidteacher/CVE-2026-24061-PoC-Telnetd.git"
         },
         {
-          "id": 1158491154,
-          "name": "chall2026-telneted",
-          "full_name": "athack-ctf/chall2026-telneted",
-          "html_url": "https://github.com/athack-ctf/chall2026-telneted",
-          "description": "[AtHack 2026] Pwn challenge about telnetd CVE-2026-24061",
+          "id": 967261651,
+          "name": "Terrminus-CVE-2026-2406",
+          "full_name": "hyu164/Terrminus-CVE-2026-2406",
+          "html_url": "https://github.com/hyu164/Terrminus-CVE-2026-2406",
+          "description": "🔍 Analyze and detect CVE-2026-2406 vulnerabilities in Telnet to enhance security and prevent unauthorized access with this professional research engine.",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2026-03-31T20:25:30Z",
-          "pushed_at": "2026-03-31T19:41:12Z",
-          "created_at": "2026-02-15T13:14:41Z",
-          "topics": [],
+          "language": "Python",
+          "updated_at": "2026-04-07T04:30:32Z",
+          "pushed_at": "2026-04-07T04:30:25Z",
+          "created_at": "2025-04-16T07:20:12Z",
+          "topics": [
+            "cve-2026-24061",
+            "cybersecurity-tools",
+            "pentesting-tools",
+            "privelage-escalation",
+            "python-asyncio",
+            "rce",
+            "red-teaming",
+            "red-teaming-tools",
+            "telnet-exploit",
+            "telnet-scanner",
+            "vulnerability-scanners"
+          ],
           "owner": {
-            "login": "athack-ctf",
-            "html_url": "https://github.com/athack-ctf"
+            "login": "hyu164",
+            "html_url": "https://github.com/hyu164"
           },
-          "clone_url": "https://github.com/athack-ctf/chall2026-telneted.git"
+          "clone_url": "https://github.com/hyu164/Terrminus-CVE-2026-2406.git"
         },
         {
           "id": 1142770099,
@@ -6765,35 +6879,41 @@
           "clone_url": "https://github.com/Mefhika120/Ashwesker-CVE-2026-24061.git"
         },
         {
-          "id": 967261651,
-          "name": "Terrminus-CVE-2026-2406",
-          "full_name": "hyu164/Terrminus-CVE-2026-2406",
-          "html_url": "https://github.com/hyu164/Terrminus-CVE-2026-2406",
-          "description": "🔍 Analyze and detect CVE-2026-2406 vulnerabilities in Telnet to enhance security and prevent unauthorized access with this professional research engine.",
+          "id": 1149163272,
+          "name": "CVE-2026-24061",
+          "full_name": "obrunolima1910/CVE-2026-24061",
+          "html_url": "https://github.com/obrunolima1910/CVE-2026-24061",
+          "description": "🚨 Exploit CVE-2026-24061, a critical remote authentication bypass in GNU inetutils-telnetd, for instant root shell access without authentication.",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-04-06T16:59:44Z",
-          "pushed_at": "2026-04-06T16:59:40Z",
-          "created_at": "2025-04-16T07:20:12Z",
+          "updated_at": "2026-04-07T04:27:08Z",
+          "pushed_at": "2026-04-07T04:27:05Z",
+          "created_at": "2026-02-03T19:46:10Z",
           "topics": [
-            "cve-2026-24061",
-            "cybersecurity-tools",
-            "pentesting-tools",
-            "privelage-escalation",
-            "python-asyncio",
-            "rce",
-            "red-teaming",
-            "red-teaming-tools",
-            "telnet-exploit",
-            "telnet-scanner",
-            "vulnerability-scanners"
+            "agent",
+            "auth",
+            "book",
+            "computer-vision",
+            "cv",
+            "deep-learning",
+            "gluon",
+            "image-classification",
+            "jupyter-notebook",
+            "machine-learning",
+            "mxnet",
+            "neural-network",
+            "person-reid",
+            "pose-estimation",
+            "root",
+            "semantic-segmentation",
+            "telnet"
           ],
           "owner": {
-            "login": "hyu164",
-            "html_url": "https://github.com/hyu164"
+            "login": "obrunolima1910",
+            "html_url": "https://github.com/obrunolima1910"
           },
-          "clone_url": "https://github.com/hyu164/Terrminus-CVE-2026-2406.git"
+          "clone_url": "https://github.com/obrunolima1910/CVE-2026-24061.git"
         },
         {
           "id": 1148243886,
@@ -6899,41 +7019,23 @@
           "clone_url": "https://github.com/0xXyc/telnet-inetutils-auth-bypass-CVE-2026-24061.git"
         },
         {
-          "id": 1149163272,
-          "name": "CVE-2026-24061",
-          "full_name": "obrunolima1910/CVE-2026-24061",
-          "html_url": "https://github.com/obrunolima1910/CVE-2026-24061",
-          "description": "🚨 Exploit CVE-2026-24061, a critical remote authentication bypass in GNU inetutils-telnetd, for instant root shell access without authentication.",
+          "id": 1201808799,
+          "name": "CVE-2026-24061-GNU-InetUtils-telnetd-Authentication-Bypass-Vulnerability",
+          "full_name": "Risma2025/CVE-2026-24061-GNU-InetUtils-telnetd-Authentication-Bypass-Vulnerability",
+          "html_url": "https://github.com/Risma2025/CVE-2026-24061-GNU-InetUtils-telnetd-Authentication-Bypass-Vulnerability",
+          "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-04-06T16:56:10Z",
-          "pushed_at": "2026-04-06T16:56:04Z",
-          "created_at": "2026-02-03T19:46:10Z",
-          "topics": [
-            "agent",
-            "auth",
-            "book",
-            "computer-vision",
-            "cv",
-            "deep-learning",
-            "gluon",
-            "image-classification",
-            "jupyter-notebook",
-            "machine-learning",
-            "mxnet",
-            "neural-network",
-            "person-reid",
-            "pose-estimation",
-            "root",
-            "semantic-segmentation",
-            "telnet"
-          ],
+          "language": "",
+          "updated_at": "2026-04-05T08:34:01Z",
+          "pushed_at": "2026-04-05T08:33:56Z",
+          "created_at": "2026-04-05T07:28:39Z",
+          "topics": [],
           "owner": {
-            "login": "obrunolima1910",
-            "html_url": "https://github.com/obrunolima1910"
+            "login": "Risma2025",
+            "html_url": "https://github.com/Risma2025"
           },
-          "clone_url": "https://github.com/obrunolima1910/CVE-2026-24061.git"
+          "clone_url": "https://github.com/Risma2025/CVE-2026-24061-GNU-InetUtils-telnetd-Authentication-Bypass-Vulnerability.git"
         }
       ]
     },
@@ -7061,6 +7163,44 @@
       "cve_id": "CVE-2026-24291",
       "repositories": [
         {
+          "id": 1192299713,
+          "name": "RegPwn",
+          "full_name": "tracyliving606/RegPwn",
+          "html_url": "https://github.com/tracyliving606/RegPwn",
+          "description": "Exploit Windows local privilege escalation on clients and servers using tested code for CVE-2026-24291 across multiple Windows versions",
+          "stargazers_count": 2,
+          "forks_count": 0,
+          "language": "C#",
+          "updated_at": "2026-04-07T04:57:48Z",
+          "pushed_at": "2026-04-07T04:57:43Z",
+          "created_at": "2026-03-26T04:38:27Z",
+          "topics": [
+            "assembly",
+            "capture-the-flag",
+            "cloudflare",
+            "containers",
+            "defcon",
+            "developer",
+            "free-domain",
+            "handshakes",
+            "learn-regex",
+            "opencontainers",
+            "pwntools",
+            "python",
+            "regular-expression",
+            "shellcode-development",
+            "shellcoding",
+            "wargame",
+            "website",
+            "wpa-psk"
+          ],
+          "owner": {
+            "login": "tracyliving606",
+            "html_url": "https://github.com/tracyliving606"
+          },
+          "clone_url": "https://github.com/tracyliving606/RegPwn.git"
+        },
+        {
           "id": 1186119589,
           "name": "CVE-2026-24291",
           "full_name": "lennertdefauw/CVE-2026-24291",
@@ -7097,44 +7237,6 @@
             "html_url": "https://github.com/n0isegat3"
           },
           "clone_url": "https://github.com/n0isegat3/RegPwnBRc4BOF.git"
-        },
-        {
-          "id": 1192299713,
-          "name": "RegPwn",
-          "full_name": "tracyliving606/RegPwn",
-          "html_url": "https://github.com/tracyliving606/RegPwn",
-          "description": "Exploit Windows local privilege escalation on clients and servers using tested code for CVE-2026-24291 across multiple Windows versions",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "C#",
-          "updated_at": "2026-04-06T17:30:43Z",
-          "pushed_at": "2026-04-06T17:30:40Z",
-          "created_at": "2026-03-26T04:38:27Z",
-          "topics": [
-            "assembly",
-            "capture-the-flag",
-            "cloudflare",
-            "containers",
-            "defcon",
-            "developer",
-            "free-domain",
-            "handshakes",
-            "learn-regex",
-            "opencontainers",
-            "pwntools",
-            "python",
-            "regular-expression",
-            "shellcode-development",
-            "shellcoding",
-            "wargame",
-            "website",
-            "wpa-psk"
-          ],
-          "owner": {
-            "login": "tracyliving606",
-            "html_url": "https://github.com/tracyliving606"
-          },
-          "clone_url": "https://github.com/tracyliving606/RegPwn.git"
         },
         {
           "id": 1192690199,
@@ -7212,8 +7314,8 @@
           "stargazers_count": 1,
           "forks_count": 1,
           "language": "",
-          "updated_at": "2026-04-06T17:12:12Z",
-          "pushed_at": "2026-04-06T17:12:07Z",
+          "updated_at": "2026-04-07T04:41:35Z",
+          "pushed_at": "2026-04-07T04:41:31Z",
           "created_at": "2026-03-03T14:19:18Z",
           "topics": [
             "agent",
@@ -7529,8 +7631,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-04-06T17:17:36Z",
-          "pushed_at": "2026-04-06T17:17:27Z",
+          "updated_at": "2026-04-07T04:46:34Z",
+          "pushed_at": "2026-04-07T04:46:31Z",
           "created_at": "2026-03-10T14:40:04Z",
           "topics": [
             "colab",
@@ -7933,52 +8035,17 @@
       "cve_id": "CVE-2026-25197",
       "repositories": [
         {
-          "id": 1166032780,
-          "name": "ICSA-26-055-03",
-          "full_name": "MichaelAdamGroberman/ICSA-26-055-03",
-          "html_url": "https://github.com/MichaelAdamGroberman/ICSA-26-055-03",
-          "description": "CISA Advisory ICSA-26-055-03 (Update A) — Gardyn Home Kit IoT Vulnerabilities — 10 CVEs (CVE-2025-1242, CVE-2025-10681, CVE-2025-29628, CVE-2025-29629, CVE-2025-29631, CVE-2026-28766, CVE-2026-25197, CVE-2026-32646, CVE-2026-28767, CVE-2026-32662)",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-04-05T00:41:42Z",
-          "pushed_at": "2026-04-04T23:26:33Z",
-          "created_at": "2026-02-24T20:06:54Z",
-          "topics": [
-            "azure-iot",
-            "cert-cc",
-            "cisa",
-            "command-injection",
-            "coordinated-disclosure",
-            "cve",
-            "food-and-agriculture",
-            "gardyn",
-            "ics-advisory",
-            "icsa-26-055-03",
-            "iot-security",
-            "remote-code-execution",
-            "security-research",
-            "vu653116",
-            "vulnerability-disclosure"
-          ],
-          "owner": {
-            "login": "MichaelAdamGroberman",
-            "html_url": "https://github.com/MichaelAdamGroberman"
-          },
-          "clone_url": "https://github.com/MichaelAdamGroberman/ICSA-26-055-03.git"
-        },
-        {
-          "id": 1199701915,
+          "id": 1203481461,
           "name": "CVE-2026-25197",
           "full_name": "MichaelAdamGroberman/CVE-2026-25197",
           "html_url": "https://github.com/MichaelAdamGroberman/CVE-2026-25197",
           "description": "CVE-2026-25197: Authorization Bypass via IDOR — Gardyn Home Kit (ICSA-26-055-03)",
-          "stargazers_count": 1,
+          "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-04-04T22:19:31Z",
-          "pushed_at": "2026-04-04T22:19:28Z",
-          "created_at": "2026-04-02T16:07:26Z",
+          "updated_at": "2026-04-07T04:38:22Z",
+          "pushed_at": "2026-04-07T04:37:36Z",
+          "created_at": "2026-04-07T04:37:34Z",
           "topics": [
             "authorization-bypass",
             "cisa",
@@ -7987,7 +8054,6 @@
             "cve-2026-25197",
             "cwe-639",
             "gardyn",
-            "graphql",
             "ics-advisory",
             "icsa-26-055-03",
             "idor",
@@ -8458,8 +8524,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-04-06T17:16:15Z",
-          "pushed_at": "2026-04-06T17:16:12Z",
+          "updated_at": "2026-04-07T04:45:32Z",
+          "pushed_at": "2026-04-07T04:45:28Z",
           "created_at": "2026-03-07T20:23:08Z",
           "topics": [
             "cve",
@@ -9002,6 +9068,30 @@
             "html_url": "https://github.com/drkim-dev"
           },
           "clone_url": "https://github.com/drkim-dev/CVE-2026-25991.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2026-25994",
+      "repositories": [
+        {
+          "id": 1203350268,
+          "name": "cve-2026-25994_PJSIP",
+          "full_name": "VABISMO/cve-2026-25994_PJSIP",
+          "html_url": "https://github.com/VABISMO/cve-2026-25994_PJSIP",
+          "description": "PJSIP cve-2026-25994 BUFFER OVERFLOW POC",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-04-07T01:13:58Z",
+          "pushed_at": "2026-04-07T01:11:01Z",
+          "created_at": "2026-04-07T00:54:30Z",
+          "topics": [],
+          "owner": {
+            "login": "VABISMO",
+            "html_url": "https://github.com/VABISMO"
+          },
+          "clone_url": "https://github.com/VABISMO/cve-2026-25994_PJSIP.git"
         }
       ]
     },
@@ -10758,59 +10848,23 @@
       "cve_id": "CVE-2026-28766",
       "repositories": [
         {
-          "id": 1166032780,
-          "name": "ICSA-26-055-03",
-          "full_name": "MichaelAdamGroberman/ICSA-26-055-03",
-          "html_url": "https://github.com/MichaelAdamGroberman/ICSA-26-055-03",
-          "description": "CISA Advisory ICSA-26-055-03 (Update A) — Gardyn Home Kit IoT Vulnerabilities — 10 CVEs (CVE-2025-1242, CVE-2025-10681, CVE-2025-29628, CVE-2025-29629, CVE-2025-29631, CVE-2026-28766, CVE-2026-25197, CVE-2026-32646, CVE-2026-28767, CVE-2026-32662)",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-04-05T00:41:42Z",
-          "pushed_at": "2026-04-04T23:26:33Z",
-          "created_at": "2026-02-24T20:06:54Z",
-          "topics": [
-            "azure-iot",
-            "cert-cc",
-            "cisa",
-            "command-injection",
-            "coordinated-disclosure",
-            "cve",
-            "food-and-agriculture",
-            "gardyn",
-            "ics-advisory",
-            "icsa-26-055-03",
-            "iot-security",
-            "remote-code-execution",
-            "security-research",
-            "vu653116",
-            "vulnerability-disclosure"
-          ],
-          "owner": {
-            "login": "MichaelAdamGroberman",
-            "html_url": "https://github.com/MichaelAdamGroberman"
-          },
-          "clone_url": "https://github.com/MichaelAdamGroberman/ICSA-26-055-03.git"
-        },
-        {
-          "id": 1199701838,
+          "id": 1203481484,
           "name": "CVE-2026-28766",
           "full_name": "MichaelAdamGroberman/CVE-2026-28766",
           "html_url": "https://github.com/MichaelAdamGroberman/CVE-2026-28766",
           "description": "CVE-2026-28766: Missing Authentication on User Account Endpoint — Gardyn Home Kit (ICSA-26-055-03)",
-          "stargazers_count": 1,
+          "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-04-04T22:19:34Z",
-          "pushed_at": "2026-04-04T22:19:30Z",
-          "created_at": "2026-04-02T16:07:21Z",
+          "updated_at": "2026-04-07T04:38:23Z",
+          "pushed_at": "2026-04-07T04:37:38Z",
+          "created_at": "2026-04-07T04:37:37Z",
           "topics": [
             "cisa",
             "coordinated-disclosure",
             "cve",
             "cve-2026-28766",
             "cwe-306",
-            "data-breach",
             "gardyn",
             "ics-advisory",
             "icsa-26-055-03",
@@ -10833,52 +10887,17 @@
       "cve_id": "CVE-2026-28767",
       "repositories": [
         {
-          "id": 1166032780,
-          "name": "ICSA-26-055-03",
-          "full_name": "MichaelAdamGroberman/ICSA-26-055-03",
-          "html_url": "https://github.com/MichaelAdamGroberman/ICSA-26-055-03",
-          "description": "CISA Advisory ICSA-26-055-03 (Update A) — Gardyn Home Kit IoT Vulnerabilities — 10 CVEs (CVE-2025-1242, CVE-2025-10681, CVE-2025-29628, CVE-2025-29629, CVE-2025-29631, CVE-2026-28766, CVE-2026-25197, CVE-2026-32646, CVE-2026-28767, CVE-2026-32662)",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-04-05T00:41:42Z",
-          "pushed_at": "2026-04-04T23:26:33Z",
-          "created_at": "2026-02-24T20:06:54Z",
-          "topics": [
-            "azure-iot",
-            "cert-cc",
-            "cisa",
-            "command-injection",
-            "coordinated-disclosure",
-            "cve",
-            "food-and-agriculture",
-            "gardyn",
-            "ics-advisory",
-            "icsa-26-055-03",
-            "iot-security",
-            "remote-code-execution",
-            "security-research",
-            "vu653116",
-            "vulnerability-disclosure"
-          ],
-          "owner": {
-            "login": "MichaelAdamGroberman",
-            "html_url": "https://github.com/MichaelAdamGroberman"
-          },
-          "clone_url": "https://github.com/MichaelAdamGroberman/ICSA-26-055-03.git"
-        },
-        {
-          "id": 1199702023,
+          "id": 1203481513,
           "name": "CVE-2026-28767",
           "full_name": "MichaelAdamGroberman/CVE-2026-28767",
           "html_url": "https://github.com/MichaelAdamGroberman/CVE-2026-28767",
           "description": "CVE-2026-28767: Missing Authentication on Admin Notifications Endpoint — Gardyn Home Kit (ICSA-26-055-03)",
-          "stargazers_count": 1,
+          "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-04-04T22:19:35Z",
-          "pushed_at": "2026-04-04T22:19:31Z",
-          "created_at": "2026-04-02T16:07:32Z",
+          "updated_at": "2026-04-07T04:38:24Z",
+          "pushed_at": "2026-04-07T04:37:41Z",
+          "created_at": "2026-04-07T04:37:39Z",
           "topics": [
             "admin-api",
             "cisa",
@@ -11506,8 +11525,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "PHP",
-          "updated_at": "2026-04-06T17:34:55Z",
-          "pushed_at": "2026-04-06T17:34:52Z",
+          "updated_at": "2026-04-07T05:01:39Z",
+          "pushed_at": "2026-04-07T05:01:35Z",
           "created_at": "2026-04-03T20:26:43Z",
           "topics": [
             "auth-bypass",
@@ -12285,8 +12304,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "JavaScript",
-          "updated_at": "2026-04-06T17:31:56Z",
-          "pushed_at": "2026-04-06T17:31:49Z",
+          "updated_at": "2026-04-07T04:58:40Z",
+          "pushed_at": "2026-04-07T04:58:36Z",
           "created_at": "2026-03-28T20:49:46Z",
           "topics": [
             "cve",
@@ -12677,52 +12696,17 @@
       "cve_id": "CVE-2026-32646",
       "repositories": [
         {
-          "id": 1166032780,
-          "name": "ICSA-26-055-03",
-          "full_name": "MichaelAdamGroberman/ICSA-26-055-03",
-          "html_url": "https://github.com/MichaelAdamGroberman/ICSA-26-055-03",
-          "description": "CISA Advisory ICSA-26-055-03 (Update A) — Gardyn Home Kit IoT Vulnerabilities — 10 CVEs (CVE-2025-1242, CVE-2025-10681, CVE-2025-29628, CVE-2025-29629, CVE-2025-29631, CVE-2026-28766, CVE-2026-25197, CVE-2026-32646, CVE-2026-28767, CVE-2026-32662)",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-04-05T00:41:42Z",
-          "pushed_at": "2026-04-04T23:26:33Z",
-          "created_at": "2026-02-24T20:06:54Z",
-          "topics": [
-            "azure-iot",
-            "cert-cc",
-            "cisa",
-            "command-injection",
-            "coordinated-disclosure",
-            "cve",
-            "food-and-agriculture",
-            "gardyn",
-            "ics-advisory",
-            "icsa-26-055-03",
-            "iot-security",
-            "remote-code-execution",
-            "security-research",
-            "vu653116",
-            "vulnerability-disclosure"
-          ],
-          "owner": {
-            "login": "MichaelAdamGroberman",
-            "html_url": "https://github.com/MichaelAdamGroberman"
-          },
-          "clone_url": "https://github.com/MichaelAdamGroberman/ICSA-26-055-03.git"
-        },
-        {
-          "id": 1199701957,
+          "id": 1203481534,
           "name": "CVE-2026-32646",
           "full_name": "MichaelAdamGroberman/CVE-2026-32646",
           "html_url": "https://github.com/MichaelAdamGroberman/CVE-2026-32646",
           "description": "CVE-2026-32646: Missing Authentication on Admin Device Endpoint — Gardyn Home Kit (ICSA-26-055-03)",
-          "stargazers_count": 1,
+          "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-04-04T22:19:35Z",
-          "pushed_at": "2026-04-04T22:19:32Z",
-          "created_at": "2026-04-02T16:07:28Z",
+          "updated_at": "2026-04-07T04:38:24Z",
+          "pushed_at": "2026-04-07T04:37:44Z",
+          "created_at": "2026-04-07T04:37:42Z",
           "topics": [
             "admin-api",
             "cisa",
@@ -12751,52 +12735,17 @@
       "cve_id": "CVE-2026-32662",
       "repositories": [
         {
-          "id": 1166032780,
-          "name": "ICSA-26-055-03",
-          "full_name": "MichaelAdamGroberman/ICSA-26-055-03",
-          "html_url": "https://github.com/MichaelAdamGroberman/ICSA-26-055-03",
-          "description": "CISA Advisory ICSA-26-055-03 (Update A) — Gardyn Home Kit IoT Vulnerabilities — 10 CVEs (CVE-2025-1242, CVE-2025-10681, CVE-2025-29628, CVE-2025-29629, CVE-2025-29631, CVE-2026-28766, CVE-2026-25197, CVE-2026-32646, CVE-2026-28767, CVE-2026-32662)",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-04-05T00:41:42Z",
-          "pushed_at": "2026-04-04T23:26:33Z",
-          "created_at": "2026-02-24T20:06:54Z",
-          "topics": [
-            "azure-iot",
-            "cert-cc",
-            "cisa",
-            "command-injection",
-            "coordinated-disclosure",
-            "cve",
-            "food-and-agriculture",
-            "gardyn",
-            "ics-advisory",
-            "icsa-26-055-03",
-            "iot-security",
-            "remote-code-execution",
-            "security-research",
-            "vu653116",
-            "vulnerability-disclosure"
-          ],
-          "owner": {
-            "login": "MichaelAdamGroberman",
-            "html_url": "https://github.com/MichaelAdamGroberman"
-          },
-          "clone_url": "https://github.com/MichaelAdamGroberman/ICSA-26-055-03.git"
-        },
-        {
-          "id": 1199702060,
+          "id": 1203481565,
           "name": "CVE-2026-32662",
           "full_name": "MichaelAdamGroberman/CVE-2026-32662",
           "html_url": "https://github.com/MichaelAdamGroberman/CVE-2026-32662",
           "description": "CVE-2026-32662: Active Debug Code in Production — Gardyn Home Kit (ICSA-26-055-03)",
-          "stargazers_count": 1,
+          "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-04-04T22:19:37Z",
-          "pushed_at": "2026-04-04T22:19:33Z",
-          "created_at": "2026-04-02T16:07:35Z",
+          "updated_at": "2026-04-07T04:38:25Z",
+          "pushed_at": "2026-04-07T04:37:46Z",
+          "created_at": "2026-04-07T04:37:45Z",
           "topics": [
             "cisa",
             "coordinated-disclosure",
@@ -12897,10 +12846,10 @@
           "full_name": "watchtowrlabs/watchtowr-vs-telnetd-CVE-2026-32746",
           "html_url": "https://github.com/watchtowrlabs/watchtowr-vs-telnetd-CVE-2026-32746",
           "description": "",
-          "stargazers_count": 7,
+          "stargazers_count": 8,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-03-26T12:13:12Z",
+          "updated_at": "2026-04-07T03:38:22Z",
           "pushed_at": "2026-03-19T15:02:46Z",
           "created_at": "2026-03-19T14:58:34Z",
           "topics": [],
@@ -12909,6 +12858,25 @@
             "html_url": "https://github.com/watchtowrlabs"
           },
           "clone_url": "https://github.com/watchtowrlabs/watchtowr-vs-telnetd-CVE-2026-32746.git"
+        },
+        {
+          "id": 1192668335,
+          "name": "telnet_scan",
+          "full_name": "ekomsSavior/telnet_scan",
+          "html_url": "https://github.com/ekomsSavior/telnet_scan",
+          "description": "scanner/exploiter CVE-2026-24061 \u0026 CVE-2026-32746",
+          "stargazers_count": 2,
+          "forks_count": 2,
+          "language": "Python",
+          "updated_at": "2026-04-03T17:24:32Z",
+          "pushed_at": "2026-03-26T13:36:38Z",
+          "created_at": "2026-03-26T12:52:57Z",
+          "topics": [],
+          "owner": {
+            "login": "ekomsSavior",
+            "html_url": "https://github.com/ekomsSavior"
+          },
+          "clone_url": "https://github.com/ekomsSavior/telnet_scan.git"
         },
         {
           "id": 1187086533,
@@ -14292,10 +14260,10 @@
           "full_name": "z3r0h3ro/CVE-2026-35616-poc",
           "html_url": "https://github.com/z3r0h3ro/CVE-2026-35616-poc",
           "description": "",
-          "stargazers_count": 6,
+          "stargazers_count": 5,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-04-06T09:18:48Z",
+          "updated_at": "2026-04-06T21:20:58Z",
           "pushed_at": "2026-04-04T16:32:47Z",
           "created_at": "2026-04-04T16:06:38Z",
           "topics": [],
@@ -14323,6 +14291,25 @@
             "html_url": "https://github.com/fevar54"
           },
           "clone_url": "https://github.com/fevar54/CVE-2026-35616-detector.py.git"
+        },
+        {
+          "id": 1203227039,
+          "name": "CVE-2026-35616-check",
+          "full_name": "BishopFox/CVE-2026-35616-check",
+          "html_url": "https://github.com/BishopFox/CVE-2026-35616-check",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-04-06T21:09:58Z",
+          "pushed_at": "2026-04-06T21:06:43Z",
+          "created_at": "2026-04-06T21:04:26Z",
+          "topics": [],
+          "owner": {
+            "login": "BishopFox",
+            "html_url": "https://github.com/BishopFox"
+          },
+          "clone_url": "https://github.com/BishopFox/CVE-2026-35616-check.git"
         },
         {
           "id": 1201125511,
@@ -14594,6 +14581,61 @@
             "html_url": "https://github.com/joshuavanderpoll"
           },
           "clone_url": "https://github.com/joshuavanderpoll/CVE-2026-3891.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2026-39324",
+      "repositories": [
+        {
+          "id": 1203330946,
+          "name": "CVE-2026-39324",
+          "full_name": "sm1ee/CVE-2026-39324",
+          "html_url": "https://github.com/sm1ee/CVE-2026-39324",
+          "description": "CVE-2026-39324 PoC ",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Ruby",
+          "updated_at": "2026-04-07T06:37:07Z",
+          "pushed_at": "2026-04-07T00:44:06Z",
+          "created_at": "2026-04-07T00:16:26Z",
+          "topics": [
+            "cve-2026-39324",
+            "poc",
+            "rack-session"
+          ],
+          "owner": {
+            "login": "sm1ee",
+            "html_url": "https://github.com/sm1ee"
+          },
+          "clone_url": "https://github.com/sm1ee/CVE-2026-39324.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2026-39371",
+      "repositories": [
+        {
+          "id": 1203346744,
+          "name": "CVE-2026-39371",
+          "full_name": "zebbernCVE/CVE-2026-39371",
+          "html_url": "https://github.com/zebbernCVE/CVE-2026-39371",
+          "description": "Advisory for CVE-2026-39371 rwsdk sdk",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-04-07T00:53:51Z",
+          "pushed_at": "2026-04-07T00:47:27Z",
+          "created_at": "2026-04-07T00:47:27Z",
+          "topics": [
+            "cve-2026-39371",
+            "cwe-352"
+          ],
+          "owner": {
+            "login": "zebbernCVE",
+            "html_url": "https://github.com/zebbernCVE"
+          },
+          "clone_url": "https://github.com/zebbernCVE/CVE-2026-39371.git"
         }
       ]
     },
