@@ -1306,8 +1306,8 @@
           "stargazers_count": 0,
           "forks_count": 1,
           "language": "C++",
-          "updated_at": "2026-04-13T10:34:52Z",
-          "pushed_at": "2026-04-13T10:34:49Z",
+          "updated_at": "2026-04-13T19:26:21Z",
+          "pushed_at": "2026-04-13T19:26:17Z",
           "created_at": "2026-01-08T01:32:09Z",
           "topics": [
             "c0deghost",
@@ -6537,23 +6537,23 @@
           "clone_url": "https://github.com/FlojBoj/CVE-2024-21626.git"
         },
         {
-          "id": 1169382813,
-          "name": "cve-2024-21626-runc-1.1.11-escape",
-          "full_name": "strikoder/cve-2024-21626-runc-1.1.11-escape",
-          "html_url": "https://github.com/strikoder/cve-2024-21626-runc-1.1.11-escape",
-          "description": "PoC for CVE-2024-21626: runc leaks an internal fd referencing the host CWD before pivot_root, enabling container escape by setting process.cwd to /proc/self/fd/7",
+          "id": 765630308,
+          "name": "CVE-2024-21626",
+          "full_name": "abian2/CVE-2024-21626",
+          "html_url": "https://github.com/abian2/CVE-2024-21626",
+          "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-02-28T15:58:48Z",
-          "pushed_at": "2026-02-28T15:58:16Z",
-          "created_at": "2026-02-28T15:54:15Z",
+          "language": "Dockerfile",
+          "updated_at": "2024-06-03T17:15:22Z",
+          "pushed_at": "2024-06-03T17:15:19Z",
+          "created_at": "2024-03-01T09:58:50Z",
           "topics": [],
           "owner": {
-            "login": "strikoder",
-            "html_url": "https://github.com/strikoder"
+            "login": "abian2",
+            "html_url": "https://github.com/abian2"
           },
-          "clone_url": "https://github.com/strikoder/cve-2024-21626-runc-1.1.11-escape.git"
+          "clone_url": "https://github.com/abian2/CVE-2024-21626.git"
         },
         {
           "id": 751662835,
@@ -6573,25 +6573,6 @@
             "html_url": "https://github.com/skysbsb"
           },
           "clone_url": "https://github.com/skysbsb/CVE-2024-21626-POC.git"
-        },
-        {
-          "id": 765630308,
-          "name": "CVE-2024-21626",
-          "full_name": "abian2/CVE-2024-21626",
-          "html_url": "https://github.com/abian2/CVE-2024-21626",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Dockerfile",
-          "updated_at": "2024-06-03T17:15:22Z",
-          "pushed_at": "2024-06-03T17:15:19Z",
-          "created_at": "2024-03-01T09:58:50Z",
-          "topics": [],
-          "owner": {
-            "login": "abian2",
-            "html_url": "https://github.com/abian2"
-          },
-          "clone_url": "https://github.com/abian2/CVE-2024-21626.git"
         },
         {
           "id": 892837460,
@@ -8800,8 +8781,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "JavaScript",
-          "updated_at": "2026-04-13T07:46:32Z",
-          "pushed_at": "2026-04-13T07:46:28Z",
+          "updated_at": "2026-04-13T20:09:39Z",
+          "pushed_at": "2026-04-13T20:09:36Z",
           "created_at": "2026-03-15T16:36:07Z",
           "topics": [
             "aigc",
@@ -21393,7 +21374,7 @@
           "html_url": "https://github.com/FreySolarEye/Exploit-CVE-2024-31777",
           "description": "Public exploit for CVE-2024-31777",
           "stargazers_count": 1,
-          "forks_count": 0,
+          "forks_count": 1,
           "language": "Python",
           "updated_at": "2025-10-01T13:41:59Z",
           "pushed_at": "2024-09-08T16:17:57Z",
@@ -23062,6 +23043,30 @@
             "html_url": "https://github.com/Wadewfsssss"
           },
           "clone_url": "https://github.com/Wadewfsssss/CVE-2024-32004.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-32022",
+      "repositories": [
+        {
+          "id": 1061986139,
+          "name": "codeql-workshop",
+          "full_name": "sylwia-budzynska/codeql-workshop",
+          "html_url": "https://github.com/sylwia-budzynska/codeql-workshop",
+          "description": "Take first steps in CodeQL for Python by writing a query to find CVE-2024-32022",
+          "stargazers_count": 2,
+          "forks_count": 0,
+          "language": "CodeQL",
+          "updated_at": "2026-04-13T16:45:23Z",
+          "pushed_at": "2026-04-13T16:45:19Z",
+          "created_at": "2025-09-22T16:44:32Z",
+          "topics": [],
+          "owner": {
+            "login": "sylwia-budzynska",
+            "html_url": "https://github.com/sylwia-budzynska"
+          },
+          "clone_url": "https://github.com/sylwia-budzynska/codeql-workshop.git"
         }
       ]
     },
@@ -35187,6 +35192,25 @@
             "html_url": "https://github.com/NHAS"
           },
           "clone_url": "https://github.com/NHAS/VULNERABLE-CVE-2024-45337.git"
+        },
+        {
+          "id": 1209401513,
+          "name": "gogs",
+          "full_name": "Backline-playground/gogs",
+          "html_url": "https://github.com/Backline-playground/gogs",
+          "description": "Fork of gogs/gogs for reachability benchmark testing (CVE-2024-45337)",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Go",
+          "updated_at": "2026-04-13T11:49:42Z",
+          "pushed_at": "2026-04-13T11:49:03Z",
+          "created_at": "2026-04-13T11:47:51Z",
+          "topics": [],
+          "owner": {
+            "login": "Backline-playground",
+            "html_url": "https://github.com/Backline-playground"
+          },
+          "clone_url": "https://github.com/Backline-playground/gogs.git"
         }
       ]
     },
@@ -42649,30 +42673,6 @@
       ]
     },
     {
-      "cve_id": "CVE-2024-55879",
-      "repositories": [
-        {
-          "id": 1167512178,
-          "name": "CVE-2024-55879",
-          "full_name": "dbwlsdnr95/CVE-2024-55879",
-          "html_url": "https://github.com/dbwlsdnr95/CVE-2024-55879",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-02-26T14:38:35Z",
-          "pushed_at": "2026-02-26T14:37:14Z",
-          "created_at": "2026-02-26T11:25:08Z",
-          "topics": [],
-          "owner": {
-            "login": "dbwlsdnr95",
-            "html_url": "https://github.com/dbwlsdnr95"
-          },
-          "clone_url": "https://github.com/dbwlsdnr95/CVE-2024-55879.git"
-        }
-      ]
-    },
-    {
       "cve_id": "CVE-2024-55968",
       "repositories": [
         {
@@ -42925,8 +42925,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "FreeMarker",
-          "updated_at": "2026-04-13T07:49:25Z",
-          "pushed_at": "2026-04-13T07:49:22Z",
+          "updated_at": "2026-04-13T17:45:40Z",
+          "pushed_at": "2026-04-13T17:45:36Z",
           "created_at": "2025-09-17T01:48:09Z",
           "topics": [
             "cve",
@@ -43595,7 +43595,7 @@
           "html_url": "https://github.com/xaitax/CVE-2024-6387_Check",
           "description": "CVE-2024-6387_Check is a lightweight, efficient tool designed to identify servers running vulnerable versions of OpenSSH",
           "stargazers_count": 517,
-          "forks_count": 97,
+          "forks_count": 98,
           "language": "Python",
           "updated_at": "2026-04-12T14:43:26Z",
           "pushed_at": "2025-06-02T11:06:03Z",
@@ -43657,10 +43657,10 @@
           "full_name": "Karmakstylez/CVE-2024-6387",
           "html_url": "https://github.com/Karmakstylez/CVE-2024-6387",
           "description": "Remote Unauthenticated Code Execution Vulnerability in OpenSSH server (CVE-2024-6387)",
-          "stargazers_count": 177,
+          "stargazers_count": 178,
           "forks_count": 44,
           "language": "Python",
-          "updated_at": "2026-04-12T14:43:37Z",
+          "updated_at": "2026-04-13T18:07:41Z",
           "pushed_at": "2024-08-22T08:50:25Z",
           "created_at": "2024-07-08T11:27:49Z",
           "topics": [],
@@ -48407,8 +48407,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Visual Basic .NET",
-          "updated_at": "2026-04-13T10:15:22Z",
-          "pushed_at": "2026-04-13T10:15:08Z",
+          "updated_at": "2026-04-13T19:57:10Z",
+          "pushed_at": "2026-04-13T19:57:05Z",
           "created_at": "2025-10-21T19:42:27Z",
           "topics": [
             "cmd",
