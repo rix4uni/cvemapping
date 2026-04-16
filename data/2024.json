@@ -2350,10 +2350,10 @@
           "full_name": "Notselwyn/CVE-2024-1086",
           "html_url": "https://github.com/Notselwyn/CVE-2024-1086",
           "description": "Universal local privilege escalation Proof-of-Concept exploit for CVE-2024-1086, working on most Linux kernels between v5.14 and v6.6, including Debian, Ubuntu, and KernelCTF. The success rate is 99.4% in KernelCTF images.",
-          "stargazers_count": 2443,
+          "stargazers_count": 2442,
           "forks_count": 333,
           "language": "C",
-          "updated_at": "2026-04-15T07:28:16Z",
+          "updated_at": "2026-04-16T08:10:17Z",
           "pushed_at": "2024-04-17T16:09:54Z",
           "created_at": "2024-03-20T21:16:41Z",
           "topics": [
@@ -5525,10 +5525,10 @@
           "full_name": "hakaioffsec/CVE-2024-21338",
           "html_url": "https://github.com/hakaioffsec/CVE-2024-21338",
           "description": "Local Privilege Escalation from Admin to Kernel vulnerability on Windows 10 and Windows 11 operating systems with HVCI enabled.",
-          "stargazers_count": 319,
+          "stargazers_count": 318,
           "forks_count": 65,
           "language": "C",
-          "updated_at": "2026-04-08T06:13:29Z",
+          "updated_at": "2026-04-16T08:10:18Z",
           "pushed_at": "2024-04-16T21:00:14Z",
           "created_at": "2024-04-13T05:53:02Z",
           "topics": [],
@@ -5831,10 +5831,10 @@
           "full_name": "CMNatic/CVE-2024-21413",
           "html_url": "https://github.com/CMNatic/CVE-2024-21413",
           "description": "CVE-2024-21413 PoC for THM Lab",
-          "stargazers_count": 233,
+          "stargazers_count": 234,
           "forks_count": 55,
           "language": "Python",
-          "updated_at": "2026-04-15T16:56:42Z",
+          "updated_at": "2026-04-16T09:03:06Z",
           "pushed_at": "2024-03-13T02:44:28Z",
           "created_at": "2024-02-17T14:52:52Z",
           "topics": [],
@@ -24671,42 +24671,61 @@
           "clone_url": "https://github.com/CONDITIONBLACK/CVE-2024-3400-POC.git"
         },
         {
-          "id": 786651484,
-          "name": "CVE-2024-3400-Compromise-Checker",
-          "full_name": "MurrayR0123/CVE-2024-3400-Compromise-Checker",
-          "html_url": "https://github.com/MurrayR0123/CVE-2024-3400-Compromise-Checker",
-          "description": "A simple bash script to check for evidence of compromise related to CVE-2024-3400",
+          "id": 788514206,
+          "name": "CVE-2024-3400",
+          "full_name": "hahasagined/CVE-2024-3400",
+          "html_url": "https://github.com/hahasagined/CVE-2024-3400",
+          "description": "EDL for IPs attacking customers with CVE-2024-3400 ",
           "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "Shell",
-          "updated_at": "2024-04-26T06:02:36Z",
-          "pushed_at": "2024-04-26T06:02:32Z",
-          "created_at": "2024-04-15T03:28:22Z",
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2024-04-18T15:06:03Z",
+          "pushed_at": "2024-04-18T15:13:22Z",
+          "created_at": "2024-04-18T15:06:03Z",
           "topics": [],
           "owner": {
-            "login": "MurrayR0123",
-            "html_url": "https://github.com/MurrayR0123"
+            "login": "hahasagined",
+            "html_url": "https://github.com/hahasagined"
           },
-          "clone_url": "https://github.com/MurrayR0123/CVE-2024-3400-Compromise-Checker.git"
+          "clone_url": "https://github.com/hahasagined/CVE-2024-3400.git"
         },
         {
-          "id": 791335435,
-          "name": "CVE-2024-3400-Checker",
-          "full_name": "terminalJunki3/CVE-2024-3400-Checker",
-          "html_url": "https://github.com/terminalJunki3/CVE-2024-3400-Checker",
-          "description": "Check to see if your Palo Alto firewall has been compromised by running script againt support bundle. ",
+          "id": 1212313315,
+          "name": "PAN-OS-CVE-2024-3400-Command-Injection-Investigation",
+          "full_name": "Zedocun/PAN-OS-CVE-2024-3400-Command-Injection-Investigation",
+          "html_url": "https://github.com/Zedocun/PAN-OS-CVE-2024-3400-Command-Injection-Investigation",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-04-16T09:24:37Z",
+          "pushed_at": "2026-04-16T09:24:33Z",
+          "created_at": "2026-04-16T08:54:55Z",
+          "topics": [],
+          "owner": {
+            "login": "Zedocun",
+            "html_url": "https://github.com/Zedocun"
+          },
+          "clone_url": "https://github.com/Zedocun/PAN-OS-CVE-2024-3400-Command-Injection-Investigation.git"
+        },
+        {
+          "id": 1203166790,
+          "name": "-CTT-PAN-OS-EXPLOIT-CVE-2024-340",
+          "full_name": "SimoesCTT/-CTT-PAN-OS-EXPLOIT-CVE-2024-340",
+          "html_url": "https://github.com/SimoesCTT/-CTT-PAN-OS-EXPLOIT-CVE-2024-340",
+          "description": "CTT-PAN-OS-Exploit – CVE-2024-3400 (CVSS 10.0) with Convergent Time Theory enhancement. Uses α = 0.0302011 temporal dispersion, 33-layer phase resonance cascade, and 11 ns temporal wedge filtering to exploit Palo Alto GlobalProtect command injection. The payload is distributed across 33 temporal layers with exponential priority d",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2024-04-25T13:15:04Z",
-          "pushed_at": "2024-04-25T13:15:00Z",
-          "created_at": "2024-04-24T14:30:34Z",
+          "updated_at": "2026-04-06T19:39:28Z",
+          "pushed_at": "2026-04-06T19:39:24Z",
+          "created_at": "2026-04-06T19:36:16Z",
           "topics": [],
           "owner": {
-            "login": "terminalJunki3",
-            "html_url": "https://github.com/terminalJunki3"
+            "login": "SimoesCTT",
+            "html_url": "https://github.com/SimoesCTT"
           },
-          "clone_url": "https://github.com/terminalJunki3/CVE-2024-3400-Checker.git"
+          "clone_url": "https://github.com/SimoesCTT/-CTT-PAN-OS-EXPLOIT-CVE-2024-340.git"
         },
         {
           "id": 788680382,
@@ -24728,6 +24747,25 @@
           "clone_url": "https://github.com/tfrederick74656/cve-2024-3400-poc.git"
         },
         {
+          "id": 786651484,
+          "name": "CVE-2024-3400-Compromise-Checker",
+          "full_name": "MurrayR0123/CVE-2024-3400-Compromise-Checker",
+          "html_url": "https://github.com/MurrayR0123/CVE-2024-3400-Compromise-Checker",
+          "description": "A simple bash script to check for evidence of compromise related to CVE-2024-3400",
+          "stargazers_count": 0,
+          "forks_count": 1,
+          "language": "Shell",
+          "updated_at": "2024-04-26T06:02:36Z",
+          "pushed_at": "2024-04-26T06:02:32Z",
+          "created_at": "2024-04-15T03:28:22Z",
+          "topics": [],
+          "owner": {
+            "login": "MurrayR0123",
+            "html_url": "https://github.com/MurrayR0123"
+          },
+          "clone_url": "https://github.com/MurrayR0123/CVE-2024-3400-Compromise-Checker.git"
+        },
+        {
           "id": 789741548,
           "name": "cve-2024-3400",
           "full_name": "Kr0ff/cve-2024-3400",
@@ -24745,25 +24783,6 @@
             "html_url": "https://github.com/Kr0ff"
           },
           "clone_url": "https://github.com/Kr0ff/cve-2024-3400.git"
-        },
-        {
-          "id": 788553953,
-          "name": "CVE-2024-3400",
-          "full_name": "codeblueprint/CVE-2024-3400",
-          "html_url": "https://github.com/codeblueprint/CVE-2024-3400",
-          "description": "Simple Python code to check for arbitrary uploading for PaloAlto CVE-2024-3400",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2024-04-18T20:15:20Z",
-          "pushed_at": "2024-04-19T12:14:54Z",
-          "created_at": "2024-04-18T16:35:29Z",
-          "topics": [],
-          "owner": {
-            "login": "codeblueprint",
-            "html_url": "https://github.com/codeblueprint"
-          },
-          "clone_url": "https://github.com/codeblueprint/CVE-2024-3400.git"
         },
         {
           "id": 787738421,
@@ -24785,6 +24804,25 @@
           "clone_url": "https://github.com/index2014/CVE-2024-3400-Checker.git"
         },
         {
+          "id": 788553953,
+          "name": "CVE-2024-3400",
+          "full_name": "codeblueprint/CVE-2024-3400",
+          "html_url": "https://github.com/codeblueprint/CVE-2024-3400",
+          "description": "Simple Python code to check for arbitrary uploading for PaloAlto CVE-2024-3400",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2024-04-18T20:15:20Z",
+          "pushed_at": "2024-04-19T12:14:54Z",
+          "created_at": "2024-04-18T16:35:29Z",
+          "topics": [],
+          "owner": {
+            "login": "codeblueprint",
+            "html_url": "https://github.com/codeblueprint"
+          },
+          "clone_url": "https://github.com/codeblueprint/CVE-2024-3400.git"
+        },
+        {
           "id": 788820989,
           "name": "CVE-2024-3400",
           "full_name": "pwnj0hn/CVE-2024-3400",
@@ -24802,25 +24840,6 @@
             "html_url": "https://github.com/pwnj0hn"
           },
           "clone_url": "https://github.com/pwnj0hn/CVE-2024-3400.git"
-        },
-        {
-          "id": 788665827,
-          "name": "CVE-2024-3400-Check",
-          "full_name": "sxyrxyy/CVE-2024-3400-Check",
-          "html_url": "https://github.com/sxyrxyy/CVE-2024-3400-Check",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2024-04-18T21:13:17Z",
-          "pushed_at": "2024-04-18T22:56:48Z",
-          "created_at": "2024-04-18T21:12:49Z",
-          "topics": [],
-          "owner": {
-            "login": "sxyrxyy",
-            "html_url": "https://github.com/sxyrxyy"
-          },
-          "clone_url": "https://github.com/sxyrxyy/CVE-2024-3400-Check.git"
         },
         {
           "id": 786201656,
@@ -24880,6 +24899,25 @@
           "clone_url": "https://github.com/MrR0b0t19/CVE-2024-3400.git"
         },
         {
+          "id": 788665827,
+          "name": "CVE-2024-3400-Check",
+          "full_name": "sxyrxyy/CVE-2024-3400-Check",
+          "html_url": "https://github.com/sxyrxyy/CVE-2024-3400-Check",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2024-04-18T21:13:17Z",
+          "pushed_at": "2024-04-18T22:56:48Z",
+          "created_at": "2024-04-18T21:12:49Z",
+          "topics": [],
+          "owner": {
+            "login": "sxyrxyy",
+            "html_url": "https://github.com/sxyrxyy"
+          },
+          "clone_url": "https://github.com/sxyrxyy/CVE-2024-3400-Check.git"
+        },
+        {
           "id": 788666276,
           "name": "CVE-2024-3400",
           "full_name": "Ravaan21/CVE-2024-3400",
@@ -24899,42 +24937,23 @@
           "clone_url": "https://github.com/Ravaan21/CVE-2024-3400.git"
         },
         {
-          "id": 1203166790,
-          "name": "-CTT-PAN-OS-EXPLOIT-CVE-2024-340",
-          "full_name": "SimoesCTT/-CTT-PAN-OS-EXPLOIT-CVE-2024-340",
-          "html_url": "https://github.com/SimoesCTT/-CTT-PAN-OS-EXPLOIT-CVE-2024-340",
-          "description": "CTT-PAN-OS-Exploit – CVE-2024-3400 (CVSS 10.0) with Convergent Time Theory enhancement. Uses α = 0.0302011 temporal dispersion, 33-layer phase resonance cascade, and 11 ns temporal wedge filtering to exploit Palo Alto GlobalProtect command injection. The payload is distributed across 33 temporal layers with exponential priority d",
+          "id": 791335435,
+          "name": "CVE-2024-3400-Checker",
+          "full_name": "terminalJunki3/CVE-2024-3400-Checker",
+          "html_url": "https://github.com/terminalJunki3/CVE-2024-3400-Checker",
+          "description": "Check to see if your Palo Alto firewall has been compromised by running script againt support bundle. ",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-04-06T19:39:28Z",
-          "pushed_at": "2026-04-06T19:39:24Z",
-          "created_at": "2026-04-06T19:36:16Z",
+          "updated_at": "2024-04-25T13:15:04Z",
+          "pushed_at": "2024-04-25T13:15:00Z",
+          "created_at": "2024-04-24T14:30:34Z",
           "topics": [],
           "owner": {
-            "login": "SimoesCTT",
-            "html_url": "https://github.com/SimoesCTT"
+            "login": "terminalJunki3",
+            "html_url": "https://github.com/terminalJunki3"
           },
-          "clone_url": "https://github.com/SimoesCTT/-CTT-PAN-OS-EXPLOIT-CVE-2024-340.git"
-        },
-        {
-          "id": 788514206,
-          "name": "CVE-2024-3400",
-          "full_name": "hahasagined/CVE-2024-3400",
-          "html_url": "https://github.com/hahasagined/CVE-2024-3400",
-          "description": "EDL for IPs attacking customers with CVE-2024-3400 ",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2024-04-18T15:06:03Z",
-          "pushed_at": "2024-04-18T15:13:22Z",
-          "created_at": "2024-04-18T15:06:03Z",
-          "topics": [],
-          "owner": {
-            "login": "hahasagined",
-            "html_url": "https://github.com/hahasagined"
-          },
-          "clone_url": "https://github.com/hahasagined/CVE-2024-3400.git"
+          "clone_url": "https://github.com/terminalJunki3/CVE-2024-3400-Checker.git"
         },
         {
           "id": 802848040,
@@ -28975,6 +28994,139 @@
           "clone_url": "https://github.com/AliHj98/cve-2024-38063-Anonyvader.git"
         },
         {
+          "id": 844930990,
+          "name": "Disable-IPv6-CVE-2024-38063-Fix",
+          "full_name": "almogopp/Disable-IPv6-CVE-2024-38063-Fix",
+          "html_url": "https://github.com/almogopp/Disable-IPv6-CVE-2024-38063-Fix",
+          "description": "A PowerShell script to temporarily mitigate the CVE-2024-38063 vulnerability by disabling IPv6 on Windows systems. This workaround modifies the registry to reduce the risk of exploitation without needing the immediate installation of the official Microsoft KB update. Intended as a temporary fix",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "PowerShell",
+          "updated_at": "2024-08-20T08:50:31Z",
+          "pushed_at": "2024-08-20T08:50:28Z",
+          "created_at": "2024-08-20T08:48:08Z",
+          "topics": [],
+          "owner": {
+            "login": "almogopp",
+            "html_url": "https://github.com/almogopp"
+          },
+          "clone_url": "https://github.com/almogopp/Disable-IPv6-CVE-2024-38063-Fix.git"
+        },
+        {
+          "id": 844272199,
+          "name": "cve-2024-38063",
+          "full_name": "p33d/cve-2024-38063",
+          "html_url": "https://github.com/p33d/cve-2024-38063",
+          "description": "Poc for cve-2024-38063 ",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2024-08-18T22:24:43Z",
+          "pushed_at": "2024-08-18T22:24:43Z",
+          "created_at": "2024-08-18T22:24:43Z",
+          "topics": [],
+          "owner": {
+            "login": "p33d",
+            "html_url": "https://github.com/p33d"
+          },
+          "clone_url": "https://github.com/p33d/cve-2024-38063.git"
+        },
+        {
+          "id": 851150728,
+          "name": "cve-2024-38063",
+          "full_name": "ps-interactive/cve-2024-38063",
+          "html_url": "https://github.com/ps-interactive/cve-2024-38063",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2024-09-02T14:16:55Z",
+          "pushed_at": "2024-09-02T14:16:52Z",
+          "created_at": "2024-09-02T14:16:31Z",
+          "topics": [],
+          "owner": {
+            "login": "ps-interactive",
+            "html_url": "https://github.com/ps-interactive"
+          },
+          "clone_url": "https://github.com/ps-interactive/cve-2024-38063.git"
+        },
+        {
+          "id": 1188052075,
+          "name": "CVE-CVSS--CVE-2024-38063-IPv6-TCP-IP-Remote-Code-Execution-Analysis",
+          "full_name": "SALMA-ESSAOUD/CVE-CVSS--CVE-2024-38063-IPv6-TCP-IP-Remote-Code-Execution-Analysis",
+          "html_url": "https://github.com/SALMA-ESSAOUD/CVE-CVSS--CVE-2024-38063-IPv6-TCP-IP-Remote-Code-Execution-Analysis",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-03-21T15:13:56Z",
+          "pushed_at": "2026-03-21T15:13:53Z",
+          "created_at": "2026-03-21T14:55:12Z",
+          "topics": [],
+          "owner": {
+            "login": "SALMA-ESSAOUD",
+            "html_url": "https://github.com/SALMA-ESSAOUD"
+          },
+          "clone_url": "https://github.com/SALMA-ESSAOUD/CVE-CVSS--CVE-2024-38063-IPv6-TCP-IP-Remote-Code-Execution-Analysis.git"
+        },
+        {
+          "id": 860985934,
+          "name": "CVE-2024-38063-Medium",
+          "full_name": "ArenaldyP/CVE-2024-38063-Medium",
+          "html_url": "https://github.com/ArenaldyP/CVE-2024-38063-Medium",
+          "description": "Kode Eksploitasi CVE-2024-38063",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2024-09-22T16:03:48Z",
+          "pushed_at": "2024-09-22T16:03:45Z",
+          "created_at": "2024-09-21T17:33:52Z",
+          "topics": [],
+          "owner": {
+            "login": "ArenaldyP",
+            "html_url": "https://github.com/ArenaldyP"
+          },
+          "clone_url": "https://github.com/ArenaldyP/CVE-2024-38063-Medium.git"
+        },
+        {
+          "id": 872589341,
+          "name": "CVE-2024-38063",
+          "full_name": "idkwastaken/CVE-2024-38063",
+          "html_url": "https://github.com/idkwastaken/CVE-2024-38063",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2024-10-14T17:59:59Z",
+          "pushed_at": "2024-10-14T17:59:56Z",
+          "created_at": "2024-10-14T17:46:58Z",
+          "topics": [],
+          "owner": {
+            "login": "idkwastaken",
+            "html_url": "https://github.com/idkwastaken"
+          },
+          "clone_url": "https://github.com/idkwastaken/CVE-2024-38063.git"
+        },
+        {
+          "id": 844698787,
+          "name": "CVE-2024-38063-Remediation",
+          "full_name": "dweger-scripts/CVE-2024-38063-Remediation",
+          "html_url": "https://github.com/dweger-scripts/CVE-2024-38063-Remediation",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "PowerShell",
+          "updated_at": "2024-08-21T14:58:51Z",
+          "pushed_at": "2024-08-21T14:58:48Z",
+          "created_at": "2024-08-19T19:44:37Z",
+          "topics": [],
+          "owner": {
+            "login": "dweger-scripts",
+            "html_url": "https://github.com/dweger-scripts"
+          },
+          "clone_url": "https://github.com/dweger-scripts/CVE-2024-38063-Remediation.git"
+        },
+        {
           "id": 853823211,
           "name": "quick-fix-cve-2024-38063",
           "full_name": "FrancescoDiSalesGithub/quick-fix-cve-2024-38063",
@@ -28999,158 +29151,6 @@
             "html_url": "https://github.com/FrancescoDiSalesGithub"
           },
           "clone_url": "https://github.com/FrancescoDiSalesGithub/quick-fix-cve-2024-38063.git"
-        },
-        {
-          "id": 844698787,
-          "name": "CVE-2024-38063-Remediation",
-          "full_name": "dweger-scripts/CVE-2024-38063-Remediation",
-          "html_url": "https://github.com/dweger-scripts/CVE-2024-38063-Remediation",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "PowerShell",
-          "updated_at": "2024-08-21T14:58:51Z",
-          "pushed_at": "2024-08-21T14:58:48Z",
-          "created_at": "2024-08-19T19:44:37Z",
-          "topics": [],
-          "owner": {
-            "login": "dweger-scripts",
-            "html_url": "https://github.com/dweger-scripts"
-          },
-          "clone_url": "https://github.com/dweger-scripts/CVE-2024-38063-Remediation.git"
-        },
-        {
-          "id": 844930990,
-          "name": "Disable-IPv6-CVE-2024-38063-Fix",
-          "full_name": "almogopp/Disable-IPv6-CVE-2024-38063-Fix",
-          "html_url": "https://github.com/almogopp/Disable-IPv6-CVE-2024-38063-Fix",
-          "description": "A PowerShell script to temporarily mitigate the CVE-2024-38063 vulnerability by disabling IPv6 on Windows systems. This workaround modifies the registry to reduce the risk of exploitation without needing the immediate installation of the official Microsoft KB update. Intended as a temporary fix",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "PowerShell",
-          "updated_at": "2024-08-20T08:50:31Z",
-          "pushed_at": "2024-08-20T08:50:28Z",
-          "created_at": "2024-08-20T08:48:08Z",
-          "topics": [],
-          "owner": {
-            "login": "almogopp",
-            "html_url": "https://github.com/almogopp"
-          },
-          "clone_url": "https://github.com/almogopp/Disable-IPv6-CVE-2024-38063-Fix.git"
-        },
-        {
-          "id": 851150728,
-          "name": "cve-2024-38063",
-          "full_name": "ps-interactive/cve-2024-38063",
-          "html_url": "https://github.com/ps-interactive/cve-2024-38063",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2024-09-02T14:16:55Z",
-          "pushed_at": "2024-09-02T14:16:52Z",
-          "created_at": "2024-09-02T14:16:31Z",
-          "topics": [],
-          "owner": {
-            "login": "ps-interactive",
-            "html_url": "https://github.com/ps-interactive"
-          },
-          "clone_url": "https://github.com/ps-interactive/cve-2024-38063.git"
-        },
-        {
-          "id": 844272199,
-          "name": "cve-2024-38063",
-          "full_name": "p33d/cve-2024-38063",
-          "html_url": "https://github.com/p33d/cve-2024-38063",
-          "description": "Poc for cve-2024-38063 ",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2024-08-18T22:24:43Z",
-          "pushed_at": "2024-08-18T22:24:43Z",
-          "created_at": "2024-08-18T22:24:43Z",
-          "topics": [],
-          "owner": {
-            "login": "p33d",
-            "html_url": "https://github.com/p33d"
-          },
-          "clone_url": "https://github.com/p33d/cve-2024-38063.git"
-        },
-        {
-          "id": 1188052075,
-          "name": "CVE-CVSS--CVE-2024-38063-IPv6-TCP-IP-Remote-Code-Execution-Analysis",
-          "full_name": "SALMA-ESSAOUD/CVE-CVSS--CVE-2024-38063-IPv6-TCP-IP-Remote-Code-Execution-Analysis",
-          "html_url": "https://github.com/SALMA-ESSAOUD/CVE-CVSS--CVE-2024-38063-IPv6-TCP-IP-Remote-Code-Execution-Analysis",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-03-21T15:13:56Z",
-          "pushed_at": "2026-03-21T15:13:53Z",
-          "created_at": "2026-03-21T14:55:12Z",
-          "topics": [],
-          "owner": {
-            "login": "SALMA-ESSAOUD",
-            "html_url": "https://github.com/SALMA-ESSAOUD"
-          },
-          "clone_url": "https://github.com/SALMA-ESSAOUD/CVE-CVSS--CVE-2024-38063-IPv6-TCP-IP-Remote-Code-Execution-Analysis.git"
-        },
-        {
-          "id": 872589341,
-          "name": "CVE-2024-38063",
-          "full_name": "idkwastaken/CVE-2024-38063",
-          "html_url": "https://github.com/idkwastaken/CVE-2024-38063",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2024-10-14T17:59:59Z",
-          "pushed_at": "2024-10-14T17:59:56Z",
-          "created_at": "2024-10-14T17:46:58Z",
-          "topics": [],
-          "owner": {
-            "login": "idkwastaken",
-            "html_url": "https://github.com/idkwastaken"
-          },
-          "clone_url": "https://github.com/idkwastaken/CVE-2024-38063.git"
-        },
-        {
-          "id": 860985934,
-          "name": "CVE-2024-38063-Medium",
-          "full_name": "ArenaldyP/CVE-2024-38063-Medium",
-          "html_url": "https://github.com/ArenaldyP/CVE-2024-38063-Medium",
-          "description": "Kode Eksploitasi CVE-2024-38063",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2024-09-22T16:03:48Z",
-          "pushed_at": "2024-09-22T16:03:45Z",
-          "created_at": "2024-09-21T17:33:52Z",
-          "topics": [],
-          "owner": {
-            "login": "ArenaldyP",
-            "html_url": "https://github.com/ArenaldyP"
-          },
-          "clone_url": "https://github.com/ArenaldyP/CVE-2024-38063-Medium.git"
-        },
-        {
-          "id": 1172605677,
-          "name": "CVE-2024-38063-Exploit-Refactoring",
-          "full_name": "arrhenius975/CVE-2024-38063-Exploit-Refactoring",
-          "html_url": "https://github.com/arrhenius975/CVE-2024-38063-Exploit-Refactoring",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-03-04T20:31:09Z",
-          "pushed_at": "2026-03-04T20:31:06Z",
-          "created_at": "2026-03-04T13:55:31Z",
-          "topics": [],
-          "owner": {
-            "login": "arrhenius975",
-            "html_url": "https://github.com/arrhenius975"
-          },
-          "clone_url": "https://github.com/arrhenius975/CVE-2024-38063-Exploit-Refactoring.git"
         },
         {
           "id": 899722656,
@@ -34179,7 +34179,7 @@
           "html_url": "https://github.com/CrackerCat/CVE-2024-44083",
           "description": "Makes IDA (all versions) to crash upon opening it. ",
           "stargazers_count": 0,
-          "forks_count": 8,
+          "forks_count": 7,
           "language": "",
           "updated_at": "2024-08-26T01:14:25Z",
           "pushed_at": "2024-08-26T00:12:57Z",
@@ -48378,8 +48378,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Visual Basic .NET",
-          "updated_at": "2026-04-16T06:16:28Z",
-          "pushed_at": "2026-04-16T06:16:24Z",
+          "updated_at": "2026-04-16T08:05:06Z",
+          "pushed_at": "2026-04-16T08:05:02Z",
           "created_at": "2025-10-21T19:42:27Z",
           "topics": [
             "cmd",
