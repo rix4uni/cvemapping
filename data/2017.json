@@ -112,10 +112,10 @@
           "full_name": "NatteeSetobol/Etern-blue-Windows-7-Checker",
           "html_url": "https://github.com/NatteeSetobol/Etern-blue-Windows-7-Checker",
           "description": "EternalBlue is a well-known SMB exploit created by the NSA to attack various versions of Windows, including Windows 7. Etern-Blue-Windows-7-Checker will basically send SMB packets to a host to see if that Windows host machine is vulnerable to the EternalBlue exploit (CVE-2017-0143).",
-          "stargazers_count": 7,
+          "stargazers_count": 6,
           "forks_count": 3,
           "language": "C++",
-          "updated_at": "2026-03-07T07:19:21Z",
+          "updated_at": "2026-04-20T02:01:41Z",
           "pushed_at": "2026-03-07T07:19:18Z",
           "created_at": "2020-10-07T06:19:45Z",
           "topics": [],
@@ -199,23 +199,42 @@
           "clone_url": "https://github.com/peterpt/eternal_scanner.git"
         },
         {
-          "id": 1117781237,
-          "name": "Eternal-Blue-CVE-2017-0144-THM-Write-Up",
-          "full_name": "Mitsu-bis/Eternal-Blue-CVE-2017-0144-THM-Write-Up",
-          "html_url": "https://github.com/Mitsu-bis/Eternal-Blue-CVE-2017-0144-THM-Write-Up",
-          "description": "The SMBv1 server in Microsoft Windows Vista SP2; Windows Server 2008 SP2 and R2 SP1; Windows 7 SP1; Windows 8.1; Windows Server 2012 Gold and R2; Windows RT 8.1; and Windows 10 Gold, 1511, and 1607; and Windows Server 2016 allows remote attackers to execute arbitrary code via crafted packets, aka \"Windows SMB Remote Code Execution Vulnerability.\"",
+          "id": 1215633909,
+          "name": "Vulnerability-Risk-Assessment-TVRA-Enterprise-Network",
+          "full_name": "klairmanraj/Vulnerability-Risk-Assessment-TVRA-Enterprise-Network",
+          "html_url": "https://github.com/klairmanraj/Vulnerability-Risk-Assessment-TVRA-Enterprise-Network",
+          "description": "Qualitative TVRA for a multi-VLAN enterprise lab: Stored XSS on WebGoat (HIGH, 16), Stored XSS on Magento (ABSENT, MEDIUM, 8), and CVE-2017-0144 EternalBlue on Metasploitable 3 (CRITICAL, 25). Scored via Likelihood × Impact using CVSS v3.0 and ZAP/Nessus/Wireshark evidence.",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2025-12-19T19:44:20Z",
-          "pushed_at": "2025-12-19T19:44:17Z",
-          "created_at": "2025-12-16T20:02:26Z",
+          "updated_at": "2026-04-20T05:44:39Z",
+          "pushed_at": "2026-04-20T05:44:35Z",
+          "created_at": "2026-04-20T05:31:27Z",
           "topics": [],
           "owner": {
-            "login": "Mitsu-bis",
-            "html_url": "https://github.com/Mitsu-bis"
+            "login": "klairmanraj",
+            "html_url": "https://github.com/klairmanraj"
           },
-          "clone_url": "https://github.com/Mitsu-bis/Eternal-Blue-CVE-2017-0144-THM-Write-Up.git"
+          "clone_url": "https://github.com/klairmanraj/Vulnerability-Risk-Assessment-TVRA-Enterprise-Network.git"
+        },
+        {
+          "id": 1215549345,
+          "name": "Multi-VLAN-Enterprise-Network-Security-Infrastructure",
+          "full_name": "klairmanraj/Multi-VLAN-Enterprise-Network-Security-Infrastructure",
+          "html_url": "https://github.com/klairmanraj/Multi-VLAN-Enterprise-Network-Security-Infrastructure",
+          "description": "Multi-VLAN virtual network across 10 VMs: GRE tunneling, nftables firewall, Active Directory, BIND9 DNS, Kea DHCP, Docker web services, SMB file sharing. Vulnerability assessment using OWASP ZAP (Stored XSS) and Nessus (CVE-2017-0144 EternalBlue). Validated with Wireshark.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-04-20T05:17:01Z",
+          "pushed_at": "2026-04-20T05:16:25Z",
+          "created_at": "2026-04-20T02:58:42Z",
+          "topics": [],
+          "owner": {
+            "login": "klairmanraj",
+            "html_url": "https://github.com/klairmanraj"
+          },
+          "clone_url": "https://github.com/klairmanraj/Multi-VLAN-Enterprise-Network-Security-Infrastructure.git"
         },
         {
           "id": 1102574541,
@@ -239,6 +258,44 @@
             "html_url": "https://github.com/althany"
           },
           "clone_url": "https://github.com/althany/CVE-2017-0144_Lab-Guide.git"
+        },
+        {
+          "id": 1117781237,
+          "name": "Eternal-Blue-CVE-2017-0144-THM-Write-Up",
+          "full_name": "Mitsu-bis/Eternal-Blue-CVE-2017-0144-THM-Write-Up",
+          "html_url": "https://github.com/Mitsu-bis/Eternal-Blue-CVE-2017-0144-THM-Write-Up",
+          "description": "The SMBv1 server in Microsoft Windows Vista SP2; Windows Server 2008 SP2 and R2 SP1; Windows 7 SP1; Windows 8.1; Windows Server 2012 Gold and R2; Windows RT 8.1; and Windows 10 Gold, 1511, and 1607; and Windows Server 2016 allows remote attackers to execute arbitrary code via crafted packets, aka \"Windows SMB Remote Code Execution Vulnerability.\"",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2025-12-19T19:44:20Z",
+          "pushed_at": "2025-12-19T19:44:17Z",
+          "created_at": "2025-12-16T20:02:26Z",
+          "topics": [],
+          "owner": {
+            "login": "Mitsu-bis",
+            "html_url": "https://github.com/Mitsu-bis"
+          },
+          "clone_url": "https://github.com/Mitsu-bis/Eternal-Blue-CVE-2017-0144-THM-Write-Up.git"
+        },
+        {
+          "id": 1215644589,
+          "name": "Multi-VLAN-Enterprise-Network-Vulnerability-Assessment",
+          "full_name": "klairmanraj/Multi-VLAN-Enterprise-Network-Vulnerability-Assessment",
+          "html_url": "https://github.com/klairmanraj/Multi-VLAN-Enterprise-Network-Vulnerability-Assessment",
+          "description": "Professional vulnerability assessment of a multi-VLAN enterprise network (student21.local). Confirmed Stored XSS on WebGoat (HIGH, 16) via OWASP ZAP fuzzer, absent XSS on Magento via server sanitization, and CVE-2017-0144 EternalBlue on Metasploitable 3 (CRITICAL, 25) via Nessus + Wireshark PCAP validation.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-04-20T05:50:07Z",
+          "pushed_at": "2026-04-20T05:50:03Z",
+          "created_at": "2026-04-20T05:48:20Z",
+          "topics": [],
+          "owner": {
+            "login": "klairmanraj",
+            "html_url": "https://github.com/klairmanraj"
+          },
+          "clone_url": "https://github.com/klairmanraj/Multi-VLAN-Enterprise-Network-Vulnerability-Assessment.git"
         }
       ]
     },
@@ -294,10 +351,10 @@
           "full_name": "bhdresh/CVE-2017-0199",
           "html_url": "https://github.com/bhdresh/CVE-2017-0199",
           "description": "Exploit toolkit CVE-2017-0199 - v4.0 is a handy python script which provides pentesters and security researchers a quick and effective way to test Microsoft Office RCE. It could generate a malicious RTF/PPSX file and deliver metasploit / meterpreter / other payload to victim without any complex configuration.",
-          "stargazers_count": 727,
-          "forks_count": 258,
+          "stargazers_count": 726,
+          "forks_count": 257,
           "language": "Python",
-          "updated_at": "2026-04-16T14:49:46Z",
+          "updated_at": "2026-04-20T02:00:21Z",
           "pushed_at": "2017-11-19T11:01:16Z",
           "created_at": "2017-04-17T08:10:07Z",
           "topics": [],
@@ -1882,10 +1939,10 @@
           "full_name": "rip1s/CVE-2017-11882",
           "html_url": "https://github.com/rip1s/CVE-2017-11882",
           "description": "CVE-2017-11882 Exploit accepts over 17k bytes long command/code in maximum.",
-          "stargazers_count": 331,
+          "stargazers_count": 330,
           "forks_count": 93,
           "language": "Python",
-          "updated_at": "2026-04-09T19:06:00Z",
+          "updated_at": "2026-04-20T02:00:33Z",
           "pushed_at": "2017-12-06T12:47:31Z",
           "created_at": "2017-11-21T15:22:41Z",
           "topics": [
@@ -2348,44 +2405,6 @@
             "html_url": "https://github.com/BeyondCy"
           },
           "clone_url": "https://github.com/BeyondCy/CVE-2017-12615.git"
-        },
-        {
-          "id": 1098284303,
-          "name": "CVE-2017-12615-Home-Lab",
-          "full_name": "netw0rk7/CVE-2017-12615-Home-Lab",
-          "html_url": "https://github.com/netw0rk7/CVE-2017-12615-Home-Lab",
-          "description": "CVE-2017-12615 Tomcat: Remote Code Execution via JSP Upload Home Lab for Red Teaming, Penetration Testing",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Java",
-          "updated_at": "2025-11-18T15:23:23Z",
-          "pushed_at": "2025-12-01T06:11:11Z",
-          "created_at": "2025-11-17T13:49:44Z",
-          "topics": [],
-          "owner": {
-            "login": "netw0rk7",
-            "html_url": "https://github.com/netw0rk7"
-          },
-          "clone_url": "https://github.com/netw0rk7/CVE-2017-12615-Home-Lab.git"
-        },
-        {
-          "id": 1091858457,
-          "name": "CVE-2017-12615",
-          "full_name": "Fa1c0n35/CVE-2017-12615",
-          "html_url": "https://github.com/Fa1c0n35/CVE-2017-12615",
-          "description": "Tomcat - PUT Method",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Java",
-          "updated_at": "2025-11-07T16:16:03Z",
-          "pushed_at": "2025-11-07T16:15:59Z",
-          "created_at": "2025-11-07T16:14:42Z",
-          "topics": [],
-          "owner": {
-            "login": "Fa1c0n35",
-            "html_url": "https://github.com/Fa1c0n35"
-          },
-          "clone_url": "https://github.com/Fa1c0n35/CVE-2017-12615.git"
         }
       ]
     },
@@ -5184,6 +5203,44 @@
           "clone_url": "https://github.com/R4v3nBl4ck/Apache-Struts-2-CVE-2017-5638-Exploit-.git"
         },
         {
+          "id": 86415022,
+          "name": "Strutscli",
+          "full_name": "opt9/Strutscli",
+          "html_url": "https://github.com/opt9/Strutscli",
+          "description": "Struts2 RCE CVE-2017-5638 CLI shell",
+          "stargazers_count": 2,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2017-04-14T08:03:48Z",
+          "pushed_at": "2017-03-28T04:36:11Z",
+          "created_at": "2017-03-28T04:31:44Z",
+          "topics": [],
+          "owner": {
+            "login": "opt9",
+            "html_url": "https://github.com/opt9"
+          },
+          "clone_url": "https://github.com/opt9/Strutscli.git"
+        },
+        {
+          "id": 85145901,
+          "name": "Strutshock",
+          "full_name": "opt9/Strutshock",
+          "html_url": "https://github.com/opt9/Strutshock",
+          "description": "Struts2 RCE CVE-2017-5638 non-intrusive check shell script",
+          "stargazers_count": 2,
+          "forks_count": 1,
+          "language": "Shell",
+          "updated_at": "2021-09-30T13:38:46Z",
+          "pushed_at": "2017-03-16T04:02:40Z",
+          "created_at": "2017-03-16T02:59:22Z",
+          "topics": [],
+          "owner": {
+            "login": "opt9",
+            "html_url": "https://github.com/opt9"
+          },
+          "clone_url": "https://github.com/opt9/Strutshock.git"
+        },
+        {
           "id": 84725982,
           "name": "ExpStruts",
           "full_name": "lolwaleet/ExpStruts",
@@ -5207,23 +5264,23 @@
           "clone_url": "https://github.com/lolwaleet/ExpStruts.git"
         },
         {
-          "id": 85145901,
-          "name": "Strutshock",
-          "full_name": "opt9/Strutshock",
-          "html_url": "https://github.com/opt9/Strutshock",
-          "description": "Struts2 RCE CVE-2017-5638 non-intrusive check shell script",
+          "id": 1207824334,
+          "name": "attacker-lab-cve-2017-5638-cve-2021-41773-paper",
+          "full_name": "Kouf320/attacker-lab-cve-2017-5638-cve-2021-41773-paper",
+          "html_url": "https://github.com/Kouf320/attacker-lab-cve-2017-5638-cve-2021-41773-paper",
+          "description": "",
           "stargazers_count": 2,
-          "forks_count": 1,
+          "forks_count": 0,
           "language": "Shell",
-          "updated_at": "2021-09-30T13:38:46Z",
-          "pushed_at": "2017-03-16T04:02:40Z",
-          "created_at": "2017-03-16T02:59:22Z",
+          "updated_at": "2026-04-19T18:20:40Z",
+          "pushed_at": "2026-04-11T13:09:51Z",
+          "created_at": "2026-04-11T13:03:03Z",
           "topics": [],
           "owner": {
-            "login": "opt9",
-            "html_url": "https://github.com/opt9"
+            "login": "Kouf320",
+            "html_url": "https://github.com/Kouf320"
           },
-          "clone_url": "https://github.com/opt9/Strutshock.git"
+          "clone_url": "https://github.com/Kouf320/attacker-lab-cve-2017-5638-cve-2021-41773-paper.git"
         },
         {
           "id": 84639178,
@@ -5245,23 +5302,99 @@
           "clone_url": "https://github.com/aljazceru/CVE-2017-5638-Apache-Struts2.git"
         },
         {
-          "id": 86415022,
-          "name": "Strutscli",
-          "full_name": "opt9/Strutscli",
-          "html_url": "https://github.com/opt9/Strutscli",
-          "description": "Struts2 RCE CVE-2017-5638 CLI shell",
-          "stargazers_count": 2,
+          "id": 1116564882,
+          "name": "CVE-2017-5638-Attack-and-Defense",
+          "full_name": "ACharaf06/CVE-2017-5638-Attack-and-Defense",
+          "html_url": "https://github.com/ACharaf06/CVE-2017-5638-Attack-and-Defense",
+          "description": "",
+          "stargazers_count": 1,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2017-04-14T08:03:48Z",
-          "pushed_at": "2017-03-28T04:36:11Z",
-          "created_at": "2017-03-28T04:31:44Z",
+          "language": "Java",
+          "updated_at": "2026-01-06T15:47:09Z",
+          "pushed_at": "2025-12-16T09:13:50Z",
+          "created_at": "2025-12-15T04:12:51Z",
           "topics": [],
           "owner": {
-            "login": "opt9",
-            "html_url": "https://github.com/opt9"
+            "login": "ACharaf06",
+            "html_url": "https://github.com/ACharaf06"
           },
-          "clone_url": "https://github.com/opt9/Strutscli.git"
+          "clone_url": "https://github.com/ACharaf06/CVE-2017-5638-Attack-and-Defense.git"
+        },
+        {
+          "id": 92644725,
+          "name": "Struts2Shell",
+          "full_name": "jpacora/Struts2Shell",
+          "html_url": "https://github.com/jpacora/Struts2Shell",
+          "description": "An exploit (and library) for CVE-2017-5638 - Apache Struts2 S2-045 bug.",
+          "stargazers_count": 1,
+          "forks_count": 1,
+          "language": "JavaScript",
+          "updated_at": "2023-05-25T03:31:02Z",
+          "pushed_at": "2017-06-03T06:33:51Z",
+          "created_at": "2017-05-28T06:44:13Z",
+          "topics": [],
+          "owner": {
+            "login": "jpacora",
+            "html_url": "https://github.com/jpacora"
+          },
+          "clone_url": "https://github.com/jpacora/Struts2Shell.git"
+        },
+        {
+          "id": 84620334,
+          "name": "OgnlContentTypeRejectorValve",
+          "full_name": "Masahiro-Yamada/OgnlContentTypeRejectorValve",
+          "html_url": "https://github.com/Masahiro-Yamada/OgnlContentTypeRejectorValve",
+          "description": "This is Valve for Tomcat7 to block  Struts 2 Remote Code Execution vulnerability (CVE-2017-5638)",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Java",
+          "updated_at": "2017-04-11T00:06:36Z",
+          "pushed_at": "2017-03-13T14:49:25Z",
+          "created_at": "2017-03-11T03:18:12Z",
+          "topics": [],
+          "owner": {
+            "login": "Masahiro-Yamada",
+            "html_url": "https://github.com/Masahiro-Yamada"
+          },
+          "clone_url": "https://github.com/Masahiro-Yamada/OgnlContentTypeRejectorValve.git"
+        },
+        {
+          "id": 84819853,
+          "name": "CVE-2017-5638-Apache-Struts2",
+          "full_name": "oktavianto/CVE-2017-5638-Apache-Struts2",
+          "html_url": "https://github.com/oktavianto/CVE-2017-5638-Apache-Struts2",
+          "description": "Example PHP Exploiter for CVE-2017-5638",
+          "stargazers_count": 1,
+          "forks_count": 4,
+          "language": "PHP",
+          "updated_at": "2024-08-12T19:28:22Z",
+          "pushed_at": "2017-03-20T19:40:16Z",
+          "created_at": "2017-03-13T11:39:55Z",
+          "topics": [],
+          "owner": {
+            "login": "oktavianto",
+            "html_url": "https://github.com/oktavianto"
+          },
+          "clone_url": "https://github.com/oktavianto/CVE-2017-5638-Apache-Struts2.git"
+        },
+        {
+          "id": 93710291,
+          "name": "struts-rce-cve-2017-5638",
+          "full_name": "riyazwalikar/struts-rce-cve-2017-5638",
+          "html_url": "https://github.com/riyazwalikar/struts-rce-cve-2017-5638",
+          "description": "Struts-RCE CVE-2017-5638",
+          "stargazers_count": 1,
+          "forks_count": 2,
+          "language": "Python",
+          "updated_at": "2017-06-08T08:18:51Z",
+          "pushed_at": "2017-06-08T05:25:42Z",
+          "created_at": "2017-06-08T05:22:31Z",
+          "topics": [],
+          "owner": {
+            "login": "riyazwalikar",
+            "html_url": "https://github.com/riyazwalikar"
+          },
+          "clone_url": "https://github.com/riyazwalikar/struts-rce-cve-2017-5638.git"
         },
         {
           "id": 85733752,
@@ -5285,120 +5418,6 @@
             "html_url": "https://github.com/KarzsGHR"
           },
           "clone_url": "https://github.com/KarzsGHR/S2-046_S2-045_POC.git"
-        },
-        {
-          "id": 84819853,
-          "name": "CVE-2017-5638-Apache-Struts2",
-          "full_name": "oktavianto/CVE-2017-5638-Apache-Struts2",
-          "html_url": "https://github.com/oktavianto/CVE-2017-5638-Apache-Struts2",
-          "description": "Example PHP Exploiter for CVE-2017-5638",
-          "stargazers_count": 1,
-          "forks_count": 4,
-          "language": "PHP",
-          "updated_at": "2024-08-12T19:28:22Z",
-          "pushed_at": "2017-03-20T19:40:16Z",
-          "created_at": "2017-03-13T11:39:55Z",
-          "topics": [],
-          "owner": {
-            "login": "oktavianto",
-            "html_url": "https://github.com/oktavianto"
-          },
-          "clone_url": "https://github.com/oktavianto/CVE-2017-5638-Apache-Struts2.git"
-        },
-        {
-          "id": 92644725,
-          "name": "Struts2Shell",
-          "full_name": "jpacora/Struts2Shell",
-          "html_url": "https://github.com/jpacora/Struts2Shell",
-          "description": "An exploit (and library) for CVE-2017-5638 - Apache Struts2 S2-045 bug.",
-          "stargazers_count": 1,
-          "forks_count": 1,
-          "language": "JavaScript",
-          "updated_at": "2023-05-25T03:31:02Z",
-          "pushed_at": "2017-06-03T06:33:51Z",
-          "created_at": "2017-05-28T06:44:13Z",
-          "topics": [],
-          "owner": {
-            "login": "jpacora",
-            "html_url": "https://github.com/jpacora"
-          },
-          "clone_url": "https://github.com/jpacora/Struts2Shell.git"
-        },
-        {
-          "id": 1207824334,
-          "name": "attacker-lab-cve-2017-5638-cve-2021-41773-paper",
-          "full_name": "Kouf320/attacker-lab-cve-2017-5638-cve-2021-41773-paper",
-          "html_url": "https://github.com/Kouf320/attacker-lab-cve-2017-5638-cve-2021-41773-paper",
-          "description": "",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2026-04-12T16:38:41Z",
-          "pushed_at": "2026-04-11T13:09:51Z",
-          "created_at": "2026-04-11T13:03:03Z",
-          "topics": [],
-          "owner": {
-            "login": "Kouf320",
-            "html_url": "https://github.com/Kouf320"
-          },
-          "clone_url": "https://github.com/Kouf320/attacker-lab-cve-2017-5638-cve-2021-41773-paper.git"
-        },
-        {
-          "id": 1116564882,
-          "name": "CVE-2017-5638-Attack-and-Defense",
-          "full_name": "ACharaf06/CVE-2017-5638-Attack-and-Defense",
-          "html_url": "https://github.com/ACharaf06/CVE-2017-5638-Attack-and-Defense",
-          "description": "",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Java",
-          "updated_at": "2026-01-06T15:47:09Z",
-          "pushed_at": "2025-12-16T09:13:50Z",
-          "created_at": "2025-12-15T04:12:51Z",
-          "topics": [],
-          "owner": {
-            "login": "ACharaf06",
-            "html_url": "https://github.com/ACharaf06"
-          },
-          "clone_url": "https://github.com/ACharaf06/CVE-2017-5638-Attack-and-Defense.git"
-        },
-        {
-          "id": 93710291,
-          "name": "struts-rce-cve-2017-5638",
-          "full_name": "riyazwalikar/struts-rce-cve-2017-5638",
-          "html_url": "https://github.com/riyazwalikar/struts-rce-cve-2017-5638",
-          "description": "Struts-RCE CVE-2017-5638",
-          "stargazers_count": 1,
-          "forks_count": 2,
-          "language": "Python",
-          "updated_at": "2017-06-08T08:18:51Z",
-          "pushed_at": "2017-06-08T05:25:42Z",
-          "created_at": "2017-06-08T05:22:31Z",
-          "topics": [],
-          "owner": {
-            "login": "riyazwalikar",
-            "html_url": "https://github.com/riyazwalikar"
-          },
-          "clone_url": "https://github.com/riyazwalikar/struts-rce-cve-2017-5638.git"
-        },
-        {
-          "id": 84620334,
-          "name": "OgnlContentTypeRejectorValve",
-          "full_name": "Masahiro-Yamada/OgnlContentTypeRejectorValve",
-          "html_url": "https://github.com/Masahiro-Yamada/OgnlContentTypeRejectorValve",
-          "description": "This is Valve for Tomcat7 to block  Struts 2 Remote Code Execution vulnerability (CVE-2017-5638)",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Java",
-          "updated_at": "2017-04-11T00:06:36Z",
-          "pushed_at": "2017-03-13T14:49:25Z",
-          "created_at": "2017-03-11T03:18:12Z",
-          "topics": [],
-          "owner": {
-            "login": "Masahiro-Yamada",
-            "html_url": "https://github.com/Masahiro-Yamada"
-          },
-          "clone_url": "https://github.com/Masahiro-Yamada/OgnlContentTypeRejectorValve.git"
         },
         {
           "id": 103377643,
@@ -7098,25 +7117,6 @@
       "cve_id": "CVE-2017-7921",
       "repositories": [
         {
-          "id": 1099406099,
-          "name": "Hikvision-City-Hunter",
-          "full_name": "voidsshadows/Hikvision-City-Hunter",
-          "html_url": "https://github.com/voidsshadows/Hikvision-City-Hunter",
-          "description": "This tool is a modern evolution of older PoCs like those for CVE-2017-7921 and ICSA-17-124-01, updated for 2025 with live console output, threading for speed, and honeypot filtering (skips devices with \u003e12 open ports). It's built for red teamers, bug bounty hunters, and security researchers to identify",
-          "stargazers_count": 19,
-          "forks_count": 1,
-          "language": "Python",
-          "updated_at": "2026-04-19T08:50:31Z",
-          "pushed_at": "2025-11-19T00:35:36Z",
-          "created_at": "2025-11-19T00:31:34Z",
-          "topics": [],
-          "owner": {
-            "login": "voidsshadows",
-            "html_url": "https://github.com/voidsshadows"
-          },
-          "clone_url": "https://github.com/voidsshadows/Hikvision-City-Hunter.git"
-        },
-        {
           "id": 312471106,
           "name": "cve-2017-7921-golang",
           "full_name": "MisakaMikato/cve-2017-7921-golang",
@@ -7155,6 +7155,25 @@
           "clone_url": "https://github.com/Wyl-cmd/CVE-2017-7921-Research-Toolkit.git"
         },
         {
+          "id": 1158656463,
+          "name": "CVE-2017-7921-rewrite",
+          "full_name": "KelvinWin10/CVE-2017-7921-rewrite",
+          "html_url": "https://github.com/KelvinWin10/CVE-2017-7921-rewrite",
+          "description": "simple CVE-2017-7921 rewrite in python by me. for educational purposes only!",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-02-15T19:38:13Z",
+          "pushed_at": "2026-02-15T18:29:35Z",
+          "created_at": "2026-02-15T18:09:34Z",
+          "topics": [],
+          "owner": {
+            "login": "KelvinWin10",
+            "html_url": "https://github.com/KelvinWin10"
+          },
+          "clone_url": "https://github.com/KelvinWin10/CVE-2017-7921-rewrite.git"
+        },
+        {
           "id": 1139171603,
           "name": "hikvision-exploiter",
           "full_name": "saaydmr/hikvision-exploiter",
@@ -7191,25 +7210,6 @@
             "html_url": "https://github.com/0xf3d0rq"
           },
           "clone_url": "https://github.com/0xf3d0rq/CVE-2017-7921.git"
-        },
-        {
-          "id": 1158656463,
-          "name": "CVE-2017-7921-rewrite",
-          "full_name": "KelvinWin10/CVE-2017-7921-rewrite",
-          "html_url": "https://github.com/KelvinWin10/CVE-2017-7921-rewrite",
-          "description": "simple CVE-2017-7921 rewrite in python by me. for educational purposes only!",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-02-15T19:38:13Z",
-          "pushed_at": "2026-02-15T18:29:35Z",
-          "created_at": "2026-02-15T18:09:34Z",
-          "topics": [],
-          "owner": {
-            "login": "KelvinWin10",
-            "html_url": "https://github.com/KelvinWin10"
-          },
-          "clone_url": "https://github.com/KelvinWin10/CVE-2017-7921-rewrite.git"
         },
         {
           "id": 1153581164,
@@ -7612,10 +7612,10 @@
           "full_name": "bhdresh/CVE-2017-8759",
           "html_url": "https://github.com/bhdresh/CVE-2017-8759",
           "description": "Exploit toolkit CVE-2017-8759 - v1.0 is a handy python script which provides pentesters and security researchers a quick and effective way to test Microsoft .NET Framework RCE. It could generate a malicious RTF file and deliver metasploit / meterpreter / other payload to victim without any complex configuration.",
-          "stargazers_count": 313,
-          "forks_count": 110,
+          "stargazers_count": 312,
+          "forks_count": 109,
           "language": "Python",
-          "updated_at": "2026-02-14T21:39:58Z",
+          "updated_at": "2026-04-20T02:00:29Z",
           "pushed_at": "2018-09-10T16:25:12Z",
           "created_at": "2017-09-14T10:04:39Z",
           "topics": [],
