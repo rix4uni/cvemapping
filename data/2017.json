@@ -390,7 +390,7 @@
           "html_url": "https://github.com/bhdresh/CVE-2017-0199",
           "description": "Exploit toolkit CVE-2017-0199 - v4.0 is a handy python script which provides pentesters and security researchers a quick and effective way to test Microsoft Office RCE. It could generate a malicious RTF/PPSX file and deliver metasploit / meterpreter / other payload to victim without any complex configuration.",
           "stargazers_count": 726,
-          "forks_count": 257,
+          "forks_count": 256,
           "language": "Python",
           "updated_at": "2026-04-20T02:00:21Z",
           "pushed_at": "2017-11-19T11:01:16Z",
@@ -1776,10 +1776,10 @@
           "full_name": "gteissier/CVE-2017-10617",
           "html_url": "https://github.com/gteissier/CVE-2017-10617",
           "description": "Contrail: hard coded credentials (CVE-2017-10616) and XML External Entity (XXE) vulnerability (CVE-2017-10617)",
-          "stargazers_count": 4,
-          "forks_count": 1,
+          "stargazers_count": 5,
+          "forks_count": 2,
           "language": "Python",
-          "updated_at": "2026-01-05T00:43:50Z",
+          "updated_at": "2026-04-25T09:34:55Z",
           "pushed_at": "2019-02-22T06:03:24Z",
           "created_at": "2017-10-11T07:38:18Z",
           "topics": [],
@@ -1800,10 +1800,10 @@
           "full_name": "gteissier/CVE-2017-10617",
           "html_url": "https://github.com/gteissier/CVE-2017-10617",
           "description": "Contrail: hard coded credentials (CVE-2017-10616) and XML External Entity (XXE) vulnerability (CVE-2017-10617)",
-          "stargazers_count": 4,
-          "forks_count": 1,
+          "stargazers_count": 5,
+          "forks_count": 2,
           "language": "Python",
-          "updated_at": "2026-01-05T00:43:50Z",
+          "updated_at": "2026-04-25T09:34:55Z",
           "pushed_at": "2019-02-22T06:03:24Z",
           "created_at": "2017-10-11T07:38:18Z",
           "topics": [],
@@ -2074,6 +2074,25 @@
           "clone_url": "https://github.com/Shadowshusky/CVE-2017-11882-.git"
         },
         {
+          "id": 1221117057,
+          "name": "CVE-2017-11882-Blocker",
+          "full_name": "DONKEY0xSHOT/CVE-2017-11882-Blocker",
+          "html_url": "https://github.com/DONKEY0xSHOT/CVE-2017-11882-Blocker",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "C++",
+          "updated_at": "2026-04-26T03:16:57Z",
+          "pushed_at": "2026-04-26T03:16:53Z",
+          "created_at": "2026-04-25T19:21:21Z",
+          "topics": [],
+          "owner": {
+            "login": "DONKEY0xSHOT",
+            "html_url": "https://github.com/DONKEY0xSHOT"
+          },
+          "clone_url": "https://github.com/DONKEY0xSHOT/CVE-2017-11882-Blocker.git"
+        },
+        {
           "id": 111637919,
           "name": "CVE-2017-11882",
           "full_name": "Grey-Li/CVE-2017-11882",
@@ -2112,25 +2131,6 @@
           "clone_url": "https://github.com/HZachev/ABC.git"
         },
         {
-          "id": 111887551,
-          "name": "CVE-2017-11882-for-Kali",
-          "full_name": "legendsec/CVE-2017-11882-for-Kali",
-          "html_url": "https://github.com/legendsec/CVE-2017-11882-for-Kali",
-          "description": "# CVE-2017-11882-metasploit This is a Metasploit module which exploits CVE-2017-11882 using the POC below:  https://embedi.com/blog/skeleton-closet-ms-office-vulnerability-you-didnt-know-about.   ## Installation 1) Copy the cve_2017_11882.rb to /usr/share/metasploit-framework/modules/exploits/windows/local/ 2) Copy the cve-2017-11882.rtf to /usr/share/metasploit-framework/data/exploits/  This module is a quick port to Metasploit and uses mshta.exe to execute the payload.  There are better ways to implement this module and exploit but will update it as soon as I have the time.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2023-06-08T10:38:50Z",
-          "pushed_at": "2017-11-24T07:11:14Z",
-          "created_at": "2017-11-24T07:11:13Z",
-          "topics": [],
-          "owner": {
-            "login": "legendsec",
-            "html_url": "https://github.com/legendsec"
-          },
-          "clone_url": "https://github.com/legendsec/CVE-2017-11882-for-Kali.git"
-        },
-        {
           "id": 111904379,
           "name": "cve-2017-11882",
           "full_name": "CSC-pentest/cve-2017-11882",
@@ -2148,6 +2148,25 @@
             "html_url": "https://github.com/CSC-pentest"
           },
           "clone_url": "https://github.com/CSC-pentest/cve-2017-11882.git"
+        },
+        {
+          "id": 111887551,
+          "name": "CVE-2017-11882-for-Kali",
+          "full_name": "legendsec/CVE-2017-11882-for-Kali",
+          "html_url": "https://github.com/legendsec/CVE-2017-11882-for-Kali",
+          "description": "# CVE-2017-11882-metasploit This is a Metasploit module which exploits CVE-2017-11882 using the POC below:  https://embedi.com/blog/skeleton-closet-ms-office-vulnerability-you-didnt-know-about.   ## Installation 1) Copy the cve_2017_11882.rb to /usr/share/metasploit-framework/modules/exploits/windows/local/ 2) Copy the cve-2017-11882.rtf to /usr/share/metasploit-framework/data/exploits/  This module is a quick port to Metasploit and uses mshta.exe to execute the payload.  There are better ways to implement this module and exploit but will update it as soon as I have the time.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2023-06-08T10:38:50Z",
+          "pushed_at": "2017-11-24T07:11:14Z",
+          "created_at": "2017-11-24T07:11:13Z",
+          "topics": [],
+          "owner": {
+            "login": "legendsec",
+            "html_url": "https://github.com/legendsec"
+          },
+          "clone_url": "https://github.com/legendsec/CVE-2017-11882-for-Kali.git"
         }
       ]
     },
@@ -8599,25 +8618,6 @@
             "html_url": "https://github.com/Chocapikk"
           },
           "clone_url": "https://github.com/Chocapikk/CVE-2017-9841.git"
-        },
-        {
-          "id": 970412748,
-          "name": "CVE-2017-9841",
-          "full_name": "joelindra/CVE-2017-9841",
-          "html_url": "https://github.com/joelindra/CVE-2017-9841",
-          "description": "Tool designed to scan a list of websites for a known vulnerability in the PHPUnit framework, specifically the CVE-2017-9841 vulnerability.",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-02-19T22:00:37Z",
-          "pushed_at": "2025-11-26T08:58:24Z",
-          "created_at": "2025-04-22T01:31:34Z",
-          "topics": [],
-          "owner": {
-            "login": "joelindra",
-            "html_url": "https://github.com/joelindra"
-          },
-          "clone_url": "https://github.com/joelindra/CVE-2017-9841.git"
         },
         {
           "id": 1169992509,
