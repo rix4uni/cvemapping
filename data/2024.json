@@ -1306,8 +1306,8 @@
           "stargazers_count": 0,
           "forks_count": 1,
           "language": "C++",
-          "updated_at": "2026-05-11T19:27:00Z",
-          "pushed_at": "2026-05-11T19:26:55Z",
+          "updated_at": "2026-05-12T16:36:56Z",
+          "pushed_at": "2026-05-12T15:44:10Z",
           "created_at": "2026-01-08T01:32:09Z",
           "topics": [
             "c0deghost",
@@ -2350,10 +2350,10 @@
           "full_name": "Notselwyn/CVE-2024-1086",
           "html_url": "https://github.com/Notselwyn/CVE-2024-1086",
           "description": "Universal local privilege escalation Proof-of-Concept exploit for CVE-2024-1086, working on most Linux kernels between v5.14 and v6.6, including Debian, Ubuntu, and KernelCTF. The success rate is 99.4% in KernelCTF images.",
-          "stargazers_count": 2450,
+          "stargazers_count": 2447,
           "forks_count": 332,
           "language": "C",
-          "updated_at": "2026-05-08T21:17:04Z",
+          "updated_at": "2026-05-12T05:07:01Z",
           "pushed_at": "2024-04-17T16:09:54Z",
           "created_at": "2024-03-20T21:16:41Z",
           "topics": [
@@ -3790,6 +3790,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2024-12912",
+      "repositories": [
+        {
+          "id": 1236281939,
+          "name": "ASUS-AiCloud-RCE",
+          "full_name": "murrez/ASUS-AiCloud-RCE",
+          "html_url": "https://github.com/murrez/ASUS-AiCloud-RCE",
+          "description": "SETROOTCERTIFICATE (write /etc/cert.pem.1) + APPLYAPP (RC_SERVICE execution). Refs: CVE-2025-2492, CVE-2024-12912, CVE-2025-59366; runZero; routersploit; ASUS advisory.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Go",
+          "updated_at": "2026-05-12T05:40:22Z",
+          "pushed_at": "2026-05-12T05:40:18Z",
+          "created_at": "2026-05-12T05:36:10Z",
+          "topics": [],
+          "owner": {
+            "login": "murrez",
+            "html_url": "https://github.com/murrez"
+          },
+          "clone_url": "https://github.com/murrez/ASUS-AiCloud-RCE.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2024-1301",
       "repositories": [
         {
@@ -4233,10 +4257,10 @@
           "full_name": "W01fh4cker/ScreenConnect-AuthBypass-RCE",
           "html_url": "https://github.com/W01fh4cker/ScreenConnect-AuthBypass-RCE",
           "description": "ScreenConnect AuthBypass(cve-2024-1709) --\u003e RCE!!!",
-          "stargazers_count": 109,
+          "stargazers_count": 108,
           "forks_count": 32,
           "language": "Python",
-          "updated_at": "2026-05-10T16:30:40Z",
+          "updated_at": "2026-05-12T04:52:07Z",
           "pushed_at": "2024-07-16T09:26:55Z",
           "created_at": "2024-02-21T09:42:04Z",
           "topics": [
@@ -4285,10 +4309,10 @@
           "full_name": "W01fh4cker/ScreenConnect-AuthBypass-RCE",
           "html_url": "https://github.com/W01fh4cker/ScreenConnect-AuthBypass-RCE",
           "description": "ScreenConnect AuthBypass(cve-2024-1709) --\u003e RCE!!!",
-          "stargazers_count": 109,
+          "stargazers_count": 108,
           "forks_count": 32,
           "language": "Python",
-          "updated_at": "2026-05-10T16:30:40Z",
+          "updated_at": "2026-05-12T04:52:07Z",
           "pushed_at": "2024-07-16T09:26:55Z",
           "created_at": "2024-02-21T09:42:04Z",
           "topics": [
@@ -4306,25 +4330,6 @@
             "html_url": "https://github.com/W01fh4cker"
           },
           "clone_url": "https://github.com/W01fh4cker/ScreenConnect-AuthBypass-RCE.git"
-        },
-        {
-          "id": 873464505,
-          "name": "Mass-CVE-2024-1709",
-          "full_name": "AMRICHASFUCK/Mass-CVE-2024-1709",
-          "html_url": "https://github.com/AMRICHASFUCK/Mass-CVE-2024-1709",
-          "description": "ScreenConnect AuthBypass Mass RCE",
-          "stargazers_count": 4,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-05-01T03:20:36Z",
-          "pushed_at": "2024-10-16T08:38:05Z",
-          "created_at": "2024-10-16T08:05:35Z",
-          "topics": [],
-          "owner": {
-            "login": "AMRICHASFUCK",
-            "html_url": "https://github.com/AMRICHASFUCK"
-          },
-          "clone_url": "https://github.com/AMRICHASFUCK/Mass-CVE-2024-1709.git"
         },
         {
           "id": 762393021,
@@ -4346,25 +4351,6 @@
           "clone_url": "https://github.com/HussainFathy/CVE-2024-1709.git"
         },
         {
-          "id": 780750161,
-          "name": "CVE-2024-1709-and-CVE-2024-1708",
-          "full_name": "cjybao/CVE-2024-1709-and-CVE-2024-1708",
-          "html_url": "https://github.com/cjybao/CVE-2024-1709-and-CVE-2024-1708",
-          "description": "",
-          "stargazers_count": 1,
-          "forks_count": 1,
-          "language": "Python",
-          "updated_at": "2024-04-03T03:43:48Z",
-          "pushed_at": "2024-04-02T07:58:19Z",
-          "created_at": "2024-04-02T04:58:38Z",
-          "topics": [],
-          "owner": {
-            "login": "cjybao",
-            "html_url": "https://github.com/cjybao"
-          },
-          "clone_url": "https://github.com/cjybao/CVE-2024-1709-and-CVE-2024-1708.git"
-        },
-        {
           "id": 776185551,
           "name": "CVE-2024-1709-ConnectWise-ScreenConnect-Authentication-Bypass",
           "full_name": "sxyrxyy/CVE-2024-1709-ConnectWise-ScreenConnect-Authentication-Bypass",
@@ -4382,6 +4368,25 @@
             "html_url": "https://github.com/sxyrxyy"
           },
           "clone_url": "https://github.com/sxyrxyy/CVE-2024-1709-ConnectWise-ScreenConnect-Authentication-Bypass.git"
+        },
+        {
+          "id": 780750161,
+          "name": "CVE-2024-1709-and-CVE-2024-1708",
+          "full_name": "cjybao/CVE-2024-1709-and-CVE-2024-1708",
+          "html_url": "https://github.com/cjybao/CVE-2024-1709-and-CVE-2024-1708",
+          "description": "",
+          "stargazers_count": 1,
+          "forks_count": 1,
+          "language": "Python",
+          "updated_at": "2024-04-03T03:43:48Z",
+          "pushed_at": "2024-04-02T07:58:19Z",
+          "created_at": "2024-04-02T04:58:38Z",
+          "topics": [],
+          "owner": {
+            "login": "cjybao",
+            "html_url": "https://github.com/cjybao"
+          },
+          "clone_url": "https://github.com/cjybao/CVE-2024-1709-and-CVE-2024-1708.git"
         },
         {
           "id": 856582109,
@@ -5759,10 +5764,10 @@
           "full_name": "CMNatic/CVE-2024-21413",
           "html_url": "https://github.com/CMNatic/CVE-2024-21413",
           "description": "CVE-2024-21413 PoC for THM Lab",
-          "stargazers_count": 242,
+          "stargazers_count": 243,
           "forks_count": 57,
           "language": "Python",
-          "updated_at": "2026-05-11T19:09:22Z",
+          "updated_at": "2026-05-12T09:33:54Z",
           "pushed_at": "2024-03-13T02:44:28Z",
           "created_at": "2024-02-17T14:52:52Z",
           "topics": [],
@@ -8673,8 +8678,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "JavaScript",
-          "updated_at": "2026-05-11T16:09:53Z",
-          "pushed_at": "2026-05-11T16:00:06Z",
+          "updated_at": "2026-05-12T16:59:41Z",
+          "pushed_at": "2026-05-12T16:36:49Z",
           "created_at": "2026-03-15T16:36:07Z",
           "topics": [
             "aigc",
@@ -12485,25 +12490,6 @@
           "clone_url": "https://github.com/NingXin2002/Check-Point_poc.git"
         },
         {
-          "id": 811447878,
-          "name": "CVE-2024-24919-POC",
-          "full_name": "starlox0/CVE-2024-24919-POC",
-          "html_url": "https://github.com/starlox0/CVE-2024-24919-POC",
-          "description": "A Simple Exploit Code(POC) to Automate CVE-2024–24919",
-          "stargazers_count": 1,
-          "forks_count": 2,
-          "language": "Shell",
-          "updated_at": "2024-06-06T16:15:06Z",
-          "pushed_at": "2024-06-06T16:12:42Z",
-          "created_at": "2024-06-06T16:03:35Z",
-          "topics": [],
-          "owner": {
-            "login": "starlox0",
-            "html_url": "https://github.com/starlox0"
-          },
-          "clone_url": "https://github.com/starlox0/CVE-2024-24919-POC.git"
-        },
-        {
           "id": 809679765,
           "name": "cve-2024-24919-checker",
           "full_name": "birdlex/cve-2024-24919-checker",
@@ -12719,31 +12705,23 @@
           "clone_url": "https://github.com/voidbroker/CVE-2024-24919.git"
         },
         {
-          "id": 812836186,
-          "name": "CVE-2024-24919",
-          "full_name": "protonnegativo/CVE-2024-24919",
-          "html_url": "https://github.com/protonnegativo/CVE-2024-24919",
-          "description": "Python script to automate the process of finding vulnerable sites for CVE-2024-24919.",
+          "id": 811447878,
+          "name": "CVE-2024-24919-POC",
+          "full_name": "starlox0/CVE-2024-24919-POC",
+          "html_url": "https://github.com/starlox0/CVE-2024-24919-POC",
+          "description": "A Simple Exploit Code(POC) to Automate CVE-2024–24919",
           "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-04-23T14:37:09Z",
-          "pushed_at": "2024-06-10T01:40:02Z",
-          "created_at": "2024-06-10T01:29:19Z",
-          "topics": [
-            "cve",
-            "cve-2024-24919",
-            "cve-2024-24919-poc",
-            "python",
-            "security",
-            "security-automation",
-            "security-tools"
-          ],
+          "forks_count": 2,
+          "language": "Shell",
+          "updated_at": "2024-06-06T16:15:06Z",
+          "pushed_at": "2024-06-06T16:12:42Z",
+          "created_at": "2024-06-06T16:03:35Z",
+          "topics": [],
           "owner": {
-            "login": "protonnegativo",
-            "html_url": "https://github.com/protonnegativo"
+            "login": "starlox0",
+            "html_url": "https://github.com/starlox0"
           },
-          "clone_url": "https://github.com/protonnegativo/CVE-2024-24919.git"
+          "clone_url": "https://github.com/starlox0/CVE-2024-24919-POC.git"
         },
         {
           "id": 809370211,
@@ -12822,6 +12800,25 @@
           "clone_url": "https://github.com/nullcult/CVE-2024-24919-Exploit.git"
         },
         {
+          "id": 808815211,
+          "name": "CVE-2024-24919",
+          "full_name": "0xkalawy/CVE-2024-24919",
+          "html_url": "https://github.com/0xkalawy/CVE-2024-24919",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2024-05-31T23:39:55Z",
+          "pushed_at": "2024-05-31T23:39:52Z",
+          "created_at": "2024-05-31T22:07:21Z",
+          "topics": [],
+          "owner": {
+            "login": "0xkalawy",
+            "html_url": "https://github.com/0xkalawy"
+          },
+          "clone_url": "https://github.com/0xkalawy/CVE-2024-24919.git"
+        },
+        {
           "id": 808586285,
           "name": "CVE-2024-24919",
           "full_name": "Vulnpire/CVE-2024-24919",
@@ -12839,25 +12836,6 @@
             "html_url": "https://github.com/Vulnpire"
           },
           "clone_url": "https://github.com/Vulnpire/CVE-2024-24919.git"
-        },
-        {
-          "id": 808389014,
-          "name": "CVE-2024-24919",
-          "full_name": "P3wc0/CVE-2024-24919",
-          "html_url": "https://github.com/P3wc0/CVE-2024-24919",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2024-05-31T01:39:05Z",
-          "pushed_at": "2024-05-31T01:39:02Z",
-          "created_at": "2024-05-31T01:14:19Z",
-          "topics": [],
-          "owner": {
-            "login": "P3wc0",
-            "html_url": "https://github.com/P3wc0"
-          },
-          "clone_url": "https://github.com/P3wc0/CVE-2024-24919.git"
         },
         {
           "id": 808967131,
@@ -12993,6 +12971,25 @@
           "clone_url": "https://github.com/AhmedMansour93/Event-ID-263-Rule-Name-SOC287---Arbitrary-File-Read-on-Checkpoint-Security-Gateway-CVE-2024-24919-.git"
         },
         {
+          "id": 808389014,
+          "name": "CVE-2024-24919",
+          "full_name": "P3wc0/CVE-2024-24919",
+          "html_url": "https://github.com/P3wc0/CVE-2024-24919",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Shell",
+          "updated_at": "2024-05-31T01:39:05Z",
+          "pushed_at": "2024-05-31T01:39:02Z",
+          "created_at": "2024-05-31T01:14:19Z",
+          "topics": [],
+          "owner": {
+            "login": "P3wc0",
+            "html_url": "https://github.com/P3wc0"
+          },
+          "clone_url": "https://github.com/P3wc0/CVE-2024-24919.git"
+        },
+        {
           "id": 808207791,
           "name": "CVE-2024-24919",
           "full_name": "hendprw/CVE-2024-24919",
@@ -13010,25 +13007,6 @@
             "html_url": "https://github.com/hendprw"
           },
           "clone_url": "https://github.com/hendprw/CVE-2024-24919.git"
-        },
-        {
-          "id": 808371269,
-          "name": "CVE-2024-24919",
-          "full_name": "am-eid/CVE-2024-24919",
-          "html_url": "https://github.com/am-eid/CVE-2024-24919",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2024-05-31T00:06:43Z",
-          "pushed_at": "2024-05-31T00:06:39Z",
-          "created_at": "2024-05-30T23:52:53Z",
-          "topics": [],
-          "owner": {
-            "login": "am-eid",
-            "html_url": "https://github.com/am-eid"
-          },
-          "clone_url": "https://github.com/am-eid/CVE-2024-24919.git"
         },
         {
           "id": 879969031,
@@ -13050,23 +13028,23 @@
           "clone_url": "https://github.com/sar-3mar/CVE-2024-24919_POC.git"
         },
         {
-          "id": 808815211,
+          "id": 808371269,
           "name": "CVE-2024-24919",
-          "full_name": "0xkalawy/CVE-2024-24919",
-          "html_url": "https://github.com/0xkalawy/CVE-2024-24919",
+          "full_name": "am-eid/CVE-2024-24919",
+          "html_url": "https://github.com/am-eid/CVE-2024-24919",
           "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2024-05-31T23:39:55Z",
-          "pushed_at": "2024-05-31T23:39:52Z",
-          "created_at": "2024-05-31T22:07:21Z",
+          "language": "Shell",
+          "updated_at": "2024-05-31T00:06:43Z",
+          "pushed_at": "2024-05-31T00:06:39Z",
+          "created_at": "2024-05-30T23:52:53Z",
           "topics": [],
           "owner": {
-            "login": "0xkalawy",
-            "html_url": "https://github.com/0xkalawy"
+            "login": "am-eid",
+            "html_url": "https://github.com/am-eid"
           },
-          "clone_url": "https://github.com/0xkalawy/CVE-2024-24919.git"
+          "clone_url": "https://github.com/am-eid/CVE-2024-24919.git"
         }
       ]
     },
@@ -18025,10 +18003,10 @@
           "full_name": "ambionics/cnext-exploits",
           "html_url": "https://github.com/ambionics/cnext-exploits",
           "description": "Exploits for CNEXT (CVE-2024-2961), a buffer overflow in the glibc's iconv()",
-          "stargazers_count": 505,
+          "stargazers_count": 506,
           "forks_count": 60,
           "language": "Python",
-          "updated_at": "2026-03-31T12:52:55Z",
+          "updated_at": "2026-05-12T07:41:19Z",
           "pushed_at": "2024-09-30T08:45:56Z",
           "created_at": "2024-05-27T08:30:06Z",
           "topics": [],
@@ -19014,10 +18992,10 @@
           "full_name": "exploits-forsale/collateral-damage",
           "html_url": "https://github.com/exploits-forsale/collateral-damage",
           "description": "Kernel exploit for Xbox SystemOS using CVE-2024-30088",
-          "stargazers_count": 521,
+          "stargazers_count": 522,
           "forks_count": 36,
           "language": "C++",
-          "updated_at": "2026-05-02T17:18:26Z",
+          "updated_at": "2026-05-12T08:01:59Z",
           "pushed_at": "2025-07-13T14:10:02Z",
           "created_at": "2024-07-15T08:07:05Z",
           "topics": [],
@@ -19093,8 +19071,8 @@
           "stargazers_count": 7,
           "forks_count": 3,
           "language": "Go",
-          "updated_at": "2026-05-11T19:16:43Z",
-          "pushed_at": "2026-05-11T19:16:19Z",
+          "updated_at": "2026-05-12T14:55:11Z",
+          "pushed_at": "2026-05-12T14:20:53Z",
           "created_at": "2026-04-01T08:15:08Z",
           "topics": [
             "amsi-bypass",
@@ -19529,10 +19507,10 @@
           "full_name": "robertdfrench/ifuncd-up",
           "html_url": "https://github.com/robertdfrench/ifuncd-up",
           "description": "GNU IFUNC is the real culprit behind CVE-2024-3094",
-          "stargazers_count": 58,
+          "stargazers_count": 57,
           "forks_count": 1,
           "language": "C",
-          "updated_at": "2026-05-11T09:20:07Z",
+          "updated_at": "2026-05-12T00:34:53Z",
           "pushed_at": "2026-05-09T02:39:17Z",
           "created_at": "2024-07-05T18:36:16Z",
           "topics": [
@@ -22991,10 +22969,10 @@
           "full_name": "Catherines77/ActiveMQ-EXPtools",
           "html_url": "https://github.com/Catherines77/ActiveMQ-EXPtools",
           "description": "Apache ActiveMQ漏洞综合利用工具(CVE-2015-5254，CVE-2016-3088，CVE-2022-41678，CVE-2023-46604，CVE-2024-32114，CVE-2026-34197，CVE-2026-40466)",
-          "stargazers_count": 48,
+          "stargazers_count": 51,
           "forks_count": 2,
           "language": "Java",
-          "updated_at": "2026-05-11T02:41:40Z",
+          "updated_at": "2026-05-12T15:34:14Z",
           "pushed_at": "2026-05-09T02:30:42Z",
           "created_at": "2026-04-20T02:38:50Z",
           "topics": [],
@@ -23229,7 +23207,7 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-03-30T13:14:40Z",
+          "updated_at": "2026-05-12T02:23:32Z",
           "pushed_at": "2024-04-22T15:16:22Z",
           "created_at": "2024-04-22T15:15:37Z",
           "topics": [],
@@ -24212,10 +24190,10 @@
           "full_name": "ihebski/CVE-2024-3400",
           "html_url": "https://github.com/ihebski/CVE-2024-3400",
           "description": "CVE-2024-3400 PAN-OS: OS Command Injection Vulnerability in GlobalProtect",
-          "stargazers_count": 30,
+          "stargazers_count": 31,
           "forks_count": 5,
           "language": "",
-          "updated_at": "2026-05-02T00:43:56Z",
+          "updated_at": "2026-05-12T08:53:10Z",
           "pushed_at": "2024-04-17T11:03:32Z",
           "created_at": "2024-04-16T21:24:15Z",
           "topics": [],
@@ -33171,8 +33149,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Dockerfile",
-          "updated_at": "2026-05-10T13:32:29Z",
-          "pushed_at": "2026-05-10T13:32:24Z",
+          "updated_at": "2026-05-12T05:08:57Z",
+          "pushed_at": "2026-05-12T05:08:54Z",
           "created_at": "2026-05-09T08:47:41Z",
           "topics": [],
           "owner": {
@@ -33747,29 +33725,6 @@
             "html_url": "https://github.com/Scivous"
           },
           "clone_url": "https://github.com/Scivous/CVE-2024-4367-npm.git"
-        },
-        {
-          "id": 1226393872,
-          "name": "CVE-2024-4367-PDFjs-Exploit-Framework",
-          "full_name": "ellenllen/CVE-2024-4367-PDFjs-Exploit-Framework",
-          "html_url": "https://github.com/ellenllen/CVE-2024-4367-PDFjs-Exploit-Framework",
-          "description": "🛡️ Weaponize PDF.js RCE Exploit Tool 2026 – Ethical Hacking Framework",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-05-01T10:41:02Z",
-          "pushed_at": "2026-05-01T10:40:58Z",
-          "created_at": "2026-05-01T10:40:53Z",
-          "topics": [
-            "cve-2024-4367",
-            "spyware",
-            "weaponized"
-          ],
-          "owner": {
-            "login": "ellenllen",
-            "html_url": "https://github.com/ellenllen"
-          },
-          "clone_url": "https://github.com/ellenllen/CVE-2024-4367-PDFjs-Exploit-Framework.git"
         },
         {
           "id": 869555882,
@@ -37180,6 +37135,25 @@
           "clone_url": "https://github.com/0x7556/CVE-2024-47176.git"
         },
         {
+          "id": 1180852710,
+          "name": "CVE-2024-47176",
+          "full_name": "deancooreman/CVE-2024-47176",
+          "html_url": "https://github.com/deancooreman/CVE-2024-47176",
+          "description": "Automated VirtualBox lab environment to exploit CVE-2024-47176 — an unauthenticated RCE vulnerability in CUPS — using a custom Python exploit and Kali Linux.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Shell",
+          "updated_at": "2026-05-11T20:54:11Z",
+          "pushed_at": "2026-05-11T20:54:06Z",
+          "created_at": "2026-03-13T13:35:34Z",
+          "topics": [],
+          "owner": {
+            "login": "deancooreman",
+            "html_url": "https://github.com/deancooreman"
+          },
+          "clone_url": "https://github.com/deancooreman/CVE-2024-47176.git"
+        },
+        {
           "id": 1234348953,
           "name": "dirtycups",
           "full_name": "jimi2x/dirtycups",
@@ -37197,25 +37171,6 @@
             "html_url": "https://github.com/jimi2x"
           },
           "clone_url": "https://github.com/jimi2x/dirtycups.git"
-        },
-        {
-          "id": 1180852710,
-          "name": "CVE-2024-47176",
-          "full_name": "deancooreman/CVE-2024-47176",
-          "html_url": "https://github.com/deancooreman/CVE-2024-47176",
-          "description": "Automated VirtualBox lab environment to exploit CVE-2024-47176 — an unauthenticated RCE vulnerability in CUPS — using a custom Python exploit and Kali Linux.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2026-05-09T08:40:16Z",
-          "pushed_at": "2026-05-09T08:40:12Z",
-          "created_at": "2026-03-13T13:35:34Z",
-          "topics": [],
-          "owner": {
-            "login": "deancooreman",
-            "html_url": "https://github.com/deancooreman"
-          },
-          "clone_url": "https://github.com/deancooreman/CVE-2024-47176.git"
         },
         {
           "id": 868024917,
@@ -42736,10 +42691,10 @@
           "full_name": "Creeeeger/CVE-2024-56426",
           "html_url": "https://github.com/Creeeeger/CVE-2024-56426",
           "description": "A PoC of the CVE-2024-56426 vulnerability.",
-          "stargazers_count": 6,
+          "stargazers_count": 7,
           "forks_count": 1,
           "language": "Python",
-          "updated_at": "2026-05-09T11:54:35Z",
+          "updated_at": "2026-05-12T14:51:18Z",
           "pushed_at": "2026-05-09T15:44:52Z",
           "created_at": "2026-04-07T12:02:52Z",
           "topics": [],
@@ -48237,8 +48192,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Visual Basic .NET",
-          "updated_at": "2026-05-11T19:20:39Z",
-          "pushed_at": "2026-05-11T19:19:51Z",
+          "updated_at": "2026-05-12T16:37:10Z",
+          "pushed_at": "2026-05-12T15:19:57Z",
           "created_at": "2025-10-21T19:42:27Z",
           "topics": [
             "cmd",
