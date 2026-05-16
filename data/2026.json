@@ -211,34 +211,15 @@
           "clone_url": "https://github.com/novaek/CVE-2026-0073-Research.git"
         },
         {
-          "id": 1231997018,
-          "name": "CVE-2026-0073",
-          "full_name": "0xBlackash/CVE-2026-0073",
-          "html_url": "https://github.com/0xBlackash/CVE-2026-0073",
-          "description": "CVE-2026-0073",
-          "stargazers_count": 2,
-          "forks_count": 1,
-          "language": "C++",
-          "updated_at": "2026-05-08T04:59:27Z",
-          "pushed_at": "2026-05-07T14:11:06Z",
-          "created_at": "2026-05-07T13:42:23Z",
-          "topics": [],
-          "owner": {
-            "login": "0xBlackash",
-            "html_url": "https://github.com/0xBlackash"
-          },
-          "clone_url": "https://github.com/0xBlackash/CVE-2026-0073.git"
-        },
-        {
           "id": 1231550347,
           "name": "adbHijacker",
           "full_name": "unnaim/adbHijacker",
           "html_url": "https://github.com/unnaim/adbHijacker",
           "description": "A PoC tool for the CVE-2026-0073 on android 11+ devices which allows instant zero click RCE on any unpatched device with adb over tcp enabled",
-          "stargazers_count": 2,
+          "stargazers_count": 3,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-05-14T16:07:39Z",
+          "updated_at": "2026-05-16T15:20:25Z",
           "pushed_at": "2026-05-07T05:41:49Z",
           "created_at": "2026-05-07T04:13:12Z",
           "topics": [],
@@ -266,6 +247,25 @@
             "html_url": "https://github.com/devtint"
           },
           "clone_url": "https://github.com/devtint/CVE-2026-0073.git"
+        },
+        {
+          "id": 1231997018,
+          "name": "CVE-2026-0073",
+          "full_name": "0xBlackash/CVE-2026-0073",
+          "html_url": "https://github.com/0xBlackash/CVE-2026-0073",
+          "description": "CVE-2026-0073",
+          "stargazers_count": 2,
+          "forks_count": 1,
+          "language": "C++",
+          "updated_at": "2026-05-08T04:59:27Z",
+          "pushed_at": "2026-05-07T14:11:06Z",
+          "created_at": "2026-05-07T13:42:23Z",
+          "topics": [],
+          "owner": {
+            "login": "0xBlackash",
+            "html_url": "https://github.com/0xBlackash"
+          },
+          "clone_url": "https://github.com/0xBlackash/CVE-2026-0073.git"
         },
         {
           "id": 1233980294,
@@ -1133,10 +1133,10 @@
           "full_name": "DeathShotXD/0xKern3lCrush-Foreverday-BYOVD-CVE-2026-0828",
           "html_url": "https://github.com/DeathShotXD/0xKern3lCrush-Foreverday-BYOVD-CVE-2026-0828",
           "description": "Advanced PoC \u0026 Research for CVE-2026-0828 (Safetica) and CVE-2025-7771 (ThrottleStop). Analysis of BYOVD (Bring Your Own Vulnerable Driver) TTPs for Ring 0 process termination and physical memory R/W. Researching EDR-Killer patterns, PPL bypasses, and kernel-mode primitives used by MedusaLocker and other threat actors.",
-          "stargazers_count": 39,
+          "stargazers_count": 40,
           "forks_count": 5,
           "language": "C",
-          "updated_at": "2026-05-07T10:24:50Z",
+          "updated_at": "2026-05-16T15:45:53Z",
           "pushed_at": "2026-02-04T02:20:21Z",
           "created_at": "2026-02-04T01:47:36Z",
           "topics": [],
@@ -19505,23 +19505,42 @@
           "clone_url": "https://github.com/bryanvine/copy-fail-fix.git"
         },
         {
-          "id": 1225900557,
-          "name": "mks-copy-fail-mitigation",
-          "full_name": "selectel/mks-copy-fail-mitigation",
-          "html_url": "https://github.com/selectel/mks-copy-fail-mitigation",
-          "description": "DaemonSet с реализацией временной меры для митигации уязвимости Copy Fail (CVE-2026-31431)",
+          "id": 1232670247,
+          "name": "copy-fail-CVE-2026-31431",
+          "full_name": "Morton-Li/copy-fail-CVE-2026-31431",
+          "html_url": "https://github.com/Morton-Li/copy-fail-CVE-2026-31431",
+          "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-05-02T08:14:58Z",
-          "pushed_at": "2026-05-02T08:14:53Z",
-          "created_at": "2026-04-30T19:04:54Z",
+          "language": "Python",
+          "updated_at": "2026-05-10T10:18:35Z",
+          "pushed_at": "2026-05-10T10:18:32Z",
+          "created_at": "2026-05-08T06:41:35Z",
           "topics": [],
           "owner": {
-            "login": "selectel",
-            "html_url": "https://github.com/selectel"
+            "login": "Morton-Li",
+            "html_url": "https://github.com/Morton-Li"
           },
-          "clone_url": "https://github.com/selectel/mks-copy-fail-mitigation.git"
+          "clone_url": "https://github.com/Morton-Li/copy-fail-CVE-2026-31431.git"
+        },
+        {
+          "id": 1225672538,
+          "name": "CVE-2026-31431-old-python",
+          "full_name": "grishinpv/CVE-2026-31431-old-python",
+          "html_url": "https://github.com/grishinpv/CVE-2026-31431-old-python",
+          "description": "CVE-2026-31431 for python versions lower 3.10",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-04-30T14:21:18Z",
+          "pushed_at": "2026-04-30T14:18:14Z",
+          "created_at": "2026-04-30T14:13:14Z",
+          "topics": [],
+          "owner": {
+            "login": "grishinpv",
+            "html_url": "https://github.com/grishinpv"
+          },
+          "clone_url": "https://github.com/grishinpv/CVE-2026-31431-old-python.git"
         },
         {
           "id": 1234358906,
@@ -19543,23 +19562,23 @@
           "clone_url": "https://github.com/vorkampfer/copyfail2_electric_boogaloo_fix.git"
         },
         {
-          "id": 1226036200,
-          "name": "copy-fail-cve-2026-31431",
-          "full_name": "effiesec/copy-fail-cve-2026-31431",
-          "html_url": "https://github.com/effiesec/copy-fail-cve-2026-31431",
-          "description": "",
+          "id": 1226064544,
+          "name": "CVE-2026-31431",
+          "full_name": "sngrotesque/CVE-2026-31431",
+          "html_url": "https://github.com/sngrotesque/CVE-2026-31431",
+          "description": "The code after complete confusion.",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-04-30T22:55:20Z",
-          "pushed_at": "2026-04-30T22:03:02Z",
-          "created_at": "2026-04-30T22:55:20Z",
+          "language": "Python",
+          "updated_at": "2026-04-30T23:59:59Z",
+          "pushed_at": "2026-04-30T23:59:55Z",
+          "created_at": "2026-04-30T23:59:24Z",
           "topics": [],
           "owner": {
-            "login": "effiesec",
-            "html_url": "https://github.com/effiesec"
+            "login": "sngrotesque",
+            "html_url": "https://github.com/sngrotesque"
           },
-          "clone_url": "https://github.com/effiesec/copy-fail-cve-2026-31431.git"
+          "clone_url": "https://github.com/sngrotesque/CVE-2026-31431.git"
         },
         {
           "id": 1233730308,
@@ -19714,23 +19733,23 @@
           "clone_url": "https://github.com/ROSNLR5/modrosnlr5.git"
         },
         {
-          "id": 1225996272,
-          "name": "copyfailautopatch",
-          "full_name": "meowteusz/copyfailautopatch",
-          "html_url": "https://github.com/meowteusz/copyfailautopatch",
-          "description": "Detect and fix copy.fail CVE-2026-31431",
+          "id": 1225962329,
+          "name": "copy-fail",
+          "full_name": "Juguitos/copy-fail",
+          "html_url": "https://github.com/Juguitos/copy-fail",
+          "description": "CVE-2026-31431 - Copy Fail PoC (Python 3.10+)",
           "stargazers_count": 0,
-          "forks_count": 0,
+          "forks_count": 1,
           "language": "Python",
-          "updated_at": "2026-04-30T21:38:39Z",
-          "pushed_at": "2026-04-30T21:38:35Z",
-          "created_at": "2026-04-30T21:36:54Z",
+          "updated_at": "2026-05-09T17:48:03Z",
+          "pushed_at": "2026-05-09T17:48:00Z",
+          "created_at": "2026-04-30T20:38:16Z",
           "topics": [],
           "owner": {
-            "login": "meowteusz",
-            "html_url": "https://github.com/meowteusz"
+            "login": "Juguitos",
+            "html_url": "https://github.com/Juguitos"
           },
-          "clone_url": "https://github.com/meowteusz/copyfailautopatch.git"
+          "clone_url": "https://github.com/Juguitos/copy-fail.git"
         },
         {
           "id": 1226318839,
@@ -19790,23 +19809,23 @@
           "clone_url": "https://github.com/OpenPixelSystems/c-copy-fail.git"
         },
         {
-          "id": 1225590950,
-          "name": "CVE-2026-31431",
-          "full_name": "eximiait/CVE-2026-31431",
-          "html_url": "https://github.com/eximiait/CVE-2026-31431",
-          "description": "Receta de ansible para verificar y mitigar CVE-2026-31431",
+          "id": 1226036200,
+          "name": "copy-fail-cve-2026-31431",
+          "full_name": "effiesec/copy-fail-cve-2026-31431",
+          "html_url": "https://github.com/effiesec/copy-fail-cve-2026-31431",
+          "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2026-04-30T12:47:45Z",
-          "pushed_at": "2026-04-30T12:46:59Z",
-          "created_at": "2026-04-30T12:42:51Z",
+          "language": "",
+          "updated_at": "2026-04-30T22:55:20Z",
+          "pushed_at": "2026-04-30T22:03:02Z",
+          "created_at": "2026-04-30T22:55:20Z",
           "topics": [],
           "owner": {
-            "login": "eximiait",
-            "html_url": "https://github.com/eximiait"
+            "login": "effiesec",
+            "html_url": "https://github.com/effiesec"
           },
-          "clone_url": "https://github.com/eximiait/CVE-2026-31431.git"
+          "clone_url": "https://github.com/effiesec/copy-fail-cve-2026-31431.git"
         },
         {
           "id": 1228787321,
@@ -19885,23 +19904,23 @@
           "clone_url": "https://github.com/ClimbMunchkin/fix-cve-2026-3143.git"
         },
         {
-          "id": 1225396365,
-          "name": "cve-2026-31431-mitigation",
-          "full_name": "Linux-zs/cve-2026-31431-mitigation",
-          "html_url": "https://github.com/Linux-zs/cve-2026-31431-mitigation",
-          "description": "cve-2026-31431 seccomp mitigation",
+          "id": 1225590950,
+          "name": "CVE-2026-31431",
+          "full_name": "eximiait/CVE-2026-31431",
+          "html_url": "https://github.com/eximiait/CVE-2026-31431",
+          "description": "Receta de ansible para verificar y mitigar CVE-2026-31431",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "C",
-          "updated_at": "2026-04-30T12:44:53Z",
-          "pushed_at": "2026-04-30T12:44:50Z",
-          "created_at": "2026-04-30T08:31:56Z",
+          "language": "Shell",
+          "updated_at": "2026-04-30T12:47:45Z",
+          "pushed_at": "2026-04-30T12:46:59Z",
+          "created_at": "2026-04-30T12:42:51Z",
           "topics": [],
           "owner": {
-            "login": "Linux-zs",
-            "html_url": "https://github.com/Linux-zs"
+            "login": "eximiait",
+            "html_url": "https://github.com/eximiait"
           },
-          "clone_url": "https://github.com/Linux-zs/cve-2026-31431-mitigation.git"
+          "clone_url": "https://github.com/eximiait/CVE-2026-31431.git"
         },
         {
           "id": 1232283257,
@@ -19923,23 +19942,23 @@
           "clone_url": "https://github.com/julichaan/CVE-2026-31431-python-copyfail-POC.git"
         },
         {
-          "id": 1225542121,
-          "name": "Copy_Fail_CVE-2026-31431_test_and_fix",
-          "full_name": "dicatalin/Copy_Fail_CVE-2026-31431_test_and_fix",
-          "html_url": "https://github.com/dicatalin/Copy_Fail_CVE-2026-31431_test_and_fix",
-          "description": "",
+          "id": 1225396365,
+          "name": "cve-2026-31431-mitigation",
+          "full_name": "Linux-zs/cve-2026-31431-mitigation",
+          "html_url": "https://github.com/Linux-zs/cve-2026-31431-mitigation",
+          "description": "cve-2026-31431 seccomp mitigation",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-04-30T12:42:28Z",
-          "pushed_at": "2026-04-30T12:42:24Z",
-          "created_at": "2026-04-30T11:40:34Z",
+          "language": "C",
+          "updated_at": "2026-04-30T12:44:53Z",
+          "pushed_at": "2026-04-30T12:44:50Z",
+          "created_at": "2026-04-30T08:31:56Z",
           "topics": [],
           "owner": {
-            "login": "dicatalin",
-            "html_url": "https://github.com/dicatalin"
+            "login": "Linux-zs",
+            "html_url": "https://github.com/Linux-zs"
           },
-          "clone_url": "https://github.com/dicatalin/Copy_Fail_CVE-2026-31431_test_and_fix.git"
+          "clone_url": "https://github.com/Linux-zs/cve-2026-31431-mitigation.git"
         },
         {
           "id": 1232082114,
@@ -19999,42 +20018,42 @@
           "clone_url": "https://github.com/pvpaulo01/cve-2026-31431.git"
         },
         {
-          "id": 1238971610,
-          "name": "CopyFail",
-          "full_name": "dotPY-hax/CopyFail",
-          "html_url": "https://github.com/dotPY-hax/CopyFail",
-          "description": "A CopyFail CVE-2026-31431 implementation in python that isnt slop! Bring your own payload",
-          "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "Python",
-          "updated_at": "2026-05-14T16:28:31Z",
-          "pushed_at": "2026-05-14T16:28:26Z",
-          "created_at": "2026-05-14T16:24:24Z",
-          "topics": [],
-          "owner": {
-            "login": "dotPY-hax",
-            "html_url": "https://github.com/dotPY-hax"
-          },
-          "clone_url": "https://github.com/dotPY-hax/CopyFail.git"
-        },
-        {
-          "id": 1225535151,
-          "name": "TEST-CVE-2026-31431",
-          "full_name": "gmeghnag/TEST-CVE-2026-31431",
-          "html_url": "https://github.com/gmeghnag/TEST-CVE-2026-31431",
+          "id": 1225542121,
+          "name": "Copy_Fail_CVE-2026-31431_test_and_fix",
+          "full_name": "dicatalin/Copy_Fail_CVE-2026-31431_test_and_fix",
+          "html_url": "https://github.com/dicatalin/Copy_Fail_CVE-2026-31431_test_and_fix",
           "description": "",
           "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "Dockerfile",
-          "updated_at": "2026-04-30T12:10:22Z",
-          "pushed_at": "2026-04-30T12:10:18Z",
-          "created_at": "2026-04-30T11:31:11Z",
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-04-30T12:42:28Z",
+          "pushed_at": "2026-04-30T12:42:24Z",
+          "created_at": "2026-04-30T11:40:34Z",
           "topics": [],
           "owner": {
-            "login": "gmeghnag",
-            "html_url": "https://github.com/gmeghnag"
+            "login": "dicatalin",
+            "html_url": "https://github.com/dicatalin"
           },
-          "clone_url": "https://github.com/gmeghnag/TEST-CVE-2026-31431.git"
+          "clone_url": "https://github.com/dicatalin/Copy_Fail_CVE-2026-31431_test_and_fix.git"
+        },
+        {
+          "id": 1225996272,
+          "name": "copyfailautopatch",
+          "full_name": "meowteusz/copyfailautopatch",
+          "html_url": "https://github.com/meowteusz/copyfailautopatch",
+          "description": "Detect and fix copy.fail CVE-2026-31431",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-04-30T21:38:39Z",
+          "pushed_at": "2026-04-30T21:38:35Z",
+          "created_at": "2026-04-30T21:36:54Z",
+          "topics": [],
+          "owner": {
+            "login": "meowteusz",
+            "html_url": "https://github.com/meowteusz"
+          },
+          "clone_url": "https://github.com/meowteusz/copyfailautopatch.git"
         },
         {
           "id": 1231737932,
@@ -20056,39 +20075,23 @@
           "clone_url": "https://github.com/361way/CVE-2026-31431.git"
         },
         {
-          "id": 1229483364,
-          "name": "copyfail-rs",
-          "full_name": "Liverwortenuresis371/copyfail-rs",
-          "html_url": "https://github.com/Liverwortenuresis371/copyfail-rs",
-          "description": "Exploit and detect CVE-2026-31431 vulnerabilities using a static binary that monitors system integrity and bypasses PAM authentication.",
+          "id": 1225535151,
+          "name": "TEST-CVE-2026-31431",
+          "full_name": "gmeghnag/TEST-CVE-2026-31431",
+          "html_url": "https://github.com/gmeghnag/TEST-CVE-2026-31431",
+          "description": "",
           "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Rust",
-          "updated_at": "2026-05-16T14:25:06Z",
-          "pushed_at": "2026-05-16T14:25:02Z",
-          "created_at": "2026-05-05T04:58:21Z",
-          "topics": [
-            "af-alg",
-            "auditd",
-            "copyfail",
-            "cve",
-            "cve-2026-31431",
-            "detection-engineering",
-            "ebpf",
-            "local-privilege-escalation",
-            "lpe",
-            "no-std",
-            "poc",
-            "privilege-escalation",
-            "rust",
-            "security",
-            "sigma-rules"
-          ],
+          "forks_count": 1,
+          "language": "Dockerfile",
+          "updated_at": "2026-04-30T12:10:22Z",
+          "pushed_at": "2026-04-30T12:10:18Z",
+          "created_at": "2026-04-30T11:31:11Z",
+          "topics": [],
           "owner": {
-            "login": "Liverwortenuresis371",
-            "html_url": "https://github.com/Liverwortenuresis371"
+            "login": "gmeghnag",
+            "html_url": "https://github.com/gmeghnag"
           },
-          "clone_url": "https://github.com/Liverwortenuresis371/copyfail-rs.git"
+          "clone_url": "https://github.com/gmeghnag/TEST-CVE-2026-31431.git"
         },
         {
           "id": 1231051096,
@@ -20110,23 +20113,23 @@
           "clone_url": "https://github.com/hans362/CVE-2026-31431-Copy-Fail-Container-Escape.git"
         },
         {
-          "id": 1225500413,
-          "name": "copy-fail-CVE-2026-31431",
-          "full_name": "rio128128/copy-fail-CVE-2026-31431",
-          "html_url": "https://github.com/rio128128/copy-fail-CVE-2026-31431",
-          "description": "Copy Fail: 732 Bytes to Root on Every Major Linux Distribution.",
+          "id": 1225900557,
+          "name": "mks-copy-fail-mitigation",
+          "full_name": "selectel/mks-copy-fail-mitigation",
+          "html_url": "https://github.com/selectel/mks-copy-fail-mitigation",
+          "description": "DaemonSet с реализацией временной меры для митигации уязвимости Copy Fail (CVE-2026-31431)",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-04-30T10:53:01Z",
-          "pushed_at": "2026-04-30T10:52:57Z",
-          "created_at": "2026-04-30T10:44:11Z",
+          "language": "",
+          "updated_at": "2026-05-02T08:14:58Z",
+          "pushed_at": "2026-05-02T08:14:53Z",
+          "created_at": "2026-04-30T19:04:54Z",
           "topics": [],
           "owner": {
-            "login": "rio128128",
-            "html_url": "https://github.com/rio128128"
+            "login": "selectel",
+            "html_url": "https://github.com/selectel"
           },
-          "clone_url": "https://github.com/rio128128/copy-fail-CVE-2026-31431.git"
+          "clone_url": "https://github.com/selectel/mks-copy-fail-mitigation.git"
         },
         {
           "id": 1231287640,
@@ -20148,23 +20151,23 @@
           "clone_url": "https://github.com/pedro-lucas-melo/Estudo-de-Caso-CVE-2026-31431-CopyFail.git"
         },
         {
-          "id": 1225977479,
+          "id": 1225500413,
           "name": "copy-fail-CVE-2026-31431",
-          "full_name": "B1gN0Se/copy-fail-CVE-2026-31431",
-          "html_url": "https://github.com/B1gN0Se/copy-fail-CVE-2026-31431",
-          "description": "",
+          "full_name": "rio128128/copy-fail-CVE-2026-31431",
+          "html_url": "https://github.com/rio128128/copy-fail-CVE-2026-31431",
+          "description": "Copy Fail: 732 Bytes to Root on Every Major Linux Distribution.",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "C",
-          "updated_at": "2026-04-30T21:06:07Z",
-          "pushed_at": "2026-04-30T21:06:03Z",
-          "created_at": "2026-04-30T21:03:41Z",
+          "language": "Python",
+          "updated_at": "2026-04-30T10:53:01Z",
+          "pushed_at": "2026-04-30T10:52:57Z",
+          "created_at": "2026-04-30T10:44:11Z",
           "topics": [],
           "owner": {
-            "login": "B1gN0Se",
-            "html_url": "https://github.com/B1gN0Se"
+            "login": "rio128128",
+            "html_url": "https://github.com/rio128128"
           },
-          "clone_url": "https://github.com/B1gN0Se/copy-fail-CVE-2026-31431.git"
+          "clone_url": "https://github.com/rio128128/copy-fail-CVE-2026-31431.git"
         },
         {
           "id": 1231072697,
@@ -20281,23 +20284,23 @@
           "clone_url": "https://github.com/0xN7y/CVE-2026-31431.git"
         },
         {
-          "id": 1225484698,
-          "name": "CVE-2026-31431",
-          "full_name": "G01d3nW01f/CVE-2026-31431",
-          "html_url": "https://github.com/G01d3nW01f/CVE-2026-31431",
-          "description": "",
+          "id": 1226206997,
+          "name": "d8-copy-fail-mitigation",
+          "full_name": "deckhouse/d8-copy-fail-mitigation",
+          "html_url": "https://github.com/deckhouse/d8-copy-fail-mitigation",
+          "description": "CVE-2026-31431 mitigation (Copy Fail)",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Rust",
-          "updated_at": "2026-04-30T10:23:35Z",
-          "pushed_at": "2026-04-30T10:23:32Z",
-          "created_at": "2026-04-30T10:22:37Z",
+          "language": "",
+          "updated_at": "2026-05-15T16:23:16Z",
+          "pushed_at": "2026-05-15T16:23:11Z",
+          "created_at": "2026-05-01T05:13:42Z",
           "topics": [],
           "owner": {
-            "login": "G01d3nW01f",
-            "html_url": "https://github.com/G01d3nW01f"
+            "login": "deckhouse",
+            "html_url": "https://github.com/deckhouse"
           },
-          "clone_url": "https://github.com/G01d3nW01f/CVE-2026-31431.git"
+          "clone_url": "https://github.com/deckhouse/d8-copy-fail-mitigation.git"
         },
         {
           "id": 1230682952,
@@ -20319,23 +20322,23 @@
           "clone_url": "https://github.com/tangjie1/CVE-2026-31431-Check.git"
         },
         {
-          "id": 1225482951,
-          "name": "copy-fail_LPE_Interactive",
-          "full_name": "H1d3r/copy-fail_LPE_Interactive",
-          "html_url": "https://github.com/H1d3r/copy-fail_LPE_Interactive",
-          "description": "CVE-2026-31431",
+          "id": 1225484698,
+          "name": "CVE-2026-31431",
+          "full_name": "G01d3nW01f/CVE-2026-31431",
+          "html_url": "https://github.com/G01d3nW01f/CVE-2026-31431",
+          "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "C",
-          "updated_at": "2026-04-30T10:21:23Z",
-          "pushed_at": "2026-04-30T10:21:20Z",
-          "created_at": "2026-04-30T10:20:19Z",
+          "language": "Rust",
+          "updated_at": "2026-04-30T10:23:35Z",
+          "pushed_at": "2026-04-30T10:23:32Z",
+          "created_at": "2026-04-30T10:22:37Z",
           "topics": [],
           "owner": {
-            "login": "H1d3r",
-            "html_url": "https://github.com/H1d3r"
+            "login": "G01d3nW01f",
+            "html_url": "https://github.com/G01d3nW01f"
           },
-          "clone_url": "https://github.com/H1d3r/copy-fail_LPE_Interactive.git"
+          "clone_url": "https://github.com/G01d3nW01f/CVE-2026-31431.git"
         },
         {
           "id": 1230645940,
@@ -20357,23 +20360,23 @@
           "clone_url": "https://github.com/voxcia-io/copy-fail.git"
         },
         {
-          "id": 1225472478,
-          "name": "CVE-2026-31431",
-          "full_name": "dorianhhuc/CVE-2026-31431",
-          "html_url": "https://github.com/dorianhhuc/CVE-2026-31431",
-          "description": "",
+          "id": 1225482951,
+          "name": "copy-fail_LPE_Interactive",
+          "full_name": "H1d3r/copy-fail_LPE_Interactive",
+          "html_url": "https://github.com/H1d3r/copy-fail_LPE_Interactive",
+          "description": "CVE-2026-31431",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-04-30T10:13:32Z",
-          "pushed_at": "2026-04-30T10:13:26Z",
-          "created_at": "2026-04-30T10:06:18Z",
+          "language": "C",
+          "updated_at": "2026-04-30T10:21:23Z",
+          "pushed_at": "2026-04-30T10:21:20Z",
+          "created_at": "2026-04-30T10:20:19Z",
           "topics": [],
           "owner": {
-            "login": "dorianhhuc",
-            "html_url": "https://github.com/dorianhhuc"
+            "login": "H1d3r",
+            "html_url": "https://github.com/H1d3r"
           },
-          "clone_url": "https://github.com/dorianhhuc/CVE-2026-31431.git"
+          "clone_url": "https://github.com/H1d3r/copy-fail_LPE_Interactive.git"
         },
         {
           "id": 1230544298,
@@ -20412,6 +20415,25 @@
             "html_url": "https://github.com/reubensammut"
           },
           "clone_url": "https://github.com/reubensammut/CVE-2026-31431-Copy-Fail.git"
+        },
+        {
+          "id": 1225472478,
+          "name": "CVE-2026-31431",
+          "full_name": "dorianhhuc/CVE-2026-31431",
+          "html_url": "https://github.com/dorianhhuc/CVE-2026-31431",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-04-30T10:13:32Z",
+          "pushed_at": "2026-04-30T10:13:26Z",
+          "created_at": "2026-04-30T10:06:18Z",
+          "topics": [],
+          "owner": {
+            "login": "dorianhhuc",
+            "html_url": "https://github.com/dorianhhuc"
+          },
+          "clone_url": "https://github.com/dorianhhuc/CVE-2026-31431.git"
         },
         {
           "id": 1225429268,
@@ -20456,25 +20478,6 @@
             "html_url": "https://github.com/adampielak"
           },
           "clone_url": "https://github.com/adampielak/CVE-2026-31431_SCA_WAZUH.git"
-        },
-        {
-          "id": 1225465296,
-          "name": "CVE-2026-31431-exploit_py2_py3",
-          "full_name": "jiangban046-spec/CVE-2026-31431-exploit_py2_py3",
-          "html_url": "https://github.com/jiangban046-spec/CVE-2026-31431-exploit_py2_py3",
-          "description": "一个兼容python2和python3的CVE-2026-31431脚本",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-04-30T10:02:42Z",
-          "pushed_at": "2026-04-30T10:02:38Z",
-          "created_at": "2026-04-30T09:56:56Z",
-          "topics": [],
-          "owner": {
-            "login": "jiangban046-spec",
-            "html_url": "https://github.com/jiangban046-spec"
-          },
-          "clone_url": "https://github.com/jiangban046-spec/CVE-2026-31431-exploit_py2_py3.git"
         },
         {
           "id": 1229777395,
@@ -20624,23 +20627,23 @@
           "clone_url": "https://github.com/Detect-DefenseLab/CVE-2026-31431-detection-defense.git"
         },
         {
-          "id": 1225454823,
-          "name": "CVE-2026-31431-Copy-Fail-Detection-Toolkit",
-          "full_name": "makitos666/CVE-2026-31431-Copy-Fail-Detection-Toolkit",
-          "html_url": "https://github.com/makitos666/CVE-2026-31431-Copy-Fail-Detection-Toolkit",
-          "description": "",
+          "id": 1225465296,
+          "name": "CVE-2026-31431-exploit_py2_py3",
+          "full_name": "jiangban046-spec/CVE-2026-31431-exploit_py2_py3",
+          "html_url": "https://github.com/jiangban046-spec/CVE-2026-31431-exploit_py2_py3",
+          "description": "一个兼容python2和python3的CVE-2026-31431脚本",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "PowerShell",
-          "updated_at": "2026-04-30T09:44:10Z",
-          "pushed_at": "2026-04-30T09:44:06Z",
-          "created_at": "2026-04-30T09:43:16Z",
+          "language": "Python",
+          "updated_at": "2026-04-30T10:02:42Z",
+          "pushed_at": "2026-04-30T10:02:38Z",
+          "created_at": "2026-04-30T09:56:56Z",
           "topics": [],
           "owner": {
-            "login": "makitos666",
-            "html_url": "https://github.com/makitos666"
+            "login": "jiangban046-spec",
+            "html_url": "https://github.com/jiangban046-spec"
           },
-          "clone_url": "https://github.com/makitos666/CVE-2026-31431-Copy-Fail-Detection-Toolkit.git"
+          "clone_url": "https://github.com/jiangban046-spec/CVE-2026-31431-exploit_py2_py3.git"
         },
         {
           "id": 1229910115,
@@ -20662,23 +20665,23 @@
           "clone_url": "https://github.com/zhanghangorg/cve-2026-31431.git"
         },
         {
-          "id": 1226281843,
-          "name": "CVE-2026-31431",
-          "full_name": "HulnotHutu/CVE-2026-31431",
-          "html_url": "https://github.com/HulnotHutu/CVE-2026-31431",
-          "description": "对 CVE-2026-31431 的复现分析、C 改编的 exp。",
+          "id": 1225454823,
+          "name": "CVE-2026-31431-Copy-Fail-Detection-Toolkit",
+          "full_name": "makitos666/CVE-2026-31431-Copy-Fail-Detection-Toolkit",
+          "html_url": "https://github.com/makitos666/CVE-2026-31431-Copy-Fail-Detection-Toolkit",
+          "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "C",
-          "updated_at": "2026-05-16T08:55:52Z",
-          "pushed_at": "2026-05-16T08:55:48Z",
-          "created_at": "2026-05-01T07:36:05Z",
+          "language": "PowerShell",
+          "updated_at": "2026-04-30T09:44:10Z",
+          "pushed_at": "2026-04-30T09:44:06Z",
+          "created_at": "2026-04-30T09:43:16Z",
           "topics": [],
           "owner": {
-            "login": "HulnotHutu",
-            "html_url": "https://github.com/HulnotHutu"
+            "login": "makitos666",
+            "html_url": "https://github.com/makitos666"
           },
-          "clone_url": "https://github.com/HulnotHutu/CVE-2026-31431.git"
+          "clone_url": "https://github.com/makitos666/CVE-2026-31431-Copy-Fail-Detection-Toolkit.git"
         },
         {
           "id": 1229748919,
@@ -20721,6 +20724,25 @@
           "clone_url": "https://github.com/MrMixies/Copy-Fail---CVE-2026-31431.git"
         },
         {
+          "id": 1225977479,
+          "name": "copy-fail-CVE-2026-31431",
+          "full_name": "B1gN0Se/copy-fail-CVE-2026-31431",
+          "html_url": "https://github.com/B1gN0Se/copy-fail-CVE-2026-31431",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "C",
+          "updated_at": "2026-04-30T21:06:07Z",
+          "pushed_at": "2026-04-30T21:06:03Z",
+          "created_at": "2026-04-30T21:03:41Z",
+          "topics": [],
+          "owner": {
+            "login": "B1gN0Se",
+            "html_url": "https://github.com/B1gN0Se"
+          },
+          "clone_url": "https://github.com/B1gN0Se/copy-fail-CVE-2026-31431.git"
+        },
+        {
           "id": 1225400692,
           "name": "fuck_cve_2026_31431",
           "full_name": "dixyes/fuck_cve_2026_31431",
@@ -20738,25 +20760,6 @@
             "html_url": "https://github.com/dixyes"
           },
           "clone_url": "https://github.com/dixyes/fuck_cve_2026_31431.git"
-        },
-        {
-          "id": 1225380973,
-          "name": "CVE-2026-31431-Golang",
-          "full_name": "eleveni386/CVE-2026-31431-Golang",
-          "html_url": "https://github.com/eleveni386/CVE-2026-31431-Golang",
-          "description": "CVE-2026-31431 Golang版本。摆脱Python3.10依赖",
-          "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "Go",
-          "updated_at": "2026-04-30T08:23:06Z",
-          "pushed_at": "2026-04-30T08:23:02Z",
-          "created_at": "2026-04-30T08:11:37Z",
-          "topics": [],
-          "owner": {
-            "login": "eleveni386",
-            "html_url": "https://github.com/eleveni386"
-          },
-          "clone_url": "https://github.com/eleveni386/CVE-2026-31431-Golang.git"
         },
         {
           "id": 1229587224,
@@ -20797,23 +20800,23 @@
           "clone_url": "https://github.com/ShahaB108/CVE-2026-31431_Kernel_Checker.git"
         },
         {
-          "id": 1225290691,
-          "name": "check-cve-2026-31431",
-          "full_name": "arkdev1/check-cve-2026-31431",
-          "html_url": "https://github.com/arkdev1/check-cve-2026-31431",
-          "description": "",
+          "id": 1225380973,
+          "name": "CVE-2026-31431-Golang",
+          "full_name": "eleveni386/CVE-2026-31431-Golang",
+          "html_url": "https://github.com/eleveni386/CVE-2026-31431-Golang",
+          "description": "CVE-2026-31431 Golang版本。摆脱Python3.10依赖",
           "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2026-04-30T08:09:57Z",
-          "pushed_at": "2026-04-30T08:09:53Z",
-          "created_at": "2026-04-30T06:16:55Z",
+          "forks_count": 1,
+          "language": "Go",
+          "updated_at": "2026-04-30T08:23:06Z",
+          "pushed_at": "2026-04-30T08:23:02Z",
+          "created_at": "2026-04-30T08:11:37Z",
           "topics": [],
           "owner": {
-            "login": "arkdev1",
-            "html_url": "https://github.com/arkdev1"
+            "login": "eleveni386",
+            "html_url": "https://github.com/eleveni386"
           },
-          "clone_url": "https://github.com/arkdev1/check-cve-2026-31431.git"
+          "clone_url": "https://github.com/eleveni386/CVE-2026-31431-Golang.git"
         },
         {
           "id": 1229267211,
@@ -20835,23 +20838,23 @@
           "clone_url": "https://github.com/KhaosFarbauti/CVE-2026-31431.git"
         },
         {
-          "id": 1225166437,
-          "name": "CVE-2026-31431",
-          "full_name": "gubaiovo/CVE-2026-31431",
-          "html_url": "https://github.com/gubaiovo/CVE-2026-31431",
-          "description": "CVE-2026-31431 POC by C",
+          "id": 1225290691,
+          "name": "check-cve-2026-31431",
+          "full_name": "arkdev1/check-cve-2026-31431",
+          "html_url": "https://github.com/arkdev1/check-cve-2026-31431",
+          "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "C",
-          "updated_at": "2026-05-07T01:25:31Z",
-          "pushed_at": "2026-05-07T01:25:28Z",
-          "created_at": "2026-04-30T02:31:56Z",
+          "language": "Shell",
+          "updated_at": "2026-04-30T08:09:57Z",
+          "pushed_at": "2026-04-30T08:09:53Z",
+          "created_at": "2026-04-30T06:16:55Z",
           "topics": [],
           "owner": {
-            "login": "gubaiovo",
-            "html_url": "https://github.com/gubaiovo"
+            "login": "arkdev1",
+            "html_url": "https://github.com/arkdev1"
           },
-          "clone_url": "https://github.com/gubaiovo/CVE-2026-31431.git"
+          "clone_url": "https://github.com/arkdev1/check-cve-2026-31431.git"
         },
         {
           "id": 1229385888,
@@ -20892,6 +20895,25 @@
           "clone_url": "https://github.com/imkk000/play-go-copy-fail-cve-2026-31431.git"
         },
         {
+          "id": 1226857673,
+          "name": "copyfailscan",
+          "full_name": "monobrau/copyfailscan",
+          "html_url": "https://github.com/monobrau/copyfailscan",
+          "description": "SSH posture helper for CVE-2026-31431 (Copy Fail): kernel and algif_aead inventory",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Shell",
+          "updated_at": "2026-05-16T14:54:02Z",
+          "pushed_at": "2026-05-16T14:54:01Z",
+          "created_at": "2026-05-01T22:54:44Z",
+          "topics": [],
+          "owner": {
+            "login": "monobrau",
+            "html_url": "https://github.com/monobrau"
+          },
+          "clone_url": "https://github.com/monobrau/copyfailscan.git"
+        },
+        {
           "id": 1225355295,
           "name": "copy-fail-mitigate-no-reboot",
           "full_name": "mrowkoob/copy-fail-mitigate-no-reboot",
@@ -20909,25 +20931,6 @@
             "html_url": "https://github.com/mrowkoob"
           },
           "clone_url": "https://github.com/mrowkoob/copy-fail-mitigate-no-reboot.git"
-        },
-        {
-          "id": 1225332828,
-          "name": "cve-2026-31431-fleet-remediator",
-          "full_name": "WavesMan/cve-2026-31431-fleet-remediator",
-          "html_url": "https://github.com/WavesMan/cve-2026-31431-fleet-remediator",
-          "description": "Fleet-scale CVE-2026-31431 audit and remediation orchestrator for Linux hosts via SSH, with strict host-key verification and multi-format reporting.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-04-30T07:50:48Z",
-          "pushed_at": "2026-04-30T07:50:43Z",
-          "created_at": "2026-04-30T07:11:44Z",
-          "topics": [],
-          "owner": {
-            "login": "WavesMan",
-            "html_url": "https://github.com/WavesMan"
-          },
-          "clone_url": "https://github.com/WavesMan/cve-2026-31431-fleet-remediator.git"
         },
         {
           "id": 1228016894,
@@ -20949,6 +20952,25 @@
           "clone_url": "https://github.com/ncmprbll/copy-fail-rs.git"
         },
         {
+          "id": 1225332828,
+          "name": "cve-2026-31431-fleet-remediator",
+          "full_name": "WavesMan/cve-2026-31431-fleet-remediator",
+          "html_url": "https://github.com/WavesMan/cve-2026-31431-fleet-remediator",
+          "description": "Fleet-scale CVE-2026-31431 audit and remediation orchestrator for Linux hosts via SSH, with strict host-key verification and multi-format reporting.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-04-30T07:50:48Z",
+          "pushed_at": "2026-04-30T07:50:43Z",
+          "created_at": "2026-04-30T07:11:44Z",
+          "topics": [],
+          "owner": {
+            "login": "WavesMan",
+            "html_url": "https://github.com/WavesMan"
+          },
+          "clone_url": "https://github.com/WavesMan/cve-2026-31431-fleet-remediator.git"
+        },
+        {
           "id": 1225339348,
           "name": "copy-fail-CVE-2026-31431",
           "full_name": "wuzuowei/copy-fail-CVE-2026-31431",
@@ -20966,25 +20988,6 @@
             "html_url": "https://github.com/wuzuowei"
           },
           "clone_url": "https://github.com/wuzuowei/copy-fail-CVE-2026-31431.git"
-        },
-        {
-          "id": 1225342098,
-          "name": "copy-fail-cve-2026-31431-aarch64",
-          "full_name": "Isw-9/copy-fail-cve-2026-31431-aarch64",
-          "html_url": "https://github.com/Isw-9/copy-fail-cve-2026-31431-aarch64",
-          "description": "References: https://github.com/theori-io/copy-fail-CVE-2026-31431; https://github.com/bigwario/copy-fail-CVE-2026-31431-C",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-04-30T07:26:08Z",
-          "pushed_at": "2026-04-30T07:26:03Z",
-          "created_at": "2026-04-30T07:20:25Z",
-          "topics": [],
-          "owner": {
-            "login": "Isw-9",
-            "html_url": "https://github.com/Isw-9"
-          },
-          "clone_url": "https://github.com/Isw-9/copy-fail-cve-2026-31431-aarch64.git"
         },
         {
           "id": 1226145956,
@@ -21006,6 +21009,25 @@
           "clone_url": "https://github.com/professional-slacker/alg_check.git"
         },
         {
+          "id": 1225342098,
+          "name": "copy-fail-cve-2026-31431-aarch64",
+          "full_name": "Isw-9/copy-fail-cve-2026-31431-aarch64",
+          "html_url": "https://github.com/Isw-9/copy-fail-cve-2026-31431-aarch64",
+          "description": "References: https://github.com/theori-io/copy-fail-CVE-2026-31431; https://github.com/bigwario/copy-fail-CVE-2026-31431-C",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-04-30T07:26:08Z",
+          "pushed_at": "2026-04-30T07:26:03Z",
+          "created_at": "2026-04-30T07:20:25Z",
+          "topics": [],
+          "owner": {
+            "login": "Isw-9",
+            "html_url": "https://github.com/Isw-9"
+          },
+          "clone_url": "https://github.com/Isw-9/copy-fail-cve-2026-31431-aarch64.git"
+        },
+        {
           "id": 1225342881,
           "name": "CVE-2026-31431",
           "full_name": "freelabz/CVE-2026-31431",
@@ -21023,25 +21045,6 @@
             "html_url": "https://github.com/freelabz"
           },
           "clone_url": "https://github.com/freelabz/CVE-2026-31431.git"
-        },
-        {
-          "id": 1225862219,
-          "name": "CVE-2026-31431",
-          "full_name": "websecnl/CVE-2026-31431",
-          "html_url": "https://github.com/websecnl/CVE-2026-31431",
-          "description": " Linux algif_aead page-cache write to root - Local Privilege Escalation Exploit",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-04-30T18:18:19Z",
-          "pushed_at": "2026-04-30T18:18:15Z",
-          "created_at": "2026-04-30T18:09:42Z",
-          "topics": [],
-          "owner": {
-            "login": "websecnl",
-            "html_url": "https://github.com/websecnl"
-          },
-          "clone_url": "https://github.com/websecnl/CVE-2026-31431.git"
         },
         {
           "id": 1228080038,
@@ -21082,23 +21085,23 @@
           "clone_url": "https://github.com/g1nt0n1x/copy-fail-CVE-2026-31431-shell.git"
         },
         {
-          "id": 1225271219,
-          "name": "CVE-2026-31431-",
-          "full_name": "twowb/CVE-2026-31431-",
-          "html_url": "https://github.com/twowb/CVE-2026-31431-",
-          "description": "Linux提权漏洞二进制版CVE-2026-31431 ",
+          "id": 1238971610,
+          "name": "CopyFail",
+          "full_name": "dotPY-hax/CopyFail",
+          "html_url": "https://github.com/dotPY-hax/CopyFail",
+          "description": "A CopyFail CVE-2026-31431 implementation in python that isnt slop! Bring your own payload",
           "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-04-30T05:50:12Z",
-          "pushed_at": "2026-04-30T05:50:09Z",
-          "created_at": "2026-04-30T05:46:47Z",
+          "forks_count": 1,
+          "language": "Python",
+          "updated_at": "2026-05-14T16:28:31Z",
+          "pushed_at": "2026-05-14T16:28:26Z",
+          "created_at": "2026-05-14T16:24:24Z",
           "topics": [],
           "owner": {
-            "login": "twowb",
-            "html_url": "https://github.com/twowb"
+            "login": "dotPY-hax",
+            "html_url": "https://github.com/dotPY-hax"
           },
-          "clone_url": "https://github.com/twowb/CVE-2026-31431-.git"
+          "clone_url": "https://github.com/dotPY-hax/CopyFail.git"
         },
         {
           "id": 1228502015,
@@ -21158,6 +21161,25 @@
           "clone_url": "https://github.com/MetaspIoit/CVE-2026-31431.git"
         },
         {
+          "id": 1225271219,
+          "name": "CVE-2026-31431-",
+          "full_name": "twowb/CVE-2026-31431-",
+          "html_url": "https://github.com/twowb/CVE-2026-31431-",
+          "description": "Linux提权漏洞二进制版CVE-2026-31431 ",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-04-30T05:50:12Z",
+          "pushed_at": "2026-04-30T05:50:09Z",
+          "created_at": "2026-04-30T05:46:47Z",
+          "topics": [],
+          "owner": {
+            "login": "twowb",
+            "html_url": "https://github.com/twowb"
+          },
+          "clone_url": "https://github.com/twowb/CVE-2026-31431-.git"
+        },
+        {
           "id": 1225234497,
           "name": "cve-2026-31431-detection",
           "full_name": "thrandomv/cve-2026-31431-detection",
@@ -21177,23 +21199,23 @@
           "clone_url": "https://github.com/thrandomv/cve-2026-31431-detection.git"
         },
         {
-          "id": 1225626691,
-          "name": "CVE-2026-31431-patch",
-          "full_name": "rshosting/CVE-2026-31431-patch",
-          "html_url": "https://github.com/rshosting/CVE-2026-31431-patch",
-          "description": "A temporary mitigation for CVE-2026-31431 vulneribility",
+          "id": 1225862219,
+          "name": "CVE-2026-31431",
+          "full_name": "websecnl/CVE-2026-31431",
+          "html_url": "https://github.com/websecnl/CVE-2026-31431",
+          "description": " Linux algif_aead page-cache write to root - Local Privilege Escalation Exploit",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2026-04-30T18:11:24Z",
-          "pushed_at": "2026-04-30T18:10:49Z",
-          "created_at": "2026-04-30T13:25:16Z",
+          "language": "Python",
+          "updated_at": "2026-04-30T18:18:19Z",
+          "pushed_at": "2026-04-30T18:18:15Z",
+          "created_at": "2026-04-30T18:09:42Z",
           "topics": [],
           "owner": {
-            "login": "rshosting",
-            "html_url": "https://github.com/rshosting"
+            "login": "websecnl",
+            "html_url": "https://github.com/websecnl"
           },
-          "clone_url": "https://github.com/rshosting/CVE-2026-31431-patch.git"
+          "clone_url": "https://github.com/websecnl/CVE-2026-31431.git"
         },
         {
           "id": 1225213210,
@@ -21213,25 +21235,6 @@
             "html_url": "https://github.com/someCorp"
           },
           "clone_url": "https://github.com/someCorp/copyFail-CVE-2026-31431-workaround-bash.git"
-        },
-        {
-          "id": 1225239300,
-          "name": "copy-fail-CVE-2026-31431-universal",
-          "full_name": "Y5neKO/copy-fail-CVE-2026-31431-universal",
-          "html_url": "https://github.com/Y5neKO/copy-fail-CVE-2026-31431-universal",
-          "description": "Multi-language implementation and compatibility with older versions of Python.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "C",
-          "updated_at": "2026-04-30T04:51:04Z",
-          "pushed_at": "2026-04-30T04:51:00Z",
-          "created_at": "2026-04-30T04:50:57Z",
-          "topics": [],
-          "owner": {
-            "login": "Y5neKO",
-            "html_url": "https://github.com/Y5neKO"
-          },
-          "clone_url": "https://github.com/Y5neKO/copy-fail-CVE-2026-31431-universal.git"
         },
         {
           "id": 1228223117,
@@ -21329,31 +21332,23 @@
           "clone_url": "https://github.com/sibersan/cve-2026-31431-checker.git"
         },
         {
-          "id": 1225824731,
-          "name": "Copyfail-rust",
-          "full_name": "ShorterKing/Copyfail-rust",
-          "html_url": "https://github.com/ShorterKing/Copyfail-rust",
-          "description": "Rust implementation of copyfail (CVE-2026-31431) (Cause why not 😁)",
+          "id": 1225239300,
+          "name": "copy-fail-CVE-2026-31431-universal",
+          "full_name": "Y5neKO/copy-fail-CVE-2026-31431-universal",
+          "html_url": "https://github.com/Y5neKO/copy-fail-CVE-2026-31431-universal",
+          "description": "Multi-language implementation and compatibility with older versions of Python.",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Rust",
-          "updated_at": "2026-05-09T08:56:37Z",
-          "pushed_at": "2026-04-30T17:53:57Z",
-          "created_at": "2026-04-30T17:20:00Z",
-          "topics": [
-            "copy-fail",
-            "copyfail",
-            "cve-2026-31431",
-            "kernel-exploit",
-            "local-privilege-escalation",
-            "proof-of-concept",
-            "rust"
-          ],
+          "language": "C",
+          "updated_at": "2026-04-30T04:51:04Z",
+          "pushed_at": "2026-04-30T04:51:00Z",
+          "created_at": "2026-04-30T04:50:57Z",
+          "topics": [],
           "owner": {
-            "login": "ShorterKing",
-            "html_url": "https://github.com/ShorterKing"
+            "login": "Y5neKO",
+            "html_url": "https://github.com/Y5neKO"
           },
-          "clone_url": "https://github.com/ShorterKing/Copyfail-rust.git"
+          "clone_url": "https://github.com/Y5neKO/copy-fail-CVE-2026-31431-universal.git"
         },
         {
           "id": 1227861478,
@@ -21511,23 +21506,23 @@
           "clone_url": "https://github.com/danimrtzp/CVE-2026-31431-REVSHELL.git"
         },
         {
-          "id": 1240343224,
-          "name": "ProyectoFinalSO",
-          "full_name": "zKaaanon/ProyectoFinalSO",
-          "html_url": "https://github.com/zKaaanon/ProyectoFinalSO",
-          "description": "Estudio del bug CVE-2026-31431",
+          "id": 1225626691,
+          "name": "CVE-2026-31431-patch",
+          "full_name": "rshosting/CVE-2026-31431-patch",
+          "html_url": "https://github.com/rshosting/CVE-2026-31431-patch",
+          "description": "A temporary mitigation for CVE-2026-31431 vulneribility",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-05-16T03:57:56Z",
-          "pushed_at": "2026-05-16T03:57:52Z",
-          "created_at": "2026-05-16T03:07:04Z",
+          "language": "Shell",
+          "updated_at": "2026-04-30T18:11:24Z",
+          "pushed_at": "2026-04-30T18:10:49Z",
+          "created_at": "2026-04-30T13:25:16Z",
           "topics": [],
           "owner": {
-            "login": "zKaaanon",
-            "html_url": "https://github.com/zKaaanon"
+            "login": "rshosting",
+            "html_url": "https://github.com/rshosting"
           },
-          "clone_url": "https://github.com/zKaaanon/ProyectoFinalSO.git"
+          "clone_url": "https://github.com/rshosting/CVE-2026-31431-patch.git"
         },
         {
           "id": 1227632844,
@@ -21568,42 +21563,50 @@
           "clone_url": "https://github.com/pulentoski/CVE-2026-31431.git"
         },
         {
-          "id": 1225788769,
-          "name": "copy-fail",
-          "full_name": "weirdindiankid/copy-fail",
-          "html_url": "https://github.com/weirdindiankid/copy-fail",
-          "description": "CVE-2026-31431 proof of concept.",
+          "id": 1225824731,
+          "name": "Copyfail-rust",
+          "full_name": "ShorterKing/Copyfail-rust",
+          "html_url": "https://github.com/ShorterKing/Copyfail-rust",
+          "description": "Rust implementation of copyfail (CVE-2026-31431) (Cause why not 😁)",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-04-30T16:34:41Z",
-          "pushed_at": "2026-04-30T16:34:36Z",
-          "created_at": "2026-04-30T16:34:27Z",
-          "topics": [],
+          "language": "Rust",
+          "updated_at": "2026-05-09T08:56:37Z",
+          "pushed_at": "2026-04-30T17:53:57Z",
+          "created_at": "2026-04-30T17:20:00Z",
+          "topics": [
+            "copy-fail",
+            "copyfail",
+            "cve-2026-31431",
+            "kernel-exploit",
+            "local-privilege-escalation",
+            "proof-of-concept",
+            "rust"
+          ],
           "owner": {
-            "login": "weirdindiankid",
-            "html_url": "https://github.com/weirdindiankid"
+            "login": "ShorterKing",
+            "html_url": "https://github.com/ShorterKing"
           },
-          "clone_url": "https://github.com/weirdindiankid/copy-fail.git"
+          "clone_url": "https://github.com/ShorterKing/Copyfail-rust.git"
         },
         {
-          "id": 1225196738,
-          "name": "copy-fail-CVE-2026-31431",
-          "full_name": "vishwanathakuthota/copy-fail-CVE-2026-31431",
-          "html_url": "https://github.com/vishwanathakuthota/copy-fail-CVE-2026-31431",
-          "description": "copy-fail-CVE-2026-31431",
+          "id": 1240822761,
+          "name": "CVE-2026-31431-Metasploit-exploit",
+          "full_name": "adityasingh108/CVE-2026-31431-Metasploit-exploit",
+          "html_url": "https://github.com/adityasingh108/CVE-2026-31431-Metasploit-exploit",
+          "description": "Automated Metasploit post-exploitation module for CVE-2026-31431 (\"Copy Fail\"). Weaponizes a deterministic logic flaw in the Linux kernel AF_ALG subsystem to achieve local privilege escalation (LPE) to root by safely corrupting a setuid binary directly in the shared Page Cache (RAM) without modifying files on disk",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-04-30T03:31:19Z",
-          "pushed_at": "2026-04-30T03:31:14Z",
-          "created_at": "2026-04-30T03:29:15Z",
+          "language": "",
+          "updated_at": "2026-05-16T16:02:15Z",
+          "pushed_at": "2026-05-16T16:02:15Z",
+          "created_at": "2026-05-16T16:02:14Z",
           "topics": [],
           "owner": {
-            "login": "vishwanathakuthota",
-            "html_url": "https://github.com/vishwanathakuthota"
+            "login": "adityasingh108",
+            "html_url": "https://github.com/adityasingh108"
           },
-          "clone_url": "https://github.com/vishwanathakuthota/copy-fail-CVE-2026-31431.git"
+          "clone_url": "https://github.com/adityasingh108/CVE-2026-31431-Metasploit-exploit.git"
         },
         {
           "id": 1228708687,
@@ -21663,23 +21666,42 @@
           "clone_url": "https://github.com/CybroZeus/Copy-Fail-Exploit-CVE-2026-31431.git"
         },
         {
-          "id": 1225743455,
-          "name": "Copy-Fail-CVE-2026-31431",
-          "full_name": "MohamedKarrab/Copy-Fail-CVE-2026-31431",
-          "html_url": "https://github.com/MohamedKarrab/Copy-Fail-CVE-2026-31431",
-          "description": "",
+          "id": 1225196738,
+          "name": "copy-fail-CVE-2026-31431",
+          "full_name": "vishwanathakuthota/copy-fail-CVE-2026-31431",
+          "html_url": "https://github.com/vishwanathakuthota/copy-fail-CVE-2026-31431",
+          "description": "copy-fail-CVE-2026-31431",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-04-30T16:34:03Z",
-          "pushed_at": "2026-04-30T16:32:15Z",
-          "created_at": "2026-04-30T15:36:35Z",
+          "updated_at": "2026-04-30T03:31:19Z",
+          "pushed_at": "2026-04-30T03:31:14Z",
+          "created_at": "2026-04-30T03:29:15Z",
           "topics": [],
           "owner": {
-            "login": "MohamedKarrab",
-            "html_url": "https://github.com/MohamedKarrab"
+            "login": "vishwanathakuthota",
+            "html_url": "https://github.com/vishwanathakuthota"
           },
-          "clone_url": "https://github.com/MohamedKarrab/Copy-Fail-CVE-2026-31431.git"
+          "clone_url": "https://github.com/vishwanathakuthota/copy-fail-CVE-2026-31431.git"
+        },
+        {
+          "id": 1225788769,
+          "name": "copy-fail",
+          "full_name": "weirdindiankid/copy-fail",
+          "html_url": "https://github.com/weirdindiankid/copy-fail",
+          "description": "CVE-2026-31431 proof of concept.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-04-30T16:34:41Z",
+          "pushed_at": "2026-04-30T16:34:36Z",
+          "created_at": "2026-04-30T16:34:27Z",
+          "topics": [],
+          "owner": {
+            "login": "weirdindiankid",
+            "html_url": "https://github.com/weirdindiankid"
+          },
+          "clone_url": "https://github.com/weirdindiankid/copy-fail.git"
         },
         {
           "id": 1225160135,
@@ -21699,25 +21721,6 @@
             "html_url": "https://github.com/ruattd"
           },
           "clone_url": "https://github.com/ruattd/cve-2026-31431.git"
-        },
-        {
-          "id": 1238465365,
-          "name": "CVE-2026-31431-CopyFail",
-          "full_name": "0xFuffM3/CVE-2026-31431-CopyFail",
-          "html_url": "https://github.com/0xFuffM3/CVE-2026-31431-CopyFail",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2026-05-14T09:16:48Z",
-          "pushed_at": "2026-05-14T09:16:44Z",
-          "created_at": "2026-05-14T06:32:14Z",
-          "topics": [],
-          "owner": {
-            "login": "0xFuffM3",
-            "html_url": "https://github.com/0xFuffM3"
-          },
-          "clone_url": "https://github.com/0xFuffM3/CVE-2026-31431-CopyFail.git"
         },
         {
           "id": 1226879619,
@@ -21752,28 +21755,23 @@
           "clone_url": "https://github.com/Emmmmllll/copy-fail-zig.git"
         },
         {
-          "id": 1225578145,
-          "name": "CVE-2026-43500",
-          "full_name": "attaattaatta/CVE-2026-43500",
-          "html_url": "https://github.com/attaattaatta/CVE-2026-43500",
-          "description": "CVE-2026-43500 / CVE-2026-31431 / CVE-2026-43284 golang hotfix",
+          "id": 1225743455,
+          "name": "Copy-Fail-CVE-2026-31431",
+          "full_name": "MohamedKarrab/Copy-Fail-CVE-2026-31431",
+          "html_url": "https://github.com/MohamedKarrab/Copy-Fail-CVE-2026-31431",
+          "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Go",
-          "updated_at": "2026-05-14T00:52:33Z",
-          "pushed_at": "2026-05-14T01:12:07Z",
-          "created_at": "2026-04-30T12:27:15Z",
-          "topics": [
-            "cve-2026-31431",
-            "cve-2026-43284",
-            "cve-2026-43500",
-            "hotfix"
-          ],
+          "language": "Python",
+          "updated_at": "2026-04-30T16:34:03Z",
+          "pushed_at": "2026-04-30T16:32:15Z",
+          "created_at": "2026-04-30T15:36:35Z",
+          "topics": [],
           "owner": {
-            "login": "attaattaatta",
-            "html_url": "https://github.com/attaattaatta"
+            "login": "MohamedKarrab",
+            "html_url": "https://github.com/MohamedKarrab"
           },
-          "clone_url": "https://github.com/attaattaatta/CVE-2026-43500.git"
+          "clone_url": "https://github.com/MohamedKarrab/Copy-Fail-CVE-2026-31431.git"
         },
         {
           "id": 1227199755,
@@ -21818,6 +21816,60 @@
           "clone_url": "https://github.com/mmionf/copy-fail-CVE-2026-31431.git"
         },
         {
+          "id": 1225166437,
+          "name": "CVE-2026-31431",
+          "full_name": "gubaiovo/CVE-2026-31431",
+          "html_url": "https://github.com/gubaiovo/CVE-2026-31431",
+          "description": "CVE-2026-31431 POC by C",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "C",
+          "updated_at": "2026-05-07T01:25:31Z",
+          "pushed_at": "2026-05-07T01:25:28Z",
+          "created_at": "2026-04-30T02:31:56Z",
+          "topics": [],
+          "owner": {
+            "login": "gubaiovo",
+            "html_url": "https://github.com/gubaiovo"
+          },
+          "clone_url": "https://github.com/gubaiovo/CVE-2026-31431.git"
+        },
+        {
+          "id": 1229483364,
+          "name": "copyfail-rs",
+          "full_name": "Liverwortenuresis371/copyfail-rs",
+          "html_url": "https://github.com/Liverwortenuresis371/copyfail-rs",
+          "description": "Exploit and detect CVE-2026-31431 vulnerabilities using a static binary that monitors system integrity and bypasses PAM authentication.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Rust",
+          "updated_at": "2026-05-16T14:25:06Z",
+          "pushed_at": "2026-05-16T14:25:02Z",
+          "created_at": "2026-05-05T04:58:21Z",
+          "topics": [
+            "af-alg",
+            "auditd",
+            "copyfail",
+            "cve",
+            "cve-2026-31431",
+            "detection-engineering",
+            "ebpf",
+            "local-privilege-escalation",
+            "lpe",
+            "no-std",
+            "poc",
+            "privilege-escalation",
+            "rust",
+            "security",
+            "sigma-rules"
+          ],
+          "owner": {
+            "login": "Liverwortenuresis371",
+            "html_url": "https://github.com/Liverwortenuresis371"
+          },
+          "clone_url": "https://github.com/Liverwortenuresis371/copyfail-rs.git"
+        },
+        {
           "id": 1225753891,
           "name": "CVE-2026-31431-PoC",
           "full_name": "w3llr00t3d/CVE-2026-31431-PoC",
@@ -21837,80 +21889,42 @@
           "clone_url": "https://github.com/w3llr00t3d/CVE-2026-31431-PoC.git"
         },
         {
-          "id": 1176158184,
-          "name": "CVE-2026-31431-CopyFail-Linux-PrivEsc",
-          "full_name": "John-Popovici/CVE-2026-31431-CopyFail-Linux-PrivEsc",
-          "html_url": "https://github.com/John-Popovici/CVE-2026-31431-CopyFail-Linux-PrivEsc",
-          "description": "A demo and explanation of CVE-2026-31431",
+          "id": 1226281843,
+          "name": "CVE-2026-31431",
+          "full_name": "HulnotHutu/CVE-2026-31431",
+          "html_url": "https://github.com/HulnotHutu/CVE-2026-31431",
+          "description": "对 CVE-2026-31431 的复现分析、C 改编的 exp。",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-05-15T23:42:49Z",
-          "pushed_at": "2026-05-15T23:42:46Z",
-          "created_at": "2026-03-08T17:40:11Z",
+          "language": "C",
+          "updated_at": "2026-05-16T08:55:52Z",
+          "pushed_at": "2026-05-16T08:55:48Z",
+          "created_at": "2026-05-01T07:36:05Z",
           "topics": [],
           "owner": {
-            "login": "John-Popovici",
-            "html_url": "https://github.com/John-Popovici"
+            "login": "HulnotHutu",
+            "html_url": "https://github.com/HulnotHutu"
           },
-          "clone_url": "https://github.com/John-Popovici/CVE-2026-31431-CopyFail-Linux-PrivEsc.git"
+          "clone_url": "https://github.com/HulnotHutu/CVE-2026-31431.git"
         },
         {
-          "id": 1225716790,
-          "name": "cve-2026-31431",
-          "full_name": "leelong2020/cve-2026-31431",
-          "html_url": "https://github.com/leelong2020/cve-2026-31431",
+          "id": 1238465365,
+          "name": "CVE-2026-31431-CopyFail",
+          "full_name": "0xFuffM3/CVE-2026-31431-CopyFail",
+          "html_url": "https://github.com/0xFuffM3/CVE-2026-31431-CopyFail",
           "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Shell",
-          "updated_at": "2026-05-01T07:22:01Z",
-          "pushed_at": "2026-05-01T07:21:58Z",
-          "created_at": "2026-04-30T15:04:42Z",
+          "updated_at": "2026-05-14T09:16:48Z",
+          "pushed_at": "2026-05-14T09:16:44Z",
+          "created_at": "2026-05-14T06:32:14Z",
           "topics": [],
           "owner": {
-            "login": "leelong2020",
-            "html_url": "https://github.com/leelong2020"
+            "login": "0xFuffM3",
+            "html_url": "https://github.com/0xFuffM3"
           },
-          "clone_url": "https://github.com/leelong2020/cve-2026-31431.git"
-        },
-        {
-          "id": 1225741335,
-          "name": "fail-CVE-2026-31431",
-          "full_name": "vynazevedo/fail-CVE-2026-31431",
-          "html_url": "https://github.com/vynazevedo/fail-CVE-2026-31431",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-04-30T15:34:27Z",
-          "pushed_at": "2026-04-30T15:34:23Z",
-          "created_at": "2026-04-30T15:34:05Z",
-          "topics": [],
-          "owner": {
-            "login": "vynazevedo",
-            "html_url": "https://github.com/vynazevedo"
-          },
-          "clone_url": "https://github.com/vynazevedo/fail-CVE-2026-31431.git"
-        },
-        {
-          "id": 1240186809,
-          "name": "cve-2026-31431",
-          "full_name": "whosfault/cve-2026-31431",
-          "html_url": "https://github.com/whosfault/cve-2026-31431",
-          "description": "copy fail",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "C",
-          "updated_at": "2026-05-15T21:26:16Z",
-          "pushed_at": "2026-05-15T21:26:12Z",
-          "created_at": "2026-05-15T21:24:58Z",
-          "topics": [],
-          "owner": {
-            "login": "whosfault",
-            "html_url": "https://github.com/whosfault"
-          },
-          "clone_url": "https://github.com/whosfault/cve-2026-31431.git"
+          "clone_url": "https://github.com/0xFuffM3/CVE-2026-31431-CopyFail.git"
         },
         {
           "id": 1226174732,
@@ -21932,23 +21946,23 @@
           "clone_url": "https://github.com/ashok523/cve-2026-31431.git"
         },
         {
-          "id": 1237824325,
-          "name": "copy-fail-CVE-2026-31431",
-          "full_name": "SilverRuler/copy-fail-CVE-2026-31431",
-          "html_url": "https://github.com/SilverRuler/copy-fail-CVE-2026-31431",
-          "description": "copy-fail-CVE-2026-31431",
+          "id": 1225741335,
+          "name": "fail-CVE-2026-31431",
+          "full_name": "vynazevedo/fail-CVE-2026-31431",
+          "html_url": "https://github.com/vynazevedo/fail-CVE-2026-31431",
+          "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-05-13T15:15:37Z",
-          "pushed_at": "2026-05-13T14:45:00Z",
-          "created_at": "2026-05-13T14:43:00Z",
+          "language": "",
+          "updated_at": "2026-04-30T15:34:27Z",
+          "pushed_at": "2026-04-30T15:34:23Z",
+          "created_at": "2026-04-30T15:34:05Z",
           "topics": [],
           "owner": {
-            "login": "SilverRuler",
-            "html_url": "https://github.com/SilverRuler"
+            "login": "vynazevedo",
+            "html_url": "https://github.com/vynazevedo"
           },
-          "clone_url": "https://github.com/SilverRuler/copy-fail-CVE-2026-31431.git"
+          "clone_url": "https://github.com/vynazevedo/fail-CVE-2026-31431.git"
         },
         {
           "id": 1227035461,
@@ -22008,23 +22022,23 @@
           "clone_url": "https://github.com/0xac1dc0de/CVE-2026-31431.git"
         },
         {
-          "id": 1237654676,
-          "name": "Copy-Fail-CVE-2026-31431-Lab",
-          "full_name": "kuniyal08/Copy-Fail-CVE-2026-31431-Lab",
-          "html_url": "https://github.com/kuniyal08/Copy-Fail-CVE-2026-31431-Lab",
-          "description": "",
+          "id": 1237824325,
+          "name": "copy-fail-CVE-2026-31431",
+          "full_name": "SilverRuler/copy-fail-CVE-2026-31431",
+          "html_url": "https://github.com/SilverRuler/copy-fail-CVE-2026-31431",
+          "description": "copy-fail-CVE-2026-31431",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-05-13T11:36:05Z",
-          "pushed_at": "2026-05-13T11:36:01Z",
-          "created_at": "2026-05-13T11:36:00Z",
+          "language": "Python",
+          "updated_at": "2026-05-13T15:15:37Z",
+          "pushed_at": "2026-05-13T14:45:00Z",
+          "created_at": "2026-05-13T14:43:00Z",
           "topics": [],
           "owner": {
-            "login": "kuniyal08",
-            "html_url": "https://github.com/kuniyal08"
+            "login": "SilverRuler",
+            "html_url": "https://github.com/SilverRuler"
           },
-          "clone_url": "https://github.com/kuniyal08/Copy-Fail-CVE-2026-31431-Lab.git"
+          "clone_url": "https://github.com/SilverRuler/copy-fail-CVE-2026-31431.git"
         },
         {
           "id": 1226956768,
@@ -22084,23 +22098,23 @@
           "clone_url": "https://github.com/kdjnb/fix_CVE-2026-31431.git"
         },
         {
-          "id": 1237230551,
-          "name": "SplicePrivillegeEscalationFIX",
-          "full_name": "DroPZsec/SplicePrivillegeEscalationFIX",
-          "html_url": "https://github.com/DroPZsec/SplicePrivillegeEscalationFIX",
-          "description": "this little script blocks the new splice-ram-privlilleg ecalation fastly befor the contributers do it ( CVE-2026-31431)  (CopyFail fix)",
+          "id": 1237654676,
+          "name": "Copy-Fail-CVE-2026-31431-Lab",
+          "full_name": "kuniyal08/Copy-Fail-CVE-2026-31431-Lab",
+          "html_url": "https://github.com/kuniyal08/Copy-Fail-CVE-2026-31431-Lab",
+          "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2026-05-13T02:14:23Z",
-          "pushed_at": "2026-05-13T02:02:08Z",
-          "created_at": "2026-05-13T02:01:30Z",
+          "language": "",
+          "updated_at": "2026-05-13T11:36:05Z",
+          "pushed_at": "2026-05-13T11:36:01Z",
+          "created_at": "2026-05-13T11:36:00Z",
           "topics": [],
           "owner": {
-            "login": "DroPZsec",
-            "html_url": "https://github.com/DroPZsec"
+            "login": "kuniyal08",
+            "html_url": "https://github.com/kuniyal08"
           },
-          "clone_url": "https://github.com/DroPZsec/SplicePrivillegeEscalationFIX.git"
+          "clone_url": "https://github.com/kuniyal08/Copy-Fail-CVE-2026-31431-Lab.git"
         },
         {
           "id": 1226838149,
@@ -22141,6 +22155,25 @@
           "clone_url": "https://github.com/RoflSecurity/copy_fail.git"
         },
         {
+          "id": 1237230551,
+          "name": "SplicePrivillegeEscalationFIX",
+          "full_name": "DroPZsec/SplicePrivillegeEscalationFIX",
+          "html_url": "https://github.com/DroPZsec/SplicePrivillegeEscalationFIX",
+          "description": "this little script blocks the new splice-ram-privlilleg ecalation fastly befor the contributers do it ( CVE-2026-31431)  (CopyFail fix)",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Shell",
+          "updated_at": "2026-05-13T02:14:23Z",
+          "pushed_at": "2026-05-13T02:02:08Z",
+          "created_at": "2026-05-13T02:01:30Z",
+          "topics": [],
+          "owner": {
+            "login": "DroPZsec",
+            "html_url": "https://github.com/DroPZsec"
+          },
+          "clone_url": "https://github.com/DroPZsec/SplicePrivillegeEscalationFIX.git"
+        },
+        {
           "id": 1237022452,
           "name": "CVE-2026-31431-copyfail-aarch64",
           "full_name": "SystemVll/CVE-2026-31431-copyfail-aarch64",
@@ -22160,99 +22193,85 @@
           "clone_url": "https://github.com/SystemVll/CVE-2026-31431-copyfail-aarch64.git"
         },
         {
-          "id": 1226206997,
-          "name": "d8-copy-fail-mitigation",
-          "full_name": "deckhouse/d8-copy-fail-mitigation",
-          "html_url": "https://github.com/deckhouse/d8-copy-fail-mitigation",
-          "description": "CVE-2026-31431 mitigation (Copy Fail)",
+          "id": 1225716790,
+          "name": "cve-2026-31431",
+          "full_name": "leelong2020/cve-2026-31431",
+          "html_url": "https://github.com/leelong2020/cve-2026-31431",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Shell",
+          "updated_at": "2026-05-01T07:22:01Z",
+          "pushed_at": "2026-05-01T07:21:58Z",
+          "created_at": "2026-04-30T15:04:42Z",
+          "topics": [],
+          "owner": {
+            "login": "leelong2020",
+            "html_url": "https://github.com/leelong2020"
+          },
+          "clone_url": "https://github.com/leelong2020/cve-2026-31431.git"
+        },
+        {
+          "id": 1225578145,
+          "name": "CVE-2026-43500",
+          "full_name": "attaattaatta/CVE-2026-43500",
+          "html_url": "https://github.com/attaattaatta/CVE-2026-43500",
+          "description": "CVE-2026-43500 / CVE-2026-31431 / CVE-2026-43284 golang hotfix",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Go",
+          "updated_at": "2026-05-14T00:52:33Z",
+          "pushed_at": "2026-05-14T01:12:07Z",
+          "created_at": "2026-04-30T12:27:15Z",
+          "topics": [
+            "cve-2026-31431",
+            "cve-2026-43284",
+            "cve-2026-43500",
+            "hotfix"
+          ],
+          "owner": {
+            "login": "attaattaatta",
+            "html_url": "https://github.com/attaattaatta"
+          },
+          "clone_url": "https://github.com/attaattaatta/CVE-2026-43500.git"
+        },
+        {
+          "id": 1240343224,
+          "name": "ProyectoFinalSO",
+          "full_name": "zKaaanon/ProyectoFinalSO",
+          "html_url": "https://github.com/zKaaanon/ProyectoFinalSO",
+          "description": "Estudio del bug CVE-2026-31431",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-05-15T16:23:16Z",
-          "pushed_at": "2026-05-15T16:23:11Z",
-          "created_at": "2026-05-01T05:13:42Z",
+          "updated_at": "2026-05-16T03:57:56Z",
+          "pushed_at": "2026-05-16T03:57:52Z",
+          "created_at": "2026-05-16T03:07:04Z",
           "topics": [],
           "owner": {
-            "login": "deckhouse",
-            "html_url": "https://github.com/deckhouse"
+            "login": "zKaaanon",
+            "html_url": "https://github.com/zKaaanon"
           },
-          "clone_url": "https://github.com/deckhouse/d8-copy-fail-mitigation.git"
+          "clone_url": "https://github.com/zKaaanon/ProyectoFinalSO.git"
         },
         {
-          "id": 1225962329,
-          "name": "copy-fail",
-          "full_name": "Juguitos/copy-fail",
-          "html_url": "https://github.com/Juguitos/copy-fail",
-          "description": "CVE-2026-31431 - Copy Fail PoC (Python 3.10+)",
+          "id": 1176158184,
+          "name": "CVE-2026-31431-CopyFail-Linux-PrivEsc",
+          "full_name": "John-Popovici/CVE-2026-31431-CopyFail-Linux-PrivEsc",
+          "html_url": "https://github.com/John-Popovici/CVE-2026-31431-CopyFail-Linux-PrivEsc",
+          "description": "A demo and explanation of CVE-2026-31431",
           "stargazers_count": 0,
-          "forks_count": 1,
+          "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-05-09T17:48:03Z",
-          "pushed_at": "2026-05-09T17:48:00Z",
-          "created_at": "2026-04-30T20:38:16Z",
+          "updated_at": "2026-05-15T23:42:49Z",
+          "pushed_at": "2026-05-15T23:42:46Z",
+          "created_at": "2026-03-08T17:40:11Z",
           "topics": [],
           "owner": {
-            "login": "Juguitos",
-            "html_url": "https://github.com/Juguitos"
+            "login": "John-Popovici",
+            "html_url": "https://github.com/John-Popovici"
           },
-          "clone_url": "https://github.com/Juguitos/copy-fail.git"
-        },
-        {
-          "id": 1226044650,
-          "name": "CVE-2026-31431",
-          "full_name": "offsecguy/CVE-2026-31431",
-          "html_url": "https://github.com/offsecguy/CVE-2026-31431",
-          "description": "Copy Fail is a straight-line logic flaw | C port | CVE-2026-31431",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "C",
-          "updated_at": "2026-05-01T00:23:06Z",
-          "pushed_at": "2026-05-01T00:23:03Z",
-          "created_at": "2026-04-30T23:13:37Z",
-          "topics": [],
-          "owner": {
-            "login": "offsecguy",
-            "html_url": "https://github.com/offsecguy"
-          },
-          "clone_url": "https://github.com/offsecguy/CVE-2026-31431.git"
-        },
-        {
-          "id": 1226857673,
-          "name": "copyfailscan",
-          "full_name": "monobrau/copyfailscan",
-          "html_url": "https://github.com/monobrau/copyfailscan",
-          "description": "SSH posture helper for CVE-2026-31431 (Copy Fail): kernel and algif_aead inventory",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2026-05-16T14:54:02Z",
-          "pushed_at": "2026-05-16T14:54:01Z",
-          "created_at": "2026-05-01T22:54:44Z",
-          "topics": [],
-          "owner": {
-            "login": "monobrau",
-            "html_url": "https://github.com/monobrau"
-          },
-          "clone_url": "https://github.com/monobrau/copyfailscan.git"
-        },
-        {
-          "id": 1236382288,
-          "name": "CVE-2026-31431",
-          "full_name": "studiogangster/CVE-2026-31431",
-          "html_url": "https://github.com/studiogangster/CVE-2026-31431",
-          "description": "oen liner CVE-2026-31431 test. Created 'sandbox' on sudo user and tests if ir can escape to root",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2026-05-12T10:40:17Z",
-          "pushed_at": "2026-05-12T10:40:13Z",
-          "created_at": "2026-05-12T07:40:49Z",
-          "topics": [],
-          "owner": {
-            "login": "studiogangster",
-            "html_url": "https://github.com/studiogangster"
-          },
-          "clone_url": "https://github.com/studiogangster/CVE-2026-31431.git"
+          "clone_url": "https://github.com/John-Popovici/CVE-2026-31431-CopyFail-Linux-PrivEsc.git"
         },
         {
           "id": 1226607067,
@@ -22293,23 +22312,42 @@
           "clone_url": "https://github.com/mlazzarotto/copy-fail-CVE-2026-31431-mitigation-ansible-playbook.git"
         },
         {
-          "id": 1226064544,
+          "id": 1236382288,
           "name": "CVE-2026-31431",
-          "full_name": "sngrotesque/CVE-2026-31431",
-          "html_url": "https://github.com/sngrotesque/CVE-2026-31431",
-          "description": "The code after complete confusion.",
+          "full_name": "studiogangster/CVE-2026-31431",
+          "html_url": "https://github.com/studiogangster/CVE-2026-31431",
+          "description": "oen liner CVE-2026-31431 test. Created 'sandbox' on sudo user and tests if ir can escape to root",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-04-30T23:59:59Z",
-          "pushed_at": "2026-04-30T23:59:55Z",
-          "created_at": "2026-04-30T23:59:24Z",
+          "language": "Shell",
+          "updated_at": "2026-05-12T10:40:17Z",
+          "pushed_at": "2026-05-12T10:40:13Z",
+          "created_at": "2026-05-12T07:40:49Z",
           "topics": [],
           "owner": {
-            "login": "sngrotesque",
-            "html_url": "https://github.com/sngrotesque"
+            "login": "studiogangster",
+            "html_url": "https://github.com/studiogangster"
           },
-          "clone_url": "https://github.com/sngrotesque/CVE-2026-31431.git"
+          "clone_url": "https://github.com/studiogangster/CVE-2026-31431.git"
+        },
+        {
+          "id": 1226044650,
+          "name": "CVE-2026-31431",
+          "full_name": "offsecguy/CVE-2026-31431",
+          "html_url": "https://github.com/offsecguy/CVE-2026-31431",
+          "description": "Copy Fail is a straight-line logic flaw | C port | CVE-2026-31431",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "C",
+          "updated_at": "2026-05-01T00:23:06Z",
+          "pushed_at": "2026-05-01T00:23:03Z",
+          "created_at": "2026-04-30T23:13:37Z",
+          "topics": [],
+          "owner": {
+            "login": "offsecguy",
+            "html_url": "https://github.com/offsecguy"
+          },
+          "clone_url": "https://github.com/offsecguy/CVE-2026-31431.git"
         },
         {
           "id": 1232772151,
@@ -22334,42 +22372,23 @@
           "clone_url": "https://github.com/p401a-ops/Copy-Fail.git"
         },
         {
-          "id": 1225311743,
-          "name": "CVE-2026-31431",
-          "full_name": "ryan2929/CVE-2026-31431",
-          "html_url": "https://github.com/ryan2929/CVE-2026-31431",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-04-30T14:21:13Z",
-          "pushed_at": "2026-04-30T14:20:50Z",
-          "created_at": "2026-04-30T06:47:01Z",
-          "topics": [],
-          "owner": {
-            "login": "ryan2929",
-            "html_url": "https://github.com/ryan2929"
-          },
-          "clone_url": "https://github.com/ryan2929/CVE-2026-31431.git"
-        },
-        {
-          "id": 1235913979,
-          "name": "copyfail",
-          "full_name": "polyakovavv/copyfail",
-          "html_url": "https://github.com/polyakovavv/copyfail",
-          "description": "Copy Fail (CVE-2026-31431)",
+          "id": 1240186809,
+          "name": "cve-2026-31431",
+          "full_name": "whosfault/cve-2026-31431",
+          "html_url": "https://github.com/whosfault/cve-2026-31431",
+          "description": "copy fail",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "C",
-          "updated_at": "2026-05-11T19:28:16Z",
-          "pushed_at": "2026-05-11T19:28:11Z",
-          "created_at": "2026-05-11T19:23:03Z",
+          "updated_at": "2026-05-15T21:26:16Z",
+          "pushed_at": "2026-05-15T21:26:12Z",
+          "created_at": "2026-05-15T21:24:58Z",
           "topics": [],
           "owner": {
-            "login": "polyakovavv",
-            "html_url": "https://github.com/polyakovavv"
+            "login": "whosfault",
+            "html_url": "https://github.com/whosfault"
           },
-          "clone_url": "https://github.com/polyakovavv/copyfail.git"
+          "clone_url": "https://github.com/whosfault/cve-2026-31431.git"
         },
         {
           "id": 1226501595,
@@ -22448,23 +22467,23 @@
           "clone_url": "https://github.com/MarioHY/cve_2026_31431_audit.git"
         },
         {
-          "id": 1225672538,
-          "name": "CVE-2026-31431-old-python",
-          "full_name": "grishinpv/CVE-2026-31431-old-python",
-          "html_url": "https://github.com/grishinpv/CVE-2026-31431-old-python",
-          "description": "CVE-2026-31431 for python versions lower 3.10",
+          "id": 1235913979,
+          "name": "copyfail",
+          "full_name": "polyakovavv/copyfail",
+          "html_url": "https://github.com/polyakovavv/copyfail",
+          "description": "Copy Fail (CVE-2026-31431)",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-04-30T14:21:18Z",
-          "pushed_at": "2026-04-30T14:18:14Z",
-          "created_at": "2026-04-30T14:13:14Z",
+          "language": "C",
+          "updated_at": "2026-05-11T19:28:16Z",
+          "pushed_at": "2026-05-11T19:28:11Z",
+          "created_at": "2026-05-11T19:23:03Z",
           "topics": [],
           "owner": {
-            "login": "grishinpv",
-            "html_url": "https://github.com/grishinpv"
+            "login": "polyakovavv",
+            "html_url": "https://github.com/polyakovavv"
           },
-          "clone_url": "https://github.com/grishinpv/CVE-2026-31431-old-python.git"
+          "clone_url": "https://github.com/polyakovavv/copyfail.git"
         },
         {
           "id": 1226369071,
@@ -22524,23 +22543,23 @@
           "clone_url": "https://github.com/FrosterDL/CVE-2026-31431.git"
         },
         {
-          "id": 1235604978,
-          "name": "CVE-2026-31431-Analysis",
-          "full_name": "mauricioportela/CVE-2026-31431-Analysis",
-          "html_url": "https://github.com/mauricioportela/CVE-2026-31431-Analysis",
-          "description": "Relatório de Análise Técnica: Exploração de Falha de Isolamento no Kernel Linux (CVE-2026-31431)",
+          "id": 1225311743,
+          "name": "CVE-2026-31431",
+          "full_name": "ryan2929/CVE-2026-31431",
+          "html_url": "https://github.com/ryan2929/CVE-2026-31431",
+          "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-05-11T14:17:14Z",
-          "pushed_at": "2026-05-11T14:12:18Z",
-          "created_at": "2026-05-11T13:35:49Z",
+          "updated_at": "2026-04-30T14:21:13Z",
+          "pushed_at": "2026-04-30T14:20:50Z",
+          "created_at": "2026-04-30T06:47:01Z",
           "topics": [],
           "owner": {
-            "login": "mauricioportela",
-            "html_url": "https://github.com/mauricioportela"
+            "login": "ryan2929",
+            "html_url": "https://github.com/ryan2929"
           },
-          "clone_url": "https://github.com/mauricioportela/CVE-2026-31431-Analysis.git"
+          "clone_url": "https://github.com/ryan2929/CVE-2026-31431.git"
         },
         {
           "id": 1226367430,
@@ -22562,6 +22581,25 @@
           "clone_url": "https://github.com/Fulucky0-yuri/CVE-2026-31431-PocC.git"
         },
         {
+          "id": 1235604978,
+          "name": "CVE-2026-31431-Analysis",
+          "full_name": "mauricioportela/CVE-2026-31431-Analysis",
+          "html_url": "https://github.com/mauricioportela/CVE-2026-31431-Analysis",
+          "description": "Relatório de Análise Técnica: Exploração de Falha de Isolamento no Kernel Linux (CVE-2026-31431)",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-05-11T14:17:14Z",
+          "pushed_at": "2026-05-11T14:12:18Z",
+          "created_at": "2026-05-11T13:35:49Z",
+          "topics": [],
+          "owner": {
+            "login": "mauricioportela",
+            "html_url": "https://github.com/mauricioportela"
+          },
+          "clone_url": "https://github.com/mauricioportela/CVE-2026-31431-Analysis.git"
+        },
+        {
           "id": 1231866890,
           "name": "linux-copy-fail-CVE-2026-31431",
           "full_name": "adilkurtulmus/linux-copy-fail-CVE-2026-31431",
@@ -22579,6 +22617,25 @@
             "html_url": "https://github.com/adilkurtulmus"
           },
           "clone_url": "https://github.com/adilkurtulmus/linux-copy-fail-CVE-2026-31431.git"
+        },
+        {
+          "id": 1226180810,
+          "name": "copyfail-briefing",
+          "full_name": "jodonnel/copyfail-briefing",
+          "html_url": "https://github.com/jodonnel/copyfail-briefing",
+          "description": "CVE-2026-31431 (Copy Fail) — Security briefings and remediation comparison",
+          "stargazers_count": 0,
+          "forks_count": 1,
+          "language": "HTML",
+          "updated_at": "2026-05-01T04:59:26Z",
+          "pushed_at": "2026-05-01T04:59:23Z",
+          "created_at": "2026-05-01T04:15:12Z",
+          "topics": [],
+          "owner": {
+            "login": "jodonnel",
+            "html_url": "https://github.com/jodonnel"
+          },
+          "clone_url": "https://github.com/jodonnel/copyfail-briefing.git"
         },
         {
           "id": 1235059624,
@@ -22606,25 +22663,6 @@
           "clone_url": "https://github.com/Lutfifakee-Project/CVE-2026-31431.git"
         },
         {
-          "id": 1226180810,
-          "name": "copyfail-briefing",
-          "full_name": "jodonnel/copyfail-briefing",
-          "html_url": "https://github.com/jodonnel/copyfail-briefing",
-          "description": "CVE-2026-31431 (Copy Fail) — Security briefings and remediation comparison",
-          "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "HTML",
-          "updated_at": "2026-05-01T04:59:26Z",
-          "pushed_at": "2026-05-01T04:59:23Z",
-          "created_at": "2026-05-01T04:15:12Z",
-          "topics": [],
-          "owner": {
-            "login": "jodonnel",
-            "html_url": "https://github.com/jodonnel"
-          },
-          "clone_url": "https://github.com/jodonnel/copyfail-briefing.git"
-        },
-        {
           "id": 1234921588,
           "name": "CVE-2026-31431",
           "full_name": "Karim33z/CVE-2026-31431",
@@ -22642,25 +22680,6 @@
             "html_url": "https://github.com/Karim33z"
           },
           "clone_url": "https://github.com/Karim33z/CVE-2026-31431.git"
-        },
-        {
-          "id": 1234242356,
-          "name": "Copy_Grail",
-          "full_name": "cleozi/Copy_Grail",
-          "html_url": "https://github.com/cleozi/Copy_Grail",
-          "description": "Elegant C++ exploit for CVE-2026-31431 (Copy Fail) using AF_ALG authenticated encryption + splice(2) to overwrite setuid binary memory",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "C++",
-          "updated_at": "2026-05-10T12:38:29Z",
-          "pushed_at": "2026-05-10T12:38:25Z",
-          "created_at": "2026-05-09T23:36:35Z",
-          "topics": [],
-          "owner": {
-            "login": "cleozi",
-            "html_url": "https://github.com/cleozi"
-          },
-          "clone_url": "https://github.com/cleozi/Copy_Grail.git"
         },
         {
           "id": 1226137976,
@@ -22682,23 +22701,23 @@
           "clone_url": "https://github.com/LeonardoNovais7/Copy-Fail-Exploit-CVE-2026-31431.git"
         },
         {
-          "id": 1232670247,
-          "name": "copy-fail-CVE-2026-31431",
-          "full_name": "Morton-Li/copy-fail-CVE-2026-31431",
-          "html_url": "https://github.com/Morton-Li/copy-fail-CVE-2026-31431",
-          "description": "",
+          "id": 1234242356,
+          "name": "Copy_Grail",
+          "full_name": "cleozi/Copy_Grail",
+          "html_url": "https://github.com/cleozi/Copy_Grail",
+          "description": "Elegant C++ exploit for CVE-2026-31431 (Copy Fail) using AF_ALG authenticated encryption + splice(2) to overwrite setuid binary memory",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-05-10T10:18:35Z",
-          "pushed_at": "2026-05-10T10:18:32Z",
-          "created_at": "2026-05-08T06:41:35Z",
+          "language": "C++",
+          "updated_at": "2026-05-10T12:38:29Z",
+          "pushed_at": "2026-05-10T12:38:25Z",
+          "created_at": "2026-05-09T23:36:35Z",
           "topics": [],
           "owner": {
-            "login": "Morton-Li",
-            "html_url": "https://github.com/Morton-Li"
+            "login": "cleozi",
+            "html_url": "https://github.com/cleozi"
           },
-          "clone_url": "https://github.com/Morton-Li/copy-fail-CVE-2026-31431.git"
+          "clone_url": "https://github.com/cleozi/Copy_Grail.git"
         },
         {
           "id": 1226111504,
@@ -26097,20 +26116,21 @@
       "repositories": [
         {
           "id": 1240776563,
-          "name": "cve-2026-34473-root-cause-analysis",
-          "full_name": "minanagehsalalma/cve-2026-34473-root-cause-analysis",
-          "html_url": "https://github.com/minanagehsalalma/cve-2026-34473-root-cause-analysis",
-          "description": "Root cause analysis of CVE-2026-34473 on ZTE ZXHN H168N V3.5",
-          "stargazers_count": 0,
+          "name": "cve-2026-34473-unauthenticated-dos-zte-routers",
+          "full_name": "minanagehsalalma/cve-2026-34473-unauthenticated-dos-zte-routers",
+          "html_url": "https://github.com/minanagehsalalma/cve-2026-34473-unauthenticated-dos-zte-routers",
+          "description": "Technical breakdown of CVE-2026-34473, an unauthenticated denial of service affecting 17+ ZTE router models.",
+          "stargazers_count": 1,
           "forks_count": 0,
           "language": "HTML",
-          "updated_at": "2026-05-16T14:58:09Z",
-          "pushed_at": "2026-05-16T14:57:52Z",
+          "updated_at": "2026-05-16T15:56:18Z",
+          "pushed_at": "2026-05-16T15:56:14Z",
           "created_at": "2026-05-16T14:57:50Z",
           "topics": [
             "cve",
             "firmware",
             "root-cause-analysis",
+            "router-security",
             "vulnerability-research",
             "zte"
           ],
@@ -26118,7 +26138,7 @@
             "login": "minanagehsalalma",
             "html_url": "https://github.com/minanagehsalalma"
           },
-          "clone_url": "https://github.com/minanagehsalalma/cve-2026-34473-root-cause-analysis.git"
+          "clone_url": "https://github.com/minanagehsalalma/cve-2026-34473-unauthenticated-dos-zte-routers.git"
         }
       ]
     },
@@ -29255,10 +29275,10 @@
           "full_name": "orinimron123/CVE-2026-40369-EXPLOIT",
           "html_url": "https://github.com/orinimron123/CVE-2026-40369-EXPLOIT",
           "description": "Full exploit code for CVE-2026-40369 - A Windows kernel arbitrary write vulnerability that allows browser sandbox escape from all browsers render process sandbox",
-          "stargazers_count": 20,
+          "stargazers_count": 21,
           "forks_count": 3,
           "language": "C++",
-          "updated_at": "2026-05-16T14:24:14Z",
+          "updated_at": "2026-05-16T15:27:08Z",
           "pushed_at": "2026-05-13T22:17:25Z",
           "created_at": "2026-05-13T20:56:15Z",
           "topics": [],
@@ -32011,10 +32031,10 @@
           "full_name": "DepthFirstDisclosures/Nginx-Rift",
           "html_url": "https://github.com/DepthFirstDisclosures/Nginx-Rift",
           "description": "exploit for CVE-2026-42945",
-          "stargazers_count": 635,
-          "forks_count": 102,
+          "stargazers_count": 636,
+          "forks_count": 103,
           "language": "Python",
-          "updated_at": "2026-05-16T14:33:54Z",
+          "updated_at": "2026-05-16T15:34:18Z",
           "pushed_at": "2026-05-13T18:40:57Z",
           "created_at": "2026-05-12T23:05:32Z",
           "topics": [],
@@ -32031,7 +32051,7 @@
           "html_url": "https://github.com/p3Nt3st3r-sTAr/CVE-2026-42945-POC",
           "description": "",
           "stargazers_count": 10,
-          "forks_count": 5,
+          "forks_count": 6,
           "language": "Python",
           "updated_at": "2026-05-15T13:09:03Z",
           "pushed_at": "2026-05-14T06:27:43Z",
@@ -33692,8 +33712,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-05-16T14:41:17Z",
-          "pushed_at": "2026-05-16T14:41:13Z",
+          "updated_at": "2026-05-16T15:00:46Z",
+          "pushed_at": "2026-05-16T15:00:43Z",
           "created_at": "2026-05-16T14:41:12Z",
           "topics": [],
           "owner": {
