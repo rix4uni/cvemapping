@@ -389,6 +389,25 @@
           "clone_url": "https://github.com/bigb0x/CVE-2024-6387.git"
         },
         {
+          "id": 824318880,
+          "name": "CVE-2024-6387_Check",
+          "full_name": "sardine-web/CVE-2024-6387_Check",
+          "html_url": "https://github.com/sardine-web/CVE-2024-6387_Check",
+          "description": "A security regression (CVE-2006-5051) was discovered in OpenSSH's server (sshd). There is a race condition which can lead to sshd to handle some signals in an unsafe manner. An unauthenticated, remote attacker may be able to trigger it by failing to authenticate within a set time period.",
+          "stargazers_count": 3,
+          "forks_count": 1,
+          "language": "Python",
+          "updated_at": "2026-05-19T10:24:52Z",
+          "pushed_at": "2024-07-04T21:31:17Z",
+          "created_at": "2024-07-04T21:20:26Z",
+          "topics": [],
+          "owner": {
+            "login": "sardine-web",
+            "html_url": "https://github.com/sardine-web"
+          },
+          "clone_url": "https://github.com/sardine-web/CVE-2024-6387_Check.git"
+        },
+        {
           "id": 876504709,
           "name": "CVE-2024-6387-poc-1",
           "full_name": "anhvutuan/CVE-2024-6387-poc-1",
@@ -406,25 +425,6 @@
             "html_url": "https://github.com/anhvutuan"
           },
           "clone_url": "https://github.com/anhvutuan/CVE-2024-6387-poc-1.git"
-        },
-        {
-          "id": 824318880,
-          "name": "CVE-2024-6387_Check",
-          "full_name": "sardine-web/CVE-2024-6387_Check",
-          "html_url": "https://github.com/sardine-web/CVE-2024-6387_Check",
-          "description": "A security regression (CVE-2006-5051) was discovered in OpenSSH's server (sshd). There is a race condition which can lead to sshd to handle some signals in an unsafe manner. An unauthenticated, remote attacker may be able to trigger it by failing to authenticate within a set time period.",
-          "stargazers_count": 2,
-          "forks_count": 1,
-          "language": "Python",
-          "updated_at": "2025-05-11T09:11:47Z",
-          "pushed_at": "2024-07-04T21:31:17Z",
-          "created_at": "2024-07-04T21:20:26Z",
-          "topics": [],
-          "owner": {
-            "login": "sardine-web",
-            "html_url": "https://github.com/sardine-web"
-          },
-          "clone_url": "https://github.com/sardine-web/CVE-2024-6387_Check.git"
         }
       ]
     },
