@@ -4591,11 +4591,11 @@
           "name": "CVE-2022-1388",
           "full_name": "pauloink/CVE-2022-1388",
           "html_url": "https://github.com/pauloink/CVE-2022-1388",
-          "description": "",
+          "description": "Research and proof of concept related to CVE-2022-1388.",
           "stargazers_count": 0,
           "forks_count": 2,
           "language": "Python",
-          "updated_at": "2024-08-12T20:23:11Z",
+          "updated_at": "2026-06-18T01:54:14Z",
           "pushed_at": "2022-05-11T22:00:12Z",
           "created_at": "2022-05-11T21:55:43Z",
           "topics": [],
@@ -15075,10 +15075,10 @@
           "full_name": "aels/CVE-2022-2586-LPE",
           "html_url": "https://github.com/aels/CVE-2022-2586-LPE",
           "description": "CVE-2022-2586: Linux kernel nft_object UAF",
-          "stargazers_count": 21,
+          "stargazers_count": 22,
           "forks_count": 3,
           "language": "C",
-          "updated_at": "2026-05-20T10:02:20Z",
+          "updated_at": "2026-06-17T19:06:46Z",
           "pushed_at": "2022-09-03T19:06:45Z",
           "created_at": "2022-09-03T19:04:31Z",
           "topics": [],
@@ -15612,7 +15612,7 @@
           "html_url": "https://github.com/SIFalcon/confluencePot",
           "description": "Simple Honeypot for Atlassian Confluence (CVE-2022-26134)",
           "stargazers_count": 20,
-          "forks_count": 5,
+          "forks_count": 3,
           "language": "HTML",
           "updated_at": "2024-10-17T12:57:51Z",
           "pushed_at": "2022-06-07T08:51:53Z",
@@ -17569,25 +17569,6 @@
             "html_url": "https://github.com/r1skkam"
           },
           "clone_url": "https://github.com/r1skkam/TryHackMe-CVE-2022-26923.git"
-        },
-        {
-          "id": 1163220891,
-          "name": "CVE-2022-26923",
-          "full_name": "Eliasdekiniweek/CVE-2022-26923",
-          "html_url": "https://github.com/Eliasdekiniweek/CVE-2022-26923",
-          "description": "Exploitation de CVE-2022-26923",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2026-02-27T16:04:17Z",
-          "pushed_at": "2026-02-21T09:40:24Z",
-          "created_at": "2026-02-21T09:35:59Z",
-          "topics": [],
-          "owner": {
-            "login": "Eliasdekiniweek",
-            "html_url": "https://github.com/Eliasdekiniweek"
-          },
-          "clone_url": "https://github.com/Eliasdekiniweek/CVE-2022-26923.git"
         },
         {
           "id": 1253286660,
@@ -20360,6 +20341,37 @@
       "cve_id": "CVE-2022-29799",
       "repositories": [
         {
+          "id": 1272626781,
+          "name": "NimbusPWN-CVE-2022-29799-29800",
+          "full_name": "joshuavanderpoll/NimbusPWN-CVE-2022-29799-29800",
+          "html_url": "https://github.com/joshuavanderpoll/NimbusPWN-CVE-2022-29799-29800",
+          "description": "NimbusPwn (CVE-2022-29799/29800) local privilege escalation PoC in C.",
+          "stargazers_count": 3,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-06-18T08:45:49Z",
+          "pushed_at": "2026-06-17T20:06:23Z",
+          "created_at": "2026-06-17T19:44:47Z",
+          "topics": [
+            "cve-2022-29799",
+            "cve-2022-29800",
+            "dbus",
+            "exploit",
+            "local-privilege-escalation",
+            "lpe",
+            "networkd-dispatcher",
+            "nimbuspwn",
+            "pentesting",
+            "privilege-escalation",
+            "security"
+          ],
+          "owner": {
+            "login": "joshuavanderpoll",
+            "html_url": "https://github.com/joshuavanderpoll"
+          },
+          "clone_url": "https://github.com/joshuavanderpoll/NimbusPWN-CVE-2022-29799-29800.git"
+        },
+        {
           "id": 1092763855,
           "name": "nimbuspwn-CVE-2022-29800-CVE-2022-29799",
           "full_name": "ngtuonghung/nimbuspwn-CVE-2022-29800-CVE-2022-29799",
@@ -20383,6 +20395,37 @@
     {
       "cve_id": "CVE-2022-29800",
       "repositories": [
+        {
+          "id": 1272626781,
+          "name": "NimbusPWN-CVE-2022-29799-29800",
+          "full_name": "joshuavanderpoll/NimbusPWN-CVE-2022-29799-29800",
+          "html_url": "https://github.com/joshuavanderpoll/NimbusPWN-CVE-2022-29799-29800",
+          "description": "NimbusPwn (CVE-2022-29799/29800) local privilege escalation PoC in C.",
+          "stargazers_count": 3,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-06-18T08:45:49Z",
+          "pushed_at": "2026-06-17T20:06:23Z",
+          "created_at": "2026-06-17T19:44:47Z",
+          "topics": [
+            "cve-2022-29799",
+            "cve-2022-29800",
+            "dbus",
+            "exploit",
+            "local-privilege-escalation",
+            "lpe",
+            "networkd-dispatcher",
+            "nimbuspwn",
+            "pentesting",
+            "privilege-escalation",
+            "security"
+          ],
+          "owner": {
+            "login": "joshuavanderpoll",
+            "html_url": "https://github.com/joshuavanderpoll"
+          },
+          "clone_url": "https://github.com/joshuavanderpoll/NimbusPWN-CVE-2022-29799-29800.git"
+        },
         {
           "id": 1092763855,
           "name": "nimbuspwn-CVE-2022-29800-CVE-2022-29799",
