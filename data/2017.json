@@ -145,36 +145,6 @@
           "clone_url": "https://github.com/valarauco/wannafind.git"
         },
         {
-          "id": 1139163911,
-          "name": "smb",
-          "full_name": "hackingyseguridad/smb",
-          "html_url": "https://github.com/hackingyseguridad/smb",
-          "description": "SMBv1: CVE-2017-0143, gravedad 8.8, de ejecucion remota de codigo (RCE), en Windows con SMBv1 (ms17-010)",
-          "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "Shell",
-          "updated_at": "2026-01-23T12:47:49Z",
-          "pushed_at": "2026-01-23T12:47:45Z",
-          "created_at": "2026-01-21T15:53:30Z",
-          "topics": [
-            "ethernalblue",
-            "ransonware",
-            "samba",
-            "samba-server",
-            "server",
-            "smb",
-            "vulnerabilidad",
-            "wanacry",
-            "windows",
-            "windows2003"
-          ],
-          "owner": {
-            "login": "hackingyseguridad",
-            "html_url": "https://github.com/hackingyseguridad"
-          },
-          "clone_url": "https://github.com/hackingyseguridad/smb.git"
-        },
-        {
           "id": 1243753454,
           "name": "thm-blue-writeup",
           "full_name": "FernandoTDalcin/thm-blue-writeup",
@@ -2041,7 +2011,7 @@
           "html_url": "https://github.com/starnightcyber/CVE-2017-11882",
           "description": "CVE-2017-11882 exploitation",
           "stargazers_count": 44,
-          "forks_count": 69,
+          "forks_count": 68,
           "language": "Python",
           "updated_at": "2025-12-25T23:28:18Z",
           "pushed_at": "2017-11-28T03:06:32Z",
@@ -2113,6 +2083,25 @@
           "clone_url": "https://github.com/Shadowshusky/CVE-2017-11882-.git"
         },
         {
+          "id": 111887551,
+          "name": "CVE-2017-11882-for-Kali",
+          "full_name": "legendsec/CVE-2017-11882-for-Kali",
+          "html_url": "https://github.com/legendsec/CVE-2017-11882-for-Kali",
+          "description": "# CVE-2017-11882-metasploit This is a Metasploit module which exploits CVE-2017-11882 using the POC below:  https://embedi.com/blog/skeleton-closet-ms-office-vulnerability-you-didnt-know-about.   ## Installation 1) Copy the cve_2017_11882.rb to /usr/share/metasploit-framework/modules/exploits/windows/local/ 2) Copy the cve-2017-11882.rtf to /usr/share/metasploit-framework/data/exploits/  This module is a quick port to Metasploit and uses mshta.exe to execute the payload.  There are better ways to implement this module and exploit but will update it as soon as I have the time.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2023-06-08T10:38:50Z",
+          "pushed_at": "2017-11-24T07:11:14Z",
+          "created_at": "2017-11-24T07:11:13Z",
+          "topics": [],
+          "owner": {
+            "login": "legendsec",
+            "html_url": "https://github.com/legendsec"
+          },
+          "clone_url": "https://github.com/legendsec/CVE-2017-11882-for-Kali.git"
+        },
+        {
           "id": 1221117057,
           "name": "CVE-2017-11882-Blocker",
           "full_name": "DONKEY0xSHOT/CVE-2017-11882-Blocker",
@@ -2170,6 +2159,25 @@
           "clone_url": "https://github.com/HZachev/ABC.git"
         },
         {
+          "id": 1277421485,
+          "name": "Office-Malware-Forensics-Lab-REMnux-Static-Analysis",
+          "full_name": "Mo200909/Office-Malware-Forensics-Lab-REMnux-Static-Analysis",
+          "html_url": "https://github.com/Mo200909/Office-Malware-Forensics-Lab-REMnux-Static-Analysis",
+          "description": "Static analysis of 2 malicious Office documents on REMnux using oletools; identified CVE-2017-11882 and obfuscated macros.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-06-25T03:02:52Z",
+          "pushed_at": "2026-06-22T22:17:21Z",
+          "created_at": "2026-06-22T22:07:00Z",
+          "topics": [],
+          "owner": {
+            "login": "Mo200909",
+            "html_url": "https://github.com/Mo200909"
+          },
+          "clone_url": "https://github.com/Mo200909/Office-Malware-Forensics-Lab-REMnux-Static-Analysis.git"
+        },
+        {
           "id": 111904379,
           "name": "cve-2017-11882",
           "full_name": "CSC-pentest/cve-2017-11882",
@@ -2187,25 +2195,6 @@
             "html_url": "https://github.com/CSC-pentest"
           },
           "clone_url": "https://github.com/CSC-pentest/cve-2017-11882.git"
-        },
-        {
-          "id": 111887551,
-          "name": "CVE-2017-11882-for-Kali",
-          "full_name": "legendsec/CVE-2017-11882-for-Kali",
-          "html_url": "https://github.com/legendsec/CVE-2017-11882-for-Kali",
-          "description": "# CVE-2017-11882-metasploit This is a Metasploit module which exploits CVE-2017-11882 using the POC below:  https://embedi.com/blog/skeleton-closet-ms-office-vulnerability-you-didnt-know-about.   ## Installation 1) Copy the cve_2017_11882.rb to /usr/share/metasploit-framework/modules/exploits/windows/local/ 2) Copy the cve-2017-11882.rtf to /usr/share/metasploit-framework/data/exploits/  This module is a quick port to Metasploit and uses mshta.exe to execute the payload.  There are better ways to implement this module and exploit but will update it as soon as I have the time.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2023-06-08T10:38:50Z",
-          "pushed_at": "2017-11-24T07:11:14Z",
-          "created_at": "2017-11-24T07:11:13Z",
-          "topics": [],
-          "owner": {
-            "login": "legendsec",
-            "html_url": "https://github.com/legendsec"
-          },
-          "clone_url": "https://github.com/legendsec/CVE-2017-11882-for-Kali.git"
         }
       ]
     },
