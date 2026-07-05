@@ -6434,10 +6434,10 @@
           "full_name": "zhuowei/cheese",
           "html_url": "https://github.com/zhuowei/cheese",
           "description": "CVE-2025-21479 proof-of-concept, I think",
-          "stargazers_count": 257,
+          "stargazers_count": 258,
           "forks_count": 59,
           "language": "C",
-          "updated_at": "2026-07-02T11:59:23Z",
+          "updated_at": "2026-07-05T16:23:44Z",
           "pushed_at": "2025-08-16T06:52:13Z",
           "created_at": "2025-06-19T19:47:52Z",
           "topics": [],
@@ -9407,8 +9407,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Objective-C",
-          "updated_at": "2026-07-05T14:06:16Z",
-          "pushed_at": "2026-07-05T14:06:12Z",
+          "updated_at": "2026-07-05T16:34:53Z",
+          "pushed_at": "2026-07-05T16:34:50Z",
           "created_at": "2026-04-04T03:42:55Z",
           "topics": [
             "action-recognition",
@@ -24209,42 +24209,61 @@
           "clone_url": "https://github.com/KaiHT-Ladiant/CVE-2025-32463.git"
         },
         {
-          "id": 1016049917,
-          "name": "cve-2025-32463",
-          "full_name": "SpongeBob-369/cve-2025-32463",
-          "html_url": "https://github.com/SpongeBob-369/cve-2025-32463",
-          "description": "# cve-2025-32463 - Local Privilege Escalation to Root via Sudo chroot in Linux",
+          "id": 1013973489,
+          "name": "CVE-2025-32463-POC",
+          "full_name": "0p5cur/CVE-2025-32463-POC",
+          "html_url": "https://github.com/0p5cur/CVE-2025-32463-POC",
+          "description": "🛡️ Proof of Concept (PoC) for CVE-2025-32463 — Local privilege escalation in sudo (versions 1.9.14 to 1.9.17). This exploit abuses the --chroot option and a malicious nsswitch.conf to execute arbitrary code as root. ⚠️ For educational and authorized testing only.",
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Shell",
-          "updated_at": "2025-07-16T08:02:24Z",
-          "pushed_at": "2025-07-09T11:47:22Z",
-          "created_at": "2025-07-08T12:16:25Z",
+          "updated_at": "2026-02-17T19:12:17Z",
+          "pushed_at": "2026-02-17T19:12:13Z",
+          "created_at": "2025-07-04T19:49:59Z",
           "topics": [],
           "owner": {
-            "login": "SpongeBob-369",
-            "html_url": "https://github.com/SpongeBob-369"
+            "login": "0p5cur",
+            "html_url": "https://github.com/0p5cur"
           },
-          "clone_url": "https://github.com/SpongeBob-369/cve-2025-32463.git"
+          "clone_url": "https://github.com/0p5cur/CVE-2025-32463-POC.git"
         },
         {
-          "id": 1016251144,
-          "name": "CVE-2025-32463_Sudo_PoC",
-          "full_name": "abrewer251/CVE-2025-32463_Sudo_PoC",
-          "html_url": "https://github.com/abrewer251/CVE-2025-32463_Sudo_PoC",
-          "description": "PoC for CVE-2025-32463: Local privilege escalation in sudo via --chroot. Exploits NSS module injection through crafted chroot environments. Designed for security researchers and lab-only environments.",
+          "id": 1020772228,
+          "name": "CVE-2025-32463-Chwoot-POC",
+          "full_name": "krypton-0x00/CVE-2025-32463-Chwoot-POC",
+          "html_url": "https://github.com/krypton-0x00/CVE-2025-32463-Chwoot-POC",
+          "description": "",
           "stargazers_count": 1,
-          "forks_count": 2,
-          "language": "Python",
-          "updated_at": "2025-07-11T14:15:17Z",
-          "pushed_at": "2025-07-08T18:07:11Z",
-          "created_at": "2025-07-08T18:05:30Z",
+          "forks_count": 0,
+          "language": "Rust",
+          "updated_at": "2025-12-09T08:47:48Z",
+          "pushed_at": "2025-07-16T11:21:53Z",
+          "created_at": "2025-07-16T11:21:12Z",
           "topics": [],
           "owner": {
-            "login": "abrewer251",
-            "html_url": "https://github.com/abrewer251"
+            "login": "krypton-0x00",
+            "html_url": "https://github.com/krypton-0x00"
           },
-          "clone_url": "https://github.com/abrewer251/CVE-2025-32463_Sudo_PoC.git"
+          "clone_url": "https://github.com/krypton-0x00/CVE-2025-32463-Chwoot-POC.git"
+        },
+        {
+          "id": 1014792569,
+          "name": "CVE-2025-32463-lab",
+          "full_name": "Chocapikk/CVE-2025-32463-lab",
+          "html_url": "https://github.com/Chocapikk/CVE-2025-32463-lab",
+          "description": "",
+          "stargazers_count": 1,
+          "forks_count": 1,
+          "language": "Dockerfile",
+          "updated_at": "2025-11-07T12:42:39Z",
+          "pushed_at": "2025-07-06T13:57:57Z",
+          "created_at": "2025-07-06T12:32:09Z",
+          "topics": [],
+          "owner": {
+            "login": "Chocapikk",
+            "html_url": "https://github.com/Chocapikk"
+          },
+          "clone_url": "https://github.com/Chocapikk/CVE-2025-32463-lab.git"
         },
         {
           "id": 1060459956,
@@ -24285,44 +24304,6 @@
           "clone_url": "https://github.com/ashardev002/CVE-2025-32463_chwoot.git"
         },
         {
-          "id": 1013973489,
-          "name": "CVE-2025-32463-POC",
-          "full_name": "0p5cur/CVE-2025-32463-POC",
-          "html_url": "https://github.com/0p5cur/CVE-2025-32463-POC",
-          "description": "🛡️ Proof of Concept (PoC) for CVE-2025-32463 — Local privilege escalation in sudo (versions 1.9.14 to 1.9.17). This exploit abuses the --chroot option and a malicious nsswitch.conf to execute arbitrary code as root. ⚠️ For educational and authorized testing only.",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2026-02-17T19:12:17Z",
-          "pushed_at": "2026-02-17T19:12:13Z",
-          "created_at": "2025-07-04T19:49:59Z",
-          "topics": [],
-          "owner": {
-            "login": "0p5cur",
-            "html_url": "https://github.com/0p5cur"
-          },
-          "clone_url": "https://github.com/0p5cur/CVE-2025-32463-POC.git"
-        },
-        {
-          "id": 1014792569,
-          "name": "CVE-2025-32463-lab",
-          "full_name": "Chocapikk/CVE-2025-32463-lab",
-          "html_url": "https://github.com/Chocapikk/CVE-2025-32463-lab",
-          "description": "",
-          "stargazers_count": 1,
-          "forks_count": 1,
-          "language": "Dockerfile",
-          "updated_at": "2025-11-07T12:42:39Z",
-          "pushed_at": "2025-07-06T13:57:57Z",
-          "created_at": "2025-07-06T12:32:09Z",
-          "topics": [],
-          "owner": {
-            "login": "Chocapikk",
-            "html_url": "https://github.com/Chocapikk"
-          },
-          "clone_url": "https://github.com/Chocapikk/CVE-2025-32463-lab.git"
-        },
-        {
           "id": 1011882826,
           "name": "CVE-2025-32463",
           "full_name": "4f-kira/CVE-2025-32463",
@@ -24342,42 +24323,61 @@
           "clone_url": "https://github.com/4f-kira/CVE-2025-32463.git"
         },
         {
-          "id": 1020772228,
-          "name": "CVE-2025-32463-Chwoot-POC",
-          "full_name": "krypton-0x00/CVE-2025-32463-Chwoot-POC",
-          "html_url": "https://github.com/krypton-0x00/CVE-2025-32463-Chwoot-POC",
-          "description": "",
+          "id": 1016049917,
+          "name": "cve-2025-32463",
+          "full_name": "SpongeBob-369/cve-2025-32463",
+          "html_url": "https://github.com/SpongeBob-369/cve-2025-32463",
+          "description": "# cve-2025-32463 - Local Privilege Escalation to Root via Sudo chroot in Linux",
           "stargazers_count": 1,
           "forks_count": 0,
-          "language": "Rust",
-          "updated_at": "2025-12-09T08:47:48Z",
-          "pushed_at": "2025-07-16T11:21:53Z",
-          "created_at": "2025-07-16T11:21:12Z",
+          "language": "Shell",
+          "updated_at": "2025-07-16T08:02:24Z",
+          "pushed_at": "2025-07-09T11:47:22Z",
+          "created_at": "2025-07-08T12:16:25Z",
           "topics": [],
           "owner": {
-            "login": "krypton-0x00",
-            "html_url": "https://github.com/krypton-0x00"
+            "login": "SpongeBob-369",
+            "html_url": "https://github.com/SpongeBob-369"
           },
-          "clone_url": "https://github.com/krypton-0x00/CVE-2025-32463-Chwoot-POC.git"
+          "clone_url": "https://github.com/SpongeBob-369/cve-2025-32463.git"
         },
         {
-          "id": 1016942456,
-          "name": "CVE-2025-32463-EXPLOIT",
-          "full_name": "0xb0rn3/CVE-2025-32463-EXPLOIT",
-          "html_url": "https://github.com/0xb0rn3/CVE-2025-32463-EXPLOIT",
+          "id": 1013125878,
+          "name": "CVE-2025-32463",
+          "full_name": "san8383/CVE-2025-32463",
+          "html_url": "https://github.com/san8383/CVE-2025-32463",
           "description": "",
           "stargazers_count": 1,
           "forks_count": 1,
           "language": "Shell",
-          "updated_at": "2026-02-13T10:40:31Z",
-          "pushed_at": "2026-02-13T10:40:28Z",
-          "created_at": "2025-07-09T19:10:50Z",
+          "updated_at": "2025-11-14T22:52:05Z",
+          "pushed_at": "2025-07-03T12:00:03Z",
+          "created_at": "2025-07-03T11:55:29Z",
           "topics": [],
           "owner": {
-            "login": "0xb0rn3",
-            "html_url": "https://github.com/0xb0rn3"
+            "login": "san8383",
+            "html_url": "https://github.com/san8383"
           },
-          "clone_url": "https://github.com/0xb0rn3/CVE-2025-32463-EXPLOIT.git"
+          "clone_url": "https://github.com/san8383/CVE-2025-32463.git"
+        },
+        {
+          "id": 1078228811,
+          "name": "CVE-2025-32463-EXPLOIT",
+          "full_name": "secvulnhub/CVE-2025-32463-EXPLOIT",
+          "html_url": "https://github.com/secvulnhub/CVE-2025-32463-EXPLOIT",
+          "description": "",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Shell",
+          "updated_at": "2026-04-23T02:04:31Z",
+          "pushed_at": "2026-04-23T02:04:28Z",
+          "created_at": "2025-10-17T12:03:46Z",
+          "topics": [],
+          "owner": {
+            "login": "secvulnhub",
+            "html_url": "https://github.com/secvulnhub"
+          },
+          "clone_url": "https://github.com/secvulnhub/CVE-2025-32463-EXPLOIT.git"
         },
         {
           "id": 1078420776,
@@ -24457,23 +24457,23 @@
           "clone_url": "https://github.com/dr4x-c0d3r/sudo-chroot.git"
         },
         {
-          "id": 1013125878,
-          "name": "CVE-2025-32463",
-          "full_name": "san8383/CVE-2025-32463",
-          "html_url": "https://github.com/san8383/CVE-2025-32463",
-          "description": "",
+          "id": 1016251144,
+          "name": "CVE-2025-32463_Sudo_PoC",
+          "full_name": "abrewer251/CVE-2025-32463_Sudo_PoC",
+          "html_url": "https://github.com/abrewer251/CVE-2025-32463_Sudo_PoC",
+          "description": "PoC for CVE-2025-32463: Local privilege escalation in sudo via --chroot. Exploits NSS module injection through crafted chroot environments. Designed for security researchers and lab-only environments.",
           "stargazers_count": 1,
-          "forks_count": 1,
-          "language": "Shell",
-          "updated_at": "2025-11-14T22:52:05Z",
-          "pushed_at": "2025-07-03T12:00:03Z",
-          "created_at": "2025-07-03T11:55:29Z",
+          "forks_count": 2,
+          "language": "Python",
+          "updated_at": "2025-07-11T14:15:17Z",
+          "pushed_at": "2025-07-08T18:07:11Z",
+          "created_at": "2025-07-08T18:05:30Z",
           "topics": [],
           "owner": {
-            "login": "san8383",
-            "html_url": "https://github.com/san8383"
+            "login": "abrewer251",
+            "html_url": "https://github.com/abrewer251"
           },
-          "clone_url": "https://github.com/san8383/CVE-2025-32463.git"
+          "clone_url": "https://github.com/abrewer251/CVE-2025-32463_Sudo_PoC.git"
         },
         {
           "id": 1071155881,
@@ -24550,25 +24550,6 @@
             "html_url": "https://github.com/aexdyhaxor"
           },
           "clone_url": "https://github.com/aexdyhaxor/CVE-2025-32463.git"
-        },
-        {
-          "id": 1012385228,
-          "name": "CVE-2025-32463_Exploit",
-          "full_name": "neko205-mx/CVE-2025-32463_Exploit",
-          "html_url": "https://github.com/neko205-mx/CVE-2025-32463_Exploit",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2025-07-02T08:59:30Z",
-          "pushed_at": "2025-07-02T08:59:28Z",
-          "created_at": "2025-07-02T08:53:44Z",
-          "topics": [],
-          "owner": {
-            "login": "neko205-mx",
-            "html_url": "https://github.com/neko205-mx"
-          },
-          "clone_url": "https://github.com/neko205-mx/CVE-2025-32463_Exploit.git"
         },
         {
           "id": 1024069285,
@@ -24843,6 +24824,25 @@
           "clone_url": "https://github.com/ill-deed/CVE-2025-32463_illdeed.git"
         },
         {
+          "id": 1013356616,
+          "name": "sudo_patch_CVE-2025-32463",
+          "full_name": "CIA911/sudo_patch_CVE-2025-32463",
+          "html_url": "https://github.com/CIA911/sudo_patch_CVE-2025-32463",
+          "description": "Mr.CIA's manual patching guide for CVE-2025-32463 (Sudo local privilege escalation) on Kali Linux and Ubuntu WSL.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Shell",
+          "updated_at": "2025-10-29T13:05:21Z",
+          "pushed_at": "2025-07-03T20:03:03Z",
+          "created_at": "2025-07-03T19:04:11Z",
+          "topics": [],
+          "owner": {
+            "login": "CIA911",
+            "html_url": "https://github.com/CIA911"
+          },
+          "clone_url": "https://github.com/CIA911/sudo_patch_CVE-2025-32463.git"
+        },
+        {
           "id": 1086312827,
           "name": "CVE-2025-32463",
           "full_name": "muhammedkayag/CVE-2025-32463",
@@ -24881,25 +24881,6 @@
           "clone_url": "https://github.com/robbin0919/CVE-2025-32463.git"
         },
         {
-          "id": 1013356616,
-          "name": "sudo_patch_CVE-2025-32463",
-          "full_name": "CIA911/sudo_patch_CVE-2025-32463",
-          "html_url": "https://github.com/CIA911/sudo_patch_CVE-2025-32463",
-          "description": "Mr.CIA's manual patching guide for CVE-2025-32463 (Sudo local privilege escalation) on Kali Linux and Ubuntu WSL.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2025-10-29T13:05:21Z",
-          "pushed_at": "2025-07-03T20:03:03Z",
-          "created_at": "2025-07-03T19:04:11Z",
-          "topics": [],
-          "owner": {
-            "login": "CIA911",
-            "html_url": "https://github.com/CIA911"
-          },
-          "clone_url": "https://github.com/CIA911/sudo_patch_CVE-2025-32463.git"
-        },
-        {
           "id": 1018099412,
           "name": "sudo-chroot-CVE-2025-32463",
           "full_name": "morgenm/sudo-chroot-CVE-2025-32463",
@@ -24927,6 +24908,25 @@
             "html_url": "https://github.com/morgenm"
           },
           "clone_url": "https://github.com/morgenm/sudo-chroot-CVE-2025-32463.git"
+        },
+        {
+          "id": 1013127277,
+          "name": "CVE-2025-32463",
+          "full_name": "0xAkarii/CVE-2025-32463",
+          "html_url": "https://github.com/0xAkarii/CVE-2025-32463",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Shell",
+          "updated_at": "2025-07-03T11:58:39Z",
+          "pushed_at": "2025-07-03T11:58:36Z",
+          "created_at": "2025-07-03T11:58:12Z",
+          "topics": [],
+          "owner": {
+            "login": "0xAkarii",
+            "html_url": "https://github.com/0xAkarii"
+          },
+          "clone_url": "https://github.com/0xAkarii/CVE-2025-32463.git"
         },
         {
           "id": 1072719907,
@@ -25005,23 +25005,23 @@
           "clone_url": "https://github.com/harsh1verma/CVE-Analysis.git"
         },
         {
-          "id": 1013127277,
-          "name": "CVE-2025-32463",
-          "full_name": "0xAkarii/CVE-2025-32463",
-          "html_url": "https://github.com/0xAkarii/CVE-2025-32463",
-          "description": "",
+          "id": 1276092801,
+          "name": "cve-2025-32463",
+          "full_name": "Fomovet/cve-2025-32463",
+          "html_url": "https://github.com/Fomovet/cve-2025-32463",
+          "description": "POC for CVE-2025-32463",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2025-07-03T11:58:39Z",
-          "pushed_at": "2025-07-03T11:58:36Z",
-          "created_at": "2025-07-03T11:58:12Z",
+          "language": "C",
+          "updated_at": "2026-06-21T14:31:21Z",
+          "pushed_at": "2026-06-21T14:31:18Z",
+          "created_at": "2026-06-21T14:31:11Z",
           "topics": [],
           "owner": {
-            "login": "0xAkarii",
-            "html_url": "https://github.com/0xAkarii"
+            "login": "Fomovet",
+            "html_url": "https://github.com/Fomovet"
           },
-          "clone_url": "https://github.com/0xAkarii/CVE-2025-32463.git"
+          "clone_url": "https://github.com/Fomovet/cve-2025-32463.git"
         },
         {
           "id": 1067909853,
@@ -25062,23 +25062,23 @@
           "clone_url": "https://github.com/khoazero123/CVE-2025-32463.git"
         },
         {
-          "id": 1276092801,
-          "name": "cve-2025-32463",
-          "full_name": "Fomovet/cve-2025-32463",
-          "html_url": "https://github.com/Fomovet/cve-2025-32463",
-          "description": "POC for CVE-2025-32463",
+          "id": 1012696307,
+          "name": "CVE-2025-32463_POC",
+          "full_name": "robbert1978/CVE-2025-32463_POC",
+          "html_url": "https://github.com/robbert1978/CVE-2025-32463_POC",
+          "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "C",
-          "updated_at": "2026-06-21T14:31:21Z",
-          "pushed_at": "2026-06-21T14:31:18Z",
-          "created_at": "2026-06-21T14:31:11Z",
+          "language": "Makefile",
+          "updated_at": "2025-07-02T18:30:06Z",
+          "pushed_at": "2025-07-02T18:30:03Z",
+          "created_at": "2025-07-02T18:26:29Z",
           "topics": [],
           "owner": {
-            "login": "Fomovet",
-            "html_url": "https://github.com/Fomovet"
+            "login": "robbert1978",
+            "html_url": "https://github.com/robbert1978"
           },
-          "clone_url": "https://github.com/Fomovet/cve-2025-32463.git"
+          "clone_url": "https://github.com/robbert1978/CVE-2025-32463_POC.git"
         },
         {
           "id": 1105368645,
@@ -25138,25 +25138,6 @@
           "clone_url": "https://github.com/Ghstxz/CVE-2025-32463.git"
         },
         {
-          "id": 1012696307,
-          "name": "CVE-2025-32463_POC",
-          "full_name": "robbert1978/CVE-2025-32463_POC",
-          "html_url": "https://github.com/robbert1978/CVE-2025-32463_POC",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Makefile",
-          "updated_at": "2025-07-02T18:30:06Z",
-          "pushed_at": "2025-07-02T18:30:03Z",
-          "created_at": "2025-07-02T18:26:29Z",
-          "topics": [],
-          "owner": {
-            "login": "robbert1978",
-            "html_url": "https://github.com/robbert1978"
-          },
-          "clone_url": "https://github.com/robbert1978/CVE-2025-32463_POC.git"
-        },
-        {
           "id": 1012569637,
           "name": "CVE-2025-32463_POC",
           "full_name": "zhaduchanhzz/CVE-2025-32463_POC",
@@ -25174,6 +25155,25 @@
             "html_url": "https://github.com/zhaduchanhzz"
           },
           "clone_url": "https://github.com/zhaduchanhzz/CVE-2025-32463_POC.git"
+        },
+        {
+          "id": 1012385228,
+          "name": "CVE-2025-32463_Exploit",
+          "full_name": "neko205-mx/CVE-2025-32463_Exploit",
+          "html_url": "https://github.com/neko205-mx/CVE-2025-32463_Exploit",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Shell",
+          "updated_at": "2025-07-02T08:59:30Z",
+          "pushed_at": "2025-07-02T08:59:28Z",
+          "created_at": "2025-07-02T08:53:44Z",
+          "topics": [],
+          "owner": {
+            "login": "neko205-mx",
+            "html_url": "https://github.com/neko205-mx"
+          },
+          "clone_url": "https://github.com/neko205-mx/CVE-2025-32463_Exploit.git"
         },
         {
           "id": 1122903691,
@@ -53710,7 +53710,7 @@
           "html_url": "https://github.com/Rat5ak/CVE-2025-59382-QNAP-Password-Reset-Account-Takeover",
           "description": "QNAP password reset URL injection writeup + PoC.",
           "stargazers_count": 1,
-          "forks_count": 0,
+          "forks_count": 1,
           "language": "PowerShell",
           "updated_at": "2026-07-05T15:04:34Z",
           "pushed_at": "2026-07-05T12:27:16Z",
@@ -60443,8 +60443,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Go",
-          "updated_at": "2026-07-05T14:00:26Z",
-          "pushed_at": "2026-07-05T14:00:19Z",
+          "updated_at": "2026-07-05T16:28:56Z",
+          "pushed_at": "2026-07-05T16:28:52Z",
           "created_at": "2026-03-23T09:09:21Z",
           "topics": [
             "cve",
