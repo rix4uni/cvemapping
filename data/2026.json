@@ -3281,10 +3281,10 @@
           "full_name": "sw0rd1ight/CVE-2026-1207",
           "html_url": "https://github.com/sw0rd1ight/CVE-2026-1207",
           "description": "Django 框架在使用 PostGIS 查询地理栅格（raster）数据时，若将未经验证的用户输入直接作为 band index（波段索引）参数，会引发 SQL 注入",
-          "stargazers_count": 0,
+          "stargazers_count": 1,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-04-26T03:12:49Z",
+          "updated_at": "2026-07-12T05:54:52Z",
           "pushed_at": "2026-04-26T03:12:45Z",
           "created_at": "2026-04-26T02:54:10Z",
           "topics": [],
@@ -5122,6 +5122,30 @@
           "clone_url": "https://github.com/var77/CVE-2026-2005.git"
         },
         {
+          "id": 1175102780,
+          "name": "CVE-2026-2005",
+          "full_name": "M3str3/CVE-2026-2005",
+          "html_url": "https://github.com/M3str3/CVE-2026-2005",
+          "description": "PoC for CVE-2026-2005 — heap buffer overflow in PostgreSQL pgcrypto (pgp_pub_decrypt). Oversized PGP session key bypasses bounds check in pgp-pubdec.c. Affects \u003c 17.8 / 16.12 / 15.16 / 14.21 / 18.2.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-07-12T07:55:50Z",
+          "pushed_at": "2026-03-07T09:16:44Z",
+          "created_at": "2026-03-07T08:24:20Z",
+          "topics": [
+            "cve",
+            "heap-overflow",
+            "pgcrypto",
+            "postgresql"
+          ],
+          "owner": {
+            "login": "M3str3",
+            "html_url": "https://github.com/M3str3"
+          },
+          "clone_url": "https://github.com/M3str3/CVE-2026-2005.git"
+        },
+        {
           "id": 1229094264,
           "name": "CVE-2026-2005_lab",
           "full_name": "stvm8/CVE-2026-2005_lab",
@@ -5265,25 +5289,6 @@
           "clone_url": "https://github.com/gigachadusers/cve-2026-20127.git"
         },
         {
-          "id": 1175850534,
-          "name": "sdwan-scanner-CVE-2026-20127",
-          "full_name": "abrahamsurf/sdwan-scanner-CVE-2026-20127",
-          "html_url": "https://github.com/abrahamsurf/sdwan-scanner-CVE-2026-20127",
-          "description": "Cisco SD-WAN Exposure \u0026 Potential Vulnerability Scanner (Passive Fingerprinting) 2026",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-03-08T09:24:09Z",
-          "pushed_at": "2026-03-08T09:21:05Z",
-          "created_at": "2026-03-08T09:04:34Z",
-          "topics": [],
-          "owner": {
-            "login": "abrahamsurf",
-            "html_url": "https://github.com/abrahamsurf"
-          },
-          "clone_url": "https://github.com/abrahamsurf/sdwan-scanner-CVE-2026-20127.git"
-        },
-        {
           "id": 1172198312,
           "name": "CVE-2026-20127",
           "full_name": "randeepajayasekara/CVE-2026-20127",
@@ -5305,6 +5310,44 @@
             "html_url": "https://github.com/randeepajayasekara"
           },
           "clone_url": "https://github.com/randeepajayasekara/CVE-2026-20127.git"
+        },
+        {
+          "id": 1297969103,
+          "name": "CVE-2026-20127-Exploit-Extension",
+          "full_name": "anuththara2007-W/CVE-2026-20127-Exploit-Extension",
+          "html_url": "https://github.com/anuththara2007-W/CVE-2026-20127-Exploit-Extension",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Ruby",
+          "updated_at": "2026-07-12T04:28:40Z",
+          "pushed_at": "2026-07-12T04:28:36Z",
+          "created_at": "2026-07-12T04:08:28Z",
+          "topics": [],
+          "owner": {
+            "login": "anuththara2007-W",
+            "html_url": "https://github.com/anuththara2007-W"
+          },
+          "clone_url": "https://github.com/anuththara2007-W/CVE-2026-20127-Exploit-Extension.git"
+        },
+        {
+          "id": 1175850534,
+          "name": "sdwan-scanner-CVE-2026-20127",
+          "full_name": "abrahamsurf/sdwan-scanner-CVE-2026-20127",
+          "html_url": "https://github.com/abrahamsurf/sdwan-scanner-CVE-2026-20127",
+          "description": "Cisco SD-WAN Exposure \u0026 Potential Vulnerability Scanner (Passive Fingerprinting) 2026",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-03-08T09:24:09Z",
+          "pushed_at": "2026-03-08T09:21:05Z",
+          "created_at": "2026-03-08T09:04:34Z",
+          "topics": [],
+          "owner": {
+            "login": "abrahamsurf",
+            "html_url": "https://github.com/abrahamsurf"
+          },
+          "clone_url": "https://github.com/abrahamsurf/sdwan-scanner-CVE-2026-20127.git"
         },
         {
           "id": 1269232733,
@@ -6500,8 +6543,8 @@
           "stargazers_count": 1,
           "forks_count": 2,
           "language": "",
-          "updated_at": "2026-07-12T01:01:28Z",
-          "pushed_at": "2026-07-12T01:01:24Z",
+          "updated_at": "2026-07-12T06:54:03Z",
+          "pushed_at": "2026-07-12T06:53:53Z",
           "created_at": "2024-09-22T12:19:06Z",
           "topics": [
             "agent",
@@ -6663,8 +6706,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-07-12T01:00:43Z",
-          "pushed_at": "2026-07-12T01:00:39Z",
+          "updated_at": "2026-07-12T06:53:07Z",
+          "pushed_at": "2026-07-12T06:53:04Z",
           "created_at": "2026-02-26T05:21:28Z",
           "topics": [
             "agent",
@@ -6918,6 +6961,30 @@
             "html_url": "https://github.com/Filipemendonca1978"
           },
           "clone_url": "https://github.com/Filipemendonca1978/CVE-2026-21018.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2026-21055",
+      "repositories": [
+        {
+          "id": 1298076735,
+          "name": "samsung-bixby-command-execution-cve-2026-21055-improper-component-export",
+          "full_name": "Hunt-Benito/samsung-bixby-command-execution-cve-2026-21055-improper-component-export",
+          "html_url": "https://github.com/Hunt-Benito/samsung-bixby-command-execution-cve-2026-21055-improper-component-export",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-07-12T07:31:54Z",
+          "pushed_at": "2026-07-12T07:31:42Z",
+          "created_at": "2026-07-12T07:30:34Z",
+          "topics": [],
+          "owner": {
+            "login": "Hunt-Benito",
+            "html_url": "https://github.com/Hunt-Benito"
+          },
+          "clone_url": "https://github.com/Hunt-Benito/samsung-bixby-command-execution-cve-2026-21055-improper-component-export.git"
         }
       ]
     },
@@ -13007,23 +13074,41 @@
           "clone_url": "https://github.com/novitahk/Exploit-CVE-2026-24061.git"
         },
         {
-          "id": 1296620145,
-          "name": "Abyssal",
-          "full_name": "stoerti2/Abyssal",
-          "html_url": "https://github.com/stoerti2/Abyssal",
-          "description": "Abyssal is a high-performance Telnet vulnerability scanner for CVE-2026-24061,  delivering root shells on vulnerable systems with false-positive detection.",
+          "id": 1149163272,
+          "name": "CVE-2026-24061",
+          "full_name": "obrunolima1910/CVE-2026-24061",
+          "html_url": "https://github.com/obrunolima1910/CVE-2026-24061",
+          "description": "🚨 Exploit CVE-2026-24061, a critical remote authentication bypass in GNU inetutils-telnetd, for instant root shell access without authentication.",
           "stargazers_count": 0,
-          "forks_count": 1,
+          "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-07-10T15:13:51Z",
-          "pushed_at": "2026-07-10T15:12:45Z",
-          "created_at": "2026-07-10T15:01:39Z",
-          "topics": [],
+          "updated_at": "2026-07-12T06:44:09Z",
+          "pushed_at": "2026-07-12T06:44:03Z",
+          "created_at": "2026-02-03T19:46:10Z",
+          "topics": [
+            "agent",
+            "auth",
+            "book",
+            "computer-vision",
+            "cv",
+            "deep-learning",
+            "gluon",
+            "image-classification",
+            "jupyter-notebook",
+            "machine-learning",
+            "mxnet",
+            "neural-network",
+            "person-reid",
+            "pose-estimation",
+            "root",
+            "semantic-segmentation",
+            "telnet"
+          ],
           "owner": {
-            "login": "stoerti2",
-            "html_url": "https://github.com/stoerti2"
+            "login": "obrunolima1910",
+            "html_url": "https://github.com/obrunolima1910"
           },
-          "clone_url": "https://github.com/stoerti2/Abyssal.git"
+          "clone_url": "https://github.com/obrunolima1910/CVE-2026-24061.git"
         },
         {
           "id": 1143391754,
@@ -13532,41 +13617,23 @@
           "clone_url": "https://github.com/Cosm3No1de/htb-orion-writeup.git"
         },
         {
-          "id": 1149163272,
-          "name": "CVE-2026-24061",
-          "full_name": "obrunolima1910/CVE-2026-24061",
-          "html_url": "https://github.com/obrunolima1910/CVE-2026-24061",
-          "description": "🚨 Exploit CVE-2026-24061, a critical remote authentication bypass in GNU inetutils-telnetd, for instant root shell access without authentication.",
+          "id": 1296620145,
+          "name": "Abyssal",
+          "full_name": "stoerti2/Abyssal",
+          "html_url": "https://github.com/stoerti2/Abyssal",
+          "description": "Abyssal is a high-performance Telnet vulnerability scanner for CVE-2026-24061,  delivering root shells on vulnerable systems with false-positive detection.",
           "stargazers_count": 0,
-          "forks_count": 0,
+          "forks_count": 1,
           "language": "Python",
-          "updated_at": "2026-07-12T00:51:48Z",
-          "pushed_at": "2026-07-12T00:51:45Z",
-          "created_at": "2026-02-03T19:46:10Z",
-          "topics": [
-            "agent",
-            "auth",
-            "book",
-            "computer-vision",
-            "cv",
-            "deep-learning",
-            "gluon",
-            "image-classification",
-            "jupyter-notebook",
-            "machine-learning",
-            "mxnet",
-            "neural-network",
-            "person-reid",
-            "pose-estimation",
-            "root",
-            "semantic-segmentation",
-            "telnet"
-          ],
+          "updated_at": "2026-07-12T06:50:43Z",
+          "pushed_at": "2026-07-12T06:50:40Z",
+          "created_at": "2026-07-10T15:01:39Z",
+          "topics": [],
           "owner": {
-            "login": "obrunolima1910",
-            "html_url": "https://github.com/obrunolima1910"
+            "login": "stoerti2",
+            "html_url": "https://github.com/stoerti2"
           },
-          "clone_url": "https://github.com/obrunolima1910/CVE-2026-24061.git"
+          "clone_url": "https://github.com/stoerti2/Abyssal.git"
         },
         {
           "id": 1272637788,
@@ -13971,8 +14038,8 @@
           "stargazers_count": 3,
           "forks_count": 0,
           "language": "C#",
-          "updated_at": "2026-07-12T01:18:58Z",
-          "pushed_at": "2026-07-12T01:18:55Z",
+          "updated_at": "2026-07-12T07:12:33Z",
+          "pushed_at": "2026-07-12T07:12:29Z",
           "created_at": "2026-03-26T04:38:27Z",
           "topics": [
             "assembly",
@@ -14143,8 +14210,8 @@
           "stargazers_count": 1,
           "forks_count": 2,
           "language": "",
-          "updated_at": "2026-07-12T01:03:50Z",
-          "pushed_at": "2026-07-12T01:03:46Z",
+          "updated_at": "2026-07-12T06:56:58Z",
+          "pushed_at": "2026-07-12T06:56:48Z",
           "created_at": "2026-03-03T14:19:18Z",
           "topics": [
             "agent",
@@ -14637,8 +14704,8 @@
           "stargazers_count": 2,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-07-12T01:08:16Z",
-          "pushed_at": "2026-07-12T01:08:12Z",
+          "updated_at": "2026-07-12T07:02:02Z",
+          "pushed_at": "2026-07-12T07:01:56Z",
           "created_at": "2026-03-10T14:40:04Z",
           "topics": [
             "colab",
@@ -15366,7 +15433,7 @@
           "forks_count": 5,
           "language": "Shell",
           "updated_at": "2026-06-30T01:36:38Z",
-          "pushed_at": "2026-07-05T05:15:58Z",
+          "pushed_at": "2026-07-12T05:01:47Z",
           "created_at": "2026-02-05T07:31:07Z",
           "topics": [],
           "owner": {
@@ -15572,11 +15639,11 @@
           "full_name": "shurikgo/cve-2026-25262-sm8450-research",
           "html_url": "https://github.com/shurikgo/cve-2026-25262-sm8450-research",
           "description": "CVE-2026-25262 applicability to Snapdragon 8 Gen 1 — experimental results",
-          "stargazers_count": 3,
+          "stargazers_count": 6,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-07-12T03:08:52Z",
-          "pushed_at": "2026-07-08T09:58:26Z",
+          "updated_at": "2026-07-12T07:42:19Z",
+          "pushed_at": "2026-07-12T05:26:33Z",
           "created_at": "2026-07-08T09:51:38Z",
           "topics": [
             "cve",
@@ -22260,10 +22327,10 @@
           "full_name": "theori-io/copy-fail-CVE-2026-31431",
           "html_url": "https://github.com/theori-io/copy-fail-CVE-2026-31431",
           "description": "Copy Fail (CVE-2026-31431): 9-year-old Linux kernel LPE found by Theori's Xint Code",
-          "stargazers_count": 4008,
+          "stargazers_count": 4009,
           "forks_count": 899,
           "language": "Python",
-          "updated_at": "2026-07-11T17:16:19Z",
+          "updated_at": "2026-07-12T05:48:56Z",
           "pushed_at": "2026-04-29T21:21:46Z",
           "created_at": "2026-04-29T12:15:28Z",
           "topics": [
@@ -23492,8 +23559,8 @@
           "stargazers_count": 3,
           "forks_count": 0,
           "language": "Rust",
-          "updated_at": "2026-07-12T01:41:57Z",
-          "pushed_at": "2026-07-12T01:41:54Z",
+          "updated_at": "2026-07-12T07:33:08Z",
+          "pushed_at": "2026-07-12T07:33:03Z",
           "created_at": "2026-05-06T09:49:14Z",
           "topics": [
             "af-alg",
@@ -26131,8 +26198,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Rust",
-          "updated_at": "2026-07-12T01:41:11Z",
-          "pushed_at": "2026-07-12T01:41:07Z",
+          "updated_at": "2026-07-12T07:32:21Z",
+          "pushed_at": "2026-07-12T07:32:18Z",
           "created_at": "2026-05-05T04:58:21Z",
           "topics": [
             "af-alg",
@@ -29210,8 +29277,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "JavaScript",
-          "updated_at": "2026-07-12T01:20:16Z",
-          "pushed_at": "2026-07-12T01:20:12Z",
+          "updated_at": "2026-07-12T07:13:58Z",
+          "pushed_at": "2026-07-12T07:13:55Z",
           "created_at": "2026-03-28T20:49:46Z",
           "topics": [
             "cve",
@@ -29592,10 +29659,10 @@
           "full_name": "virus-or-not/CVE-2026-32202",
           "html_url": "https://github.com/virus-or-not/CVE-2026-32202",
           "description": "Windows Shell Spoofing Vulnerability",
-          "stargazers_count": 2,
+          "stargazers_count": 3,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-05-12T06:14:36Z",
+          "updated_at": "2026-07-12T08:46:03Z",
           "pushed_at": "2026-05-01T12:07:33Z",
           "created_at": "2026-04-30T17:34:52Z",
           "topics": [],
@@ -39757,10 +39824,10 @@
           "full_name": "0xBlackash/CVE-2026-41089",
           "html_url": "https://github.com/0xBlackash/CVE-2026-41089",
           "description": "CVE-2026-41089",
-          "stargazers_count": 5,
+          "stargazers_count": 6,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-06-28T06:42:15Z",
+          "updated_at": "2026-07-12T08:46:23Z",
           "pushed_at": "2026-06-05T00:49:43Z",
           "created_at": "2026-06-02T10:35:26Z",
           "topics": [],
@@ -39819,10 +39886,10 @@
           "full_name": "0xBlackash/CVE-2026-41091",
           "html_url": "https://github.com/0xBlackash/CVE-2026-41091",
           "description": "CVE-2026-41091",
-          "stargazers_count": 9,
+          "stargazers_count": 10,
           "forks_count": 4,
           "language": "C++",
-          "updated_at": "2026-06-19T16:31:46Z",
+          "updated_at": "2026-07-12T08:46:30Z",
           "pushed_at": "2026-05-21T19:28:46Z",
           "created_at": "2026-05-21T19:16:25Z",
           "topics": [],
@@ -40668,6 +40735,50 @@
           "clone_url": "https://github.com/Sachinart/CVE-2026-41940-cpanel-0day.git"
         },
         {
+          "id": 1225565988,
+          "name": "CVE-2026-41940-MASS-EXPLOIT",
+          "full_name": "ilmndwntr/CVE-2026-41940-MASS-EXPLOIT",
+          "html_url": "https://github.com/ilmndwntr/CVE-2026-41940-MASS-EXPLOIT",
+          "description": "CVE-2026-41940 SUPPORT SINGLE \u0026 MASS SCAN EXPLOIT",
+          "stargazers_count": 13,
+          "forks_count": 9,
+          "language": "Python",
+          "updated_at": "2026-05-16T09:09:34Z",
+          "pushed_at": "2026-04-30T12:11:51Z",
+          "created_at": "2026-04-30T12:11:25Z",
+          "topics": [],
+          "owner": {
+            "login": "ilmndwntr",
+            "html_url": "https://github.com/ilmndwntr"
+          },
+          "clone_url": "https://github.com/ilmndwntr/CVE-2026-41940-MASS-EXPLOIT.git"
+        },
+        {
+          "id": 1225438566,
+          "name": "CVE-2026-41940-Exploit-PoC",
+          "full_name": "realawaisakbar/CVE-2026-41940-Exploit-PoC",
+          "html_url": "https://github.com/realawaisakbar/CVE-2026-41940-Exploit-PoC",
+          "description": "This repository contains a Proof-of-Concept (PoC) exploit for CVE-2026-41940, a critical authentication bypass vulnerability in cPanel \u0026 WHM. The vulnerability allows unauthenticated remote attackers to gain unauthorized access to the control panel by abusing flaws in the login flow.",
+          "stargazers_count": 13,
+          "forks_count": 7,
+          "language": "Python",
+          "updated_at": "2026-07-12T04:50:51Z",
+          "pushed_at": "2026-04-30T10:05:54Z",
+          "created_at": "2026-04-30T09:22:55Z",
+          "topics": [
+            "cpanel",
+            "cve",
+            "cve-2026-41940",
+            "exploit",
+            "whm"
+          ],
+          "owner": {
+            "login": "realawaisakbar",
+            "html_url": "https://github.com/realawaisakbar"
+          },
+          "clone_url": "https://github.com/realawaisakbar/CVE-2026-41940-Exploit-PoC.git"
+        },
+        {
           "id": 1225689180,
           "name": "cpanel-sessionscribe",
           "full_name": "rfxn/cpanel-sessionscribe",
@@ -40699,50 +40810,6 @@
             "html_url": "https://github.com/rfxn"
           },
           "clone_url": "https://github.com/rfxn/cpanel-sessionscribe.git"
-        },
-        {
-          "id": 1225565988,
-          "name": "CVE-2026-41940-MASS-EXPLOIT",
-          "full_name": "ilmndwntr/CVE-2026-41940-MASS-EXPLOIT",
-          "html_url": "https://github.com/ilmndwntr/CVE-2026-41940-MASS-EXPLOIT",
-          "description": "CVE-2026-41940 SUPPORT SINGLE \u0026 MASS SCAN EXPLOIT",
-          "stargazers_count": 13,
-          "forks_count": 9,
-          "language": "Python",
-          "updated_at": "2026-05-16T09:09:34Z",
-          "pushed_at": "2026-04-30T12:11:51Z",
-          "created_at": "2026-04-30T12:11:25Z",
-          "topics": [],
-          "owner": {
-            "login": "ilmndwntr",
-            "html_url": "https://github.com/ilmndwntr"
-          },
-          "clone_url": "https://github.com/ilmndwntr/CVE-2026-41940-MASS-EXPLOIT.git"
-        },
-        {
-          "id": 1225438566,
-          "name": "CVE-2026-41940-Exploit-PoC",
-          "full_name": "realawaisakbar/CVE-2026-41940-Exploit-PoC",
-          "html_url": "https://github.com/realawaisakbar/CVE-2026-41940-Exploit-PoC",
-          "description": "This repository contains a Proof-of-Concept (PoC) exploit for CVE-2026-41940, a critical authentication bypass vulnerability in cPanel \u0026 WHM. The vulnerability allows unauthenticated remote attackers to gain unauthorized access to the control panel by abusing flaws in the login flow.",
-          "stargazers_count": 12,
-          "forks_count": 7,
-          "language": "Python",
-          "updated_at": "2026-07-10T08:48:54Z",
-          "pushed_at": "2026-04-30T10:05:54Z",
-          "created_at": "2026-04-30T09:22:55Z",
-          "topics": [
-            "cpanel",
-            "cve",
-            "cve-2026-41940",
-            "exploit",
-            "whm"
-          ],
-          "owner": {
-            "login": "realawaisakbar",
-            "html_url": "https://github.com/realawaisakbar"
-          },
-          "clone_url": "https://github.com/realawaisakbar/CVE-2026-41940-Exploit-PoC.git"
         },
         {
           "id": 1230402730,
@@ -41461,8 +41528,8 @@
           "stargazers_count": 1,
           "forks_count": 1,
           "language": "",
-          "updated_at": "2026-07-12T01:42:14Z",
-          "pushed_at": "2026-07-12T01:42:10Z",
+          "updated_at": "2026-07-12T07:33:39Z",
+          "pushed_at": "2026-07-12T07:33:24Z",
           "created_at": "2026-05-06T18:08:48Z",
           "topics": [
             "authentication-bypass",
@@ -43372,10 +43439,10 @@
           "full_name": "MateusVerass/nGixshell",
           "html_url": "https://github.com/MateusVerass/nGixshell",
           "description": "nginx CVE scanner + RCE exploit framework (CVE-2026-42945 + 16 others)",
-          "stargazers_count": 16,
+          "stargazers_count": 17,
           "forks_count": 7,
           "language": "Python",
-          "updated_at": "2026-06-30T10:57:56Z",
+          "updated_at": "2026-07-12T06:50:41Z",
           "pushed_at": "2026-05-17T01:59:59Z",
           "created_at": "2026-05-16T14:25:39Z",
           "topics": [],
@@ -44521,25 +44588,6 @@
           "clone_url": "https://github.com/LucasPDiniz/CVE-2026-43284.git"
         },
         {
-          "id": 1293581999,
-          "name": "tetragon-dirtyfrag",
-          "full_name": "armircetaj/tetragon-dirtyfrag",
-          "html_url": "https://github.com/armircetaj/tetragon-dirtyfrag",
-          "description": "Blocking the DirtyFrag Linux LPE chain (CVE-2026-43284 / CVE-2026-43500) at runtime with a Cilium Tetragon TracingPolicy",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-07-08T16:23:55Z",
-          "pushed_at": "2026-07-08T15:04:57Z",
-          "created_at": "2026-07-08T12:35:46Z",
-          "topics": [],
-          "owner": {
-            "login": "armircetaj",
-            "html_url": "https://github.com/armircetaj"
-          },
-          "clone_url": "https://github.com/armircetaj/tetragon-dirtyfrag.git"
-        },
-        {
           "id": 1285359059,
           "name": "CVE-2026-46300",
           "full_name": "MadExploits/CVE-2026-46300",
@@ -44578,6 +44626,25 @@
           "clone_url": "https://github.com/1neptune/DirtyFrag.git"
         },
         {
+          "id": 1293581999,
+          "name": "tetragon-dirtyfrag",
+          "full_name": "armircetaj/tetragon-dirtyfrag",
+          "html_url": "https://github.com/armircetaj/tetragon-dirtyfrag",
+          "description": "Blocking the DirtyFrag Linux LPE chain (CVE-2026-43284 / CVE-2026-43500) at runtime with a Cilium Tetragon TracingPolicy",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-07-08T16:23:55Z",
+          "pushed_at": "2026-07-08T15:04:57Z",
+          "created_at": "2026-07-08T12:35:46Z",
+          "topics": [],
+          "owner": {
+            "login": "armircetaj",
+            "html_url": "https://github.com/armircetaj"
+          },
+          "clone_url": "https://github.com/armircetaj/tetragon-dirtyfrag.git"
+        },
+        {
           "id": 1243457978,
           "name": "Dirty-Frag-CVE-2026-43284",
           "full_name": "kuniyal08/Dirty-Frag-CVE-2026-43284",
@@ -44595,28 +44662,6 @@
             "html_url": "https://github.com/kuniyal08"
           },
           "clone_url": "https://github.com/kuniyal08/Dirty-Frag-CVE-2026-43284.git"
-        },
-        {
-          "id": 1233228826,
-          "name": "CVE-2026-43284",
-          "full_name": "suominen/CVE-2026-43284",
-          "html_url": "https://github.com/suominen/CVE-2026-43284",
-          "description": "Tracking CVE-2026-43284",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "HTML",
-          "updated_at": "2026-06-05T05:00:43Z",
-          "pushed_at": "2026-06-05T05:00:40Z",
-          "created_at": "2026-05-08T18:24:12Z",
-          "topics": [
-            "linux",
-            "security"
-          ],
-          "owner": {
-            "login": "suominen",
-            "html_url": "https://github.com/suominen"
-          },
-          "clone_url": "https://github.com/suominen/CVE-2026-43284.git"
         },
         {
           "id": 1248280269,
@@ -44954,6 +44999,28 @@
             "html_url": "https://github.com/FrosterDL"
           },
           "clone_url": "https://github.com/FrosterDL/CVE-2026-43284.git"
+        },
+        {
+          "id": 1233228826,
+          "name": "CVE-2026-43284",
+          "full_name": "suominen/CVE-2026-43284",
+          "html_url": "https://github.com/suominen/CVE-2026-43284",
+          "description": "Tracking CVE-2026-43284",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "HTML",
+          "updated_at": "2026-06-05T05:00:43Z",
+          "pushed_at": "2026-06-05T05:00:40Z",
+          "created_at": "2026-05-08T18:24:12Z",
+          "topics": [
+            "linux",
+            "security"
+          ],
+          "owner": {
+            "login": "suominen",
+            "html_url": "https://github.com/suominen"
+          },
+          "clone_url": "https://github.com/suominen/CVE-2026-43284.git"
         }
       ]
     },
@@ -45109,11 +45176,11 @@
           "full_name": "pubglite55/oppo-ghostlock",
           "html_url": "https://github.com/pubglite55/oppo-ghostlock",
           "description": "OPPO Find N2 GhostLock (CVE-2026-43499) exploit adaptation",
-          "stargazers_count": 30,
-          "forks_count": 16,
+          "stargazers_count": 31,
+          "forks_count": 17,
           "language": "C",
-          "updated_at": "2026-07-11T21:09:55Z",
-          "pushed_at": "2026-07-11T21:09:51Z",
+          "updated_at": "2026-07-12T08:26:41Z",
+          "pushed_at": "2026-07-12T08:02:19Z",
           "created_at": "2026-07-09T22:46:15Z",
           "topics": [],
           "owner": {
@@ -45169,8 +45236,8 @@
           "stargazers_count": 1,
           "forks_count": 3,
           "language": "C",
-          "updated_at": "2026-07-12T03:02:21Z",
-          "pushed_at": "2026-07-12T03:02:17Z",
+          "updated_at": "2026-07-12T08:46:09Z",
+          "pushed_at": "2026-07-12T08:45:48Z",
           "created_at": "2026-07-09T00:41:15Z",
           "topics": [],
           "owner": {
@@ -45423,25 +45490,6 @@
           "clone_url": "https://github.com/AK777177/Dirty-Frag-Analysis.git"
         },
         {
-          "id": 1293581999,
-          "name": "tetragon-dirtyfrag",
-          "full_name": "armircetaj/tetragon-dirtyfrag",
-          "html_url": "https://github.com/armircetaj/tetragon-dirtyfrag",
-          "description": "Blocking the DirtyFrag Linux LPE chain (CVE-2026-43284 / CVE-2026-43500) at runtime with a Cilium Tetragon TracingPolicy",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-07-08T16:23:55Z",
-          "pushed_at": "2026-07-08T15:04:57Z",
-          "created_at": "2026-07-08T12:35:46Z",
-          "topics": [],
-          "owner": {
-            "login": "armircetaj",
-            "html_url": "https://github.com/armircetaj"
-          },
-          "clone_url": "https://github.com/armircetaj/tetragon-dirtyfrag.git"
-        },
-        {
           "id": 1285359059,
           "name": "CVE-2026-46300",
           "full_name": "MadExploits/CVE-2026-46300",
@@ -45480,28 +45528,23 @@
           "clone_url": "https://github.com/1neptune/DirtyFrag.git"
         },
         {
-          "id": 1225578145,
-          "name": "CVE-2026-43500",
-          "full_name": "attaattaatta/CVE-2026-43500",
-          "html_url": "https://github.com/attaattaatta/CVE-2026-43500",
-          "description": "CVE-2026-43500 / CVE-2026-31431 / CVE-2026-43284 golang hotfix",
-          "stargazers_count": 0,
+          "id": 1293581999,
+          "name": "tetragon-dirtyfrag",
+          "full_name": "armircetaj/tetragon-dirtyfrag",
+          "html_url": "https://github.com/armircetaj/tetragon-dirtyfrag",
+          "description": "Blocking the DirtyFrag Linux LPE chain (CVE-2026-43284 / CVE-2026-43500) at runtime with a Cilium Tetragon TracingPolicy",
+          "stargazers_count": 1,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-05-31T06:56:16Z",
-          "pushed_at": "2026-05-31T06:56:13Z",
-          "created_at": "2026-04-30T12:27:15Z",
-          "topics": [
-            "cve-2026-31431",
-            "cve-2026-43284",
-            "cve-2026-43500",
-            "hotfix"
-          ],
+          "updated_at": "2026-07-08T16:23:55Z",
+          "pushed_at": "2026-07-08T15:04:57Z",
+          "created_at": "2026-07-08T12:35:46Z",
+          "topics": [],
           "owner": {
-            "login": "attaattaatta",
-            "html_url": "https://github.com/attaattaatta"
+            "login": "armircetaj",
+            "html_url": "https://github.com/armircetaj"
           },
-          "clone_url": "https://github.com/attaattaatta/CVE-2026-43500.git"
+          "clone_url": "https://github.com/armircetaj/tetragon-dirtyfrag.git"
         },
         {
           "id": 1235171305,
@@ -45625,6 +45668,30 @@
             "html_url": "https://github.com/DylanClaudio"
           },
           "clone_url": "https://github.com/DylanClaudio/Reporte-de-Escalada-de-Privilegios-Local-Dirty-Frag.git"
+        },
+        {
+          "id": 1225578145,
+          "name": "CVE-2026-43500",
+          "full_name": "attaattaatta/CVE-2026-43500",
+          "html_url": "https://github.com/attaattaatta/CVE-2026-43500",
+          "description": "CVE-2026-43500 / CVE-2026-31431 / CVE-2026-43284 golang hotfix",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-05-31T06:56:16Z",
+          "pushed_at": "2026-05-31T06:56:13Z",
+          "created_at": "2026-04-30T12:27:15Z",
+          "topics": [
+            "cve-2026-31431",
+            "cve-2026-43284",
+            "cve-2026-43500",
+            "hotfix"
+          ],
+          "owner": {
+            "login": "attaattaatta",
+            "html_url": "https://github.com/attaattaatta"
+          },
+          "clone_url": "https://github.com/attaattaatta/CVE-2026-43500.git"
         }
       ]
     },
@@ -45637,10 +45704,10 @@
           "full_name": "Anyone202/cybermeowfia-termux",
           "html_url": "https://github.com/Anyone202/cybermeowfia-termux",
           "description": "Termux Privilege Escalation Tool \u0026 Root Manager - CVE-2026-43501",
-          "stargazers_count": 0,
+          "stargazers_count": 1,
           "forks_count": 0,
           "language": "Shell",
-          "updated_at": "2026-07-11T13:45:48Z",
+          "updated_at": "2026-07-12T04:10:34Z",
           "pushed_at": "2026-07-11T04:30:20Z",
           "created_at": "2026-07-11T03:46:50Z",
           "topics": [],
@@ -48096,8 +48163,8 @@
           "stargazers_count": 4,
           "forks_count": 0,
           "language": "C#",
-          "updated_at": "2026-07-12T01:50:05Z",
-          "pushed_at": "2026-07-12T01:50:02Z",
+          "updated_at": "2026-07-12T07:40:01Z",
+          "pushed_at": "2026-07-12T07:39:58Z",
           "created_at": "2026-06-16T07:21:36Z",
           "topics": [
             "bitlocker",
@@ -48871,6 +48938,25 @@
             "html_url": "https://github.com/cyberheartmi9"
           },
           "clone_url": "https://github.com/cyberheartmi9/CVE-2026-4631-cockpit-RCE.git"
+        },
+        {
+          "id": 1298119443,
+          "name": "CVE-2026-4631-cockpit-RCE",
+          "full_name": "ExDev994/CVE-2026-4631-cockpit-RCE",
+          "html_url": "https://github.com/ExDev994/CVE-2026-4631-cockpit-RCE",
+          "description": "CVE-2026-4631 Cockpit unauthenticated RCE mass exploit tool by 0xNuts",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-07-12T08:42:22Z",
+          "pushed_at": "2026-07-12T08:42:08Z",
+          "created_at": "2026-07-12T08:42:02Z",
+          "topics": [],
+          "owner": {
+            "login": "ExDev994",
+            "html_url": "https://github.com/ExDev994"
+          },
+          "clone_url": "https://github.com/ExDev994/CVE-2026-4631-cockpit-RCE.git"
         }
       ]
     },
@@ -48994,8 +49080,8 @@
           "stargazers_count": 2,
           "forks_count": 0,
           "language": "C",
-          "updated_at": "2026-07-11T07:54:38Z",
-          "pushed_at": "2026-07-11T07:55:17Z",
+          "updated_at": "2026-07-12T07:06:51Z",
+          "pushed_at": "2026-07-12T07:06:49Z",
           "created_at": "2026-07-11T06:42:33Z",
           "topics": [],
           "owner": {
@@ -55875,8 +55961,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-07-11T22:49:37Z",
-          "pushed_at": "2026-07-11T22:35:05Z",
+          "updated_at": "2026-07-12T07:49:42Z",
+          "pushed_at": "2026-07-12T07:49:37Z",
           "created_at": "2026-07-11T22:27:04Z",
           "topics": [],
           "owner": {
@@ -58661,10 +58747,10 @@
           "full_name": "zycoder0day/CVE-2026-8732",
           "html_url": "https://github.com/zycoder0day/CVE-2026-8732",
           "description": "CVE-2026-8732 | WP Maps Pro \u003c= 6.1.0 | Unauthenticated Privilege Escalation ",
-          "stargazers_count": 1,
+          "stargazers_count": 2,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-07-06T16:07:37Z",
+          "updated_at": "2026-07-12T06:27:59Z",
           "pushed_at": "2026-05-30T07:06:03Z",
           "created_at": "2026-05-30T06:42:33Z",
           "topics": [],
@@ -59303,8 +59389,8 @@
           "stargazers_count": 2,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-06-21T11:24:59Z",
-          "pushed_at": "2026-06-21T11:24:56Z",
+          "updated_at": "2026-07-12T06:20:21Z",
+          "pushed_at": "2026-07-12T06:20:19Z",
           "created_at": "2026-06-15T13:37:09Z",
           "topics": [],
           "owner": {
