@@ -4502,8 +4502,8 @@
           "stargazers_count": 1,
           "forks_count": 1,
           "language": "Python",
-          "updated_at": "2026-07-14T16:53:45Z",
-          "pushed_at": "2026-07-14T16:53:41Z",
+          "updated_at": "2026-07-14T20:06:16Z",
+          "pushed_at": "2026-07-14T20:05:24Z",
           "created_at": "2025-07-30T15:52:00Z",
           "topics": [
             "codeb0ss",
@@ -4632,23 +4632,35 @@
           "clone_url": "https://github.com/JemHadar/MongoBleed-DFIR-Triage-Script-CVE-2025-14847.git"
         },
         {
-          "id": 1125269169,
-          "name": "mongobleedburp",
-          "full_name": "j0lt-github/mongobleedburp",
-          "html_url": "https://github.com/j0lt-github/mongobleedburp",
-          "description": "Burp Suite extension to detect CVE-2025-14847 (MongoBleed) via manual leak tests from a dedicated UI tab.",
+          "id": 1134017127,
+          "name": "mongobleed-scanner",
+          "full_name": "pedrocruz2202/mongobleed-scanner",
+          "html_url": "https://github.com/pedrocruz2202/mongobleed-scanner",
+          "description": "🔍 Scan for MongoDB vulnerabilities with MongoBleed, a high-performance tool for detecting CVE-2025-14847 across large networks quickly and efficiently.",
           "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "Java",
-          "updated_at": "2026-04-16T18:55:57Z",
-          "pushed_at": "2026-04-16T18:55:52Z",
-          "created_at": "2025-12-30T12:31:01Z",
-          "topics": [],
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-07-14T20:05:13Z",
+          "pushed_at": "2026-07-14T20:04:40Z",
+          "created_at": "2026-01-14T06:05:44Z",
+          "topics": [
+            "cve-2025-14847",
+            "heap-memory-leak",
+            "info-disclosure",
+            "mongodb",
+            "mongodb-exploit",
+            "mongodb-security",
+            "mongodbleed",
+            "op-compressed",
+            "penetration-testing",
+            "red-team",
+            "zlib"
+          ],
           "owner": {
-            "login": "j0lt-github",
-            "html_url": "https://github.com/j0lt-github"
+            "login": "pedrocruz2202",
+            "html_url": "https://github.com/pedrocruz2202"
           },
-          "clone_url": "https://github.com/j0lt-github/mongobleedburp.git"
+          "clone_url": "https://github.com/pedrocruz2202/mongobleed-scanner.git"
         },
         {
           "id": 1123925696,
@@ -4670,35 +4682,23 @@
           "clone_url": "https://github.com/saereya/CVE-2025-14847---MongoBleed.git"
         },
         {
-          "id": 1134017127,
-          "name": "mongobleed-scanner",
-          "full_name": "pedrocruz2202/mongobleed-scanner",
-          "html_url": "https://github.com/pedrocruz2202/mongobleed-scanner",
-          "description": "🔍 Scan for MongoDB vulnerabilities with MongoBleed, a high-performance tool for detecting CVE-2025-14847 across large networks quickly and efficiently.",
+          "id": 1125269169,
+          "name": "mongobleedburp",
+          "full_name": "j0lt-github/mongobleedburp",
+          "html_url": "https://github.com/j0lt-github/mongobleedburp",
+          "description": "Burp Suite extension to detect CVE-2025-14847 (MongoBleed) via manual leak tests from a dedicated UI tab.",
           "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-07-14T16:52:48Z",
-          "pushed_at": "2026-07-14T16:52:43Z",
-          "created_at": "2026-01-14T06:05:44Z",
-          "topics": [
-            "cve-2025-14847",
-            "heap-memory-leak",
-            "info-disclosure",
-            "mongodb",
-            "mongodb-exploit",
-            "mongodb-security",
-            "mongodbleed",
-            "op-compressed",
-            "penetration-testing",
-            "red-team",
-            "zlib"
-          ],
+          "forks_count": 1,
+          "language": "Java",
+          "updated_at": "2026-07-14T21:21:43Z",
+          "pushed_at": "2026-07-14T21:21:39Z",
+          "created_at": "2025-12-30T12:31:01Z",
+          "topics": [],
           "owner": {
-            "login": "pedrocruz2202",
-            "html_url": "https://github.com/pedrocruz2202"
+            "login": "j0lt-github",
+            "html_url": "https://github.com/j0lt-github"
           },
-          "clone_url": "https://github.com/pedrocruz2202/mongobleed-scanner.git"
+          "clone_url": "https://github.com/j0lt-github/mongobleedburp.git"
         },
         {
           "id": 1125003047,
@@ -6773,10 +6773,10 @@
           "full_name": "michalbednarski/ResourcePoison",
           "html_url": "https://github.com/michalbednarski/ResourcePoison",
           "description": "Writeup and exploit for CVE-2025-22441: Privilege escalation from installed app to SystemUI process on Android due to pass of untrusted ApplicationInfo to LoadedApk",
-          "stargazers_count": 104,
+          "stargazers_count": 105,
           "forks_count": 26,
           "language": "Java",
-          "updated_at": "2026-07-07T18:18:23Z",
+          "updated_at": "2026-07-14T20:31:51Z",
           "pushed_at": "2025-10-08T13:12:40Z",
           "created_at": "2025-10-08T13:12:13Z",
           "topics": [],
@@ -8465,10 +8465,10 @@
           "full_name": "0x6rss/CVE-2025-24071_PoC",
           "html_url": "https://github.com/0x6rss/CVE-2025-24071_PoC",
           "description": "CVE-2025-24071: NTLM Hash Leak via RAR/ZIP Extraction and .library-ms File",
-          "stargazers_count": 402,
-          "forks_count": 67,
+          "stargazers_count": 403,
+          "forks_count": 68,
           "language": "Python",
-          "updated_at": "2026-07-11T15:43:54Z",
+          "updated_at": "2026-07-14T20:31:48Z",
           "pushed_at": "2025-03-20T21:22:23Z",
           "created_at": "2025-03-16T20:10:19Z",
           "topics": [],
@@ -8941,10 +8941,10 @@
           "full_name": "JGoyd/Glass-Cage-iOS18-CVE-2025-24085-CVE-2025-24201",
           "html_url": "https://github.com/JGoyd/Glass-Cage-iOS18-CVE-2025-24085-CVE-2025-24201",
           "description": "Glass Cage is a zero-click PNG-based RCE chain in iOS 18.2.1, bypassing LockDown mode protection by exploiting ImageIO (CVE-2025-43300), then WebKit(CVE-2025-24201) and Core Media(CVE-2025-24085) to achieve sandbox escape, kernel-level access, and device bricking. Triggered via iMessage, it enables full compromise with no user interaction.",
-          "stargazers_count": 39,
+          "stargazers_count": 40,
           "forks_count": 9,
           "language": "",
-          "updated_at": "2026-06-22T19:38:01Z",
+          "updated_at": "2026-07-14T18:53:57Z",
           "pushed_at": "2026-01-11T20:09:28Z",
           "created_at": "2025-08-23T05:08:06Z",
           "topics": [
@@ -9129,10 +9129,10 @@
           "full_name": "JGoyd/Glass-Cage-iOS18-CVE-2025-24085-CVE-2025-24201",
           "html_url": "https://github.com/JGoyd/Glass-Cage-iOS18-CVE-2025-24085-CVE-2025-24201",
           "description": "Glass Cage is a zero-click PNG-based RCE chain in iOS 18.2.1, bypassing LockDown mode protection by exploiting ImageIO (CVE-2025-43300), then WebKit(CVE-2025-24201) and Core Media(CVE-2025-24085) to achieve sandbox escape, kernel-level access, and device bricking. Triggered via iMessage, it enables full compromise with no user interaction.",
-          "stargazers_count": 39,
+          "stargazers_count": 40,
           "forks_count": 9,
           "language": "",
-          "updated_at": "2026-06-22T19:38:01Z",
+          "updated_at": "2026-07-14T18:53:57Z",
           "pushed_at": "2026-01-11T20:09:28Z",
           "created_at": "2025-08-23T05:08:06Z",
           "topics": [
@@ -9357,8 +9357,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Objective-C",
-          "updated_at": "2026-07-14T17:38:13Z",
-          "pushed_at": "2026-07-14T17:37:52Z",
+          "updated_at": "2026-07-14T20:51:34Z",
+          "pushed_at": "2026-07-14T20:51:30Z",
           "created_at": "2026-04-04T03:42:55Z",
           "topics": [
             "action-recognition",
@@ -13845,10 +13845,10 @@
           "full_name": "Astroo18/PoC-CVE-2025-26529",
           "html_url": "https://github.com/Astroo18/PoC-CVE-2025-26529",
           "description": "SSRF to XSS - XSS to RCE Moodle",
-          "stargazers_count": 10,
+          "stargazers_count": 11,
           "forks_count": 2,
           "language": "Python",
-          "updated_at": "2026-05-06T23:47:47Z",
+          "updated_at": "2026-07-14T21:41:06Z",
           "pushed_at": "2025-04-13T00:02:26Z",
           "created_at": "2025-04-12T23:17:40Z",
           "topics": [],
@@ -14249,8 +14249,8 @@
           "stargazers_count": 31,
           "forks_count": 11,
           "language": "HTML",
-          "updated_at": "2026-05-29T21:42:41Z",
-          "pushed_at": "2025-08-27T20:06:22Z",
+          "updated_at": "2026-07-14T19:36:54Z",
+          "pushed_at": "2026-07-14T19:36:49Z",
           "created_at": "2025-07-23T09:44:58Z",
           "topics": [],
           "owner": {
@@ -24116,8 +24116,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Shell",
-          "updated_at": "2026-07-14T15:54:45Z",
-          "pushed_at": "2026-07-14T15:54:41Z",
+          "updated_at": "2026-07-14T21:52:42Z",
+          "pushed_at": "2026-07-14T21:52:39Z",
           "created_at": "2025-09-20T00:42:07Z",
           "topics": [
             "chroot",
@@ -25341,6 +25341,25 @@
           "clone_url": "https://github.com/b0ySie7e/CVE-2025-3248-POC.git"
         },
         {
+          "id": 1058622204,
+          "name": "CVE-2025-3248",
+          "full_name": "wand3rlust/CVE-2025-3248",
+          "html_url": "https://github.com/wand3rlust/CVE-2025-3248",
+          "description": "PoC for achieving RCE in Langflow versions \u003c1.3.0",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2025-10-02T10:48:06Z",
+          "pushed_at": "2026-01-08T06:13:06Z",
+          "created_at": "2025-09-17T10:30:09Z",
+          "topics": [],
+          "owner": {
+            "login": "wand3rlust",
+            "html_url": "https://github.com/wand3rlust"
+          },
+          "clone_url": "https://github.com/wand3rlust/CVE-2025-3248.git"
+        },
+        {
           "id": 1049411921,
           "name": "CVE-2025-3248",
           "full_name": "min8282/CVE-2025-3248",
@@ -25360,23 +25379,23 @@
           "clone_url": "https://github.com/min8282/CVE-2025-3248.git"
         },
         {
-          "id": 1008110127,
-          "name": "Langflow-CVE-2025-3248-Multi-target",
-          "full_name": "ill-deed/Langflow-CVE-2025-3248-Multi-target",
-          "html_url": "https://github.com/ill-deed/Langflow-CVE-2025-3248-Multi-target",
-          "description": "Langflow versions prior to 1.3.0 are susceptible to code injection in the /api/v1/validate/code endpoint. A remote and unauthenticated attacker can send crafted HTTP requests to execute arbitrary code.",
+          "id": 1004536002,
+          "name": "CVE-2025-3248",
+          "full_name": "0xgh057r3c0n/CVE-2025-3248",
+          "html_url": "https://github.com/0xgh057r3c0n/CVE-2025-3248",
+          "description": "Exploit for Langflow AI Remote Code Execution (Unauthenticated)",
           "stargazers_count": 0,
-          "forks_count": 1,
+          "forks_count": 0,
           "language": "Python",
-          "updated_at": "2025-07-27T23:44:43Z",
-          "pushed_at": "2025-07-27T23:44:40Z",
-          "created_at": "2025-06-25T03:40:58Z",
+          "updated_at": "2025-06-18T19:59:16Z",
+          "pushed_at": "2025-06-18T19:59:12Z",
+          "created_at": "2025-06-18T19:27:52Z",
           "topics": [],
           "owner": {
-            "login": "ill-deed",
-            "html_url": "https://github.com/ill-deed"
+            "login": "0xgh057r3c0n",
+            "html_url": "https://github.com/0xgh057r3c0n"
           },
-          "clone_url": "https://github.com/ill-deed/Langflow-CVE-2025-3248-Multi-target.git"
+          "clone_url": "https://github.com/0xgh057r3c0n/CVE-2025-3248.git"
         },
         {
           "id": 1082583408,
@@ -25417,42 +25436,42 @@
           "clone_url": "https://github.com/dennisec/CVE-2025-3248.git"
         },
         {
-          "id": 1004536002,
-          "name": "CVE-2025-3248",
-          "full_name": "0xgh057r3c0n/CVE-2025-3248",
-          "html_url": "https://github.com/0xgh057r3c0n/CVE-2025-3248",
-          "description": "Exploit for Langflow AI Remote Code Execution (Unauthenticated)",
+          "id": 1008110127,
+          "name": "Langflow-CVE-2025-3248-Multi-target",
+          "full_name": "ill-deed/Langflow-CVE-2025-3248-Multi-target",
+          "html_url": "https://github.com/ill-deed/Langflow-CVE-2025-3248-Multi-target",
+          "description": "Langflow versions prior to 1.3.0 are susceptible to code injection in the /api/v1/validate/code endpoint. A remote and unauthenticated attacker can send crafted HTTP requests to execute arbitrary code.",
           "stargazers_count": 0,
-          "forks_count": 0,
+          "forks_count": 1,
           "language": "Python",
-          "updated_at": "2025-06-18T19:59:16Z",
-          "pushed_at": "2025-06-18T19:59:12Z",
-          "created_at": "2025-06-18T19:27:52Z",
+          "updated_at": "2025-07-27T23:44:43Z",
+          "pushed_at": "2025-07-27T23:44:40Z",
+          "created_at": "2025-06-25T03:40:58Z",
           "topics": [],
           "owner": {
-            "login": "0xgh057r3c0n",
-            "html_url": "https://github.com/0xgh057r3c0n"
+            "login": "ill-deed",
+            "html_url": "https://github.com/ill-deed"
           },
-          "clone_url": "https://github.com/0xgh057r3c0n/CVE-2025-3248.git"
+          "clone_url": "https://github.com/ill-deed/Langflow-CVE-2025-3248-Multi-target.git"
         },
         {
-          "id": 1058622204,
-          "name": "CVE-2025-3248",
-          "full_name": "wand3rlust/CVE-2025-3248",
-          "html_url": "https://github.com/wand3rlust/CVE-2025-3248",
-          "description": "PoC for achieving RCE in Langflow versions \u003c1.3.0",
+          "id": 1300846393,
+          "name": "exposecheck",
+          "full_name": "Atomics-hub/exposecheck",
+          "html_url": "https://github.com/Atomics-hub/exposecheck",
+          "description": "Defensive single-target self-check for Langflow CVE-2025-3248 exposure",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2025-10-02T10:48:06Z",
-          "pushed_at": "2026-01-08T06:13:06Z",
-          "created_at": "2025-09-17T10:30:09Z",
+          "language": "HTML",
+          "updated_at": "2026-07-14T18:48:46Z",
+          "pushed_at": "2026-07-14T18:48:41Z",
+          "created_at": "2026-07-14T18:48:38Z",
           "topics": [],
           "owner": {
-            "login": "wand3rlust",
-            "html_url": "https://github.com/wand3rlust"
+            "login": "Atomics-hub",
+            "html_url": "https://github.com/Atomics-hub"
           },
-          "clone_url": "https://github.com/wand3rlust/CVE-2025-3248.git"
+          "clone_url": "https://github.com/Atomics-hub/exposecheck.git"
         }
       ]
     },
@@ -27369,10 +27388,10 @@
           "full_name": "farazsth98/poc-CVE-2025-38352",
           "html_url": "https://github.com/farazsth98/poc-CVE-2025-38352",
           "description": "This is a proof of concept for CVE-2025-38352, a vulnerability in the Linux kernel's POSIX CPU timers implementation. The September 2025 Android Bulletin mentions that this vulnerability has been used in limited, targeted exploitation in the wild.",
-          "stargazers_count": 112,
+          "stargazers_count": 113,
           "forks_count": 11,
           "language": "C",
-          "updated_at": "2026-07-13T12:09:13Z",
+          "updated_at": "2026-07-14T20:31:53Z",
           "pushed_at": "2026-01-05T15:41:23Z",
           "created_at": "2025-12-21T23:59:18Z",
           "topics": [],
@@ -29212,10 +29231,10 @@
           "full_name": "JGoyd/Glass-Cage-iOS18-CVE-2025-24085-CVE-2025-24201",
           "html_url": "https://github.com/JGoyd/Glass-Cage-iOS18-CVE-2025-24085-CVE-2025-24201",
           "description": "Glass Cage is a zero-click PNG-based RCE chain in iOS 18.2.1, bypassing LockDown mode protection by exploiting ImageIO (CVE-2025-43300), then WebKit(CVE-2025-24201) and Core Media(CVE-2025-24085) to achieve sandbox escape, kernel-level access, and device bricking. Triggered via iMessage, it enables full compromise with no user interaction.",
-          "stargazers_count": 39,
+          "stargazers_count": 40,
           "forks_count": 9,
           "language": "",
-          "updated_at": "2026-06-22T19:38:01Z",
+          "updated_at": "2026-07-14T18:53:57Z",
           "pushed_at": "2026-01-11T20:09:28Z",
           "created_at": "2025-08-23T05:08:06Z",
           "topics": [
@@ -33871,30 +33890,6 @@
       ]
     },
     {
-      "cve_id": "CVE-2025-48907",
-      "repositories": [
-        {
-          "id": 1277267435,
-          "name": "CVE-2026-48907",
-          "full_name": "0xgh057r3c0n/CVE-2026-48907",
-          "html_url": "https://github.com/0xgh057r3c0n/CVE-2026-48907",
-          "description": "CVE-2025-48907 - Unauthenticated RCE exploit for Joomla JCE \u003c 2.9.99.5",
-          "stargazers_count": 2,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-07-10T17:45:44Z",
-          "pushed_at": "2026-06-27T22:38:03Z",
-          "created_at": "2026-06-22T18:31:26Z",
-          "topics": [],
-          "owner": {
-            "login": "0xgh057r3c0n",
-            "html_url": "https://github.com/0xgh057r3c0n"
-          },
-          "clone_url": "https://github.com/0xgh057r3c0n/CVE-2026-48907.git"
-        }
-      ]
-    },
-    {
       "cve_id": "CVE-2025-48924",
       "repositories": [
         {
@@ -35284,8 +35279,8 @@
           "stargazers_count": 2,
           "forks_count": 0,
           "language": "CSS",
-          "updated_at": "2026-07-14T16:14:02Z",
-          "pushed_at": "2026-07-14T16:13:55Z",
+          "updated_at": "2026-07-14T19:32:38Z",
+          "pushed_at": "2026-07-14T19:32:34Z",
           "created_at": "2022-04-06T09:27:39Z",
           "topics": [
             "ai-security",
@@ -35398,8 +35393,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-07-14T16:15:00Z",
-          "pushed_at": "2026-07-14T16:12:57Z",
+          "updated_at": "2026-07-14T19:32:15Z",
+          "pushed_at": "2026-07-14T19:32:07Z",
           "created_at": "2019-04-13T07:51:09Z",
           "topics": [
             "ai-security",
@@ -39784,10 +39779,10 @@
           "full_name": "synacktiv/Livepyre",
           "html_url": "https://github.com/synacktiv/Livepyre",
           "description": "A tool designed to exploit CVE-2025-54068 and Remote Command Execution if the APP_KEY of the Livewire project is known.",
-          "stargazers_count": 147,
+          "stargazers_count": 148,
           "forks_count": 35,
           "language": "Python",
-          "updated_at": "2026-07-13T12:09:15Z",
+          "updated_at": "2026-07-14T20:20:36Z",
           "pushed_at": "2026-07-06T15:13:59Z",
           "created_at": "2025-12-23T09:54:54Z",
           "topics": [],
@@ -40681,8 +40676,8 @@
           "stargazers_count": 3,
           "forks_count": 1,
           "language": "Python",
-          "updated_at": "2026-07-14T15:50:28Z",
-          "pushed_at": "2026-07-14T15:49:17Z",
+          "updated_at": "2026-07-14T21:47:46Z",
+          "pushed_at": "2026-07-14T21:47:42Z",
           "created_at": "2025-08-14T05:16:16Z",
           "topics": [
             "1panel",
@@ -41930,6 +41925,25 @@
           "clone_url": "https://github.com/MrR0b0t19/CVE-2025-55182-shellinteractive.git"
         },
         {
+          "id": 1111228576,
+          "name": "vuln-app-CVE-2025-55182",
+          "full_name": "zack0x01/vuln-app-CVE-2025-55182",
+          "html_url": "https://github.com/zack0x01/vuln-app-CVE-2025-55182",
+          "description": "",
+          "stargazers_count": 18,
+          "forks_count": 8,
+          "language": "TypeScript",
+          "updated_at": "2026-07-14T19:49:59Z",
+          "pushed_at": "2026-03-06T00:09:21Z",
+          "created_at": "2025-12-06T14:29:35Z",
+          "topics": [],
+          "owner": {
+            "login": "zack0x01",
+            "html_url": "https://github.com/zack0x01"
+          },
+          "clone_url": "https://github.com/zack0x01/vuln-app-CVE-2025-55182.git"
+        },
+        {
           "id": 1113515043,
           "name": "reactguard",
           "full_name": "theori-io/reactguard",
@@ -41957,25 +41971,6 @@
             "html_url": "https://github.com/theori-io"
           },
           "clone_url": "https://github.com/theori-io/reactguard.git"
-        },
-        {
-          "id": 1111228576,
-          "name": "vuln-app-CVE-2025-55182",
-          "full_name": "zack0x01/vuln-app-CVE-2025-55182",
-          "html_url": "https://github.com/zack0x01/vuln-app-CVE-2025-55182",
-          "description": "",
-          "stargazers_count": 17,
-          "forks_count": 8,
-          "language": "TypeScript",
-          "updated_at": "2026-04-09T07:57:15Z",
-          "pushed_at": "2026-03-06T00:09:21Z",
-          "created_at": "2025-12-06T14:29:35Z",
-          "topics": [],
-          "owner": {
-            "login": "zack0x01",
-            "html_url": "https://github.com/zack0x01"
-          },
-          "clone_url": "https://github.com/zack0x01/vuln-app-CVE-2025-55182.git"
         },
         {
           "id": 1111648351,
@@ -45177,8 +45172,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-07-14T16:45:05Z",
-          "pushed_at": "2026-07-14T16:44:57Z",
+          "updated_at": "2026-07-14T19:58:38Z",
+          "pushed_at": "2026-07-14T19:58:33Z",
           "created_at": "2026-01-02T01:28:57Z",
           "topics": [
             "appsec",
@@ -45877,8 +45872,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "JavaScript",
-          "updated_at": "2026-07-14T16:40:43Z",
-          "pushed_at": "2026-07-14T16:39:49Z",
+          "updated_at": "2026-07-14T19:54:30Z",
+          "pushed_at": "2026-07-14T19:54:25Z",
           "created_at": "2025-12-24T14:48:19Z",
           "topics": [
             "bugbounty",
@@ -46535,8 +46530,8 @@
           "stargazers_count": 0,
           "forks_count": 1,
           "language": "Python",
-          "updated_at": "2026-07-14T16:41:13Z",
-          "pushed_at": "2026-07-14T16:40:34Z",
+          "updated_at": "2026-07-14T19:55:04Z",
+          "pushed_at": "2026-07-14T19:54:56Z",
           "created_at": "2024-11-29T12:32:19Z",
           "topics": [
             "code-injection",
@@ -47170,8 +47165,8 @@
           "stargazers_count": 0,
           "forks_count": 1,
           "language": "Python",
-          "updated_at": "2026-07-14T16:41:00Z",
-          "pushed_at": "2026-07-14T16:40:06Z",
+          "updated_at": "2026-07-14T19:54:48Z",
+          "pushed_at": "2026-07-14T19:54:38Z",
           "created_at": "2025-06-06T16:34:46Z",
           "topics": [
             "app-router-nextjs",
@@ -47208,8 +47203,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-07-14T16:40:49Z",
-          "pushed_at": "2026-07-14T16:39:50Z",
+          "updated_at": "2026-07-14T19:54:37Z",
+          "pushed_at": "2026-07-14T19:54:28Z",
           "created_at": "2022-06-17T10:19:10Z",
           "topics": [
             "appsec",
@@ -60307,8 +60302,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Go",
-          "updated_at": "2026-07-14T17:31:54Z",
-          "pushed_at": "2026-07-14T17:31:46Z",
+          "updated_at": "2026-07-14T20:44:37Z",
+          "pushed_at": "2026-07-14T20:44:32Z",
           "created_at": "2026-03-23T09:09:21Z",
           "topics": [
             "cve",
@@ -62526,8 +62521,8 @@
           "stargazers_count": 0,
           "forks_count": 1,
           "language": "Python",
-          "updated_at": "2026-07-14T16:41:00Z",
-          "pushed_at": "2026-07-14T16:40:06Z",
+          "updated_at": "2026-07-14T19:54:48Z",
+          "pushed_at": "2026-07-14T19:54:38Z",
           "created_at": "2025-06-06T16:34:46Z",
           "topics": [
             "app-router-nextjs",
@@ -62564,8 +62559,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-07-14T16:40:49Z",
-          "pushed_at": "2026-07-14T16:39:50Z",
+          "updated_at": "2026-07-14T19:54:37Z",
+          "pushed_at": "2026-07-14T19:54:28Z",
           "created_at": "2022-06-17T10:19:10Z",
           "topics": [
             "appsec",
@@ -62602,8 +62597,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "JavaScript",
-          "updated_at": "2026-07-14T16:42:15Z",
-          "pushed_at": "2026-07-14T16:41:18Z",
+          "updated_at": "2026-07-14T19:55:48Z",
+          "pushed_at": "2026-07-14T19:55:38Z",
           "created_at": "2025-10-01T07:40:09Z",
           "topics": [
             "cli-tool",
@@ -64687,8 +64682,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "C++",
-          "updated_at": "2026-07-14T16:59:30Z",
-          "pushed_at": "2026-07-14T16:59:23Z",
+          "updated_at": "2026-07-14T20:11:36Z",
+          "pushed_at": "2026-07-14T20:11:04Z",
           "created_at": "2026-01-24T21:00:41Z",
           "topics": [
             "action-recognition",
@@ -68634,42 +68629,23 @@
           "clone_url": "https://github.com/intbjw/Inspector-xss-poc.git"
         },
         {
-          "id": 1022083854,
-          "name": "cve-analysis-2",
-          "full_name": "Sam-2805/cve-analysis-2",
-          "html_url": "https://github.com/Sam-2805/cve-analysis-2",
-          "description": "Real-world vulnerability analysis of five CVEs (2025) focusing on XSS, CSRF, SQL Injection, File Upload flaws, and Authentication Bypass. Includes markdown reports and supporting presentation slides for practical cybersecurity learning.",
+          "id": 923018967,
+          "name": "CVE-2025-X",
+          "full_name": "1337g/CVE-2025-X",
+          "html_url": "https://github.com/1337g/CVE-2025-X",
+          "description": "CVE-2025-X",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2025-07-18T12:32:56Z",
-          "pushed_at": "2025-07-18T12:35:12Z",
-          "created_at": "2025-07-18T12:28:23Z",
+          "updated_at": "2025-02-01T14:17:13Z",
+          "pushed_at": "2025-02-01T14:17:10Z",
+          "created_at": "2025-01-27T14:03:27Z",
           "topics": [],
           "owner": {
-            "login": "Sam-2805",
-            "html_url": "https://github.com/Sam-2805"
+            "login": "1337g",
+            "html_url": "https://github.com/1337g"
           },
-          "clone_url": "https://github.com/Sam-2805/cve-analysis-2.git"
-        },
-        {
-          "id": 964257799,
-          "name": "CVE-2025-XXXXX",
-          "full_name": "fdzdev/CVE-2025-XXXXX",
-          "html_url": "https://github.com/fdzdev/CVE-2025-XXXXX",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2025-06-13T03:19:23Z",
-          "pushed_at": "2025-06-13T03:19:19Z",
-          "created_at": "2025-04-10T23:49:23Z",
-          "topics": [],
-          "owner": {
-            "login": "fdzdev",
-            "html_url": "https://github.com/fdzdev"
-          },
-          "clone_url": "https://github.com/fdzdev/CVE-2025-XXXXX.git"
+          "clone_url": "https://github.com/1337g/CVE-2025-X.git"
         },
         {
           "id": 1019971233,
@@ -68805,23 +68781,23 @@
           "clone_url": "https://github.com/gpheheise/URVE-Smart-Office-RCE-via-php-Code-Injection-POC-CVE-2025-XXXXX-.git"
         },
         {
-          "id": 923018967,
-          "name": "CVE-2025-X",
-          "full_name": "1337g/CVE-2025-X",
-          "html_url": "https://github.com/1337g/CVE-2025-X",
-          "description": "CVE-2025-X",
+          "id": 954666374,
+          "name": "cve_2025-1734",
+          "full_name": "WolfThere/cve_2025-1734",
+          "html_url": "https://github.com/WolfThere/cve_2025-1734",
+          "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2025-02-01T14:17:13Z",
-          "pushed_at": "2025-02-01T14:17:10Z",
-          "created_at": "2025-01-27T14:03:27Z",
+          "updated_at": "2025-03-25T12:38:16Z",
+          "pushed_at": "2025-03-25T12:38:16Z",
+          "created_at": "2025-03-25T12:38:15Z",
           "topics": [],
           "owner": {
-            "login": "1337g",
-            "html_url": "https://github.com/1337g"
+            "login": "WolfThere",
+            "html_url": "https://github.com/WolfThere"
           },
-          "clone_url": "https://github.com/1337g/CVE-2025-X.git"
+          "clone_url": "https://github.com/WolfThere/cve_2025-1734.git"
         },
         {
           "id": 1038773929,
@@ -68881,23 +68857,23 @@
           "clone_url": "https://github.com/zenzue/sudo-CVE-2025-Toolkit.git"
         },
         {
-          "id": 1131584640,
-          "name": "cve-2025-zharkaron",
-          "full_name": "zharkaron/cve-2025-zharkaron",
-          "html_url": "https://github.com/zharkaron/cve-2025-zharkaron",
-          "description": "A Docker based security research repository analyzing default service configuration, identifying vulnerabilities, and documenting mitigations using CVE-style workflows",
+          "id": 971921116,
+          "name": "CVE2025-50366_CSRF_MAID_MANAGE-phpgurukul-CVE",
+          "full_name": "1h3ll/CVE2025-50366_CSRF_MAID_MANAGE-phpgurukul-CVE",
+          "html_url": "https://github.com/1h3ll/CVE2025-50366_CSRF_MAID_MANAGE-phpgurukul-CVE",
+          "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-06-27T22:10:45Z",
-          "pushed_at": "2026-06-27T22:10:41Z",
-          "created_at": "2026-01-10T09:56:50Z",
+          "language": "",
+          "updated_at": "2025-06-30T08:32:43Z",
+          "pushed_at": "2025-04-24T09:12:45Z",
+          "created_at": "2025-04-24T09:01:46Z",
           "topics": [],
           "owner": {
-            "login": "zharkaron",
-            "html_url": "https://github.com/zharkaron"
+            "login": "1h3ll",
+            "html_url": "https://github.com/1h3ll"
           },
-          "clone_url": "https://github.com/zharkaron/cve-2025-zharkaron.git"
+          "clone_url": "https://github.com/1h3ll/CVE2025-50366_CSRF_MAID_MANAGE-phpgurukul-CVE.git"
         },
         {
           "id": 1062304262,
@@ -68957,23 +68933,23 @@
           "clone_url": "https://github.com/AliAmouz/CVE2025-24893.git"
         },
         {
-          "id": 971921116,
-          "name": "CVE2025-50366_CSRF_MAID_MANAGE-phpgurukul-CVE",
-          "full_name": "1h3ll/CVE2025-50366_CSRF_MAID_MANAGE-phpgurukul-CVE",
-          "html_url": "https://github.com/1h3ll/CVE2025-50366_CSRF_MAID_MANAGE-phpgurukul-CVE",
-          "description": "",
+          "id": 965224124,
+          "name": "CVE",
+          "full_name": "Fauzan-Aldi/CVE",
+          "html_url": "https://github.com/Fauzan-Aldi/CVE",
+          "description": "CVE-2025 - classroombookings Stored Cross Site Scripting (XSS)",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2025-06-30T08:32:43Z",
-          "pushed_at": "2025-04-24T09:12:45Z",
-          "created_at": "2025-04-24T09:01:46Z",
+          "updated_at": "2025-04-12T18:11:23Z",
+          "pushed_at": "2025-04-12T17:47:23Z",
+          "created_at": "2025-04-12T17:26:59Z",
           "topics": [],
           "owner": {
-            "login": "1h3ll",
-            "html_url": "https://github.com/1h3ll"
+            "login": "Fauzan-Aldi",
+            "html_url": "https://github.com/Fauzan-Aldi"
           },
-          "clone_url": "https://github.com/1h3ll/CVE2025-50366_CSRF_MAID_MANAGE-phpgurukul-CVE.git"
+          "clone_url": "https://github.com/Fauzan-Aldi/CVE.git"
         },
         {
           "id": 1056914725,
@@ -69052,23 +69028,23 @@
           "clone_url": "https://github.com/moTorky/mhl_cve_2025_59489.git"
         },
         {
-          "id": 965224124,
-          "name": "CVE",
-          "full_name": "Fauzan-Aldi/CVE",
-          "html_url": "https://github.com/Fauzan-Aldi/CVE",
-          "description": "CVE-2025 - classroombookings Stored Cross Site Scripting (XSS)",
+          "id": 951889259,
+          "name": "2025-25427",
+          "full_name": "slin99/2025-25427",
+          "html_url": "https://github.com/slin99/2025-25427",
+          "description": "public announcement of cve 2025-25427",
           "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2025-04-12T18:11:23Z",
-          "pushed_at": "2025-04-12T17:47:23Z",
-          "created_at": "2025-04-12T17:26:59Z",
+          "forks_count": 1,
+          "language": "Python",
+          "updated_at": "2025-04-11T10:50:20Z",
+          "pushed_at": "2025-03-20T12:03:36Z",
+          "created_at": "2025-03-20T12:02:00Z",
           "topics": [],
           "owner": {
-            "login": "Fauzan-Aldi",
-            "html_url": "https://github.com/Fauzan-Aldi"
+            "login": "slin99",
+            "html_url": "https://github.com/slin99"
           },
-          "clone_url": "https://github.com/Fauzan-Aldi/CVE.git"
+          "clone_url": "https://github.com/slin99/2025-25427.git"
         },
         {
           "id": 1107110957,
@@ -69090,25 +69066,6 @@
           "clone_url": "https://github.com/dimas-haiker1337/14-CVE-2025.git"
         },
         {
-          "id": 954666374,
-          "name": "cve_2025-1734",
-          "full_name": "WolfThere/cve_2025-1734",
-          "html_url": "https://github.com/WolfThere/cve_2025-1734",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2025-03-25T12:38:16Z",
-          "pushed_at": "2025-03-25T12:38:16Z",
-          "created_at": "2025-03-25T12:38:15Z",
-          "topics": [],
-          "owner": {
-            "login": "WolfThere",
-            "html_url": "https://github.com/WolfThere"
-          },
-          "clone_url": "https://github.com/WolfThere/cve_2025-1734.git"
-        },
-        {
           "id": 963377857,
           "name": "middleware-vulnerability-cve-2025",
           "full_name": "Herman-Adu/middleware-vulnerability-cve-2025",
@@ -69126,6 +69083,25 @@
             "html_url": "https://github.com/Herman-Adu"
           },
           "clone_url": "https://github.com/Herman-Adu/middleware-vulnerability-cve-2025.git"
+        },
+        {
+          "id": 977389976,
+          "name": "CVE-2025-Analysis",
+          "full_name": "cooku222/CVE-2025-Analysis",
+          "html_url": "https://github.com/cooku222/CVE-2025-Analysis",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2025-05-12T12:58:30Z",
+          "pushed_at": "2025-05-12T12:58:27Z",
+          "created_at": "2025-05-04T05:05:29Z",
+          "topics": [],
+          "owner": {
+            "login": "cooku222",
+            "html_url": "https://github.com/cooku222"
+          },
+          "clone_url": "https://github.com/cooku222/CVE-2025-Analysis.git"
         },
         {
           "id": 1096211478,
@@ -69185,23 +69161,23 @@
           "clone_url": "https://github.com/Muhammad5235/HostBill-CVEs-2025.git"
         },
         {
-          "id": 977389976,
-          "name": "CVE-2025-Analysis",
-          "full_name": "cooku222/CVE-2025-Analysis",
-          "html_url": "https://github.com/cooku222/CVE-2025-Analysis",
-          "description": "",
+          "id": 950406798,
+          "name": "cve-2025024813",
+          "full_name": "srinivasraom/cve-2025024813",
+          "html_url": "https://github.com/srinivasraom/cve-2025024813",
+          "description": "cve-2025024813",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "",
-          "updated_at": "2025-05-12T12:58:30Z",
-          "pushed_at": "2025-05-12T12:58:27Z",
-          "created_at": "2025-05-04T05:05:29Z",
+          "language": "Java",
+          "updated_at": "2025-03-18T05:42:57Z",
+          "pushed_at": "2025-03-18T05:42:54Z",
+          "created_at": "2025-03-18T05:37:29Z",
           "topics": [],
           "owner": {
-            "login": "cooku222",
-            "html_url": "https://github.com/cooku222"
+            "login": "srinivasraom",
+            "html_url": "https://github.com/srinivasraom"
           },
-          "clone_url": "https://github.com/cooku222/CVE-2025-Analysis.git"
+          "clone_url": "https://github.com/srinivasraom/cve-2025024813.git"
         },
         {
           "id": 1125607987,
@@ -69223,61 +69199,23 @@
           "clone_url": "https://github.com/Sneden/qualtrics-xm-file-upload-validation-bypass-CVE-2025-XXXX.git"
         },
         {
-          "id": 951889259,
-          "name": "2025-25427",
-          "full_name": "slin99/2025-25427",
-          "html_url": "https://github.com/slin99/2025-25427",
-          "description": "public announcement of cve 2025-25427",
-          "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "Python",
-          "updated_at": "2025-04-11T10:50:20Z",
-          "pushed_at": "2025-03-20T12:03:36Z",
-          "created_at": "2025-03-20T12:02:00Z",
-          "topics": [],
-          "owner": {
-            "login": "slin99",
-            "html_url": "https://github.com/slin99"
-          },
-          "clone_url": "https://github.com/slin99/2025-25427.git"
-        },
-        {
-          "id": 950406798,
-          "name": "cve-2025024813",
-          "full_name": "srinivasraom/cve-2025024813",
-          "html_url": "https://github.com/srinivasraom/cve-2025024813",
-          "description": "cve-2025024813",
+          "id": 964257799,
+          "name": "CVE-2025-XXXXX",
+          "full_name": "fdzdev/CVE-2025-XXXXX",
+          "html_url": "https://github.com/fdzdev/CVE-2025-XXXXX",
+          "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Java",
-          "updated_at": "2025-03-18T05:42:57Z",
-          "pushed_at": "2025-03-18T05:42:54Z",
-          "created_at": "2025-03-18T05:37:29Z",
+          "language": "",
+          "updated_at": "2025-06-13T03:19:23Z",
+          "pushed_at": "2025-06-13T03:19:19Z",
+          "created_at": "2025-04-10T23:49:23Z",
           "topics": [],
           "owner": {
-            "login": "srinivasraom",
-            "html_url": "https://github.com/srinivasraom"
+            "login": "fdzdev",
+            "html_url": "https://github.com/fdzdev"
           },
-          "clone_url": "https://github.com/srinivasraom/cve-2025024813.git"
-        },
-        {
-          "id": 1119075092,
-          "name": "scanner_fortinet-cve-2025",
-          "full_name": "MIFT-D3v/scanner_fortinet-cve-2025",
-          "html_url": "https://github.com/MIFT-D3v/scanner_fortinet-cve-2025",
-          "description": "scanner para detectar vulnerabilidades en fortinet",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2025-12-18T17:54:13Z",
-          "pushed_at": "2025-12-18T17:54:09Z",
-          "created_at": "2025-12-18T17:47:23Z",
-          "topics": [],
-          "owner": {
-            "login": "MIFT-D3v",
-            "html_url": "https://github.com/MIFT-D3v"
-          },
-          "clone_url": "https://github.com/MIFT-D3v/scanner_fortinet-cve-2025.git"
+          "clone_url": "https://github.com/fdzdev/CVE-2025-XXXXX.git"
         },
         {
           "id": 998605028,
@@ -69299,23 +69237,23 @@
           "clone_url": "https://github.com/ahmedseaad1420/cvear2025.git"
         },
         {
-          "id": 1117208391,
-          "name": "Redemption_Assignment_CVE_2025_9809",
-          "full_name": "alexan011/Redemption_Assignment_CVE_2025_9809",
-          "html_url": "https://github.com/alexan011/Redemption_Assignment_CVE_2025_9809",
-          "description": "",
+          "id": 1119075092,
+          "name": "scanner_fortinet-cve-2025",
+          "full_name": "MIFT-D3v/scanner_fortinet-cve-2025",
+          "html_url": "https://github.com/MIFT-D3v/scanner_fortinet-cve-2025",
+          "description": "scanner para detectar vulnerabilidades en fortinet",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "C",
-          "updated_at": "2025-12-16T02:21:44Z",
-          "pushed_at": "2025-12-16T02:21:40Z",
-          "created_at": "2025-12-16T01:44:31Z",
+          "language": "Python",
+          "updated_at": "2025-12-18T17:54:13Z",
+          "pushed_at": "2025-12-18T17:54:09Z",
+          "created_at": "2025-12-18T17:47:23Z",
           "topics": [],
           "owner": {
-            "login": "alexan011",
-            "html_url": "https://github.com/alexan011"
+            "login": "MIFT-D3v",
+            "html_url": "https://github.com/MIFT-D3v"
           },
-          "clone_url": "https://github.com/alexan011/Redemption_Assignment_CVE_2025_9809.git"
+          "clone_url": "https://github.com/MIFT-D3v/scanner_fortinet-cve-2025.git"
         },
         {
           "id": 996973586,
@@ -69337,23 +69275,23 @@
           "clone_url": "https://github.com/Vanshdhawan188/CVE-2025-PHPGurukul-Hostel-management-system.git"
         },
         {
-          "id": 1114161220,
-          "name": "CVE-2025-EXPLOIT-STREET",
-          "full_name": "porkishunter/CVE-2025-EXPLOIT-STREET",
-          "html_url": "https://github.com/porkishunter/CVE-2025-EXPLOIT-STREET",
+          "id": 1117208391,
+          "name": "Redemption_Assignment_CVE_2025_9809",
+          "full_name": "alexan011/Redemption_Assignment_CVE_2025_9809",
+          "html_url": "https://github.com/alexan011/Redemption_Assignment_CVE_2025_9809",
           "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "C",
-          "updated_at": "2025-12-11T01:44:16Z",
-          "pushed_at": "2025-12-11T01:44:09Z",
-          "created_at": "2025-12-11T01:43:30Z",
+          "updated_at": "2025-12-16T02:21:44Z",
+          "pushed_at": "2025-12-16T02:21:40Z",
+          "created_at": "2025-12-16T01:44:31Z",
           "topics": [],
           "owner": {
-            "login": "porkishunter",
-            "html_url": "https://github.com/porkishunter"
+            "login": "alexan011",
+            "html_url": "https://github.com/alexan011"
           },
-          "clone_url": "https://github.com/porkishunter/CVE-2025-EXPLOIT-STREET.git"
+          "clone_url": "https://github.com/alexan011/Redemption_Assignment_CVE_2025_9809.git"
         },
         {
           "id": 995456984,
@@ -69375,23 +69313,23 @@
           "clone_url": "https://github.com/gmh5225/cve20254664.git"
         },
         {
-          "id": 1113311246,
-          "name": "React2Shell",
-          "full_name": "lcsouzamenezes/React2Shell",
-          "html_url": "https://github.com/lcsouzamenezes/React2Shell",
-          "description": "React Server Components (RCE) — React2Shell CVE‑2025‑55182",
+          "id": 1114161220,
+          "name": "CVE-2025-EXPLOIT-STREET",
+          "full_name": "porkishunter/CVE-2025-EXPLOIT-STREET",
+          "html_url": "https://github.com/porkishunter/CVE-2025-EXPLOIT-STREET",
+          "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "",
-          "updated_at": "2025-12-09T20:00:28Z",
-          "pushed_at": "2025-12-06T15:05:34Z",
-          "created_at": "2025-12-09T20:00:27Z",
+          "language": "C",
+          "updated_at": "2025-12-11T01:44:16Z",
+          "pushed_at": "2025-12-11T01:44:09Z",
+          "created_at": "2025-12-11T01:43:30Z",
           "topics": [],
           "owner": {
-            "login": "lcsouzamenezes",
-            "html_url": "https://github.com/lcsouzamenezes"
+            "login": "porkishunter",
+            "html_url": "https://github.com/porkishunter"
           },
-          "clone_url": "https://github.com/lcsouzamenezes/React2Shell.git"
+          "clone_url": "https://github.com/porkishunter/CVE-2025-EXPLOIT-STREET.git"
         },
         {
           "id": 1028959054,
@@ -69411,6 +69349,44 @@
             "html_url": "https://github.com/cybersharmaji"
           },
           "clone_url": "https://github.com/cybersharmaji/CVE-2025.git"
+        },
+        {
+          "id": 1113311246,
+          "name": "React2Shell",
+          "full_name": "lcsouzamenezes/React2Shell",
+          "html_url": "https://github.com/lcsouzamenezes/React2Shell",
+          "description": "React Server Components (RCE) — React2Shell CVE‑2025‑55182",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2025-12-09T20:00:28Z",
+          "pushed_at": "2025-12-06T15:05:34Z",
+          "created_at": "2025-12-09T20:00:27Z",
+          "topics": [],
+          "owner": {
+            "login": "lcsouzamenezes",
+            "html_url": "https://github.com/lcsouzamenezes"
+          },
+          "clone_url": "https://github.com/lcsouzamenezes/React2Shell.git"
+        },
+        {
+          "id": 1022083854,
+          "name": "cve-analysis-2",
+          "full_name": "Sam-2805/cve-analysis-2",
+          "html_url": "https://github.com/Sam-2805/cve-analysis-2",
+          "description": "Real-world vulnerability analysis of five CVEs (2025) focusing on XSS, CSRF, SQL Injection, File Upload flaws, and Authentication Bypass. Includes markdown reports and supporting presentation slides for practical cybersecurity learning.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2025-07-18T12:32:56Z",
+          "pushed_at": "2025-07-18T12:35:12Z",
+          "created_at": "2025-07-18T12:28:23Z",
+          "topics": [],
+          "owner": {
+            "login": "Sam-2805",
+            "html_url": "https://github.com/Sam-2805"
+          },
+          "clone_url": "https://github.com/Sam-2805/cve-analysis-2.git"
         }
       ]
     }

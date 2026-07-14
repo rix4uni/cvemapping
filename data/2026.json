@@ -6567,8 +6567,8 @@
           "stargazers_count": 1,
           "forks_count": 2,
           "language": "",
-          "updated_at": "2026-07-14T17:16:20Z",
-          "pushed_at": "2026-07-14T17:15:39Z",
+          "updated_at": "2026-07-14T20:27:37Z",
+          "pushed_at": "2026-07-14T20:27:32Z",
           "created_at": "2024-09-22T12:19:06Z",
           "topics": [
             "agent",
@@ -6730,8 +6730,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-07-14T17:15:31Z",
-          "pushed_at": "2026-07-14T17:14:50Z",
+          "updated_at": "2026-07-14T20:27:07Z",
+          "pushed_at": "2026-07-14T20:27:03Z",
           "created_at": "2026-02-26T05:21:28Z",
           "topics": [
             "agent",
@@ -10820,23 +10820,42 @@
           "clone_url": "https://github.com/alisster00/CVE-2026-23744-RCE.git"
         },
         {
-          "id": 1158918207,
-          "name": "CVE-2026-23744-Lab",
-          "full_name": "rootdirective-sec/CVE-2026-23744-Lab",
-          "html_url": "https://github.com/rootdirective-sec/CVE-2026-23744-Lab",
-          "description": "",
+          "id": 1191196692,
+          "name": "PoC-CVE-2026-23744",
+          "full_name": "z4yd3/PoC-CVE-2026-23744",
+          "html_url": "https://github.com/z4yd3/PoC-CVE-2026-23744",
+          "description": "Remote Code Execution on MCPJam Inspector \u003c= 1.4.2",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-16T04:48:58Z",
-          "pushed_at": "2026-02-16T04:48:54Z",
-          "created_at": "2026-02-16T04:43:21Z",
+          "updated_at": "2026-03-29T11:38:26Z",
+          "pushed_at": "2026-03-25T04:35:44Z",
+          "created_at": "2026-03-25T02:24:21Z",
           "topics": [],
           "owner": {
-            "login": "rootdirective-sec",
-            "html_url": "https://github.com/rootdirective-sec"
+            "login": "z4yd3",
+            "html_url": "https://github.com/z4yd3"
           },
-          "clone_url": "https://github.com/rootdirective-sec/CVE-2026-23744-Lab.git"
+          "clone_url": "https://github.com/z4yd3/PoC-CVE-2026-23744.git"
+        },
+        {
+          "id": 1194480523,
+          "name": "CVE-2026-23744-POC",
+          "full_name": "d3vn0mi/CVE-2026-23744-POC",
+          "html_url": "https://github.com/d3vn0mi/CVE-2026-23744-POC",
+          "description": "Python PoC for CVE-2026-23744, unauthenticated RCE in MCP servers via the /api/mcp/connect serverConfig command field (default port 6274)",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-07-10T15:36:52Z",
+          "pushed_at": "2026-03-28T17:41:34Z",
+          "created_at": "2026-03-28T12:17:47Z",
+          "topics": [],
+          "owner": {
+            "login": "d3vn0mi",
+            "html_url": "https://github.com/d3vn0mi"
+          },
+          "clone_url": "https://github.com/d3vn0mi/CVE-2026-23744-POC.git"
         },
         {
           "id": 1189010725,
@@ -10858,23 +10877,23 @@
           "clone_url": "https://github.com/fckoo/mcpjaminspector-unauth-rce.git"
         },
         {
-          "id": 1193793261,
-          "name": "CVE-2026-23744-POC",
-          "full_name": "fcjaviergarcia/CVE-2026-23744-POC",
-          "html_url": "https://github.com/fcjaviergarcia/CVE-2026-23744-POC",
-          "description": "Proof of Concept (PoC) exploit for CVE-2026-23744, a vulnerability affecting MCPJam Inspector that allows remote command execution (RCE) through exposed internal debugging endpoints",
+          "id": 1300823902,
+          "name": "CVE-2026-23744-MCPJam-Exploit",
+          "full_name": "CerberusMrXi/CVE-2026-23744-MCPJam-Exploit",
+          "html_url": "https://github.com/CerberusMrXi/CVE-2026-23744-MCPJam-Exploit",
+          "description": "A proof-of-concept exploit for CVE-2026-23744 - MCPJam Inspector Remote Code Execution (RCE) vulnerability. This tool demonstrates the security flaw in versions \u003c=1.4.2 and helps security researchers verify patches. For authorized testing and educational purposes only. Includes multiple payload options, command execution, and session management.",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-03-27T15:35:49Z",
-          "pushed_at": "2026-03-27T15:35:45Z",
-          "created_at": "2026-03-27T15:31:08Z",
+          "updated_at": "2026-07-14T18:39:01Z",
+          "pushed_at": "2026-07-14T18:38:57Z",
+          "created_at": "2026-07-14T18:21:10Z",
           "topics": [],
           "owner": {
-            "login": "fcjaviergarcia",
-            "html_url": "https://github.com/fcjaviergarcia"
+            "login": "CerberusMrXi",
+            "html_url": "https://github.com/CerberusMrXi"
           },
-          "clone_url": "https://github.com/fcjaviergarcia/CVE-2026-23744-POC.git"
+          "clone_url": "https://github.com/CerberusMrXi/CVE-2026-23744-MCPJam-Exploit.git"
         },
         {
           "id": 1188403403,
@@ -10896,6 +10915,25 @@
           "clone_url": "https://github.com/H1sok444/CVE-2026-23744-PoC.git"
         },
         {
+          "id": 1193793261,
+          "name": "CVE-2026-23744-POC",
+          "full_name": "fcjaviergarcia/CVE-2026-23744-POC",
+          "html_url": "https://github.com/fcjaviergarcia/CVE-2026-23744-POC",
+          "description": "Proof of Concept (PoC) exploit for CVE-2026-23744, a vulnerability affecting MCPJam Inspector that allows remote command execution (RCE) through exposed internal debugging endpoints",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-03-27T15:35:49Z",
+          "pushed_at": "2026-03-27T15:35:45Z",
+          "created_at": "2026-03-27T15:31:08Z",
+          "topics": [],
+          "owner": {
+            "login": "fcjaviergarcia",
+            "html_url": "https://github.com/fcjaviergarcia"
+          },
+          "clone_url": "https://github.com/fcjaviergarcia/CVE-2026-23744-POC.git"
+        },
+        {
           "id": 1193724607,
           "name": "CVE-2026-23744",
           "full_name": "AhmadF77/CVE-2026-23744",
@@ -10913,36 +10951,6 @@
             "html_url": "https://github.com/AhmadF77"
           },
           "clone_url": "https://github.com/AhmadF77/CVE-2026-23744.git"
-        },
-        {
-          "id": 1297403129,
-          "name": "CVE-2026-23744",
-          "full_name": "ozcanpng/CVE-2026-23744",
-          "html_url": "https://github.com/ozcanpng/CVE-2026-23744",
-          "description": "CVE-2026-23744 MCPJam Inspector unauthenticated RCE PoC",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-07-11T12:06:17Z",
-          "pushed_at": "2026-07-11T12:06:13Z",
-          "created_at": "2026-07-11T11:57:38Z",
-          "topics": [
-            "cve",
-            "cve-2026-23744",
-            "exploit",
-            "mcp",
-            "mcpjam",
-            "mcpjam-inspector",
-            "poc",
-            "rce",
-            "research",
-            "security"
-          ],
-          "owner": {
-            "login": "ozcanpng",
-            "html_url": "https://github.com/ozcanpng"
-          },
-          "clone_url": "https://github.com/ozcanpng/CVE-2026-23744.git"
         },
         {
           "id": 1255392915,
@@ -10983,23 +10991,23 @@
           "clone_url": "https://github.com/sbouabid-sec/CVE-2026-23744-POC.git"
         },
         {
-          "id": 1194480523,
-          "name": "CVE-2026-23744-POC",
-          "full_name": "d3vn0mi/CVE-2026-23744-POC",
-          "html_url": "https://github.com/d3vn0mi/CVE-2026-23744-POC",
-          "description": "Python PoC for CVE-2026-23744, unauthenticated RCE in MCP servers via the /api/mcp/connect serverConfig command field (default port 6274)",
+          "id": 1158918207,
+          "name": "CVE-2026-23744-Lab",
+          "full_name": "rootdirective-sec/CVE-2026-23744-Lab",
+          "html_url": "https://github.com/rootdirective-sec/CVE-2026-23744-Lab",
+          "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-07-10T15:36:52Z",
-          "pushed_at": "2026-03-28T17:41:34Z",
-          "created_at": "2026-03-28T12:17:47Z",
+          "updated_at": "2026-02-16T04:48:58Z",
+          "pushed_at": "2026-02-16T04:48:54Z",
+          "created_at": "2026-02-16T04:43:21Z",
           "topics": [],
           "owner": {
-            "login": "d3vn0mi",
-            "html_url": "https://github.com/d3vn0mi"
+            "login": "rootdirective-sec",
+            "html_url": "https://github.com/rootdirective-sec"
           },
-          "clone_url": "https://github.com/d3vn0mi/CVE-2026-23744-POC.git"
+          "clone_url": "https://github.com/rootdirective-sec/CVE-2026-23744-Lab.git"
         },
         {
           "id": 1254785876,
@@ -11230,23 +11238,34 @@
           "clone_url": "https://github.com/m2sousa/CVE-2026-23744.git"
         },
         {
-          "id": 1191196692,
-          "name": "PoC-CVE-2026-23744",
-          "full_name": "z4yd3/PoC-CVE-2026-23744",
-          "html_url": "https://github.com/z4yd3/PoC-CVE-2026-23744",
-          "description": "Remote Code Execution on MCPJam Inspector \u003c= 1.4.2",
+          "id": 1297403129,
+          "name": "CVE-2026-23744",
+          "full_name": "ozcanpng/CVE-2026-23744",
+          "html_url": "https://github.com/ozcanpng/CVE-2026-23744",
+          "description": "CVE-2026-23744 MCPJam Inspector unauthenticated RCE PoC",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-03-29T11:38:26Z",
-          "pushed_at": "2026-03-25T04:35:44Z",
-          "created_at": "2026-03-25T02:24:21Z",
-          "topics": [],
+          "updated_at": "2026-07-11T12:06:17Z",
+          "pushed_at": "2026-07-11T12:06:13Z",
+          "created_at": "2026-07-11T11:57:38Z",
+          "topics": [
+            "cve",
+            "cve-2026-23744",
+            "exploit",
+            "mcp",
+            "mcpjam",
+            "mcpjam-inspector",
+            "poc",
+            "rce",
+            "research",
+            "security"
+          ],
           "owner": {
-            "login": "z4yd3",
-            "html_url": "https://github.com/z4yd3"
+            "login": "ozcanpng",
+            "html_url": "https://github.com/ozcanpng"
           },
-          "clone_url": "https://github.com/z4yd3/PoC-CVE-2026-23744.git"
+          "clone_url": "https://github.com/ozcanpng/CVE-2026-23744.git"
         },
         {
           "id": 1255637982,
@@ -13414,8 +13433,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-07-14T17:06:23Z",
-          "pushed_at": "2026-07-14T17:05:19Z",
+          "updated_at": "2026-07-14T20:17:26Z",
+          "pushed_at": "2026-07-14T20:16:55Z",
           "created_at": "2026-02-03T19:46:10Z",
           "topics": [
             "agent",
@@ -14024,8 +14043,8 @@
           "stargazers_count": 3,
           "forks_count": 0,
           "language": "C#",
-          "updated_at": "2026-07-14T17:33:59Z",
-          "pushed_at": "2026-07-14T17:33:34Z",
+          "updated_at": "2026-07-14T20:46:43Z",
+          "pushed_at": "2026-07-14T20:46:39Z",
           "created_at": "2026-03-26T04:38:27Z",
           "topics": [
             "assembly",
@@ -14196,8 +14215,8 @@
           "stargazers_count": 1,
           "forks_count": 2,
           "language": "",
-          "updated_at": "2026-07-14T17:18:30Z",
-          "pushed_at": "2026-07-14T17:18:03Z",
+          "updated_at": "2026-07-14T20:30:27Z",
+          "pushed_at": "2026-07-14T20:30:16Z",
           "created_at": "2026-03-03T14:19:18Z",
           "topics": [
             "agent",
@@ -14690,8 +14709,8 @@
           "stargazers_count": 2,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-07-14T17:23:25Z",
-          "pushed_at": "2026-07-14T17:22:39Z",
+          "updated_at": "2026-07-14T20:35:25Z",
+          "pushed_at": "2026-07-14T20:35:06Z",
           "created_at": "2026-03-10T14:40:04Z",
           "topics": [
             "colab",
@@ -23520,8 +23539,8 @@
           "stargazers_count": 3,
           "forks_count": 0,
           "language": "Rust",
-          "updated_at": "2026-07-14T17:54:11Z",
-          "pushed_at": "2026-07-14T17:54:07Z",
+          "updated_at": "2026-07-14T21:07:56Z",
+          "pushed_at": "2026-07-14T21:07:52Z",
           "created_at": "2026-05-06T09:49:14Z",
           "topics": [
             "af-alg",
@@ -26433,8 +26452,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Rust",
-          "updated_at": "2026-07-14T17:54:21Z",
-          "pushed_at": "2026-07-14T17:53:26Z",
+          "updated_at": "2026-07-14T21:07:23Z",
+          "pushed_at": "2026-07-14T21:07:18Z",
           "created_at": "2026-05-05T04:58:21Z",
           "topics": [
             "af-alg",
@@ -29263,8 +29282,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "JavaScript",
-          "updated_at": "2026-07-14T17:34:55Z",
-          "pushed_at": "2026-07-14T17:34:45Z",
+          "updated_at": "2026-07-14T20:48:02Z",
+          "pushed_at": "2026-07-14T20:47:55Z",
           "created_at": "2026-03-28T20:49:46Z",
           "topics": [
             "cve",
@@ -30689,7 +30708,7 @@
           "html_url": "https://github.com/MaxMnMl/langflow-CVE-2026-33017-poc",
           "description": "CVE-2026-33017 - An unauthenticated remote code execution in Langflow \u003c= 1.8.1 via Public Flow Build Endpoint",
           "stargazers_count": 9,
-          "forks_count": 3,
+          "forks_count": 4,
           "language": "Python",
           "updated_at": "2026-07-02T17:42:31Z",
           "pushed_at": "2026-03-22T07:13:04Z",
@@ -40711,10 +40730,10 @@
           "full_name": "ynsmroztas/cPanelSniper",
           "html_url": "https://github.com/ynsmroztas/cPanelSniper",
           "description": "CVE-2026-41940 — cPanel \u0026 WHM Authentication Bypass via Session-File CRLF Injection",
-          "stargazers_count": 485,
+          "stargazers_count": 486,
           "forks_count": 135,
           "language": "Python",
-          "updated_at": "2026-07-13T15:26:19Z",
+          "updated_at": "2026-07-14T18:15:43Z",
           "pushed_at": "2026-05-01T12:10:32Z",
           "created_at": "2026-05-01T12:09:26Z",
           "topics": [],
@@ -40799,6 +40818,30 @@
             "html_url": "https://github.com/Sachinart"
           },
           "clone_url": "https://github.com/Sachinart/CVE-2026-41940-cpanel-0day.git"
+        },
+        {
+          "id": 1282773048,
+          "name": "CVE-2026-41940-PoC",
+          "full_name": "aquace/CVE-2026-41940-PoC",
+          "html_url": "https://github.com/aquace/CVE-2026-41940-PoC",
+          "description": "CVE-2026-41940 authentication bypass vulnerability proof-of-concept",
+          "stargazers_count": 16,
+          "forks_count": 4,
+          "language": "Python",
+          "updated_at": "2026-07-14T21:54:37Z",
+          "pushed_at": "2026-07-14T12:46:16Z",
+          "created_at": "2026-06-28T07:13:52Z",
+          "topics": [
+            "cpanel",
+            "cve",
+            "cve-2026-41940",
+            "cve-2026-41940-poc"
+          ],
+          "owner": {
+            "login": "aquace",
+            "html_url": "https://github.com/aquace"
+          },
+          "clone_url": "https://github.com/aquace/CVE-2026-41940-PoC.git"
         },
         {
           "id": 1225565988,
@@ -40962,30 +41005,6 @@
             "html_url": "https://github.com/debugactiveprocess"
           },
           "clone_url": "https://github.com/debugactiveprocess/cPanel-WHM-AuthBypass-Session-Checker.git"
-        },
-        {
-          "id": 1282773048,
-          "name": "CVE-2026-41940-PoC",
-          "full_name": "aquace/CVE-2026-41940-PoC",
-          "html_url": "https://github.com/aquace/CVE-2026-41940-PoC",
-          "description": "CVE-2026-41940 authentication bypass vulnerability proof-of-concept",
-          "stargazers_count": 7,
-          "forks_count": 2,
-          "language": "Python",
-          "updated_at": "2026-07-14T12:46:33Z",
-          "pushed_at": "2026-07-14T12:46:16Z",
-          "created_at": "2026-06-28T07:13:52Z",
-          "topics": [
-            "cpanel",
-            "cve",
-            "cve-2026-41940",
-            "cve-2026-41940-poc"
-          ],
-          "owner": {
-            "login": "aquace",
-            "html_url": "https://github.com/aquace"
-          },
-          "clone_url": "https://github.com/aquace/CVE-2026-41940-PoC.git"
         },
         {
           "id": 1226107567,
@@ -41480,8 +41499,8 @@
           "stargazers_count": 1,
           "forks_count": 1,
           "language": "",
-          "updated_at": "2026-07-14T17:54:28Z",
-          "pushed_at": "2026-07-14T17:54:23Z",
+          "updated_at": "2026-07-14T21:08:16Z",
+          "pushed_at": "2026-07-14T21:08:12Z",
           "created_at": "2026-05-06T18:08:48Z",
           "topics": [
             "authentication-bypass",
@@ -45229,10 +45248,10 @@
           "full_name": "x-spy/CVE-2026-43499-popsicle",
           "html_url": "https://github.com/x-spy/CVE-2026-43499-popsicle",
           "description": "CVE-2026-43499 Implementation for 6.12.23-android16-5-g75e9b1c7ae7c-abogki463945075-4k",
-          "stargazers_count": 130,
+          "stargazers_count": 134,
           "forks_count": 39,
           "language": "C",
-          "updated_at": "2026-07-14T17:22:54Z",
+          "updated_at": "2026-07-14T21:16:07Z",
           "pushed_at": "2026-07-12T14:08:59Z",
           "created_at": "2026-07-12T10:15:03Z",
           "topics": [],
@@ -45267,10 +45286,10 @@
           "full_name": "Linuxoid-cn/Mi8E5-Unlocker-by-CVE-2026-43499",
           "html_url": "https://github.com/Linuxoid-cn/Mi8E5-Unlocker-by-CVE-2026-43499",
           "description": "基于 CVE-2026-43499 的 8E5 机型自动化解锁辅助工具，仅限授权安全研究与自有设备使用。",
-          "stargazers_count": 60,
+          "stargazers_count": 61,
           "forks_count": 15,
           "language": "",
-          "updated_at": "2026-07-14T17:20:52Z",
+          "updated_at": "2026-07-14T18:39:52Z",
           "pushed_at": "2026-07-13T17:38:41Z",
           "created_at": "2026-07-12T22:59:55Z",
           "topics": [],
@@ -45376,6 +45395,51 @@
           "clone_url": "https://github.com/joehquak/Mi8E5-Unlocker-by-CVE-2026-43499.git"
         },
         {
+          "id": 1300585571,
+          "name": "CVE-2026-43499-Poc-Analysis",
+          "full_name": "Linuxoid-cn/CVE-2026-43499-Poc-Analysis",
+          "html_url": "https://github.com/Linuxoid-cn/CVE-2026-43499-Poc-Analysis",
+          "description": "Vulnerability analysis and Proof of Concept (PoC) for CVE-2026-43499 affecting Xiaomi devices. For educational and research purposes only.",
+          "stargazers_count": 2,
+          "forks_count": 2,
+          "language": "C",
+          "updated_at": "2026-07-14T20:43:04Z",
+          "pushed_at": "2026-07-14T16:28:49Z",
+          "created_at": "2026-07-14T14:21:27Z",
+          "topics": [],
+          "owner": {
+            "login": "Linuxoid-cn",
+            "html_url": "https://github.com/Linuxoid-cn"
+          },
+          "clone_url": "https://github.com/Linuxoid-cn/CVE-2026-43499-Poc-Analysis.git"
+        },
+        {
+          "id": 1298423930,
+          "name": "ghostlock-oneplus",
+          "full_name": "JoinChang/ghostlock-oneplus",
+          "html_url": "https://github.com/JoinChang/ghostlock-oneplus",
+          "description": "GhostLock (CVE-2026-43499) kernel exploit for OnePlus devices with locked bootloader",
+          "stargazers_count": 2,
+          "forks_count": 0,
+          "language": "C",
+          "updated_at": "2026-07-14T19:09:32Z",
+          "pushed_at": "2026-07-14T19:09:06Z",
+          "created_at": "2026-07-12T16:05:24Z",
+          "topics": [
+            "android",
+            "coloros",
+            "ghostlock",
+            "kernelsu",
+            "oneplus",
+            "root"
+          ],
+          "owner": {
+            "login": "JoinChang",
+            "html_url": "https://github.com/JoinChang"
+          },
+          "clone_url": "https://github.com/JoinChang/ghostlock-oneplus.git"
+        },
+        {
           "id": 1300745736,
           "name": "oppo-A5-PRO-5G-CVE-2026-43499",
           "full_name": "qsvggff-spec/oppo-A5-PRO-5G-CVE-2026-43499",
@@ -45469,25 +45533,6 @@
             "html_url": "https://github.com/Thiasap"
           },
           "clone_url": "https://github.com/Thiasap/oppo-pgem10-ghostlock.git"
-        },
-        {
-          "id": 1300585571,
-          "name": "CVE-2026-43499-Poc-Analysis",
-          "full_name": "Linuxoid-cn/CVE-2026-43499-Poc-Analysis",
-          "html_url": "https://github.com/Linuxoid-cn/CVE-2026-43499-Poc-Analysis",
-          "description": "Vulnerability analysis and Proof of Concept (PoC) for CVE-2026-43499 affecting Xiaomi devices. For educational and research purposes only.",
-          "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "C",
-          "updated_at": "2026-07-14T16:29:00Z",
-          "pushed_at": "2026-07-14T16:28:49Z",
-          "created_at": "2026-07-14T14:21:27Z",
-          "topics": [],
-          "owner": {
-            "login": "Linuxoid-cn",
-            "html_url": "https://github.com/Linuxoid-cn"
-          },
-          "clone_url": "https://github.com/Linuxoid-cn/CVE-2026-43499-Poc-Analysis.git"
         },
         {
           "id": 1296907898,
@@ -46300,10 +46345,10 @@
           "full_name": "impost0r/Rie",
           "html_url": "https://github.com/impost0r/Rie",
           "description": "CVE-2026-43724 - Apple's published enough advisories about the issue, I'm not getting paid for any of my kernel bugs. ",
-          "stargazers_count": 9,
+          "stargazers_count": 10,
           "forks_count": 3,
           "language": "C",
-          "updated_at": "2026-07-14T16:16:34Z",
+          "updated_at": "2026-07-14T21:47:00Z",
           "pushed_at": "2026-07-13T22:40:03Z",
           "created_at": "2026-07-13T22:38:54Z",
           "topics": [],
@@ -48546,8 +48591,8 @@
           "stargazers_count": 4,
           "forks_count": 0,
           "language": "C#",
-          "updated_at": "2026-07-14T18:02:59Z",
-          "pushed_at": "2026-07-14T18:01:15Z",
+          "updated_at": "2026-07-14T21:14:52Z",
+          "pushed_at": "2026-07-14T21:14:48Z",
           "created_at": "2026-06-16T07:21:36Z",
           "topics": [
             "bitlocker",
@@ -54101,6 +54146,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2026-51833",
+      "repositories": [
+        {
+          "id": 1296733457,
+          "name": "CVE-2026-51833-Public-Disclosure",
+          "full_name": "dennywise/CVE-2026-51833-Public-Disclosure",
+          "html_url": "https://github.com/dennywise/CVE-2026-51833-Public-Disclosure",
+          "description": "CVE-2026-51833 Advisory",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-07-14T21:31:37Z",
+          "pushed_at": "2026-07-14T21:31:31Z",
+          "created_at": "2026-07-10T17:12:46Z",
+          "topics": [],
+          "owner": {
+            "login": "dennywise",
+            "html_url": "https://github.com/dennywise"
+          },
+          "clone_url": "https://github.com/dennywise/CVE-2026-51833-Public-Disclosure.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2026-51947",
       "repositories": [
         {
@@ -56219,10 +56288,10 @@
           "full_name": "0xdenis77/CVE-2026-56291",
           "html_url": "https://github.com/0xdenis77/CVE-2026-56291",
           "description": "Mendeteksi versi (passive detection) \u0026 Exploitation CVE POC",
-          "stargazers_count": 0,
+          "stargazers_count": 1,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-07-13T23:08:05Z",
+          "updated_at": "2026-07-14T20:55:49Z",
           "pushed_at": "2026-07-13T22:58:45Z",
           "created_at": "2026-07-13T19:50:06Z",
           "topics": [
@@ -58966,8 +59035,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-07-14T15:51:29Z",
-          "pushed_at": "2026-07-14T15:43:25Z",
+          "updated_at": "2026-07-14T19:53:03Z",
+          "pushed_at": "2026-07-14T19:52:56Z",
           "created_at": "2026-07-14T14:40:53Z",
           "topics": [
             "cve-2026-8181",
@@ -60020,25 +60089,6 @@
           "clone_url": "https://github.com/sourcecode347/CVE-2026-9082-Mass_Scanner.git"
         },
         {
-          "id": 1251126032,
-          "name": "CVE-2026-9082",
-          "full_name": "strobelpierre/CVE-2026-9082",
-          "html_url": "https://github.com/strobelpierre/CVE-2026-9082",
-          "description": "Passive checker for CVE-2026-9082 / SA-CORE-2026-004 (Drupal core SQL injection, PostgreSQL)",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2026-05-27T09:32:01Z",
-          "pushed_at": "2026-05-27T09:31:57Z",
-          "created_at": "2026-05-27T09:11:15Z",
-          "topics": [],
-          "owner": {
-            "login": "strobelpierre",
-            "html_url": "https://github.com/strobelpierre"
-          },
-          "clone_url": "https://github.com/strobelpierre/CVE-2026-9082.git"
-        },
-        {
           "id": 1245274124,
           "name": "cve-2026-9082",
           "full_name": "lysophavin18/cve-2026-9082",
@@ -60058,23 +60108,23 @@
           "clone_url": "https://github.com/lysophavin18/cve-2026-9082.git"
         },
         {
-          "id": 1251186446,
-          "name": "CVE-2026-9082-PoC",
-          "full_name": "thinhap/CVE-2026-9082-PoC",
-          "html_url": "https://github.com/thinhap/CVE-2026-9082-PoC",
-          "description": "",
+          "id": 1251126032,
+          "name": "CVE-2026-9082",
+          "full_name": "strobelpierre/CVE-2026-9082",
+          "html_url": "https://github.com/strobelpierre/CVE-2026-9082",
+          "description": "Passive checker for CVE-2026-9082 / SA-CORE-2026-004 (Drupal core SQL injection, PostgreSQL)",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-05-28T01:38:11Z",
-          "pushed_at": "2026-05-28T01:38:07Z",
-          "created_at": "2026-05-27T10:26:02Z",
+          "language": "Shell",
+          "updated_at": "2026-05-27T09:32:01Z",
+          "pushed_at": "2026-05-27T09:31:57Z",
+          "created_at": "2026-05-27T09:11:15Z",
           "topics": [],
           "owner": {
-            "login": "thinhap",
-            "html_url": "https://github.com/thinhap"
+            "login": "strobelpierre",
+            "html_url": "https://github.com/strobelpierre"
           },
-          "clone_url": "https://github.com/thinhap/CVE-2026-9082-PoC.git"
+          "clone_url": "https://github.com/strobelpierre/CVE-2026-9082.git"
         },
         {
           "id": 1278257443,
@@ -60096,23 +60146,23 @@
           "clone_url": "https://github.com/eliHiHo/portfolio-drupal-cve-2026-9082.git"
         },
         {
-          "id": 1297151405,
-          "name": "Drupal-CVE-2026-9082",
-          "full_name": "MW-HF/Drupal-CVE-2026-9082",
-          "html_url": "https://github.com/MW-HF/Drupal-CVE-2026-9082",
+          "id": 1251186446,
+          "name": "CVE-2026-9082-PoC",
+          "full_name": "thinhap/CVE-2026-9082-PoC",
+          "html_url": "https://github.com/thinhap/CVE-2026-9082-PoC",
           "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-07-11T05:42:50Z",
-          "pushed_at": "2026-07-11T05:42:46Z",
-          "created_at": "2026-07-11T05:23:28Z",
+          "updated_at": "2026-05-28T01:38:11Z",
+          "pushed_at": "2026-05-28T01:38:07Z",
+          "created_at": "2026-05-27T10:26:02Z",
           "topics": [],
           "owner": {
-            "login": "MW-HF",
-            "html_url": "https://github.com/MW-HF"
+            "login": "thinhap",
+            "html_url": "https://github.com/thinhap"
           },
-          "clone_url": "https://github.com/MW-HF/Drupal-CVE-2026-9082.git"
+          "clone_url": "https://github.com/thinhap/CVE-2026-9082-PoC.git"
         },
         {
           "id": 1261982856,
@@ -60140,6 +60190,25 @@
             "html_url": "https://github.com/11romain"
           },
           "clone_url": "https://github.com/11romain/CVE-2026-9082.git"
+        },
+        {
+          "id": 1297151405,
+          "name": "Drupal-CVE-2026-9082",
+          "full_name": "MW-HF/Drupal-CVE-2026-9082",
+          "html_url": "https://github.com/MW-HF/Drupal-CVE-2026-9082",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-07-11T05:42:50Z",
+          "pushed_at": "2026-07-11T05:42:46Z",
+          "created_at": "2026-07-11T05:23:28Z",
+          "topics": [],
+          "owner": {
+            "login": "MW-HF",
+            "html_url": "https://github.com/MW-HF"
+          },
+          "clone_url": "https://github.com/MW-HF/Drupal-CVE-2026-9082.git"
         }
       ]
     },
