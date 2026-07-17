@@ -4675,6 +4675,44 @@
       "cve_id": "CVE-2022-1471",
       "repositories": [
         {
+          "id": 1304349797,
+          "name": "yaml-payload",
+          "full_name": "seal-sean-org/yaml-payload",
+          "html_url": "https://github.com/seal-sean-org/yaml-payload",
+          "description": "SnakeYAML CVE-2022-1471 exploit payload for Seal Security demos",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Java",
+          "updated_at": "2026-07-17T20:21:44Z",
+          "pushed_at": "2026-07-17T20:21:36Z",
+          "created_at": "2026-07-17T20:01:20Z",
+          "topics": [],
+          "owner": {
+            "login": "seal-sean-org",
+            "html_url": "https://github.com/seal-sean-org"
+          },
+          "clone_url": "https://github.com/seal-sean-org/yaml-payload.git"
+        },
+        {
+          "id": 1304355424,
+          "name": "seans-surf-and-skate",
+          "full_name": "seal-sean-org/seans-surf-and-skate",
+          "html_url": "https://github.com/seal-sean-org/seans-surf-and-skate",
+          "description": "Sean's Surf \u0026 Skate Co. — Spring Boot storefront with a vulnerable SnakeYAML dep (CVE-2022-1471) for Seal Security demos",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "HTML",
+          "updated_at": "2026-07-17T20:21:29Z",
+          "pushed_at": "2026-07-17T20:21:25Z",
+          "created_at": "2026-07-17T20:10:43Z",
+          "topics": [],
+          "owner": {
+            "login": "seal-sean-org",
+            "html_url": "https://github.com/seal-sean-org"
+          },
+          "clone_url": "https://github.com/seal-sean-org/seans-surf-and-skate.git"
+        },
+        {
           "id": 1299527221,
           "name": "Java-Example",
           "full_name": "seal-sec-demo-2/Java-Example",
@@ -20582,8 +20620,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-07-17T18:26:50Z",
-          "pushed_at": "2026-07-17T18:26:44Z",
+          "updated_at": "2026-07-17T20:57:14Z",
+          "pushed_at": "2026-07-17T20:57:05Z",
           "created_at": "2026-06-23T14:05:18Z",
           "topics": [
             "cve-2022-29799",
@@ -20668,8 +20706,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-07-17T18:26:50Z",
-          "pushed_at": "2026-07-17T18:26:44Z",
+          "updated_at": "2026-07-17T20:57:14Z",
+          "pushed_at": "2026-07-17T20:57:05Z",
           "created_at": "2026-06-23T14:05:18Z",
           "topics": [
             "cve-2022-29799",
@@ -26008,8 +26046,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-07-17T15:39:54Z",
-          "pushed_at": "2026-07-17T15:39:18Z",
+          "updated_at": "2026-07-17T19:30:55Z",
+          "pushed_at": "2026-07-17T19:30:20Z",
           "created_at": "2026-07-17T15:29:31Z",
           "topics": [],
           "owner": {
@@ -31554,42 +31592,23 @@
           "clone_url": "https://github.com/rhitikwadhvana/CVE-2022-42889-Text4Shell-Exploit-POC.git"
         },
         {
-          "id": 554563440,
-          "name": "text4shell-scan",
-          "full_name": "kiralab/text4shell-scan",
-          "html_url": "https://github.com/kiralab/text4shell-scan",
-          "description": "A fully automated, accurate, and extensive scanner for finding text4shell RCE CVE-2022-42889",
-          "stargazers_count": 0,
-          "forks_count": 12,
-          "language": "",
-          "updated_at": "2022-10-20T01:38:49Z",
-          "pushed_at": "2022-10-19T20:29:29Z",
-          "created_at": "2022-10-20T02:36:13Z",
-          "topics": [],
-          "owner": {
-            "login": "kiralab",
-            "html_url": "https://github.com/kiralab"
-          },
-          "clone_url": "https://github.com/kiralab/text4shell-scan.git"
-        },
-        {
-          "id": 555778524,
-          "name": "CVE-2022-42889-Text4Shell-Docker",
-          "full_name": "galoget/CVE-2022-42889-Text4Shell-Docker",
-          "html_url": "https://github.com/galoget/CVE-2022-42889-Text4Shell-Docker",
-          "description": "Dockerized PoC for CVE-2022-42889 Text4Shell",
+          "id": 1126545102,
+          "name": "CVE-2022-42889-text4shell",
+          "full_name": "Goultarde/CVE-2022-42889-text4shell",
+          "html_url": "https://github.com/Goultarde/CVE-2022-42889-text4shell",
+          "description": "Proof of Concept (PoC) for CVE-2022-42889 (Text4Shell) targeting Apache Commons Text versions prior to 1.10.0. This script automates Remote Code Execution (RCE) via script interpolation to establish a reverse shell. This version is a structured optimization based on the original exploit found at Exploit-DB (ID: 52261).",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Java",
-          "updated_at": "2022-10-22T10:03:23Z",
-          "pushed_at": "2022-10-22T10:03:19Z",
-          "created_at": "2022-10-22T10:01:13Z",
+          "language": "Python",
+          "updated_at": "2026-07-05T09:14:25Z",
+          "pushed_at": "2026-07-05T09:14:22Z",
+          "created_at": "2026-01-02T05:55:49Z",
           "topics": [],
           "owner": {
-            "login": "galoget",
-            "html_url": "https://github.com/galoget"
+            "login": "Goultarde",
+            "html_url": "https://github.com/Goultarde"
           },
-          "clone_url": "https://github.com/galoget/CVE-2022-42889-Text4Shell-Docker.git"
+          "clone_url": "https://github.com/Goultarde/CVE-2022-42889-text4shell.git"
         },
         {
           "id": 553930045,
@@ -31611,25 +31630,6 @@
           "clone_url": "https://github.com/rockmelodies/CVE-2022-42889.git"
         },
         {
-          "id": 1126545102,
-          "name": "CVE-2022-42889-text4shell",
-          "full_name": "Goultarde/CVE-2022-42889-text4shell",
-          "html_url": "https://github.com/Goultarde/CVE-2022-42889-text4shell",
-          "description": "Proof of Concept (PoC) for CVE-2022-42889 (Text4Shell) targeting Apache Commons Text versions prior to 1.10.0. This script automates Remote Code Execution (RCE) via script interpolation to establish a reverse shell. This version is a structured optimization based on the original exploit found at Exploit-DB (ID: 52261).",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-07-05T09:14:25Z",
-          "pushed_at": "2026-07-05T09:14:22Z",
-          "created_at": "2026-01-02T05:55:49Z",
-          "topics": [],
-          "owner": {
-            "login": "Goultarde",
-            "html_url": "https://github.com/Goultarde"
-          },
-          "clone_url": "https://github.com/Goultarde/CVE-2022-42889-text4shell.git"
-        },
-        {
           "id": 695246530,
           "name": "cve-2022-42889-text4shell",
           "full_name": "DimaMend/cve-2022-42889-text4shell",
@@ -31647,44 +31647,6 @@
             "html_url": "https://github.com/DimaMend"
           },
           "clone_url": "https://github.com/DimaMend/cve-2022-42889-text4shell.git"
-        },
-        {
-          "id": 562751349,
-          "name": "Text4shell--Automated-exploit---CVE-2022-42889",
-          "full_name": "adarshpv9746/Text4shell--Automated-exploit---CVE-2022-42889",
-          "html_url": "https://github.com/adarshpv9746/Text4shell--Automated-exploit---CVE-2022-42889",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Java",
-          "updated_at": "2022-11-07T07:39:20Z",
-          "pushed_at": "2022-11-07T09:44:18Z",
-          "created_at": "2022-11-07T07:19:49Z",
-          "topics": [],
-          "owner": {
-            "login": "adarshpv9746",
-            "html_url": "https://github.com/adarshpv9746"
-          },
-          "clone_url": "https://github.com/adarshpv9746/Text4shell--Automated-exploit---CVE-2022-42889.git"
-        },
-        {
-          "id": 1195908526,
-          "name": "ICT287-CVE-2022-42889",
-          "full_name": "KosmicOwl045/ICT287-CVE-2022-42889",
-          "html_url": "https://github.com/KosmicOwl045/ICT287-CVE-2022-42889",
-          "description": "Setup and exploit recreation for CVE-2022-42889 Text4Shell.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-03-30T08:05:45Z",
-          "pushed_at": "2026-03-30T08:05:41Z",
-          "created_at": "2026-03-30T07:21:51Z",
-          "topics": [],
-          "owner": {
-            "login": "KosmicOwl045",
-            "html_url": "https://github.com/KosmicOwl045"
-          },
-          "clone_url": "https://github.com/KosmicOwl045/ICT287-CVE-2022-42889.git"
         },
         {
           "id": 555866660,
@@ -31706,23 +31668,23 @@
           "clone_url": "https://github.com/jayaram-yalla/CVE-2022-42889-POC_TEXT4SHELL.git"
         },
         {
-          "id": 554046000,
-          "name": "cve-2022-42889-check",
-          "full_name": "eunomie/cve-2022-42889-check",
-          "html_url": "https://github.com/eunomie/cve-2022-42889-check",
+          "id": 562751349,
+          "name": "Text4shell--Automated-exploit---CVE-2022-42889",
+          "full_name": "adarshpv9746/Text4shell--Automated-exploit---CVE-2022-42889",
+          "html_url": "https://github.com/adarshpv9746/Text4shell--Automated-exploit---CVE-2022-42889",
           "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Java",
-          "updated_at": "2022-10-19T06:57:07Z",
-          "pushed_at": "2022-10-20T12:54:56Z",
-          "created_at": "2022-10-19T06:54:57Z",
+          "updated_at": "2022-11-07T07:39:20Z",
+          "pushed_at": "2022-11-07T09:44:18Z",
+          "created_at": "2022-11-07T07:19:49Z",
           "topics": [],
           "owner": {
-            "login": "eunomie",
-            "html_url": "https://github.com/eunomie"
+            "login": "adarshpv9746",
+            "html_url": "https://github.com/adarshpv9746"
           },
-          "clone_url": "https://github.com/eunomie/cve-2022-42889-check.git"
+          "clone_url": "https://github.com/adarshpv9746/Text4shell--Automated-exploit---CVE-2022-42889.git"
         },
         {
           "id": 1301091165,
@@ -31742,6 +31704,44 @@
             "html_url": "https://github.com/Hkaeeeer"
           },
           "clone_url": "https://github.com/Hkaeeeer/CVE-2022-42889.git"
+        },
+        {
+          "id": 554046000,
+          "name": "cve-2022-42889-check",
+          "full_name": "eunomie/cve-2022-42889-check",
+          "html_url": "https://github.com/eunomie/cve-2022-42889-check",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Java",
+          "updated_at": "2022-10-19T06:57:07Z",
+          "pushed_at": "2022-10-20T12:54:56Z",
+          "created_at": "2022-10-19T06:54:57Z",
+          "topics": [],
+          "owner": {
+            "login": "eunomie",
+            "html_url": "https://github.com/eunomie"
+          },
+          "clone_url": "https://github.com/eunomie/cve-2022-42889-check.git"
+        },
+        {
+          "id": 555778524,
+          "name": "CVE-2022-42889-Text4Shell-Docker",
+          "full_name": "galoget/CVE-2022-42889-Text4Shell-Docker",
+          "html_url": "https://github.com/galoget/CVE-2022-42889-Text4Shell-Docker",
+          "description": "Dockerized PoC for CVE-2022-42889 Text4Shell",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Java",
+          "updated_at": "2022-10-22T10:03:23Z",
+          "pushed_at": "2022-10-22T10:03:19Z",
+          "created_at": "2022-10-22T10:01:13Z",
+          "topics": [],
+          "owner": {
+            "login": "galoget",
+            "html_url": "https://github.com/galoget"
+          },
+          "clone_url": "https://github.com/galoget/CVE-2022-42889-Text4Shell-Docker.git"
         },
         {
           "id": 554494424,
@@ -31765,6 +31765,25 @@
             "html_url": "https://github.com/neerazz"
           },
           "clone_url": "https://github.com/neerazz/CVE-2022-42889.git"
+        },
+        {
+          "id": 554563440,
+          "name": "text4shell-scan",
+          "full_name": "kiralab/text4shell-scan",
+          "html_url": "https://github.com/kiralab/text4shell-scan",
+          "description": "A fully automated, accurate, and extensive scanner for finding text4shell RCE CVE-2022-42889",
+          "stargazers_count": 0,
+          "forks_count": 12,
+          "language": "",
+          "updated_at": "2022-10-20T01:38:49Z",
+          "pushed_at": "2022-10-19T20:29:29Z",
+          "created_at": "2022-10-20T02:36:13Z",
+          "topics": [],
+          "owner": {
+            "login": "kiralab",
+            "html_url": "https://github.com/kiralab"
+          },
+          "clone_url": "https://github.com/kiralab/text4shell-scan.git"
         }
       ]
     },
@@ -32667,23 +32686,23 @@
           "clone_url": "https://github.com/jwsly12/CVE-2022-46364-htb-ctf.git"
         },
         {
-          "id": 1195323985,
-          "name": "CVE-2022-46364---Apache-CXF-XOP-Include-LFI-PoC",
-          "full_name": "Shashivanth009/CVE-2022-46364---Apache-CXF-XOP-Include-LFI-PoC",
-          "html_url": "https://github.com/Shashivanth009/CVE-2022-46364---Apache-CXF-XOP-Include-LFI-PoC",
-          "description": "",
-          "stargazers_count": 1,
+          "id": 1292547903,
+          "name": "CVE-2022-46364",
+          "full_name": "c0gnit00/CVE-2022-46364",
+          "html_url": "https://github.com/c0gnit00/CVE-2022-46364",
+          "description": "Python POC, Exploit for CVE-2022-46364",
+          "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2026-04-01T14:46:41Z",
-          "pushed_at": "2026-03-29T15:05:10Z",
-          "created_at": "2026-03-29T14:31:19Z",
+          "language": "Python",
+          "updated_at": "2026-07-07T16:07:34Z",
+          "pushed_at": "2026-07-07T16:05:10Z",
+          "created_at": "2026-07-07T16:04:14Z",
           "topics": [],
           "owner": {
-            "login": "Shashivanth009",
-            "html_url": "https://github.com/Shashivanth009"
+            "login": "c0gnit00",
+            "html_url": "https://github.com/c0gnit00"
           },
-          "clone_url": "https://github.com/Shashivanth009/CVE-2022-46364---Apache-CXF-XOP-Include-LFI-PoC.git"
+          "clone_url": "https://github.com/c0gnit00/CVE-2022-46364.git"
         },
         {
           "id": 1197641685,
@@ -32703,25 +32722,6 @@
             "html_url": "https://github.com/0xmid00"
           },
           "clone_url": "https://github.com/0xmid00/CVE-2022-46364-poc.git"
-        },
-        {
-          "id": 1292547903,
-          "name": "CVE-2022-46364",
-          "full_name": "c0gnit00/CVE-2022-46364",
-          "html_url": "https://github.com/c0gnit00/CVE-2022-46364",
-          "description": "Python POC, Exploit for CVE-2022-46364",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-07-07T16:07:34Z",
-          "pushed_at": "2026-07-07T16:05:10Z",
-          "created_at": "2026-07-07T16:04:14Z",
-          "topics": [],
-          "owner": {
-            "login": "c0gnit00",
-            "html_url": "https://github.com/c0gnit00"
-          },
-          "clone_url": "https://github.com/c0gnit00/CVE-2022-46364.git"
         }
       ]
     },
