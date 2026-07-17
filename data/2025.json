@@ -3901,25 +3901,6 @@
       "cve_id": "CVE-2025-14174",
       "repositories": [
         {
-          "id": 1133241080,
-          "name": "WebKit-UAF-ANGLE-OOB-Analysis",
-          "full_name": "zeroxjf/WebKit-UAF-ANGLE-OOB-Analysis",
-          "html_url": "https://github.com/zeroxjf/WebKit-UAF-ANGLE-OOB-Analysis",
-          "description": "Analysis of CVE-2025-43529 (WebKit UAF) + CVE-2025-14174 (ANGLE OOB) exploit chain - iOS Safari",
-          "stargazers_count": 102,
-          "forks_count": 21,
-          "language": "HTML",
-          "updated_at": "2026-07-13T12:09:42Z",
-          "pushed_at": "2026-06-28T22:18:54Z",
-          "created_at": "2026-01-13T04:35:00Z",
-          "topics": [],
-          "owner": {
-            "login": "zeroxjf",
-            "html_url": "https://github.com/zeroxjf"
-          },
-          "clone_url": "https://github.com/zeroxjf/WebKit-UAF-ANGLE-OOB-Analysis.git"
-        },
-        {
           "id": 1118871387,
           "name": "CVE-2025-14174-Poc",
           "full_name": "Satirush/CVE-2025-14174-Poc",
@@ -4502,8 +4483,8 @@
           "stargazers_count": 1,
           "forks_count": 1,
           "language": "Python",
-          "updated_at": "2026-07-17T11:25:07Z",
-          "pushed_at": "2026-07-17T11:24:31Z",
+          "updated_at": "2026-07-17T17:16:50Z",
+          "pushed_at": "2026-07-17T17:16:43Z",
           "created_at": "2025-07-30T15:52:00Z",
           "topics": [
             "codeb0ss",
@@ -4678,8 +4659,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-07-17T11:23:46Z",
-          "pushed_at": "2026-07-17T11:23:43Z",
+          "updated_at": "2026-07-17T17:16:59Z",
+          "pushed_at": "2026-07-17T17:15:56Z",
           "created_at": "2026-01-14T06:05:44Z",
           "topics": [
             "cve-2025-14847",
@@ -6271,10 +6252,10 @@
           "full_name": "MrAle98/CVE-2025-21333-POC",
           "html_url": "https://github.com/MrAle98/CVE-2025-21333-POC",
           "description": "POC exploit for CVE-2025-21333 heap-based buffer overflow. It leverages WNF state data and I/O ring IOP_MC_BUFFER_ENTRY",
-          "stargazers_count": 232,
+          "stargazers_count": 233,
           "forks_count": 35,
           "language": "C++",
-          "updated_at": "2026-07-12T21:47:36Z",
+          "updated_at": "2026-07-17T15:00:48Z",
           "pushed_at": "2025-04-12T22:14:58Z",
           "created_at": "2025-02-27T12:36:55Z",
           "topics": [],
@@ -8241,10 +8222,10 @@
           "full_name": "rubenformation/CVE-2025-50154",
           "html_url": "https://github.com/rubenformation/CVE-2025-50154",
           "description": "POCs for CVE-2025-50154 and CVE-2025-59214, zero day vulnerabilities on windows file explorer disclosing NTLMv2-SSP without user interaction. It is a bypass for the CVE-2025-24054 Security Patch",
-          "stargazers_count": 54,
+          "stargazers_count": 55,
           "forks_count": 15,
           "language": "PowerShell",
-          "updated_at": "2026-06-22T19:38:08Z",
+          "updated_at": "2026-07-17T16:25:17Z",
           "pushed_at": "2025-10-16T10:53:07Z",
           "created_at": "2025-08-13T08:16:29Z",
           "topics": [
@@ -9273,10 +9254,10 @@
           "full_name": "FFRI/CVE-2025-24204",
           "html_url": "https://github.com/FFRI/CVE-2025-24204",
           "description": "PoC and technical details of CVE-2025-24204",
-          "stargazers_count": 111,
+          "stargazers_count": 112,
           "forks_count": 17,
           "language": "Python",
-          "updated_at": "2026-07-12T21:47:53Z",
+          "updated_at": "2026-07-17T15:01:12Z",
           "pushed_at": "2025-10-07T01:54:24Z",
           "created_at": "2025-08-15T08:48:37Z",
           "topics": [],
@@ -9343,8 +9324,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Objective-C",
-          "updated_at": "2026-07-17T12:07:59Z",
-          "pushed_at": "2026-07-17T12:07:42Z",
+          "updated_at": "2026-07-17T18:01:37Z",
+          "pushed_at": "2026-07-17T18:00:48Z",
           "created_at": "2026-04-04T03:42:55Z",
           "topics": [
             "action-recognition",
@@ -17323,6 +17304,50 @@
           "clone_url": "https://github.com/0xWhoknows/CVE-2025-29927.git"
         },
         {
+          "id": 954850404,
+          "name": "CVE-2025-29972",
+          "full_name": "ThemeHackers/CVE-2025-29972",
+          "html_url": "https://github.com/ThemeHackers/CVE-2025-29972",
+          "description": "CVE-2025-29927 is a critical security vulnerability affecting Next.js, a popular React framework for building full-stack web applications. This flaw allows attackers to bypass authorization checks implemented in Next.js middleware, potentially granting unauthorized access to sensitive areas of an application, such as admin pages or user dashboards.",
+          "stargazers_count": 2,
+          "forks_count": 1,
+          "language": "Python",
+          "updated_at": "2025-07-01T07:56:54Z",
+          "pushed_at": "2025-06-10T12:56:56Z",
+          "created_at": "2025-03-25T17:59:06Z",
+          "topics": [],
+          "owner": {
+            "login": "ThemeHackers",
+            "html_url": "https://github.com/ThemeHackers"
+          },
+          "clone_url": "https://github.com/ThemeHackers/CVE-2025-29972.git"
+        },
+        {
+          "id": 954634803,
+          "name": "CVE-2025-29927-Testing",
+          "full_name": "TheresAFewConors/CVE-2025-29927-Testing",
+          "html_url": "https://github.com/TheresAFewConors/CVE-2025-29927-Testing",
+          "description": "PowerShell script to test if a web app is vulnerable to CVE-2025-29927",
+          "stargazers_count": 2,
+          "forks_count": 2,
+          "language": "PowerShell",
+          "updated_at": "2025-08-24T00:07:50Z",
+          "pushed_at": "2025-06-04T09:50:44Z",
+          "created_at": "2025-03-25T11:39:14Z",
+          "topics": [
+            "cve",
+            "cve-2025-29927",
+            "exploit",
+            "powershell",
+            "vulnerability"
+          ],
+          "owner": {
+            "login": "TheresAFewConors",
+            "html_url": "https://github.com/TheresAFewConors"
+          },
+          "clone_url": "https://github.com/TheresAFewConors/CVE-2025-29927-Testing.git"
+        },
+        {
           "id": 956893496,
           "name": "Automated-Next.js-Security-Scanner-for-CVE-2025-29927",
           "full_name": "ferpalma21/Automated-Next.js-Security-Scanner-for-CVE-2025-29927",
@@ -17399,23 +17424,23 @@
           "clone_url": "https://github.com/emadshanab/CVE-2025-29927.git"
         },
         {
-          "id": 955619750,
-          "name": "next-attack",
-          "full_name": "nicknisi/next-attack",
-          "html_url": "https://github.com/nicknisi/next-attack",
-          "description": "A demo of the CVE-2025-29927 vulnerability for a NebraskaJS lightning talk",
+          "id": 955713682,
+          "name": "NextSecureScan",
+          "full_name": "jmbowes/NextSecureScan",
+          "html_url": "https://github.com/jmbowes/NextSecureScan",
+          "description": "Next.js CVE-2025-29927 Vulnerability Scanner",
           "stargazers_count": 2,
           "forks_count": 0,
-          "language": "TypeScript",
-          "updated_at": "2026-03-31T04:34:34Z",
-          "pushed_at": "2025-03-26T23:36:54Z",
-          "created_at": "2025-03-26T23:36:30Z",
+          "language": "Python",
+          "updated_at": "2026-07-17T15:01:05Z",
+          "pushed_at": "2025-03-27T04:45:23Z",
+          "created_at": "2025-03-27T04:36:01Z",
           "topics": [],
           "owner": {
-            "login": "nicknisi",
-            "html_url": "https://github.com/nicknisi"
+            "login": "jmbowes",
+            "html_url": "https://github.com/jmbowes"
           },
-          "clone_url": "https://github.com/nicknisi/next-attack.git"
+          "clone_url": "https://github.com/jmbowes/NextSecureScan.git"
         },
         {
           "id": 954113310,
@@ -17435,25 +17460,6 @@
             "html_url": "https://github.com/lem0n817"
           },
           "clone_url": "https://github.com/lem0n817/CVE-2025-29927.git"
-        },
-        {
-          "id": 954039309,
-          "name": "next-CVE-2025-29927",
-          "full_name": "arvion-agent/next-CVE-2025-29927",
-          "html_url": "https://github.com/arvion-agent/next-CVE-2025-29927",
-          "description": "CVE-2025-29927 Authorization Bypass in Next.js Middleware",
-          "stargazers_count": 2,
-          "forks_count": 0,
-          "language": "JavaScript",
-          "updated_at": "2025-04-26T19:53:30Z",
-          "pushed_at": "2025-03-24T14:31:23Z",
-          "created_at": "2025-03-24T13:23:46Z",
-          "topics": [],
-          "owner": {
-            "login": "arvion-agent",
-            "html_url": "https://github.com/arvion-agent"
-          },
-          "clone_url": "https://github.com/arvion-agent/next-CVE-2025-29927.git"
         },
         {
           "id": 972544311,
@@ -17529,48 +17535,42 @@
           "clone_url": "https://github.com/kh4sh3i/CVE-2025-29927.git"
         },
         {
-          "id": 954850404,
-          "name": "CVE-2025-29972",
-          "full_name": "ThemeHackers/CVE-2025-29972",
-          "html_url": "https://github.com/ThemeHackers/CVE-2025-29972",
-          "description": "CVE-2025-29927 is a critical security vulnerability affecting Next.js, a popular React framework for building full-stack web applications. This flaw allows attackers to bypass authorization checks implemented in Next.js middleware, potentially granting unauthorized access to sensitive areas of an application, such as admin pages or user dashboards.",
+          "id": 954039309,
+          "name": "next-CVE-2025-29927",
+          "full_name": "arvion-agent/next-CVE-2025-29927",
+          "html_url": "https://github.com/arvion-agent/next-CVE-2025-29927",
+          "description": "CVE-2025-29927 Authorization Bypass in Next.js Middleware",
           "stargazers_count": 2,
-          "forks_count": 1,
-          "language": "Python",
-          "updated_at": "2025-07-01T07:56:54Z",
-          "pushed_at": "2025-06-10T12:56:56Z",
-          "created_at": "2025-03-25T17:59:06Z",
+          "forks_count": 0,
+          "language": "JavaScript",
+          "updated_at": "2025-04-26T19:53:30Z",
+          "pushed_at": "2025-03-24T14:31:23Z",
+          "created_at": "2025-03-24T13:23:46Z",
           "topics": [],
           "owner": {
-            "login": "ThemeHackers",
-            "html_url": "https://github.com/ThemeHackers"
+            "login": "arvion-agent",
+            "html_url": "https://github.com/arvion-agent"
           },
-          "clone_url": "https://github.com/ThemeHackers/CVE-2025-29972.git"
+          "clone_url": "https://github.com/arvion-agent/next-CVE-2025-29927.git"
         },
         {
-          "id": 954634803,
-          "name": "CVE-2025-29927-Testing",
-          "full_name": "TheresAFewConors/CVE-2025-29927-Testing",
-          "html_url": "https://github.com/TheresAFewConors/CVE-2025-29927-Testing",
-          "description": "PowerShell script to test if a web app is vulnerable to CVE-2025-29927",
+          "id": 955619750,
+          "name": "next-attack",
+          "full_name": "nicknisi/next-attack",
+          "html_url": "https://github.com/nicknisi/next-attack",
+          "description": "A demo of the CVE-2025-29927 vulnerability for a NebraskaJS lightning talk",
           "stargazers_count": 2,
-          "forks_count": 2,
-          "language": "PowerShell",
-          "updated_at": "2025-08-24T00:07:50Z",
-          "pushed_at": "2025-06-04T09:50:44Z",
-          "created_at": "2025-03-25T11:39:14Z",
-          "topics": [
-            "cve",
-            "cve-2025-29927",
-            "exploit",
-            "powershell",
-            "vulnerability"
-          ],
+          "forks_count": 0,
+          "language": "TypeScript",
+          "updated_at": "2026-03-31T04:34:34Z",
+          "pushed_at": "2025-03-26T23:36:54Z",
+          "created_at": "2025-03-26T23:36:30Z",
+          "topics": [],
           "owner": {
-            "login": "TheresAFewConors",
-            "html_url": "https://github.com/TheresAFewConors"
+            "login": "nicknisi",
+            "html_url": "https://github.com/nicknisi"
           },
-          "clone_url": "https://github.com/TheresAFewConors/CVE-2025-29927-Testing.git"
+          "clone_url": "https://github.com/nicknisi/next-attack.git"
         },
         {
           "id": 983967305,
@@ -17592,42 +17592,23 @@
           "clone_url": "https://github.com/lstudlo/nextjs-cve-demo.git"
         },
         {
-          "id": 954149549,
-          "name": "CVE-2025-29927-test",
-          "full_name": "kuzushiki/CVE-2025-29927-test",
-          "html_url": "https://github.com/kuzushiki/CVE-2025-29927-test",
-          "description": "CVE-2025-29927の検証",
+          "id": 957456093,
+          "name": "Vulnerable-Lab-NextJS-CVE-2025-29927",
+          "full_name": "Kamal-418/Vulnerable-Lab-NextJS-CVE-2025-29927",
+          "html_url": "https://github.com/Kamal-418/Vulnerable-Lab-NextJS-CVE-2025-29927",
+          "description": "",
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "TypeScript",
-          "updated_at": "2025-03-25T14:25:11Z",
-          "pushed_at": "2025-03-25T14:25:08Z",
-          "created_at": "2025-03-24T16:27:17Z",
+          "updated_at": "2026-04-30T07:29:47Z",
+          "pushed_at": "2026-04-30T07:29:43Z",
+          "created_at": "2025-03-30T12:24:15Z",
           "topics": [],
           "owner": {
-            "login": "kuzushiki",
-            "html_url": "https://github.com/kuzushiki"
+            "login": "Kamal-418",
+            "html_url": "https://github.com/Kamal-418"
           },
-          "clone_url": "https://github.com/kuzushiki/CVE-2025-29927-test.git"
-        },
-        {
-          "id": 955984617,
-          "name": "CVE-2025-29927-scanner",
-          "full_name": "nocomp/CVE-2025-29927-scanner",
-          "html_url": "https://github.com/nocomp/CVE-2025-29927-scanner",
-          "description": "python script for evaluate if you are vulnerable or not to next.js CVE-2025-29927",
-          "stargazers_count": 1,
-          "forks_count": 1,
-          "language": "Python",
-          "updated_at": "2025-05-05T11:56:07Z",
-          "pushed_at": "2025-03-27T14:17:53Z",
-          "created_at": "2025-03-27T14:11:09Z",
-          "topics": [],
-          "owner": {
-            "login": "nocomp",
-            "html_url": "https://github.com/nocomp"
-          },
-          "clone_url": "https://github.com/nocomp/CVE-2025-29927-scanner.git"
+          "clone_url": "https://github.com/Kamal-418/Vulnerable-Lab-NextJS-CVE-2025-29927.git"
         },
         {
           "id": 974810730,
@@ -17649,61 +17630,61 @@
           "clone_url": "https://github.com/rubbxalc/CVE-2025-29927.git"
         },
         {
-          "id": 954237333,
-          "name": "CVE-2025-29927",
-          "full_name": "ricsirigu/CVE-2025-29927",
-          "html_url": "https://github.com/ricsirigu/CVE-2025-29927",
-          "description": "A deliberately Next.js app, vulnerable to CVE-2025-29927, Authorization Bypass ",
+          "id": 956863508,
+          "name": "CVE-2025-29927-PoC",
+          "full_name": "w2hcorp/CVE-2025-29927-PoC",
+          "html_url": "https://github.com/w2hcorp/CVE-2025-29927-PoC",
+          "description": "Here is a simple but effective exploit for CVE-2025-29927.",
           "stargazers_count": 1,
           "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2025-04-03T11:46:11Z",
+          "pushed_at": "2025-03-29T15:58:46Z",
+          "created_at": "2025-03-29T02:12:22Z",
+          "topics": [],
+          "owner": {
+            "login": "w2hcorp",
+            "html_url": "https://github.com/w2hcorp"
+          },
+          "clone_url": "https://github.com/w2hcorp/CVE-2025-29927-PoC.git"
+        },
+        {
+          "id": 955984617,
+          "name": "CVE-2025-29927-scanner",
+          "full_name": "nocomp/CVE-2025-29927-scanner",
+          "html_url": "https://github.com/nocomp/CVE-2025-29927-scanner",
+          "description": "python script for evaluate if you are vulnerable or not to next.js CVE-2025-29927",
+          "stargazers_count": 1,
+          "forks_count": 1,
+          "language": "Python",
+          "updated_at": "2025-05-05T11:56:07Z",
+          "pushed_at": "2025-03-27T14:17:53Z",
+          "created_at": "2025-03-27T14:11:09Z",
+          "topics": [],
+          "owner": {
+            "login": "nocomp",
+            "html_url": "https://github.com/nocomp"
+          },
+          "clone_url": "https://github.com/nocomp/CVE-2025-29927-scanner.git"
+        },
+        {
+          "id": 955007037,
+          "name": "test-cve-2025-29927",
+          "full_name": "yugo-eliatrope/test-cve-2025-29927",
+          "html_url": "https://github.com/yugo-eliatrope/test-cve-2025-29927",
+          "description": "",
+          "stargazers_count": 1,
+          "forks_count": 1,
           "language": "TypeScript",
-          "updated_at": "2025-09-06T20:22:34Z",
-          "pushed_at": "2025-03-25T07:30:13Z",
-          "created_at": "2025-03-24T19:13:35Z",
+          "updated_at": "2026-05-17T11:05:38Z",
+          "pushed_at": "2025-03-26T00:57:03Z",
+          "created_at": "2025-03-26T00:47:44Z",
           "topics": [],
           "owner": {
-            "login": "ricsirigu",
-            "html_url": "https://github.com/ricsirigu"
+            "login": "yugo-eliatrope",
+            "html_url": "https://github.com/yugo-eliatrope"
           },
-          "clone_url": "https://github.com/ricsirigu/CVE-2025-29927.git"
-        },
-        {
-          "id": 955713682,
-          "name": "NextSecureScan",
-          "full_name": "jmbowes/NextSecureScan",
-          "html_url": "https://github.com/jmbowes/NextSecureScan",
-          "description": "Next.js CVE-2025-29927 Vulnerability Scanner",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2025-12-17T12:44:41Z",
-          "pushed_at": "2025-03-27T04:45:23Z",
-          "created_at": "2025-03-27T04:36:01Z",
-          "topics": [],
-          "owner": {
-            "login": "jmbowes",
-            "html_url": "https://github.com/jmbowes"
-          },
-          "clone_url": "https://github.com/jmbowes/NextSecureScan.git"
-        },
-        {
-          "id": 955909576,
-          "name": "PoC-for-Next.js-Middleware",
-          "full_name": "m2hcz/PoC-for-Next.js-Middleware",
-          "html_url": "https://github.com/m2hcz/PoC-for-Next.js-Middleware",
-          "description": "\u003e 🔓 Proof-of-Concept for a fictional Next.js middleware bypass (CVE-2025-29927) — craft sub-requests to test protected routes.",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2025-07-09T02:58:15Z",
-          "pushed_at": "2025-07-05T13:23:46Z",
-          "created_at": "2025-03-27T11:48:35Z",
-          "topics": [],
-          "owner": {
-            "login": "m2hcz",
-            "html_url": "https://github.com/m2hcz"
-          },
-          "clone_url": "https://github.com/m2hcz/PoC-for-Next.js-Middleware.git"
+          "clone_url": "https://github.com/yugo-eliatrope/test-cve-2025-29927.git"
         },
         {
           "id": 967355790,
@@ -17725,23 +17706,23 @@
           "clone_url": "https://github.com/mhamzakhattak/CVE-2025-29927.git"
         },
         {
-          "id": 957456093,
-          "name": "Vulnerable-Lab-NextJS-CVE-2025-29927",
-          "full_name": "Kamal-418/Vulnerable-Lab-NextJS-CVE-2025-29927",
-          "html_url": "https://github.com/Kamal-418/Vulnerable-Lab-NextJS-CVE-2025-29927",
-          "description": "",
+          "id": 954149549,
+          "name": "CVE-2025-29927-test",
+          "full_name": "kuzushiki/CVE-2025-29927-test",
+          "html_url": "https://github.com/kuzushiki/CVE-2025-29927-test",
+          "description": "CVE-2025-29927の検証",
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "TypeScript",
-          "updated_at": "2026-04-30T07:29:47Z",
-          "pushed_at": "2026-04-30T07:29:43Z",
-          "created_at": "2025-03-30T12:24:15Z",
+          "updated_at": "2025-03-25T14:25:11Z",
+          "pushed_at": "2025-03-25T14:25:08Z",
+          "created_at": "2025-03-24T16:27:17Z",
           "topics": [],
           "owner": {
-            "login": "Kamal-418",
-            "html_url": "https://github.com/Kamal-418"
+            "login": "kuzushiki",
+            "html_url": "https://github.com/kuzushiki"
           },
-          "clone_url": "https://github.com/Kamal-418/Vulnerable-Lab-NextJS-CVE-2025-29927.git"
+          "clone_url": "https://github.com/kuzushiki/CVE-2025-29927-test.git"
         },
         {
           "id": 962523684,
@@ -17782,23 +17763,23 @@
           "clone_url": "https://github.com/pixilated730/NextJS-Exploit-.git"
         },
         {
-          "id": 956863508,
-          "name": "CVE-2025-29927-PoC",
-          "full_name": "w2hcorp/CVE-2025-29927-PoC",
-          "html_url": "https://github.com/w2hcorp/CVE-2025-29927-PoC",
-          "description": "Here is a simple but effective exploit for CVE-2025-29927.",
+          "id": 955909576,
+          "name": "PoC-for-Next.js-Middleware",
+          "full_name": "m2hcz/PoC-for-Next.js-Middleware",
+          "html_url": "https://github.com/m2hcz/PoC-for-Next.js-Middleware",
+          "description": "\u003e 🔓 Proof-of-Concept for a fictional Next.js middleware bypass (CVE-2025-29927) — craft sub-requests to test protected routes.",
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2025-04-03T11:46:11Z",
-          "pushed_at": "2025-03-29T15:58:46Z",
-          "created_at": "2025-03-29T02:12:22Z",
+          "updated_at": "2025-07-09T02:58:15Z",
+          "pushed_at": "2025-07-05T13:23:46Z",
+          "created_at": "2025-03-27T11:48:35Z",
           "topics": [],
           "owner": {
-            "login": "w2hcorp",
-            "html_url": "https://github.com/w2hcorp"
+            "login": "m2hcz",
+            "html_url": "https://github.com/m2hcz"
           },
-          "clone_url": "https://github.com/w2hcorp/CVE-2025-29927-PoC.git"
+          "clone_url": "https://github.com/m2hcz/PoC-for-Next.js-Middleware.git"
         },
         {
           "id": 958679134,
@@ -17862,23 +17843,23 @@
           "clone_url": "https://github.com/olimpiofreitas/CVE-2025-29927-scanner.git"
         },
         {
-          "id": 955007037,
-          "name": "test-cve-2025-29927",
-          "full_name": "yugo-eliatrope/test-cve-2025-29927",
-          "html_url": "https://github.com/yugo-eliatrope/test-cve-2025-29927",
-          "description": "",
+          "id": 954237333,
+          "name": "CVE-2025-29927",
+          "full_name": "ricsirigu/CVE-2025-29927",
+          "html_url": "https://github.com/ricsirigu/CVE-2025-29927",
+          "description": "A deliberately Next.js app, vulnerable to CVE-2025-29927, Authorization Bypass ",
           "stargazers_count": 1,
-          "forks_count": 1,
+          "forks_count": 0,
           "language": "TypeScript",
-          "updated_at": "2026-05-17T11:05:38Z",
-          "pushed_at": "2025-03-26T00:57:03Z",
-          "created_at": "2025-03-26T00:47:44Z",
+          "updated_at": "2025-09-06T20:22:34Z",
+          "pushed_at": "2025-03-25T07:30:13Z",
+          "created_at": "2025-03-24T19:13:35Z",
           "topics": [],
           "owner": {
-            "login": "yugo-eliatrope",
-            "html_url": "https://github.com/yugo-eliatrope"
+            "login": "ricsirigu",
+            "html_url": "https://github.com/ricsirigu"
           },
-          "clone_url": "https://github.com/yugo-eliatrope/test-cve-2025-29927.git"
+          "clone_url": "https://github.com/ricsirigu/CVE-2025-29927.git"
         },
         {
           "id": 998729818,
@@ -21900,10 +21881,10 @@
           "full_name": "Skorpion96/unisoc-su",
           "html_url": "https://github.com/Skorpion96/unisoc-su",
           "description": "A method for CVE-2025-31710 and to connect to cmd_skt to obtain a root shell on unisoc unpatched models",
-          "stargazers_count": 125,
+          "stargazers_count": 126,
           "forks_count": 18,
           "language": "Shell",
-          "updated_at": "2026-07-14T03:16:56Z",
+          "updated_at": "2026-07-17T15:01:04Z",
           "pushed_at": "2026-07-09T22:19:10Z",
           "created_at": "2025-06-06T14:31:13Z",
           "topics": [],
@@ -21972,10 +21953,10 @@
           "full_name": "yohanes/POC-CVE-2025-31931",
           "html_url": "https://github.com/yohanes/POC-CVE-2025-31931",
           "description": "",
-          "stargazers_count": 3,
+          "stargazers_count": 4,
           "forks_count": 0,
           "language": "C++",
-          "updated_at": "2026-07-12T21:47:59Z",
+          "updated_at": "2026-07-17T15:01:20Z",
           "pushed_at": "2025-11-18T05:01:18Z",
           "created_at": "2025-11-11T22:36:24Z",
           "topics": [],
@@ -24166,8 +24147,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Shell",
-          "updated_at": "2026-07-17T13:11:40Z",
-          "pushed_at": "2026-07-17T13:10:52Z",
+          "updated_at": "2026-07-17T19:05:26Z",
+          "pushed_at": "2026-07-17T19:04:38Z",
           "created_at": "2025-09-20T00:42:07Z",
           "topics": [
             "chroot",
@@ -27419,10 +27400,10 @@
           "full_name": "farazsth98/poc-CVE-2025-38352",
           "html_url": "https://github.com/farazsth98/poc-CVE-2025-38352",
           "description": "This is a proof of concept for CVE-2025-38352, a vulnerability in the Linux kernel's POSIX CPU timers implementation. The September 2025 Android Bulletin mentions that this vulnerability has been used in limited, targeted exploitation in the wild.",
-          "stargazers_count": 113,
+          "stargazers_count": 114,
           "forks_count": 11,
           "language": "C",
-          "updated_at": "2026-07-14T20:31:53Z",
+          "updated_at": "2026-07-17T15:01:24Z",
           "pushed_at": "2026-01-05T15:41:23Z",
           "created_at": "2025-12-21T23:59:18Z",
           "topics": [],
@@ -29048,10 +29029,10 @@
           "full_name": "NikolajSchlej/Hydroph0bia",
           "html_url": "https://github.com/NikolajSchlej/Hydroph0bia",
           "description": "Binaries, drivers, PoCs and other stuff on Hydroph0bia vulnerability (CVE-2025-4275)",
-          "stargazers_count": 40,
+          "stargazers_count": 41,
           "forks_count": 13,
           "language": "C",
-          "updated_at": "2026-07-12T21:47:47Z",
+          "updated_at": "2026-07-17T15:01:04Z",
           "pushed_at": "2025-06-20T05:47:21Z",
           "created_at": "2025-06-10T11:24:13Z",
           "topics": [],
@@ -29538,30 +29519,6 @@
             "html_url": "https://github.com/calysteon"
           },
           "clone_url": "https://github.com/calysteon/CVE-2025-43504.git"
-        }
-      ]
-    },
-    {
-      "cve_id": "CVE-2025-43529",
-      "repositories": [
-        {
-          "id": 1133241080,
-          "name": "WebKit-UAF-ANGLE-OOB-Analysis",
-          "full_name": "zeroxjf/WebKit-UAF-ANGLE-OOB-Analysis",
-          "html_url": "https://github.com/zeroxjf/WebKit-UAF-ANGLE-OOB-Analysis",
-          "description": "Analysis of CVE-2025-43529 (WebKit UAF) + CVE-2025-14174 (ANGLE OOB) exploit chain - iOS Safari",
-          "stargazers_count": 102,
-          "forks_count": 21,
-          "language": "HTML",
-          "updated_at": "2026-07-13T12:09:42Z",
-          "pushed_at": "2026-06-28T22:18:54Z",
-          "created_at": "2026-01-13T04:35:00Z",
-          "topics": [],
-          "owner": {
-            "login": "zeroxjf",
-            "html_url": "https://github.com/zeroxjf"
-          },
-          "clone_url": "https://github.com/zeroxjf/WebKit-UAF-ANGLE-OOB-Analysis.git"
         }
       ]
     },
@@ -33781,10 +33738,10 @@
           "full_name": "Wh04m1001/CVE-2025-48799",
           "html_url": "https://github.com/Wh04m1001/CVE-2025-48799",
           "description": "",
-          "stargazers_count": 267,
+          "stargazers_count": 268,
           "forks_count": 68,
           "language": "C++",
-          "updated_at": "2026-07-16T03:28:36Z",
+          "updated_at": "2026-07-17T15:01:07Z",
           "pushed_at": "2025-07-08T19:35:55Z",
           "created_at": "2025-07-08T15:26:04Z",
           "topics": [],
@@ -34130,10 +34087,10 @@
           "full_name": "fearsoff-org/CVE-2025-49113",
           "html_url": "https://github.com/fearsoff-org/CVE-2025-49113",
           "description": "",
-          "stargazers_count": 107,
-          "forks_count": 21,
+          "stargazers_count": 108,
+          "forks_count": 22,
           "language": "PHP",
-          "updated_at": "2026-07-13T17:39:09Z",
+          "updated_at": "2026-07-17T15:13:09Z",
           "pushed_at": "2025-06-06T04:05:55Z",
           "created_at": "2025-06-04T15:49:43Z",
           "topics": [],
@@ -35207,10 +35164,10 @@
           "full_name": "raminfp/redis_exploit",
           "html_url": "https://github.com/raminfp/redis_exploit",
           "description": "CVE-2025-49844 (RediShell)",
-          "stargazers_count": 340,
+          "stargazers_count": 341,
           "forks_count": 65,
           "language": "Python",
-          "updated_at": "2026-07-11T17:20:01Z",
+          "updated_at": "2026-07-17T16:30:59Z",
           "pushed_at": "2025-10-07T07:03:50Z",
           "created_at": "2025-10-07T06:18:28Z",
           "topics": [],
@@ -35310,8 +35267,8 @@
           "stargazers_count": 2,
           "forks_count": 0,
           "language": "CSS",
-          "updated_at": "2026-07-17T13:26:06Z",
-          "pushed_at": "2026-07-17T13:24:34Z",
+          "updated_at": "2026-07-17T16:44:18Z",
+          "pushed_at": "2026-07-17T16:44:12Z",
           "created_at": "2022-04-06T09:27:39Z",
           "topics": [
             "ai-security",
@@ -35424,8 +35381,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-07-17T13:25:15Z",
-          "pushed_at": "2026-07-17T13:23:58Z",
+          "updated_at": "2026-07-17T16:43:39Z",
+          "pushed_at": "2026-07-17T16:43:32Z",
           "created_at": "2019-04-13T07:51:09Z",
           "topics": [
             "ai-security",
@@ -35564,10 +35521,10 @@
           "full_name": "rubenformation/CVE-2025-50154",
           "html_url": "https://github.com/rubenformation/CVE-2025-50154",
           "description": "POCs for CVE-2025-50154 and CVE-2025-59214, zero day vulnerabilities on windows file explorer disclosing NTLMv2-SSP without user interaction. It is a bypass for the CVE-2025-24054 Security Patch",
-          "stargazers_count": 54,
+          "stargazers_count": 55,
           "forks_count": 15,
           "language": "PowerShell",
-          "updated_at": "2026-06-22T19:38:08Z",
+          "updated_at": "2026-07-17T16:25:17Z",
           "pushed_at": "2025-10-16T10:53:07Z",
           "created_at": "2025-08-13T08:16:29Z",
           "topics": [
@@ -40707,8 +40664,8 @@
           "stargazers_count": 3,
           "forks_count": 1,
           "language": "Python",
-          "updated_at": "2026-07-17T13:06:19Z",
-          "pushed_at": "2026-07-17T13:05:42Z",
+          "updated_at": "2026-07-17T18:59:58Z",
+          "pushed_at": "2026-07-17T18:59:33Z",
           "created_at": "2025-08-14T05:16:16Z",
           "topics": [
             "1panel",
@@ -41299,10 +41256,10 @@
           "full_name": "msanft/CVE-2025-55182",
           "html_url": "https://github.com/msanft/CVE-2025-55182",
           "description": "Explanation and full RCE PoC for CVE-2025-55182",
-          "stargazers_count": 1427,
+          "stargazers_count": 1428,
           "forks_count": 197,
           "language": "Python",
-          "updated_at": "2026-07-16T01:51:39Z",
+          "updated_at": "2026-07-17T16:09:06Z",
           "pushed_at": "2025-12-08T13:51:04Z",
           "created_at": "2025-12-04T11:49:55Z",
           "topics": [],
@@ -41319,7 +41276,7 @@
           "html_url": "https://github.com/lachlan2k/React2Shell-CVE-2025-55182-original-poc",
           "description": "Original Proof-of-Concepts for React2Shell CVE-2025-55182",
           "stargazers_count": 1051,
-          "forks_count": 108,
+          "forks_count": 109,
           "language": "JavaScript",
           "updated_at": "2026-07-13T13:46:37Z",
           "pushed_at": "2025-12-05T08:56:15Z",
@@ -41359,10 +41316,10 @@
           "full_name": "mrknow001/RSC_Detector",
           "html_url": "https://github.com/mrknow001/RSC_Detector",
           "description": "Supports RSC fingerprinting and exploitation of the React component vulnerability CVE-2025-55182.",
-          "stargazers_count": 580,
+          "stargazers_count": 581,
           "forks_count": 86,
           "language": "JavaScript",
-          "updated_at": "2026-07-13T12:08:52Z",
+          "updated_at": "2026-07-17T16:28:23Z",
           "pushed_at": "2025-12-05T08:11:16Z",
           "created_at": "2025-12-05T05:53:25Z",
           "topics": [],
@@ -41692,7 +41649,7 @@
           "html_url": "https://github.com/xalgord/React2Shell",
           "description": "Advanced Exploitation Toolkit for Next.js Server Actions (CVE-2025-55182)",
           "stargazers_count": 46,
-          "forks_count": 5,
+          "forks_count": 6,
           "language": "Python",
           "updated_at": "2026-07-08T12:36:11Z",
           "pushed_at": "2025-12-12T11:52:59Z",
@@ -45181,8 +45138,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-07-17T11:18:17Z",
-          "pushed_at": "2026-07-17T11:18:06Z",
+          "updated_at": "2026-07-17T17:09:48Z",
+          "pushed_at": "2026-07-17T17:09:35Z",
           "created_at": "2026-01-02T01:28:57Z",
           "topics": [
             "appsec",
@@ -45690,8 +45647,8 @@
           "stargazers_count": 0,
           "forks_count": 1,
           "language": "Python",
-          "updated_at": "2026-07-17T11:14:34Z",
-          "pushed_at": "2026-07-17T11:14:02Z",
+          "updated_at": "2026-07-17T17:06:18Z",
+          "pushed_at": "2026-07-17T17:05:56Z",
           "created_at": "2024-11-29T12:32:19Z",
           "topics": [
             "code-injection",
@@ -46035,8 +45992,8 @@
           "stargazers_count": 0,
           "forks_count": 1,
           "language": "Python",
-          "updated_at": "2026-07-17T11:14:17Z",
-          "pushed_at": "2026-07-17T11:13:43Z",
+          "updated_at": "2026-07-17T17:06:06Z",
+          "pushed_at": "2026-07-17T17:05:38Z",
           "created_at": "2025-06-06T16:34:46Z",
           "topics": [
             "app-router-nextjs",
@@ -46590,42 +46547,42 @@
           "clone_url": "https://github.com/andressuarezmonk/CVE-2025-55182.git"
         },
         {
-          "id": 1122350558,
-          "name": "CVE-2025-55182-research",
-          "full_name": "Farhan9488/CVE-2025-55182-research",
-          "html_url": "https://github.com/Farhan9488/CVE-2025-55182-research",
-          "description": "🛡️ Explore CVE-2025-55182, a critical RCE vulnerability in React's Flight Protocol, demonstrating exploitation techniques and mitigation strategies.",
+          "id": 504489103,
+          "name": "CVE-2025-55182-scanner",
+          "full_name": "mayank729/CVE-2025-55182-scanner",
+          "html_url": "https://github.com/mayank729/CVE-2025-55182-scanner",
+          "description": "🔍 Scan for CVE-2025-55182 risks in React Server Components with this non-intrusive tool that helps detect critical vulnerabilities in your applications.",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "JavaScript",
-          "updated_at": "2026-07-17T11:14:14Z",
-          "pushed_at": "2026-07-17T11:13:25Z",
-          "created_at": "2025-12-24T14:48:19Z",
+          "language": "Python",
+          "updated_at": "2026-07-17T17:05:59Z",
+          "pushed_at": "2026-07-17T17:05:23Z",
+          "created_at": "2022-06-17T10:19:10Z",
           "topics": [
-            "bugbounty",
+            "appsec",
             "cve-2025-55182",
-            "cve2025-55182",
-            "deserialization",
+            "cve-2025-66478",
+            "cybersecurity",
+            "devsecops",
             "exploit",
+            "github-config",
+            "massive",
             "nextjs",
-            "prototype-pollution",
+            "python",
             "rce",
             "react",
             "react-server-components",
-            "redteaming",
-            "remote-code-execution-rce",
-            "research",
-            "rsc",
-            "utf-16le",
+            "react2shell",
+            "scanner",
             "vulnerability",
-            "waf-bypass",
-            "web-security"
+            "vulnerability-scanner",
+            "waku"
           ],
           "owner": {
-            "login": "Farhan9488",
-            "html_url": "https://github.com/Farhan9488"
+            "login": "mayank729",
+            "html_url": "https://github.com/mayank729"
           },
-          "clone_url": "https://github.com/Farhan9488/CVE-2025-55182-research.git"
+          "clone_url": "https://github.com/mayank729/CVE-2025-55182-scanner.git"
         },
         {
           "id": 1111639846,
@@ -48537,42 +48494,42 @@
           "clone_url": "https://github.com/dissy123/cve-2025-55182.git"
         },
         {
-          "id": 504489103,
-          "name": "CVE-2025-55182-scanner",
-          "full_name": "mayank729/CVE-2025-55182-scanner",
-          "html_url": "https://github.com/mayank729/CVE-2025-55182-scanner",
-          "description": "🔍 Scan for CVE-2025-55182 risks in React Server Components with this non-intrusive tool that helps detect critical vulnerabilities in your applications.",
+          "id": 1122350558,
+          "name": "CVE-2025-55182-research",
+          "full_name": "Farhan9488/CVE-2025-55182-research",
+          "html_url": "https://github.com/Farhan9488/CVE-2025-55182-research",
+          "description": "🛡️ Explore CVE-2025-55182, a critical RCE vulnerability in React's Flight Protocol, demonstrating exploitation techniques and mitigation strategies.",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-07-17T11:14:01Z",
-          "pushed_at": "2026-07-17T11:13:24Z",
-          "created_at": "2022-06-17T10:19:10Z",
+          "language": "JavaScript",
+          "updated_at": "2026-07-17T17:05:49Z",
+          "pushed_at": "2026-07-17T17:05:20Z",
+          "created_at": "2025-12-24T14:48:19Z",
           "topics": [
-            "appsec",
+            "bugbounty",
             "cve-2025-55182",
-            "cve-2025-66478",
-            "cybersecurity",
-            "devsecops",
+            "cve2025-55182",
+            "deserialization",
             "exploit",
-            "github-config",
-            "massive",
             "nextjs",
-            "python",
+            "prototype-pollution",
             "rce",
             "react",
             "react-server-components",
-            "react2shell",
-            "scanner",
+            "redteaming",
+            "remote-code-execution-rce",
+            "research",
+            "rsc",
+            "utf-16le",
             "vulnerability",
-            "vulnerability-scanner",
-            "waku"
+            "waf-bypass",
+            "web-security"
           ],
           "owner": {
-            "login": "mayank729",
-            "html_url": "https://github.com/mayank729"
+            "login": "Farhan9488",
+            "html_url": "https://github.com/Farhan9488"
           },
-          "clone_url": "https://github.com/mayank729/CVE-2025-55182-scanner.git"
+          "clone_url": "https://github.com/Farhan9488/CVE-2025-55182-research.git"
         },
         {
           "id": 1121093758,
@@ -53053,10 +53010,10 @@
           "full_name": "rubenformation/CVE-2025-50154",
           "html_url": "https://github.com/rubenformation/CVE-2025-50154",
           "description": "POCs for CVE-2025-50154 and CVE-2025-59214, zero day vulnerabilities on windows file explorer disclosing NTLMv2-SSP without user interaction. It is a bypass for the CVE-2025-24054 Security Patch",
-          "stargazers_count": 54,
+          "stargazers_count": 55,
           "forks_count": 15,
           "language": "PowerShell",
-          "updated_at": "2026-06-22T19:38:08Z",
+          "updated_at": "2026-07-17T16:25:17Z",
           "pushed_at": "2025-10-16T10:53:07Z",
           "created_at": "2025-08-13T08:16:29Z",
           "topics": [
@@ -60313,8 +60270,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Go",
-          "updated_at": "2026-07-17T12:02:25Z",
-          "pushed_at": "2026-07-17T12:01:44Z",
+          "updated_at": "2026-07-17T17:55:01Z",
+          "pushed_at": "2026-07-17T17:54:46Z",
           "created_at": "2026-03-23T09:09:21Z",
           "topics": [
             "cve",
@@ -62532,8 +62489,8 @@
           "stargazers_count": 0,
           "forks_count": 1,
           "language": "Python",
-          "updated_at": "2026-07-17T11:14:17Z",
-          "pushed_at": "2026-07-17T11:13:43Z",
+          "updated_at": "2026-07-17T17:06:06Z",
+          "pushed_at": "2026-07-17T17:05:38Z",
           "created_at": "2025-06-06T16:34:46Z",
           "topics": [
             "app-router-nextjs",
@@ -62570,8 +62527,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-07-17T11:14:01Z",
-          "pushed_at": "2026-07-17T11:13:24Z",
+          "updated_at": "2026-07-17T17:05:59Z",
+          "pushed_at": "2026-07-17T17:05:23Z",
           "created_at": "2022-06-17T10:19:10Z",
           "topics": [
             "appsec",
@@ -62608,8 +62565,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "JavaScript",
-          "updated_at": "2026-07-17T11:15:07Z",
-          "pushed_at": "2026-07-17T11:14:31Z",
+          "updated_at": "2026-07-17T17:06:53Z",
+          "pushed_at": "2026-07-17T17:06:37Z",
           "created_at": "2025-10-01T07:40:09Z",
           "topics": [
             "cli-tool",
@@ -64693,8 +64650,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "C++",
-          "updated_at": "2026-07-17T11:31:03Z",
-          "pushed_at": "2026-07-17T11:30:00Z",
+          "updated_at": "2026-07-17T17:22:38Z",
+          "pushed_at": "2026-07-17T17:22:32Z",
           "created_at": "2026-01-24T21:00:41Z",
           "topics": [
             "action-recognition",
@@ -65977,10 +65934,10 @@
           "full_name": "symeonp/Lenovo-CVE-2025-8061",
           "html_url": "https://github.com/symeonp/Lenovo-CVE-2025-8061",
           "description": "PoC for popping a system shell against the LnvMSRIO.sys driver",
-          "stargazers_count": 123,
+          "stargazers_count": 124,
           "forks_count": 15,
           "language": "C++",
-          "updated_at": "2026-07-16T18:23:41Z",
+          "updated_at": "2026-07-17T15:01:17Z",
           "pushed_at": "2025-10-06T10:54:28Z",
           "created_at": "2025-10-06T09:33:59Z",
           "topics": [],
@@ -66627,6 +66584,25 @@
             "html_url": "https://github.com/rxerium"
           },
           "clone_url": "https://github.com/rxerium/CVE-2025-8110.git"
+        },
+        {
+          "id": 1304042742,
+          "name": "CVE-2025-8110-gogs-poc",
+          "full_name": "Shirouuu/CVE-2025-8110-gogs-poc",
+          "html_url": "https://github.com/Shirouuu/CVE-2025-8110-gogs-poc",
+          "description": "PoC for CVE-2025-8110 - Gogs arbitrary file write via symlink",
+          "stargazers_count": 3,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-07-17T18:43:24Z",
+          "pushed_at": "2026-07-17T13:55:12Z",
+          "created_at": "2026-07-17T13:46:16Z",
+          "topics": [],
+          "owner": {
+            "login": "Shirouuu",
+            "html_url": "https://github.com/Shirouuu"
+          },
+          "clone_url": "https://github.com/Shirouuu/CVE-2025-8110-gogs-poc.git"
         },
         {
           "id": 1122044728,
