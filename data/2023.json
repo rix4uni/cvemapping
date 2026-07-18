@@ -17417,8 +17417,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "C",
-          "updated_at": "2026-07-18T09:28:43Z",
-          "pushed_at": "2026-07-18T09:28:37Z",
+          "updated_at": "2026-07-18T15:19:09Z",
+          "pushed_at": "2026-07-18T15:19:04Z",
           "created_at": "2025-08-13T09:19:29Z",
           "topics": [
             "oob-entry-lookup",
@@ -26587,10 +26587,10 @@
           "full_name": "wildptr-io/Winrar-CVE-2023-40477-POC",
           "html_url": "https://github.com/wildptr-io/Winrar-CVE-2023-40477-POC",
           "description": "CVE-2023-40477 PoC by Wild-Pointer",
-          "stargazers_count": 25,
+          "stargazers_count": 26,
           "forks_count": 8,
           "language": "Python",
-          "updated_at": "2026-07-10T13:51:57Z",
+          "updated_at": "2026-07-18T11:14:55Z",
           "pushed_at": "2023-08-30T14:34:32Z",
           "created_at": "2023-08-29T16:29:48Z",
           "topics": [],
@@ -29592,25 +29592,6 @@
           "clone_url": "https://github.com/tahaXafous/CVE-2023-44487-dos.git"
         },
         {
-          "id": 1261410583,
-          "name": "http2-security-lab",
-          "full_name": "madhantr0/http2-security-lab",
-          "html_url": "https://github.com/madhantr0/http2-security-lab",
-          "description": "HTTP/2 attack simulation \u0026 defense lab - Slowloris, Rapid Reset (CVE-2023-44487), HPACK Bomb attacks with 5 layered defenses. Built in pure Python with raw sockets and h2 library.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-06-06T17:02:50Z",
-          "pushed_at": "2026-06-06T17:02:46Z",
-          "created_at": "2026-06-06T16:41:14Z",
-          "topics": [],
-          "owner": {
-            "login": "madhantr0",
-            "html_url": "https://github.com/madhantr0"
-          },
-          "clone_url": "https://github.com/madhantr0/http2-security-lab.git"
-        },
-        {
           "id": 703914770,
           "name": "rapidreset",
           "full_name": "pabloec20/rapidreset",
@@ -29649,23 +29630,23 @@
           "clone_url": "https://github.com/ByteHackr/CVE-2023-44487.git"
         },
         {
-          "id": 1239852354,
-          "name": "CVE-2023-44487",
-          "full_name": "Hirokiii/CVE-2023-44487",
-          "html_url": "https://github.com/Hirokiii/CVE-2023-44487",
-          "description": "Educational environment for LTAT.04.022 Homework 4.",
+          "id": 1261410583,
+          "name": "http2-security-lab",
+          "full_name": "madhantr0/http2-security-lab",
+          "html_url": "https://github.com/madhantr0/http2-security-lab",
+          "description": "HTTP/2 attack simulation \u0026 defense lab - Slowloris, Rapid Reset (CVE-2023-44487), HPACK Bomb attacks with 5 layered defenses. Built in pure Python with raw sockets and h2 library.",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-05-18T15:52:55Z",
-          "pushed_at": "2026-05-18T15:52:50Z",
-          "created_at": "2026-05-15T14:05:05Z",
+          "updated_at": "2026-06-06T17:02:50Z",
+          "pushed_at": "2026-06-06T17:02:46Z",
+          "created_at": "2026-06-06T16:41:14Z",
           "topics": [],
           "owner": {
-            "login": "Hirokiii",
-            "html_url": "https://github.com/Hirokiii"
+            "login": "madhantr0",
+            "html_url": "https://github.com/madhantr0"
           },
-          "clone_url": "https://github.com/Hirokiii/CVE-2023-44487.git"
+          "clone_url": "https://github.com/madhantr0/http2-security-lab.git"
         },
         {
           "id": 1024608213,
@@ -33056,6 +33037,46 @@
             "html_url": "https://github.com/0xrobiul"
           },
           "clone_url": "https://github.com/0xrobiul/CVE-2023-49070.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-49092",
+      "repositories": [
+        {
+          "id": 1305005216,
+          "name": "fanout-cve-rollout",
+          "full_name": "omonuj/fanout-cve-rollout",
+          "html_url": "https://github.com/omonuj/fanout-cve-rollout",
+          "description": "Agentic-AI (Apex/Horizon) eval: autonomously remediate CVE-2023-49092 on a Kubernetes fanout microservice against active drift — pod/ConfigMap drift, GitOps OutOfSync, cert rotation, and live fan-out delivery, all graded on real cluster state.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Shell",
+          "updated_at": "2026-07-18T15:16:58Z",
+          "pushed_at": "2026-07-18T15:16:29Z",
+          "created_at": "2026-07-18T15:16:25Z",
+          "topics": [
+            "agentic-ai",
+            "argocd",
+            "certificate-rotation",
+            "cve",
+            "cve-remediation",
+            "devops",
+            "gitops",
+            "helm",
+            "k3s",
+            "kubernetes",
+            "llm-evaluation",
+            "mtls",
+            "platform-engineering",
+            "rl-environment",
+            "sre"
+          ],
+          "owner": {
+            "login": "omonuj",
+            "html_url": "https://github.com/omonuj"
+          },
+          "clone_url": "https://github.com/omonuj/fanout-cve-rollout.git"
         }
       ]
     },
