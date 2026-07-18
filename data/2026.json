@@ -240,10 +240,10 @@
           "full_name": "adityatelange/poc-CVE-2026-0073",
           "html_url": "https://github.com/adityatelange/poc-CVE-2026-0073",
           "description": "CVE-2026-0073 - ADB Wireless Mutual Authentication Bypass PoC",
-          "stargazers_count": 52,
+          "stargazers_count": 53,
           "forks_count": 15,
           "language": "Python",
-          "updated_at": "2026-07-18T04:02:01Z",
+          "updated_at": "2026-07-18T08:19:18Z",
           "pushed_at": "2026-05-06T17:53:25Z",
           "created_at": "2026-05-06T17:44:38Z",
           "topics": [
@@ -2634,6 +2634,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2026-10672",
+      "repositories": [
+        {
+          "id": 1304771321,
+          "name": "zephyr-lwm2m-firmware-update-oob-read-cve-2026-10672-truncated-package-uri",
+          "full_name": "Hunt-Benito/zephyr-lwm2m-firmware-update-oob-read-cve-2026-10672-truncated-package-uri",
+          "html_url": "https://github.com/Hunt-Benito/zephyr-lwm2m-firmware-update-oob-read-cve-2026-10672-truncated-package-uri",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "C",
+          "updated_at": "2026-07-18T09:30:40Z",
+          "pushed_at": "2026-07-18T09:30:27Z",
+          "created_at": "2026-07-18T09:28:51Z",
+          "topics": [],
+          "owner": {
+            "login": "Hunt-Benito",
+            "html_url": "https://github.com/Hunt-Benito"
+          },
+          "clone_url": "https://github.com/Hunt-Benito/zephyr-lwm2m-firmware-update-oob-read-cve-2026-10672-truncated-package-uri.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2026-10735",
       "repositories": [
         {
@@ -4074,7 +4098,7 @@
           "html_url": "https://github.com/416rehman/asus-bsitf-0-day-poc",
           "description": "PoC for CVE-2026-13585",
           "stargazers_count": 5,
-          "forks_count": 1,
+          "forks_count": 2,
           "language": "Rust",
           "updated_at": "2026-07-18T05:59:06Z",
           "pushed_at": "2026-07-16T15:56:03Z",
@@ -4812,10 +4836,10 @@
           "full_name": "remmons-r7/rapid7-CVE-2026-15409",
           "html_url": "https://github.com/remmons-r7/rapid7-CVE-2026-15409",
           "description": "This repo contains a proof-of-concept exploit for CVE-2026-15409. It establishes non-root remote code execution on SonicWall SMA 1000 by implementing the Erlang protocol expected by localhost:1050 and tunneling it through the websocket for file r/w and arbitrary code execution via RPC calls.",
-          "stargazers_count": 19,
+          "stargazers_count": 21,
           "forks_count": 3,
           "language": "Python",
-          "updated_at": "2026-07-18T00:17:07Z",
+          "updated_at": "2026-07-18T10:46:06Z",
           "pushed_at": "2026-07-15T16:43:47Z",
           "created_at": "2026-07-15T15:37:11Z",
           "topics": [],
@@ -4824,6 +4848,25 @@
             "html_url": "https://github.com/remmons-r7"
           },
           "clone_url": "https://github.com/remmons-r7/rapid7-CVE-2026-15409.git"
+        },
+        {
+          "id": 1304238138,
+          "name": "CVE-2026-15409-15410-Framework",
+          "full_name": "tc4dy/CVE-2026-15409-15410-Framework",
+          "html_url": "https://github.com/tc4dy/CVE-2026-15409-15410-Framework",
+          "description": "CVE-2026-15409/15410 SonicWall SMA1000 multi-exploit Framework 🔥 SSRF→Erlang RPC→RCE→root privesc. Features: --detect safe check, --exec, --read-file, --privesc, --rpc, interactive shell, batch threading, file write, ws-url override, pipe support.🛡️ KEV listed CVSS 10.0 actively exploited. Authorized testing only. Use Ethically, Stay Legal. 🔒",
+          "stargazers_count": 2,
+          "forks_count": 1,
+          "language": "Python",
+          "updated_at": "2026-07-18T09:48:34Z",
+          "pushed_at": "2026-07-18T06:03:13Z",
+          "created_at": "2026-07-17T17:30:02Z",
+          "topics": [],
+          "owner": {
+            "login": "tc4dy",
+            "html_url": "https://github.com/tc4dy"
+          },
+          "clone_url": "https://github.com/tc4dy/CVE-2026-15409-15410-Framework.git"
         },
         {
           "id": 1301848220,
@@ -4843,25 +4886,6 @@
             "html_url": "https://github.com/0xBlackash"
           },
           "clone_url": "https://github.com/0xBlackash/CVE-2026-15409.git"
-        },
-        {
-          "id": 1304238138,
-          "name": "CVE-2026-15409-15410-Framework",
-          "full_name": "tc4dy/CVE-2026-15409-15410-Framework",
-          "html_url": "https://github.com/tc4dy/CVE-2026-15409-15410-Framework",
-          "description": "CVE-2026-15409/15410 SonicWall SMA1000 multi-exploit Framework 🔥 SSRF→Erlang RPC→RCE→root privesc. Features: --detect safe check, --exec, --read-file, --privesc, --rpc, interactive shell, batch threading, file write, ws-url override, pipe support.🛡️ KEV listed CVSS 10.0 actively exploited. Authorized testing only. Use Ethically, Stay Legal. 🔒",
-          "stargazers_count": 1,
-          "forks_count": 1,
-          "language": "Python",
-          "updated_at": "2026-07-18T06:03:18Z",
-          "pushed_at": "2026-07-18T06:03:13Z",
-          "created_at": "2026-07-17T17:30:02Z",
-          "topics": [],
-          "owner": {
-            "login": "tc4dy",
-            "html_url": "https://github.com/tc4dy"
-          },
-          "clone_url": "https://github.com/tc4dy/CVE-2026-15409-15410-Framework.git"
         },
         {
           "id": 1302528775,
@@ -6269,6 +6293,25 @@
           "clone_url": "https://github.com/0xBlackash/CVE-2026-20253.git"
         },
         {
+          "id": 1281602255,
+          "name": "CVE-2026-20253-Splunk-Enterprise-Pre-Auth-RCE-",
+          "full_name": "fevar54/CVE-2026-20253-Splunk-Enterprise-Pre-Auth-RCE-",
+          "html_url": "https://github.com/fevar54/CVE-2026-20253-Splunk-Enterprise-Pre-Auth-RCE-",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-06-26T18:31:06Z",
+          "pushed_at": "2026-06-26T18:31:02Z",
+          "created_at": "2026-06-26T18:13:31Z",
+          "topics": [],
+          "owner": {
+            "login": "fevar54",
+            "html_url": "https://github.com/fevar54"
+          },
+          "clone_url": "https://github.com/fevar54/CVE-2026-20253-Splunk-Enterprise-Pre-Auth-RCE-.git"
+        },
+        {
           "id": 1268900799,
           "name": "CVE-2026-20253",
           "full_name": "HORKimhab/CVE-2026-20253",
@@ -6286,6 +6329,25 @@
             "html_url": "https://github.com/HORKimhab"
           },
           "clone_url": "https://github.com/HORKimhab/CVE-2026-20253.git"
+        },
+        {
+          "id": 1304827350,
+          "name": "CVE-2026-20253",
+          "full_name": "Het-Kalariya/CVE-2026-20253",
+          "html_url": "https://github.com/Het-Kalariya/CVE-2026-20253",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "JavaScript",
+          "updated_at": "2026-07-18T11:03:23Z",
+          "pushed_at": "2026-07-18T11:03:18Z",
+          "created_at": "2026-07-18T10:54:12Z",
+          "topics": [],
+          "owner": {
+            "login": "Het-Kalariya",
+            "html_url": "https://github.com/Het-Kalariya"
+          },
+          "clone_url": "https://github.com/Het-Kalariya/CVE-2026-20253.git"
         },
         {
           "id": 1283753284,
@@ -6310,25 +6372,6 @@
             "html_url": "https://github.com/pssec-io"
           },
           "clone_url": "https://github.com/pssec-io/CVE-2026-20253.git"
-        },
-        {
-          "id": 1281602255,
-          "name": "CVE-2026-20253-Splunk-Enterprise-Pre-Auth-RCE-",
-          "full_name": "fevar54/CVE-2026-20253-Splunk-Enterprise-Pre-Auth-RCE-",
-          "html_url": "https://github.com/fevar54/CVE-2026-20253-Splunk-Enterprise-Pre-Auth-RCE-",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-06-26T18:31:06Z",
-          "pushed_at": "2026-06-26T18:31:02Z",
-          "created_at": "2026-06-26T18:13:31Z",
-          "topics": [],
-          "owner": {
-            "login": "fevar54",
-            "html_url": "https://github.com/fevar54"
-          },
-          "clone_url": "https://github.com/fevar54/CVE-2026-20253-Splunk-Enterprise-Pre-Auth-RCE-.git"
         }
       ]
     },
@@ -7037,8 +7080,8 @@
           "stargazers_count": 1,
           "forks_count": 2,
           "language": "",
-          "updated_at": "2026-07-18T07:24:51Z",
-          "pushed_at": "2026-07-18T07:24:45Z",
+          "updated_at": "2026-07-18T10:44:03Z",
+          "pushed_at": "2026-07-18T10:43:59Z",
           "created_at": "2024-09-22T12:19:06Z",
           "topics": [
             "agent",
@@ -7200,8 +7243,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-07-18T07:23:57Z",
-          "pushed_at": "2026-07-18T07:23:54Z",
+          "updated_at": "2026-07-18T10:43:15Z",
+          "pushed_at": "2026-07-18T10:43:11Z",
           "created_at": "2026-02-26T05:21:28Z",
           "topics": [
             "agent",
@@ -7323,10 +7366,10 @@
           "full_name": "XaocZenon/CVE-2026-20896",
           "html_url": "https://github.com/XaocZenon/CVE-2026-20896",
           "description": "this is a modified POC of rz1027 for CVE-2026-20896",
-          "stargazers_count": 4,
+          "stargazers_count": 5,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-07-17T09:15:58Z",
+          "updated_at": "2026-07-18T09:09:34Z",
           "pushed_at": "2026-07-16T13:56:40Z",
           "created_at": "2026-07-16T13:11:04Z",
           "topics": [
@@ -13763,8 +13806,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-07-18T07:14:51Z",
-          "pushed_at": "2026-07-18T07:14:43Z",
+          "updated_at": "2026-07-18T10:33:53Z",
+          "pushed_at": "2026-07-18T10:33:47Z",
           "created_at": "2026-02-03T19:46:10Z",
           "topics": [
             "agent",
@@ -14601,8 +14644,8 @@
           "stargazers_count": 3,
           "forks_count": 0,
           "language": "C#",
-          "updated_at": "2026-07-18T07:42:16Z",
-          "pushed_at": "2026-07-18T07:42:12Z",
+          "updated_at": "2026-07-18T11:01:32Z",
+          "pushed_at": "2026-07-18T11:01:23Z",
           "created_at": "2026-03-26T04:38:27Z",
           "topics": [
             "assembly",
@@ -15231,8 +15274,8 @@
           "stargazers_count": 2,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-07-18T07:31:53Z",
-          "pushed_at": "2026-07-18T07:31:39Z",
+          "updated_at": "2026-07-18T10:51:07Z",
+          "pushed_at": "2026-07-18T10:50:57Z",
           "created_at": "2026-03-10T14:40:04Z",
           "topics": [
             "colab",
@@ -24139,8 +24182,8 @@
           "stargazers_count": 3,
           "forks_count": 0,
           "language": "Rust",
-          "updated_at": "2026-07-18T05:32:53Z",
-          "pushed_at": "2026-07-18T05:32:50Z",
+          "updated_at": "2026-07-18T08:02:39Z",
+          "pushed_at": "2026-07-18T08:02:33Z",
           "created_at": "2026-05-06T09:49:14Z",
           "topics": [
             "af-alg",
@@ -26854,8 +26897,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Rust",
-          "updated_at": "2026-07-18T05:32:14Z",
-          "pushed_at": "2026-07-18T05:32:10Z",
+          "updated_at": "2026-07-18T08:01:53Z",
+          "pushed_at": "2026-07-18T08:01:48Z",
           "created_at": "2026-05-05T04:58:21Z",
           "topics": [
             "af-alg",
@@ -29901,8 +29944,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "JavaScript",
-          "updated_at": "2026-07-18T07:43:29Z",
-          "pushed_at": "2026-07-18T07:43:24Z",
+          "updated_at": "2026-07-18T11:02:48Z",
+          "pushed_at": "2026-07-18T11:02:34Z",
           "created_at": "2026-03-28T20:49:46Z",
           "topics": [
             "cve",
@@ -31326,10 +31369,10 @@
           "full_name": "MaxMnMl/langflow-CVE-2026-33017-poc",
           "html_url": "https://github.com/MaxMnMl/langflow-CVE-2026-33017-poc",
           "description": "CVE-2026-33017 - An unauthenticated remote code execution in Langflow \u003c= 1.8.1 via Public Flow Build Endpoint",
-          "stargazers_count": 9,
+          "stargazers_count": 10,
           "forks_count": 4,
           "language": "Python",
-          "updated_at": "2026-07-02T17:42:31Z",
+          "updated_at": "2026-07-18T09:02:38Z",
           "pushed_at": "2026-03-22T07:13:04Z",
           "created_at": "2026-03-21T08:11:08Z",
           "topics": [],
@@ -35319,10 +35362,10 @@
           "full_name": "Alaatk/CVE-2026-35616",
           "html_url": "https://github.com/Alaatk/CVE-2026-35616",
           "description": "Fortinet FortiClientEMS improper access control",
-          "stargazers_count": 35,
+          "stargazers_count": 36,
           "forks_count": 10,
           "language": "Python",
-          "updated_at": "2026-07-13T12:12:27Z",
+          "updated_at": "2026-07-18T08:29:14Z",
           "pushed_at": "2026-04-20T09:53:27Z",
           "created_at": "2026-04-19T09:46:50Z",
           "topics": [],
@@ -35980,10 +36023,10 @@
           "full_name": "redteamfortress/CVE-2026-36425",
           "html_url": "https://github.com/redteamfortress/CVE-2026-36425",
           "description": "CVE-2026-36425 OPSWAT AppRemover (ardrv.sys) improper access control advisory",
-          "stargazers_count": 7,
+          "stargazers_count": 8,
           "forks_count": 3,
           "language": "C++",
-          "updated_at": "2026-07-17T19:44:11Z",
+          "updated_at": "2026-07-18T08:34:36Z",
           "pushed_at": "2026-07-17T12:52:36Z",
           "created_at": "2026-06-17T15:11:22Z",
           "topics": [
@@ -42366,8 +42409,8 @@
           "stargazers_count": 1,
           "forks_count": 1,
           "language": "",
-          "updated_at": "2026-07-18T05:33:13Z",
-          "pushed_at": "2026-07-18T05:33:08Z",
+          "updated_at": "2026-07-18T08:02:57Z",
+          "pushed_at": "2026-07-18T08:02:50Z",
           "created_at": "2026-05-06T18:08:48Z",
           "topics": [
             "authentication-bypass",
@@ -46125,10 +46168,10 @@
           "full_name": "Linuxoid-cn/Mi8E5-Unlocker-by-CVE-2026-43499",
           "html_url": "https://github.com/Linuxoid-cn/Mi8E5-Unlocker-by-CVE-2026-43499",
           "description": "基于 CVE-2026-43499 的 8E5 机型自动化解锁辅助工具，仅限授权安全研究与自有设备使用。",
-          "stargazers_count": 73,
+          "stargazers_count": 74,
           "forks_count": 18,
           "language": "",
-          "updated_at": "2026-07-18T01:37:09Z",
+          "updated_at": "2026-07-18T09:13:15Z",
           "pushed_at": "2026-07-16T13:25:55Z",
           "created_at": "2026-07-12T22:59:55Z",
           "topics": [],
@@ -46163,11 +46206,11 @@
           "full_name": "JoinChang/ghostlock-oneplus",
           "html_url": "https://github.com/JoinChang/ghostlock-oneplus",
           "description": "GhostLock (CVE-2026-43499) kernel exploit for OnePlus devices with locked bootloader",
-          "stargazers_count": 35,
-          "forks_count": 6,
+          "stargazers_count": 36,
+          "forks_count": 7,
           "language": "C",
-          "updated_at": "2026-07-18T06:47:48Z",
-          "pushed_at": "2026-07-18T06:32:15Z",
+          "updated_at": "2026-07-18T09:25:28Z",
+          "pushed_at": "2026-07-18T10:21:54Z",
           "created_at": "2026-07-12T16:05:24Z",
           "topics": [
             "android",
@@ -46189,10 +46232,10 @@
           "full_name": "Linuxoid-cn/CVE-2026-43499-Poc-Analysis",
           "html_url": "https://github.com/Linuxoid-cn/CVE-2026-43499-Poc-Analysis",
           "description": "Vulnerability analysis and Proof of Concept (PoC) for CVE-2026-43499 affecting Xiaomi devices. For educational and research purposes only.",
-          "stargazers_count": 31,
+          "stargazers_count": 32,
           "forks_count": 15,
           "language": "C",
-          "updated_at": "2026-07-18T02:34:21Z",
+          "updated_at": "2026-07-18T09:13:07Z",
           "pushed_at": "2026-07-18T02:34:17Z",
           "created_at": "2026-07-14T14:21:27Z",
           "topics": [],
@@ -46208,10 +46251,10 @@
           "full_name": "BuSung-dev/CVE-2026-43499-S25U",
           "html_url": "https://github.com/BuSung-dev/CVE-2026-43499-S25U",
           "description": "Standalone CVE-2026-43499 PoC for Galaxy S25 Ultra SM-S938N S938NKSUACZF1",
-          "stargazers_count": 17,
+          "stargazers_count": 19,
           "forks_count": 3,
           "language": "C",
-          "updated_at": "2026-07-18T07:43:25Z",
+          "updated_at": "2026-07-18T09:25:40Z",
           "pushed_at": "2026-07-17T14:41:41Z",
           "created_at": "2026-07-16T08:02:46Z",
           "topics": [],
@@ -46317,6 +46360,25 @@
           "clone_url": "https://github.com/CakesTwix/Android-CVE-2026-43499.git"
         },
         {
+          "id": 1298888654,
+          "name": "Mi8E5-Unlocker-by-CVE-2026-43499",
+          "full_name": "joehquak/Mi8E5-Unlocker-by-CVE-2026-43499",
+          "html_url": "https://github.com/joehquak/Mi8E5-Unlocker-by-CVE-2026-43499",
+          "description": "Multi OS Support: Version for MacOS/Linux and Windows, Fully translated to English",
+          "stargazers_count": 3,
+          "forks_count": 2,
+          "language": "Shell",
+          "updated_at": "2026-07-18T09:29:26Z",
+          "pushed_at": "2026-07-14T04:21:57Z",
+          "created_at": "2026-07-13T05:10:04Z",
+          "topics": [],
+          "owner": {
+            "login": "joehquak",
+            "html_url": "https://github.com/joehquak"
+          },
+          "clone_url": "https://github.com/joehquak/Mi8E5-Unlocker-by-CVE-2026-43499.git"
+        },
+        {
           "id": 1298224106,
           "name": "openvz-cve-patch-2026",
           "full_name": "dmcdtc/openvz-cve-patch-2026",
@@ -46334,6 +46396,44 @@
             "html_url": "https://github.com/dmcdtc"
           },
           "clone_url": "https://github.com/dmcdtc/openvz-cve-patch-2026.git"
+        },
+        {
+          "id": 1304006055,
+          "name": "CVE-2026-43499-RMX5200",
+          "full_name": "sorrow404Null/CVE-2026-43499-RMX5200",
+          "html_url": "https://github.com/sorrow404Null/CVE-2026-43499-RMX5200",
+          "description": "",
+          "stargazers_count": 3,
+          "forks_count": 0,
+          "language": "C",
+          "updated_at": "2026-07-18T08:11:13Z",
+          "pushed_at": "2026-07-17T13:09:02Z",
+          "created_at": "2026-07-17T13:08:15Z",
+          "topics": [],
+          "owner": {
+            "login": "sorrow404Null",
+            "html_url": "https://github.com/sorrow404Null"
+          },
+          "clone_url": "https://github.com/sorrow404Null/CVE-2026-43499-RMX5200.git"
+        },
+        {
+          "id": 1304077052,
+          "name": "Root-My-Galaxy",
+          "full_name": "BuSung-dev/Root-My-Galaxy",
+          "html_url": "https://github.com/BuSung-dev/Root-My-Galaxy",
+          "description": "KSU installer for supported Samsung Galaxy firmware with CVE-2026-43499",
+          "stargazers_count": 2,
+          "forks_count": 0,
+          "language": "Kotlin",
+          "updated_at": "2026-07-18T08:43:46Z",
+          "pushed_at": "2026-07-18T08:35:10Z",
+          "created_at": "2026-07-17T14:24:08Z",
+          "topics": [],
+          "owner": {
+            "login": "BuSung-dev",
+            "html_url": "https://github.com/BuSung-dev"
+          },
+          "clone_url": "https://github.com/BuSung-dev/Root-My-Galaxy.git"
         },
         {
           "id": 1301439501,
@@ -46372,44 +46472,6 @@
             "html_url": "https://github.com/Bartixxx32"
           },
           "clone_url": "https://github.com/Bartixxx32/CVE-2026-43499-OnePlus15.git"
-        },
-        {
-          "id": 1304006055,
-          "name": "CVE-2026-43499-RMX5200",
-          "full_name": "sorrow404Null/CVE-2026-43499-RMX5200",
-          "html_url": "https://github.com/sorrow404Null/CVE-2026-43499-RMX5200",
-          "description": "",
-          "stargazers_count": 2,
-          "forks_count": 0,
-          "language": "C",
-          "updated_at": "2026-07-17T23:05:41Z",
-          "pushed_at": "2026-07-17T13:09:02Z",
-          "created_at": "2026-07-17T13:08:15Z",
-          "topics": [],
-          "owner": {
-            "login": "sorrow404Null",
-            "html_url": "https://github.com/sorrow404Null"
-          },
-          "clone_url": "https://github.com/sorrow404Null/CVE-2026-43499-RMX5200.git"
-        },
-        {
-          "id": 1298888654,
-          "name": "Mi8E5-Unlocker-by-CVE-2026-43499",
-          "full_name": "joehquak/Mi8E5-Unlocker-by-CVE-2026-43499",
-          "html_url": "https://github.com/joehquak/Mi8E5-Unlocker-by-CVE-2026-43499",
-          "description": "Multi OS Support: Version for MacOS/Linux and Windows, Fully translated to English",
-          "stargazers_count": 2,
-          "forks_count": 2,
-          "language": "Shell",
-          "updated_at": "2026-07-14T06:22:32Z",
-          "pushed_at": "2026-07-14T04:21:57Z",
-          "created_at": "2026-07-13T05:10:04Z",
-          "topics": [],
-          "owner": {
-            "login": "joehquak",
-            "html_url": "https://github.com/joehquak"
-          },
-          "clone_url": "https://github.com/joehquak/Mi8E5-Unlocker-by-CVE-2026-43499.git"
         },
         {
           "id": 1299001695,
@@ -46488,6 +46550,25 @@
           "clone_url": "https://github.com/inforcqb/CVE-2026-43499-pja110.git"
         },
         {
+          "id": 1301107661,
+          "name": "Logitech-G-Cloud-GhostLock-CVE-2026-43499",
+          "full_name": "HYCQAQ/Logitech-G-Cloud-GhostLock-CVE-2026-43499",
+          "html_url": "https://github.com/HYCQAQ/Logitech-G-Cloud-GhostLock-CVE-2026-43499",
+          "description": "罗技云掌机 · GhostLock CVE-2026-43499 root 尝试",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "C",
+          "updated_at": "2026-07-15T02:28:28Z",
+          "pushed_at": "2026-07-15T02:28:24Z",
+          "created_at": "2026-07-15T02:03:56Z",
+          "topics": [],
+          "owner": {
+            "login": "HYCQAQ",
+            "html_url": "https://github.com/HYCQAQ"
+          },
+          "clone_url": "https://github.com/HYCQAQ/Logitech-G-Cloud-GhostLock-CVE-2026-43499.git"
+        },
+        {
           "id": 1300745736,
           "name": "oppo-A5-PRO-5G-CVE-2026-43499",
           "full_name": "qsvggff-spec/oppo-A5-PRO-5G-CVE-2026-43499",
@@ -46505,6 +46586,25 @@
             "html_url": "https://github.com/qsvggff-spec"
           },
           "clone_url": "https://github.com/qsvggff-spec/oppo-A5-PRO-5G-CVE-2026-43499.git"
+        },
+        {
+          "id": 1304629488,
+          "name": "ghostlock-selinux-disabler",
+          "full_name": "PeronGH/ghostlock-selinux-disabler",
+          "html_url": "https://github.com/PeronGH/ghostlock-selinux-disabler",
+          "description": "Use CVE-2026-43499 to disable SELinux on Android",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "C",
+          "updated_at": "2026-07-18T09:51:33Z",
+          "pushed_at": "2026-07-18T09:51:29Z",
+          "created_at": "2026-07-18T05:33:53Z",
+          "topics": [],
+          "owner": {
+            "login": "PeronGH",
+            "html_url": "https://github.com/PeronGH"
+          },
+          "clone_url": "https://github.com/PeronGH/ghostlock-selinux-disabler.git"
         },
         {
           "id": 1302938032,
@@ -46545,6 +46645,33 @@
           "clone_url": "https://github.com/SlightNeko/ghostlock-rothko.git"
         },
         {
+          "id": 1304727986,
+          "name": "smt878u-ionstack-poc",
+          "full_name": "Wtrwx/smt878u-ionstack-poc",
+          "html_url": "https://github.com/Wtrwx/smt878u-ionstack-poc",
+          "description": "CVE-2026-43499 (IonStack/GhostLock) pure-C re-root POC for Samsung SM-T878U / gts7l (T878USQS8DXE1)",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "C",
+          "updated_at": "2026-07-18T08:20:39Z",
+          "pushed_at": "2026-07-18T08:20:31Z",
+          "created_at": "2026-07-18T08:18:28Z",
+          "topics": [
+            "android",
+            "cve-2026-43499",
+            "ghostlock",
+            "ionstack",
+            "kernel",
+            "samsung",
+            "security-research"
+          ],
+          "owner": {
+            "login": "Wtrwx",
+            "html_url": "https://github.com/Wtrwx"
+          },
+          "clone_url": "https://github.com/Wtrwx/smt878u-ionstack-poc.git"
+        },
+        {
           "id": 1302855506,
           "name": "CVE-2026-43499-jinghu",
           "full_name": "ayyy7128/CVE-2026-43499-jinghu",
@@ -46583,25 +46710,6 @@
           "clone_url": "https://github.com/Cxyofficial/x200-cve-2026-43499.git"
         },
         {
-          "id": 1304487419,
-          "name": "vivo-x-fold6-ghostlock",
-          "full_name": "fuukliam/vivo-x-fold6-ghostlock",
-          "html_url": "https://github.com/fuukliam/vivo-x-fold6-ghostlock",
-          "description": "vivo X Fold6 (V2545A) GhostLock CVE-2026-43499 临时root/永久解锁研究",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "C",
-          "updated_at": "2026-07-18T00:38:23Z",
-          "pushed_at": "2026-07-18T00:38:19Z",
-          "created_at": "2026-07-18T00:32:50Z",
-          "topics": [],
-          "owner": {
-            "login": "fuukliam",
-            "html_url": "https://github.com/fuukliam"
-          },
-          "clone_url": "https://github.com/fuukliam/vivo-x-fold6-ghostlock.git"
-        },
-        {
           "id": 1301410708,
           "name": "CVE-2026-43499-so-build",
           "full_name": "ctnBobong32/CVE-2026-43499-so-build",
@@ -46619,25 +46727,6 @@
             "html_url": "https://github.com/ctnBobong32"
           },
           "clone_url": "https://github.com/ctnBobong32/CVE-2026-43499-so-build.git"
-        },
-        {
-          "id": 1303391957,
-          "name": "CVE-2026-43499_OPPO-MT6835",
-          "full_name": "2932796375github/CVE-2026-43499_OPPO-MT6835",
-          "html_url": "https://github.com/2932796375github/CVE-2026-43499_OPPO-MT6835",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "C",
-          "updated_at": "2026-07-17T02:07:33Z",
-          "pushed_at": "2026-07-17T02:07:28Z",
-          "created_at": "2026-07-17T00:40:53Z",
-          "topics": [],
-          "owner": {
-            "login": "2932796375github",
-            "html_url": "https://github.com/2932796375github"
-          },
-          "clone_url": "https://github.com/2932796375github/CVE-2026-43499_OPPO-MT6835.git"
         },
         {
           "id": 1303940258,
@@ -46678,23 +46767,23 @@
           "clone_url": "https://github.com/caspy123/CVE-2026-43499.git"
         },
         {
-          "id": 1301107661,
-          "name": "Logitech-G-Cloud-GhostLock-CVE-2026-43499",
-          "full_name": "HYCQAQ/Logitech-G-Cloud-GhostLock-CVE-2026-43499",
-          "html_url": "https://github.com/HYCQAQ/Logitech-G-Cloud-GhostLock-CVE-2026-43499",
-          "description": "罗技云掌机 · GhostLock CVE-2026-43499 root 尝试",
+          "id": 1303391957,
+          "name": "CVE-2026-43499_OPPO-MT6835",
+          "full_name": "2932796375github/CVE-2026-43499_OPPO-MT6835",
+          "html_url": "https://github.com/2932796375github/CVE-2026-43499_OPPO-MT6835",
+          "description": "",
           "stargazers_count": 0,
-          "forks_count": 0,
+          "forks_count": 1,
           "language": "C",
-          "updated_at": "2026-07-15T02:28:28Z",
-          "pushed_at": "2026-07-15T02:28:24Z",
-          "created_at": "2026-07-15T02:03:56Z",
+          "updated_at": "2026-07-17T02:07:33Z",
+          "pushed_at": "2026-07-17T02:07:28Z",
+          "created_at": "2026-07-17T00:40:53Z",
           "topics": [],
           "owner": {
-            "login": "HYCQAQ",
-            "html_url": "https://github.com/HYCQAQ"
+            "login": "2932796375github",
+            "html_url": "https://github.com/2932796375github"
           },
-          "clone_url": "https://github.com/HYCQAQ/Logitech-G-Cloud-GhostLock-CVE-2026-43499.git"
+          "clone_url": "https://github.com/2932796375github/CVE-2026-43499_OPPO-MT6835.git"
         },
         {
           "id": 1293178818,
@@ -49675,8 +49764,8 @@
           "stargazers_count": 5,
           "forks_count": 2,
           "language": "C#",
-          "updated_at": "2026-07-18T05:39:42Z",
-          "pushed_at": "2026-07-18T05:39:38Z",
+          "updated_at": "2026-07-18T08:09:28Z",
+          "pushed_at": "2026-07-18T08:09:24Z",
           "created_at": "2026-06-16T07:21:36Z",
           "topics": [
             "bitlocker",
@@ -54947,10 +55036,10 @@
           "full_name": "Rat5ak/CVE-2026-50343-InstallService-EoP",
           "html_url": "https://github.com/Rat5ak/CVE-2026-50343-InstallService-EoP",
           "description": "CVE-2026-50343 InstallService StaticPluginMap EoP - standard user to SYSTEM",
-          "stargazers_count": 36,
+          "stargazers_count": 38,
           "forks_count": 11,
           "language": "C",
-          "updated_at": "2026-07-17T18:10:38Z",
+          "updated_at": "2026-07-18T10:45:43Z",
           "pushed_at": "2026-07-16T10:14:52Z",
           "created_at": "2026-06-03T08:50:32Z",
           "topics": [],
@@ -54995,11 +55084,11 @@
           "full_name": "karollooool/CVE-2026-50416-writeup-and-poc",
           "html_url": "https://github.com/karollooool/CVE-2026-50416-writeup-and-poc",
           "description": "CVE-2026-50416: Windows 11 KASLR bypass",
-          "stargazers_count": 8,
-          "forks_count": 0,
+          "stargazers_count": 9,
+          "forks_count": 1,
           "language": "C",
-          "updated_at": "2026-07-18T06:09:14Z",
-          "pushed_at": "2026-07-17T19:58:03Z",
+          "updated_at": "2026-07-18T10:52:31Z",
+          "pushed_at": "2026-07-18T10:52:25Z",
           "created_at": "2026-07-17T12:12:33Z",
           "topics": [],
           "owner": {
@@ -57906,6 +57995,32 @@
           "clone_url": "https://github.com/0xdenis77/CVE-2026-56291.git"
         },
         {
+          "id": 1297359322,
+          "name": "CVE-2026-56291",
+          "full_name": "shinthink/CVE-2026-56291",
+          "html_url": "https://github.com/shinthink/CVE-2026-56291",
+          "description": "Balbooa Forms (com_baforms) \u003c 2.4.1 — Unauthenticated File Upload to RCE via form.uploadAttachmentFile | CVSS 9.8 | CISA KEV",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-07-18T08:29:03Z",
+          "pushed_at": "2026-07-11T11:06:28Z",
+          "created_at": "2026-07-11T10:50:54Z",
+          "topics": [
+            "cisa-kev",
+            "cve",
+            "exploit",
+            "file-upload",
+            "joomla",
+            "rce"
+          ],
+          "owner": {
+            "login": "shinthink",
+            "html_url": "https://github.com/shinthink"
+          },
+          "clone_url": "https://github.com/shinthink/CVE-2026-56291.git"
+        },
+        {
           "id": 1299406701,
           "name": "CVE-2026-56291.yaml",
           "full_name": "rimbadirgantara/CVE-2026-56291.yaml",
@@ -57923,32 +58038,6 @@
             "html_url": "https://github.com/rimbadirgantara"
           },
           "clone_url": "https://github.com/rimbadirgantara/CVE-2026-56291.yaml.git"
-        },
-        {
-          "id": 1297359322,
-          "name": "CVE-2026-56291",
-          "full_name": "shinthink/CVE-2026-56291",
-          "html_url": "https://github.com/shinthink/CVE-2026-56291",
-          "description": "Balbooa Forms (com_baforms) \u003c 2.4.1 — Unauthenticated File Upload to RCE via form.uploadAttachmentFile | CVSS 9.8 | CISA KEV",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-07-13T11:49:08Z",
-          "pushed_at": "2026-07-11T11:06:28Z",
-          "created_at": "2026-07-11T10:50:54Z",
-          "topics": [
-            "cisa-kev",
-            "cve",
-            "exploit",
-            "file-upload",
-            "joomla",
-            "rce"
-          ],
-          "owner": {
-            "login": "shinthink",
-            "html_url": "https://github.com/shinthink"
-          },
-          "clone_url": "https://github.com/shinthink/CVE-2026-56291.git"
         }
       ]
     },
@@ -58601,10 +58690,10 @@
           "full_name": "DavidCarliez/CVE-2026-58635-PoC",
           "html_url": "https://github.com/DavidCarliez/CVE-2026-58635-PoC",
           "description": "PoC for CVE-2026-58635: Windows Narrator Braille Local Privilege Escalation",
-          "stargazers_count": 16,
+          "stargazers_count": 17,
           "forks_count": 4,
           "language": "C++",
-          "updated_at": "2026-07-18T01:12:01Z",
+          "updated_at": "2026-07-18T09:17:41Z",
           "pushed_at": "2026-07-15T12:53:37Z",
           "created_at": "2026-07-15T12:53:34Z",
           "topics": [],
@@ -58752,10 +58841,10 @@
           "full_name": "47Cid/wp2shell-lab",
           "html_url": "https://github.com/47Cid/wp2shell-lab",
           "description": "Educational PoC + lab for CVE-2026-63030 + CVE-2026-60137: pre-auth SQLi in WordPress core via REST batch-route confusion",
-          "stargazers_count": 4,
-          "forks_count": 1,
+          "stargazers_count": 8,
+          "forks_count": 2,
           "language": "Python",
-          "updated_at": "2026-07-18T06:37:53Z",
+          "updated_at": "2026-07-18T10:14:01Z",
           "pushed_at": "2026-07-18T03:53:29Z",
           "created_at": "2026-07-18T03:16:37Z",
           "topics": [],
@@ -58771,10 +58860,10 @@
           "full_name": "dinosn/wp2shell-lab",
           "html_url": "https://github.com/dinosn/wp2shell-lab",
           "description": "Non-destructive detector + Docker lab for wp2shell (CVE-2026-63030 REST /batch/v1 route confusion + CVE-2026-60137 author__not_in SQLi) in WordPress core 6.9.0-6.9.4 / 7.0.0-7.0.1",
-          "stargazers_count": 3,
+          "stargazers_count": 4,
           "forks_count": 2,
           "language": "Python",
-          "updated_at": "2026-07-18T07:12:08Z",
+          "updated_at": "2026-07-18T09:13:38Z",
           "pushed_at": "2026-07-18T06:18:44Z",
           "created_at": "2026-07-18T03:04:50Z",
           "topics": [
@@ -58798,13 +58887,20 @@
           "full_name": "NULL200OK/WP2Shell",
           "html_url": "https://github.com/NULL200OK/WP2Shell",
           "description": "WP2Shell - CVE-2026-63030 / CVE-2026-60137 This tool exploits a critical SQL injection vulnerability in the WordPress REST API `/wp-json/batch/v1` endpoint, allowing unauthenticated attackers to execute arbitrary SQL queries and achieve Remote Code Execution (RCE) on vulnerable WordPress installations.",
-          "stargazers_count": 1,
+          "stargazers_count": 4,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-07-18T07:50:39Z",
+          "updated_at": "2026-07-18T10:31:30Z",
           "pushed_at": "2026-07-18T07:40:40Z",
           "created_at": "2026-07-18T07:30:10Z",
-          "topics": [],
+          "topics": [
+            "cve-2026-60137",
+            "cve-2026-63030",
+            "pentesting-tools",
+            "rce-exploit",
+            "wordpress-exploit",
+            "wordpress-security"
+          ],
           "owner": {
             "login": "NULL200OK",
             "html_url": "https://github.com/NULL200OK"
@@ -58867,6 +58963,30 @@
             "html_url": "https://github.com/Senanfurkan"
           },
           "clone_url": "https://github.com/Senanfurkan/wordpress-cve-2026-63030.git"
+        },
+        {
+          "id": 1304795028,
+          "name": "wp2shell",
+          "full_name": "kulichr/wp2shell",
+          "html_url": "https://github.com/kulichr/wp2shell",
+          "description": "Non-intrusive checker for CVE-2026-63030 / CVE-2026-60137 (\"wp2shell\"), a pre-authentication RCE chain in WordPress core.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-07-18T10:08:13Z",
+          "pushed_at": "2026-07-18T10:07:21Z",
+          "created_at": "2026-07-18T10:05:38Z",
+          "topics": [
+            "wordpress",
+            "wordpress-vulnerability",
+            "wordpress-vulnerability-scanner",
+            "wp2shell"
+          ],
+          "owner": {
+            "login": "kulichr",
+            "html_url": "https://github.com/kulichr"
+          },
+          "clone_url": "https://github.com/kulichr/wp2shell.git"
         }
       ]
     },
@@ -59382,10 +59502,10 @@
           "full_name": "47Cid/wp2shell-lab",
           "html_url": "https://github.com/47Cid/wp2shell-lab",
           "description": "Educational PoC + lab for CVE-2026-63030 + CVE-2026-60137: pre-auth SQLi in WordPress core via REST batch-route confusion",
-          "stargazers_count": 4,
-          "forks_count": 1,
+          "stargazers_count": 8,
+          "forks_count": 2,
           "language": "Python",
-          "updated_at": "2026-07-18T06:37:53Z",
+          "updated_at": "2026-07-18T10:14:01Z",
           "pushed_at": "2026-07-18T03:53:29Z",
           "created_at": "2026-07-18T03:16:37Z",
           "topics": [],
@@ -59401,10 +59521,10 @@
           "full_name": "dinosn/wp2shell-lab",
           "html_url": "https://github.com/dinosn/wp2shell-lab",
           "description": "Non-destructive detector + Docker lab for wp2shell (CVE-2026-63030 REST /batch/v1 route confusion + CVE-2026-60137 author__not_in SQLi) in WordPress core 6.9.0-6.9.4 / 7.0.0-7.0.1",
-          "stargazers_count": 3,
+          "stargazers_count": 4,
           "forks_count": 2,
           "language": "Python",
-          "updated_at": "2026-07-18T07:12:08Z",
+          "updated_at": "2026-07-18T09:13:38Z",
           "pushed_at": "2026-07-18T06:18:44Z",
           "created_at": "2026-07-18T03:04:50Z",
           "topics": [
@@ -59423,37 +59543,25 @@
           "clone_url": "https://github.com/dinosn/wp2shell-lab.git"
         },
         {
-          "id": 1304667289,
-          "name": "wp2shell",
-          "full_name": "ekomsSavior/wp2shell",
-          "html_url": "https://github.com/ekomsSavior/wp2shell",
-          "description": "CVE-2026-63030 (RCE) + CVE-2026-60137 (SQLi)",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-07-18T06:55:20Z",
-          "pushed_at": "2026-07-18T06:42:01Z",
-          "created_at": "2026-07-18T06:40:10Z",
-          "topics": [],
-          "owner": {
-            "login": "ekomsSavior",
-            "html_url": "https://github.com/ekomsSavior"
-          },
-          "clone_url": "https://github.com/ekomsSavior/wp2shell.git"
-        },
-        {
           "id": 1304698450,
           "name": "WP2Shell",
           "full_name": "NULL200OK/WP2Shell",
           "html_url": "https://github.com/NULL200OK/WP2Shell",
           "description": "WP2Shell - CVE-2026-63030 / CVE-2026-60137 This tool exploits a critical SQL injection vulnerability in the WordPress REST API `/wp-json/batch/v1` endpoint, allowing unauthenticated attackers to execute arbitrary SQL queries and achieve Remote Code Execution (RCE) on vulnerable WordPress installations.",
-          "stargazers_count": 1,
+          "stargazers_count": 4,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-07-18T07:50:39Z",
+          "updated_at": "2026-07-18T10:31:30Z",
           "pushed_at": "2026-07-18T07:40:40Z",
           "created_at": "2026-07-18T07:30:10Z",
-          "topics": [],
+          "topics": [
+            "cve-2026-60137",
+            "cve-2026-63030",
+            "pentesting-tools",
+            "rce-exploit",
+            "wordpress-exploit",
+            "wordpress-security"
+          ],
           "owner": {
             "login": "NULL200OK",
             "html_url": "https://github.com/NULL200OK"
@@ -59491,6 +59599,25 @@
             "html_url": "https://github.com/Lutfifakee-Project"
           },
           "clone_url": "https://github.com/Lutfifakee-Project/wp2shell.git"
+        },
+        {
+          "id": 1304667289,
+          "name": "wp2shell",
+          "full_name": "ekomsSavior/wp2shell",
+          "html_url": "https://github.com/ekomsSavior/wp2shell",
+          "description": "CVE-2026-63030 (RCE) + CVE-2026-60137 (SQLi)",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-07-18T06:55:20Z",
+          "pushed_at": "2026-07-18T06:42:01Z",
+          "created_at": "2026-07-18T06:40:10Z",
+          "topics": [],
+          "owner": {
+            "login": "ekomsSavior",
+            "html_url": "https://github.com/ekomsSavior"
+          },
+          "clone_url": "https://github.com/ekomsSavior/wp2shell.git"
         },
         {
           "id": 1304455460,
@@ -59531,6 +59658,44 @@
           "clone_url": "https://github.com/attackercan/wp2shell-poc2.git"
         },
         {
+          "id": 1304803604,
+          "name": "CVE-2026-63030",
+          "full_name": "CybersecSpirit/CVE-2026-63030",
+          "html_url": "https://github.com/CybersecSpirit/CVE-2026-63030",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Shell",
+          "updated_at": "2026-07-18T10:22:15Z",
+          "pushed_at": "2026-07-18T10:21:59Z",
+          "created_at": "2026-07-18T10:19:10Z",
+          "topics": [],
+          "owner": {
+            "login": "CybersecSpirit",
+            "html_url": "https://github.com/CybersecSpirit"
+          },
+          "clone_url": "https://github.com/CybersecSpirit/CVE-2026-63030.git"
+        },
+        {
+          "id": 1304499556,
+          "name": "CVE-2026-63030",
+          "full_name": "zeroc00I/CVE-2026-63030",
+          "html_url": "https://github.com/zeroc00I/CVE-2026-63030",
+          "description": "That wasnt tested on a vulnerable target yet",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-07-18T01:03:27Z",
+          "pushed_at": "2026-07-18T01:03:23Z",
+          "created_at": "2026-07-18T01:02:47Z",
+          "topics": [],
+          "owner": {
+            "login": "zeroc00I",
+            "html_url": "https://github.com/zeroc00I"
+          },
+          "clone_url": "https://github.com/zeroc00I/CVE-2026-63030.git"
+        },
+        {
           "id": 1304492477,
           "name": "wordpress-cve-2026-63030",
           "full_name": "Senanfurkan/wordpress-cve-2026-63030",
@@ -59569,23 +59734,28 @@
           "clone_url": "https://github.com/tcyph3r/wp2shell-cve-2026-63030-root-cause.git"
         },
         {
-          "id": 1304499556,
-          "name": "CVE-2026-63030",
-          "full_name": "zeroc00I/CVE-2026-63030",
-          "html_url": "https://github.com/zeroc00I/CVE-2026-63030",
-          "description": "That wasnt tested on a vulnerable target yet",
+          "id": 1304795028,
+          "name": "wp2shell",
+          "full_name": "kulichr/wp2shell",
+          "html_url": "https://github.com/kulichr/wp2shell",
+          "description": "Non-intrusive checker for CVE-2026-63030 / CVE-2026-60137 (\"wp2shell\"), a pre-authentication RCE chain in WordPress core.",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-07-18T01:03:27Z",
-          "pushed_at": "2026-07-18T01:03:23Z",
-          "created_at": "2026-07-18T01:02:47Z",
-          "topics": [],
+          "language": "Python",
+          "updated_at": "2026-07-18T10:08:13Z",
+          "pushed_at": "2026-07-18T10:07:21Z",
+          "created_at": "2026-07-18T10:05:38Z",
+          "topics": [
+            "wordpress",
+            "wordpress-vulnerability",
+            "wordpress-vulnerability-scanner",
+            "wp2shell"
+          ],
           "owner": {
-            "login": "zeroc00I",
-            "html_url": "https://github.com/zeroc00I"
+            "login": "kulichr",
+            "html_url": "https://github.com/kulichr"
           },
-          "clone_url": "https://github.com/zeroc00I/CVE-2026-63030.git"
+          "clone_url": "https://github.com/kulichr/wp2shell.git"
         }
       ]
     },
@@ -62915,42 +63085,23 @@
           "clone_url": "https://github.com/Wh4l3X/CVE-2026-XXXX-atlassian-email-enumeration.git"
         },
         {
-          "id": 1167618210,
-          "name": "CVE_2026_25892",
-          "full_name": "dzmind2312/CVE_2026_25892",
-          "html_url": "https://github.com/dzmind2312/CVE_2026_25892",
-          "description": "CVE_2026_25892 BY DZ MIND INJECTOR",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-02-26T23:42:06Z",
-          "pushed_at": "2026-02-26T23:42:03Z",
-          "created_at": "2026-02-26T13:51:31Z",
-          "topics": [],
-          "owner": {
-            "login": "dzmind2312",
-            "html_url": "https://github.com/dzmind2312"
-          },
-          "clone_url": "https://github.com/dzmind2312/CVE_2026_25892.git"
-        },
-        {
-          "id": 1135243460,
-          "name": "CVE-2026",
-          "full_name": "samael0x4/CVE-2026",
-          "html_url": "https://github.com/samael0x4/CVE-2026",
+          "id": 1141585396,
+          "name": "CVE-2026-Apple-V2",
+          "full_name": "NiceTop1027/CVE-2026-Apple-V2",
+          "html_url": "https://github.com/NiceTop1027/CVE-2026-Apple-V2",
           "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-04-01T12:16:54Z",
-          "pushed_at": "2026-04-01T12:16:51Z",
-          "created_at": "2026-01-15T20:48:07Z",
+          "language": "C",
+          "updated_at": "2026-01-25T03:41:41Z",
+          "pushed_at": "2026-01-25T03:41:36Z",
+          "created_at": "2026-01-25T03:40:10Z",
           "topics": [],
           "owner": {
-            "login": "samael0x4",
-            "html_url": "https://github.com/samael0x4"
+            "login": "NiceTop1027",
+            "html_url": "https://github.com/NiceTop1027"
           },
-          "clone_url": "https://github.com/samael0x4/CVE-2026.git"
+          "clone_url": "https://github.com/NiceTop1027/CVE-2026-Apple-V2.git"
         },
         {
           "id": 1149902392,
@@ -63048,23 +63199,23 @@
           "clone_url": "https://github.com/YoussefMami/CVE2026_21509.git"
         },
         {
-          "id": 1141585396,
-          "name": "CVE-2026-Apple-V2",
-          "full_name": "NiceTop1027/CVE-2026-Apple-V2",
-          "html_url": "https://github.com/NiceTop1027/CVE-2026-Apple-V2",
+          "id": 1141571227,
+          "name": "CVE-2026-Discord",
+          "full_name": "NiceTop1027/CVE-2026-Discord",
+          "html_url": "https://github.com/NiceTop1027/CVE-2026-Discord",
           "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "C",
-          "updated_at": "2026-01-25T03:41:41Z",
-          "pushed_at": "2026-01-25T03:41:36Z",
-          "created_at": "2026-01-25T03:40:10Z",
+          "language": "Python",
+          "updated_at": "2026-01-25T03:24:24Z",
+          "pushed_at": "2026-01-25T03:24:21Z",
+          "created_at": "2026-01-25T02:51:34Z",
           "topics": [],
           "owner": {
             "login": "NiceTop1027",
             "html_url": "https://github.com/NiceTop1027"
           },
-          "clone_url": "https://github.com/NiceTop1027/CVE-2026-Apple-V2.git"
+          "clone_url": "https://github.com/NiceTop1027/CVE-2026-Discord.git"
         },
         {
           "id": 1184770639,
@@ -63162,23 +63313,23 @@
           "clone_url": "https://github.com/mgmlme/cve_2026_31431_live-mitigation.git"
         },
         {
-          "id": 1141571227,
-          "name": "CVE-2026-Discord",
-          "full_name": "NiceTop1027/CVE-2026-Discord",
-          "html_url": "https://github.com/NiceTop1027/CVE-2026-Discord",
+          "id": 1141299741,
+          "name": "CVE-2026-Termius",
+          "full_name": "NiceTop1027/CVE-2026-Termius",
+          "html_url": "https://github.com/NiceTop1027/CVE-2026-Termius",
           "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-01-25T03:24:24Z",
-          "pushed_at": "2026-01-25T03:24:21Z",
-          "created_at": "2026-01-25T02:51:34Z",
+          "language": "JavaScript",
+          "updated_at": "2026-01-24T16:08:22Z",
+          "pushed_at": "2026-01-24T16:08:18Z",
+          "created_at": "2026-01-24T16:07:16Z",
           "topics": [],
           "owner": {
             "login": "NiceTop1027",
             "html_url": "https://github.com/NiceTop1027"
           },
-          "clone_url": "https://github.com/NiceTop1027/CVE-2026-Discord.git"
+          "clone_url": "https://github.com/NiceTop1027/CVE-2026-Termius.git"
         },
         {
           "id": 1225124011,
@@ -63200,42 +63351,23 @@
           "clone_url": "https://github.com/L0serH4/cve-2026.git"
         },
         {
-          "id": 1141299741,
-          "name": "CVE-2026-Termius",
-          "full_name": "NiceTop1027/CVE-2026-Termius",
-          "html_url": "https://github.com/NiceTop1027/CVE-2026-Termius",
-          "description": "",
+          "id": 1286543285,
+          "name": "CVE_2026_44963",
+          "full_name": "suce0155/CVE_2026_44963",
+          "html_url": "https://github.com/suce0155/CVE_2026_44963",
+          "description": "CVE_2026_44963 Veeam Backup and Replication Authenticated RCE ",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "JavaScript",
-          "updated_at": "2026-01-24T16:08:22Z",
-          "pushed_at": "2026-01-24T16:08:18Z",
-          "created_at": "2026-01-24T16:07:16Z",
+          "language": "C#",
+          "updated_at": "2026-07-15T22:27:01Z",
+          "pushed_at": "2026-07-15T22:26:57Z",
+          "created_at": "2026-07-01T22:19:45Z",
           "topics": [],
           "owner": {
-            "login": "NiceTop1027",
-            "html_url": "https://github.com/NiceTop1027"
+            "login": "suce0155",
+            "html_url": "https://github.com/suce0155"
           },
-          "clone_url": "https://github.com/NiceTop1027/CVE-2026-Termius.git"
-        },
-        {
-          "id": 1303843990,
-          "name": "cve_2026_43499_sm-t878u",
-          "full_name": "Wtrwx/cve_2026_43499_sm-t878u",
-          "html_url": "https://github.com/Wtrwx/cve_2026_43499_sm-t878u",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-07-17T10:00:49Z",
-          "pushed_at": "2026-07-17T10:00:49Z",
-          "created_at": "2026-07-17T10:00:48Z",
-          "topics": [],
-          "owner": {
-            "login": "Wtrwx",
-            "html_url": "https://github.com/Wtrwx"
-          },
-          "clone_url": "https://github.com/Wtrwx/cve_2026_43499_sm-t878u.git"
+          "clone_url": "https://github.com/suce0155/CVE_2026_44963.git"
         },
         {
           "id": 1140539974,
@@ -63274,6 +63406,25 @@
             "html_url": "https://github.com/NiceTop1027"
           },
           "clone_url": "https://github.com/NiceTop1027/CVE-2026-D0cker.git"
+        },
+        {
+          "id": 1140417583,
+          "name": "cve_2026_24061_cli",
+          "full_name": "m3ngx1ng/cve_2026_24061_cli",
+          "html_url": "https://github.com/m3ngx1ng/cve_2026_24061_cli",
+          "description": "cve_2026_24061快速利用工具",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-01-23T08:55:18Z",
+          "pushed_at": "2026-01-23T08:55:14Z",
+          "created_at": "2026-01-23T08:51:03Z",
+          "topics": [],
+          "owner": {
+            "login": "m3ngx1ng",
+            "html_url": "https://github.com/m3ngx1ng"
+          },
+          "clone_url": "https://github.com/m3ngx1ng/cve_2026_24061_cli.git"
         },
         {
           "id": 1218733759,
@@ -63371,23 +63522,23 @@
           "clone_url": "https://github.com/JEduardo-Chavez/CVEChavez2026.git"
         },
         {
-          "id": 1140417583,
-          "name": "cve_2026_24061_cli",
-          "full_name": "m3ngx1ng/cve_2026_24061_cli",
-          "html_url": "https://github.com/m3ngx1ng/cve_2026_24061_cli",
-          "description": "cve_2026_24061快速利用工具",
+          "id": 1135243460,
+          "name": "CVE-2026",
+          "full_name": "samael0x4/CVE-2026",
+          "html_url": "https://github.com/samael0x4/CVE-2026",
+          "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-01-23T08:55:18Z",
-          "pushed_at": "2026-01-23T08:55:14Z",
-          "created_at": "2026-01-23T08:51:03Z",
+          "updated_at": "2026-04-01T12:16:54Z",
+          "pushed_at": "2026-04-01T12:16:51Z",
+          "created_at": "2026-01-15T20:48:07Z",
           "topics": [],
           "owner": {
-            "login": "m3ngx1ng",
-            "html_url": "https://github.com/m3ngx1ng"
+            "login": "samael0x4",
+            "html_url": "https://github.com/samael0x4"
           },
-          "clone_url": "https://github.com/m3ngx1ng/cve_2026_24061_cli.git"
+          "clone_url": "https://github.com/samael0x4/CVE-2026.git"
         },
         {
           "id": 1202961230,
@@ -63409,23 +63560,23 @@
           "clone_url": "https://github.com/fevar54/forticlient_ems_cve_2026_35616_poc.py.git"
         },
         {
-          "id": 1286543285,
-          "name": "CVE_2026_44963",
-          "full_name": "suce0155/CVE_2026_44963",
-          "html_url": "https://github.com/suce0155/CVE_2026_44963",
-          "description": "CVE_2026_44963 Veeam Backup and Replication Authenticated RCE ",
+          "id": 1140049404,
+          "name": "CVE-2026-XXXX-Meru-Shell-OpenExternal-RCE",
+          "full_name": "NiceTop1027/CVE-2026-XXXX-Meru-Shell-OpenExternal-RCE",
+          "html_url": "https://github.com/NiceTop1027/CVE-2026-XXXX-Meru-Shell-OpenExternal-RCE",
+          "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "C#",
-          "updated_at": "2026-07-15T22:27:01Z",
-          "pushed_at": "2026-07-15T22:26:57Z",
-          "created_at": "2026-07-01T22:19:45Z",
+          "language": "Python",
+          "updated_at": "2026-01-22T20:15:11Z",
+          "pushed_at": "2026-01-22T20:15:08Z",
+          "created_at": "2026-01-22T19:00:46Z",
           "topics": [],
           "owner": {
-            "login": "suce0155",
-            "html_url": "https://github.com/suce0155"
+            "login": "NiceTop1027",
+            "html_url": "https://github.com/NiceTop1027"
           },
-          "clone_url": "https://github.com/suce0155/CVE_2026_44963.git"
+          "clone_url": "https://github.com/NiceTop1027/CVE-2026-XXXX-Meru-Shell-OpenExternal-RCE.git"
         },
         {
           "id": 1200120765,
@@ -63504,23 +63655,23 @@
           "clone_url": "https://github.com/slmingol/axios-vulnerability.git"
         },
         {
-          "id": 1140049404,
-          "name": "CVE-2026-XXXX-Meru-Shell-OpenExternal-RCE",
-          "full_name": "NiceTop1027/CVE-2026-XXXX-Meru-Shell-OpenExternal-RCE",
-          "html_url": "https://github.com/NiceTop1027/CVE-2026-XXXX-Meru-Shell-OpenExternal-RCE",
+          "id": 1140030510,
+          "name": "CVE-2026-Pending-Extract-Zip-Arbitrary-File-Write",
+          "full_name": "NiceTop1027/CVE-2026-Pending-Extract-Zip-Arbitrary-File-Write",
+          "html_url": "https://github.com/NiceTop1027/CVE-2026-Pending-Extract-Zip-Arbitrary-File-Write",
           "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-01-22T20:15:11Z",
-          "pushed_at": "2026-01-22T20:15:08Z",
-          "created_at": "2026-01-22T19:00:46Z",
+          "updated_at": "2026-01-22T18:28:51Z",
+          "pushed_at": "2026-01-22T18:28:47Z",
+          "created_at": "2026-01-22T18:28:04Z",
           "topics": [],
           "owner": {
             "login": "NiceTop1027",
             "html_url": "https://github.com/NiceTop1027"
           },
-          "clone_url": "https://github.com/NiceTop1027/CVE-2026-XXXX-Meru-Shell-OpenExternal-RCE.git"
+          "clone_url": "https://github.com/NiceTop1027/CVE-2026-Pending-Extract-Zip-Arbitrary-File-Write.git"
         },
         {
           "id": 1254916014,
@@ -63589,23 +63740,23 @@
           "clone_url": "https://github.com/Ruby570bocadito/Breach-Entry.git"
         },
         {
-          "id": 1140030510,
-          "name": "CVE-2026-Pending-Extract-Zip-Arbitrary-File-Write",
-          "full_name": "NiceTop1027/CVE-2026-Pending-Extract-Zip-Arbitrary-File-Write",
-          "html_url": "https://github.com/NiceTop1027/CVE-2026-Pending-Extract-Zip-Arbitrary-File-Write",
+          "id": 1140017394,
+          "name": "CVE-2026-Pending-Delegator-Command-Injection",
+          "full_name": "NiceTop1027/CVE-2026-Pending-Delegator-Command-Injection",
+          "html_url": "https://github.com/NiceTop1027/CVE-2026-Pending-Delegator-Command-Injection",
           "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-01-22T18:28:51Z",
-          "pushed_at": "2026-01-22T18:28:47Z",
-          "created_at": "2026-01-22T18:28:04Z",
+          "updated_at": "2026-01-22T18:07:07Z",
+          "pushed_at": "2026-01-22T18:06:43Z",
+          "created_at": "2026-01-22T18:05:59Z",
           "topics": [],
           "owner": {
             "login": "NiceTop1027",
             "html_url": "https://github.com/NiceTop1027"
           },
-          "clone_url": "https://github.com/NiceTop1027/CVE-2026-Pending-Extract-Zip-Arbitrary-File-Write.git"
+          "clone_url": "https://github.com/NiceTop1027/CVE-2026-Pending-Delegator-Command-Injection.git"
         },
         {
           "id": 1254241347,
@@ -63665,25 +63816,6 @@
           "clone_url": "https://github.com/jabir-dev/CVE-2026-BWA-RCE.git"
         },
         {
-          "id": 1140017394,
-          "name": "CVE-2026-Pending-Delegator-Command-Injection",
-          "full_name": "NiceTop1027/CVE-2026-Pending-Delegator-Command-Injection",
-          "html_url": "https://github.com/NiceTop1027/CVE-2026-Pending-Delegator-Command-Injection",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-01-22T18:07:07Z",
-          "pushed_at": "2026-01-22T18:06:43Z",
-          "created_at": "2026-01-22T18:05:59Z",
-          "topics": [],
-          "owner": {
-            "login": "NiceTop1027",
-            "html_url": "https://github.com/NiceTop1027"
-          },
-          "clone_url": "https://github.com/NiceTop1027/CVE-2026-Pending-Delegator-Command-Injection.git"
-        },
-        {
           "id": 1139963210,
           "name": "CVE-2026-Pending-Flask-Uploads-Path-Traversal-PoC",
           "full_name": "NiceTop1027/CVE-2026-Pending-Flask-Uploads-Path-Traversal-PoC",
@@ -63701,6 +63833,25 @@
             "html_url": "https://github.com/NiceTop1027"
           },
           "clone_url": "https://github.com/NiceTop1027/CVE-2026-Pending-Flask-Uploads-Path-Traversal-PoC.git"
+        },
+        {
+          "id": 1139994136,
+          "name": "CVE-2026-Pending-Django-Summernote-RCE",
+          "full_name": "NiceTop1027/CVE-2026-Pending-Django-Summernote-RCE",
+          "html_url": "https://github.com/NiceTop1027/CVE-2026-Pending-Django-Summernote-RCE",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-01-22T17:31:44Z",
+          "pushed_at": "2026-01-22T17:31:23Z",
+          "created_at": "2026-01-22T17:29:07Z",
+          "topics": [],
+          "owner": {
+            "login": "NiceTop1027",
+            "html_url": "https://github.com/NiceTop1027"
+          },
+          "clone_url": "https://github.com/NiceTop1027/CVE-2026-Pending-Django-Summernote-RCE.git"
         },
         {
           "id": 1246683054,
@@ -63741,23 +63892,23 @@
           "clone_url": "https://github.com/GraoMelo/CVE-2026-TDES-Wrap-PoC.git"
         },
         {
-          "id": 1139994136,
-          "name": "CVE-2026-Pending-Django-Summernote-RCE",
-          "full_name": "NiceTop1027/CVE-2026-Pending-Django-Summernote-RCE",
-          "html_url": "https://github.com/NiceTop1027/CVE-2026-Pending-Django-Summernote-RCE",
-          "description": "",
+          "id": 1134181710,
+          "name": "CVE-2026-Dashboard",
+          "full_name": "MehdiLeDeaut/CVE-2026-Dashboard",
+          "html_url": "https://github.com/MehdiLeDeaut/CVE-2026-Dashboard",
+          "description": "Interactive visualization - CVE-2026 chain attack demo",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-01-22T17:31:44Z",
-          "pushed_at": "2026-01-22T17:31:23Z",
-          "created_at": "2026-01-22T17:29:07Z",
+          "language": "HTML",
+          "updated_at": "2026-01-14T12:16:24Z",
+          "pushed_at": "2026-01-14T13:02:46Z",
+          "created_at": "2026-01-14T11:12:48Z",
           "topics": [],
           "owner": {
-            "login": "NiceTop1027",
-            "html_url": "https://github.com/NiceTop1027"
+            "login": "MehdiLeDeaut",
+            "html_url": "https://github.com/MehdiLeDeaut"
           },
-          "clone_url": "https://github.com/NiceTop1027/CVE-2026-Pending-Django-Summernote-RCE.git"
+          "clone_url": "https://github.com/MehdiLeDeaut/CVE-2026-Dashboard.git"
         },
         {
           "id": 1244231546,
@@ -63988,23 +64139,23 @@
           "clone_url": "https://github.com/UmbraDeorum/cutenews-2.0-CVEs-2026-Disclosure.git"
         },
         {
-          "id": 1134181710,
-          "name": "CVE-2026-Dashboard",
-          "full_name": "MehdiLeDeaut/CVE-2026-Dashboard",
-          "html_url": "https://github.com/MehdiLeDeaut/CVE-2026-Dashboard",
-          "description": "Interactive visualization - CVE-2026 chain attack demo",
+          "id": 1148563035,
+          "name": "CVE2026",
+          "full_name": "CVE2026/CVE2026",
+          "html_url": "https://github.com/CVE2026/CVE2026",
+          "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "HTML",
-          "updated_at": "2026-01-14T12:16:24Z",
-          "pushed_at": "2026-01-14T13:02:46Z",
-          "created_at": "2026-01-14T11:12:48Z",
+          "language": "",
+          "updated_at": "2026-06-29T01:18:28Z",
+          "pushed_at": "2026-06-29T01:18:25Z",
+          "created_at": "2026-02-03T05:23:18Z",
           "topics": [],
           "owner": {
-            "login": "MehdiLeDeaut",
-            "html_url": "https://github.com/MehdiLeDeaut"
+            "login": "CVE2026",
+            "html_url": "https://github.com/CVE2026"
           },
-          "clone_url": "https://github.com/MehdiLeDeaut/CVE-2026-Dashboard.git"
+          "clone_url": "https://github.com/CVE2026/CVE2026.git"
         },
         {
           "id": 1277621329,
@@ -64045,23 +64196,23 @@
           "clone_url": "https://github.com/LittleSuRii/CVE-2026-MSIAPService.git"
         },
         {
-          "id": 1148563035,
-          "name": "CVE2026",
-          "full_name": "CVE2026/CVE2026",
-          "html_url": "https://github.com/CVE2026/CVE2026",
+          "id": 1164430404,
+          "name": "cve-20260603",
+          "full_name": "luong005/cve-20260603",
+          "html_url": "https://github.com/luong005/cve-20260603",
           "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-06-29T01:18:28Z",
-          "pushed_at": "2026-06-29T01:18:25Z",
-          "created_at": "2026-02-03T05:23:18Z",
+          "language": "Java",
+          "updated_at": "2026-03-24T01:58:53Z",
+          "pushed_at": "2026-03-23T12:07:00Z",
+          "created_at": "2026-02-23T04:22:59Z",
           "topics": [],
           "owner": {
-            "login": "CVE2026",
-            "html_url": "https://github.com/CVE2026"
+            "login": "luong005",
+            "html_url": "https://github.com/luong005"
           },
-          "clone_url": "https://github.com/CVE2026/CVE2026.git"
+          "clone_url": "https://github.com/luong005/cve-20260603.git"
         },
         {
           "id": 1265822405,
@@ -64231,23 +64382,23 @@
           "clone_url": "https://github.com/RyuRyu727975727975/snortrule_2026.git"
         },
         {
-          "id": 1164430404,
-          "name": "cve-20260603",
-          "full_name": "luong005/cve-20260603",
-          "html_url": "https://github.com/luong005/cve-20260603",
-          "description": "",
+          "id": 1167618210,
+          "name": "CVE_2026_25892",
+          "full_name": "dzmind2312/CVE_2026_25892",
+          "html_url": "https://github.com/dzmind2312/CVE_2026_25892",
+          "description": "CVE_2026_25892 BY DZ MIND INJECTOR",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Java",
-          "updated_at": "2026-03-24T01:58:53Z",
-          "pushed_at": "2026-03-23T12:07:00Z",
-          "created_at": "2026-02-23T04:22:59Z",
+          "language": "Python",
+          "updated_at": "2026-02-26T23:42:06Z",
+          "pushed_at": "2026-02-26T23:42:03Z",
+          "created_at": "2026-02-26T13:51:31Z",
           "topics": [],
           "owner": {
-            "login": "luong005",
-            "html_url": "https://github.com/luong005"
+            "login": "dzmind2312",
+            "html_url": "https://github.com/dzmind2312"
           },
-          "clone_url": "https://github.com/luong005/cve-20260603.git"
+          "clone_url": "https://github.com/dzmind2312/CVE_2026_25892.git"
         }
       ]
     }
