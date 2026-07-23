@@ -167,25 +167,6 @@
           "clone_url": "https://github.com/greaselovely/CVE-2024-0012.git"
         },
         {
-          "id": 892670632,
-          "name": "cve-2024-0012-poc",
-          "full_name": "Gr-1m/cve-2024-0012-poc",
-          "html_url": "https://github.com/Gr-1m/cve-2024-0012-poc",
-          "description": "CVE-2024-0012是Palo Alto Networks PAN-OS软件中的一个身份验证绕过漏洞。该漏洞允许未经身份验证的攻击者通过网络访问管理Web界面，获取PAN-OS管理员权限，从而执行管理操作、篡改配置，或利用其他需要身份验证的特权提升漏洞（如CVE-2024-9474） ",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2024-11-22T14:53:31Z",
-          "pushed_at": "2024-11-22T14:37:04Z",
-          "created_at": "2024-11-22T14:53:31Z",
-          "topics": [],
-          "owner": {
-            "login": "Gr-1m",
-            "html_url": "https://github.com/Gr-1m"
-          },
-          "clone_url": "https://github.com/Gr-1m/cve-2024-0012-poc.git"
-        },
-        {
           "id": 892819901,
           "name": "Paloalto-CVE-2024-0012",
           "full_name": "punitdarji/Paloalto-CVE-2024-0012",
@@ -203,6 +184,44 @@
             "html_url": "https://github.com/punitdarji"
           },
           "clone_url": "https://github.com/punitdarji/Paloalto-CVE-2024-0012.git"
+        },
+        {
+          "id": 1309487893,
+          "name": "cve-2024-0012_9474-panos_authbypass_reproduction",
+          "full_name": "razureink/cve-2024-0012_9474-panos_authbypass_reproduction",
+          "html_url": "https://github.com/razureink/cve-2024-0012_9474-panos_authbypass_reproduction",
+          "description": "CVE Reproduction: cve-2024-0012_9474-panos_authbypass_reproduction",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-07-23T03:45:28Z",
+          "pushed_at": "2026-07-23T03:45:09Z",
+          "created_at": "2026-07-23T03:45:04Z",
+          "topics": [],
+          "owner": {
+            "login": "razureink",
+            "html_url": "https://github.com/razureink"
+          },
+          "clone_url": "https://github.com/razureink/cve-2024-0012_9474-panos_authbypass_reproduction.git"
+        },
+        {
+          "id": 892670632,
+          "name": "cve-2024-0012-poc",
+          "full_name": "Gr-1m/cve-2024-0012-poc",
+          "html_url": "https://github.com/Gr-1m/cve-2024-0012-poc",
+          "description": "CVE-2024-0012是Palo Alto Networks PAN-OS软件中的一个身份验证绕过漏洞。该漏洞允许未经身份验证的攻击者通过网络访问管理Web界面，获取PAN-OS管理员权限，从而执行管理操作、篡改配置，或利用其他需要身份验证的特权提升漏洞（如CVE-2024-9474） ",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2024-11-22T14:53:31Z",
+          "pushed_at": "2024-11-22T14:37:04Z",
+          "created_at": "2024-11-22T14:53:31Z",
+          "topics": [],
+          "owner": {
+            "login": "Gr-1m",
+            "html_url": "https://github.com/Gr-1m"
+          },
+          "clone_url": "https://github.com/Gr-1m/cve-2024-0012-poc.git"
         }
       ]
     },
@@ -345,10 +364,10 @@
           "full_name": "0xbinder/CVE-2024-0044",
           "html_url": "https://github.com/0xbinder/CVE-2024-0044",
           "description": "CVE-2024-0044:  a \"run-as any app\" high-severity vulnerability affecting Android versions 12 and 13",
-          "stargazers_count": 329,
+          "stargazers_count": 330,
           "forks_count": 67,
           "language": "Python",
-          "updated_at": "2026-07-20T18:42:00Z",
+          "updated_at": "2026-07-23T17:48:53Z",
           "pushed_at": "2024-12-02T06:29:52Z",
           "created_at": "2024-06-18T12:30:53Z",
           "topics": [],
@@ -364,10 +383,10 @@
           "full_name": "canyie/CVE-2024-0044",
           "html_url": "https://github.com/canyie/CVE-2024-0044",
           "description": "RunAsAnyone: PoC and writeup for bypassing the initial patch of CVE-2024-0044, Android run-as any app vulnerability allowing privilege escalation from adb to installed app",
-          "stargazers_count": 182,
+          "stargazers_count": 183,
           "forks_count": 28,
           "language": "Java",
-          "updated_at": "2026-07-15T06:00:54Z",
+          "updated_at": "2026-07-23T17:46:22Z",
           "pushed_at": "2024-09-30T12:48:08Z",
           "created_at": "2024-09-27T09:02:08Z",
           "topics": [],
@@ -2427,10 +2446,10 @@
           "full_name": "Notselwyn/CVE-2024-1086",
           "html_url": "https://github.com/Notselwyn/CVE-2024-1086",
           "description": "Universal local privilege escalation Proof-of-Concept exploit for CVE-2024-1086, working on most Linux kernels between v5.14 and v6.6, including Debian, Ubuntu, and KernelCTF. The success rate is 99.4% in KernelCTF images.",
-          "stargazers_count": 2453,
+          "stargazers_count": 2454,
           "forks_count": 329,
           "language": "C",
-          "updated_at": "2026-07-20T18:41:55Z",
+          "updated_at": "2026-07-23T03:14:27Z",
           "pushed_at": "2024-04-17T16:09:54Z",
           "created_at": "2024-03-20T21:16:41Z",
           "topics": [
@@ -2504,25 +2523,6 @@
           "clone_url": "https://github.com/kevcooper/CVE-2024-1086-checker.git"
         },
         {
-          "id": 1276340754,
-          "name": "cve-2024-1086-writeup",
-          "full_name": "Luisbuilds-data/cve-2024-1086-writeup",
-          "html_url": "https://github.com/Luisbuilds-data/cve-2024-1086-writeup",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-06-21T22:06:33Z",
-          "pushed_at": "2026-06-21T21:42:32Z",
-          "created_at": "2026-06-21T21:23:15Z",
-          "topics": [],
-          "owner": {
-            "login": "Luisbuilds-data",
-            "html_url": "https://github.com/Luisbuilds-data"
-          },
-          "clone_url": "https://github.com/Luisbuilds-data/cve-2024-1086-writeup.git"
-        },
-        {
           "id": 794185753,
           "name": "CVE-2024-1086",
           "full_name": "CCIEVoice2009/CVE-2024-1086",
@@ -2542,23 +2542,23 @@
           "clone_url": "https://github.com/CCIEVoice2009/CVE-2024-1086.git"
         },
         {
-          "id": 1255122543,
-          "name": "CVE-2024-1086",
-          "full_name": "b1nhack/CVE-2024-1086",
-          "html_url": "https://github.com/b1nhack/CVE-2024-1086",
-          "description": "",
+          "id": 1284280854,
+          "name": "CVE_2024_1086_vulnerability_check",
+          "full_name": "JHarv613/CVE_2024_1086_vulnerability_check",
+          "html_url": "https://github.com/JHarv613/CVE_2024_1086_vulnerability_check",
+          "description": "CVE-2024-1086 vulnerability",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "C",
-          "updated_at": "2026-06-01T17:18:54Z",
-          "pushed_at": "2026-06-01T17:18:34Z",
-          "created_at": "2026-05-31T12:40:16Z",
+          "language": "Shell",
+          "updated_at": "2026-06-29T18:08:37Z",
+          "pushed_at": "2026-06-29T18:08:33Z",
+          "created_at": "2026-06-29T17:48:44Z",
           "topics": [],
           "owner": {
-            "login": "b1nhack",
-            "html_url": "https://github.com/b1nhack"
+            "login": "JHarv613",
+            "html_url": "https://github.com/JHarv613"
           },
-          "clone_url": "https://github.com/b1nhack/CVE-2024-1086.git"
+          "clone_url": "https://github.com/JHarv613/CVE_2024_1086_vulnerability_check.git"
         },
         {
           "id": 813156753,
@@ -2599,23 +2599,23 @@
           "clone_url": "https://github.com/xzx482/CVE-2024-1086.git"
         },
         {
-          "id": 1284280854,
-          "name": "CVE_2024_1086_vulnerability_check",
-          "full_name": "JHarv613/CVE_2024_1086_vulnerability_check",
-          "html_url": "https://github.com/JHarv613/CVE_2024_1086_vulnerability_check",
-          "description": "CVE-2024-1086 vulnerability",
+          "id": 1276340754,
+          "name": "cve-2024-1086-writeup",
+          "full_name": "Luisbuilds-data/cve-2024-1086-writeup",
+          "html_url": "https://github.com/Luisbuilds-data/cve-2024-1086-writeup",
+          "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2026-06-29T18:08:37Z",
-          "pushed_at": "2026-06-29T18:08:33Z",
-          "created_at": "2026-06-29T17:48:44Z",
+          "language": "",
+          "updated_at": "2026-06-21T22:06:33Z",
+          "pushed_at": "2026-06-21T21:42:32Z",
+          "created_at": "2026-06-21T21:23:15Z",
           "topics": [],
           "owner": {
-            "login": "JHarv613",
-            "html_url": "https://github.com/JHarv613"
+            "login": "Luisbuilds-data",
+            "html_url": "https://github.com/Luisbuilds-data"
           },
-          "clone_url": "https://github.com/JHarv613/CVE_2024_1086_vulnerability_check.git"
+          "clone_url": "https://github.com/Luisbuilds-data/cve-2024-1086-writeup.git"
         }
       ]
     },
@@ -5371,33 +5371,6 @@
       "cve_id": "CVE-2024-21182",
       "repositories": [
         {
-          "id": 1257262452,
-          "name": "CVE-2024-21182",
-          "full_name": "dinosn/CVE-2024-21182",
-          "html_url": "https://github.com/dinosn/CVE-2024-21182",
-          "description": "Reproducible Docker lab for CVE-2024-21182 — Oracle WebLogic T3/IIOP OpaqueReference JNDI injection → unauthenticated RCE (CVE-2023-21839 patch-bypass family). One-command validate.sh.",
-          "stargazers_count": 3,
-          "forks_count": 0,
-          "language": "Java",
-          "updated_at": "2026-07-13T12:13:12Z",
-          "pushed_at": "2026-06-02T14:11:16Z",
-          "created_at": "2026-06-02T14:11:12Z",
-          "topics": [
-            "cve-2024-21182",
-            "jndi-injection",
-            "poc",
-            "rce",
-            "security-lab",
-            "vulhub",
-            "weblogic"
-          ],
-          "owner": {
-            "login": "dinosn",
-            "html_url": "https://github.com/dinosn"
-          },
-          "clone_url": "https://github.com/dinosn/CVE-2024-21182.git"
-        },
-        {
           "id": 909779451,
           "name": "CVE-2024-21182",
           "full_name": "kursadalsan/CVE-2024-21182",
@@ -5468,8 +5441,8 @@
           "stargazers_count": 14,
           "forks_count": 2,
           "language": "Python",
-          "updated_at": "2026-07-10T10:05:26Z",
-          "pushed_at": "2024-12-15T06:41:13Z",
+          "updated_at": "2026-07-23T10:02:04Z",
+          "pushed_at": "2026-07-23T09:08:54Z",
           "created_at": "2024-12-15T03:00:47Z",
           "topics": [],
           "owner": {
@@ -5853,7 +5826,7 @@
           "html_url": "https://github.com/ThemeHackers/CVE-2024-21413",
           "description": "CVE-2024-21413 | Microsoft Outlook Remote Code Execution Vulnerability PoC",
           "stargazers_count": 25,
-          "forks_count": 8,
+          "forks_count": 9,
           "language": "Python",
           "updated_at": "2026-05-02T19:18:25Z",
           "pushed_at": "2025-06-05T03:39:02Z",
@@ -13782,10 +13755,10 @@
           "full_name": "K3ysTr0K3R/CVE-2024-25600-EXPLOIT",
           "html_url": "https://github.com/K3ysTr0K3R/CVE-2024-25600-EXPLOIT",
           "description": "A PoC exploit for CVE-2024-25600 - WordPress Bricks Builder Remote Code Execution (RCE)",
-          "stargazers_count": 61,
+          "stargazers_count": 62,
           "forks_count": 11,
           "language": "Python",
-          "updated_at": "2026-07-18T10:25:19Z",
+          "updated_at": "2026-07-23T07:13:27Z",
           "pushed_at": "2024-03-01T09:46:56Z",
           "created_at": "2024-03-01T09:28:08Z",
           "topics": [
@@ -14439,10 +14412,10 @@
           "full_name": "RalfHacker/CVE-2024-26229-exploit",
           "html_url": "https://github.com/RalfHacker/CVE-2024-26229-exploit",
           "description": "Windows LPE",
-          "stargazers_count": 142,
+          "stargazers_count": 143,
           "forks_count": 30,
           "language": "C",
-          "updated_at": "2026-06-22T11:04:25Z",
+          "updated_at": "2026-07-22T01:44:32Z",
           "pushed_at": "2024-06-11T20:41:59Z",
           "created_at": "2024-06-11T08:03:29Z",
           "topics": [],
@@ -18071,10 +18044,10 @@
           "full_name": "ambionics/cnext-exploits",
           "html_url": "https://github.com/ambionics/cnext-exploits",
           "description": "Exploits for CNEXT (CVE-2024-2961), a buffer overflow in the glibc's iconv()",
-          "stargazers_count": 505,
+          "stargazers_count": 504,
           "forks_count": 61,
           "language": "Python",
-          "updated_at": "2026-07-13T12:04:41Z",
+          "updated_at": "2026-07-22T06:57:53Z",
           "pushed_at": "2024-09-30T08:45:56Z",
           "created_at": "2024-05-27T08:30:06Z",
           "topics": [],
@@ -19382,7 +19355,7 @@
           "stargazers_count": 3557,
           "forks_count": 235,
           "language": "Go",
-          "updated_at": "2026-07-21T05:58:27Z",
+          "updated_at": "2026-07-23T09:32:47Z",
           "pushed_at": "2024-04-03T04:58:50Z",
           "created_at": "2024-04-01T14:28:09Z",
           "topics": [],
@@ -19441,10 +19414,10 @@
           "full_name": "robertdfrench/ifuncd-up",
           "html_url": "https://github.com/robertdfrench/ifuncd-up",
           "description": "GNU IFUNC is the real culprit behind CVE-2024-3094",
-          "stargazers_count": 59,
+          "stargazers_count": 60,
           "forks_count": 1,
           "language": "C",
-          "updated_at": "2026-05-31T16:14:20Z",
+          "updated_at": "2026-07-23T04:05:46Z",
           "pushed_at": "2026-05-09T02:39:17Z",
           "created_at": "2024-07-05T18:36:16Z",
           "topics": [
@@ -20091,6 +20064,63 @@
           "clone_url": "https://github.com/harekrishnarai/xz-utils-vuln-checker.git"
         },
         {
+          "id": 780105802,
+          "name": "CVE-2024-3094-Nmap-NSE-script",
+          "full_name": "spidygal/CVE-2024-3094-Nmap-NSE-script",
+          "html_url": "https://github.com/spidygal/CVE-2024-3094-Nmap-NSE-script",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2024-03-31T17:53:11Z",
+          "pushed_at": "2024-03-31T17:56:48Z",
+          "created_at": "2024-03-31T17:53:11Z",
+          "topics": [],
+          "owner": {
+            "login": "spidygal",
+            "html_url": "https://github.com/spidygal"
+          },
+          "clone_url": "https://github.com/spidygal/CVE-2024-3094-Nmap-NSE-script.git"
+        },
+        {
+          "id": 779717708,
+          "name": "CVE-2024-3094",
+          "full_name": "ashwani95/CVE-2024-3094",
+          "html_url": "https://github.com/ashwani95/CVE-2024-3094",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Shell",
+          "updated_at": "2024-03-30T15:29:38Z",
+          "pushed_at": "2024-03-30T17:00:39Z",
+          "created_at": "2024-03-30T15:29:05Z",
+          "topics": [],
+          "owner": {
+            "login": "ashwani95",
+            "html_url": "https://github.com/ashwani95"
+          },
+          "clone_url": "https://github.com/ashwani95/CVE-2024-3094.git"
+        },
+        {
+          "id": 780033593,
+          "name": "CVE-2024-3094-patcher",
+          "full_name": "Simplifi-ED/CVE-2024-3094-patcher",
+          "html_url": "https://github.com/Simplifi-ED/CVE-2024-3094-patcher",
+          "description": "Ansible playbook for patching CVE-2024-3094",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2024-03-31T14:09:29Z",
+          "pushed_at": "2024-03-31T15:36:28Z",
+          "created_at": "2024-03-31T14:09:28Z",
+          "topics": [],
+          "owner": {
+            "login": "Simplifi-ED",
+            "html_url": "https://github.com/Simplifi-ED"
+          },
+          "clone_url": "https://github.com/Simplifi-ED/CVE-2024-3094-patcher.git"
+        },
+        {
           "id": 1307647536,
           "name": "xz",
           "full_name": "x-cmd-build/xz",
@@ -20110,25 +20140,6 @@
           "clone_url": "https://github.com/x-cmd-build/xz.git"
         },
         {
-          "id": 1268506254,
-          "name": "lab_xz_backdoor",
-          "full_name": "stevehenderson/lab_xz_backdoor",
-          "html_url": "https://github.com/stevehenderson/lab_xz_backdoor",
-          "description": "Some labs looking at the xz backdoor vulnerability (CVE-2024-3094)",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2026-06-14T20:53:40Z",
-          "pushed_at": "2026-06-14T20:53:37Z",
-          "created_at": "2026-06-13T16:02:59Z",
-          "topics": [],
-          "owner": {
-            "login": "stevehenderson",
-            "html_url": "https://github.com/stevehenderson"
-          },
-          "clone_url": "https://github.com/stevehenderson/lab_xz_backdoor.git"
-        },
-        {
           "id": 779476965,
           "name": "CVE-2024-3094",
           "full_name": "Fractal-Tess/CVE-2024-3094",
@@ -20146,25 +20157,6 @@
             "html_url": "https://github.com/Fractal-Tess"
           },
           "clone_url": "https://github.com/Fractal-Tess/CVE-2024-3094.git"
-        },
-        {
-          "id": 779473804,
-          "name": "xz_cve-2024-3094_detection",
-          "full_name": "bioless/xz_cve-2024-3094_detection",
-          "html_url": "https://github.com/bioless/xz_cve-2024-3094_detection",
-          "description": "Script to detect CVE-2024-3094.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2024-03-29T23:23:15Z",
-          "pushed_at": "2024-03-29T23:23:12Z",
-          "created_at": "2024-03-29T23:20:22Z",
-          "topics": [],
-          "owner": {
-            "login": "bioless",
-            "html_url": "https://github.com/bioless"
-          },
-          "clone_url": "https://github.com/bioless/xz_cve-2024-3094_detection.git"
         },
         {
           "id": 781963666,
@@ -20205,6 +20197,82 @@
           "clone_url": "https://github.com/TheTorjanCaptain/CVE-2024-3094-Checker.git"
         },
         {
+          "id": 779473804,
+          "name": "xz_cve-2024-3094_detection",
+          "full_name": "bioless/xz_cve-2024-3094_detection",
+          "html_url": "https://github.com/bioless/xz_cve-2024-3094_detection",
+          "description": "Script to detect CVE-2024-3094.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Shell",
+          "updated_at": "2024-03-29T23:23:15Z",
+          "pushed_at": "2024-03-29T23:23:12Z",
+          "created_at": "2024-03-29T23:20:22Z",
+          "topics": [],
+          "owner": {
+            "login": "bioless",
+            "html_url": "https://github.com/bioless"
+          },
+          "clone_url": "https://github.com/bioless/xz_cve-2024-3094_detection.git"
+        },
+        {
+          "id": 781419608,
+          "name": "CVE-2024-3094-backdoor-env-container",
+          "full_name": "MagpieRYL/CVE-2024-3094-backdoor-env-container",
+          "html_url": "https://github.com/MagpieRYL/CVE-2024-3094-backdoor-env-container",
+          "description": "This is a container environment running CVE-2024-3094 sshd backdoor instance, working with https://github.com/amlweems/xzbot project. IT IS NOT Docker, just implemented by chroot.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Shell",
+          "updated_at": "2024-11-06T15:35:00Z",
+          "pushed_at": "2024-04-03T13:05:40Z",
+          "created_at": "2024-04-03T10:50:47Z",
+          "topics": [],
+          "owner": {
+            "login": "MagpieRYL",
+            "html_url": "https://github.com/MagpieRYL"
+          },
+          "clone_url": "https://github.com/MagpieRYL/CVE-2024-3094-backdoor-env-container.git"
+        },
+        {
+          "id": 1308758348,
+          "name": "Report-XZ-Utils-CVE-2024-3094",
+          "full_name": "Preacher98/Report-XZ-Utils-CVE-2024-3094",
+          "html_url": "https://github.com/Preacher98/Report-XZ-Utils-CVE-2024-3094",
+          "description": "Hello, ",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-07-22T12:09:02Z",
+          "pushed_at": "2026-07-22T12:06:27Z",
+          "created_at": "2026-07-22T11:46:25Z",
+          "topics": [],
+          "owner": {
+            "login": "Preacher98",
+            "html_url": "https://github.com/Preacher98"
+          },
+          "clone_url": "https://github.com/Preacher98/Report-XZ-Utils-CVE-2024-3094.git"
+        },
+        {
+          "id": 779449882,
+          "name": "xz_utils-CVE-2024-3094",
+          "full_name": "OpensourceICTSolutions/xz_utils-CVE-2024-3094",
+          "html_url": "https://github.com/OpensourceICTSolutions/xz_utils-CVE-2024-3094",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2024-03-29T21:41:42Z",
+          "pushed_at": "2024-03-29T21:42:42Z",
+          "created_at": "2024-03-29T21:41:42Z",
+          "topics": [],
+          "owner": {
+            "login": "OpensourceICTSolutions",
+            "html_url": "https://github.com/OpensourceICTSolutions"
+          },
+          "clone_url": "https://github.com/OpensourceICTSolutions/xz_utils-CVE-2024-3094.git"
+        },
+        {
           "id": 779897643,
           "name": "CVE-2024-3094",
           "full_name": "isuruwa/CVE-2024-3094",
@@ -20228,63 +20296,6 @@
           "clone_url": "https://github.com/isuruwa/CVE-2024-3094.git"
         },
         {
-          "id": 781419608,
-          "name": "CVE-2024-3094-backdoor-env-container",
-          "full_name": "MagpieRYL/CVE-2024-3094-backdoor-env-container",
-          "html_url": "https://github.com/MagpieRYL/CVE-2024-3094-backdoor-env-container",
-          "description": "This is a container environment running CVE-2024-3094 sshd backdoor instance, working with https://github.com/amlweems/xzbot project. IT IS NOT Docker, just implemented by chroot.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2024-11-06T15:35:00Z",
-          "pushed_at": "2024-04-03T13:05:40Z",
-          "created_at": "2024-04-03T10:50:47Z",
-          "topics": [],
-          "owner": {
-            "login": "MagpieRYL",
-            "html_url": "https://github.com/MagpieRYL"
-          },
-          "clone_url": "https://github.com/MagpieRYL/CVE-2024-3094-backdoor-env-container.git"
-        },
-        {
-          "id": 779449882,
-          "name": "xz_utils-CVE-2024-3094",
-          "full_name": "OpensourceICTSolutions/xz_utils-CVE-2024-3094",
-          "html_url": "https://github.com/OpensourceICTSolutions/xz_utils-CVE-2024-3094",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2024-03-29T21:41:42Z",
-          "pushed_at": "2024-03-29T21:42:42Z",
-          "created_at": "2024-03-29T21:41:42Z",
-          "topics": [],
-          "owner": {
-            "login": "OpensourceICTSolutions",
-            "html_url": "https://github.com/OpensourceICTSolutions"
-          },
-          "clone_url": "https://github.com/OpensourceICTSolutions/xz_utils-CVE-2024-3094.git"
-        },
-        {
-          "id": 779823084,
-          "name": "CVE-2024-3094-checker",
-          "full_name": "hazemkya/CVE-2024-3094-checker",
-          "html_url": "https://github.com/hazemkya/CVE-2024-3094-checker",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2024-03-31T00:17:52Z",
-          "pushed_at": "2024-03-31T00:40:48Z",
-          "created_at": "2024-03-30T21:56:17Z",
-          "topics": [],
-          "owner": {
-            "login": "hazemkya",
-            "html_url": "https://github.com/hazemkya"
-          },
-          "clone_url": "https://github.com/hazemkya/CVE-2024-3094-checker.git"
-        },
-        {
           "id": 780459583,
           "name": "CVE-2024-3094",
           "full_name": "zpxlz/CVE-2024-3094",
@@ -20304,42 +20315,23 @@
           "clone_url": "https://github.com/zpxlz/CVE-2024-3094.git"
         },
         {
-          "id": 780121031,
-          "name": "CVE-2024-3094",
-          "full_name": "Mustafa1986/CVE-2024-3094",
-          "html_url": "https://github.com/Mustafa1986/CVE-2024-3094",
+          "id": 779823084,
+          "name": "CVE-2024-3094-checker",
+          "full_name": "hazemkya/CVE-2024-3094-checker",
+          "html_url": "https://github.com/hazemkya/CVE-2024-3094-checker",
           "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2024-04-01T05:49:11Z",
-          "pushed_at": "2024-04-01T05:49:08Z",
-          "created_at": "2024-03-31T18:46:58Z",
+          "language": "Shell",
+          "updated_at": "2024-03-31T00:17:52Z",
+          "pushed_at": "2024-03-31T00:40:48Z",
+          "created_at": "2024-03-30T21:56:17Z",
           "topics": [],
           "owner": {
-            "login": "Mustafa1986",
-            "html_url": "https://github.com/Mustafa1986"
+            "login": "hazemkya",
+            "html_url": "https://github.com/hazemkya"
           },
-          "clone_url": "https://github.com/Mustafa1986/CVE-2024-3094.git"
-        },
-        {
-          "id": 780105802,
-          "name": "CVE-2024-3094-Nmap-NSE-script",
-          "full_name": "spidygal/CVE-2024-3094-Nmap-NSE-script",
-          "html_url": "https://github.com/spidygal/CVE-2024-3094-Nmap-NSE-script",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2024-03-31T17:53:11Z",
-          "pushed_at": "2024-03-31T17:56:48Z",
-          "created_at": "2024-03-31T17:53:11Z",
-          "topics": [],
-          "owner": {
-            "login": "spidygal",
-            "html_url": "https://github.com/spidygal"
-          },
-          "clone_url": "https://github.com/spidygal/CVE-2024-3094-Nmap-NSE-script.git"
+          "clone_url": "https://github.com/hazemkya/CVE-2024-3094-checker.git"
         },
         {
           "id": 780700554,
@@ -20380,23 +20372,23 @@
           "clone_url": "https://github.com/hackingetico21/revisaxzutils.git"
         },
         {
-          "id": 786174088,
-          "name": "Detectar-Backdoor-en-liblzma-de-XZ-utils-CVE-2024-3094-",
-          "full_name": "fevar54/Detectar-Backdoor-en-liblzma-de-XZ-utils-CVE-2024-3094-",
-          "html_url": "https://github.com/fevar54/Detectar-Backdoor-en-liblzma-de-XZ-utils-CVE-2024-3094-",
-          "description": "La siguiente regla YARA ayuda a detectar la presencia del backdoor en la librería liblzma comprometida en sistemas que utilizan las versiones 5.6.0 y 5.6.1 de la herramienta de compresión XZ.",
+          "id": 1268506254,
+          "name": "lab_xz_backdoor",
+          "full_name": "stevehenderson/lab_xz_backdoor",
+          "html_url": "https://github.com/stevehenderson/lab_xz_backdoor",
+          "description": "Some labs looking at the xz backdoor vulnerability (CVE-2024-3094)",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "",
-          "updated_at": "2024-04-13T16:37:32Z",
-          "pushed_at": "2024-04-13T16:46:19Z",
-          "created_at": "2024-04-13T16:37:32Z",
+          "language": "Shell",
+          "updated_at": "2026-06-14T20:53:40Z",
+          "pushed_at": "2026-06-14T20:53:37Z",
+          "created_at": "2026-06-13T16:02:59Z",
           "topics": [],
           "owner": {
-            "login": "fevar54",
-            "html_url": "https://github.com/fevar54"
+            "login": "stevehenderson",
+            "html_url": "https://github.com/stevehenderson"
           },
-          "clone_url": "https://github.com/fevar54/Detectar-Backdoor-en-liblzma-de-XZ-utils-CVE-2024-3094-.git"
+          "clone_url": "https://github.com/stevehenderson/lab_xz_backdoor.git"
         },
         {
           "id": 780489939,
@@ -20494,23 +20486,23 @@
           "clone_url": "https://github.com/mightysai1997/CVE-2024-3094-info.git"
         },
         {
-          "id": 782827523,
-          "name": "xz-backdoor-scan",
-          "full_name": "Juul/xz-backdoor-scan",
-          "html_url": "https://github.com/Juul/xz-backdoor-scan",
-          "description": "Scan for files containing the signature from the `xz` backdoor (CVE-2024-3094)",
+          "id": 786174088,
+          "name": "Detectar-Backdoor-en-liblzma-de-XZ-utils-CVE-2024-3094-",
+          "full_name": "fevar54/Detectar-Backdoor-en-liblzma-de-XZ-utils-CVE-2024-3094-",
+          "html_url": "https://github.com/fevar54/Detectar-Backdoor-en-liblzma-de-XZ-utils-CVE-2024-3094-",
+          "description": "La siguiente regla YARA ayuda a detectar la presencia del backdoor en la librería liblzma comprometida en sistemas que utilizan las versiones 5.6.0 y 5.6.1 de la herramienta de compresión XZ.",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "C",
-          "updated_at": "2024-04-06T06:30:17Z",
-          "pushed_at": "2024-04-07T05:37:08Z",
-          "created_at": "2024-04-06T06:29:43Z",
+          "language": "",
+          "updated_at": "2024-04-13T16:37:32Z",
+          "pushed_at": "2024-04-13T16:46:19Z",
+          "created_at": "2024-04-13T16:37:32Z",
           "topics": [],
           "owner": {
-            "login": "Juul",
-            "html_url": "https://github.com/Juul"
+            "login": "fevar54",
+            "html_url": "https://github.com/fevar54"
           },
-          "clone_url": "https://github.com/Juul/xz-backdoor-scan.git"
+          "clone_url": "https://github.com/fevar54/Detectar-Backdoor-en-liblzma-de-XZ-utils-CVE-2024-3094-.git"
         },
         {
           "id": 780214985,
@@ -20570,42 +20562,42 @@
           "clone_url": "https://github.com/shefirot/CVE-2024-3094.git"
         },
         {
-          "id": 780033593,
-          "name": "CVE-2024-3094-patcher",
-          "full_name": "Simplifi-ED/CVE-2024-3094-patcher",
-          "html_url": "https://github.com/Simplifi-ED/CVE-2024-3094-patcher",
-          "description": "Ansible playbook for patching CVE-2024-3094",
+          "id": 782827523,
+          "name": "xz-backdoor-scan",
+          "full_name": "Juul/xz-backdoor-scan",
+          "html_url": "https://github.com/Juul/xz-backdoor-scan",
+          "description": "Scan for files containing the signature from the `xz` backdoor (CVE-2024-3094)",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "",
-          "updated_at": "2024-03-31T14:09:29Z",
-          "pushed_at": "2024-03-31T15:36:28Z",
-          "created_at": "2024-03-31T14:09:28Z",
+          "language": "C",
+          "updated_at": "2024-04-06T06:30:17Z",
+          "pushed_at": "2024-04-07T05:37:08Z",
+          "created_at": "2024-04-06T06:29:43Z",
           "topics": [],
           "owner": {
-            "login": "Simplifi-ED",
-            "html_url": "https://github.com/Simplifi-ED"
+            "login": "Juul",
+            "html_url": "https://github.com/Juul"
           },
-          "clone_url": "https://github.com/Simplifi-ED/CVE-2024-3094-patcher.git"
+          "clone_url": "https://github.com/Juul/xz-backdoor-scan.git"
         },
         {
-          "id": 779717708,
+          "id": 780121031,
           "name": "CVE-2024-3094",
-          "full_name": "ashwani95/CVE-2024-3094",
-          "html_url": "https://github.com/ashwani95/CVE-2024-3094",
+          "full_name": "Mustafa1986/CVE-2024-3094",
+          "html_url": "https://github.com/Mustafa1986/CVE-2024-3094",
           "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2024-03-30T15:29:38Z",
-          "pushed_at": "2024-03-30T17:00:39Z",
-          "created_at": "2024-03-30T15:29:05Z",
+          "language": "Python",
+          "updated_at": "2024-04-01T05:49:11Z",
+          "pushed_at": "2024-04-01T05:49:08Z",
+          "created_at": "2024-03-31T18:46:58Z",
           "topics": [],
           "owner": {
-            "login": "ashwani95",
-            "html_url": "https://github.com/ashwani95"
+            "login": "Mustafa1986",
+            "html_url": "https://github.com/Mustafa1986"
           },
-          "clone_url": "https://github.com/ashwani95/CVE-2024-3094.git"
+          "clone_url": "https://github.com/Mustafa1986/CVE-2024-3094.git"
         }
       ]
     },
@@ -22750,10 +22742,10 @@
           "full_name": "sylwia-budzynska/codeql-workshop",
           "html_url": "https://github.com/sylwia-budzynska/codeql-workshop",
           "description": "Take first steps in CodeQL for Python by writing a query to find CVE-2024-32022",
-          "stargazers_count": 11,
+          "stargazers_count": 12,
           "forks_count": 7,
           "language": "CodeQL",
-          "updated_at": "2026-07-19T08:53:32Z",
+          "updated_at": "2026-07-22T11:32:55Z",
           "pushed_at": "2026-07-19T08:53:28Z",
           "created_at": "2025-09-22T16:44:32Z",
           "topics": [],
@@ -24172,10 +24164,10 @@
           "full_name": "AdaniKamal/CVE-2024-3400",
           "html_url": "https://github.com/AdaniKamal/CVE-2024-3400",
           "description": "CVE-2024-3400 PAN-OS: OS Command Injection Vulnerability in GlobalProtect",
-          "stargazers_count": 7,
+          "stargazers_count": 8,
           "forks_count": 4,
           "language": "Python",
-          "updated_at": "2024-08-25T03:20:25Z",
+          "updated_at": "2026-07-23T15:12:41Z",
           "pushed_at": "2024-08-25T03:20:22Z",
           "created_at": "2024-04-16T01:43:24Z",
           "topics": [],
@@ -24324,6 +24316,25 @@
           "clone_url": "https://github.com/HackingLZ/panrapidcheck.git"
         },
         {
+          "id": 787515205,
+          "name": "CVE-2024-3400-POC",
+          "full_name": "CONDITIONBLACK/CVE-2024-3400-POC",
+          "html_url": "https://github.com/CONDITIONBLACK/CVE-2024-3400-POC",
+          "description": "",
+          "stargazers_count": 2,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-07-23T15:13:27Z",
+          "pushed_at": "2024-04-16T17:18:49Z",
+          "created_at": "2024-04-16T17:08:15Z",
+          "topics": [],
+          "owner": {
+            "login": "CONDITIONBLACK",
+            "html_url": "https://github.com/CONDITIONBLACK"
+          },
+          "clone_url": "https://github.com/CONDITIONBLACK/CVE-2024-3400-POC.git"
+        },
+        {
           "id": 787894337,
           "name": "CVE-2024-3400-Canary",
           "full_name": "ZephrFish/CVE-2024-3400-Canary",
@@ -24381,61 +24392,23 @@
           "clone_url": "https://github.com/marconesler/CVE-2024-3400.git"
         },
         {
-          "id": 787515205,
-          "name": "CVE-2024-3400-POC",
-          "full_name": "CONDITIONBLACK/CVE-2024-3400-POC",
-          "html_url": "https://github.com/CONDITIONBLACK/CVE-2024-3400-POC",
-          "description": "",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2024-04-16T22:03:41Z",
-          "pushed_at": "2024-04-16T17:18:49Z",
-          "created_at": "2024-04-16T17:08:15Z",
-          "topics": [],
-          "owner": {
-            "login": "CONDITIONBLACK",
-            "html_url": "https://github.com/CONDITIONBLACK"
-          },
-          "clone_url": "https://github.com/CONDITIONBLACK/CVE-2024-3400-POC.git"
-        },
-        {
-          "id": 786651484,
-          "name": "CVE-2024-3400-Compromise-Checker",
-          "full_name": "MurrayR0123/CVE-2024-3400-Compromise-Checker",
-          "html_url": "https://github.com/MurrayR0123/CVE-2024-3400-Compromise-Checker",
-          "description": "A simple bash script to check for evidence of compromise related to CVE-2024-3400",
-          "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "Shell",
-          "updated_at": "2024-04-26T06:02:36Z",
-          "pushed_at": "2024-04-26T06:02:32Z",
-          "created_at": "2024-04-15T03:28:22Z",
-          "topics": [],
-          "owner": {
-            "login": "MurrayR0123",
-            "html_url": "https://github.com/MurrayR0123"
-          },
-          "clone_url": "https://github.com/MurrayR0123/CVE-2024-3400-Compromise-Checker.git"
-        },
-        {
-          "id": 791335435,
-          "name": "CVE-2024-3400-Checker",
-          "full_name": "terminalJunki3/CVE-2024-3400-Checker",
-          "html_url": "https://github.com/terminalJunki3/CVE-2024-3400-Checker",
-          "description": "Check to see if your Palo Alto firewall has been compromised by running script againt support bundle. ",
+          "id": 789741548,
+          "name": "cve-2024-3400",
+          "full_name": "Kr0ff/cve-2024-3400",
+          "html_url": "https://github.com/Kr0ff/cve-2024-3400",
+          "description": "Python exploit and checker script for CVE-2024-3400 Palo Alto Command Injection and Arbitrary File Creation",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2024-04-25T13:15:04Z",
-          "pushed_at": "2024-04-25T13:15:00Z",
-          "created_at": "2024-04-24T14:30:34Z",
+          "updated_at": "2024-04-21T12:41:00Z",
+          "pushed_at": "2024-04-21T12:40:57Z",
+          "created_at": "2024-04-21T12:38:13Z",
           "topics": [],
           "owner": {
-            "login": "terminalJunki3",
-            "html_url": "https://github.com/terminalJunki3"
+            "login": "Kr0ff",
+            "html_url": "https://github.com/Kr0ff"
           },
-          "clone_url": "https://github.com/terminalJunki3/CVE-2024-3400-Checker.git"
+          "clone_url": "https://github.com/Kr0ff/cve-2024-3400.git"
         },
         {
           "id": 788680382,
@@ -24457,25 +24430,6 @@
           "clone_url": "https://github.com/tfrederick74656/cve-2024-3400-poc.git"
         },
         {
-          "id": 789741548,
-          "name": "cve-2024-3400",
-          "full_name": "Kr0ff/cve-2024-3400",
-          "html_url": "https://github.com/Kr0ff/cve-2024-3400",
-          "description": "Python exploit and checker script for CVE-2024-3400 Palo Alto Command Injection and Arbitrary File Creation",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2024-04-21T12:41:00Z",
-          "pushed_at": "2024-04-21T12:40:57Z",
-          "created_at": "2024-04-21T12:38:13Z",
-          "topics": [],
-          "owner": {
-            "login": "Kr0ff",
-            "html_url": "https://github.com/Kr0ff"
-          },
-          "clone_url": "https://github.com/Kr0ff/cve-2024-3400.git"
-        },
-        {
           "id": 788553953,
           "name": "CVE-2024-3400",
           "full_name": "codeblueprint/CVE-2024-3400",
@@ -24493,25 +24447,6 @@
             "html_url": "https://github.com/codeblueprint"
           },
           "clone_url": "https://github.com/codeblueprint/CVE-2024-3400.git"
-        },
-        {
-          "id": 787738421,
-          "name": "CVE-2024-3400-Checker",
-          "full_name": "index2014/CVE-2024-3400-Checker",
-          "html_url": "https://github.com/index2014/CVE-2024-3400-Checker",
-          "description": "A check program for CVE-2024-3400, Palo Alto PAN-OS unauthenticated command injection vulnerability. Palo Alto 防火墙 PAN-OS 远程命令注入检测程序。",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2024-04-17T05:56:31Z",
-          "pushed_at": "2024-04-17T05:57:55Z",
-          "created_at": "2024-04-17T04:58:42Z",
-          "topics": [],
-          "owner": {
-            "login": "index2014",
-            "html_url": "https://github.com/index2014"
-          },
-          "clone_url": "https://github.com/index2014/CVE-2024-3400-Checker.git"
         },
         {
           "id": 788820989,
@@ -24533,6 +24468,25 @@
           "clone_url": "https://github.com/pwnj0hn/CVE-2024-3400.git"
         },
         {
+          "id": 787738421,
+          "name": "CVE-2024-3400-Checker",
+          "full_name": "index2014/CVE-2024-3400-Checker",
+          "html_url": "https://github.com/index2014/CVE-2024-3400-Checker",
+          "description": "A check program for CVE-2024-3400, Palo Alto PAN-OS unauthenticated command injection vulnerability. Palo Alto 防火墙 PAN-OS 远程命令注入检测程序。",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2024-04-17T05:56:31Z",
+          "pushed_at": "2024-04-17T05:57:55Z",
+          "created_at": "2024-04-17T04:58:42Z",
+          "topics": [],
+          "owner": {
+            "login": "index2014",
+            "html_url": "https://github.com/index2014"
+          },
+          "clone_url": "https://github.com/index2014/CVE-2024-3400-Checker.git"
+        },
+        {
           "id": 788665827,
           "name": "CVE-2024-3400-Check",
           "full_name": "sxyrxyy/CVE-2024-3400-Check",
@@ -24550,6 +24504,25 @@
             "html_url": "https://github.com/sxyrxyy"
           },
           "clone_url": "https://github.com/sxyrxyy/CVE-2024-3400-Check.git"
+        },
+        {
+          "id": 788666276,
+          "name": "CVE-2024-3400",
+          "full_name": "Ravaan21/CVE-2024-3400",
+          "html_url": "https://github.com/Ravaan21/CVE-2024-3400",
+          "description": "CVE-2024-3400 POC written in Rust and Python",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Rust",
+          "updated_at": "2024-04-18T21:16:31Z",
+          "pushed_at": "2024-04-18T21:21:15Z",
+          "created_at": "2024-04-18T21:14:15Z",
+          "topics": [],
+          "owner": {
+            "login": "Ravaan21",
+            "html_url": "https://github.com/Ravaan21"
+          },
+          "clone_url": "https://github.com/Ravaan21/CVE-2024-3400.git"
         },
         {
           "id": 786201656,
@@ -24609,42 +24582,23 @@
           "clone_url": "https://github.com/MrR0b0t19/CVE-2024-3400.git"
         },
         {
-          "id": 788666276,
-          "name": "CVE-2024-3400",
-          "full_name": "Ravaan21/CVE-2024-3400",
-          "html_url": "https://github.com/Ravaan21/CVE-2024-3400",
-          "description": "CVE-2024-3400 POC written in Rust and Python",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Rust",
-          "updated_at": "2024-04-18T21:16:31Z",
-          "pushed_at": "2024-04-18T21:21:15Z",
-          "created_at": "2024-04-18T21:14:15Z",
-          "topics": [],
-          "owner": {
-            "login": "Ravaan21",
-            "html_url": "https://github.com/Ravaan21"
-          },
-          "clone_url": "https://github.com/Ravaan21/CVE-2024-3400.git"
-        },
-        {
-          "id": 1254573114,
-          "name": "Global-Protect_VPN_Vuln",
-          "full_name": "P4rC3L/Global-Protect_VPN_Vuln",
-          "html_url": "https://github.com/P4rC3L/Global-Protect_VPN_Vuln",
-          "description": "Testing a List of IP address incase they are vulnerable to CVE-2024-3400",
+          "id": 791335435,
+          "name": "CVE-2024-3400-Checker",
+          "full_name": "terminalJunki3/CVE-2024-3400-Checker",
+          "html_url": "https://github.com/terminalJunki3/CVE-2024-3400-Checker",
+          "description": "Check to see if your Palo Alto firewall has been compromised by running script againt support bundle. ",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-05-30T18:50:32Z",
-          "pushed_at": "2026-05-30T18:50:28Z",
-          "created_at": "2026-05-30T18:31:50Z",
+          "updated_at": "2024-04-25T13:15:04Z",
+          "pushed_at": "2024-04-25T13:15:00Z",
+          "created_at": "2024-04-24T14:30:34Z",
           "topics": [],
           "owner": {
-            "login": "P4rC3L",
-            "html_url": "https://github.com/P4rC3L"
+            "login": "terminalJunki3",
+            "html_url": "https://github.com/terminalJunki3"
           },
-          "clone_url": "https://github.com/P4rC3L/Global-Protect_VPN_Vuln.git"
+          "clone_url": "https://github.com/terminalJunki3/CVE-2024-3400-Checker.git"
         },
         {
           "id": 788514206,
@@ -24664,6 +24618,25 @@
             "html_url": "https://github.com/hahasagined"
           },
           "clone_url": "https://github.com/hahasagined/CVE-2024-3400.git"
+        },
+        {
+          "id": 786651484,
+          "name": "CVE-2024-3400-Compromise-Checker",
+          "full_name": "MurrayR0123/CVE-2024-3400-Compromise-Checker",
+          "html_url": "https://github.com/MurrayR0123/CVE-2024-3400-Compromise-Checker",
+          "description": "A simple bash script to check for evidence of compromise related to CVE-2024-3400",
+          "stargazers_count": 0,
+          "forks_count": 1,
+          "language": "Shell",
+          "updated_at": "2024-04-26T06:02:36Z",
+          "pushed_at": "2024-04-26T06:02:32Z",
+          "created_at": "2024-04-15T03:28:22Z",
+          "topics": [],
+          "owner": {
+            "login": "MurrayR0123",
+            "html_url": "https://github.com/MurrayR0123"
+          },
+          "clone_url": "https://github.com/MurrayR0123/CVE-2024-3400-Compromise-Checker.git"
         },
         {
           "id": 802848040,
@@ -25472,10 +25445,10 @@
           "full_name": "LOURC0D3/CVE-2024-4367-PoC",
           "html_url": "https://github.com/LOURC0D3/CVE-2024-4367-PoC",
           "description": "CVE-2024-4367 \u0026 CVE-2024-34342 Proof of Concept",
-          "stargazers_count": 202,
-          "forks_count": 27,
+          "stargazers_count": 203,
+          "forks_count": 28,
           "language": "Python",
-          "updated_at": "2026-07-02T04:08:47Z",
+          "updated_at": "2026-07-22T12:40:37Z",
           "pushed_at": "2024-06-07T03:28:00Z",
           "created_at": "2024-05-20T10:02:23Z",
           "topics": [],
@@ -26775,10 +26748,10 @@
           "full_name": "ahisec/geoserver-",
           "html_url": "https://github.com/ahisec/geoserver-",
           "description": "geoserver CVE-2024-36401漏洞利用工具",
-          "stargazers_count": 45,
+          "stargazers_count": 46,
           "forks_count": 8,
           "language": "Java",
-          "updated_at": "2026-07-13T12:04:55Z",
+          "updated_at": "2026-07-22T15:42:44Z",
           "pushed_at": "2024-07-24T15:33:03Z",
           "created_at": "2024-07-17T02:25:21Z",
           "topics": [],
@@ -26941,25 +26914,6 @@
           "clone_url": "https://github.com/punitdarji/GeoServer-CVE-2024-36401.git"
         },
         {
-          "id": 1258531944,
-          "name": "cve-2024-36401-geoserver-rce",
-          "full_name": "DanieleGiovanardi2408/cve-2024-36401-geoserver-rce",
-          "html_url": "https://github.com/DanieleGiovanardi2408/cve-2024-36401-geoserver-rce",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-06-03T17:14:45Z",
-          "pushed_at": "2026-06-03T17:14:40Z",
-          "created_at": "2026-06-03T17:06:32Z",
-          "topics": [],
-          "owner": {
-            "login": "DanieleGiovanardi2408",
-            "html_url": "https://github.com/DanieleGiovanardi2408"
-          },
-          "clone_url": "https://github.com/DanieleGiovanardi2408/cve-2024-36401-geoserver-rce.git"
-        },
-        {
           "id": 836929821,
           "name": "CVE-2024-36401-PoC",
           "full_name": "y1s4s/CVE-2024-36401-PoC",
@@ -26977,6 +26931,25 @@
             "html_url": "https://github.com/y1s4s"
           },
           "clone_url": "https://github.com/y1s4s/CVE-2024-36401-PoC.git"
+        },
+        {
+          "id": 827686717,
+          "name": "CVE-2024-36401-GeoServer-RCE",
+          "full_name": "jakabakos/CVE-2024-36401-GeoServer-RCE",
+          "html_url": "https://github.com/jakabakos/CVE-2024-36401-GeoServer-RCE",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2024-07-12T07:07:18Z",
+          "pushed_at": "2024-07-12T07:07:14Z",
+          "created_at": "2024-07-12T07:01:12Z",
+          "topics": [],
+          "owner": {
+            "login": "jakabakos",
+            "html_url": "https://github.com/jakabakos"
+          },
+          "clone_url": "https://github.com/jakabakos/CVE-2024-36401-GeoServer-RCE.git"
         },
         {
           "id": 1292085325,
@@ -26998,25 +26971,6 @@
           "clone_url": "https://github.com/keelanbrady1011/CVE-2024-36401.git"
         },
         {
-          "id": 1254222927,
-          "name": "CVE-2024-36401-poc",
-          "full_name": "Delt-A/CVE-2024-36401-poc",
-          "html_url": "https://github.com/Delt-A/CVE-2024-36401-poc",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-06-06T01:45:50Z",
-          "pushed_at": "2026-06-06T01:45:47Z",
-          "created_at": "2026-05-30T09:44:57Z",
-          "topics": [],
-          "owner": {
-            "login": "Delt-A",
-            "html_url": "https://github.com/Delt-A"
-          },
-          "clone_url": "https://github.com/Delt-A/CVE-2024-36401-poc.git"
-        },
-        {
           "id": 872538624,
           "name": "CVE-2024-36401",
           "full_name": "kkhackz0013/CVE-2024-36401",
@@ -27036,23 +26990,23 @@
           "clone_url": "https://github.com/kkhackz0013/CVE-2024-36401.git"
         },
         {
-          "id": 827686717,
-          "name": "CVE-2024-36401-GeoServer-RCE",
-          "full_name": "jakabakos/CVE-2024-36401-GeoServer-RCE",
-          "html_url": "https://github.com/jakabakos/CVE-2024-36401-GeoServer-RCE",
+          "id": 1254222927,
+          "name": "CVE-2024-36401-poc",
+          "full_name": "Delt-A/CVE-2024-36401-poc",
+          "html_url": "https://github.com/Delt-A/CVE-2024-36401-poc",
           "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2024-07-12T07:07:18Z",
-          "pushed_at": "2024-07-12T07:07:14Z",
-          "created_at": "2024-07-12T07:01:12Z",
+          "updated_at": "2026-06-06T01:45:50Z",
+          "pushed_at": "2026-06-06T01:45:47Z",
+          "created_at": "2026-05-30T09:44:57Z",
           "topics": [],
           "owner": {
-            "login": "jakabakos",
-            "html_url": "https://github.com/jakabakos"
+            "login": "Delt-A",
+            "html_url": "https://github.com/Delt-A"
           },
-          "clone_url": "https://github.com/jakabakos/CVE-2024-36401-GeoServer-RCE.git"
+          "clone_url": "https://github.com/Delt-A/CVE-2024-36401-poc.git"
         },
         {
           "id": 895493116,
@@ -27639,6 +27593,30 @@
             "html_url": "https://github.com/mrblackstar26"
           },
           "clone_url": "https://github.com/mrblackstar26/CVE-2024-37051.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-37054",
+      "repositories": [
+        {
+          "id": 1309518534,
+          "name": "SmartHire---Hack-The-Box-WriteUp",
+          "full_name": "Cosm3No1de/SmartHire---Hack-The-Box-WriteUp",
+          "html_url": "https://github.com/Cosm3No1de/SmartHire---Hack-The-Box-WriteUp",
+          "description": "Full kill chain for HTB SmartHire: from reconnaissance to root. Covers vhost discovery, MLflow RCE (CVE-2024-37054), bind shell, and privilege escalation using Python module hijacking. A clean writeup for cybersecurity portfolio.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "HTML",
+          "updated_at": "2026-07-23T04:43:06Z",
+          "pushed_at": "2026-07-23T04:42:41Z",
+          "created_at": "2026-07-23T04:33:59Z",
+          "topics": [],
+          "owner": {
+            "login": "Cosm3No1de",
+            "html_url": "https://github.com/Cosm3No1de"
+          },
+          "clone_url": "https://github.com/Cosm3No1de/SmartHire---Hack-The-Box-WriteUp.git"
         }
       ]
     },
@@ -29002,6 +28980,25 @@
           "clone_url": "https://github.com/psl-b/CVE-2024-38077-check.git"
         },
         {
+          "id": 1309487967,
+          "name": "cve-2024-38077-madlicense_reproduction",
+          "full_name": "razureink/cve-2024-38077-madlicense_reproduction",
+          "html_url": "https://github.com/razureink/cve-2024-38077-madlicense_reproduction",
+          "description": "CVE Reproduction: cve-2024-38077-madlicense_reproduction",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-07-23T03:45:30Z",
+          "pushed_at": "2026-07-23T03:45:15Z",
+          "created_at": "2026-07-23T03:45:10Z",
+          "topics": [],
+          "owner": {
+            "login": "razureink",
+            "html_url": "https://github.com/razureink"
+          },
+          "clone_url": "https://github.com/razureink/cve-2024-38077-madlicense_reproduction.git"
+        },
+        {
           "id": 840609471,
           "name": "CVE-2024-38077-notes",
           "full_name": "lworld0x00/CVE-2024-38077-notes",
@@ -29274,10 +29271,10 @@
           "full_name": "mrmtwoj/apache-vulnerability-testing",
           "html_url": "https://github.com/mrmtwoj/apache-vulnerability-testing",
           "description": "Apache HTTP Server Vulnerability Testing Tool | PoC for CVE-2024-38472 , CVE-2024-39573 , CVE-2024-38477 , CVE-2024-38476 , CVE-2024-38475 , CVE-2024-38474 ,  CVE-2024-38473 , CVE-2023-38709",
-          "stargazers_count": 132,
-          "forks_count": 24,
+          "stargazers_count": 133,
+          "forks_count": 23,
           "language": "Python",
-          "updated_at": "2026-07-21T12:06:57Z",
+          "updated_at": "2026-07-23T19:31:25Z",
           "pushed_at": "2024-10-05T20:37:02Z",
           "created_at": "2024-10-05T20:32:45Z",
           "topics": [
@@ -29328,10 +29325,10 @@
           "full_name": "mrmtwoj/apache-vulnerability-testing",
           "html_url": "https://github.com/mrmtwoj/apache-vulnerability-testing",
           "description": "Apache HTTP Server Vulnerability Testing Tool | PoC for CVE-2024-38472 , CVE-2024-39573 , CVE-2024-38477 , CVE-2024-38476 , CVE-2024-38475 , CVE-2024-38474 ,  CVE-2024-38473 , CVE-2023-38709",
-          "stargazers_count": 132,
-          "forks_count": 24,
+          "stargazers_count": 133,
+          "forks_count": 23,
           "language": "Python",
-          "updated_at": "2026-07-21T12:06:57Z",
+          "updated_at": "2026-07-23T19:31:25Z",
           "pushed_at": "2024-10-05T20:37:02Z",
           "created_at": "2024-10-05T20:32:45Z",
           "topics": [
@@ -29401,10 +29398,10 @@
           "full_name": "mrmtwoj/apache-vulnerability-testing",
           "html_url": "https://github.com/mrmtwoj/apache-vulnerability-testing",
           "description": "Apache HTTP Server Vulnerability Testing Tool | PoC for CVE-2024-38472 , CVE-2024-39573 , CVE-2024-38477 , CVE-2024-38476 , CVE-2024-38475 , CVE-2024-38474 ,  CVE-2024-38473 , CVE-2023-38709",
-          "stargazers_count": 132,
-          "forks_count": 24,
+          "stargazers_count": 133,
+          "forks_count": 23,
           "language": "Python",
-          "updated_at": "2026-07-21T12:06:57Z",
+          "updated_at": "2026-07-23T19:31:25Z",
           "pushed_at": "2024-10-05T20:37:02Z",
           "created_at": "2024-10-05T20:32:45Z",
           "topics": [
@@ -29436,10 +29433,10 @@
           "full_name": "mrmtwoj/apache-vulnerability-testing",
           "html_url": "https://github.com/mrmtwoj/apache-vulnerability-testing",
           "description": "Apache HTTP Server Vulnerability Testing Tool | PoC for CVE-2024-38472 , CVE-2024-39573 , CVE-2024-38477 , CVE-2024-38476 , CVE-2024-38475 , CVE-2024-38474 ,  CVE-2024-38473 , CVE-2023-38709",
-          "stargazers_count": 132,
-          "forks_count": 24,
+          "stargazers_count": 133,
+          "forks_count": 23,
           "language": "Python",
-          "updated_at": "2026-07-21T12:06:57Z",
+          "updated_at": "2026-07-23T19:31:25Z",
           "pushed_at": "2024-10-05T20:37:02Z",
           "created_at": "2024-10-05T20:32:45Z",
           "topics": [
@@ -29469,7 +29466,7 @@
           "stargazers_count": 16,
           "forks_count": 4,
           "language": "Python",
-          "updated_at": "2026-01-23T13:53:40Z",
+          "updated_at": "2026-07-23T17:19:16Z",
           "pushed_at": "2024-08-18T12:27:30Z",
           "created_at": "2024-08-18T11:30:50Z",
           "topics": [],
@@ -29497,25 +29494,6 @@
             "html_url": "https://github.com/soltanali0"
           },
           "clone_url": "https://github.com/soltanali0/CVE-2024-38475.git"
-        },
-        {
-          "id": 1255351370,
-          "name": "Myesve",
-          "full_name": "Nyakki-Labs-0x420/Myesve",
-          "html_url": "https://github.com/Nyakki-Labs-0x420/Myesve",
-          "description": "CVE-2024-38475 exploitation \u0026 scanning tool with Mullvad VPN rotation",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-06-01T04:24:05Z",
-          "pushed_at": "2026-06-01T04:24:02Z",
-          "created_at": "2026-05-31T18:12:18Z",
-          "topics": [],
-          "owner": {
-            "login": "Nyakki-Labs-0x420",
-            "html_url": "https://github.com/Nyakki-Labs-0x420"
-          },
-          "clone_url": "https://github.com/Nyakki-Labs-0x420/Myesve.git"
         }
       ]
     },
@@ -29528,10 +29506,10 @@
           "full_name": "mrmtwoj/apache-vulnerability-testing",
           "html_url": "https://github.com/mrmtwoj/apache-vulnerability-testing",
           "description": "Apache HTTP Server Vulnerability Testing Tool | PoC for CVE-2024-38472 , CVE-2024-39573 , CVE-2024-38477 , CVE-2024-38476 , CVE-2024-38475 , CVE-2024-38474 ,  CVE-2024-38473 , CVE-2023-38709",
-          "stargazers_count": 132,
-          "forks_count": 24,
+          "stargazers_count": 133,
+          "forks_count": 23,
           "language": "Python",
-          "updated_at": "2026-07-21T12:06:57Z",
+          "updated_at": "2026-07-23T19:31:25Z",
           "pushed_at": "2024-10-05T20:37:02Z",
           "created_at": "2024-10-05T20:32:45Z",
           "topics": [
@@ -29563,10 +29541,10 @@
           "full_name": "mrmtwoj/apache-vulnerability-testing",
           "html_url": "https://github.com/mrmtwoj/apache-vulnerability-testing",
           "description": "Apache HTTP Server Vulnerability Testing Tool | PoC for CVE-2024-38472 , CVE-2024-39573 , CVE-2024-38477 , CVE-2024-38476 , CVE-2024-38475 , CVE-2024-38474 ,  CVE-2024-38473 , CVE-2023-38709",
-          "stargazers_count": 132,
-          "forks_count": 24,
+          "stargazers_count": 133,
+          "forks_count": 23,
           "language": "Python",
-          "updated_at": "2026-07-21T12:06:57Z",
+          "updated_at": "2026-07-23T19:31:25Z",
           "pushed_at": "2024-10-05T20:37:02Z",
           "created_at": "2024-10-05T20:32:45Z",
           "topics": [
@@ -30404,10 +30382,10 @@
           "full_name": "mrmtwoj/apache-vulnerability-testing",
           "html_url": "https://github.com/mrmtwoj/apache-vulnerability-testing",
           "description": "Apache HTTP Server Vulnerability Testing Tool | PoC for CVE-2024-38472 , CVE-2024-39573 , CVE-2024-38477 , CVE-2024-38476 , CVE-2024-38475 , CVE-2024-38474 ,  CVE-2024-38473 , CVE-2023-38709",
-          "stargazers_count": 132,
-          "forks_count": 24,
+          "stargazers_count": 133,
+          "forks_count": 23,
           "language": "Python",
-          "updated_at": "2026-07-21T12:06:57Z",
+          "updated_at": "2026-07-23T19:31:25Z",
           "pushed_at": "2024-10-05T20:37:02Z",
           "created_at": "2024-10-05T20:32:45Z",
           "topics": [
@@ -33315,6 +33293,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2024-43451",
+      "repositories": [
+        {
+          "id": 1309488020,
+          "name": "cve-2024-43451-ntlm_hash_disclosure_reproduction",
+          "full_name": "razureink/cve-2024-43451-ntlm_hash_disclosure_reproduction",
+          "html_url": "https://github.com/razureink/cve-2024-43451-ntlm_hash_disclosure_reproduction",
+          "description": "CVE Reproduction: cve-2024-43451-ntlm_hash_disclosure_reproduction",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-07-23T03:45:35Z",
+          "pushed_at": "2026-07-23T03:45:21Z",
+          "created_at": "2026-07-23T03:45:16Z",
+          "topics": [],
+          "owner": {
+            "login": "razureink",
+            "html_url": "https://github.com/razureink"
+          },
+          "clone_url": "https://github.com/razureink/cve-2024-43451-ntlm_hash_disclosure_reproduction.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2024-43468",
       "repositories": [
         {
@@ -33538,10 +33540,10 @@
           "full_name": "LOURC0D3/CVE-2024-4367-PoC",
           "html_url": "https://github.com/LOURC0D3/CVE-2024-4367-PoC",
           "description": "CVE-2024-4367 \u0026 CVE-2024-34342 Proof of Concept",
-          "stargazers_count": 202,
-          "forks_count": 27,
+          "stargazers_count": 203,
+          "forks_count": 28,
           "language": "Python",
-          "updated_at": "2026-07-02T04:08:47Z",
+          "updated_at": "2026-07-22T12:40:37Z",
           "pushed_at": "2024-06-07T03:28:00Z",
           "created_at": "2024-05-20T10:02:23Z",
           "topics": [],
@@ -35941,6 +35943,25 @@
           "clone_url": "https://github.com/PhinehasNarh/CVE-2024-4577-LetsDefend-walkthrough.git"
         },
         {
+          "id": 1309488091,
+          "name": "cve-2024-4577-phpcgi_rce_reproduction",
+          "full_name": "razureink/cve-2024-4577-phpcgi_rce_reproduction",
+          "html_url": "https://github.com/razureink/cve-2024-4577-phpcgi_rce_reproduction",
+          "description": "CVE Reproduction: cve-2024-4577-phpcgi_rce_reproduction",
+          "stargazers_count": 0,
+          "forks_count": 1,
+          "language": "Python",
+          "updated_at": "2026-07-23T03:45:35Z",
+          "pushed_at": "2026-07-23T03:45:26Z",
+          "created_at": "2026-07-23T03:45:22Z",
+          "topics": [],
+          "owner": {
+            "login": "razureink",
+            "html_url": "https://github.com/razureink"
+          },
+          "clone_url": "https://github.com/razureink/cve-2024-4577-phpcgi_rce_reproduction.git"
+        },
+        {
           "id": 811783487,
           "name": "CVE-2024-4577",
           "full_name": "Ra1n-60W/CVE-2024-4577",
@@ -36093,6 +36114,25 @@
           "clone_url": "https://github.com/gmh5225/CVE-2024-4577-PHP-RCE.git"
         },
         {
+          "id": 814021668,
+          "name": "CVE-2024-4577_Analysis",
+          "full_name": "Entropt/CVE-2024-4577_Analysis",
+          "html_url": "https://github.com/Entropt/CVE-2024-4577_Analysis",
+          "description": "Vietnam National Cyber Security (NCS)'s Internship - 2nd Test",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2025-01-25T16:28:41Z",
+          "pushed_at": "2024-08-14T20:03:28Z",
+          "created_at": "2024-06-12T07:33:41Z",
+          "topics": [],
+          "owner": {
+            "login": "Entropt",
+            "html_url": "https://github.com/Entropt"
+          },
+          "clone_url": "https://github.com/Entropt/CVE-2024-4577_Analysis.git"
+        },
+        {
           "id": 812648512,
           "name": "CVE-2024-4577",
           "full_name": "dbyMelina/CVE-2024-4577",
@@ -36110,25 +36150,6 @@
             "html_url": "https://github.com/dbyMelina"
           },
           "clone_url": "https://github.com/dbyMelina/CVE-2024-4577.git"
-        },
-        {
-          "id": 816822296,
-          "name": "CVE-2024-4577-PHP-CGI-argument-injection-RCE",
-          "full_name": "jakabakos/CVE-2024-4577-PHP-CGI-argument-injection-RCE",
-          "html_url": "https://github.com/jakabakos/CVE-2024-4577-PHP-CGI-argument-injection-RCE",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 2,
-          "language": "Python",
-          "updated_at": "2024-07-11T08:35:27Z",
-          "pushed_at": "2024-06-18T13:54:15Z",
-          "created_at": "2024-06-18T13:19:21Z",
-          "topics": [],
-          "owner": {
-            "login": "jakabakos",
-            "html_url": "https://github.com/jakabakos"
-          },
-          "clone_url": "https://github.com/jakabakos/CVE-2024-4577-PHP-CGI-argument-injection-RCE.git"
         },
         {
           "id": 823727293,
@@ -36150,23 +36171,23 @@
           "clone_url": "https://github.com/charis3306/CVE-2024-4577.git"
         },
         {
-          "id": 813698508,
-          "name": "CVE-2024-4577",
-          "full_name": "bl4cksku11/CVE-2024-4577",
-          "html_url": "https://github.com/bl4cksku11/CVE-2024-4577",
-          "description": "This is a PoC for PHP CVE-2024-4577.",
+          "id": 1302010550,
+          "name": "cve-2024-4577-lab",
+          "full_name": "Kanak-CypherX/cve-2024-4577-lab",
+          "html_url": "https://github.com/Kanak-CypherX/cve-2024-4577-lab",
+          "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2024-06-11T15:29:25Z",
-          "pushed_at": "2024-06-11T15:29:21Z",
-          "created_at": "2024-06-11T15:11:56Z",
+          "language": "Dockerfile",
+          "updated_at": "2026-07-15T20:57:45Z",
+          "pushed_at": "2026-07-15T20:57:40Z",
+          "created_at": "2026-07-15T20:23:23Z",
           "topics": [],
           "owner": {
-            "login": "bl4cksku11",
-            "html_url": "https://github.com/bl4cksku11"
+            "login": "Kanak-CypherX",
+            "html_url": "https://github.com/Kanak-CypherX"
           },
-          "clone_url": "https://github.com/bl4cksku11/CVE-2024-4577.git"
+          "clone_url": "https://github.com/Kanak-CypherX/cve-2024-4577-lab.git"
         },
         {
           "id": 843644753,
@@ -36188,6 +36209,25 @@
           "clone_url": "https://github.com/bughuntar/CVE-2024-4577.git"
         },
         {
+          "id": 821341176,
+          "name": "CVE-2024-4577",
+          "full_name": "olebris/CVE-2024-4577",
+          "html_url": "https://github.com/olebris/CVE-2024-4577",
+          "description": "CVE-2024-4577",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Shell",
+          "updated_at": "2024-06-28T10:20:21Z",
+          "pushed_at": "2024-06-28T10:20:19Z",
+          "created_at": "2024-06-28T10:19:59Z",
+          "topics": [],
+          "owner": {
+            "login": "olebris",
+            "html_url": "https://github.com/olebris"
+          },
+          "clone_url": "https://github.com/olebris/CVE-2024-4577.git"
+        },
+        {
           "id": 812032307,
           "name": "CVE-2024-4577",
           "full_name": "graphite-org/CVE-2024-4577",
@@ -36205,25 +36245,6 @@
             "html_url": "https://github.com/graphite-org"
           },
           "clone_url": "https://github.com/graphite-org/CVE-2024-4577.git"
-        },
-        {
-          "id": 814021668,
-          "name": "CVE-2024-4577_Analysis",
-          "full_name": "Entropt/CVE-2024-4577_Analysis",
-          "html_url": "https://github.com/Entropt/CVE-2024-4577_Analysis",
-          "description": "Vietnam National Cyber Security (NCS)'s Internship - 2nd Test",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2025-01-25T16:28:41Z",
-          "pushed_at": "2024-08-14T20:03:28Z",
-          "created_at": "2024-06-12T07:33:41Z",
-          "topics": [],
-          "owner": {
-            "login": "Entropt",
-            "html_url": "https://github.com/Entropt"
-          },
-          "clone_url": "https://github.com/Entropt/CVE-2024-4577_Analysis.git"
         },
         {
           "id": 856550359,
@@ -36245,6 +36266,25 @@
           "clone_url": "https://github.com/AhmedMansour93/Event-ID-268-Rule-Name-SOC292-Possible-PHP-Injection-Detected-CVE-2024-4577-.git"
         },
         {
+          "id": 813698508,
+          "name": "CVE-2024-4577",
+          "full_name": "bl4cksku11/CVE-2024-4577",
+          "html_url": "https://github.com/bl4cksku11/CVE-2024-4577",
+          "description": "This is a PoC for PHP CVE-2024-4577.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Shell",
+          "updated_at": "2024-06-11T15:29:25Z",
+          "pushed_at": "2024-06-11T15:29:21Z",
+          "created_at": "2024-06-11T15:11:56Z",
+          "topics": [],
+          "owner": {
+            "login": "bl4cksku11",
+            "html_url": "https://github.com/bl4cksku11"
+          },
+          "clone_url": "https://github.com/bl4cksku11/CVE-2024-4577.git"
+        },
+        {
           "id": 811966807,
           "name": "CVE-2024-4577-RCE-EXP",
           "full_name": "WanLiChangChengWanLiChang/CVE-2024-4577-RCE-EXP",
@@ -36264,42 +36304,23 @@
           "clone_url": "https://github.com/WanLiChangChengWanLiChang/CVE-2024-4577-RCE-EXP.git"
         },
         {
-          "id": 821341176,
-          "name": "CVE-2024-4577",
-          "full_name": "olebris/CVE-2024-4577",
-          "html_url": "https://github.com/olebris/CVE-2024-4577",
-          "description": "CVE-2024-4577",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2024-06-28T10:20:21Z",
-          "pushed_at": "2024-06-28T10:20:19Z",
-          "created_at": "2024-06-28T10:19:59Z",
-          "topics": [],
-          "owner": {
-            "login": "olebris",
-            "html_url": "https://github.com/olebris"
-          },
-          "clone_url": "https://github.com/olebris/CVE-2024-4577.git"
-        },
-        {
-          "id": 1302010550,
-          "name": "cve-2024-4577-lab",
-          "full_name": "Kanak-CypherX/cve-2024-4577-lab",
-          "html_url": "https://github.com/Kanak-CypherX/cve-2024-4577-lab",
+          "id": 816822296,
+          "name": "CVE-2024-4577-PHP-CGI-argument-injection-RCE",
+          "full_name": "jakabakos/CVE-2024-4577-PHP-CGI-argument-injection-RCE",
+          "html_url": "https://github.com/jakabakos/CVE-2024-4577-PHP-CGI-argument-injection-RCE",
           "description": "",
           "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Dockerfile",
-          "updated_at": "2026-07-15T20:57:45Z",
-          "pushed_at": "2026-07-15T20:57:40Z",
-          "created_at": "2026-07-15T20:23:23Z",
+          "forks_count": 2,
+          "language": "Python",
+          "updated_at": "2024-07-11T08:35:27Z",
+          "pushed_at": "2024-06-18T13:54:15Z",
+          "created_at": "2024-06-18T13:19:21Z",
           "topics": [],
           "owner": {
-            "login": "Kanak-CypherX",
-            "html_url": "https://github.com/Kanak-CypherX"
+            "login": "jakabakos",
+            "html_url": "https://github.com/jakabakos"
           },
-          "clone_url": "https://github.com/Kanak-CypherX/cve-2024-4577-lab.git"
+          "clone_url": "https://github.com/jakabakos/CVE-2024-4577-PHP-CGI-argument-injection-RCE.git"
         },
         {
           "id": 882724102,
@@ -36475,10 +36496,10 @@
           "full_name": "kn32/cve-2024-46483",
           "html_url": "https://github.com/kn32/cve-2024-46483",
           "description": "Pre-Authentication Heap Overflow in Xlight SFTP server \u003c= 3.9.4.2",
-          "stargazers_count": 11,
+          "stargazers_count": 12,
           "forks_count": 3,
           "language": "Python",
-          "updated_at": "2026-04-15T13:06:09Z",
+          "updated_at": "2026-07-23T19:31:25Z",
           "pushed_at": "2024-10-18T12:29:36Z",
           "created_at": "2024-10-18T11:46:14Z",
           "topics": [],
@@ -36708,30 +36729,6 @@
             "html_url": "https://github.com/vidura2"
           },
           "clone_url": "https://github.com/vidura2/CVE-2024-46986.git"
-        }
-      ]
-    },
-    {
-      "cve_id": "CVE-2024-46987",
-      "repositories": [
-        {
-          "id": 1258822910,
-          "name": "HackTheBox-Facts",
-          "full_name": "SuriyaBoon/HackTheBox-Facts",
-          "html_url": "https://github.com/SuriyaBoon/HackTheBox-Facts",
-          "description": "HTB Facts is a Easy Linux box featuring Camaleon CMS and MinIO. Gain admin access via open registration and a mass assignment vulnerability, then extract MinIO credentials from admin settings. Use CVE-2024-46987 path traversal to steal an SSH private key, crack its passphrase, and escalate to root by abusing sudo permissions on facter via GTFOBins.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-06-04T00:44:49Z",
-          "pushed_at": "2026-06-04T00:44:46Z",
-          "created_at": "2026-06-04T00:34:57Z",
-          "topics": [],
-          "owner": {
-            "login": "SuriyaBoon",
-            "html_url": "https://github.com/SuriyaBoon"
-          },
-          "clone_url": "https://github.com/SuriyaBoon/HackTheBox-Facts.git"
         }
       ]
     },
@@ -37496,7 +37493,7 @@
           "html_url": "https://github.com/canyie/MagiskEoP",
           "description": "Exploit and writeup for installed app to root privilege escalation through CVE-2024-48336 (Magisk Bug #8279), Privileges Escalation / Arbitrary Code Execution Vulnerability",
           "stargazers_count": 202,
-          "forks_count": 30,
+          "forks_count": 29,
           "language": "Java",
           "updated_at": "2026-07-16T05:08:17Z",
           "pushed_at": "2024-11-05T02:57:25Z",
@@ -38280,6 +38277,25 @@
             "html_url": "https://github.com/je5442804"
           },
           "clone_url": "https://github.com/je5442804/WPTaskScheduler_CVE-2024-49039.git"
+        },
+        {
+          "id": 1309488149,
+          "name": "cve-2024-49039-task_scheduler_eop_reproduction",
+          "full_name": "razureink/cve-2024-49039-task_scheduler_eop_reproduction",
+          "html_url": "https://github.com/razureink/cve-2024-49039-task_scheduler_eop_reproduction",
+          "description": "CVE Reproduction: cve-2024-49039-task_scheduler_eop_reproduction",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-07-23T03:45:46Z",
+          "pushed_at": "2026-07-23T03:45:33Z",
+          "created_at": "2026-07-23T03:45:27Z",
+          "topics": [],
+          "owner": {
+            "login": "razureink",
+            "html_url": "https://github.com/razureink"
+          },
+          "clone_url": "https://github.com/razureink/cve-2024-49039-task_scheduler_eop_reproduction.git"
         }
       ]
     },
@@ -38953,6 +38969,30 @@
             "html_url": "https://github.com/slavin-ayu"
           },
           "clone_url": "https://github.com/slavin-ayu/CVE-2024-50251-PoC.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2024-50330",
+      "repositories": [
+        {
+          "id": 1309488242,
+          "name": "cve-2024-50330-ivanti_epm_sqli_reproduction",
+          "full_name": "razureink/cve-2024-50330-ivanti_epm_sqli_reproduction",
+          "html_url": "https://github.com/razureink/cve-2024-50330-ivanti_epm_sqli_reproduction",
+          "description": "CVE Reproduction: cve-2024-50330-ivanti_epm_sqli_reproduction",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-07-23T03:45:49Z",
+          "pushed_at": "2026-07-23T03:45:39Z",
+          "created_at": "2026-07-23T03:45:34Z",
+          "topics": [],
+          "owner": {
+            "login": "razureink",
+            "html_url": "https://github.com/razureink"
+          },
+          "clone_url": "https://github.com/razureink/cve-2024-50330-ivanti_epm_sqli_reproduction.git"
         }
       ]
     },
@@ -41243,7 +41283,7 @@
           "html_url": "https://github.com/ebrasha/abdal-anydesk-remote-ip-detector",
           "description": "CVE-2024-52940 - A zero-day vulnerability in AnyDesk's \"Allow Direct Connections\" feature, discovered and registered by Ebrahim Shafiei (EbraSha), exposing public and private IP addresses. For details, visit the NVD, Tenable, or MITRE pages.",
           "stargazers_count": 36,
-          "forks_count": 11,
+          "forks_count": 10,
           "language": "C#",
           "updated_at": "2026-06-23T11:05:38Z",
           "pushed_at": "2024-11-18T15:09:32Z",
@@ -41306,7 +41346,7 @@
           "forks_count": 0,
           "language": "Lean",
           "updated_at": "2026-07-17T11:06:02Z",
-          "pushed_at": "2026-07-21T14:13:33Z",
+          "pushed_at": "2026-07-22T08:34:14Z",
           "created_at": "2026-07-17T05:59:11Z",
           "topics": [],
           "owner": {
@@ -41494,7 +41534,7 @@
           "html_url": "https://github.com/ThottySploity/CVE-2024-53376",
           "description": "CyberPanel authenticated RCE \u003c 2.3.8",
           "stargazers_count": 5,
-          "forks_count": 4,
+          "forks_count": 3,
           "language": "Python",
           "updated_at": "2025-02-14T17:12:01Z",
           "pushed_at": "2024-12-19T09:36:58Z",
@@ -41601,30 +41641,6 @@
             "html_url": "https://github.com/ii5mai1"
           },
           "clone_url": "https://github.com/ii5mai1/CVE-2024-53617.git"
-        }
-      ]
-    },
-    {
-      "cve_id": "CVE-2024-53667",
-      "repositories": [
-        {
-          "id": 1246426309,
-          "name": "struts-uploader-vulnerability",
-          "full_name": "baburkin/struts-uploader-vulnerability",
-          "html_url": "https://github.com/baburkin/struts-uploader-vulnerability",
-          "description": "Research of exploit options for CVE-2024-53667 and their remediation",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Java",
-          "updated_at": "2026-06-03T12:16:59Z",
-          "pushed_at": "2026-06-03T12:16:51Z",
-          "created_at": "2026-05-22T07:20:00Z",
-          "topics": [],
-          "owner": {
-            "login": "baburkin",
-            "html_url": "https://github.com/baburkin"
-          },
-          "clone_url": "https://github.com/baburkin/struts-uploader-vulnerability.git"
         }
       ]
     },
@@ -42440,7 +42456,7 @@
           "html_url": "https://github.com/Chocapikk/CVE-2024-56145",
           "description": "Unauthenticated RCE on CraftCMS when PHP `register_argc_argv` config setting is enabled",
           "stargazers_count": 47,
-          "forks_count": 13,
+          "forks_count": 12,
           "language": "Python",
           "updated_at": "2026-04-15T13:06:12Z",
           "pushed_at": "2024-12-23T12:51:54Z",
@@ -43158,10 +43174,10 @@
           "full_name": "xaitax/CVE-2024-6387_Check",
           "html_url": "https://github.com/xaitax/CVE-2024-6387_Check",
           "description": "CVE-2024-6387_Check is a lightweight, efficient tool designed to identify servers running vulnerable versions of OpenSSH",
-          "stargazers_count": 525,
+          "stargazers_count": 526,
           "forks_count": 100,
           "language": "Python",
-          "updated_at": "2026-07-20T06:32:24Z",
+          "updated_at": "2026-07-21T21:55:57Z",
           "pushed_at": "2026-05-29T11:44:40Z",
           "created_at": "2024-07-01T20:33:20Z",
           "topics": [
@@ -43222,7 +43238,7 @@
           "html_url": "https://github.com/Karmakstylez/CVE-2024-6387",
           "description": "Remote Unauthenticated Code Execution Vulnerability in OpenSSH server (CVE-2024-6387)",
           "stargazers_count": 186,
-          "forks_count": 46,
+          "forks_count": 47,
           "language": "Python",
           "updated_at": "2026-07-20T06:01:54Z",
           "pushed_at": "2024-08-22T08:50:25Z",
@@ -43294,10 +43310,10 @@
           "full_name": "filipi86/CVE-2024-6387-Vulnerability-Checker",
           "html_url": "https://github.com/filipi86/CVE-2024-6387-Vulnerability-Checker",
           "description": "This Python script checks for the CVE-2024-6387 vulnerability in OpenSSH servers. It supports multiple IP addresses, URLs, CIDR ranges, and ports. The script can also read addresses from a file.",
-          "stargazers_count": 101,
+          "stargazers_count": 102,
           "forks_count": 18,
           "language": "Python",
-          "updated_at": "2026-07-11T16:17:35Z",
+          "updated_at": "2026-07-22T12:28:33Z",
           "pushed_at": "2024-07-10T15:24:08Z",
           "created_at": "2024-07-09T17:40:19Z",
           "topics": [],
@@ -44068,25 +44084,6 @@
           "clone_url": "https://github.com/prelearn-code/CVE-2024-6387.git"
         },
         {
-          "id": 836283983,
-          "name": "ssh_poc2024",
-          "full_name": "alex14324/ssh_poc2024",
-          "html_url": "https://github.com/alex14324/ssh_poc2024",
-          "description": "An exploit for CVE-2024-6387, targeting a signal handler race condition in OpenSSH's server ",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "C",
-          "updated_at": "2026-04-08T22:28:55Z",
-          "pushed_at": "2024-07-31T14:19:44Z",
-          "created_at": "2024-07-31T14:19:19Z",
-          "topics": [],
-          "owner": {
-            "login": "alex14324",
-            "html_url": "https://github.com/alex14324"
-          },
-          "clone_url": "https://github.com/alex14324/ssh_poc2024.git"
-        },
-        {
           "id": 822884531,
           "name": "regreSSHion",
           "full_name": "teamos-hub/regreSSHion",
@@ -44106,44 +44103,23 @@
           "clone_url": "https://github.com/teamos-hub/regreSSHion.git"
         },
         {
-          "id": 823151186,
-          "name": "regreSSHion-nmap-scanner",
-          "full_name": "xristos8574/regreSSHion-nmap-scanner",
-          "html_url": "https://github.com/xristos8574/regreSSHion-nmap-scanner",
-          "description": "A bash script for nmap to scan for vulnerable machines in regards to the latest CVE-2024-6387",
+          "id": 827444140,
+          "name": "mitigate_ssh",
+          "full_name": "redux-sibi-jose/mitigate_ssh",
+          "html_url": "https://github.com/redux-sibi-jose/mitigate_ssh",
+          "description": " OpenSSH vulnerability CVE-2024-6387",
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Shell",
-          "updated_at": "2025-05-25T21:40:28Z",
-          "pushed_at": "2024-07-02T13:52:23Z",
-          "created_at": "2024-07-02T13:50:47Z",
+          "updated_at": "2024-07-29T17:48:05Z",
+          "pushed_at": "2024-07-11T16:55:52Z",
+          "created_at": "2024-07-11T16:54:41Z",
           "topics": [],
           "owner": {
-            "login": "xristos8574",
-            "html_url": "https://github.com/xristos8574"
+            "login": "redux-sibi-jose",
+            "html_url": "https://github.com/redux-sibi-jose"
           },
-          "clone_url": "https://github.com/xristos8574/regreSSHion-nmap-scanner.git"
-        },
-        {
-          "id": 823940931,
-          "name": "CVE-2024-6387-OpenSSH-Vulnerability-Checker",
-          "full_name": "turbobit/CVE-2024-6387-OpenSSH-Vulnerability-Checker",
-          "html_url": "https://github.com/turbobit/CVE-2024-6387-OpenSSH-Vulnerability-Checker",
-          "description": "Welcome to the CVE-2024-6387 OpenSSH Vulnerability Checker repository!  This project offers multiple scripts to check the installed version of OpenSSH on your system and determine if it is vulnerable to CVE-2024-6387. It supports various environments, including Ubuntu, Mac, and Windows.",
-          "stargazers_count": 1,
-          "forks_count": 1,
-          "language": "Shell",
-          "updated_at": "2024-07-07T21:11:55Z",
-          "pushed_at": "2024-07-04T05:13:49Z",
-          "created_at": "2024-07-04T03:56:08Z",
-          "topics": [
-            "cve-2024-6387-checker"
-          ],
-          "owner": {
-            "login": "turbobit",
-            "html_url": "https://github.com/turbobit"
-          },
-          "clone_url": "https://github.com/turbobit/CVE-2024-6387-OpenSSH-Vulnerability-Checker.git"
+          "clone_url": "https://github.com/redux-sibi-jose/mitigate_ssh.git"
         },
         {
           "id": 823065840,
@@ -44163,6 +44139,25 @@
             "html_url": "https://github.com/rumochnaya"
           },
           "clone_url": "https://github.com/rumochnaya/openssh-cve-2024-6387.sh.git"
+        },
+        {
+          "id": 823284825,
+          "name": "Test_CVE-2024-6387",
+          "full_name": "n1cks0n/Test_CVE-2024-6387",
+          "html_url": "https://github.com/n1cks0n/Test_CVE-2024-6387",
+          "description": "Test_CVE-2024-6387 is a lightweight, efficient tool designed to identify servers running vulnerable versions of OpenSSH",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2024-07-02T18:31:58Z",
+          "pushed_at": "2024-07-02T18:31:41Z",
+          "created_at": "2024-07-02T18:30:28Z",
+          "topics": [],
+          "owner": {
+            "login": "n1cks0n",
+            "html_url": "https://github.com/n1cks0n"
+          },
+          "clone_url": "https://github.com/n1cks0n/Test_CVE-2024-6387.git"
         },
         {
           "id": 822634085,
@@ -44203,44 +44198,6 @@
           "clone_url": "https://github.com/sardine-web/CVE-2024-6387_Check.git"
         },
         {
-          "id": 823284825,
-          "name": "Test_CVE-2024-6387",
-          "full_name": "n1cks0n/Test_CVE-2024-6387",
-          "html_url": "https://github.com/n1cks0n/Test_CVE-2024-6387",
-          "description": "Test_CVE-2024-6387 is a lightweight, efficient tool designed to identify servers running vulnerable versions of OpenSSH",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2024-07-02T18:31:58Z",
-          "pushed_at": "2024-07-02T18:31:41Z",
-          "created_at": "2024-07-02T18:30:28Z",
-          "topics": [],
-          "owner": {
-            "login": "n1cks0n",
-            "html_url": "https://github.com/n1cks0n"
-          },
-          "clone_url": "https://github.com/n1cks0n/Test_CVE-2024-6387.git"
-        },
-        {
-          "id": 822541319,
-          "name": "cve-2024-6387-poc",
-          "full_name": "7etsuo/cve-2024-6387-poc",
-          "html_url": "https://github.com/7etsuo/cve-2024-6387-poc",
-          "description": "a signal handler race condition in OpenSSH's server (sshd)",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "C",
-          "updated_at": "2026-05-04T20:32:42Z",
-          "pushed_at": "2024-07-01T11:52:18Z",
-          "created_at": "2024-07-01T10:42:02Z",
-          "topics": [],
-          "owner": {
-            "login": "7etsuo",
-            "html_url": "https://github.com/7etsuo"
-          },
-          "clone_url": "https://github.com/7etsuo/cve-2024-6387-poc.git"
-        },
-        {
           "id": 822953002,
           "name": "CVE-2024-6387",
           "full_name": "R4Tw1z/CVE-2024-6387",
@@ -44260,23 +44217,23 @@
           "clone_url": "https://github.com/R4Tw1z/CVE-2024-6387.git"
         },
         {
-          "id": 849418620,
-          "name": "Article-RegreSSHion-CVE-2024-6387",
-          "full_name": "identity-threat-labs/Article-RegreSSHion-CVE-2024-6387",
-          "html_url": "https://github.com/identity-threat-labs/Article-RegreSSHion-CVE-2024-6387",
-          "description": "In an era where digital security is crucial, a new vulnerability in OpenSSH, identified as CVE-2024-6387, has drawn the attention of system administrators and security professionals worldwide. Named \"regreSSHion,\" this severe security flaw allows remote code execution (RCE) and could significant threat to the integrity of vulnerable systems.",
+          "id": 822541319,
+          "name": "cve-2024-6387-poc",
+          "full_name": "7etsuo/cve-2024-6387-poc",
+          "html_url": "https://github.com/7etsuo/cve-2024-6387-poc",
+          "description": "a signal handler race condition in OpenSSH's server (sshd)",
           "stargazers_count": 1,
           "forks_count": 0,
-          "language": "",
-          "updated_at": "2024-09-04T16:27:20Z",
-          "pushed_at": "2024-08-29T15:06:16Z",
-          "created_at": "2024-08-29T15:00:56Z",
+          "language": "C",
+          "updated_at": "2026-05-04T20:32:42Z",
+          "pushed_at": "2024-07-01T11:52:18Z",
+          "created_at": "2024-07-01T10:42:02Z",
           "topics": [],
           "owner": {
-            "login": "identity-threat-labs",
-            "html_url": "https://github.com/identity-threat-labs"
+            "login": "7etsuo",
+            "html_url": "https://github.com/7etsuo"
           },
-          "clone_url": "https://github.com/identity-threat-labs/Article-RegreSSHion-CVE-2024-6387.git"
+          "clone_url": "https://github.com/7etsuo/cve-2024-6387-poc.git"
         },
         {
           "id": 822991113,
@@ -44308,6 +44265,46 @@
           "clone_url": "https://github.com/shamo0/CVE-2024-6387_PoC.git"
         },
         {
+          "id": 849418620,
+          "name": "Article-RegreSSHion-CVE-2024-6387",
+          "full_name": "identity-threat-labs/Article-RegreSSHion-CVE-2024-6387",
+          "html_url": "https://github.com/identity-threat-labs/Article-RegreSSHion-CVE-2024-6387",
+          "description": "In an era where digital security is crucial, a new vulnerability in OpenSSH, identified as CVE-2024-6387, has drawn the attention of system administrators and security professionals worldwide. Named \"regreSSHion,\" this severe security flaw allows remote code execution (RCE) and could significant threat to the integrity of vulnerable systems.",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2024-09-04T16:27:20Z",
+          "pushed_at": "2024-08-29T15:06:16Z",
+          "created_at": "2024-08-29T15:00:56Z",
+          "topics": [],
+          "owner": {
+            "login": "identity-threat-labs",
+            "html_url": "https://github.com/identity-threat-labs"
+          },
+          "clone_url": "https://github.com/identity-threat-labs/Article-RegreSSHion-CVE-2024-6387.git"
+        },
+        {
+          "id": 823940931,
+          "name": "CVE-2024-6387-OpenSSH-Vulnerability-Checker",
+          "full_name": "turbobit/CVE-2024-6387-OpenSSH-Vulnerability-Checker",
+          "html_url": "https://github.com/turbobit/CVE-2024-6387-OpenSSH-Vulnerability-Checker",
+          "description": "Welcome to the CVE-2024-6387 OpenSSH Vulnerability Checker repository!  This project offers multiple scripts to check the installed version of OpenSSH on your system and determine if it is vulnerable to CVE-2024-6387. It supports various environments, including Ubuntu, Mac, and Windows.",
+          "stargazers_count": 1,
+          "forks_count": 1,
+          "language": "Shell",
+          "updated_at": "2024-07-07T21:11:55Z",
+          "pushed_at": "2024-07-04T05:13:49Z",
+          "created_at": "2024-07-04T03:56:08Z",
+          "topics": [
+            "cve-2024-6387-checker"
+          ],
+          "owner": {
+            "login": "turbobit",
+            "html_url": "https://github.com/turbobit"
+          },
+          "clone_url": "https://github.com/turbobit/CVE-2024-6387-OpenSSH-Vulnerability-Checker.git"
+        },
+        {
           "id": 838725789,
           "name": "CVE-2023-4596-OpenSSH-Multi-Checker",
           "full_name": "X-Projetion/CVE-2023-4596-OpenSSH-Multi-Checker",
@@ -44327,42 +44324,42 @@
           "clone_url": "https://github.com/X-Projetion/CVE-2023-4596-OpenSSH-Multi-Checker.git"
         },
         {
-          "id": 827444140,
-          "name": "mitigate_ssh",
-          "full_name": "redux-sibi-jose/mitigate_ssh",
-          "html_url": "https://github.com/redux-sibi-jose/mitigate_ssh",
-          "description": " OpenSSH vulnerability CVE-2024-6387",
+          "id": 836283983,
+          "name": "ssh_poc2024",
+          "full_name": "alex14324/ssh_poc2024",
+          "html_url": "https://github.com/alex14324/ssh_poc2024",
+          "description": "An exploit for CVE-2024-6387, targeting a signal handler race condition in OpenSSH's server ",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "C",
+          "updated_at": "2026-04-08T22:28:55Z",
+          "pushed_at": "2024-07-31T14:19:44Z",
+          "created_at": "2024-07-31T14:19:19Z",
+          "topics": [],
+          "owner": {
+            "login": "alex14324",
+            "html_url": "https://github.com/alex14324"
+          },
+          "clone_url": "https://github.com/alex14324/ssh_poc2024.git"
+        },
+        {
+          "id": 823151186,
+          "name": "regreSSHion-nmap-scanner",
+          "full_name": "xristos8574/regreSSHion-nmap-scanner",
+          "html_url": "https://github.com/xristos8574/regreSSHion-nmap-scanner",
+          "description": "A bash script for nmap to scan for vulnerable machines in regards to the latest CVE-2024-6387",
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Shell",
-          "updated_at": "2024-07-29T17:48:05Z",
-          "pushed_at": "2024-07-11T16:55:52Z",
-          "created_at": "2024-07-11T16:54:41Z",
+          "updated_at": "2025-05-25T21:40:28Z",
+          "pushed_at": "2024-07-02T13:52:23Z",
+          "created_at": "2024-07-02T13:50:47Z",
           "topics": [],
           "owner": {
-            "login": "redux-sibi-jose",
-            "html_url": "https://github.com/redux-sibi-jose"
+            "login": "xristos8574",
+            "html_url": "https://github.com/xristos8574"
           },
-          "clone_url": "https://github.com/redux-sibi-jose/mitigate_ssh.git"
-        },
-        {
-          "id": 1245975881,
-          "name": "Scanner_CVE_OpenSSH",
-          "full_name": "oseasfr/Scanner_CVE_OpenSSH",
-          "html_url": "https://github.com/oseasfr/Scanner_CVE_OpenSSH",
-          "description": "Scanner para identificação de servidores com softwares SSH possivelmente vulnerável às CVEs CVE-2024-6387 e CVE-2023-48795.",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-06-29T21:17:06Z",
-          "pushed_at": "2026-05-31T01:44:17Z",
-          "created_at": "2026-05-21T18:45:31Z",
-          "topics": [],
-          "owner": {
-            "login": "oseasfr",
-            "html_url": "https://github.com/oseasfr"
-          },
-          "clone_url": "https://github.com/oseasfr/Scanner_CVE_OpenSSH.git"
+          "clone_url": "https://github.com/xristos8574/regreSSHion-nmap-scanner.git"
         },
         {
           "id": 823665546,
@@ -46194,30 +46191,6 @@
       ]
     },
     {
-      "cve_id": "CVE-2024-8277",
-      "repositories": [
-        {
-          "id": 856416225,
-          "name": "CVE-2024-8277",
-          "full_name": "PolatBey/CVE-2024-8277",
-          "html_url": "https://github.com/PolatBey/CVE-2024-8277",
-          "description": "CVE-2024-8277 - 0Day Auto Exploit Authentication Bypass in WooCommerce Photo Reviews Plugin",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2024-09-12T14:40:59Z",
-          "pushed_at": "2024-09-12T14:41:35Z",
-          "created_at": "2024-09-12T14:40:59Z",
-          "topics": [],
-          "owner": {
-            "login": "PolatBey",
-            "html_url": "https://github.com/PolatBey"
-          },
-          "clone_url": "https://github.com/PolatBey/CVE-2024-8277.git"
-        }
-      ]
-    },
-    {
       "cve_id": "CVE-2024-8309",
       "repositories": [
         {
@@ -46961,6 +46934,25 @@
           "clone_url": "https://github.com/z3k0sec/File-Read-CVE-2024-9264.git"
         },
         {
+          "id": 1283694842,
+          "name": "CVE-2024-9264",
+          "full_name": "yeonchoda/CVE-2024-9264",
+          "html_url": "https://github.com/yeonchoda/CVE-2024-9264",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-06-29T12:28:09Z",
+          "pushed_at": "2026-06-29T12:27:59Z",
+          "created_at": "2026-06-29T06:44:01Z",
+          "topics": [],
+          "owner": {
+            "login": "yeonchoda",
+            "html_url": "https://github.com/yeonchoda"
+          },
+          "clone_url": "https://github.com/yeonchoda/CVE-2024-9264.git"
+        },
+        {
           "id": 876056610,
           "name": "Grafana-CVE-2024-9264",
           "full_name": "punitdarji/Grafana-CVE-2024-9264",
@@ -46980,23 +46972,36 @@
           "clone_url": "https://github.com/punitdarji/Grafana-CVE-2024-9264.git"
         },
         {
-          "id": 1283694842,
+          "id": 1309015933,
           "name": "CVE-2024-9264",
-          "full_name": "yeonchoda/CVE-2024-9264",
-          "html_url": "https://github.com/yeonchoda/CVE-2024-9264",
-          "description": "",
+          "full_name": "ozcanpng/CVE-2024-9264",
+          "html_url": "https://github.com/ozcanpng/CVE-2024-9264",
+          "description": "CVE-2024-9264 Grafana SQL Expressions DuckDB LFI/RCE PoC",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-06-29T12:28:09Z",
-          "pushed_at": "2026-06-29T12:27:59Z",
-          "created_at": "2026-06-29T06:44:01Z",
-          "topics": [],
+          "updated_at": "2026-07-22T16:28:35Z",
+          "pushed_at": "2026-07-22T16:23:13Z",
+          "created_at": "2026-07-22T16:13:13Z",
+          "topics": [
+            "command-injection",
+            "cve",
+            "cve-2024-9264",
+            "cybersecurity",
+            "duckdb",
+            "exploit",
+            "grafana",
+            "lfi",
+            "poc",
+            "python",
+            "rce",
+            "vulnerability"
+          ],
           "owner": {
-            "login": "yeonchoda",
-            "html_url": "https://github.com/yeonchoda"
+            "login": "ozcanpng",
+            "html_url": "https://github.com/ozcanpng"
           },
-          "clone_url": "https://github.com/yeonchoda/CVE-2024-9264.git"
+          "clone_url": "https://github.com/ozcanpng/CVE-2024-9264.git"
         }
       ]
     },
@@ -47815,10 +47820,10 @@
           "full_name": "blkph0x/CVE_2024_30078_POC_WIFI",
           "html_url": "https://github.com/blkph0x/CVE_2024_30078_POC_WIFI",
           "description": "basic concept for the latest windows wifi driver CVE",
-          "stargazers_count": 237,
+          "stargazers_count": 236,
           "forks_count": 64,
           "language": "Python",
-          "updated_at": "2026-06-05T14:54:02Z",
+          "updated_at": "2026-07-23T12:34:44Z",
           "pushed_at": "2024-10-31T14:05:40Z",
           "created_at": "2024-06-20T05:58:45Z",
           "topics": [],
@@ -47998,8 +48003,8 @@
           "stargazers_count": 2,
           "forks_count": 0,
           "language": "Visual Basic .NET",
-          "updated_at": "2026-07-21T17:16:21Z",
-          "pushed_at": "2026-07-21T17:14:57Z",
+          "updated_at": "2026-07-23T19:23:15Z",
+          "pushed_at": "2026-07-23T19:23:10Z",
           "created_at": "2025-10-21T19:42:27Z",
           "topics": [
             "cmd",
