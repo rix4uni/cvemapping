@@ -3720,6 +3720,25 @@
       "cve_id": "CVE-2023-21563",
       "repositories": [
         {
+          "id": 1208236099,
+          "name": "bitlocker-bypass-research",
+          "full_name": "c-sprinks/bitlocker-bypass-research",
+          "html_url": "https://github.com/c-sprinks/bitlocker-bypass-research",
+          "description": "BitLocker full-disk encryption bypass research using CVE-2023-21563 (BitPixie). Methodology, exploit chain, and defensive recommendations.",
+          "stargazers_count": 3,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-07-27T02:05:18Z",
+          "pushed_at": "2026-07-09T01:25:46Z",
+          "created_at": "2026-04-12T02:14:38Z",
+          "topics": [],
+          "owner": {
+            "login": "c-sprinks",
+            "html_url": "https://github.com/c-sprinks"
+          },
+          "clone_url": "https://github.com/c-sprinks/bitlocker-bypass-research.git"
+        },
+        {
           "id": 1247609790,
           "name": "bitpixie",
           "full_name": "LR2006-Robot/bitpixie",
@@ -3737,25 +3756,6 @@
             "html_url": "https://github.com/LR2006-Robot"
           },
           "clone_url": "https://github.com/LR2006-Robot/bitpixie.git"
-        },
-        {
-          "id": 1208236099,
-          "name": "bitlocker-bypass-research",
-          "full_name": "c-sprinks/bitlocker-bypass-research",
-          "html_url": "https://github.com/c-sprinks/bitlocker-bypass-research",
-          "description": "BitLocker full-disk encryption bypass research using CVE-2023-21563 (BitPixie). Methodology, exploit chain, and defensive recommendations.",
-          "stargazers_count": 2,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-07-12T05:12:26Z",
-          "pushed_at": "2026-07-09T01:25:46Z",
-          "created_at": "2026-04-12T02:14:38Z",
-          "topics": [],
-          "owner": {
-            "login": "c-sprinks",
-            "html_url": "https://github.com/c-sprinks"
-          },
-          "clone_url": "https://github.com/c-sprinks/bitlocker-bypass-research.git"
         }
       ]
     },
@@ -15120,30 +15120,6 @@
       ]
     },
     {
-      "cve_id": "CVE-2023-30253",
-      "repositories": [
-        {
-          "id": 1254145542,
-          "name": "CVE-2023-30253-exploit",
-          "full_name": "Jeanback1/CVE-2023-30253-exploit",
-          "html_url": "https://github.com/Jeanback1/CVE-2023-30253-exploit",
-          "description": "CVE-2023-30253 — Dolibarr ERP/CRM 17.0.0 RCE via PHP code injection (exploit educativo)",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-05-30T07:37:27Z",
-          "pushed_at": "2026-05-30T07:37:23Z",
-          "created_at": "2026-05-30T07:37:09Z",
-          "topics": [],
-          "owner": {
-            "login": "Jeanback1",
-            "html_url": "https://github.com/Jeanback1"
-          },
-          "clone_url": "https://github.com/Jeanback1/CVE-2023-30253-exploit.git"
-        }
-      ]
-    },
-    {
       "cve_id": "CVE-2023-30256",
       "repositories": [
         {
@@ -17362,8 +17338,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "C",
-          "updated_at": "2026-07-26T21:46:03Z",
-          "pushed_at": "2026-07-26T21:45:56Z",
+          "updated_at": "2026-07-27T09:17:47Z",
+          "pushed_at": "2026-07-27T09:17:01Z",
           "created_at": "2025-08-13T09:19:29Z",
           "topics": [
             "oob-entry-lookup",
@@ -27456,10 +27432,10 @@
           "full_name": "0x06060606/CVE-2023-41993",
           "html_url": "https://github.com/0x06060606/CVE-2023-41993",
           "description": "CVE-2023-41993",
-          "stargazers_count": 5,
-          "forks_count": 2,
+          "stargazers_count": 6,
+          "forks_count": 3,
           "language": "JavaScript",
-          "updated_at": "2025-08-25T17:15:33Z",
+          "updated_at": "2026-07-27T05:44:33Z",
           "pushed_at": "2024-11-18T22:40:13Z",
           "created_at": "2023-10-16T20:34:02Z",
           "topics": [
@@ -35509,6 +35485,37 @@
       ]
     },
     {
+      "cve_id": "CVE-2023-52076",
+      "repositories": [
+        {
+          "id": 1313515295,
+          "name": "CVE-2023-52076-PoC",
+          "full_name": "Groppoxx/CVE-2023-52076-PoC",
+          "html_url": "https://github.com/Groppoxx/CVE-2023-52076-PoC",
+          "description": "PoC exploit for CVE-2023-52076 - zip-slip path traversal in Atril/Xreader (MATE/Cinnamon) enabling arbitrary file write and RCE via crafted EPUB. Authorized security testing only.",
+          "stargazers_count": 2,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-07-27T07:14:18Z",
+          "pushed_at": "2026-07-27T07:01:52Z",
+          "created_at": "2026-07-27T06:51:21Z",
+          "topics": [
+            "atril",
+            "cve-2023-52076",
+            "exploit",
+            "poc",
+            "python",
+            "xreader"
+          ],
+          "owner": {
+            "login": "Groppoxx",
+            "html_url": "https://github.com/Groppoxx"
+          },
+          "clone_url": "https://github.com/Groppoxx/CVE-2023-52076-PoC.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2023-5217",
       "repositories": [
         {
@@ -36366,8 +36373,8 @@
           "stargazers_count": 733,
           "forks_count": 127,
           "language": "Shell",
-          "updated_at": "2026-07-26T02:23:03Z",
-          "pushed_at": "2026-07-26T02:22:58Z",
+          "updated_at": "2026-07-27T02:30:36Z",
+          "pushed_at": "2026-07-27T02:30:28Z",
           "created_at": "2022-03-19T01:54:15Z",
           "topics": [
             "bugbounty",
