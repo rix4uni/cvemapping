@@ -2156,30 +2156,6 @@
       ]
     },
     {
-      "cve_id": "CVE-2024-1065",
-      "repositories": [
-        {
-          "id": 1257056548,
-          "name": "CVE-2024-1065",
-          "full_name": "kuzeyardabulut/CVE-2024-1065",
-          "html_url": "https://github.com/kuzeyardabulut/CVE-2024-1065",
-          "description": "Page Cache Exploit for CVE-2024-1065",
-          "stargazers_count": 4,
-          "forks_count": 1,
-          "language": "C",
-          "updated_at": "2026-07-20T21:23:15Z",
-          "pushed_at": "2026-06-10T14:00:50Z",
-          "created_at": "2026-06-02T10:21:23Z",
-          "topics": [],
-          "owner": {
-            "login": "kuzeyardabulut",
-            "html_url": "https://github.com/kuzeyardabulut"
-          },
-          "clone_url": "https://github.com/kuzeyardabulut/CVE-2024-1065.git"
-        }
-      ]
-    },
-    {
       "cve_id": "CVE-2024-10654",
       "repositories": [
         {
@@ -5787,10 +5763,10 @@
           "full_name": "CMNatic/CVE-2024-21413",
           "html_url": "https://github.com/CMNatic/CVE-2024-21413",
           "description": "CVE-2024-21413 PoC for THM Lab",
-          "stargazers_count": 265,
+          "stargazers_count": 268,
           "forks_count": 61,
           "language": "Python",
-          "updated_at": "2026-07-28T11:11:13Z",
+          "updated_at": "2026-07-30T15:38:19Z",
           "pushed_at": "2024-03-13T02:44:28Z",
           "created_at": "2024-02-17T14:52:52Z",
           "topics": [],
@@ -6112,44 +6088,6 @@
             "html_url": "https://github.com/YoguiCR"
           },
           "clone_url": "https://github.com/YoguiCR/CVE-2024-21413-Outlook-Assessment.git"
-        }
-      ]
-    },
-    {
-      "cve_id": "CVE-2024-21490",
-      "repositories": [
-        {
-          "id": 1243460773,
-          "name": "roninforge-angularjs-migration",
-          "full_name": "RoninForge/roninforge-angularjs-migration",
-          "html_url": "https://github.com/RoninForge/roninforge-angularjs-migration",
-          "description": "AngularJS 1.x -\u003e Angular 18 migration guidance for GitHub Copilot. Source-of-truth repo for github/awesome-copilot/instructions/angularjs-to-angular-18.instructions.md. 62 LLM regressions across 3 modes. AngularJS EOL since Dec 31 2021; CVE-2024-21490 unpatched.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2026-06-10T07:44:44Z",
-          "pushed_at": "2026-06-10T07:44:40Z",
-          "created_at": "2026-05-19T11:11:09Z",
-          "topics": [
-            "ai-dev-tools",
-            "angular",
-            "angular-18",
-            "angularjs",
-            "angularjs-migration",
-            "awesome-copilot",
-            "copilot-instructions",
-            "enterprise",
-            "github-copilot",
-            "llm",
-            "migration-guide",
-            "modernization",
-            "roninforge"
-          ],
-          "owner": {
-            "login": "RoninForge",
-            "html_url": "https://github.com/RoninForge"
-          },
-          "clone_url": "https://github.com/RoninForge/roninforge-angularjs-migration.git"
         }
       ]
     },
@@ -14479,10 +14417,10 @@
           "full_name": "RalfHacker/CVE-2024-26229-exploit",
           "html_url": "https://github.com/RalfHacker/CVE-2024-26229-exploit",
           "description": "Windows LPE",
-          "stargazers_count": 143,
+          "stargazers_count": 144,
           "forks_count": 30,
           "language": "C",
-          "updated_at": "2026-07-22T01:44:32Z",
+          "updated_at": "2026-07-30T01:42:49Z",
           "pushed_at": "2024-06-11T20:41:59Z",
           "created_at": "2024-06-11T08:03:29Z",
           "topics": [],
@@ -16728,6 +16666,46 @@
             "html_url": "https://github.com/SSSSuperX"
           },
           "clone_url": "https://github.com/SSSSuperX/CVE-2024-28000.git"
+        },
+        {
+          "id": 1317015852,
+          "name": "CVE-2024-28000",
+          "full_name": "AliHzSec/CVE-2024-28000",
+          "html_url": "https://github.com/AliHzSec/CVE-2024-28000",
+          "description": "Hands-on exploit lab for CVE-2024-28000 — unauthenticated privilege escalation in LiteSpeed Cache (WordPress plugin, \u003c=6.3.0.1). Spins up a vulnerable environment with Docker and includes a Go-based brute-forcer that cracks the weak mt_rand hash to create an administrator account.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Go",
+          "updated_at": "2026-07-30T17:04:45Z",
+          "pushed_at": "2026-07-30T17:01:42Z",
+          "created_at": "2026-07-30T08:15:26Z",
+          "topics": [
+            "cve",
+            "cve-2024-28000",
+            "cve-2024-28000-exploit",
+            "cve-exploit",
+            "exploit",
+            "litespeed",
+            "litespeed-cache",
+            "poc",
+            "privilege-escalation",
+            "proof-of-concept",
+            "rce",
+            "rce-exploit",
+            "security",
+            "unauthenticated",
+            "unauthenticated-privilege-escalation",
+            "vulnerability",
+            "wordpress",
+            "wordpress-cve-2024-28000",
+            "wordpress-plugin",
+            "wordpress-vulnerability"
+          ],
+          "owner": {
+            "login": "AliHzSec",
+            "html_url": "https://github.com/AliHzSec"
+          },
+          "clone_url": "https://github.com/AliHzSec/CVE-2024-28000.git"
         }
       ]
     },
@@ -17325,25 +17303,6 @@
             "html_url": "https://github.com/PumpkinBridge"
           },
           "clone_url": "https://github.com/PumpkinBridge/Chrome-CVE-2024-2887-RCE-POC.git"
-        },
-        {
-          "id": 1265731833,
-          "name": "CVE-2024-2887-REPORT",
-          "full_name": "ad3210/CVE-2024-2887-REPORT",
-          "html_url": "https://github.com/ad3210/CVE-2024-2887-REPORT",
-          "description": "POC available soon",
-          "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "HTML",
-          "updated_at": "2026-06-11T03:22:12Z",
-          "pushed_at": "2026-06-11T03:22:07Z",
-          "created_at": "2026-06-11T03:15:32Z",
-          "topics": [],
-          "owner": {
-            "login": "ad3210",
-            "html_url": "https://github.com/ad3210"
-          },
-          "clone_url": "https://github.com/ad3210/CVE-2024-2887-REPORT.git"
         }
       ]
     },
@@ -24381,8 +24340,8 @@
           "stargazers_count": 2,
           "forks_count": 1,
           "language": "Python",
-          "updated_at": "2025-12-07T01:31:02Z",
-          "pushed_at": "2025-12-07T01:30:58Z",
+          "updated_at": "2026-07-30T13:43:43Z",
+          "pushed_at": "2026-07-30T13:40:14Z",
           "created_at": "2024-04-17T11:41:01Z",
           "topics": [],
           "owner": {
@@ -26707,6 +26666,32 @@
           "clone_url": "https://github.com/Mr-xn/CVE-2024-32113.git"
         },
         {
+          "id": 1316525005,
+          "name": "CVE-2024-36104-PoC",
+          "full_name": "Groppoxx/CVE-2024-36104-PoC",
+          "html_url": "https://github.com/Groppoxx/CVE-2024-36104-PoC",
+          "description": "PoC for CVE-2024-36104 — unauthenticated Groovy RCE in Apache OFBiz (\u003c18.12.14) via /%2e/%2e/ view path traversal to ProgramExport",
+          "stargazers_count": 3,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-07-29T21:39:57Z",
+          "pushed_at": "2026-07-29T21:15:58Z",
+          "created_at": "2026-07-29T19:59:36Z",
+          "topics": [
+            "cve-2024-36104",
+            "exploit",
+            "path-traversal",
+            "poc",
+            "python",
+            "rce"
+          ],
+          "owner": {
+            "login": "Groppoxx",
+            "html_url": "https://github.com/Groppoxx"
+          },
+          "clone_url": "https://github.com/Groppoxx/CVE-2024-36104-PoC.git"
+        },
+        {
           "id": 816184138,
           "name": "CVE-2024-36104",
           "full_name": "ggfzx/CVE-2024-36104",
@@ -28280,10 +28265,10 @@
           "full_name": "ynwarcs/CVE-2024-38063",
           "html_url": "https://github.com/ynwarcs/CVE-2024-38063",
           "description": "poc for CVE-2024-38063 (RCE in tcpip.sys)",
-          "stargazers_count": 693,
+          "stargazers_count": 694,
           "forks_count": 123,
           "language": "Python",
-          "updated_at": "2026-07-27T12:00:44Z",
+          "updated_at": "2026-07-30T04:28:25Z",
           "pushed_at": "2024-08-27T12:22:39Z",
           "created_at": "2024-08-24T18:25:46Z",
           "topics": [],
@@ -35439,8 +35424,8 @@
           "stargazers_count": 32,
           "forks_count": 13,
           "language": "Go",
-          "updated_at": "2026-06-18T13:12:13Z",
-          "pushed_at": "2025-12-07T01:31:02Z",
+          "updated_at": "2026-07-30T13:43:23Z",
+          "pushed_at": "2026-07-30T13:40:16Z",
           "created_at": "2024-06-08T12:23:35Z",
           "topics": [
             "cve-2024-4577",
@@ -36242,6 +36227,25 @@
           "clone_url": "https://github.com/bughuntar/CVE-2024-4577.git"
         },
         {
+          "id": 1302010550,
+          "name": "cve-2024-4577-lab",
+          "full_name": "Kanak-CypherX/cve-2024-4577-lab",
+          "html_url": "https://github.com/Kanak-CypherX/cve-2024-4577-lab",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Dockerfile",
+          "updated_at": "2026-07-15T20:57:45Z",
+          "pushed_at": "2026-07-15T20:57:40Z",
+          "created_at": "2026-07-15T20:23:23Z",
+          "topics": [],
+          "owner": {
+            "login": "Kanak-CypherX",
+            "html_url": "https://github.com/Kanak-CypherX"
+          },
+          "clone_url": "https://github.com/Kanak-CypherX/cve-2024-4577-lab.git"
+        },
+        {
           "id": 1315980673,
           "name": "HTSOC",
           "full_name": "NKTriS/HTSOC",
@@ -36250,8 +36254,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "PowerShell",
-          "updated_at": "2026-07-29T10:36:15Z",
-          "pushed_at": "2026-07-29T10:35:06Z",
+          "updated_at": "2026-07-30T08:36:35Z",
+          "pushed_at": "2026-07-30T08:35:23Z",
           "created_at": "2026-07-29T10:09:47Z",
           "topics": [],
           "owner": {
@@ -36259,25 +36263,6 @@
             "html_url": "https://github.com/NKTriS"
           },
           "clone_url": "https://github.com/NKTriS/HTSOC.git"
-        },
-        {
-          "id": 1309488091,
-          "name": "cve-2024-4577-phpcgi_rce_reproduction",
-          "full_name": "razureink/cve-2024-4577-phpcgi_rce_reproduction",
-          "html_url": "https://github.com/razureink/cve-2024-4577-phpcgi_rce_reproduction",
-          "description": "CVE Reproduction: cve-2024-4577-phpcgi_rce_reproduction",
-          "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "Python",
-          "updated_at": "2026-07-23T03:45:35Z",
-          "pushed_at": "2026-07-23T03:45:26Z",
-          "created_at": "2026-07-23T03:45:22Z",
-          "topics": [],
-          "owner": {
-            "login": "razureink",
-            "html_url": "https://github.com/razureink"
-          },
-          "clone_url": "https://github.com/razureink/cve-2024-4577-phpcgi_rce_reproduction.git"
         },
         {
           "id": 856550359,
@@ -36318,23 +36303,23 @@
           "clone_url": "https://github.com/graphite-org/CVE-2024-4577.git"
         },
         {
-          "id": 1302010550,
-          "name": "cve-2024-4577-lab",
-          "full_name": "Kanak-CypherX/cve-2024-4577-lab",
-          "html_url": "https://github.com/Kanak-CypherX/cve-2024-4577-lab",
-          "description": "",
+          "id": 1309488091,
+          "name": "cve-2024-4577-phpcgi_rce_reproduction",
+          "full_name": "razureink/cve-2024-4577-phpcgi_rce_reproduction",
+          "html_url": "https://github.com/razureink/cve-2024-4577-phpcgi_rce_reproduction",
+          "description": "CVE Reproduction: cve-2024-4577-phpcgi_rce_reproduction",
           "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Dockerfile",
-          "updated_at": "2026-07-15T20:57:45Z",
-          "pushed_at": "2026-07-15T20:57:40Z",
-          "created_at": "2026-07-15T20:23:23Z",
+          "forks_count": 1,
+          "language": "Python",
+          "updated_at": "2026-07-23T03:45:35Z",
+          "pushed_at": "2026-07-23T03:45:26Z",
+          "created_at": "2026-07-23T03:45:22Z",
           "topics": [],
           "owner": {
-            "login": "Kanak-CypherX",
-            "html_url": "https://github.com/Kanak-CypherX"
+            "login": "razureink",
+            "html_url": "https://github.com/razureink"
           },
-          "clone_url": "https://github.com/Kanak-CypherX/cve-2024-4577-lab.git"
+          "clone_url": "https://github.com/razureink/cve-2024-4577-phpcgi_rce_reproduction.git"
         },
         {
           "id": 811966807,
@@ -38751,6 +38736,25 @@
           "clone_url": "https://github.com/Cappricio-Securities/CVE-2024-4956.git"
         },
         {
+          "id": 808014744,
+          "name": "CVE-2024-4956-Sonatype-Nexus-Repository-Manager",
+          "full_name": "Praison001/CVE-2024-4956-Sonatype-Nexus-Repository-Manager",
+          "html_url": "https://github.com/Praison001/CVE-2024-4956-Sonatype-Nexus-Repository-Manager",
+          "description": "Exploit for CVE-2024-4956 affecting all previous Sonatype Nexus Repository 3.x OSS/Pro versions up to and including 3.68.0",
+          "stargazers_count": 2,
+          "forks_count": 0,
+          "language": "Shell",
+          "updated_at": "2026-07-30T07:01:05Z",
+          "pushed_at": "2024-06-01T11:11:37Z",
+          "created_at": "2024-05-30T08:04:27Z",
+          "topics": [],
+          "owner": {
+            "login": "Praison001",
+            "html_url": "https://github.com/Praison001"
+          },
+          "clone_url": "https://github.com/Praison001/CVE-2024-4956-Sonatype-Nexus-Repository-Manager.git"
+        },
+        {
           "id": 805374933,
           "name": "CVE-2024-4956",
           "full_name": "gmh5225/CVE-2024-4956",
@@ -38789,25 +38793,6 @@
           "clone_url": "https://github.com/An00bRektn/shirocrack.git"
         },
         {
-          "id": 806352821,
-          "name": "CVE-2024-4956-PoC",
-          "full_name": "thinhap/CVE-2024-4956-PoC",
-          "html_url": "https://github.com/thinhap/CVE-2024-4956-PoC",
-          "description": "",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2024-07-04T01:22:44Z",
-          "pushed_at": "2024-05-27T03:14:22Z",
-          "created_at": "2024-05-27T03:09:36Z",
-          "topics": [],
-          "owner": {
-            "login": "thinhap",
-            "html_url": "https://github.com/thinhap"
-          },
-          "clone_url": "https://github.com/thinhap/CVE-2024-4956-PoC.git"
-        },
-        {
           "id": 804730274,
           "name": "CVE-2024-4956",
           "full_name": "banditzCyber0x/CVE-2024-4956",
@@ -38827,23 +38812,23 @@
           "clone_url": "https://github.com/banditzCyber0x/CVE-2024-4956.git"
         },
         {
-          "id": 808014744,
-          "name": "CVE-2024-4956-Sonatype-Nexus-Repository-Manager",
-          "full_name": "Praison001/CVE-2024-4956-Sonatype-Nexus-Repository-Manager",
-          "html_url": "https://github.com/Praison001/CVE-2024-4956-Sonatype-Nexus-Repository-Manager",
-          "description": "Exploit for CVE-2024-4956 affecting all previous Sonatype Nexus Repository 3.x OSS/Pro versions up to and including 3.68.0",
+          "id": 806352821,
+          "name": "CVE-2024-4956-PoC",
+          "full_name": "thinhap/CVE-2024-4956-PoC",
+          "html_url": "https://github.com/thinhap/CVE-2024-4956-PoC",
+          "description": "",
           "stargazers_count": 1,
           "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2025-12-18T12:11:00Z",
-          "pushed_at": "2024-06-01T11:11:37Z",
-          "created_at": "2024-05-30T08:04:27Z",
+          "language": "",
+          "updated_at": "2024-07-04T01:22:44Z",
+          "pushed_at": "2024-05-27T03:14:22Z",
+          "created_at": "2024-05-27T03:09:36Z",
           "topics": [],
           "owner": {
-            "login": "Praison001",
-            "html_url": "https://github.com/Praison001"
+            "login": "thinhap",
+            "html_url": "https://github.com/thinhap"
           },
-          "clone_url": "https://github.com/Praison001/CVE-2024-4956-Sonatype-Nexus-Repository-Manager.git"
+          "clone_url": "https://github.com/thinhap/CVE-2024-4956-PoC.git"
         },
         {
           "id": 863594626,
@@ -41349,8 +41334,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Lean",
-          "updated_at": "2026-07-17T11:06:02Z",
-          "pushed_at": "2026-07-29T09:12:42Z",
+          "updated_at": "2026-07-30T12:56:22Z",
+          "pushed_at": "2026-07-30T12:58:46Z",
           "created_at": "2026-07-17T05:59:11Z",
           "topics": [],
           "owner": {
@@ -41772,14 +41757,14 @@
       "repositories": [
         {
           "id": 909882750,
-          "name": "CVE-2024-54152-poc",
-          "full_name": "math-x-io/CVE-2024-54152-poc",
-          "html_url": "https://github.com/math-x-io/CVE-2024-54152-poc",
+          "name": "CVE-2024-54152",
+          "full_name": "math-x-io/CVE-2024-54152",
+          "html_url": "https://github.com/math-x-io/CVE-2024-54152",
           "description": "",
           "stargazers_count": 12,
           "forks_count": 3,
           "language": "Go",
-          "updated_at": "2026-05-15T13:14:17Z",
+          "updated_at": "2026-07-30T12:52:10Z",
           "pushed_at": "2024-12-30T01:08:00Z",
           "created_at": "2024-12-30T01:07:48Z",
           "topics": [],
@@ -41787,7 +41772,7 @@
             "login": "math-x-io",
             "html_url": "https://github.com/math-x-io"
           },
-          "clone_url": "https://github.com/math-x-io/CVE-2024-54152-poc.git"
+          "clone_url": "https://github.com/math-x-io/CVE-2024-54152.git"
         }
       ]
     },
@@ -42435,10 +42420,10 @@
           "full_name": "Chocapikk/CVE-2024-56145",
           "html_url": "https://github.com/Chocapikk/CVE-2024-56145",
           "description": "Unauthenticated RCE on CraftCMS when PHP `register_argc_argv` config setting is enabled",
-          "stargazers_count": 48,
+          "stargazers_count": 47,
           "forks_count": 12,
           "language": "Python",
-          "updated_at": "2026-07-29T01:11:28Z",
+          "updated_at": "2026-07-30T21:15:50Z",
           "pushed_at": "2024-12-23T12:51:54Z",
           "created_at": "2024-12-20T03:34:01Z",
           "topics": [],
@@ -43217,10 +43202,10 @@
           "full_name": "Karmakstylez/CVE-2024-6387",
           "html_url": "https://github.com/Karmakstylez/CVE-2024-6387",
           "description": "Remote Unauthenticated Code Execution Vulnerability in OpenSSH server (CVE-2024-6387)",
-          "stargazers_count": 186,
+          "stargazers_count": 187,
           "forks_count": 47,
           "language": "Python",
-          "updated_at": "2026-07-20T06:01:54Z",
+          "updated_at": "2026-07-30T04:06:32Z",
           "pushed_at": "2024-08-22T08:50:25Z",
           "created_at": "2024-07-08T11:27:49Z",
           "topics": [],
@@ -43493,7 +43478,7 @@
           "html_url": "https://github.com/l-urk/CVE-2024-6387",
           "description": "Proof of concept python script for regreSSHion exploit. ",
           "stargazers_count": 12,
-          "forks_count": 4,
+          "forks_count": 5,
           "language": "Python",
           "updated_at": "2026-06-08T21:11:38Z",
           "pushed_at": "2024-10-19T04:58:22Z",
@@ -48007,8 +47992,8 @@
           "stargazers_count": 2,
           "forks_count": 0,
           "language": "Visual Basic .NET",
-          "updated_at": "2026-07-29T16:40:48Z",
-          "pushed_at": "2026-07-29T16:40:44Z",
+          "updated_at": "2026-07-30T21:36:02Z",
+          "pushed_at": "2026-07-30T21:35:25Z",
           "created_at": "2025-10-21T19:42:27Z",
           "topics": [
             "cmd",
