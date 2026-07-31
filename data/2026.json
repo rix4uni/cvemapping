@@ -5177,25 +5177,6 @@
           "clone_url": "https://github.com/0x240x23elu/CVE-2026-1529.git"
         },
         {
-          "id": 1156718921,
-          "name": "CVE-2026-1529-PoC-keycloak-unauthorized-registration-via-improper-invitation-token-validation",
-          "full_name": "ackemed/CVE-2026-1529-PoC-keycloak-unauthorized-registration-via-improper-invitation-token-validation",
-          "html_url": "https://github.com/ackemed/CVE-2026-1529-PoC-keycloak-unauthorized-registration-via-improper-invitation-token-validation",
-          "description": "CVE-2026-1529 (PoC) is a critical vulnerability in Keycloak that allows unauthorized organization registration through improper invitation token validation. This exploit tool demonstrates the vulnerability by manipulating JWT tokens to register users in unauthorized organizations.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-02-13T01:07:15Z",
-          "pushed_at": "2026-02-10T14:35:09Z",
-          "created_at": "2026-02-13T01:07:15Z",
-          "topics": [],
-          "owner": {
-            "login": "ackemed",
-            "html_url": "https://github.com/ackemed"
-          },
-          "clone_url": "https://github.com/ackemed/CVE-2026-1529-PoC-keycloak-unauthorized-registration-via-improper-invitation-token-validation.git"
-        },
-        {
           "id": 1154563956,
           "name": "CVE-2026-1529-PoC-keycloak-unauthorized-registration-via-improper-invitation-token-validation",
           "full_name": "ninjazan420/CVE-2026-1529-PoC-keycloak-unauthorized-registration-via-improper-invitation-token-validation",
@@ -5223,6 +5204,25 @@
             "html_url": "https://github.com/ninjazan420"
           },
           "clone_url": "https://github.com/ninjazan420/CVE-2026-1529-PoC-keycloak-unauthorized-registration-via-improper-invitation-token-validation.git"
+        },
+        {
+          "id": 1156718921,
+          "name": "CVE-2026-1529-PoC-keycloak-unauthorized-registration-via-improper-invitation-token-validation",
+          "full_name": "ackemed/CVE-2026-1529-PoC-keycloak-unauthorized-registration-via-improper-invitation-token-validation",
+          "html_url": "https://github.com/ackemed/CVE-2026-1529-PoC-keycloak-unauthorized-registration-via-improper-invitation-token-validation",
+          "description": "CVE-2026-1529 (PoC) is a critical vulnerability in Keycloak that allows unauthorized organization registration through improper invitation token validation. This exploit tool demonstrates the vulnerability by manipulating JWT tokens to register users in unauthorized organizations.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-02-13T01:07:15Z",
+          "pushed_at": "2026-02-10T14:35:09Z",
+          "created_at": "2026-02-13T01:07:15Z",
+          "topics": [],
+          "owner": {
+            "login": "ackemed",
+            "html_url": "https://github.com/ackemed"
+          },
+          "clone_url": "https://github.com/ackemed/CVE-2026-1529-PoC-keycloak-unauthorized-registration-via-improper-invitation-token-validation.git"
         }
       ]
     },
@@ -13751,7 +13751,7 @@
           "html_url": "https://github.com/jacubes/CVE-2026-24061",
           "description": "CVE-2026-24061 exploit PoC",
           "stargazers_count": 12,
-          "forks_count": 1,
+          "forks_count": 2,
           "language": "Python",
           "updated_at": "2026-07-31T13:08:20Z",
           "pushed_at": "2026-07-30T15:17:50Z",
@@ -24133,7 +24133,7 @@
           "html_url": "https://github.com/sgkdev/page_inject",
           "description": "CVE-2026-31431-killed page-cache exploit — code exec into containers sharing the same image layer",
           "stargazers_count": 74,
-          "forks_count": 13,
+          "forks_count": 14,
           "language": "C",
           "updated_at": "2026-07-31T07:03:57Z",
           "pushed_at": "2026-05-06T19:32:18Z",
@@ -43146,6 +43146,31 @@
           "clone_url": "https://github.com/Christian93111/CVE-2026-41940.git"
         },
         {
+          "id": 1306682257,
+          "name": "cve-2026-41940-PoC",
+          "full_name": "soverineg/cve-2026-41940-PoC",
+          "html_url": "https://github.com/soverineg/cve-2026-41940-PoC",
+          "description": "A cPanel and WHM authentication bypassing tool",
+          "stargazers_count": 10,
+          "forks_count": 2,
+          "language": "Python",
+          "updated_at": "2026-07-31T22:22:42Z",
+          "pushed_at": "2026-07-30T15:00:52Z",
+          "created_at": "2026-07-20T14:15:54Z",
+          "topics": [
+            "aunthentication",
+            "cpanel",
+            "cve-2026-41940",
+            "proof-of-concept",
+            "python"
+          ],
+          "owner": {
+            "login": "soverineg",
+            "html_url": "https://github.com/soverineg"
+          },
+          "clone_url": "https://github.com/soverineg/cve-2026-41940-PoC.git"
+        },
+        {
           "id": 1225349212,
           "name": "cPanelWHM-AuthBypass",
           "full_name": "Kagantua/cPanelWHM-AuthBypass",
@@ -43163,31 +43188,6 @@
             "html_url": "https://github.com/Kagantua"
           },
           "clone_url": "https://github.com/Kagantua/cPanelWHM-AuthBypass.git"
-        },
-        {
-          "id": 1306682257,
-          "name": "cve-2026-41940-PoC",
-          "full_name": "soverineg/cve-2026-41940-PoC",
-          "html_url": "https://github.com/soverineg/cve-2026-41940-PoC",
-          "description": "A cPanel and WHM authentication bypassing tool",
-          "stargazers_count": 8,
-          "forks_count": 2,
-          "language": "Python",
-          "updated_at": "2026-07-31T20:29:35Z",
-          "pushed_at": "2026-07-30T15:00:52Z",
-          "created_at": "2026-07-20T14:15:54Z",
-          "topics": [
-            "aunthentication",
-            "cpanel",
-            "cve-2026-41940",
-            "proof-of-concept",
-            "python"
-          ],
-          "owner": {
-            "login": "soverineg",
-            "html_url": "https://github.com/soverineg"
-          },
-          "clone_url": "https://github.com/soverineg/cve-2026-41940-PoC.git"
         },
         {
           "id": 1225067496,
@@ -47843,10 +47843,10 @@
           "full_name": "BuSung-dev/Root-My-Galaxy",
           "html_url": "https://github.com/BuSung-dev/Root-My-Galaxy",
           "description": "KSU installer for supported Samsung Galaxy firmware with CVE-2026-43499",
-          "stargazers_count": 321,
-          "forks_count": 51,
+          "stargazers_count": 323,
+          "forks_count": 52,
           "language": "Kotlin",
-          "updated_at": "2026-07-31T21:04:07Z",
+          "updated_at": "2026-07-31T22:41:24Z",
           "pushed_at": "2026-07-31T04:45:18Z",
           "created_at": "2026-07-17T14:24:08Z",
           "topics": [],
@@ -48280,7 +48280,7 @@
           "html_url": "https://github.com/xianwan1314/CVE-2026-43499-Poc-Analysis",
           "description": "Vulnerability analysis and Proof of Concept (PoC) for CVE-2026-43499 affecting Xiaomi devices. For educational and research purposes only.",
           "stargazers_count": 5,
-          "forks_count": 43,
+          "forks_count": 44,
           "language": "",
           "updated_at": "2026-07-31T17:15:51Z",
           "pushed_at": "2026-07-14T16:28:49Z",
@@ -49729,10 +49729,10 @@
           "full_name": "EastArctica/CVE-2026-43813",
           "html_url": "https://github.com/EastArctica/CVE-2026-43813",
           "description": "CVE-2026-43813: CloudAttestation enforceEnvironment bypass",
-          "stargazers_count": 3,
+          "stargazers_count": 4,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-07-31T17:44:09Z",
+          "updated_at": "2026-07-31T22:41:26Z",
           "pushed_at": "2026-07-29T19:41:18Z",
           "created_at": "2026-07-29T19:41:14Z",
           "topics": [],
@@ -50957,6 +50957,25 @@
           "clone_url": "https://github.com/TheCyberGeek/CVE-2026-4480-PoC.git"
         },
         {
+          "id": 1263138857,
+          "name": "CVE-2026-4480-POC",
+          "full_name": "CarlosEduardoPM/CVE-2026-4480-POC",
+          "html_url": "https://github.com/CarlosEduardoPM/CVE-2026-4480-POC",
+          "description": "smb spooler to RCE",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-06-09T04:10:26Z",
+          "pushed_at": "2026-06-09T04:10:22Z",
+          "created_at": "2026-06-08T16:56:28Z",
+          "topics": [],
+          "owner": {
+            "login": "CarlosEduardoPM",
+            "html_url": "https://github.com/CarlosEduardoPM"
+          },
+          "clone_url": "https://github.com/CarlosEduardoPM/CVE-2026-4480-POC.git"
+        },
+        {
           "id": 1261930993,
           "name": "CVE-2026-4480",
           "full_name": "robinxiang/CVE-2026-4480",
@@ -50976,23 +50995,23 @@
           "clone_url": "https://github.com/robinxiang/CVE-2026-4480.git"
         },
         {
-          "id": 1263138857,
-          "name": "CVE-2026-4480-POC",
-          "full_name": "CarlosEduardoPM/CVE-2026-4480-POC",
-          "html_url": "https://github.com/CarlosEduardoPM/CVE-2026-4480-POC",
-          "description": "smb spooler to RCE",
+          "id": 1262374495,
+          "name": "CVE-2026-4480",
+          "full_name": "0xBlackash/CVE-2026-4480",
+          "html_url": "https://github.com/0xBlackash/CVE-2026-4480",
+          "description": "CVE-2026-4480",
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-06-09T04:10:26Z",
-          "pushed_at": "2026-06-09T04:10:22Z",
-          "created_at": "2026-06-08T16:56:28Z",
+          "updated_at": "2026-07-31T22:04:34Z",
+          "pushed_at": "2026-06-09T15:40:31Z",
+          "created_at": "2026-06-07T23:20:01Z",
           "topics": [],
           "owner": {
-            "login": "CarlosEduardoPM",
-            "html_url": "https://github.com/CarlosEduardoPM"
+            "login": "0xBlackash",
+            "html_url": "https://github.com/0xBlackash"
           },
-          "clone_url": "https://github.com/CarlosEduardoPM/CVE-2026-4480-POC.git"
+          "clone_url": "https://github.com/0xBlackash/CVE-2026-4480.git"
         },
         {
           "id": 1275378266,
@@ -51031,25 +51050,6 @@
             "html_url": "https://github.com/Vusal777"
           },
           "clone_url": "https://github.com/Vusal777/CVE-2026-4480-exploit-poc.git"
-        },
-        {
-          "id": 1262374495,
-          "name": "CVE-2026-4480",
-          "full_name": "0xBlackash/CVE-2026-4480",
-          "html_url": "https://github.com/0xBlackash/CVE-2026-4480",
-          "description": "CVE-2026-4480",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-06-09T15:46:34Z",
-          "pushed_at": "2026-06-09T15:40:31Z",
-          "created_at": "2026-06-07T23:20:01Z",
-          "topics": [],
-          "owner": {
-            "login": "0xBlackash",
-            "html_url": "https://github.com/0xBlackash"
-          },
-          "clone_url": "https://github.com/0xBlackash/CVE-2026-4480.git"
         },
         {
           "id": 1290938467,
@@ -60272,10 +60272,10 @@
           "full_name": "aniqfakhrul/CVE-2026-54121",
           "html_url": "https://github.com/aniqfakhrul/CVE-2026-54121",
           "description": "Certighost POC",
-          "stargazers_count": 293,
-          "forks_count": 71,
+          "stargazers_count": 294,
+          "forks_count": 72,
           "language": "Python",
-          "updated_at": "2026-07-31T14:50:22Z",
+          "updated_at": "2026-07-31T22:51:55Z",
           "pushed_at": "2026-07-28T15:44:50Z",
           "created_at": "2026-07-23T18:54:34Z",
           "topics": [],
@@ -62352,10 +62352,10 @@
           "full_name": "shinthink/CVE-2026-57827",
           "html_url": "https://github.com/shinthink/CVE-2026-57827",
           "description": "CVE-2026-57827 — RSFiles! Joomla Component Unauthenticated File Upload RCE. Split-controller upload bypass. CVSS 9.8 | CWE-434 | com_rsfiles \u003c 1.17.12",
-          "stargazers_count": 11,
+          "stargazers_count": 12,
           "forks_count": 1,
           "language": "Python",
-          "updated_at": "2026-07-31T16:10:19Z",
+          "updated_at": "2026-07-31T22:15:21Z",
           "pushed_at": "2026-07-29T20:38:51Z",
           "created_at": "2026-07-29T20:19:30Z",
           "topics": [
@@ -67347,10 +67347,10 @@
           "full_name": "rails/rails-forensics-CVE-2026-66066",
           "html_url": "https://github.com/rails/rails-forensics-CVE-2026-66066",
           "description": "",
-          "stargazers_count": 12,
+          "stargazers_count": 14,
           "forks_count": 1,
           "language": "Ruby",
-          "updated_at": "2026-07-31T15:32:16Z",
+          "updated_at": "2026-07-31T22:37:31Z",
           "pushed_at": "2026-07-31T15:27:43Z",
           "created_at": "2026-07-30T21:06:00Z",
           "topics": [],
@@ -67979,6 +67979,30 @@
             "html_url": "https://github.com/xxconi"
           },
           "clone_url": "https://github.com/xxconi/CVE-2026-6741.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2026-67599",
+      "repositories": [
+        {
+          "id": 1318064407,
+          "name": "CVE-2026-67599_ClearOS_RCE",
+          "full_name": "LazyTitan33/CVE-2026-67599_ClearOS_RCE",
+          "html_url": "https://github.com/LazyTitan33/CVE-2026-67599_ClearOS_RCE",
+          "description": "Authenticated Blind OS Command Injection in ClearOS",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-07-31T22:50:14Z",
+          "pushed_at": "2026-07-31T22:49:41Z",
+          "created_at": "2026-07-31T07:27:30Z",
+          "topics": [],
+          "owner": {
+            "login": "LazyTitan33",
+            "html_url": "https://github.com/LazyTitan33"
+          },
+          "clone_url": "https://github.com/LazyTitan33/CVE-2026-67599_ClearOS_RCE.git"
         }
       ]
     },
