@@ -2616,6 +2616,25 @@
       "cve_id": "CVE-2017-12635",
       "repositories": [
         {
+          "id": 1321838658,
+          "name": "couchdb-exploit",
+          "full_name": "Darabium/couchdb-exploit",
+          "html_url": "https://github.com/Darabium/couchdb-exploit",
+          "description": "This tool exploits two critical vulnerabilities in Apache CouchDB:  | CVE | Description | Severity | |-----|-------------|----------| | **CVE-2017-12635** | Privilege Escalation via JSON Parsing Bypass | 🔴 Critical | | **CVE-2017-12636** | Remote Code Execution via Query Server | 🔴 Critical |",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-08-03T14:20:29Z",
+          "pushed_at": "2026-08-03T14:16:46Z",
+          "created_at": "2026-08-03T13:51:39Z",
+          "topics": [],
+          "owner": {
+            "login": "Darabium",
+            "html_url": "https://github.com/Darabium"
+          },
+          "clone_url": "https://github.com/Darabium/couchdb-exploit.git"
+        },
+        {
           "id": 1253756571,
           "name": "CVE-2017-12635_36",
           "full_name": "Dungsocool/CVE-2017-12635_36",
@@ -2633,6 +2652,30 @@
             "html_url": "https://github.com/Dungsocool"
           },
           "clone_url": "https://github.com/Dungsocool/CVE-2017-12635_36.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2017-12636",
+      "repositories": [
+        {
+          "id": 1321838658,
+          "name": "couchdb-exploit",
+          "full_name": "Darabium/couchdb-exploit",
+          "html_url": "https://github.com/Darabium/couchdb-exploit",
+          "description": "This tool exploits two critical vulnerabilities in Apache CouchDB:  | CVE | Description | Severity | |-----|-------------|----------| | **CVE-2017-12635** | Privilege Escalation via JSON Parsing Bypass | 🔴 Critical | | **CVE-2017-12636** | Remote Code Execution via Query Server | 🔴 Critical |",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-08-03T14:20:29Z",
+          "pushed_at": "2026-08-03T14:16:46Z",
+          "created_at": "2026-08-03T13:51:39Z",
+          "topics": [],
+          "owner": {
+            "login": "Darabium",
+            "html_url": "https://github.com/Darabium"
+          },
+          "clone_url": "https://github.com/Darabium/couchdb-exploit.git"
         }
       ]
     },
@@ -3000,23 +3043,26 @@
       "cve_id": "CVE-2017-14980",
       "repositories": [
         {
-          "id": 1234772397,
+          "id": 1186527698,
           "name": "CVE-2017-14980",
-          "full_name": "ahmedmamdouh6/CVE-2017-14980",
-          "html_url": "https://github.com/ahmedmamdouh6/CVE-2017-14980",
-          "description": "CVE-2017-14980 python exploitation to RCE",
-          "stargazers_count": 0,
+          "full_name": "TheMalwareGuardian/CVE-2017-14980",
+          "html_url": "https://github.com/TheMalwareGuardian/CVE-2017-14980",
+          "description": "Stack-based buffer overflow in Sync Breeze Enterprise 10.0.28 reachable through the /login handler, demonstrating how unchecked input length can corrupt stack memory.",
+          "stargazers_count": 1,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-05-10T16:37:51Z",
-          "pushed_at": "2026-05-10T16:37:47Z",
-          "created_at": "2026-05-10T16:13:33Z",
-          "topics": [],
+          "updated_at": "2026-08-03T11:16:15Z",
+          "pushed_at": "2026-03-23T11:30:12Z",
+          "created_at": "2026-03-19T18:08:27Z",
+          "topics": [
+            "binary-exploitation",
+            "cve-2017-14980"
+          ],
           "owner": {
-            "login": "ahmedmamdouh6",
-            "html_url": "https://github.com/ahmedmamdouh6"
+            "login": "TheMalwareGuardian",
+            "html_url": "https://github.com/TheMalwareGuardian"
           },
-          "clone_url": "https://github.com/ahmedmamdouh6/CVE-2017-14980.git"
+          "clone_url": "https://github.com/TheMalwareGuardian/CVE-2017-14980.git"
         },
         {
           "id": 1234047519,
@@ -3038,26 +3084,23 @@
           "clone_url": "https://github.com/0xkr3pt0n/CVE-2017-14980.git"
         },
         {
-          "id": 1186527698,
+          "id": 1234772397,
           "name": "CVE-2017-14980",
-          "full_name": "TheMalwareGuardian/CVE-2017-14980",
-          "html_url": "https://github.com/TheMalwareGuardian/CVE-2017-14980",
-          "description": "Stack-based buffer overflow in Sync Breeze Enterprise 10.0.28 reachable through the /login handler, demonstrating how unchecked input length can corrupt stack memory.",
+          "full_name": "ahmedmamdouh6/CVE-2017-14980",
+          "html_url": "https://github.com/ahmedmamdouh6/CVE-2017-14980",
+          "description": "CVE-2017-14980 python exploitation to RCE",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-03-23T11:30:19Z",
-          "pushed_at": "2026-03-23T11:30:12Z",
-          "created_at": "2026-03-19T18:08:27Z",
-          "topics": [
-            "binary-exploitation",
-            "cve-2017-14980"
-          ],
+          "updated_at": "2026-05-10T16:37:51Z",
+          "pushed_at": "2026-05-10T16:37:47Z",
+          "created_at": "2026-05-10T16:13:33Z",
+          "topics": [],
           "owner": {
-            "login": "TheMalwareGuardian",
-            "html_url": "https://github.com/TheMalwareGuardian"
+            "login": "ahmedmamdouh6",
+            "html_url": "https://github.com/ahmedmamdouh6"
           },
-          "clone_url": "https://github.com/TheMalwareGuardian/CVE-2017-14980.git"
+          "clone_url": "https://github.com/ahmedmamdouh6/CVE-2017-14980.git"
         },
         {
           "id": 1169885121,
@@ -3335,49 +3378,6 @@
             "html_url": "https://github.com/xxnbyy"
           },
           "clone_url": "https://github.com/xxnbyy/CVE-2017-15944-POC.git"
-        }
-      ]
-    },
-    {
-      "cve_id": "CVE-2017-16026",
-      "repositories": [
-        {
-          "id": 1152304340,
-          "name": "CVE-2017-16026-fixed",
-          "full_name": "CQ-Tools/CVE-2017-16026-fixed",
-          "html_url": "https://github.com/CQ-Tools/CVE-2017-16026-fixed",
-          "description": "Security analysis - CVE-2017-16026",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "JavaScript",
-          "updated_at": "2026-02-07T17:18:41Z",
-          "pushed_at": "2026-02-08T11:02:44Z",
-          "created_at": "2026-02-07T17:18:29Z",
-          "topics": [],
-          "owner": {
-            "login": "CQ-Tools",
-            "html_url": "https://github.com/CQ-Tools"
-          },
-          "clone_url": "https://github.com/CQ-Tools/CVE-2017-16026-fixed.git"
-        },
-        {
-          "id": 1152304344,
-          "name": "CVE-2017-16026-unfixed",
-          "full_name": "CQ-Tools/CVE-2017-16026-unfixed",
-          "html_url": "https://github.com/CQ-Tools/CVE-2017-16026-unfixed",
-          "description": "Security analysis - CVE-2017-16026",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "JavaScript",
-          "updated_at": "2026-02-07T17:18:42Z",
-          "pushed_at": "2026-02-08T11:02:44Z",
-          "created_at": "2026-02-07T17:18:29Z",
-          "topics": [],
-          "owner": {
-            "login": "CQ-Tools",
-            "html_url": "https://github.com/CQ-Tools"
-          },
-          "clone_url": "https://github.com/CQ-Tools/CVE-2017-16026-unfixed.git"
         }
       ]
     },
@@ -7129,10 +7129,10 @@
           "full_name": "MisakaMikato/cve-2017-7921-golang",
           "html_url": "https://github.com/MisakaMikato/cve-2017-7921-golang",
           "description": "Hikvision IP camera access bypass exploit, developed by golang. ",
-          "stargazers_count": 12,
+          "stargazers_count": 13,
           "forks_count": 1,
           "language": "Go",
-          "updated_at": "2026-03-17T10:29:21Z",
+          "updated_at": "2026-08-04T01:35:37Z",
           "pushed_at": "2026-03-17T10:29:17Z",
           "created_at": "2020-11-13T04:15:31Z",
           "topics": [],
@@ -7160,6 +7160,25 @@
             "html_url": "https://github.com/KelvinWin10"
           },
           "clone_url": "https://github.com/KelvinWin10/CVE-2017-7921-rewrite.git"
+        },
+        {
+          "id": 1320980449,
+          "name": "hikihack",
+          "full_name": "xjghnxhlh/hikihack",
+          "html_url": "https://github.com/xjghnxhlh/hikihack",
+          "description": "Hikvision CVE-2017-7921 hack",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-08-03T00:20:00Z",
+          "pushed_at": "2026-08-03T00:19:56Z",
+          "created_at": "2026-08-02T23:49:12Z",
+          "topics": [],
+          "owner": {
+            "login": "xjghnxhlh",
+            "html_url": "https://github.com/xjghnxhlh"
+          },
+          "clone_url": "https://github.com/xjghnxhlh/hikihack.git"
         },
         {
           "id": 1299910168,
