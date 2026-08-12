@@ -379,10 +379,10 @@
           "full_name": "MartinPSDev/CVE-2026-0073-Android-ADBD-bypass-POC",
           "html_url": "https://github.com/MartinPSDev/CVE-2026-0073-Android-ADBD-bypass-POC",
           "description": "CVE-2026-0073 — Android ADB daemon (adbd) TLS authentication bypass via EVP_PKEY_cmp type confusion. Gain unauthorized shell access over WiFi using EC/Ed25519 key mismatch. PoC exploit for Android 14+.",
-          "stargazers_count": 21,
+          "stargazers_count": 22,
           "forks_count": 6,
           "language": "Python",
-          "updated_at": "2026-07-28T18:25:59Z",
+          "updated_at": "2026-08-11T22:44:33Z",
           "pushed_at": "2026-05-07T11:15:25Z",
           "created_at": "2026-05-06T23:11:23Z",
           "topics": [
@@ -13714,8 +13714,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Java",
-          "updated_at": "2026-08-11T01:32:36Z",
-          "pushed_at": "2026-08-11T01:32:36Z",
+          "updated_at": "2026-08-12T01:57:30Z",
+          "pushed_at": "2026-08-12T01:57:26Z",
           "created_at": "2026-08-09T17:08:46Z",
           "topics": [],
           "owner": {
@@ -18918,7 +18918,7 @@
           "html_url": "https://github.com/0xNDI/CVE-2026-24294",
           "description": "CVE-2026-24294 PoC",
           "stargazers_count": 50,
-          "forks_count": 4,
+          "forks_count": 5,
           "language": "C",
           "updated_at": "2026-08-11T21:56:12Z",
           "pushed_at": "2026-04-30T04:35:37Z",
@@ -21838,10 +21838,10 @@
           "full_name": "r3vpwnx/CVE-2026-26119",
           "html_url": "https://github.com/r3vpwnx/CVE-2026-26119",
           "description": "WAC RCE - CVE-2026-26119 Windows Admin Center authenticated RCE via WinREST/PowerShell invokeCommand.",
-          "stargazers_count": 3,
+          "stargazers_count": 5,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-08-11T21:11:47Z",
+          "updated_at": "2026-08-12T01:23:34Z",
           "pushed_at": "2026-08-09T20:21:39Z",
           "created_at": "2026-08-09T20:21:00Z",
           "topics": [],
@@ -23927,8 +23927,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "JavaScript",
-          "updated_at": "2026-08-11T02:36:08Z",
-          "pushed_at": "2026-08-11T02:36:04Z",
+          "updated_at": "2026-08-12T01:32:19Z",
+          "pushed_at": "2026-08-12T01:32:16Z",
           "created_at": "2026-08-11T02:36:01Z",
           "topics": [],
           "owner": {
@@ -24227,10 +24227,10 @@
           "full_name": "Semperis-Community/ResetNightmare",
           "html_url": "https://github.com/Semperis-Community/ResetNightmare",
           "description": "POC tool for ResetNightmare (CVE-2026-27912)",
-          "stargazers_count": 173,
-          "forks_count": 26,
+          "stargazers_count": 175,
+          "forks_count": 27,
           "language": "PowerShell",
-          "updated_at": "2026-08-11T20:53:58Z",
+          "updated_at": "2026-08-12T01:36:34Z",
           "pushed_at": "2026-08-02T14:30:24Z",
           "created_at": "2026-08-02T12:36:16Z",
           "topics": [],
@@ -25392,55 +25392,25 @@
           "clone_url": "https://github.com/dua2z3rr/CVE-2026-29000-PoC.git"
         },
         {
-          "id": 1178685428,
-          "name": "CVE-2026-29000-Lab",
-          "full_name": "rootdirective-sec/CVE-2026-29000-Lab",
-          "html_url": "https://github.com/rootdirective-sec/CVE-2026-29000-Lab",
-          "description": "",
+          "id": 1197132524,
+          "name": "CVE-2026-29000",
+          "full_name": "0xW1LD/CVE-2026-29000",
+          "html_url": "https://github.com/0xW1LD/CVE-2026-29000",
+          "description": "Just a simple Rust automation for CVE-2026-29000, designed to work against ippsec's Principal box on HackTheBox",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Java",
-          "updated_at": "2026-03-11T09:11:38Z",
-          "pushed_at": "2026-03-11T09:11:34Z",
-          "created_at": "2026-03-11T09:09:24Z",
-          "topics": [],
-          "owner": {
-            "login": "rootdirective-sec",
-            "html_url": "https://github.com/rootdirective-sec"
-          },
-          "clone_url": "https://github.com/rootdirective-sec/CVE-2026-29000-Lab.git"
-        },
-        {
-          "id": 1322468113,
-          "name": "pac4j-check",
-          "full_name": "xiaoqiMikko/pac4j-check",
-          "html_url": "https://github.com/xiaoqiMikko/pac4j-check",
-          "description": "Offline scanner for CVE-2026-29000 (CVSS 10.0) in org.pac4j:pac4j-jwt. Inspects jars/fat-jars directly, so it works where mvn dependency:tree cannot. Single jar, zero dependencies, Java 8+.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Java",
-          "updated_at": "2026-08-09T06:57:46Z",
-          "pushed_at": "2026-08-09T06:57:44Z",
-          "created_at": "2026-08-04T03:40:08Z",
+          "language": "Rust",
+          "updated_at": "2026-04-27T13:11:40Z",
+          "pushed_at": "2026-03-31T11:21:08Z",
+          "created_at": "2026-03-31T10:58:29Z",
           "topics": [
-            "appsec",
-            "authentication-bypass",
-            "cas",
-            "cve-2026-29000",
-            "java",
-            "jwt",
-            "jwt-security",
-            "oidc",
-            "pac4j",
-            "security",
-            "sso",
-            "vulnerability-scanner"
+            "cve-2026-29000"
           ],
           "owner": {
-            "login": "xiaoqiMikko",
-            "html_url": "https://github.com/xiaoqiMikko"
+            "login": "0xW1LD",
+            "html_url": "https://github.com/0xW1LD"
           },
-          "clone_url": "https://github.com/xiaoqiMikko/pac4j-check.git"
+          "clone_url": "https://github.com/0xW1LD/CVE-2026-29000.git"
         },
         {
           "id": 1225836828,
@@ -25519,44 +25489,46 @@
           "clone_url": "https://github.com/yasirr10/CVE-2026-29000.git"
         },
         {
-          "id": 1197028303,
-          "name": "CVE-2026-29000",
-          "full_name": "ClayOfGilgamesh/CVE-2026-29000",
-          "html_url": "https://github.com/ClayOfGilgamesh/CVE-2026-29000",
-          "description": "CVE-2026-29000",
+          "id": 1190432524,
+          "name": "CVE-2026-29000-pac4j-jwt-auth-bypass",
+          "full_name": "PtechAmanja/CVE-2026-29000-pac4j-jwt-auth-bypass",
+          "html_url": "https://github.com/PtechAmanja/CVE-2026-29000-pac4j-jwt-auth-bypass",
+          "description": "Proof-of-Concept (PoC) for an authentication bypass vulnerability affecting applications using pac4j-jwt with JWE (JSON Web Encryption).",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-04-01T03:32:03Z",
-          "pushed_at": "2026-04-01T03:31:59Z",
-          "created_at": "2026-03-31T09:06:17Z",
-          "topics": [],
-          "owner": {
-            "login": "ClayOfGilgamesh",
-            "html_url": "https://github.com/ClayOfGilgamesh"
-          },
-          "clone_url": "https://github.com/ClayOfGilgamesh/CVE-2026-29000.git"
-        },
-        {
-          "id": 1197132524,
-          "name": "CVE-2026-29000",
-          "full_name": "0xW1LD/CVE-2026-29000",
-          "html_url": "https://github.com/0xW1LD/CVE-2026-29000",
-          "description": "Just a simple Rust automation for CVE-2026-29000, designed to work against ippsec's Principal box on HackTheBox",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Rust",
-          "updated_at": "2026-04-27T13:11:40Z",
-          "pushed_at": "2026-03-31T11:21:08Z",
-          "created_at": "2026-03-31T10:58:29Z",
+          "updated_at": "2026-03-24T09:40:59Z",
+          "pushed_at": "2026-03-24T09:40:55Z",
+          "created_at": "2026-03-24T09:24:49Z",
           "topics": [
-            "cve-2026-29000"
+            "authentication-bypass",
+            "cve-2026-29000",
+            "hackthebox"
           ],
           "owner": {
-            "login": "0xW1LD",
-            "html_url": "https://github.com/0xW1LD"
+            "login": "PtechAmanja",
+            "html_url": "https://github.com/PtechAmanja"
           },
-          "clone_url": "https://github.com/0xW1LD/CVE-2026-29000.git"
+          "clone_url": "https://github.com/PtechAmanja/CVE-2026-29000-pac4j-jwt-auth-bypass.git"
+        },
+        {
+          "id": 1180680792,
+          "name": "CVE-2026-29000",
+          "full_name": "Crims-on/CVE-2026-29000",
+          "html_url": "https://github.com/Crims-on/CVE-2026-29000",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-03-13T09:48:26Z",
+          "pushed_at": "2026-03-13T09:48:23Z",
+          "created_at": "2026-03-13T09:46:45Z",
+          "topics": [],
+          "owner": {
+            "login": "Crims-on",
+            "html_url": "https://github.com/Crims-on"
+          },
+          "clone_url": "https://github.com/Crims-on/CVE-2026-29000.git"
         },
         {
           "id": 1230312536,
@@ -25597,23 +25569,23 @@
           "clone_url": "https://github.com/ledksv/Principal-HackTheBox.git"
         },
         {
-          "id": 1180680792,
+          "id": 1197028303,
           "name": "CVE-2026-29000",
-          "full_name": "Crims-on/CVE-2026-29000",
-          "html_url": "https://github.com/Crims-on/CVE-2026-29000",
-          "description": "",
+          "full_name": "ClayOfGilgamesh/CVE-2026-29000",
+          "html_url": "https://github.com/ClayOfGilgamesh/CVE-2026-29000",
+          "description": "CVE-2026-29000",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-03-13T09:48:26Z",
-          "pushed_at": "2026-03-13T09:48:23Z",
-          "created_at": "2026-03-13T09:46:45Z",
+          "updated_at": "2026-04-01T03:32:03Z",
+          "pushed_at": "2026-04-01T03:31:59Z",
+          "created_at": "2026-03-31T09:06:17Z",
           "topics": [],
           "owner": {
-            "login": "Crims-on",
-            "html_url": "https://github.com/Crims-on"
+            "login": "ClayOfGilgamesh",
+            "html_url": "https://github.com/ClayOfGilgamesh"
           },
-          "clone_url": "https://github.com/Crims-on/CVE-2026-29000.git"
+          "clone_url": "https://github.com/ClayOfGilgamesh/CVE-2026-29000.git"
         },
         {
           "id": 1255970516,
@@ -25635,27 +25607,55 @@
           "clone_url": "https://github.com/lucastran05/CVE-2026-29000.git"
         },
         {
-          "id": 1190432524,
-          "name": "CVE-2026-29000-pac4j-jwt-auth-bypass",
-          "full_name": "PtechAmanja/CVE-2026-29000-pac4j-jwt-auth-bypass",
-          "html_url": "https://github.com/PtechAmanja/CVE-2026-29000-pac4j-jwt-auth-bypass",
-          "description": "Proof-of-Concept (PoC) for an authentication bypass vulnerability affecting applications using pac4j-jwt with JWE (JSON Web Encryption).",
+          "id": 1178685428,
+          "name": "CVE-2026-29000-Lab",
+          "full_name": "rootdirective-sec/CVE-2026-29000-Lab",
+          "html_url": "https://github.com/rootdirective-sec/CVE-2026-29000-Lab",
+          "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-03-24T09:40:59Z",
-          "pushed_at": "2026-03-24T09:40:55Z",
-          "created_at": "2026-03-24T09:24:49Z",
+          "language": "Java",
+          "updated_at": "2026-03-11T09:11:38Z",
+          "pushed_at": "2026-03-11T09:11:34Z",
+          "created_at": "2026-03-11T09:09:24Z",
+          "topics": [],
+          "owner": {
+            "login": "rootdirective-sec",
+            "html_url": "https://github.com/rootdirective-sec"
+          },
+          "clone_url": "https://github.com/rootdirective-sec/CVE-2026-29000-Lab.git"
+        },
+        {
+          "id": 1322468113,
+          "name": "pac4j-check",
+          "full_name": "xiaoqiMikko/pac4j-check",
+          "html_url": "https://github.com/xiaoqiMikko/pac4j-check",
+          "description": "Offline scanner for CVE-2026-29000 (CVSS 10.0) in org.pac4j:pac4j-jwt. Inspects jars/fat-jars directly, so it works where mvn dependency:tree cannot. Single jar, zero dependencies, Java 8+.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Java",
+          "updated_at": "2026-08-09T06:57:46Z",
+          "pushed_at": "2026-08-09T06:57:44Z",
+          "created_at": "2026-08-04T03:40:08Z",
           "topics": [
+            "appsec",
             "authentication-bypass",
+            "cas",
             "cve-2026-29000",
-            "hackthebox"
+            "java",
+            "jwt",
+            "jwt-security",
+            "oidc",
+            "pac4j",
+            "security",
+            "sso",
+            "vulnerability-scanner"
           ],
           "owner": {
-            "login": "PtechAmanja",
-            "html_url": "https://github.com/PtechAmanja"
+            "login": "xiaoqiMikko",
+            "html_url": "https://github.com/xiaoqiMikko"
           },
-          "clone_url": "https://github.com/PtechAmanja/CVE-2026-29000-pac4j-jwt-auth-bypass.git"
+          "clone_url": "https://github.com/xiaoqiMikko/pac4j-check.git"
         }
       ]
     },
@@ -47946,10 +47946,10 @@
           "full_name": "soverineg/cve-2026-41940-PoC",
           "html_url": "https://github.com/soverineg/cve-2026-41940-PoC",
           "description": "A cPanel and WHM authentication bypassing tool",
-          "stargazers_count": 313,
-          "forks_count": 39,
+          "stargazers_count": 315,
+          "forks_count": 40,
           "language": "Python",
-          "updated_at": "2026-08-11T02:30:49Z",
+          "updated_at": "2026-08-12T01:16:33Z",
           "pushed_at": "2026-08-08T20:09:34Z",
           "created_at": "2026-07-20T14:15:54Z",
           "topics": [
@@ -52990,10 +52990,10 @@
           "full_name": "BuSung-dev/Root-My-Galaxy",
           "html_url": "https://github.com/BuSung-dev/Root-My-Galaxy",
           "description": "KSU installer for supported Samsung Galaxy firmware with CVE-2026-43499",
-          "stargazers_count": 775,
-          "forks_count": 131,
+          "stargazers_count": 777,
+          "forks_count": 132,
           "language": "Kotlin",
-          "updated_at": "2026-08-11T22:38:43Z",
+          "updated_at": "2026-08-12T01:37:36Z",
           "pushed_at": "2026-08-09T05:13:42Z",
           "created_at": "2026-07-17T14:24:08Z",
           "topics": [],
@@ -53012,7 +53012,7 @@
           "stargazers_count": 242,
           "forks_count": 51,
           "language": "C",
-          "updated_at": "2026-08-11T18:39:32Z",
+          "updated_at": "2026-08-12T01:12:03Z",
           "pushed_at": "2026-08-06T09:48:14Z",
           "created_at": "2026-07-12T16:05:24Z",
           "topics": [
@@ -53073,10 +53073,10 @@
           "full_name": "alex193a/Root-My-Pixel",
           "html_url": "https://github.com/alex193a/Root-My-Pixel",
           "description": "Jailbreak supported Google Pixel phones with CVE-2026-43499",
-          "stargazers_count": 132,
+          "stargazers_count": 133,
           "forks_count": 29,
           "language": "Kotlin",
-          "updated_at": "2026-08-11T21:14:12Z",
+          "updated_at": "2026-08-12T01:40:03Z",
           "pushed_at": "2026-08-11T18:46:51Z",
           "created_at": "2026-08-02T17:34:45Z",
           "topics": [
@@ -53356,10 +53356,10 @@
           "full_name": "xianwan1314/CVE-2026-43499-Poc-Analysis",
           "html_url": "https://github.com/xianwan1314/CVE-2026-43499-Poc-Analysis",
           "description": "Vulnerability analysis and Proof of Concept (PoC) for CVE-2026-43499 affecting Xiaomi devices. For educational and research purposes only.",
-          "stargazers_count": 11,
+          "stargazers_count": 12,
           "forks_count": 48,
           "language": "",
-          "updated_at": "2026-08-11T16:01:02Z",
+          "updated_at": "2026-08-12T01:55:38Z",
           "pushed_at": "2026-07-14T16:28:49Z",
           "created_at": "2026-07-14T17:24:44Z",
           "topics": [],
@@ -53671,6 +53671,25 @@
           "clone_url": "https://github.com/joehquak/Mi8E5-Unlocker-by-CVE-2026-43499.git"
         },
         {
+          "id": 1307625965,
+          "name": "CVE-2026-43499-Redmi-Turbo5",
+          "full_name": "Petalrain224/CVE-2026-43499-Redmi-Turbo5",
+          "html_url": "https://github.com/Petalrain224/CVE-2026-43499-Redmi-Turbo5",
+          "description": "Use CVE-2026-43499 on Redmi Turbo 5 to escalate privilege",
+          "stargazers_count": 4,
+          "forks_count": 1,
+          "language": "",
+          "updated_at": "2026-08-03T05:10:48Z",
+          "pushed_at": "2026-08-02T04:25:01Z",
+          "created_at": "2026-07-21T11:28:41Z",
+          "topics": [],
+          "owner": {
+            "login": "Petalrain224",
+            "html_url": "https://github.com/Petalrain224"
+          },
+          "clone_url": "https://github.com/Petalrain224/CVE-2026-43499-Redmi-Turbo5.git"
+        },
+        {
           "id": 1318665118,
           "name": "ghostlock-aresin",
           "full_name": "NothingFumo/ghostlock-aresin",
@@ -53688,6 +53707,25 @@
             "html_url": "https://github.com/NothingFumo"
           },
           "clone_url": "https://github.com/NothingFumo/ghostlock-aresin.git"
+        },
+        {
+          "id": 1312760114,
+          "name": "CVE-2026-43499-S24U",
+          "full_name": "fusiondrive/CVE-2026-43499-S24U",
+          "html_url": "https://github.com/fusiondrive/CVE-2026-43499-S24U",
+          "description": "CVE-2026-43499 research port for Galaxy S24 Ultra SM-S928U1 DZF2 (in progress)",
+          "stargazers_count": 4,
+          "forks_count": 0,
+          "language": "C",
+          "updated_at": "2026-08-11T23:16:57Z",
+          "pushed_at": "2026-08-11T21:32:03Z",
+          "created_at": "2026-07-26T11:55:26Z",
+          "topics": [],
+          "owner": {
+            "login": "fusiondrive",
+            "html_url": "https://github.com/fusiondrive"
+          },
+          "clone_url": "https://github.com/fusiondrive/CVE-2026-43499-S24U.git"
         },
         {
           "id": 1323343757,
@@ -53709,25 +53747,6 @@
           "clone_url": "https://github.com/oopnv70-lab/ghostlock-honor-aak.git"
         },
         {
-          "id": 1307625965,
-          "name": "CVE-2026-43499-Redmi-Turbo5",
-          "full_name": "Petalrain224/CVE-2026-43499-Redmi-Turbo5",
-          "html_url": "https://github.com/Petalrain224/CVE-2026-43499-Redmi-Turbo5",
-          "description": "Use CVE-2026-43499 on Redmi Turbo 5 to escalate privilege",
-          "stargazers_count": 4,
-          "forks_count": 1,
-          "language": "",
-          "updated_at": "2026-08-03T05:10:48Z",
-          "pushed_at": "2026-08-02T04:25:01Z",
-          "created_at": "2026-07-21T11:28:41Z",
-          "topics": [],
-          "owner": {
-            "login": "Petalrain224",
-            "html_url": "https://github.com/Petalrain224"
-          },
-          "clone_url": "https://github.com/Petalrain224/CVE-2026-43499-Redmi-Turbo5.git"
-        },
-        {
           "id": 1298224106,
           "name": "openvz-cve-patch-2026",
           "full_name": "dmcdtc/openvz-cve-patch-2026",
@@ -53745,25 +53764,6 @@
             "html_url": "https://github.com/dmcdtc"
           },
           "clone_url": "https://github.com/dmcdtc/openvz-cve-patch-2026.git"
-        },
-        {
-          "id": 1312760114,
-          "name": "CVE-2026-43499-S24U",
-          "full_name": "fusiondrive/CVE-2026-43499-S24U",
-          "html_url": "https://github.com/fusiondrive/CVE-2026-43499-S24U",
-          "description": "CVE-2026-43499 research port for Galaxy S24 Ultra SM-S928U1 DZF2 (in progress)",
-          "stargazers_count": 3,
-          "forks_count": 0,
-          "language": "C",
-          "updated_at": "2026-08-11T21:32:11Z",
-          "pushed_at": "2026-08-11T21:32:03Z",
-          "created_at": "2026-07-26T11:55:26Z",
-          "topics": [],
-          "owner": {
-            "login": "fusiondrive",
-            "html_url": "https://github.com/fusiondrive"
-          },
-          "clone_url": "https://github.com/fusiondrive/CVE-2026-43499-S24U.git"
         },
         {
           "id": 1309665571,
@@ -53964,8 +53964,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "C",
-          "updated_at": "2026-08-11T18:19:02Z",
-          "pushed_at": "2026-08-11T18:19:20Z",
+          "updated_at": "2026-08-12T01:56:13Z",
+          "pushed_at": "2026-08-12T01:56:14Z",
           "created_at": "2026-08-10T23:26:52Z",
           "topics": [],
           "owner": {
@@ -54215,8 +54215,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "C",
-          "updated_at": "2026-08-11T13:25:16Z",
-          "pushed_at": "2026-08-11T13:22:23Z",
+          "updated_at": "2026-08-12T01:07:05Z",
+          "pushed_at": "2026-08-12T01:07:02Z",
           "created_at": "2026-08-10T09:01:08Z",
           "topics": [],
           "owner": {
@@ -68392,10 +68392,10 @@
           "full_name": "sfewer-r7/CVE-2026-55040",
           "html_url": "https://github.com/sfewer-r7/CVE-2026-55040",
           "description": "Microsoft SharePoint JWT Authentication Bypass (CVE-2026-55040)",
-          "stargazers_count": 7,
+          "stargazers_count": 9,
           "forks_count": 1,
           "language": "Python",
-          "updated_at": "2026-08-11T21:16:46Z",
+          "updated_at": "2026-08-12T00:33:00Z",
           "pushed_at": "2026-08-10T15:35:23Z",
           "created_at": "2026-08-06T11:46:34Z",
           "topics": [],
@@ -76196,10 +76196,10 @@
           "full_name": "Boreas37/CVE-2026-64638-PoC-XSS2Shell-",
           "html_url": "https://github.com/Boreas37/CVE-2026-64638-PoC-XSS2Shell-",
           "description": "XSS2Shell (CVE-2026-64638) WordPress pre-auth XSS to RCE chain — PoC exploit + defensive audit tool + nuclei template",
-          "stargazers_count": 27,
+          "stargazers_count": 28,
           "forks_count": 5,
           "language": "Python",
-          "updated_at": "2026-08-11T15:55:19Z",
+          "updated_at": "2026-08-12T01:27:07Z",
           "pushed_at": "2026-08-09T14:03:24Z",
           "created_at": "2026-08-07T17:07:17Z",
           "topics": [],
@@ -78199,6 +78199,30 @@
             "html_url": "https://github.com/Hunt-Benito"
           },
           "clone_url": "https://github.com/Hunt-Benito/go-without-bounds-cve-2026-67822-stack-overflow-in-tenda-w6-s-wifissidset.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2026-67846",
+      "repositories": [
+        {
+          "id": 1331496720,
+          "name": "CVE-2026-67846-BOOM-NBDTLB",
+          "full_name": "duan528/CVE-2026-67846-BOOM-NBDTLB",
+          "html_url": "https://github.com/duan528/CVE-2026-67846-BOOM-NBDTLB",
+          "description": "Public vulnerability advisory and supporting evidence for CVE-2026-67846 affecting the BOOM v3/v4 NBDTLB implementation.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-08-12T01:29:29Z",
+          "pushed_at": "2026-08-12T01:29:25Z",
+          "created_at": "2026-08-12T01:25:57Z",
+          "topics": [],
+          "owner": {
+            "login": "duan528",
+            "html_url": "https://github.com/duan528"
+          },
+          "clone_url": "https://github.com/duan528/CVE-2026-67846-BOOM-NBDTLB.git"
         }
       ]
     },
