@@ -24444,10 +24444,10 @@
           "full_name": "Semperis-Community/ResetNightmare",
           "html_url": "https://github.com/Semperis-Community/ResetNightmare",
           "description": "POC tool for ResetNightmare (CVE-2026-27912)",
-          "stargazers_count": 195,
+          "stargazers_count": 194,
           "forks_count": 35,
           "language": "PowerShell",
-          "updated_at": "2026-08-15T06:34:47Z",
+          "updated_at": "2026-08-15T12:56:24Z",
           "pushed_at": "2026-08-14T17:19:10Z",
           "created_at": "2026-08-02T12:36:16Z",
           "topics": [],
@@ -24463,10 +24463,10 @@
           "full_name": "mihat2/ResetNightmare-impacket",
           "html_url": "https://github.com/mihat2/ResetNightmare-impacket",
           "description": "CVE-2026-27912 (ResetNightmare) — Linux/impacket port of Semperis Community's Invoke-ResetNightmare PoC",
-          "stargazers_count": 4,
+          "stargazers_count": 3,
           "forks_count": 3,
           "language": "Python",
-          "updated_at": "2026-08-14T05:10:03Z",
+          "updated_at": "2026-08-15T12:43:07Z",
           "pushed_at": "2026-08-11T18:15:39Z",
           "created_at": "2026-08-08T16:36:35Z",
           "topics": [
@@ -41564,6 +41564,36 @@
       "cve_id": "CVE-2026-3609",
       "repositories": [
         {
+          "id": 727775795,
+          "name": "BYOVD",
+          "full_name": "BlackSnufkin/BYOVD",
+          "html_url": "https://github.com/BlackSnufkin/BYOVD",
+          "description": "BYOVD research use cases featuring vulnerable driver discovery and reverse engineering methodology.  (CVE-2025-52915,  CVE-2025-1055, CVE-2026-3609, CVE-2026-8501).",
+          "stargazers_count": 902,
+          "forks_count": 132,
+          "language": "Rust",
+          "updated_at": "2026-08-15T12:47:15Z",
+          "pushed_at": "2026-08-15T12:46:49Z",
+          "created_at": "2023-12-05T14:52:11Z",
+          "topics": [
+            "av-killer",
+            "byovd",
+            "edr-killer",
+            "exploit-development",
+            "kernel-driver",
+            "loldrivers",
+            "malware-development",
+            "redteam",
+            "rust",
+            "vulnerable-driver"
+          ],
+          "owner": {
+            "login": "BlackSnufkin",
+            "html_url": "https://github.com/BlackSnufkin"
+          },
+          "clone_url": "https://github.com/BlackSnufkin/BYOVD.git"
+        },
+        {
           "id": 1236416923,
           "name": "CredsHunter",
           "full_name": "BlackSnufkin/CredsHunter",
@@ -53446,10 +53476,10 @@
           "full_name": "BuSung-dev/Root-My-Galaxy",
           "html_url": "https://github.com/BuSung-dev/Root-My-Galaxy",
           "description": "KSU installer for supported Samsung Galaxy firmware with CVE-2026-43499",
-          "stargazers_count": 816,
+          "stargazers_count": 817,
           "forks_count": 152,
           "language": "Kotlin",
-          "updated_at": "2026-08-15T07:40:13Z",
+          "updated_at": "2026-08-15T13:01:16Z",
           "pushed_at": "2026-08-09T05:13:42Z",
           "created_at": "2026-07-17T14:24:08Z",
           "topics": [],
@@ -53529,10 +53559,10 @@
           "full_name": "alex193a/Root-My-Pixel",
           "html_url": "https://github.com/alex193a/Root-My-Pixel",
           "description": "Jailbreak supported Google Pixel phones with CVE-2026-43499",
-          "stargazers_count": 144,
+          "stargazers_count": 143,
           "forks_count": 30,
           "language": "Kotlin",
-          "updated_at": "2026-08-15T10:34:54Z",
+          "updated_at": "2026-08-15T13:25:52Z",
           "pushed_at": "2026-08-14T06:07:08Z",
           "created_at": "2026-08-02T17:34:45Z",
           "topics": [
@@ -54071,6 +54101,44 @@
           "clone_url": "https://github.com/sorrow404Null/CVE-2026-43499-RMX5200.git"
         },
         {
+          "id": 1299001695,
+          "name": "oppo-pgem10-ghostlock",
+          "full_name": "Thiasap/oppo-pgem10-ghostlock",
+          "html_url": "https://github.com/Thiasap/oppo-pgem10-ghostlock",
+          "description": "OPPO Find X6 Pro GhostLock (CVE-2026-43499) exploit adaptation",
+          "stargazers_count": 5,
+          "forks_count": 1,
+          "language": "C",
+          "updated_at": "2026-08-02T12:02:31Z",
+          "pushed_at": "2026-07-13T07:36:39Z",
+          "created_at": "2026-07-13T07:35:54Z",
+          "topics": [],
+          "owner": {
+            "login": "Thiasap",
+            "html_url": "https://github.com/Thiasap"
+          },
+          "clone_url": "https://github.com/Thiasap/oppo-pgem10-ghostlock.git"
+        },
+        {
+          "id": 1334081853,
+          "name": "KSuRoot",
+          "full_name": "hmascs/KSuRoot",
+          "html_url": "https://github.com/hmascs/KSuRoot",
+          "description": "KSuRoot 2.2.0 — One-click KernelSU rooting based on CVE-2026-43499. Synced from Root-My-Galaxy v0.2.6 with custom payload (.so) import. Mod by hmascs",
+          "stargazers_count": 5,
+          "forks_count": 0,
+          "language": "Kotlin",
+          "updated_at": "2026-08-15T12:54:29Z",
+          "pushed_at": "2026-08-14T10:52:31Z",
+          "created_at": "2026-08-14T10:51:50Z",
+          "topics": [],
+          "owner": {
+            "login": "hmascs",
+            "html_url": "https://github.com/hmascs"
+          },
+          "clone_url": "https://github.com/hmascs/KSuRoot.git"
+        },
+        {
           "id": 1309811997,
           "name": "rmx3888-cve-2026-43499-config",
           "full_name": "Bailan766/rmx3888-cve-2026-43499-config",
@@ -54128,23 +54196,23 @@
           "clone_url": "https://github.com/joehquak/Mi8E5-Unlocker-by-CVE-2026-43499.git"
         },
         {
-          "id": 1299001695,
-          "name": "oppo-pgem10-ghostlock",
-          "full_name": "Thiasap/oppo-pgem10-ghostlock",
-          "html_url": "https://github.com/Thiasap/oppo-pgem10-ghostlock",
-          "description": "OPPO Find X6 Pro GhostLock (CVE-2026-43499) exploit adaptation",
-          "stargazers_count": 5,
-          "forks_count": 1,
+          "id": 1318665118,
+          "name": "ghostlock-aresin",
+          "full_name": "NothingFumo/ghostlock-aresin",
+          "html_url": "https://github.com/NothingFumo/ghostlock-aresin",
+          "description": "GhostLock (CVE-2026-43499) exploit for POCO F3 GT (aresin) — MediaTek Dimensity 1200, Linux 4.14.186 ARM64 kernel privilege escalation via futex PI chain manipulation",
+          "stargazers_count": 4,
+          "forks_count": 3,
           "language": "C",
-          "updated_at": "2026-08-02T12:02:31Z",
-          "pushed_at": "2026-07-13T07:36:39Z",
-          "created_at": "2026-07-13T07:35:54Z",
+          "updated_at": "2026-08-10T21:47:52Z",
+          "pushed_at": "2026-07-31T18:58:08Z",
+          "created_at": "2026-07-31T18:56:09Z",
           "topics": [],
           "owner": {
-            "login": "Thiasap",
-            "html_url": "https://github.com/Thiasap"
+            "login": "NothingFumo",
+            "html_url": "https://github.com/NothingFumo"
           },
-          "clone_url": "https://github.com/Thiasap/oppo-pgem10-ghostlock.git"
+          "clone_url": "https://github.com/NothingFumo/ghostlock-aresin.git"
         },
         {
           "id": 1311641539,
@@ -54166,44 +54234,6 @@
           "clone_url": "https://github.com/No-22-Github/UnPlus.git"
         },
         {
-          "id": 1307625965,
-          "name": "CVE-2026-43499-Redmi-Turbo5",
-          "full_name": "Petalrain224/CVE-2026-43499-Redmi-Turbo5",
-          "html_url": "https://github.com/Petalrain224/CVE-2026-43499-Redmi-Turbo5",
-          "description": "Use CVE-2026-43499 on Redmi Turbo 5 to escalate privilege",
-          "stargazers_count": 4,
-          "forks_count": 1,
-          "language": "",
-          "updated_at": "2026-08-03T05:10:48Z",
-          "pushed_at": "2026-08-02T04:25:01Z",
-          "created_at": "2026-07-21T11:28:41Z",
-          "topics": [],
-          "owner": {
-            "login": "Petalrain224",
-            "html_url": "https://github.com/Petalrain224"
-          },
-          "clone_url": "https://github.com/Petalrain224/CVE-2026-43499-Redmi-Turbo5.git"
-        },
-        {
-          "id": 1318665118,
-          "name": "ghostlock-aresin",
-          "full_name": "NothingFumo/ghostlock-aresin",
-          "html_url": "https://github.com/NothingFumo/ghostlock-aresin",
-          "description": "GhostLock (CVE-2026-43499) exploit for POCO F3 GT (aresin) — MediaTek Dimensity 1200, Linux 4.14.186 ARM64 kernel privilege escalation via futex PI chain manipulation",
-          "stargazers_count": 4,
-          "forks_count": 3,
-          "language": "C",
-          "updated_at": "2026-08-10T21:47:52Z",
-          "pushed_at": "2026-07-31T18:58:08Z",
-          "created_at": "2026-07-31T18:56:09Z",
-          "topics": [],
-          "owner": {
-            "login": "NothingFumo",
-            "html_url": "https://github.com/NothingFumo"
-          },
-          "clone_url": "https://github.com/NothingFumo/ghostlock-aresin.git"
-        },
-        {
           "id": 1312760114,
           "name": "CVE-2026-43499-S24U",
           "full_name": "fusiondrive/CVE-2026-43499-S24U",
@@ -54223,23 +54253,23 @@
           "clone_url": "https://github.com/fusiondrive/CVE-2026-43499-S24U.git"
         },
         {
-          "id": 1334081853,
-          "name": "KSuRoot",
-          "full_name": "hmascs/KSuRoot",
-          "html_url": "https://github.com/hmascs/KSuRoot",
-          "description": "KSuRoot 2.2.0 — One-click KernelSU rooting based on CVE-2026-43499. Synced from Root-My-Galaxy v0.2.6 with custom payload (.so) import. Mod by hmascs",
+          "id": 1307625965,
+          "name": "CVE-2026-43499-Redmi-Turbo5",
+          "full_name": "Petalrain224/CVE-2026-43499-Redmi-Turbo5",
+          "html_url": "https://github.com/Petalrain224/CVE-2026-43499-Redmi-Turbo5",
+          "description": "Use CVE-2026-43499 on Redmi Turbo 5 to escalate privilege",
           "stargazers_count": 4,
-          "forks_count": 0,
-          "language": "Kotlin",
-          "updated_at": "2026-08-15T10:57:37Z",
-          "pushed_at": "2026-08-14T10:52:31Z",
-          "created_at": "2026-08-14T10:51:50Z",
+          "forks_count": 1,
+          "language": "",
+          "updated_at": "2026-08-03T05:10:48Z",
+          "pushed_at": "2026-08-02T04:25:01Z",
+          "created_at": "2026-07-21T11:28:41Z",
           "topics": [],
           "owner": {
-            "login": "hmascs",
-            "html_url": "https://github.com/hmascs"
+            "login": "Petalrain224",
+            "html_url": "https://github.com/Petalrain224"
           },
-          "clone_url": "https://github.com/hmascs/KSuRoot.git"
+          "clone_url": "https://github.com/Petalrain224/CVE-2026-43499-Redmi-Turbo5.git"
         },
         {
           "id": 1309665571,
@@ -60964,10 +60994,10 @@
           "full_name": "OmriBaso/SCCM-CVE-2026-47301-Remote-Code-Execution-Exploit",
           "html_url": "https://github.com/OmriBaso/SCCM-CVE-2026-47301-Remote-Code-Execution-Exploit",
           "description": "Proof-of-concept exploit chain (CVE-2026-47301) for Microsoft Configuration Manager (SCCM), combining a broken access, CAB arbitrary-write path traversal, certificate verification bypass, and DLL hijacking to achieve SYSTEM-level code execution.",
-          "stargazers_count": 37,
+          "stargazers_count": 40,
           "forks_count": 3,
           "language": "C#",
-          "updated_at": "2026-08-15T12:03:31Z",
+          "updated_at": "2026-08-15T13:23:24Z",
           "pushed_at": "2026-08-13T14:49:32Z",
           "created_at": "2026-08-03T15:29:22Z",
           "topics": [],
@@ -78113,7 +78143,7 @@
           "html_url": "https://github.com/rails/rails-forensics-CVE-2026-66066",
           "description": "",
           "stargazers_count": 25,
-          "forks_count": 2,
+          "forks_count": 3,
           "language": "Ruby",
           "updated_at": "2026-08-11T13:14:50Z",
           "pushed_at": "2026-07-31T15:27:43Z",
@@ -79377,10 +79407,10 @@
           "full_name": "aramosf/CVE-2026-68398",
           "html_url": "https://github.com/aramosf/CVE-2026-68398",
           "description": "CVE-2026-68398 Ubuntu PPPoL2TP use-after-free local privilege escalation",
-          "stargazers_count": 4,
+          "stargazers_count": 5,
           "forks_count": 2,
           "language": "C",
-          "updated_at": "2026-08-15T10:26:11Z",
+          "updated_at": "2026-08-15T12:55:46Z",
           "pushed_at": "2026-08-12T15:31:34Z",
           "created_at": "2026-08-12T15:04:01Z",
           "topics": [],
@@ -82084,6 +82114,41 @@
             "html_url": "https://github.com/HORKimhab"
           },
           "clone_url": "https://github.com/HORKimhab/CVE-2026-8461.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2026-8501",
+      "repositories": [
+        {
+          "id": 727775795,
+          "name": "BYOVD",
+          "full_name": "BlackSnufkin/BYOVD",
+          "html_url": "https://github.com/BlackSnufkin/BYOVD",
+          "description": "BYOVD research use cases featuring vulnerable driver discovery and reverse engineering methodology.  (CVE-2025-52915,  CVE-2025-1055, CVE-2026-3609, CVE-2026-8501).",
+          "stargazers_count": 902,
+          "forks_count": 132,
+          "language": "Rust",
+          "updated_at": "2026-08-15T12:47:15Z",
+          "pushed_at": "2026-08-15T12:46:49Z",
+          "created_at": "2023-12-05T14:52:11Z",
+          "topics": [
+            "av-killer",
+            "byovd",
+            "edr-killer",
+            "exploit-development",
+            "kernel-driver",
+            "loldrivers",
+            "malware-development",
+            "redteam",
+            "rust",
+            "vulnerable-driver"
+          ],
+          "owner": {
+            "login": "BlackSnufkin",
+            "html_url": "https://github.com/BlackSnufkin"
+          },
+          "clone_url": "https://github.com/BlackSnufkin/BYOVD.git"
         }
       ]
     },
