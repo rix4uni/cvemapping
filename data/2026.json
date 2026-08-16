@@ -28144,10 +28144,10 @@
           "full_name": "tgies/copy-fail-c",
           "html_url": "https://github.com/tgies/copy-fail-c",
           "description": "Cross-platform C port of the Copy Fail Linux LPE (CVE-2026-31431). Disclosed 2026-04-29 by Theori / Xint.",
-          "stargazers_count": 441,
+          "stargazers_count": 442,
           "forks_count": 121,
           "language": "C",
-          "updated_at": "2026-08-12T05:07:56Z",
+          "updated_at": "2026-08-16T11:07:46Z",
           "pushed_at": "2026-07-17T13:24:28Z",
           "created_at": "2026-04-29T23:29:14Z",
           "topics": [
@@ -51798,6 +51798,25 @@
           "clone_url": "https://github.com/0xBlackash/CVE-2026-42945.git"
         },
         {
+          "id": 1241755488,
+          "name": "CVE-2026-42945-NGINX-Rift",
+          "full_name": "Renison-Gohel/CVE-2026-42945-NGINX-Rift",
+          "html_url": "https://github.com/Renison-Gohel/CVE-2026-42945-NGINX-Rift",
+          "description": "",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-05-20T13:47:45Z",
+          "pushed_at": "2026-05-17T19:27:11Z",
+          "created_at": "2026-05-17T19:22:10Z",
+          "topics": [],
+          "owner": {
+            "login": "Renison-Gohel",
+            "html_url": "https://github.com/Renison-Gohel"
+          },
+          "clone_url": "https://github.com/Renison-Gohel/CVE-2026-42945-NGINX-Rift.git"
+        },
+        {
           "id": 1239370644,
           "name": "CVE-2026-42945",
           "full_name": "chenqin231/CVE-2026-42945",
@@ -51836,25 +51855,6 @@
           "clone_url": "https://github.com/forxiucn/nginx-cve-2026-42945-poc.git"
         },
         {
-          "id": 1242533759,
-          "name": "CVE-2026-42945",
-          "full_name": "hnytgl/CVE-2026-42945",
-          "html_url": "https://github.com/hnytgl/CVE-2026-42945",
-          "description": "这是一个面向防守和内网排查的 CVE-2026-42945 静态检测工具，用于检查 NGINX ngx_http_rewrite_module 相关配置是否存在高风险 rewrite 组合。",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-06-06T06:43:44Z",
-          "pushed_at": "2026-06-06T06:40:41Z",
-          "created_at": "2026-05-18T14:09:21Z",
-          "topics": [],
-          "owner": {
-            "login": "hnytgl",
-            "html_url": "https://github.com/hnytgl"
-          },
-          "clone_url": "https://github.com/hnytgl/CVE-2026-42945.git"
-        },
-        {
           "id": 1249383915,
           "name": "CVE-2026-42945-nginx-rift",
           "full_name": "josephfelix/CVE-2026-42945-nginx-rift",
@@ -51872,6 +51872,36 @@
             "html_url": "https://github.com/josephfelix"
           },
           "clone_url": "https://github.com/josephfelix/CVE-2026-42945-nginx-rift.git"
+        },
+        {
+          "id": 1246946637,
+          "name": "CVE-2026-42945-nginx-rift-poc",
+          "full_name": "F2u0a0d3/CVE-2026-42945-nginx-rift-poc",
+          "html_url": "https://github.com/F2u0a0d3/CVE-2026-42945-nginx-rift-poc",
+          "description": "PoC for CVE-2026-42945 (nginx Rift) — heap buffer overflow in ngx_http_rewrite_module. Includes detect/probe/exploit modes, dual-fixture Docker lab, empirical address discovery, OOB-verified offset sweep. Original disclosure by depthfirst.",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-07-04T23:24:21Z",
+          "pushed_at": "2026-05-22T18:23:26Z",
+          "created_at": "2026-05-22T18:23:24Z",
+          "topics": [
+            "buffer-overflow",
+            "cve",
+            "cve-2026-42945",
+            "exploit-development",
+            "heap-overflow",
+            "nginx",
+            "nginx-exploit",
+            "poc",
+            "rce",
+            "security-research"
+          ],
+          "owner": {
+            "login": "F2u0a0d3",
+            "html_url": "https://github.com/F2u0a0d3"
+          },
+          "clone_url": "https://github.com/F2u0a0d3/CVE-2026-42945-nginx-rift-poc.git"
         },
         {
           "id": 1238689643,
@@ -51893,42 +51923,42 @@
           "clone_url": "https://github.com/realityone/cve-2026-42945-scan.git"
         },
         {
-          "id": 1243544869,
-          "name": "CVE-2026-42945",
-          "full_name": "RedCrazyGhost/CVE-2026-42945",
-          "html_url": "https://github.com/RedCrazyGhost/CVE-2026-42945",
+          "id": 1334333075,
+          "name": "CVE-2026-42945_NginxRift",
+          "full_name": "Kentox493/CVE-2026-42945_NginxRift",
+          "html_url": "https://github.com/Kentox493/CVE-2026-42945_NginxRift",
           "description": "",
           "stargazers_count": 1,
           "forks_count": 0,
-          "language": "Go",
-          "updated_at": "2026-05-19T13:46:15Z",
-          "pushed_at": "2026-05-19T13:41:53Z",
-          "created_at": "2026-05-19T12:46:37Z",
+          "language": "Shell",
+          "updated_at": "2026-08-16T10:15:05Z",
+          "pushed_at": "2026-08-14T15:51:49Z",
+          "created_at": "2026-08-14T15:42:21Z",
           "topics": [],
           "owner": {
-            "login": "RedCrazyGhost",
-            "html_url": "https://github.com/RedCrazyGhost"
+            "login": "Kentox493",
+            "html_url": "https://github.com/Kentox493"
           },
-          "clone_url": "https://github.com/RedCrazyGhost/CVE-2026-42945.git"
+          "clone_url": "https://github.com/Kentox493/CVE-2026-42945_NginxRift.git"
         },
         {
-          "id": 1241755488,
-          "name": "CVE-2026-42945-NGINX-Rift",
-          "full_name": "Renison-Gohel/CVE-2026-42945-NGINX-Rift",
-          "html_url": "https://github.com/Renison-Gohel/CVE-2026-42945-NGINX-Rift",
-          "description": "",
+          "id": 1242533759,
+          "name": "CVE-2026-42945",
+          "full_name": "hnytgl/CVE-2026-42945",
+          "html_url": "https://github.com/hnytgl/CVE-2026-42945",
+          "description": "这是一个面向防守和内网排查的 CVE-2026-42945 静态检测工具，用于检查 NGINX ngx_http_rewrite_module 相关配置是否存在高风险 rewrite 组合。",
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-05-20T13:47:45Z",
-          "pushed_at": "2026-05-17T19:27:11Z",
-          "created_at": "2026-05-17T19:22:10Z",
+          "updated_at": "2026-06-06T06:43:44Z",
+          "pushed_at": "2026-06-06T06:40:41Z",
+          "created_at": "2026-05-18T14:09:21Z",
           "topics": [],
           "owner": {
-            "login": "Renison-Gohel",
-            "html_url": "https://github.com/Renison-Gohel"
+            "login": "hnytgl",
+            "html_url": "https://github.com/hnytgl"
           },
-          "clone_url": "https://github.com/Renison-Gohel/CVE-2026-42945-NGINX-Rift.git"
+          "clone_url": "https://github.com/hnytgl/CVE-2026-42945.git"
         },
         {
           "id": 1276857227,
@@ -51997,34 +52027,23 @@
           "clone_url": "https://github.com/simota/nginx-rift-scanner.git"
         },
         {
-          "id": 1246946637,
-          "name": "CVE-2026-42945-nginx-rift-poc",
-          "full_name": "F2u0a0d3/CVE-2026-42945-nginx-rift-poc",
-          "html_url": "https://github.com/F2u0a0d3/CVE-2026-42945-nginx-rift-poc",
-          "description": "PoC for CVE-2026-42945 (nginx Rift) — heap buffer overflow in ngx_http_rewrite_module. Includes detect/probe/exploit modes, dual-fixture Docker lab, empirical address discovery, OOB-verified offset sweep. Original disclosure by depthfirst.",
+          "id": 1243544869,
+          "name": "CVE-2026-42945",
+          "full_name": "RedCrazyGhost/CVE-2026-42945",
+          "html_url": "https://github.com/RedCrazyGhost/CVE-2026-42945",
+          "description": "",
           "stargazers_count": 1,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-07-04T23:24:21Z",
-          "pushed_at": "2026-05-22T18:23:26Z",
-          "created_at": "2026-05-22T18:23:24Z",
-          "topics": [
-            "buffer-overflow",
-            "cve",
-            "cve-2026-42945",
-            "exploit-development",
-            "heap-overflow",
-            "nginx",
-            "nginx-exploit",
-            "poc",
-            "rce",
-            "security-research"
-          ],
+          "language": "Go",
+          "updated_at": "2026-05-19T13:46:15Z",
+          "pushed_at": "2026-05-19T13:41:53Z",
+          "created_at": "2026-05-19T12:46:37Z",
+          "topics": [],
           "owner": {
-            "login": "F2u0a0d3",
-            "html_url": "https://github.com/F2u0a0d3"
+            "login": "RedCrazyGhost",
+            "html_url": "https://github.com/RedCrazyGhost"
           },
-          "clone_url": "https://github.com/F2u0a0d3/CVE-2026-42945-nginx-rift-poc.git"
+          "clone_url": "https://github.com/RedCrazyGhost/CVE-2026-42945.git"
         },
         {
           "id": 1285885711,
@@ -52046,42 +52065,32 @@
           "clone_url": "https://github.com/aratane/CVE-2026-42945.git"
         },
         {
-          "id": 1334333075,
-          "name": "CVE-2026-42945_NginxRift",
-          "full_name": "Kentox493/CVE-2026-42945_NginxRift",
-          "html_url": "https://github.com/Kentox493/CVE-2026-42945_NginxRift",
-          "description": "",
+          "id": 1240663126,
+          "name": "nginx-rift-detector",
+          "full_name": "limo57640-crypto/nginx-rift-detector",
+          "html_url": "https://github.com/limo57640-crypto/nginx-rift-detector",
+          "description": "Free NGINX Rift CVE-2026-42945 detector for version, rewrite config, ASLR, crash logs, and exploitation indicators.",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Shell",
-          "updated_at": "2026-08-14T15:52:02Z",
-          "pushed_at": "2026-08-14T15:51:49Z",
-          "created_at": "2026-08-14T15:42:21Z",
-          "topics": [],
+          "updated_at": "2026-06-22T13:45:14Z",
+          "pushed_at": "2026-06-22T13:45:00Z",
+          "created_at": "2026-05-16T12:13:01Z",
+          "topics": [
+            "bash",
+            "cve-2026-42945",
+            "incident-response",
+            "nginx",
+            "nginx-rift",
+            "ping7",
+            "security-tools",
+            "vulnerability-detection"
+          ],
           "owner": {
-            "login": "Kentox493",
-            "html_url": "https://github.com/Kentox493"
+            "login": "limo57640-crypto",
+            "html_url": "https://github.com/limo57640-crypto"
           },
-          "clone_url": "https://github.com/Kentox493/CVE-2026-42945_NginxRift.git"
-        },
-        {
-          "id": 1243036207,
-          "name": "CVE-2026-42945",
-          "full_name": "imSre9/CVE-2026-42945",
-          "html_url": "https://github.com/imSre9/CVE-2026-42945",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-05-19T08:08:59Z",
-          "pushed_at": "2026-05-19T08:08:55Z",
-          "created_at": "2026-05-19T01:54:52Z",
-          "topics": [],
-          "owner": {
-            "login": "imSre9",
-            "html_url": "https://github.com/imSre9"
-          },
-          "clone_url": "https://github.com/imSre9/CVE-2026-42945.git"
+          "clone_url": "https://github.com/limo57640-crypto/nginx-rift-detector.git"
         },
         {
           "id": 1239156281,
@@ -52103,44 +52112,6 @@
           "clone_url": "https://github.com/ChamsBouzaiene/ai-vuln-rediscovery-nginx-cve-2026-42945.git"
         },
         {
-          "id": 1247634020,
-          "name": "nginx-rce-cve-2026-42945",
-          "full_name": "webdev75950-ux/nginx-rce-cve-2026-42945",
-          "html_url": "https://github.com/webdev75950-ux/nginx-rce-cve-2026-42945",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-05-23T15:21:58Z",
-          "pushed_at": "2026-05-23T15:21:54Z",
-          "created_at": "2026-05-23T15:21:51Z",
-          "topics": [],
-          "owner": {
-            "login": "webdev75950-ux",
-            "html_url": "https://github.com/webdev75950-ux"
-          },
-          "clone_url": "https://github.com/webdev75950-ux/nginx-rce-cve-2026-42945.git"
-        },
-        {
-          "id": 1252058387,
-          "name": "CVE-2026-42945",
-          "full_name": "quantumworld-dpdns-io/CVE-2026-42945",
-          "html_url": "https://github.com/quantumworld-dpdns-io/CVE-2026-42945",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-05-28T08:12:39Z",
-          "pushed_at": "2026-05-28T08:12:27Z",
-          "created_at": "2026-05-28T06:40:43Z",
-          "topics": [],
-          "owner": {
-            "login": "quantumworld-dpdns-io",
-            "html_url": "https://github.com/quantumworld-dpdns-io"
-          },
-          "clone_url": "https://github.com/quantumworld-dpdns-io/CVE-2026-42945.git"
-        },
-        {
           "id": 1244758958,
           "name": "CVE-2026-42945",
           "full_name": "yusufdalbudak/CVE-2026-42945",
@@ -52158,25 +52129,6 @@
             "html_url": "https://github.com/yusufdalbudak"
           },
           "clone_url": "https://github.com/yusufdalbudak/CVE-2026-42945.git"
-        },
-        {
-          "id": 1240545802,
-          "name": "web-server-audit_CVE-2026-42945",
-          "full_name": "sibersan/web-server-audit_CVE-2026-42945",
-          "html_url": "https://github.com/sibersan/web-server-audit_CVE-2026-42945",
-          "description": "Trigger-aware web server CVE audit for nginx and Apache. Goes beyond version matching by checking whether the vulnerable code path is actually reachable in your configuration. Classifies findings as Active / Latent / Unverified. Single-file Python 3.5+, no dependencies.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-05-16T09:11:54Z",
-          "pushed_at": "2026-05-16T09:11:50Z",
-          "created_at": "2026-05-16T09:06:53Z",
-          "topics": [],
-          "owner": {
-            "login": "sibersan",
-            "html_url": "https://github.com/sibersan"
-          },
-          "clone_url": "https://github.com/sibersan/web-server-audit_CVE-2026-42945.git"
         },
         {
           "id": 1332864666,
@@ -52198,6 +52150,44 @@
           "clone_url": "https://github.com/CynepMyx/nginx-rift-check.git"
         },
         {
+          "id": 1240545802,
+          "name": "web-server-audit_CVE-2026-42945",
+          "full_name": "sibersan/web-server-audit_CVE-2026-42945",
+          "html_url": "https://github.com/sibersan/web-server-audit_CVE-2026-42945",
+          "description": "Trigger-aware web server CVE audit for nginx and Apache. Goes beyond version matching by checking whether the vulnerable code path is actually reachable in your configuration. Classifies findings as Active / Latent / Unverified. Single-file Python 3.5+, no dependencies.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-05-16T09:11:54Z",
+          "pushed_at": "2026-05-16T09:11:50Z",
+          "created_at": "2026-05-16T09:06:53Z",
+          "topics": [],
+          "owner": {
+            "login": "sibersan",
+            "html_url": "https://github.com/sibersan"
+          },
+          "clone_url": "https://github.com/sibersan/web-server-audit_CVE-2026-42945.git"
+        },
+        {
+          "id": 1252058387,
+          "name": "CVE-2026-42945",
+          "full_name": "quantumworld-dpdns-io/CVE-2026-42945",
+          "html_url": "https://github.com/quantumworld-dpdns-io/CVE-2026-42945",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-05-28T08:12:39Z",
+          "pushed_at": "2026-05-28T08:12:27Z",
+          "created_at": "2026-05-28T06:40:43Z",
+          "topics": [],
+          "owner": {
+            "login": "quantumworld-dpdns-io",
+            "html_url": "https://github.com/quantumworld-dpdns-io"
+          },
+          "clone_url": "https://github.com/quantumworld-dpdns-io/CVE-2026-42945.git"
+        },
+        {
           "id": 1239800566,
           "name": "nginx-cve-2026-42945-check",
           "full_name": "byezero/nginx-cve-2026-42945-check",
@@ -52215,6 +52205,25 @@
             "html_url": "https://github.com/byezero"
           },
           "clone_url": "https://github.com/byezero/nginx-cve-2026-42945-check.git"
+        },
+        {
+          "id": 1239769021,
+          "name": "wazuh-nginx-cve-2026-42945-sca-lab",
+          "full_name": "soksofos/wazuh-nginx-cve-2026-42945-sca-lab",
+          "html_url": "https://github.com/soksofos/wazuh-nginx-cve-2026-42945-sca-lab",
+          "description": "Centralized Wazuh SCA Assessment for CVE-2026-42945 on NGINX Servers",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-05-15T12:47:34Z",
+          "pushed_at": "2026-05-15T12:47:30Z",
+          "created_at": "2026-05-15T12:24:20Z",
+          "topics": [],
+          "owner": {
+            "login": "soksofos",
+            "html_url": "https://github.com/soksofos"
+          },
+          "clone_url": "https://github.com/soksofos/wazuh-nginx-cve-2026-42945-sca-lab.git"
         },
         {
           "id": 1272400211,
@@ -52253,72 +52262,6 @@
             "html_url": "https://github.com/sec-sys"
           },
           "clone_url": "https://github.com/sec-sys/CVE-2026-42945-Reverse-Shell-POC.git"
-        },
-        {
-          "id": 1239769021,
-          "name": "wazuh-nginx-cve-2026-42945-sca-lab",
-          "full_name": "soksofos/wazuh-nginx-cve-2026-42945-sca-lab",
-          "html_url": "https://github.com/soksofos/wazuh-nginx-cve-2026-42945-sca-lab",
-          "description": "Centralized Wazuh SCA Assessment for CVE-2026-42945 on NGINX Servers",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-05-15T12:47:34Z",
-          "pushed_at": "2026-05-15T12:47:30Z",
-          "created_at": "2026-05-15T12:24:20Z",
-          "topics": [],
-          "owner": {
-            "login": "soksofos",
-            "html_url": "https://github.com/soksofos"
-          },
-          "clone_url": "https://github.com/soksofos/wazuh-nginx-cve-2026-42945-sca-lab.git"
-        },
-        {
-          "id": 1240663126,
-          "name": "nginx-rift-detector",
-          "full_name": "limo57640-crypto/nginx-rift-detector",
-          "html_url": "https://github.com/limo57640-crypto/nginx-rift-detector",
-          "description": "Free NGINX Rift CVE-2026-42945 detector for version, rewrite config, ASLR, crash logs, and exploitation indicators.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2026-06-22T13:45:14Z",
-          "pushed_at": "2026-06-22T13:45:00Z",
-          "created_at": "2026-05-16T12:13:01Z",
-          "topics": [
-            "bash",
-            "cve-2026-42945",
-            "incident-response",
-            "nginx",
-            "nginx-rift",
-            "ping7",
-            "security-tools",
-            "vulnerability-detection"
-          ],
-          "owner": {
-            "login": "limo57640-crypto",
-            "html_url": "https://github.com/limo57640-crypto"
-          },
-          "clone_url": "https://github.com/limo57640-crypto/nginx-rift-detector.git"
-        },
-        {
-          "id": 1258633601,
-          "name": "CVE-2026-42945-NGINX-Rift-Check-Script",
-          "full_name": "lowilol/CVE-2026-42945-NGINX-Rift-Check-Script",
-          "html_url": "https://github.com/lowilol/CVE-2026-42945-NGINX-Rift-Check-Script",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2026-06-03T19:23:29Z",
-          "pushed_at": "2026-06-03T19:23:25Z",
-          "created_at": "2026-06-03T19:10:40Z",
-          "topics": [],
-          "owner": {
-            "login": "lowilol",
-            "html_url": "https://github.com/lowilol"
-          },
-          "clone_url": "https://github.com/lowilol/CVE-2026-42945-NGINX-Rift-Check-Script.git"
         },
         {
           "id": 1243676586,
@@ -52365,6 +52308,63 @@
             "html_url": "https://github.com/BarAppTeam"
           },
           "clone_url": "https://github.com/BarAppTeam/nginx-cve-fix.git"
+        },
+        {
+          "id": 1258633601,
+          "name": "CVE-2026-42945-NGINX-Rift-Check-Script",
+          "full_name": "lowilol/CVE-2026-42945-NGINX-Rift-Check-Script",
+          "html_url": "https://github.com/lowilol/CVE-2026-42945-NGINX-Rift-Check-Script",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Shell",
+          "updated_at": "2026-06-03T19:23:29Z",
+          "pushed_at": "2026-06-03T19:23:25Z",
+          "created_at": "2026-06-03T19:10:40Z",
+          "topics": [],
+          "owner": {
+            "login": "lowilol",
+            "html_url": "https://github.com/lowilol"
+          },
+          "clone_url": "https://github.com/lowilol/CVE-2026-42945-NGINX-Rift-Check-Script.git"
+        },
+        {
+          "id": 1247634020,
+          "name": "nginx-rce-cve-2026-42945",
+          "full_name": "webdev75950-ux/nginx-rce-cve-2026-42945",
+          "html_url": "https://github.com/webdev75950-ux/nginx-rce-cve-2026-42945",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-05-23T15:21:58Z",
+          "pushed_at": "2026-05-23T15:21:54Z",
+          "created_at": "2026-05-23T15:21:51Z",
+          "topics": [],
+          "owner": {
+            "login": "webdev75950-ux",
+            "html_url": "https://github.com/webdev75950-ux"
+          },
+          "clone_url": "https://github.com/webdev75950-ux/nginx-rce-cve-2026-42945.git"
+        },
+        {
+          "id": 1243036207,
+          "name": "CVE-2026-42945",
+          "full_name": "imSre9/CVE-2026-42945",
+          "html_url": "https://github.com/imSre9/CVE-2026-42945",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-05-19T08:08:59Z",
+          "pushed_at": "2026-05-19T08:08:55Z",
+          "created_at": "2026-05-19T01:54:52Z",
+          "topics": [],
+          "owner": {
+            "login": "imSre9",
+            "html_url": "https://github.com/imSre9"
+          },
+          "clone_url": "https://github.com/imSre9/CVE-2026-42945.git"
         }
       ]
     },
@@ -53514,10 +53514,10 @@
           "full_name": "BuSung-dev/Root-My-Galaxy",
           "html_url": "https://github.com/BuSung-dev/Root-My-Galaxy",
           "description": "KSU installer for supported Samsung Galaxy firmware with CVE-2026-43499",
-          "stargazers_count": 825,
-          "forks_count": 153,
+          "stargazers_count": 828,
+          "forks_count": 154,
           "language": "Kotlin",
-          "updated_at": "2026-08-16T04:52:14Z",
+          "updated_at": "2026-08-16T10:34:53Z",
           "pushed_at": "2026-08-09T05:13:42Z",
           "created_at": "2026-07-17T14:24:08Z",
           "topics": [],
@@ -53597,10 +53597,10 @@
           "full_name": "alex193a/Root-My-Pixel",
           "html_url": "https://github.com/alex193a/Root-My-Pixel",
           "description": "Jailbreak supported Google Pixel phones with CVE-2026-43499",
-          "stargazers_count": 145,
+          "stargazers_count": 146,
           "forks_count": 31,
           "language": "Kotlin",
-          "updated_at": "2026-08-16T00:51:37Z",
+          "updated_at": "2026-08-16T09:50:47Z",
           "pushed_at": "2026-08-14T06:07:08Z",
           "created_at": "2026-08-02T17:34:45Z",
           "topics": [
@@ -53844,7 +53844,7 @@
           "html_url": "https://github.com/xianwan1314/CVE-2026-43499-Poc-Analysis",
           "description": "Vulnerability analysis and Proof of Concept (PoC) for CVE-2026-43499 affecting Xiaomi devices. For educational and research purposes only.",
           "stargazers_count": 15,
-          "forks_count": 50,
+          "forks_count": 51,
           "language": "",
           "updated_at": "2026-08-14T18:37:01Z",
           "pushed_at": "2026-07-14T16:28:49Z",
@@ -54139,6 +54139,63 @@
           "clone_url": "https://github.com/sorrow404Null/CVE-2026-43499-RMX5200.git"
         },
         {
+          "id": 1298888654,
+          "name": "Mi8E5-Unlocker-by-CVE-2026-43499",
+          "full_name": "joehquak/Mi8E5-Unlocker-by-CVE-2026-43499",
+          "html_url": "https://github.com/joehquak/Mi8E5-Unlocker-by-CVE-2026-43499",
+          "description": "Multi OS Support: Version for MacOS/Linux and Windows, Fully translated to English",
+          "stargazers_count": 6,
+          "forks_count": 3,
+          "language": "Shell",
+          "updated_at": "2026-08-16T10:00:41Z",
+          "pushed_at": "2026-07-14T04:21:57Z",
+          "created_at": "2026-07-13T05:10:04Z",
+          "topics": [],
+          "owner": {
+            "login": "joehquak",
+            "html_url": "https://github.com/joehquak"
+          },
+          "clone_url": "https://github.com/joehquak/Mi8E5-Unlocker-by-CVE-2026-43499.git"
+        },
+        {
+          "id": 1334081853,
+          "name": "KSuRoot",
+          "full_name": "hmascs/KSuRoot",
+          "html_url": "https://github.com/hmascs/KSuRoot",
+          "description": "KSuRoot 2.2.0 — One-click KernelSU rooting based on CVE-2026-43499. Synced from Root-My-Galaxy v0.2.6 with custom payload (.so) import. Mod by hmascs",
+          "stargazers_count": 5,
+          "forks_count": 0,
+          "language": "Kotlin",
+          "updated_at": "2026-08-15T12:54:29Z",
+          "pushed_at": "2026-08-14T10:52:31Z",
+          "created_at": "2026-08-14T10:51:50Z",
+          "topics": [],
+          "owner": {
+            "login": "hmascs",
+            "html_url": "https://github.com/hmascs"
+          },
+          "clone_url": "https://github.com/hmascs/KSuRoot.git"
+        },
+        {
+          "id": 1299001695,
+          "name": "oppo-pgem10-ghostlock",
+          "full_name": "Thiasap/oppo-pgem10-ghostlock",
+          "html_url": "https://github.com/Thiasap/oppo-pgem10-ghostlock",
+          "description": "OPPO Find X6 Pro GhostLock (CVE-2026-43499) exploit adaptation",
+          "stargazers_count": 5,
+          "forks_count": 1,
+          "language": "C",
+          "updated_at": "2026-08-02T12:02:31Z",
+          "pushed_at": "2026-07-13T07:36:39Z",
+          "created_at": "2026-07-13T07:35:54Z",
+          "topics": [],
+          "owner": {
+            "login": "Thiasap",
+            "html_url": "https://github.com/Thiasap"
+          },
+          "clone_url": "https://github.com/Thiasap/oppo-pgem10-ghostlock.git"
+        },
+        {
           "id": 1309811997,
           "name": "rmx3888-cve-2026-43499-config",
           "full_name": "Bailan766/rmx3888-cve-2026-43499-config",
@@ -54175,63 +54232,6 @@
             "html_url": "https://github.com/soralis0912"
           },
           "clone_url": "https://github.com/soralis0912/CVE-2026-43499-aristotle-apk.git"
-        },
-        {
-          "id": 1298888654,
-          "name": "Mi8E5-Unlocker-by-CVE-2026-43499",
-          "full_name": "joehquak/Mi8E5-Unlocker-by-CVE-2026-43499",
-          "html_url": "https://github.com/joehquak/Mi8E5-Unlocker-by-CVE-2026-43499",
-          "description": "Multi OS Support: Version for MacOS/Linux and Windows, Fully translated to English",
-          "stargazers_count": 5,
-          "forks_count": 3,
-          "language": "Shell",
-          "updated_at": "2026-08-04T00:17:09Z",
-          "pushed_at": "2026-07-14T04:21:57Z",
-          "created_at": "2026-07-13T05:10:04Z",
-          "topics": [],
-          "owner": {
-            "login": "joehquak",
-            "html_url": "https://github.com/joehquak"
-          },
-          "clone_url": "https://github.com/joehquak/Mi8E5-Unlocker-by-CVE-2026-43499.git"
-        },
-        {
-          "id": 1299001695,
-          "name": "oppo-pgem10-ghostlock",
-          "full_name": "Thiasap/oppo-pgem10-ghostlock",
-          "html_url": "https://github.com/Thiasap/oppo-pgem10-ghostlock",
-          "description": "OPPO Find X6 Pro GhostLock (CVE-2026-43499) exploit adaptation",
-          "stargazers_count": 5,
-          "forks_count": 1,
-          "language": "C",
-          "updated_at": "2026-08-02T12:02:31Z",
-          "pushed_at": "2026-07-13T07:36:39Z",
-          "created_at": "2026-07-13T07:35:54Z",
-          "topics": [],
-          "owner": {
-            "login": "Thiasap",
-            "html_url": "https://github.com/Thiasap"
-          },
-          "clone_url": "https://github.com/Thiasap/oppo-pgem10-ghostlock.git"
-        },
-        {
-          "id": 1334081853,
-          "name": "KSuRoot",
-          "full_name": "hmascs/KSuRoot",
-          "html_url": "https://github.com/hmascs/KSuRoot",
-          "description": "KSuRoot 2.2.0 — One-click KernelSU rooting based on CVE-2026-43499. Synced from Root-My-Galaxy v0.2.6 with custom payload (.so) import. Mod by hmascs",
-          "stargazers_count": 5,
-          "forks_count": 0,
-          "language": "Kotlin",
-          "updated_at": "2026-08-15T12:54:29Z",
-          "pushed_at": "2026-08-14T10:52:31Z",
-          "created_at": "2026-08-14T10:51:50Z",
-          "topics": [],
-          "owner": {
-            "login": "hmascs",
-            "html_url": "https://github.com/hmascs"
-          },
-          "clone_url": "https://github.com/hmascs/KSuRoot.git"
         },
         {
           "id": 1318665118,
@@ -55869,25 +55869,6 @@
       "cve_id": "CVE-2026-43512",
       "repositories": [
         {
-          "id": 1263311996,
-          "name": "cve-2026-43512-poc",
-          "full_name": "covepseng/cve-2026-43512-poc",
-          "html_url": "https://github.com/covepseng/cve-2026-43512-poc",
-          "description": "Exploitability PoC for CVE-2026-43512 (Apache Tomcat Digest Authentication Bypass)",
-          "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "Go",
-          "updated_at": "2026-06-19T16:06:04Z",
-          "pushed_at": "2026-06-19T16:06:00Z",
-          "created_at": "2026-06-08T20:43:08Z",
-          "topics": [],
-          "owner": {
-            "login": "covepseng",
-            "html_url": "https://github.com/covepseng"
-          },
-          "clone_url": "https://github.com/covepseng/cve-2026-43512-poc.git"
-        },
-        {
           "id": 1324789422,
           "name": "tomcat-check",
           "full_name": "xiaoqiMikko/tomcat-check",
@@ -55921,6 +55902,25 @@
             "html_url": "https://github.com/xiaoqiMikko"
           },
           "clone_url": "https://github.com/xiaoqiMikko/tomcat-check.git"
+        },
+        {
+          "id": 1263311996,
+          "name": "cve-2026-43512-poc",
+          "full_name": "covepseng/cve-2026-43512-poc",
+          "html_url": "https://github.com/covepseng/cve-2026-43512-poc",
+          "description": "Exploitability PoC for CVE-2026-43512 (Apache Tomcat Digest Authentication Bypass)",
+          "stargazers_count": 0,
+          "forks_count": 1,
+          "language": "Go",
+          "updated_at": "2026-06-19T16:06:04Z",
+          "pushed_at": "2026-06-19T16:06:00Z",
+          "created_at": "2026-06-08T20:43:08Z",
+          "topics": [],
+          "owner": {
+            "login": "covepseng",
+            "html_url": "https://github.com/covepseng"
+          },
+          "clone_url": "https://github.com/covepseng/cve-2026-43512-poc.git"
         }
       ]
     },
@@ -61099,10 +61099,10 @@
           "full_name": "OmriBaso/SCCM-CVE-2026-47301-Remote-Code-Execution-Exploit",
           "html_url": "https://github.com/OmriBaso/SCCM-CVE-2026-47301-Remote-Code-Execution-Exploit",
           "description": "Proof-of-concept exploit chain (CVE-2026-47301) for Microsoft Configuration Manager (SCCM), combining a broken access, CAB arbitrary-write path traversal, certificate verification bypass, and DLL hijacking to achieve SYSTEM-level code execution.",
-          "stargazers_count": 63,
-          "forks_count": 4,
+          "stargazers_count": 64,
+          "forks_count": 6,
           "language": "C#",
-          "updated_at": "2026-08-16T08:28:19Z",
+          "updated_at": "2026-08-16T11:10:38Z",
           "pushed_at": "2026-08-13T14:49:32Z",
           "created_at": "2026-08-03T15:29:22Z",
           "topics": [],
@@ -72623,10 +72623,10 @@
           "full_name": "sowarma/wp2shell-PoC",
           "html_url": "https://github.com/sowarma/wp2shell-PoC",
           "description": "CVE-2026-63030 \u0026 CVE-2026-60137 RCE chain proof-of-concept",
-          "stargazers_count": 390,
-          "forks_count": 36,
+          "stargazers_count": 407,
+          "forks_count": 38,
           "language": "Python",
-          "updated_at": "2026-08-16T09:24:22Z",
+          "updated_at": "2026-08-16T11:00:50Z",
           "pushed_at": "2026-08-13T15:04:07Z",
           "created_at": "2026-08-05T12:48:03Z",
           "topics": [
@@ -74671,10 +74671,10 @@
           "full_name": "sowarma/wp2shell-PoC",
           "html_url": "https://github.com/sowarma/wp2shell-PoC",
           "description": "CVE-2026-63030 \u0026 CVE-2026-60137 RCE chain proof-of-concept",
-          "stargazers_count": 390,
-          "forks_count": 36,
+          "stargazers_count": 407,
+          "forks_count": 38,
           "language": "Python",
-          "updated_at": "2026-08-16T09:24:22Z",
+          "updated_at": "2026-08-16T11:00:50Z",
           "pushed_at": "2026-08-13T15:04:07Z",
           "created_at": "2026-08-05T12:48:03Z",
           "topics": [
@@ -80717,30 +80717,6 @@
       ]
     },
     {
-      "cve_id": "CVE-2026-73633",
-      "repositories": [
-        {
-          "id": 1334874788,
-          "name": "S2-072",
-          "full_name": "CuteeCat/S2-072",
-          "html_url": "https://github.com/CuteeCat/S2-072",
-          "description": "S2-072（CVE-2026-73633）poc",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-08-15T08:38:36Z",
-          "pushed_at": "2026-08-15T08:38:24Z",
-          "created_at": "2026-08-15T07:11:36Z",
-          "topics": [],
-          "owner": {
-            "login": "CuteeCat",
-            "html_url": "https://github.com/CuteeCat"
-          },
-          "clone_url": "https://github.com/CuteeCat/S2-072.git"
-        }
-      ]
-    },
-    {
       "cve_id": "CVE-2026-73673",
       "repositories": [
         {
@@ -82289,10 +82265,10 @@
           "full_name": "watchtowrlabs/watchTowr-vs-Citrix-Netscaler-PreAuth-RCE-CVE-2026-8452",
           "html_url": "https://github.com/watchtowrlabs/watchTowr-vs-Citrix-Netscaler-PreAuth-RCE-CVE-2026-8452",
           "description": "CVE-2026-8452 PreAuth RCE",
-          "stargazers_count": 16,
+          "stargazers_count": 17,
           "forks_count": 2,
           "language": "Python",
-          "updated_at": "2026-08-16T02:59:02Z",
+          "updated_at": "2026-08-16T10:16:42Z",
           "pushed_at": "2026-08-14T15:08:55Z",
           "created_at": "2026-08-14T15:01:25Z",
           "topics": [],
@@ -83897,10 +83873,10 @@
           "full_name": "opaxial/CVE-2026-9830",
           "html_url": "https://github.com/opaxial/CVE-2026-9830",
           "description": "CVE-2026-9830 Proof of Concept",
-          "stargazers_count": 79,
+          "stargazers_count": 100,
           "forks_count": 1,
           "language": "Python",
-          "updated_at": "2026-08-16T09:25:45Z",
+          "updated_at": "2026-08-16T11:20:16Z",
           "pushed_at": "2026-08-15T22:39:12Z",
           "created_at": "2026-08-15T20:57:13Z",
           "topics": [
