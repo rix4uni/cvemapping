@@ -49324,10 +49324,10 @@
           "full_name": "lanicer/cve-2026-41940-PoC",
           "html_url": "https://github.com/lanicer/cve-2026-41940-PoC",
           "description": "A cPanel and WHM authentication bypassing tool",
-          "stargazers_count": 502,
+          "stargazers_count": 505,
           "forks_count": 96,
           "language": "Python",
-          "updated_at": "2026-08-22T00:37:24Z",
+          "updated_at": "2026-08-22T06:40:05Z",
           "pushed_at": "2026-08-20T10:15:12Z",
           "created_at": "2026-08-19T12:46:46Z",
           "topics": [
@@ -54928,8 +54928,8 @@
           "stargazers_count": 10,
           "forks_count": 2,
           "language": "Kotlin",
-          "updated_at": "2026-08-22T05:08:59Z",
-          "pushed_at": "2026-08-22T05:08:55Z",
+          "updated_at": "2026-08-22T05:55:56Z",
+          "pushed_at": "2026-08-22T05:55:48Z",
           "created_at": "2026-08-16T14:37:06Z",
           "topics": [],
           "owner": {
@@ -55392,6 +55392,25 @@
           "clone_url": "https://github.com/soralis0912/CVE-2026-43499-aristotle.git"
         },
         {
+          "id": 1341898956,
+          "name": "ghostlock-s26",
+          "full_name": "snothin/ghostlock-s26",
+          "html_url": "https://github.com/snothin/ghostlock-s26",
+          "description": "GhostLock (CVE-2026-43499) for the Galaxy S26",
+          "stargazers_count": 3,
+          "forks_count": 0,
+          "language": "C",
+          "updated_at": "2026-08-22T06:02:00Z",
+          "pushed_at": "2026-08-22T05:59:18Z",
+          "created_at": "2026-08-21T14:29:00Z",
+          "topics": [],
+          "owner": {
+            "login": "snothin",
+            "html_url": "https://github.com/snothin"
+          },
+          "clone_url": "https://github.com/snothin/ghostlock-s26.git"
+        },
+        {
           "id": 1331777892,
           "name": "F9360-CVE43499",
           "full_name": "E-R-Butch/F9360-CVE43499",
@@ -55411,23 +55430,34 @@
           "clone_url": "https://github.com/E-R-Butch/F9360-CVE43499.git"
         },
         {
-          "id": 1298224106,
-          "name": "openvz-cve-patch-2026",
-          "full_name": "dmcdtc/openvz-cve-patch-2026",
-          "html_url": "https://github.com/dmcdtc/openvz-cve-patch-2026",
-          "description": "GhostLock - CVE-2026-43499 backport patch for openVZ 7",
+          "id": 1333062525,
+          "name": "GhostLock",
+          "full_name": "wzhdgithub/GhostLock",
+          "html_url": "https://github.com/wzhdgithub/GhostLock",
+          "description": "CVE-2026-43499 futex PI stack UAF ???????? - Android GKI 6.1~6.12 ??????? pselect() + futex PI ????????????,??? root ??? SELinux??? OPPO Find X8?OnePlus ??????",
           "stargazers_count": 3,
           "forks_count": 0,
           "language": "C",
-          "updated_at": "2026-07-24T23:00:11Z",
-          "pushed_at": "2026-07-24T23:00:04Z",
-          "created_at": "2026-07-12T11:30:38Z",
-          "topics": [],
+          "updated_at": "2026-08-17T07:58:53Z",
+          "pushed_at": "2026-08-13T19:23:49Z",
+          "created_at": "2026-08-13T11:53:46Z",
+          "topics": [
+            "android",
+            "android-security",
+            "cve",
+            "exploit",
+            "futex",
+            "gki",
+            "kernel",
+            "privilege-escalation",
+            "security",
+            "uaf"
+          ],
           "owner": {
-            "login": "dmcdtc",
-            "html_url": "https://github.com/dmcdtc"
+            "login": "wzhdgithub",
+            "html_url": "https://github.com/wzhdgithub"
           },
-          "clone_url": "https://github.com/dmcdtc/openvz-cve-patch-2026.git"
+          "clone_url": "https://github.com/wzhdgithub/GhostLock.git"
         },
         {
           "id": 1330278156,
@@ -55468,34 +55498,23 @@
           "clone_url": "https://github.com/xrzcc/s26-m1q-ghostlock-selinux.git"
         },
         {
-          "id": 1333062525,
-          "name": "GhostLock",
-          "full_name": "wzhdgithub/GhostLock",
-          "html_url": "https://github.com/wzhdgithub/GhostLock",
-          "description": "CVE-2026-43499 futex PI stack UAF ???????? - Android GKI 6.1~6.12 ??????? pselect() + futex PI ????????????,??? root ??? SELinux??? OPPO Find X8?OnePlus ??????",
+          "id": 1298224106,
+          "name": "openvz-cve-patch-2026",
+          "full_name": "dmcdtc/openvz-cve-patch-2026",
+          "html_url": "https://github.com/dmcdtc/openvz-cve-patch-2026",
+          "description": "GhostLock - CVE-2026-43499 backport patch for openVZ 7",
           "stargazers_count": 3,
           "forks_count": 0,
           "language": "C",
-          "updated_at": "2026-08-17T07:58:53Z",
-          "pushed_at": "2026-08-13T19:23:49Z",
-          "created_at": "2026-08-13T11:53:46Z",
-          "topics": [
-            "android",
-            "android-security",
-            "cve",
-            "exploit",
-            "futex",
-            "gki",
-            "kernel",
-            "privilege-escalation",
-            "security",
-            "uaf"
-          ],
+          "updated_at": "2026-07-24T23:00:11Z",
+          "pushed_at": "2026-07-24T23:00:04Z",
+          "created_at": "2026-07-12T11:30:38Z",
+          "topics": [],
           "owner": {
-            "login": "wzhdgithub",
-            "html_url": "https://github.com/wzhdgithub"
+            "login": "dmcdtc",
+            "html_url": "https://github.com/dmcdtc"
           },
-          "clone_url": "https://github.com/wzhdgithub/GhostLock.git"
+          "clone_url": "https://github.com/dmcdtc/openvz-cve-patch-2026.git"
         },
         {
           "id": 1322842906,
@@ -55536,63 +55555,6 @@
           "clone_url": "https://github.com/veygax/HORiZonstack.git"
         },
         {
-          "id": 1333796163,
-          "name": "cve-2026-43499-m3q-azf1",
-          "full_name": "Bugel/cve-2026-43499-m3q-azf1",
-          "html_url": "https://github.com/Bugel/cve-2026-43499-m3q-azf1",
-          "description": "This package is not a complete root. It flips SELinux to Permissive and holds reclaim long enough for follow-on work. Host `uid=0` is not achieved here.",
-          "stargazers_count": 2,
-          "forks_count": 0,
-          "language": "C",
-          "updated_at": "2026-08-19T22:09:32Z",
-          "pushed_at": "2026-08-14T04:44:53Z",
-          "created_at": "2026-08-14T04:40:31Z",
-          "topics": [],
-          "owner": {
-            "login": "Bugel",
-            "html_url": "https://github.com/Bugel"
-          },
-          "clone_url": "https://github.com/Bugel/cve-2026-43499-m3q-azf1.git"
-        },
-        {
-          "id": 1341898956,
-          "name": "ghostlock-s26",
-          "full_name": "snothin/ghostlock-s26",
-          "html_url": "https://github.com/snothin/ghostlock-s26",
-          "description": "GhostLock (CVE-2026-43499) for the Galaxy S26",
-          "stargazers_count": 2,
-          "forks_count": 0,
-          "language": "C",
-          "updated_at": "2026-08-22T04:45:45Z",
-          "pushed_at": "2026-08-22T03:21:36Z",
-          "created_at": "2026-08-21T14:29:00Z",
-          "topics": [],
-          "owner": {
-            "login": "snothin",
-            "html_url": "https://github.com/snothin"
-          },
-          "clone_url": "https://github.com/snothin/ghostlock-s26.git"
-        },
-        {
-          "id": 1337668052,
-          "name": "ghostlock-a17",
-          "full_name": "mobilehackinglab/ghostlock-a17",
-          "html_url": "https://github.com/mobilehackinglab/ghostlock-a17",
-          "description": "CVE-2026-43499 port for Samsung Galaxy A17",
-          "stargazers_count": 2,
-          "forks_count": 2,
-          "language": "C",
-          "updated_at": "2026-08-21T20:28:50Z",
-          "pushed_at": "2026-08-21T20:24:40Z",
-          "created_at": "2026-08-17T21:18:27Z",
-          "topics": [],
-          "owner": {
-            "login": "mobilehackinglab",
-            "html_url": "https://github.com/mobilehackinglab"
-          },
-          "clone_url": "https://github.com/mobilehackinglab/ghostlock-a17.git"
-        },
-        {
           "id": 1316806626,
           "name": "CVE-2026-43499_OPPO-MT6835",
           "full_name": "2932796375github/CVE-2026-43499_OPPO-MT6835",
@@ -55631,6 +55593,44 @@
           "clone_url": "https://github.com/knowlily/cve-2026-43499-honor.git"
         },
         {
+          "id": 1313538110,
+          "name": "CVE-2026-43499-pmg110-root",
+          "full_name": "soralis0912/CVE-2026-43499-pmg110-root",
+          "html_url": "https://github.com/soralis0912/CVE-2026-43499-pmg110-root",
+          "description": "",
+          "stargazers_count": 2,
+          "forks_count": 0,
+          "language": "C",
+          "updated_at": "2026-08-21T14:33:56Z",
+          "pushed_at": "2026-07-27T09:29:21Z",
+          "created_at": "2026-07-27T07:18:47Z",
+          "topics": [],
+          "owner": {
+            "login": "soralis0912",
+            "html_url": "https://github.com/soralis0912"
+          },
+          "clone_url": "https://github.com/soralis0912/CVE-2026-43499-pmg110-root.git"
+        },
+        {
+          "id": 1333796163,
+          "name": "cve-2026-43499-m3q-azf1",
+          "full_name": "Bugel/cve-2026-43499-m3q-azf1",
+          "html_url": "https://github.com/Bugel/cve-2026-43499-m3q-azf1",
+          "description": "This package is not a complete root. It flips SELinux to Permissive and holds reclaim long enough for follow-on work. Host `uid=0` is not achieved here.",
+          "stargazers_count": 2,
+          "forks_count": 0,
+          "language": "C",
+          "updated_at": "2026-08-19T22:09:32Z",
+          "pushed_at": "2026-08-14T04:44:53Z",
+          "created_at": "2026-08-14T04:40:31Z",
+          "topics": [],
+          "owner": {
+            "login": "Bugel",
+            "html_url": "https://github.com/Bugel"
+          },
+          "clone_url": "https://github.com/Bugel/cve-2026-43499-m3q-azf1.git"
+        },
+        {
           "id": 1321812629,
           "name": "ghostlock-myron-tw",
           "full_name": "jason5545/ghostlock-myron-tw",
@@ -55650,23 +55650,23 @@
           "clone_url": "https://github.com/jason5545/ghostlock-myron-tw.git"
         },
         {
-          "id": 1313538110,
-          "name": "CVE-2026-43499-pmg110-root",
-          "full_name": "soralis0912/CVE-2026-43499-pmg110-root",
-          "html_url": "https://github.com/soralis0912/CVE-2026-43499-pmg110-root",
-          "description": "",
+          "id": 1337668052,
+          "name": "ghostlock-a17",
+          "full_name": "mobilehackinglab/ghostlock-a17",
+          "html_url": "https://github.com/mobilehackinglab/ghostlock-a17",
+          "description": "CVE-2026-43499 port for Samsung Galaxy A17",
           "stargazers_count": 2,
-          "forks_count": 0,
+          "forks_count": 2,
           "language": "C",
-          "updated_at": "2026-08-21T14:33:56Z",
-          "pushed_at": "2026-07-27T09:29:21Z",
-          "created_at": "2026-07-27T07:18:47Z",
+          "updated_at": "2026-08-21T20:28:50Z",
+          "pushed_at": "2026-08-21T20:24:40Z",
+          "created_at": "2026-08-17T21:18:27Z",
           "topics": [],
           "owner": {
-            "login": "soralis0912",
-            "html_url": "https://github.com/soralis0912"
+            "login": "mobilehackinglab",
+            "html_url": "https://github.com/mobilehackinglab"
           },
-          "clone_url": "https://github.com/soralis0912/CVE-2026-43499-pmg110-root.git"
+          "clone_url": "https://github.com/mobilehackinglab/ghostlock-a17.git"
         },
         {
           "id": 1315873501,
@@ -69937,7 +69937,7 @@
           "html_url": "https://github.com/HORKimhab/CVE-2026-54420",
           "description": "CVE-2026-54420",
           "stargazers_count": 1,
-          "forks_count": 0,
+          "forks_count": 1,
           "language": "Python",
           "updated_at": "2026-07-13T12:13:19Z",
           "pushed_at": "2026-06-16T06:34:49Z",
@@ -69975,7 +69975,7 @@
           "html_url": "https://github.com/fevar54/CVE-2026-54420-LiteSpeed-Symlink-Exploit",
           "description": "A vulnerability in LiteSpeed cPanel Plugin before 2.4.8 and WHM Plugin before 5.3.2.0 mishandles symlinks provided by a user with FTP or web shell access on a shared hosting server running CloudLinux/CageFS.",
           "stargazers_count": 0,
-          "forks_count": 0,
+          "forks_count": 1,
           "language": "Python",
           "updated_at": "2026-06-18T15:24:37Z",
           "pushed_at": "2026-06-18T15:23:58Z",
@@ -86856,7 +86856,7 @@
           "html_url": "https://github.com/rootsecdev/cve_2026_31431",
           "description": "Exploit POC for CVE_2026_31431",
           "stargazers_count": 568,
-          "forks_count": 112,
+          "forks_count": 113,
           "language": "Python",
           "updated_at": "2026-08-13T18:12:33Z",
           "pushed_at": "2026-04-29T18:24:24Z",
