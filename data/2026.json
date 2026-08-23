@@ -16369,23 +16369,42 @@
           "clone_url": "https://github.com/InzegoSec/CVE-2026-23744.git"
         },
         {
-          "id": 1193793261,
-          "name": "CVE-2026-23744-POC",
-          "full_name": "fcjaviergarcia/CVE-2026-23744-POC",
-          "html_url": "https://github.com/fcjaviergarcia/CVE-2026-23744-POC",
-          "description": "Proof of Concept (PoC) exploit for CVE-2026-23744, a vulnerability affecting MCPJam Inspector that allows remote command execution (RCE) through exposed internal debugging endpoints",
+          "id": 1189010725,
+          "name": "mcpjaminspector-unauth-rce",
+          "full_name": "fckoo/mcpjaminspector-unauth-rce",
+          "html_url": "https://github.com/fckoo/mcpjaminspector-unauth-rce",
+          "description": "CVE-2026-23744 RCE in MCPJam inspector \u003c= 1.4.2",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-03-27T15:35:49Z",
-          "pushed_at": "2026-03-27T15:35:45Z",
-          "created_at": "2026-03-27T15:31:08Z",
+          "updated_at": "2026-03-23T01:05:52Z",
+          "pushed_at": "2026-03-23T01:05:49Z",
+          "created_at": "2026-03-22T21:51:46Z",
           "topics": [],
           "owner": {
-            "login": "fcjaviergarcia",
-            "html_url": "https://github.com/fcjaviergarcia"
+            "login": "fckoo",
+            "html_url": "https://github.com/fckoo"
           },
-          "clone_url": "https://github.com/fcjaviergarcia/CVE-2026-23744-POC.git"
+          "clone_url": "https://github.com/fckoo/mcpjaminspector-unauth-rce.git"
+        },
+        {
+          "id": 1343354642,
+          "name": "mcpjam-to-root",
+          "full_name": "itsC1SCO/mcpjam-to-root",
+          "html_url": "https://github.com/itsC1SCO/mcpjam-to-root",
+          "description": "From MCPJam Inspector RCE to root — CVE-2026-23744, JupyterLab token disclosure, kernel execution, and OPSMCP privilege escalation",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-08-23T04:14:05Z",
+          "pushed_at": "2026-08-23T04:14:01Z",
+          "created_at": "2026-08-23T04:00:17Z",
+          "topics": [],
+          "owner": {
+            "login": "itsC1SCO",
+            "html_url": "https://github.com/itsC1SCO"
+          },
+          "clone_url": "https://github.com/itsC1SCO/mcpjam-to-root.git"
         },
         {
           "id": 1188403403,
@@ -16407,6 +16426,25 @@
           "clone_url": "https://github.com/H1sok444/CVE-2026-23744-PoC.git"
         },
         {
+          "id": 1193793261,
+          "name": "CVE-2026-23744-POC",
+          "full_name": "fcjaviergarcia/CVE-2026-23744-POC",
+          "html_url": "https://github.com/fcjaviergarcia/CVE-2026-23744-POC",
+          "description": "Proof of Concept (PoC) exploit for CVE-2026-23744, a vulnerability affecting MCPJam Inspector that allows remote command execution (RCE) through exposed internal debugging endpoints",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-03-27T15:35:49Z",
+          "pushed_at": "2026-03-27T15:35:45Z",
+          "created_at": "2026-03-27T15:31:08Z",
+          "topics": [],
+          "owner": {
+            "login": "fcjaviergarcia",
+            "html_url": "https://github.com/fcjaviergarcia"
+          },
+          "clone_url": "https://github.com/fcjaviergarcia/CVE-2026-23744-POC.git"
+        },
+        {
           "id": 1193724607,
           "name": "CVE-2026-23744",
           "full_name": "AhmadF77/CVE-2026-23744",
@@ -16424,25 +16462,6 @@
             "html_url": "https://github.com/AhmadF77"
           },
           "clone_url": "https://github.com/AhmadF77/CVE-2026-23744.git"
-        },
-        {
-          "id": 1195404718,
-          "name": "CVE-2026-23744",
-          "full_name": "CyLock11/CVE-2026-23744",
-          "html_url": "https://github.com/CyLock11/CVE-2026-23744",
-          "description": "CVE-2026-23744 - MCP Connect RCE via Unauthenticated Command Injection",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-07-22T09:21:23Z",
-          "pushed_at": "2026-03-29T16:31:26Z",
-          "created_at": "2026-03-29T16:26:01Z",
-          "topics": [],
-          "owner": {
-            "login": "CyLock11",
-            "html_url": "https://github.com/CyLock11"
-          },
-          "clone_url": "https://github.com/CyLock11/CVE-2026-23744.git"
         },
         {
           "id": 1255392915,
@@ -16483,23 +16502,23 @@
           "clone_url": "https://github.com/sbouabid-sec/CVE-2026-23744-POC.git"
         },
         {
-          "id": 1194480523,
-          "name": "CVE-2026-23744-POC",
-          "full_name": "d3vn0mi/CVE-2026-23744-POC",
-          "html_url": "https://github.com/d3vn0mi/CVE-2026-23744-POC",
-          "description": "Python PoC for CVE-2026-23744, unauthenticated RCE in MCP servers via the /api/mcp/connect serverConfig command field (default port 6274)",
+          "id": 1158918207,
+          "name": "CVE-2026-23744-Lab",
+          "full_name": "rootdirective-sec/CVE-2026-23744-Lab",
+          "html_url": "https://github.com/rootdirective-sec/CVE-2026-23744-Lab",
+          "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-07-10T15:36:52Z",
-          "pushed_at": "2026-03-28T17:41:34Z",
-          "created_at": "2026-03-28T12:17:47Z",
+          "updated_at": "2026-02-16T04:48:58Z",
+          "pushed_at": "2026-02-16T04:48:54Z",
+          "created_at": "2026-02-16T04:43:21Z",
           "topics": [],
           "owner": {
-            "login": "d3vn0mi",
-            "html_url": "https://github.com/d3vn0mi"
+            "login": "rootdirective-sec",
+            "html_url": "https://github.com/rootdirective-sec"
           },
-          "clone_url": "https://github.com/d3vn0mi/CVE-2026-23744-POC.git"
+          "clone_url": "https://github.com/rootdirective-sec/CVE-2026-23744-Lab.git"
         },
         {
           "id": 1254785876,
@@ -16730,23 +16749,23 @@
           "clone_url": "https://github.com/m2sousa/CVE-2026-23744.git"
         },
         {
-          "id": 1191196692,
-          "name": "PoC-CVE-2026-23744",
-          "full_name": "z4yd3/PoC-CVE-2026-23744",
-          "html_url": "https://github.com/z4yd3/PoC-CVE-2026-23744",
-          "description": "Remote Code Execution on MCPJam Inspector \u003c= 1.4.2",
+          "id": 1195404718,
+          "name": "CVE-2026-23744",
+          "full_name": "CyLock11/CVE-2026-23744",
+          "html_url": "https://github.com/CyLock11/CVE-2026-23744",
+          "description": "CVE-2026-23744 - MCP Connect RCE via Unauthenticated Command Injection",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-03-29T11:38:26Z",
-          "pushed_at": "2026-03-25T04:35:44Z",
-          "created_at": "2026-03-25T02:24:21Z",
+          "updated_at": "2026-07-22T09:21:23Z",
+          "pushed_at": "2026-03-29T16:31:26Z",
+          "created_at": "2026-03-29T16:26:01Z",
           "topics": [],
           "owner": {
-            "login": "z4yd3",
-            "html_url": "https://github.com/z4yd3"
+            "login": "CyLock11",
+            "html_url": "https://github.com/CyLock11"
           },
-          "clone_url": "https://github.com/z4yd3/PoC-CVE-2026-23744.git"
+          "clone_url": "https://github.com/CyLock11/CVE-2026-23744.git"
         },
         {
           "id": 1255637982,
@@ -16787,23 +16806,23 @@
           "clone_url": "https://github.com/nullRoot-Red/CVE-2026-23744.git"
         },
         {
-          "id": 1158918207,
-          "name": "CVE-2026-23744-Lab",
-          "full_name": "rootdirective-sec/CVE-2026-23744-Lab",
-          "html_url": "https://github.com/rootdirective-sec/CVE-2026-23744-Lab",
-          "description": "",
+          "id": 1191196692,
+          "name": "PoC-CVE-2026-23744",
+          "full_name": "z4yd3/PoC-CVE-2026-23744",
+          "html_url": "https://github.com/z4yd3/PoC-CVE-2026-23744",
+          "description": "Remote Code Execution on MCPJam Inspector \u003c= 1.4.2",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-02-16T04:48:58Z",
-          "pushed_at": "2026-02-16T04:48:54Z",
-          "created_at": "2026-02-16T04:43:21Z",
+          "updated_at": "2026-03-29T11:38:26Z",
+          "pushed_at": "2026-03-25T04:35:44Z",
+          "created_at": "2026-03-25T02:24:21Z",
           "topics": [],
           "owner": {
-            "login": "rootdirective-sec",
-            "html_url": "https://github.com/rootdirective-sec"
+            "login": "z4yd3",
+            "html_url": "https://github.com/z4yd3"
           },
-          "clone_url": "https://github.com/rootdirective-sec/CVE-2026-23744-Lab.git"
+          "clone_url": "https://github.com/z4yd3/PoC-CVE-2026-23744.git"
         },
         {
           "id": 1297403129,
@@ -16874,23 +16893,23 @@
           "clone_url": "https://github.com/diamorphine666/CVE-2026-23744-exploit.git"
         },
         {
-          "id": 1189010725,
-          "name": "mcpjaminspector-unauth-rce",
-          "full_name": "fckoo/mcpjaminspector-unauth-rce",
-          "html_url": "https://github.com/fckoo/mcpjaminspector-unauth-rce",
-          "description": "CVE-2026-23744 RCE in MCPJam inspector \u003c= 1.4.2",
+          "id": 1194480523,
+          "name": "CVE-2026-23744-POC",
+          "full_name": "d3vn0mi/CVE-2026-23744-POC",
+          "html_url": "https://github.com/d3vn0mi/CVE-2026-23744-POC",
+          "description": "Python PoC for CVE-2026-23744, unauthenticated RCE in MCP servers via the /api/mcp/connect serverConfig command field (default port 6274)",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-03-23T01:05:52Z",
-          "pushed_at": "2026-03-23T01:05:49Z",
-          "created_at": "2026-03-22T21:51:46Z",
+          "updated_at": "2026-07-10T15:36:52Z",
+          "pushed_at": "2026-03-28T17:41:34Z",
+          "created_at": "2026-03-28T12:17:47Z",
           "topics": [],
           "owner": {
-            "login": "fckoo",
-            "html_url": "https://github.com/fckoo"
+            "login": "d3vn0mi",
+            "html_url": "https://github.com/d3vn0mi"
           },
-          "clone_url": "https://github.com/fckoo/mcpjaminspector-unauth-rce.git"
+          "clone_url": "https://github.com/d3vn0mi/CVE-2026-23744-POC.git"
         },
         {
           "id": 1329998714,
@@ -21205,7 +21224,7 @@
           "forks_count": 5,
           "language": "Shell",
           "updated_at": "2026-08-16T14:36:52Z",
-          "pushed_at": "2026-08-16T04:10:50Z",
+          "pushed_at": "2026-08-23T04:11:36Z",
           "created_at": "2026-02-05T07:31:07Z",
           "topics": [],
           "owner": {
@@ -55157,8 +55176,8 @@
           "stargazers_count": 10,
           "forks_count": 2,
           "language": "Kotlin",
-          "updated_at": "2026-08-23T02:15:33Z",
-          "pushed_at": "2026-08-23T02:15:24Z",
+          "updated_at": "2026-08-23T03:22:50Z",
+          "pushed_at": "2026-08-23T03:22:44Z",
           "created_at": "2026-08-16T14:37:06Z",
           "topics": [],
           "owner": {
@@ -56005,8 +56024,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "C",
-          "updated_at": "2026-08-21T14:10:52Z",
-          "pushed_at": "2026-08-21T14:05:10Z",
+          "updated_at": "2026-08-23T04:02:10Z",
+          "pushed_at": "2026-08-23T04:01:41Z",
           "created_at": "2026-08-10T09:01:08Z",
           "topics": [],
           "owner": {
@@ -56154,23 +56173,23 @@
           "clone_url": "https://github.com/SetsuNeko/GhostLock_MT6983V_5.10.git"
         },
         {
-          "id": 1338403867,
-          "name": "ghostlock-cve-2026-43499",
-          "full_name": "gitchw/ghostlock-cve-2026-43499",
-          "html_url": "https://github.com/gitchw/ghostlock-cve-2026-43499",
-          "description": "CVE-2026-43499 (GhostLock) — Linux kernel futex PI rt_mutex UAF ARM32 privilege escalation research targeting Huawei Watch 4 Pro (kernel 5.4.210)",
+          "id": 1343309315,
+          "name": "GhostLock-H80GT",
+          "full_name": "yakidango-official/GhostLock-H80GT",
+          "html_url": "https://github.com/yakidango-official/GhostLock-H80GT",
+          "description": "Honor 80 GT (MagicOS 8.0.0.128, kernel 5.10.168) privilege escalation PoC: GhostLock (CVE-2026-43499) + custom KernelSU module loading",
           "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-08-22T13:38:44Z",
-          "pushed_at": "2026-08-22T13:38:36Z",
-          "created_at": "2026-08-18T12:54:23Z",
+          "forks_count": 1,
+          "language": "C",
+          "updated_at": "2026-08-23T02:51:54Z",
+          "pushed_at": "2026-08-23T02:51:44Z",
+          "created_at": "2026-08-23T02:28:12Z",
           "topics": [],
           "owner": {
-            "login": "gitchw",
-            "html_url": "https://github.com/gitchw"
+            "login": "yakidango-official",
+            "html_url": "https://github.com/yakidango-official"
           },
-          "clone_url": "https://github.com/gitchw/ghostlock-cve-2026-43499.git"
+          "clone_url": "https://github.com/yakidango-official/GhostLock-H80GT.git"
         },
         {
           "id": 1333577605,
@@ -56439,23 +56458,23 @@
           "clone_url": "https://github.com/OhLookItsTheIRS/Root-My-Galaxy-tests.git"
         },
         {
-          "id": 1343309315,
-          "name": "GhostLock-H80GT",
-          "full_name": "yakidango-official/GhostLock-H80GT",
-          "html_url": "https://github.com/yakidango-official/GhostLock-H80GT",
-          "description": "Honor 80 GT (MagicOS 8.0.0.128, kernel 5.10.168) privilege escalation PoC: GhostLock (CVE-2026-43499) + custom KernelSU module loading",
+          "id": 1338403867,
+          "name": "ghostlock-cve-2026-43499",
+          "full_name": "gitchw/ghostlock-cve-2026-43499",
+          "html_url": "https://github.com/gitchw/ghostlock-cve-2026-43499",
+          "description": "CVE-2026-43499 (GhostLock) — Linux kernel futex PI rt_mutex UAF ARM32 privilege escalation research targeting Huawei Watch 4 Pro (kernel 5.4.210)",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "C",
-          "updated_at": "2026-08-23T02:51:54Z",
-          "pushed_at": "2026-08-23T02:51:44Z",
-          "created_at": "2026-08-23T02:28:12Z",
+          "language": "Python",
+          "updated_at": "2026-08-22T13:38:44Z",
+          "pushed_at": "2026-08-22T13:38:36Z",
+          "created_at": "2026-08-18T12:54:23Z",
           "topics": [],
           "owner": {
-            "login": "yakidango-official",
-            "html_url": "https://github.com/yakidango-official"
+            "login": "gitchw",
+            "html_url": "https://github.com/gitchw"
           },
-          "clone_url": "https://github.com/yakidango-official/GhostLock-H80GT.git"
+          "clone_url": "https://github.com/gitchw/ghostlock-cve-2026-43499.git"
         },
         {
           "id": 1319083207,
@@ -79855,25 +79874,6 @@
     {
       "cve_id": "CVE-2026-64747",
       "repositories": [
-        {
-          "id": 1329768131,
-          "name": "agxprobe",
-          "full_name": "jiuyi155/agxprobe",
-          "html_url": "https://github.com/jiuyi155/agxprobe",
-          "description": "CVE-2026-64747 AGXG14P count-bitmask OOB trigger probe (A15/iOS 26.5.2)",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Swift",
-          "updated_at": "2026-08-14T00:21:03Z",
-          "pushed_at": "2026-08-10T16:41:07Z",
-          "created_at": "2026-08-10T11:50:48Z",
-          "topics": [],
-          "owner": {
-            "login": "jiuyi155",
-            "html_url": "https://github.com/jiuyi155"
-          },
-          "clone_url": "https://github.com/jiuyi155/agxprobe.git"
-        },
         {
           "id": 1336615508,
           "name": "ave263-chain",
