@@ -2440,6 +2440,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2026-10053",
+      "repositories": [
+        {
+          "id": 1343919038,
+          "name": "CVE-2026-10053-lab",
+          "full_name": "dinosn/CVE-2026-10053-lab",
+          "html_url": "https://github.com/dinosn/CVE-2026-10053-lab",
+          "description": "Reproducible lab for CVE-2026-10053 (GitLab npm package-registry path traversal -\u003e arbitrary file write as git). Vulnerable 19.2.1 vs patched 19.2.2, deterministic oracle.",
+          "stargazers_count": 3,
+          "forks_count": 0,
+          "language": "Shell",
+          "updated_at": "2026-08-23T16:19:42Z",
+          "pushed_at": "2026-08-23T15:32:25Z",
+          "created_at": "2026-08-23T15:32:22Z",
+          "topics": [],
+          "owner": {
+            "login": "dinosn",
+            "html_url": "https://github.com/dinosn"
+          },
+          "clone_url": "https://github.com/dinosn/CVE-2026-10053-lab.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2026-10097",
       "repositories": [
         {
@@ -3055,10 +3079,10 @@
           "full_name": "izxci/CVE-2026-10795",
           "html_url": "https://github.com/izxci/CVE-2026-10795",
           "description": "CVE-2026-10795 – UpdraftPlus Authentication Bypass",
-          "stargazers_count": 1,
+          "stargazers_count": 2,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-07-30T17:02:26Z",
+          "updated_at": "2026-08-23T15:59:38Z",
           "pushed_at": "2026-06-12T08:15:30Z",
           "created_at": "2026-06-11T10:06:29Z",
           "topics": [],
@@ -6853,6 +6877,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2026-15718",
+      "repositories": [
+        {
+          "id": 1343949532,
+          "name": "CVE-2026-15718-who-put-ptrs-in-my-wasm",
+          "full_name": "SneakyNachos/CVE-2026-15718-who-put-ptrs-in-my-wasm",
+          "html_url": "https://github.com/SneakyNachos/CVE-2026-15718-who-put-ptrs-in-my-wasm",
+          "description": "PoC exploit chain for CVE-2026-15718: SpiderMonkey wasm baseline compiler array.fill missing-sync -\u003e invalid pointer -\u003e addrOf/fakeobj -\u003e arbitrary R/W -\u003e RCE",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "JavaScript",
+          "updated_at": "2026-08-23T16:08:44Z",
+          "pushed_at": "2026-08-23T16:06:09Z",
+          "created_at": "2026-08-23T16:03:50Z",
+          "topics": [],
+          "owner": {
+            "login": "SneakyNachos",
+            "html_url": "https://github.com/SneakyNachos"
+          },
+          "clone_url": "https://github.com/SneakyNachos/CVE-2026-15718-who-put-ptrs-in-my-wasm.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2026-15748",
       "repositories": [
         {
@@ -8484,10 +8532,10 @@
           "full_name": "dinosn/gitlab-cve-2026-19478-lab",
           "html_url": "https://github.com/dinosn/gitlab-cve-2026-19478-lab",
           "description": "Reproducible A/B lab + safe PoC for GitLab CVE-2026-19478 / CVE-2026-19650 (GraphQL @gl_introduced)",
-          "stargazers_count": 4,
+          "stargazers_count": 5,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-08-23T15:19:19Z",
+          "updated_at": "2026-08-23T15:46:52Z",
           "pushed_at": "2026-08-18T10:50:06Z",
           "created_at": "2026-08-18T10:50:03Z",
           "topics": [],
@@ -8727,10 +8775,10 @@
           "full_name": "dinosn/gitlab-cve-2026-19478-lab",
           "html_url": "https://github.com/dinosn/gitlab-cve-2026-19478-lab",
           "description": "Reproducible A/B lab + safe PoC for GitLab CVE-2026-19478 / CVE-2026-19650 (GraphQL @gl_introduced)",
-          "stargazers_count": 4,
+          "stargazers_count": 5,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-08-23T15:19:19Z",
+          "updated_at": "2026-08-23T15:46:52Z",
           "pushed_at": "2026-08-18T10:50:06Z",
           "created_at": "2026-08-18T10:50:03Z",
           "topics": [],
@@ -54749,10 +54797,10 @@
           "full_name": "BuSung-dev/Root-My-Galaxy",
           "html_url": "https://github.com/BuSung-dev/Root-My-Galaxy",
           "description": "KSU installer for supported Samsung Galaxy firmware with CVE-2026-43499",
-          "stargazers_count": 911,
+          "stargazers_count": 910,
           "forks_count": 179,
           "language": "Kotlin",
-          "updated_at": "2026-08-23T09:54:12Z",
+          "updated_at": "2026-08-23T15:33:43Z",
           "pushed_at": "2026-08-09T05:13:42Z",
           "created_at": "2026-07-17T14:24:08Z",
           "topics": [],
@@ -54813,10 +54861,10 @@
           "full_name": "alex193a/Root-My-Pixel",
           "html_url": "https://github.com/alex193a/Root-My-Pixel",
           "description": "Jailbreak supported Google Pixel phones with CVE-2026-43499",
-          "stargazers_count": 200,
+          "stargazers_count": 201,
           "forks_count": 41,
           "language": "Kotlin",
-          "updated_at": "2026-08-23T13:58:58Z",
+          "updated_at": "2026-08-23T15:29:10Z",
           "pushed_at": "2026-08-22T10:34:45Z",
           "created_at": "2026-08-02T17:34:45Z",
           "topics": [
@@ -54994,8 +55042,8 @@
           "stargazers_count": 37,
           "forks_count": 6,
           "language": "C",
-          "updated_at": "2026-08-23T14:39:09Z",
-          "pushed_at": "2026-08-23T06:52:44Z",
+          "updated_at": "2026-08-23T15:54:14Z",
+          "pushed_at": "2026-08-23T15:53:58Z",
           "created_at": "2026-08-08T23:35:25Z",
           "topics": [],
           "owner": {
@@ -55176,8 +55224,8 @@
           "stargazers_count": 13,
           "forks_count": 2,
           "language": "Kotlin",
-          "updated_at": "2026-08-23T14:12:08Z",
-          "pushed_at": "2026-08-23T14:11:15Z",
+          "updated_at": "2026-08-23T16:25:29Z",
+          "pushed_at": "2026-08-23T16:25:08Z",
           "created_at": "2026-08-16T14:37:06Z",
           "topics": [],
           "owner": {
@@ -56230,42 +56278,61 @@
           "clone_url": "https://github.com/fusiondrive/CVE-2026-43499-A36.git"
         },
         {
-          "id": 1303563394,
-          "name": "CVE-2026-43499_OPPO-MT6835",
-          "full_name": "fancyzll/CVE-2026-43499_OPPO-MT6835",
-          "html_url": "https://github.com/fancyzll/CVE-2026-43499_OPPO-MT6835",
-          "description": "",
+          "id": 1334783678,
+          "name": "CVE-2026-43499-ZFOLD4",
+          "full_name": "fusiondrive/CVE-2026-43499-ZFOLD4",
+          "html_url": "https://github.com/fusiondrive/CVE-2026-43499-ZFOLD4",
+          "description": "CVE-2026-43499 research port for Galaxy Z Fold4 SM-F936W F936WVLU1AVGA (in progress)",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-07-17T04:39:06Z",
-          "pushed_at": "2026-07-17T02:07:28Z",
-          "created_at": "2026-07-17T04:39:06Z",
+          "language": "C",
+          "updated_at": "2026-08-15T04:18:15Z",
+          "pushed_at": "2026-08-15T04:18:01Z",
+          "created_at": "2026-08-15T04:17:57Z",
           "topics": [],
           "owner": {
-            "login": "fancyzll",
-            "html_url": "https://github.com/fancyzll"
+            "login": "fusiondrive",
+            "html_url": "https://github.com/fusiondrive"
           },
-          "clone_url": "https://github.com/fancyzll/CVE-2026-43499_OPPO-MT6835.git"
+          "clone_url": "https://github.com/fusiondrive/CVE-2026-43499-ZFOLD4.git"
         },
         {
-          "id": 1302936025,
-          "name": "CVE-2026-43499-jinghu",
-          "full_name": "justsoman/CVE-2026-43499-jinghu",
-          "html_url": "https://github.com/justsoman/CVE-2026-43499-jinghu",
-          "description": "CVE-2026-43499 exploit reproduction on jinghu (Xiaomi Pad 7 Ultra)",
+          "id": 1338403867,
+          "name": "ghostlock-cve-2026-43499",
+          "full_name": "gitchw/ghostlock-cve-2026-43499",
+          "html_url": "https://github.com/gitchw/ghostlock-cve-2026-43499",
+          "description": "CVE-2026-43499 (GhostLock) — Linux kernel futex PI rt_mutex UAF ARM32 privilege escalation research targeting Huawei Watch 4 Pro (kernel 5.4.210)",
+          "stargazers_count": 0,
+          "forks_count": 1,
+          "language": "Python",
+          "updated_at": "2026-08-22T13:38:44Z",
+          "pushed_at": "2026-08-22T13:38:36Z",
+          "created_at": "2026-08-18T12:54:23Z",
+          "topics": [],
+          "owner": {
+            "login": "gitchw",
+            "html_url": "https://github.com/gitchw"
+          },
+          "clone_url": "https://github.com/gitchw/ghostlock-cve-2026-43499.git"
+        },
+        {
+          "id": 1343954946,
+          "name": "CyberMeowfiaNS",
+          "full_name": "XingChenRS/CyberMeowfiaNS",
+          "html_url": "https://github.com/XingChenRS/CyberMeowfiaNS",
+          "description": "The next stage of CyberMeowfil (CVE-2026-43499 and 43074),Possibly biased toward vivo devices?",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-07-16T15:22:05Z",
-          "pushed_at": "2026-07-16T15:17:16Z",
-          "created_at": "2026-07-16T15:22:05Z",
+          "updated_at": "2026-08-23T16:12:53Z",
+          "pushed_at": "2026-08-23T16:12:40Z",
+          "created_at": "2026-08-23T16:09:29Z",
           "topics": [],
           "owner": {
-            "login": "justsoman",
-            "html_url": "https://github.com/justsoman"
+            "login": "XingChenRS",
+            "html_url": "https://github.com/XingChenRS"
           },
-          "clone_url": "https://github.com/justsoman/CVE-2026-43499-jinghu.git"
+          "clone_url": "https://github.com/XingChenRS/CyberMeowfiaNS.git"
         },
         {
           "id": 1333577605,
@@ -56306,23 +56373,42 @@
           "clone_url": "https://github.com/pimpamebanihah/cve-2026-43499-app.s0.git"
         },
         {
-          "id": 1301404430,
-          "name": "x200-cve-2026-43499",
-          "full_name": "Cxyofficial/x200-cve-2026-43499",
-          "html_url": "https://github.com/Cxyofficial/x200-cve-2026-43499",
+          "id": 1303563394,
+          "name": "CVE-2026-43499_OPPO-MT6835",
+          "full_name": "fancyzll/CVE-2026-43499_OPPO-MT6835",
+          "html_url": "https://github.com/fancyzll/CVE-2026-43499_OPPO-MT6835",
           "description": "",
           "stargazers_count": 0,
-          "forks_count": 1,
+          "forks_count": 0,
           "language": "",
-          "updated_at": "2026-07-26T06:33:27Z",
-          "pushed_at": "2026-07-26T06:33:20Z",
-          "created_at": "2026-07-15T08:53:35Z",
+          "updated_at": "2026-07-17T04:39:06Z",
+          "pushed_at": "2026-07-17T02:07:28Z",
+          "created_at": "2026-07-17T04:39:06Z",
           "topics": [],
           "owner": {
-            "login": "Cxyofficial",
-            "html_url": "https://github.com/Cxyofficial"
+            "login": "fancyzll",
+            "html_url": "https://github.com/fancyzll"
           },
-          "clone_url": "https://github.com/Cxyofficial/x200-cve-2026-43499.git"
+          "clone_url": "https://github.com/fancyzll/CVE-2026-43499_OPPO-MT6835.git"
+        },
+        {
+          "id": 1302936025,
+          "name": "CVE-2026-43499-jinghu",
+          "full_name": "justsoman/CVE-2026-43499-jinghu",
+          "html_url": "https://github.com/justsoman/CVE-2026-43499-jinghu",
+          "description": "CVE-2026-43499 exploit reproduction on jinghu (Xiaomi Pad 7 Ultra)",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-07-16T15:22:05Z",
+          "pushed_at": "2026-07-16T15:17:16Z",
+          "created_at": "2026-07-16T15:22:05Z",
+          "topics": [],
+          "owner": {
+            "login": "justsoman",
+            "html_url": "https://github.com/justsoman"
+          },
+          "clone_url": "https://github.com/justsoman/CVE-2026-43499-jinghu.git"
         },
         {
           "id": 1299892040,
@@ -56344,6 +56430,25 @@
           "clone_url": "https://github.com/virtualesp/SpringPeace.git"
         },
         {
+          "id": 1343309315,
+          "name": "GhostLock-H80GT",
+          "full_name": "yakidango-official/GhostLock-H80GT",
+          "html_url": "https://github.com/yakidango-official/GhostLock-H80GT",
+          "description": "Honor 80 GT (MagicOS 8.0.0.128, kernel 5.10.168) privilege escalation PoC: GhostLock (CVE-2026-43499) + custom KernelSU module loading",
+          "stargazers_count": 0,
+          "forks_count": 1,
+          "language": "C",
+          "updated_at": "2026-08-23T07:05:44Z",
+          "pushed_at": "2026-08-23T07:05:40Z",
+          "created_at": "2026-08-23T02:28:12Z",
+          "topics": [],
+          "owner": {
+            "login": "yakidango-official",
+            "html_url": "https://github.com/yakidango-official"
+          },
+          "clone_url": "https://github.com/yakidango-official/GhostLock-H80GT.git"
+        },
+        {
           "id": 1302938032,
           "name": "CyberMeowfia-ace3",
           "full_name": "justsoman/CyberMeowfia-ace3",
@@ -56361,25 +56466,6 @@
             "html_url": "https://github.com/justsoman"
           },
           "clone_url": "https://github.com/justsoman/CyberMeowfia-ace3.git"
-        },
-        {
-          "id": 1304963961,
-          "name": "CVE-2026-43499-For-Xiaomi-17T-chagall",
-          "full_name": "Kananosa/CVE-2026-43499-For-Xiaomi-17T-chagall",
-          "html_url": "https://github.com/Kananosa/CVE-2026-43499-For-Xiaomi-17T-chagall",
-          "description": "CVE-2026-43499 reproduce in Xiaomi 17T. (kernelsu incomplete)",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-07-26T11:42:50Z",
-          "pushed_at": "2026-07-18T14:22:08Z",
-          "created_at": "2026-07-18T14:19:52Z",
-          "topics": [],
-          "owner": {
-            "login": "Kananosa",
-            "html_url": "https://github.com/Kananosa"
-          },
-          "clone_url": "https://github.com/Kananosa/CVE-2026-43499-For-Xiaomi-17T-chagall.git"
         },
         {
           "id": 1296907898,
@@ -56401,23 +56487,23 @@
           "clone_url": "https://github.com/caspy123/CVE-2026-43499.git"
         },
         {
-          "id": 1338403867,
-          "name": "ghostlock-cve-2026-43499",
-          "full_name": "gitchw/ghostlock-cve-2026-43499",
-          "html_url": "https://github.com/gitchw/ghostlock-cve-2026-43499",
-          "description": "CVE-2026-43499 (GhostLock) — Linux kernel futex PI rt_mutex UAF ARM32 privilege escalation research targeting Huawei Watch 4 Pro (kernel 5.4.210)",
+          "id": 1340644453,
+          "name": "k50g-pocof4gt-cve-2026-43499-test",
+          "full_name": "Cxyofficial/k50g-pocof4gt-cve-2026-43499-test",
+          "html_url": "https://github.com/Cxyofficial/k50g-pocof4gt-cve-2026-43499-test",
+          "description": "",
           "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "Python",
-          "updated_at": "2026-08-22T13:38:44Z",
-          "pushed_at": "2026-08-22T13:38:36Z",
-          "created_at": "2026-08-18T12:54:23Z",
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-08-21T13:12:21Z",
+          "pushed_at": "2026-08-21T13:10:55Z",
+          "created_at": "2026-08-20T11:53:20Z",
           "topics": [],
           "owner": {
-            "login": "gitchw",
-            "html_url": "https://github.com/gitchw"
+            "login": "Cxyofficial",
+            "html_url": "https://github.com/Cxyofficial"
           },
-          "clone_url": "https://github.com/gitchw/ghostlock-cve-2026-43499.git"
+          "clone_url": "https://github.com/Cxyofficial/k50g-pocof4gt-cve-2026-43499-test.git"
         },
         {
           "id": 1293178818,
@@ -56458,23 +56544,23 @@
           "clone_url": "https://github.com/SetsuNeko/GhostLock_MT6983V_5.10.git"
         },
         {
-          "id": 1343309315,
-          "name": "GhostLock-H80GT",
-          "full_name": "yakidango-official/GhostLock-H80GT",
-          "html_url": "https://github.com/yakidango-official/GhostLock-H80GT",
-          "description": "Honor 80 GT (MagicOS 8.0.0.128, kernel 5.10.168) privilege escalation PoC: GhostLock (CVE-2026-43499) + custom KernelSU module loading",
+          "id": 1304963961,
+          "name": "CVE-2026-43499-For-Xiaomi-17T-chagall",
+          "full_name": "Kananosa/CVE-2026-43499-For-Xiaomi-17T-chagall",
+          "html_url": "https://github.com/Kananosa/CVE-2026-43499-For-Xiaomi-17T-chagall",
+          "description": "CVE-2026-43499 reproduce in Xiaomi 17T. (kernelsu incomplete)",
           "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "C",
-          "updated_at": "2026-08-23T07:05:44Z",
-          "pushed_at": "2026-08-23T07:05:40Z",
-          "created_at": "2026-08-23T02:28:12Z",
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-07-26T11:42:50Z",
+          "pushed_at": "2026-07-18T14:22:08Z",
+          "created_at": "2026-07-18T14:19:52Z",
           "topics": [],
           "owner": {
-            "login": "yakidango-official",
-            "html_url": "https://github.com/yakidango-official"
+            "login": "Kananosa",
+            "html_url": "https://github.com/Kananosa"
           },
-          "clone_url": "https://github.com/yakidango-official/GhostLock-H80GT.git"
+          "clone_url": "https://github.com/Kananosa/CVE-2026-43499-For-Xiaomi-17T-chagall.git"
         },
         {
           "id": 1339072733,
@@ -56496,25 +56582,6 @@
           "clone_url": "https://github.com/XiaoBaiLovesStirring/ghostlock-custom.git"
         },
         {
-          "id": 1339042609,
-          "name": "CVE-2026-43499_HW-CLT-AL01",
-          "full_name": "zychen027/CVE-2026-43499_HW-CLT-AL01",
-          "html_url": "https://github.com/zychen027/CVE-2026-43499_HW-CLT-AL01",
-          "description": "尝试移植CVE-2026-43499提权漏洞到HW P20Pro上",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "C",
-          "updated_at": "2026-08-19T03:41:37Z",
-          "pushed_at": "2026-08-19T03:41:25Z",
-          "created_at": "2026-08-19T03:11:45Z",
-          "topics": [],
-          "owner": {
-            "login": "zychen027",
-            "html_url": "https://github.com/zychen027"
-          },
-          "clone_url": "https://github.com/zychen027/CVE-2026-43499_HW-CLT-AL01.git"
-        },
-        {
           "id": 1329128067,
           "name": "Root-My-Galaxy-tests",
           "full_name": "OhLookItsTheIRS/Root-My-Galaxy-tests",
@@ -56534,23 +56601,23 @@
           "clone_url": "https://github.com/OhLookItsTheIRS/Root-My-Galaxy-tests.git"
         },
         {
-          "id": 1340644453,
-          "name": "k50g-pocof4gt-cve-2026-43499-test",
-          "full_name": "Cxyofficial/k50g-pocof4gt-cve-2026-43499-test",
-          "html_url": "https://github.com/Cxyofficial/k50g-pocof4gt-cve-2026-43499-test",
-          "description": "",
+          "id": 1339042609,
+          "name": "CVE-2026-43499_HW-CLT-AL01",
+          "full_name": "zychen027/CVE-2026-43499_HW-CLT-AL01",
+          "html_url": "https://github.com/zychen027/CVE-2026-43499_HW-CLT-AL01",
+          "description": "尝试移植CVE-2026-43499提权漏洞到HW P20Pro上",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-08-21T13:12:21Z",
-          "pushed_at": "2026-08-21T13:10:55Z",
-          "created_at": "2026-08-20T11:53:20Z",
+          "language": "C",
+          "updated_at": "2026-08-19T03:41:37Z",
+          "pushed_at": "2026-08-19T03:41:25Z",
+          "created_at": "2026-08-19T03:11:45Z",
           "topics": [],
           "owner": {
-            "login": "Cxyofficial",
-            "html_url": "https://github.com/Cxyofficial"
+            "login": "zychen027",
+            "html_url": "https://github.com/zychen027"
           },
-          "clone_url": "https://github.com/Cxyofficial/k50g-pocof4gt-cve-2026-43499-test.git"
+          "clone_url": "https://github.com/zychen027/CVE-2026-43499_HW-CLT-AL01.git"
         },
         {
           "id": 1319083207,
@@ -56591,6 +56658,25 @@
           "clone_url": "https://github.com/villager1314/CVE-2026-43499-IQOO-Neo10-Analysis.git"
         },
         {
+          "id": 1301404430,
+          "name": "x200-cve-2026-43499",
+          "full_name": "Cxyofficial/x200-cve-2026-43499",
+          "html_url": "https://github.com/Cxyofficial/x200-cve-2026-43499",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 1,
+          "language": "",
+          "updated_at": "2026-07-26T06:33:27Z",
+          "pushed_at": "2026-07-26T06:33:20Z",
+          "created_at": "2026-07-15T08:53:35Z",
+          "topics": [],
+          "owner": {
+            "login": "Cxyofficial",
+            "html_url": "https://github.com/Cxyofficial"
+          },
+          "clone_url": "https://github.com/Cxyofficial/x200-cve-2026-43499.git"
+        },
+        {
           "id": 1334798539,
           "name": "IonStack-S22-cve-2026-43499",
           "full_name": "CamsShaft/IonStack-S22-cve-2026-43499",
@@ -56608,25 +56694,6 @@
             "html_url": "https://github.com/CamsShaft"
           },
           "clone_url": "https://github.com/CamsShaft/IonStack-S22-cve-2026-43499.git"
-        },
-        {
-          "id": 1334783678,
-          "name": "CVE-2026-43499-ZFOLD4",
-          "full_name": "fusiondrive/CVE-2026-43499-ZFOLD4",
-          "html_url": "https://github.com/fusiondrive/CVE-2026-43499-ZFOLD4",
-          "description": "CVE-2026-43499 research port for Galaxy Z Fold4 SM-F936W F936WVLU1AVGA (in progress)",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "C",
-          "updated_at": "2026-08-15T04:18:15Z",
-          "pushed_at": "2026-08-15T04:18:01Z",
-          "created_at": "2026-08-15T04:17:57Z",
-          "topics": [],
-          "owner": {
-            "login": "fusiondrive",
-            "html_url": "https://github.com/fusiondrive"
-          },
-          "clone_url": "https://github.com/fusiondrive/CVE-2026-43499-ZFOLD4.git"
         }
       ]
     },
