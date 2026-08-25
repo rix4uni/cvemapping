@@ -2222,25 +2222,6 @@
           "clone_url": "https://github.com/oxfemale/KillChain.git"
         },
         {
-          "id": 1340066799,
-          "name": "Terminator_Killer",
-          "full_name": "Hika-sec/Terminator_Killer",
-          "html_url": "https://github.com/Hika-sec/Terminator_Killer",
-          "description": "Ring0-level process killer leveraging CVE-2026-0828 (BYOVD). Designed to demonstrate kernel-level process termination via a vulnerable signed driver, highlighting the security risks of Bring Your Own Vulnerable Driver attacks and the importance of driver trust, monitoring, and endpoint protection.",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "C++",
-          "updated_at": "2026-08-23T21:35:50Z",
-          "pushed_at": "2026-08-23T21:35:42Z",
-          "created_at": "2026-08-19T22:16:22Z",
-          "topics": [],
-          "owner": {
-            "login": "Hika-sec",
-            "html_url": "https://github.com/Hika-sec"
-          },
-          "clone_url": "https://github.com/Hika-sec/Terminator_Killer.git"
-        },
-        {
           "id": 1251446212,
           "name": "cve-2026-0828",
           "full_name": "mein-0/cve-2026-0828",
@@ -2258,6 +2239,25 @@
             "html_url": "https://github.com/mein-0"
           },
           "clone_url": "https://github.com/mein-0/cve-2026-0828.git"
+        },
+        {
+          "id": 1340066799,
+          "name": "Terminator_Killer",
+          "full_name": "Hika-sec/Terminator_Killer",
+          "html_url": "https://github.com/Hika-sec/Terminator_Killer",
+          "description": "Ring0-level process killer leveraging CVE-2026-0828 (BYOVD). Designed to demonstrate kernel-level process termination via a vulnerable signed driver, highlighting the security risks of Bring Your Own Vulnerable Driver attacks and the importance of driver trust, monitoring, and endpoint protection.",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "C++",
+          "updated_at": "2026-08-23T21:35:50Z",
+          "pushed_at": "2026-08-23T21:35:42Z",
+          "created_at": "2026-08-19T22:16:22Z",
+          "topics": [],
+          "owner": {
+            "login": "Hika-sec",
+            "html_url": "https://github.com/Hika-sec"
+          },
+          "clone_url": "https://github.com/Hika-sec/Terminator_Killer.git"
         }
       ]
     },
@@ -8866,34 +8866,15 @@
       "cve_id": "CVE-2026-18963",
       "repositories": [
         {
-          "id": 1345594598,
-          "name": "Keycloak_CVE-2026-18963_PoC",
-          "full_name": "prot0tw/Keycloak_CVE-2026-18963_PoC",
-          "html_url": "https://github.com/prot0tw/Keycloak_CVE-2026-18963_PoC",
-          "description": "This repo is poc of cve-2026-18963. Please use it on legal products (lab, local,...).",
-          "stargazers_count": 12,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-08-25T09:47:23Z",
-          "pushed_at": "2026-08-25T03:58:24Z",
-          "created_at": "2026-08-25T02:28:04Z",
-          "topics": [],
-          "owner": {
-            "login": "prot0tw",
-            "html_url": "https://github.com/prot0tw"
-          },
-          "clone_url": "https://github.com/prot0tw/Keycloak_CVE-2026-18963_PoC.git"
-        },
-        {
           "id": 1341176364,
           "name": "CVE-2026-18963-Exploit",
           "full_name": "Snizi/CVE-2026-18963-Exploit",
           "html_url": "https://github.com/Snizi/CVE-2026-18963-Exploit",
           "description": "Exploit for KeyCloak CVE-2026-18963",
-          "stargazers_count": 12,
+          "stargazers_count": 14,
           "forks_count": 4,
           "language": "Python",
-          "updated_at": "2026-08-25T15:35:28Z",
+          "updated_at": "2026-08-25T16:26:37Z",
           "pushed_at": "2026-08-20T22:38:38Z",
           "created_at": "2026-08-20T22:01:11Z",
           "topics": [
@@ -8913,6 +8894,25 @@
             "html_url": "https://github.com/Snizi"
           },
           "clone_url": "https://github.com/Snizi/CVE-2026-18963-Exploit.git"
+        },
+        {
+          "id": 1345594598,
+          "name": "Keycloak_CVE-2026-18963_PoC",
+          "full_name": "prot0tw/Keycloak_CVE-2026-18963_PoC",
+          "html_url": "https://github.com/prot0tw/Keycloak_CVE-2026-18963_PoC",
+          "description": "This repo is poc of cve-2026-18963. Please use it on legal products (lab, local,...).",
+          "stargazers_count": 12,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-08-25T09:47:23Z",
+          "pushed_at": "2026-08-25T03:58:24Z",
+          "created_at": "2026-08-25T02:28:04Z",
+          "topics": [],
+          "owner": {
+            "login": "prot0tw",
+            "html_url": "https://github.com/prot0tw"
+          },
+          "clone_url": "https://github.com/prot0tw/Keycloak_CVE-2026-18963_PoC.git"
         },
         {
           "id": 1340517263,
@@ -8945,10 +8945,10 @@
           "full_name": "Red-Darkin/CVE-2026-18963-keycloak",
           "html_url": "https://github.com/Red-Darkin/CVE-2026-18963-keycloak",
           "description": "",
-          "stargazers_count": 9,
-          "forks_count": 0,
+          "stargazers_count": 10,
+          "forks_count": 1,
           "language": "Python",
-          "updated_at": "2026-08-25T10:00:48Z",
+          "updated_at": "2026-08-25T15:44:34Z",
           "pushed_at": "2026-08-24T23:44:49Z",
           "created_at": "2026-08-24T23:40:17Z",
           "topics": [],
@@ -23800,8 +23800,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-08-25T15:24:00Z",
-          "pushed_at": "2026-08-25T15:30:31Z",
+          "updated_at": "2026-08-25T16:01:02Z",
+          "pushed_at": "2026-08-25T15:45:50Z",
           "created_at": "2026-08-25T15:05:39Z",
           "topics": [],
           "owner": {
@@ -37752,9 +37752,9 @@
           "description": "Este repositorio contiene una demostración educativa de la mitigación y detección para **CVE-2026-32635**, una vulnerabilidad de **Cross-Site Scripting (XSS)** en Angular que afecta a los atributos internacionalizados (i18n).",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-08-25T15:38:43Z",
-          "pushed_at": "2026-08-25T15:42:08Z",
+          "language": "YARA",
+          "updated_at": "2026-08-25T16:01:58Z",
+          "pushed_at": "2026-08-25T15:46:12Z",
           "created_at": "2026-08-25T15:38:43Z",
           "topics": [],
           "owner": {
@@ -53022,7 +53022,7 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Shell",
-          "updated_at": "2026-08-20T17:58:26Z",
+          "updated_at": "2026-08-25T15:47:29Z",
           "pushed_at": "2026-08-25T15:32:41Z",
           "created_at": "2026-07-21T05:27:18Z",
           "topics": [
@@ -55725,7 +55725,7 @@
           "html_url": "https://github.com/BuSung-dev/Root-My-Galaxy",
           "description": "KSU installer for supported Samsung Galaxy firmware with CVE-2026-43499",
           "stargazers_count": 921,
-          "forks_count": 183,
+          "forks_count": 184,
           "language": "Kotlin",
           "updated_at": "2026-08-25T15:31:37Z",
           "pushed_at": "2026-08-24T07:49:18Z",
@@ -55931,7 +55931,7 @@
           "stargazers_count": 46,
           "forks_count": 7,
           "language": "C",
-          "updated_at": "2026-08-25T14:40:13Z",
+          "updated_at": "2026-08-25T16:00:28Z",
           "pushed_at": "2026-08-25T15:41:38Z",
           "created_at": "2026-08-08T23:35:25Z",
           "topics": [],
@@ -57338,23 +57338,23 @@
           "clone_url": "https://github.com/caspy123/CVE-2026-43499.git"
         },
         {
-          "id": 1344805429,
-          "name": "CVE-2026-43499-NAM-AL00",
-          "full_name": "Redminote11tech/CVE-2026-43499-NAM-AL00",
-          "html_url": "https://github.com/Redminote11tech/CVE-2026-43499-NAM-AL00",
-          "description": "Security research: CVE-2026-43499 GhostLock on Huawei Nova 9 NAM-AL00 (SM7325, HMOS 4.2, kernel 5.4.86-qgki)",
+          "id": 1345843523,
+          "name": "RootMyVivo",
+          "full_name": "zenyxx-xd/RootMyVivo",
+          "html_url": "https://github.com/zenyxx-xd/RootMyVivo",
+          "description": "One-click root for vivo/iQOO devices on locked bootloader | CVE-2026-43499 + KernelSU",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "C",
-          "updated_at": "2026-08-24T15:27:22Z",
-          "pushed_at": "2026-08-24T15:15:17Z",
-          "created_at": "2026-08-24T10:02:36Z",
+          "language": "Kotlin",
+          "updated_at": "2026-08-25T11:36:42Z",
+          "pushed_at": "2026-08-25T16:35:36Z",
+          "created_at": "2026-08-25T07:52:11Z",
           "topics": [],
           "owner": {
-            "login": "Redminote11tech",
-            "html_url": "https://github.com/Redminote11tech"
+            "login": "zenyxx-xd",
+            "html_url": "https://github.com/zenyxx-xd"
           },
-          "clone_url": "https://github.com/Redminote11tech/CVE-2026-43499-NAM-AL00.git"
+          "clone_url": "https://github.com/zenyxx-xd/RootMyVivo.git"
         },
         {
           "id": 1333577605,
@@ -57509,23 +57509,23 @@
           "clone_url": "https://github.com/justsoman/CVE-2026-43499-jinghu.git"
         },
         {
-          "id": 1340644453,
-          "name": "k50g-pocof4gt-cve-2026-43499-test",
-          "full_name": "Cxyofficial/k50g-pocof4gt-cve-2026-43499-test",
-          "html_url": "https://github.com/Cxyofficial/k50g-pocof4gt-cve-2026-43499-test",
-          "description": "",
+          "id": 1344805429,
+          "name": "CVE-2026-43499-NAM-AL00",
+          "full_name": "Redminote11tech/CVE-2026-43499-NAM-AL00",
+          "html_url": "https://github.com/Redminote11tech/CVE-2026-43499-NAM-AL00",
+          "description": "Security research: CVE-2026-43499 GhostLock on Huawei Nova 9 NAM-AL00 (SM7325, HMOS 4.2, kernel 5.4.86-qgki)",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-08-25T14:34:40Z",
-          "pushed_at": "2026-08-25T14:08:33Z",
-          "created_at": "2026-08-20T11:53:20Z",
+          "language": "C",
+          "updated_at": "2026-08-24T15:27:22Z",
+          "pushed_at": "2026-08-24T15:15:17Z",
+          "created_at": "2026-08-24T10:02:36Z",
           "topics": [],
           "owner": {
-            "login": "Cxyofficial",
-            "html_url": "https://github.com/Cxyofficial"
+            "login": "Redminote11tech",
+            "html_url": "https://github.com/Redminote11tech"
           },
-          "clone_url": "https://github.com/Cxyofficial/k50g-pocof4gt-cve-2026-43499-test.git"
+          "clone_url": "https://github.com/Redminote11tech/CVE-2026-43499-NAM-AL00.git"
         },
         {
           "id": 1341812372,
@@ -57680,6 +57680,25 @@
           "clone_url": "https://github.com/zychen027/CVE-2026-43499_HW-CLT-AL01.git"
         },
         {
+          "id": 1340644453,
+          "name": "k50g-pocof4gt-cve-2026-43499-test",
+          "full_name": "Cxyofficial/k50g-pocof4gt-cve-2026-43499-test",
+          "html_url": "https://github.com/Cxyofficial/k50g-pocof4gt-cve-2026-43499-test",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-08-25T14:34:40Z",
+          "pushed_at": "2026-08-25T14:08:33Z",
+          "created_at": "2026-08-20T11:53:20Z",
+          "topics": [],
+          "owner": {
+            "login": "Cxyofficial",
+            "html_url": "https://github.com/Cxyofficial"
+          },
+          "clone_url": "https://github.com/Cxyofficial/k50g-pocof4gt-cve-2026-43499-test.git"
+        },
+        {
           "id": 1344828975,
           "name": "ghostlock-k419-adapter",
           "full_name": "XiaoBaiLovesStirring/ghostlock-k419-adapter",
@@ -57697,25 +57716,6 @@
             "html_url": "https://github.com/XiaoBaiLovesStirring"
           },
           "clone_url": "https://github.com/XiaoBaiLovesStirring/ghostlock-k419-adapter.git"
-        },
-        {
-          "id": 1345843523,
-          "name": "RootMyVivo",
-          "full_name": "zenyxx-xd/RootMyVivo",
-          "html_url": "https://github.com/zenyxx-xd/RootMyVivo",
-          "description": "One-click root for vivo/iQOO devices on locked bootloader | CVE-2026-43499 + KernelSU",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Kotlin",
-          "updated_at": "2026-08-25T11:36:42Z",
-          "pushed_at": "2026-08-25T11:33:16Z",
-          "created_at": "2026-08-25T07:52:11Z",
-          "topics": [],
-          "owner": {
-            "login": "zenyxx-xd",
-            "html_url": "https://github.com/zenyxx-xd"
-          },
-          "clone_url": "https://github.com/zenyxx-xd/RootMyVivo.git"
         }
       ]
     },
@@ -58547,10 +58547,10 @@
           "full_name": "Vladimir-tokarev-cyera/llama-cpp-security-patches",
           "html_url": "https://github.com/Vladimir-tokarev-cyera/llama-cpp-security-patches",
           "description": "Security patches for unpatched llama.cpp vulnerabilities (CVE-2026-43626 through CVE-2026-43632) — Cyera Research",
-          "stargazers_count": 0,
+          "stargazers_count": 1,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-08-06T19:02:26Z",
+          "updated_at": "2026-08-25T16:10:44Z",
           "pushed_at": "2026-08-06T19:02:03Z",
           "created_at": "2026-07-14T09:49:06Z",
           "topics": [],
@@ -58571,10 +58571,10 @@
           "full_name": "Vladimir-tokarev-cyera/llama-cpp-security-patches",
           "html_url": "https://github.com/Vladimir-tokarev-cyera/llama-cpp-security-patches",
           "description": "Security patches for unpatched llama.cpp vulnerabilities (CVE-2026-43626 through CVE-2026-43632) — Cyera Research",
-          "stargazers_count": 0,
+          "stargazers_count": 1,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-08-06T19:02:26Z",
+          "updated_at": "2026-08-25T16:10:44Z",
           "pushed_at": "2026-08-06T19:02:03Z",
           "created_at": "2026-07-14T09:49:06Z",
           "topics": [],
@@ -77747,10 +77747,10 @@
           "full_name": "hypnguyen1209/CVE-2026-62911",
           "html_url": "https://github.com/hypnguyen1209/CVE-2026-62911",
           "description": "POC pre-auth RCE on Exchange",
-          "stargazers_count": 3,
+          "stargazers_count": 4,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-08-25T11:16:35Z",
+          "updated_at": "2026-08-25T16:12:48Z",
           "pushed_at": "2026-08-22T04:49:54Z",
           "created_at": "2026-08-22T04:49:33Z",
           "topics": [
@@ -84950,10 +84950,10 @@
           "full_name": "HORKimhab/CVE-2026-73570",
           "html_url": "https://github.com/HORKimhab/CVE-2026-73570",
           "description": "CVE-2026-73570",
-          "stargazers_count": 4,
+          "stargazers_count": 5,
           "forks_count": 1,
           "language": "Python",
-          "updated_at": "2026-08-25T05:40:37Z",
+          "updated_at": "2026-08-25T16:03:34Z",
           "pushed_at": "2026-08-21T03:20:02Z",
           "created_at": "2026-08-21T03:18:23Z",
           "topics": [],
@@ -84962,6 +84962,30 @@
             "html_url": "https://github.com/HORKimhab"
           },
           "clone_url": "https://github.com/HORKimhab/CVE-2026-73570.git"
+        },
+        {
+          "id": 1345982651,
+          "name": "CVE-2026-73570",
+          "full_name": "jishino567/CVE-2026-73570",
+          "html_url": "https://github.com/jishino567/CVE-2026-73570",
+          "description": "PoC for CVE-2026-73570 (Zimbra SMTP Command Injection)",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-08-25T16:04:11Z",
+          "pushed_at": "2026-08-25T10:36:17Z",
+          "created_at": "2026-08-25T10:25:53Z",
+          "topics": [
+            "cve-2026-73570",
+            "exploit",
+            "zimbra",
+            "zimbra-exploit"
+          ],
+          "owner": {
+            "login": "jishino567",
+            "html_url": "https://github.com/jishino567"
+          },
+          "clone_url": "https://github.com/jishino567/CVE-2026-73570.git"
         },
         {
           "id": 1344902332,
@@ -84981,30 +85005,6 @@
             "html_url": "https://github.com/BiuTrap"
           },
           "clone_url": "https://github.com/BiuTrap/CVE-2026-73570.git"
-        },
-        {
-          "id": 1345982651,
-          "name": "CVE-2026-73570",
-          "full_name": "jishino567/CVE-2026-73570",
-          "html_url": "https://github.com/jishino567/CVE-2026-73570",
-          "description": "PoC for CVE-2026-73570 (Zimbra SMTP Command Injection)",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-08-25T11:16:33Z",
-          "pushed_at": "2026-08-25T10:36:17Z",
-          "created_at": "2026-08-25T10:25:53Z",
-          "topics": [
-            "cve-2026-73570",
-            "exploit",
-            "zimbra",
-            "zimbra-exploit"
-          ],
-          "owner": {
-            "login": "jishino567",
-            "html_url": "https://github.com/jishino567"
-          },
-          "clone_url": "https://github.com/jishino567/CVE-2026-73570.git"
         }
       ]
     },
@@ -88791,10 +88791,10 @@
           "full_name": "opaxial/CVE-2026-9830",
           "html_url": "https://github.com/opaxial/CVE-2026-9830",
           "description": "CVE-2026-9830 Proof of Concept",
-          "stargazers_count": 325,
+          "stargazers_count": 326,
           "forks_count": 3,
           "language": "Python",
-          "updated_at": "2026-08-25T15:43:06Z",
+          "updated_at": "2026-08-25T16:27:15Z",
           "pushed_at": "2026-08-20T21:56:15Z",
           "created_at": "2026-08-15T20:57:13Z",
           "topics": [
