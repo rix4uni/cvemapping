@@ -1306,8 +1306,8 @@
           "stargazers_count": 0,
           "forks_count": 2,
           "language": "C++",
-          "updated_at": "2026-09-09T04:54:58Z",
-          "pushed_at": "2026-09-09T04:54:43Z",
+          "updated_at": "2026-09-11T20:36:57Z",
+          "pushed_at": "2026-09-11T20:36:53Z",
           "created_at": "2026-01-08T01:32:09Z",
           "topics": [
             "c0deghost",
@@ -2332,7 +2332,7 @@
           "html_url": "https://github.com/Notselwyn/CVE-2024-1086",
           "description": "Universal local privilege escalation Proof-of-Concept exploit for CVE-2024-1086, working on most Linux kernels between v5.14 and v6.6, including Debian, Ubuntu, and KernelCTF. The success rate is 99.4% in KernelCTF images.",
           "stargazers_count": 2458,
-          "forks_count": 330,
+          "forks_count": 329,
           "language": "C",
           "updated_at": "2026-09-09T06:14:04Z",
           "pushed_at": "2024-04-17T16:09:54Z",
@@ -9033,10 +9033,10 @@
           "full_name": "verylazytech/CVE-2024-23692",
           "html_url": "https://github.com/verylazytech/CVE-2024-23692",
           "description": "POC - Unauthenticated RCE Flaw in Rejetto HTTP File Server - CVE-2024-23692 ",
-          "stargazers_count": 48,
+          "stargazers_count": 49,
           "forks_count": 14,
           "language": "Shell",
-          "updated_at": "2026-06-06T16:28:41Z",
+          "updated_at": "2026-09-11T10:28:58Z",
           "pushed_at": "2025-03-24T10:08:18Z",
           "created_at": "2024-09-15T12:15:35Z",
           "topics": [
@@ -9802,10 +9802,10 @@
           "full_name": "godylockz/CVE-2024-23897",
           "html_url": "https://github.com/godylockz/CVE-2024-23897",
           "description": "POC for CVE-2024-23897 Jenkins File-Read ",
-          "stargazers_count": 43,
+          "stargazers_count": 44,
           "forks_count": 5,
           "language": "Python",
-          "updated_at": "2026-07-02T12:09:57Z",
+          "updated_at": "2026-09-10T21:27:27Z",
           "pushed_at": "2025-11-20T14:47:18Z",
           "created_at": "2024-02-16T07:16:04Z",
           "topics": [],
@@ -19166,6 +19166,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2024-30350",
+      "repositories": [
+        {
+          "id": 1366449667,
+          "name": "cve-2024-30350-research-notes",
+          "full_name": "lmx-071028/cve-2024-30350-research-notes",
+          "html_url": "https://github.com/lmx-071028/cve-2024-30350-research-notes",
+          "description": "Research notes for CVE-2024-30350",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-09-11T16:44:25Z",
+          "pushed_at": "2026-09-11T16:44:21Z",
+          "created_at": "2026-09-11T16:44:16Z",
+          "topics": [],
+          "owner": {
+            "login": "lmx-071028",
+            "html_url": "https://github.com/lmx-071028"
+          },
+          "clone_url": "https://github.com/lmx-071028/cve-2024-30350-research-notes.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2024-30614",
       "repositories": [
         {
@@ -26530,10 +26554,10 @@
           "full_name": "SerpstatGlobal/ClickHouse-Native-JDBC",
           "html_url": "https://github.com/SerpstatGlobal/ClickHouse-Native-JDBC",
           "description": "Serpstat fork of housepower/ClickHouse-Native-JDBC 2.7.1. Fixes the CityHash128 checksum defect behind \"Checksum doesn't match: corrupted data\" on INSERT, upgrades aircompressor to 0.27 (CVE-2024-36114). Drop-in: com.serpstat:clickhouse-native-jdbc-shaded:2.7.1-serpstat.1. Apache 2.0.",
-          "stargazers_count": 0,
+          "stargazers_count": 1,
           "forks_count": 0,
           "language": "Java",
-          "updated_at": "2026-09-09T15:06:46Z",
+          "updated_at": "2026-09-11T09:13:52Z",
           "pushed_at": "2026-09-09T15:00:44Z",
           "created_at": "2026-09-08T20:52:02Z",
           "topics": [],
@@ -35730,44 +35754,6 @@
           "clone_url": "https://github.com/PhinehasNarh/CVE-2024-4577-LetsDefend-walkthrough.git"
         },
         {
-          "id": 811966807,
-          "name": "CVE-2024-4577-RCE-EXP",
-          "full_name": "WanLiChangChengWanLiChang/CVE-2024-4577-RCE-EXP",
-          "html_url": "https://github.com/WanLiChangChengWanLiChang/CVE-2024-4577-RCE-EXP",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 2,
-          "language": "Python",
-          "updated_at": "2025-10-25T13:52:42Z",
-          "pushed_at": "2024-06-07T17:26:18Z",
-          "created_at": "2024-06-07T17:02:52Z",
-          "topics": [],
-          "owner": {
-            "login": "WanLiChangChengWanLiChang",
-            "html_url": "https://github.com/WanLiChangChengWanLiChang"
-          },
-          "clone_url": "https://github.com/WanLiChangChengWanLiChang/CVE-2024-4577-RCE-EXP.git"
-        },
-        {
-          "id": 1347315318,
-          "name": "edu-recon",
-          "full_name": "yeee3642/edu-recon",
-          "html_url": "https://github.com/yeee3642/edu-recon",
-          "description": "Authorized education-sector recon \u0026 triage orchestrator (nmap/dirsearch/sqlmap/hydra + CVE-2024-4577, secret/API-key leak, XSS, wp2shell) with a web control panel",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-09-10T01:16:15Z",
-          "pushed_at": "2026-09-09T18:32:30Z",
-          "created_at": "2026-08-26T12:35:59Z",
-          "topics": [],
-          "owner": {
-            "login": "yeee3642",
-            "html_url": "https://github.com/yeee3642"
-          },
-          "clone_url": "https://github.com/yeee3642/edu-recon.git"
-        },
-        {
           "id": 813698508,
           "name": "CVE-2024-4577",
           "full_name": "bl4cksku11/CVE-2024-4577",
@@ -35785,6 +35771,25 @@
             "html_url": "https://github.com/bl4cksku11"
           },
           "clone_url": "https://github.com/bl4cksku11/CVE-2024-4577.git"
+        },
+        {
+          "id": 814021668,
+          "name": "CVE-2024-4577_Analysis",
+          "full_name": "Entropt/CVE-2024-4577_Analysis",
+          "html_url": "https://github.com/Entropt/CVE-2024-4577_Analysis",
+          "description": "Vietnam National Cyber Security (NCS)'s Internship - 2nd Test",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2025-01-25T16:28:41Z",
+          "pushed_at": "2024-08-14T20:03:28Z",
+          "created_at": "2024-06-12T07:33:41Z",
+          "topics": [],
+          "owner": {
+            "login": "Entropt",
+            "html_url": "https://github.com/Entropt"
+          },
+          "clone_url": "https://github.com/Entropt/CVE-2024-4577_Analysis.git"
         },
         {
           "id": 811783487,
@@ -35939,63 +35944,6 @@
           "clone_url": "https://github.com/gmh5225/CVE-2024-4577-PHP-RCE.git"
         },
         {
-          "id": 1309488091,
-          "name": "cve-2024-4577-phpcgi_rce_reproduction",
-          "full_name": "razureink/cve-2024-4577-phpcgi_rce_reproduction",
-          "html_url": "https://github.com/razureink/cve-2024-4577-phpcgi_rce_reproduction",
-          "description": "CVE Reproduction: cve-2024-4577-phpcgi_rce_reproduction",
-          "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "Python",
-          "updated_at": "2026-07-23T03:45:35Z",
-          "pushed_at": "2026-07-23T03:45:26Z",
-          "created_at": "2026-07-23T03:45:22Z",
-          "topics": [],
-          "owner": {
-            "login": "razureink",
-            "html_url": "https://github.com/razureink"
-          },
-          "clone_url": "https://github.com/razureink/cve-2024-4577-phpcgi_rce_reproduction.git"
-        },
-        {
-          "id": 1346348743,
-          "name": "cve-2024-4577-lab",
-          "full_name": "khwajasaad267-coder/cve-2024-4577-lab",
-          "html_url": "https://github.com/khwajasaad267-coder/cve-2024-4577-lab",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Dockerfile",
-          "updated_at": "2026-08-25T16:27:47Z",
-          "pushed_at": "2026-08-25T16:05:38Z",
-          "created_at": "2026-08-25T16:05:34Z",
-          "topics": [],
-          "owner": {
-            "login": "khwajasaad267-coder",
-            "html_url": "https://github.com/khwajasaad267-coder"
-          },
-          "clone_url": "https://github.com/khwajasaad267-coder/cve-2024-4577-lab.git"
-        },
-        {
-          "id": 823727293,
-          "name": "CVE-2024-4577",
-          "full_name": "charis3306/CVE-2024-4577",
-          "html_url": "https://github.com/charis3306/CVE-2024-4577",
-          "description": "CVE-2024-4577 EXP",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2024-07-03T15:41:46Z",
-          "pushed_at": "2024-07-03T15:41:42Z",
-          "created_at": "2024-07-03T15:30:52Z",
-          "topics": [],
-          "owner": {
-            "login": "charis3306",
-            "html_url": "https://github.com/charis3306"
-          },
-          "clone_url": "https://github.com/charis3306/CVE-2024-4577.git"
-        },
-        {
           "id": 816822296,
           "name": "CVE-2024-4577-PHP-CGI-argument-injection-RCE",
           "full_name": "jakabakos/CVE-2024-4577-PHP-CGI-argument-injection-RCE",
@@ -36013,82 +35961,6 @@
             "html_url": "https://github.com/jakabakos"
           },
           "clone_url": "https://github.com/jakabakos/CVE-2024-4577-PHP-CGI-argument-injection-RCE.git"
-        },
-        {
-          "id": 843644753,
-          "name": "CVE-2024-4577",
-          "full_name": "bughuntar/CVE-2024-4577",
-          "html_url": "https://github.com/bughuntar/CVE-2024-4577",
-          "description": "CVE-2024-4577 Exploits",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2024-08-17T02:02:29Z",
-          "pushed_at": "2024-08-17T02:02:26Z",
-          "created_at": "2024-08-17T02:01:57Z",
-          "topics": [],
-          "owner": {
-            "login": "bughuntar",
-            "html_url": "https://github.com/bughuntar"
-          },
-          "clone_url": "https://github.com/bughuntar/CVE-2024-4577.git"
-        },
-        {
-          "id": 812648512,
-          "name": "CVE-2024-4577",
-          "full_name": "dbyMelina/CVE-2024-4577",
-          "html_url": "https://github.com/dbyMelina/CVE-2024-4577",
-          "description": "python poc编写练手，可以对单个目标或批量检测",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2024-06-09T13:48:02Z",
-          "pushed_at": "2024-06-09T13:47:59Z",
-          "created_at": "2024-06-09T13:46:46Z",
-          "topics": [],
-          "owner": {
-            "login": "dbyMelina",
-            "html_url": "https://github.com/dbyMelina"
-          },
-          "clone_url": "https://github.com/dbyMelina/CVE-2024-4577.git"
-        },
-        {
-          "id": 1334692824,
-          "name": "CVE-2024-4577-Exploitation-AsyncRAT-Deployment-DFIR-Investigation",
-          "full_name": "DuyDuongDuyDuong/CVE-2024-4577-Exploitation-AsyncRAT-Deployment-DFIR-Investigation",
-          "html_url": "https://github.com/DuyDuongDuyDuong/CVE-2024-4577-Exploitation-AsyncRAT-Deployment-DFIR-Investigation",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-08-15T01:12:28Z",
-          "pushed_at": "2026-08-15T01:06:00Z",
-          "created_at": "2026-08-15T01:03:04Z",
-          "topics": [],
-          "owner": {
-            "login": "DuyDuongDuyDuong",
-            "html_url": "https://github.com/DuyDuongDuyDuong"
-          },
-          "clone_url": "https://github.com/DuyDuongDuyDuong/CVE-2024-4577-Exploitation-AsyncRAT-Deployment-DFIR-Investigation.git"
-        },
-        {
-          "id": 856550359,
-          "name": "Event-ID-268-Rule-Name-SOC292-Possible-PHP-Injection-Detected-CVE-2024-4577-",
-          "full_name": "AhmedMansour93/Event-ID-268-Rule-Name-SOC292-Possible-PHP-Injection-Detected-CVE-2024-4577-",
-          "html_url": "https://github.com/AhmedMansour93/Event-ID-268-Rule-Name-SOC292-Possible-PHP-Injection-Detected-CVE-2024-4577-",
-          "description": "🚨 New Incident Report Completed! 🚨 Just wrapped up \"Event ID 268: SOC292 - Possible PHP Injection Detected (CVE-2024-4577)\" on LetsDefend.io. This analysis involved investigating an attempted Command Injection targeting our PHP server. Staying ahead of these threats with continuous monitoring and swift containment! 🛡️ ",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2024-09-12T19:13:40Z",
-          "pushed_at": "2024-09-12T19:13:37Z",
-          "created_at": "2024-09-12T19:10:38Z",
-          "topics": [],
-          "owner": {
-            "login": "AhmedMansour93",
-            "html_url": "https://github.com/AhmedMansour93"
-          },
-          "clone_url": "https://github.com/AhmedMansour93/Event-ID-268-Rule-Name-SOC292-Possible-PHP-Injection-Detected-CVE-2024-4577-.git"
         },
         {
           "id": 821341176,
@@ -36110,6 +35982,120 @@
           "clone_url": "https://github.com/olebris/CVE-2024-4577.git"
         },
         {
+          "id": 823727293,
+          "name": "CVE-2024-4577",
+          "full_name": "charis3306/CVE-2024-4577",
+          "html_url": "https://github.com/charis3306/CVE-2024-4577",
+          "description": "CVE-2024-4577 EXP",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2024-07-03T15:41:46Z",
+          "pushed_at": "2024-07-03T15:41:42Z",
+          "created_at": "2024-07-03T15:30:52Z",
+          "topics": [],
+          "owner": {
+            "login": "charis3306",
+            "html_url": "https://github.com/charis3306"
+          },
+          "clone_url": "https://github.com/charis3306/CVE-2024-4577.git"
+        },
+        {
+          "id": 812648512,
+          "name": "CVE-2024-4577",
+          "full_name": "dbyMelina/CVE-2024-4577",
+          "html_url": "https://github.com/dbyMelina/CVE-2024-4577",
+          "description": "python poc编写练手，可以对单个目标或批量检测",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2024-06-09T13:48:02Z",
+          "pushed_at": "2024-06-09T13:47:59Z",
+          "created_at": "2024-06-09T13:46:46Z",
+          "topics": [],
+          "owner": {
+            "login": "dbyMelina",
+            "html_url": "https://github.com/dbyMelina"
+          },
+          "clone_url": "https://github.com/dbyMelina/CVE-2024-4577.git"
+        },
+        {
+          "id": 843644753,
+          "name": "CVE-2024-4577",
+          "full_name": "bughuntar/CVE-2024-4577",
+          "html_url": "https://github.com/bughuntar/CVE-2024-4577",
+          "description": "CVE-2024-4577 Exploits",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2024-08-17T02:02:29Z",
+          "pushed_at": "2024-08-17T02:02:26Z",
+          "created_at": "2024-08-17T02:01:57Z",
+          "topics": [],
+          "owner": {
+            "login": "bughuntar",
+            "html_url": "https://github.com/bughuntar"
+          },
+          "clone_url": "https://github.com/bughuntar/CVE-2024-4577.git"
+        },
+        {
+          "id": 1347315318,
+          "name": "edu-recon",
+          "full_name": "yeee3642/edu-recon",
+          "html_url": "https://github.com/yeee3642/edu-recon",
+          "description": "Authorized education-sector recon \u0026 triage orchestrator (nmap/dirsearch/sqlmap/hydra + CVE-2024-4577, secret/API-key leak, XSS, wp2shell) with a web control panel",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-09-10T01:16:15Z",
+          "pushed_at": "2026-09-09T18:32:30Z",
+          "created_at": "2026-08-26T12:35:59Z",
+          "topics": [],
+          "owner": {
+            "login": "yeee3642",
+            "html_url": "https://github.com/yeee3642"
+          },
+          "clone_url": "https://github.com/yeee3642/edu-recon.git"
+        },
+        {
+          "id": 1346348743,
+          "name": "cve-2024-4577-lab",
+          "full_name": "khwajasaad267-coder/cve-2024-4577-lab",
+          "html_url": "https://github.com/khwajasaad267-coder/cve-2024-4577-lab",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Dockerfile",
+          "updated_at": "2026-08-25T16:27:47Z",
+          "pushed_at": "2026-08-25T16:05:38Z",
+          "created_at": "2026-08-25T16:05:34Z",
+          "topics": [],
+          "owner": {
+            "login": "khwajasaad267-coder",
+            "html_url": "https://github.com/khwajasaad267-coder"
+          },
+          "clone_url": "https://github.com/khwajasaad267-coder/cve-2024-4577-lab.git"
+        },
+        {
+          "id": 856550359,
+          "name": "Event-ID-268-Rule-Name-SOC292-Possible-PHP-Injection-Detected-CVE-2024-4577-",
+          "full_name": "AhmedMansour93/Event-ID-268-Rule-Name-SOC292-Possible-PHP-Injection-Detected-CVE-2024-4577-",
+          "html_url": "https://github.com/AhmedMansour93/Event-ID-268-Rule-Name-SOC292-Possible-PHP-Injection-Detected-CVE-2024-4577-",
+          "description": "🚨 New Incident Report Completed! 🚨 Just wrapped up \"Event ID 268: SOC292 - Possible PHP Injection Detected (CVE-2024-4577)\" on LetsDefend.io. This analysis involved investigating an attempted Command Injection targeting our PHP server. Staying ahead of these threats with continuous monitoring and swift containment! 🛡️ ",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2024-09-12T19:13:40Z",
+          "pushed_at": "2024-09-12T19:13:37Z",
+          "created_at": "2024-09-12T19:10:38Z",
+          "topics": [],
+          "owner": {
+            "login": "AhmedMansour93",
+            "html_url": "https://github.com/AhmedMansour93"
+          },
+          "clone_url": "https://github.com/AhmedMansour93/Event-ID-268-Rule-Name-SOC292-Possible-PHP-Injection-Detected-CVE-2024-4577-.git"
+        },
+        {
           "id": 812032307,
           "name": "CVE-2024-4577",
           "full_name": "graphite-org/CVE-2024-4577",
@@ -36129,23 +36115,42 @@
           "clone_url": "https://github.com/graphite-org/CVE-2024-4577.git"
         },
         {
-          "id": 814021668,
-          "name": "CVE-2024-4577_Analysis",
-          "full_name": "Entropt/CVE-2024-4577_Analysis",
-          "html_url": "https://github.com/Entropt/CVE-2024-4577_Analysis",
-          "description": "Vietnam National Cyber Security (NCS)'s Internship - 2nd Test",
+          "id": 1334692824,
+          "name": "CVE-2024-4577-Exploitation-AsyncRAT-Deployment-DFIR-Investigation",
+          "full_name": "DuyDuongDuyDuong/CVE-2024-4577-Exploitation-AsyncRAT-Deployment-DFIR-Investigation",
+          "html_url": "https://github.com/DuyDuongDuyDuong/CVE-2024-4577-Exploitation-AsyncRAT-Deployment-DFIR-Investigation",
+          "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2025-01-25T16:28:41Z",
-          "pushed_at": "2024-08-14T20:03:28Z",
-          "created_at": "2024-06-12T07:33:41Z",
+          "updated_at": "2026-08-15T01:12:28Z",
+          "pushed_at": "2026-08-15T01:06:00Z",
+          "created_at": "2026-08-15T01:03:04Z",
           "topics": [],
           "owner": {
-            "login": "Entropt",
-            "html_url": "https://github.com/Entropt"
+            "login": "DuyDuongDuyDuong",
+            "html_url": "https://github.com/DuyDuongDuyDuong"
           },
-          "clone_url": "https://github.com/Entropt/CVE-2024-4577_Analysis.git"
+          "clone_url": "https://github.com/DuyDuongDuyDuong/CVE-2024-4577-Exploitation-AsyncRAT-Deployment-DFIR-Investigation.git"
+        },
+        {
+          "id": 811966807,
+          "name": "CVE-2024-4577-RCE-EXP",
+          "full_name": "WanLiChangChengWanLiChang/CVE-2024-4577-RCE-EXP",
+          "html_url": "https://github.com/WanLiChangChengWanLiChang/CVE-2024-4577-RCE-EXP",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 2,
+          "language": "Python",
+          "updated_at": "2025-10-25T13:52:42Z",
+          "pushed_at": "2024-06-07T17:26:18Z",
+          "created_at": "2024-06-07T17:02:52Z",
+          "topics": [],
+          "owner": {
+            "login": "WanLiChangChengWanLiChang",
+            "html_url": "https://github.com/WanLiChangChengWanLiChang"
+          },
+          "clone_url": "https://github.com/WanLiChangChengWanLiChang/CVE-2024-4577-RCE-EXP.git"
         },
         {
           "id": 882724102,
@@ -38115,25 +38120,6 @@
             "html_url": "https://github.com/je5442804"
           },
           "clone_url": "https://github.com/je5442804/WPTaskScheduler_CVE-2024-49039.git"
-        },
-        {
-          "id": 1309488149,
-          "name": "cve-2024-49039-task_scheduler_eop_reproduction",
-          "full_name": "razureink/cve-2024-49039-task_scheduler_eop_reproduction",
-          "html_url": "https://github.com/razureink/cve-2024-49039-task_scheduler_eop_reproduction",
-          "description": "CVE Reproduction: cve-2024-49039-task_scheduler_eop_reproduction",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-07-23T03:45:46Z",
-          "pushed_at": "2026-07-23T03:45:33Z",
-          "created_at": "2026-07-23T03:45:27Z",
-          "topics": [],
-          "owner": {
-            "login": "razureink",
-            "html_url": "https://github.com/razureink"
-          },
-          "clone_url": "https://github.com/razureink/cve-2024-49039-task_scheduler_eop_reproduction.git"
         }
       ]
     },
@@ -38866,30 +38852,6 @@
             "html_url": "https://github.com/slavin-ayu"
           },
           "clone_url": "https://github.com/slavin-ayu/CVE-2024-50251-PoC.git"
-        }
-      ]
-    },
-    {
-      "cve_id": "CVE-2024-50330",
-      "repositories": [
-        {
-          "id": 1309488242,
-          "name": "cve-2024-50330-ivanti_epm_sqli_reproduction",
-          "full_name": "razureink/cve-2024-50330-ivanti_epm_sqli_reproduction",
-          "html_url": "https://github.com/razureink/cve-2024-50330-ivanti_epm_sqli_reproduction",
-          "description": "CVE Reproduction: cve-2024-50330-ivanti_epm_sqli_reproduction",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-07-23T03:45:49Z",
-          "pushed_at": "2026-07-23T03:45:39Z",
-          "created_at": "2026-07-23T03:45:34Z",
-          "topics": [],
-          "owner": {
-            "login": "razureink",
-            "html_url": "https://github.com/razureink"
-          },
-          "clone_url": "https://github.com/razureink/cve-2024-50330-ivanti_epm_sqli_reproduction.git"
         }
       ]
     },
@@ -41769,11 +41731,11 @@
           "name": "CVE-2024-54679",
           "full_name": "hotplugin0x01/CVE-2024-54679",
           "html_url": "https://github.com/hotplugin0x01/CVE-2024-54679",
-          "description": "CVE-2024-54679 - CyberPanel (aka Cyber Panel) Denial of Service (https://nvd.nist.gov/vuln/detail/CVE-2024-54679)",
+          "description": "CyberPanel (aka Cyber Panel) Denial of Service",
           "stargazers_count": 3,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2024-12-19T20:35:12Z",
+          "updated_at": "2026-09-11T16:22:30Z",
           "pushed_at": "2024-12-06T06:19:42Z",
           "created_at": "2024-12-06T06:02:34Z",
           "topics": [],
@@ -43145,7 +43107,7 @@
           "html_url": "https://github.com/zgzhang/cve-2024-6387-poc",
           "description": "a signal handler race condition in OpenSSH's server (sshd)",
           "stargazers_count": 497,
-          "forks_count": 184,
+          "forks_count": 185,
           "language": "",
           "updated_at": "2026-09-04T20:23:59Z",
           "pushed_at": "2024-07-01T10:54:02Z",
@@ -43182,10 +43144,10 @@
           "full_name": "Karmakstylez/CVE-2024-6387",
           "html_url": "https://github.com/Karmakstylez/CVE-2024-6387",
           "description": "Remote Unauthenticated Code Execution Vulnerability in OpenSSH server (CVE-2024-6387)",
-          "stargazers_count": 195,
+          "stargazers_count": 196,
           "forks_count": 47,
           "language": "Python",
-          "updated_at": "2026-09-08T07:53:01Z",
+          "updated_at": "2026-09-10T17:18:33Z",
           "pushed_at": "2024-08-22T08:50:25Z",
           "created_at": "2024-07-08T11:27:49Z",
           "topics": [],
@@ -43227,10 +43189,10 @@
           "full_name": "l0n3m4n/CVE-2024-6387",
           "html_url": "https://github.com/l0n3m4n/CVE-2024-6387",
           "description": "PoC - Remote Unauthenticated Code Execution Vulnerability in OpenSSH server (Scanner and Exploit) ",
-          "stargazers_count": 111,
-          "forks_count": 39,
+          "stargazers_count": 113,
+          "forks_count": 38,
           "language": "C",
-          "updated_at": "2026-09-08T07:39:51Z",
+          "updated_at": "2026-09-10T17:27:45Z",
           "pushed_at": "2024-07-05T15:19:28Z",
           "created_at": "2024-07-02T18:32:46Z",
           "topics": [
@@ -45584,6 +45546,57 @@
       "cve_id": "CVE-2024-7344",
       "repositories": [
         {
+          "id": 1270223520,
+          "name": "UEFI-Security-Research-Howyar-SysReturn-NetCopy",
+          "full_name": "TheMalwareGuardian/UEFI-Security-Research-Howyar-SysReturn-NetCopy",
+          "html_url": "https://github.com/TheMalwareGuardian/UEFI-Security-Research-Howyar-SysReturn-NetCopy",
+          "description": "Post CVE-2024-7344 analysis of Howyar SysReturn NetCopy - reverse engineering notes, vulnerable binaries, vendor correspondence, and proof-of-concept tooling for CVE-2026-79298 (IA-32 Secure Boot bypass via the RxPE custom PE loader in BOOTia32.efi).",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-09-11T19:28:02Z",
+          "pushed_at": "2026-09-11T10:36:10Z",
+          "created_at": "2026-06-15T14:00:01Z",
+          "topics": [
+            "cve-2024-7344",
+            "cve-2026-79298",
+            "exploit",
+            "reverse-engineering",
+            "secure-boot-bypass",
+            "uefi"
+          ],
+          "owner": {
+            "login": "TheMalwareGuardian",
+            "html_url": "https://github.com/TheMalwareGuardian"
+          },
+          "clone_url": "https://github.com/TheMalwareGuardian/UEFI-Security-Research-Howyar-SysReturn-NetCopy.git"
+        },
+        {
+          "id": 1365703874,
+          "name": "CVE-2026-79298",
+          "full_name": "TheMalwareGuardian/CVE-2026-79298",
+          "html_url": "https://github.com/TheMalwareGuardian/CVE-2026-79298",
+          "description": "CVE-2026-79298 - Incomplete remediation of UEFI Secure Boot bypass in Howyar SysReturn. The IA-32 boot path (BOOTia32.efi) was never patched after CVE-2024-7344, shipping the same revoked custom PE loader until July 2026.",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-09-11T16:19:20Z",
+          "pushed_at": "2026-09-11T10:25:59Z",
+          "created_at": "2026-09-11T08:56:06Z",
+          "topics": [
+            "cve-2026-79298",
+            "exploit",
+            "firmware-security",
+            "secure-boot-bypass",
+            "uefi"
+          ],
+          "owner": {
+            "login": "TheMalwareGuardian",
+            "html_url": "https://github.com/TheMalwareGuardian"
+          },
+          "clone_url": "https://github.com/TheMalwareGuardian/CVE-2026-79298.git"
+        },
+        {
           "id": 1152962280,
           "name": "CVE-2024-7344",
           "full_name": "TheMalwareGuardian/CVE-2024-7344",
@@ -47316,25 +47329,6 @@
           "clone_url": "https://github.com/horizon3ai/CVE-2024-9465.git"
         },
         {
-          "id": 870541259,
-          "name": "CVE-2024-9465",
-          "full_name": "mustafaakalin/CVE-2024-9465",
-          "html_url": "https://github.com/mustafaakalin/CVE-2024-9465",
-          "description": "Checkpoint SQL Injection via Time-Based Attack (CVE-2024-9465)",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-09-03T19:12:37Z",
-          "pushed_at": "2024-10-10T08:39:22Z",
-          "created_at": "2024-10-10T08:23:31Z",
-          "topics": [],
-          "owner": {
-            "login": "mustafaakalin",
-            "html_url": "https://github.com/mustafaakalin"
-          },
-          "clone_url": "https://github.com/mustafaakalin/CVE-2024-9465.git"
-        },
-        {
           "id": 871034576,
           "name": "CVE-2024-9465",
           "full_name": "Qlng/CVE-2024-9465",
@@ -47352,6 +47346,25 @@
             "html_url": "https://github.com/Qlng"
           },
           "clone_url": "https://github.com/Qlng/CVE-2024-9465.git"
+        },
+        {
+          "id": 870541259,
+          "name": "CVE-2024-9465",
+          "full_name": "mustafaakalin/CVE-2024-9465",
+          "html_url": "https://github.com/mustafaakalin/CVE-2024-9465",
+          "description": "Checkpoint SQL Injection via Time-Based Attack (CVE-2024-9465)",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-09-03T19:12:37Z",
+          "pushed_at": "2024-10-10T08:39:22Z",
+          "created_at": "2024-10-10T08:23:31Z",
+          "topics": [],
+          "owner": {
+            "login": "mustafaakalin",
+            "html_url": "https://github.com/mustafaakalin"
+          },
+          "clone_url": "https://github.com/mustafaakalin/CVE-2024-9465.git"
         }
       ]
     },
@@ -47961,7 +47974,7 @@
           "html_url": "https://github.com/AiGptCode/AiGPT-WordPress-Exploitation-Framework",
           "description": "AiGPT started from the concept of CVE‑2024‑27956 , the WP Automatic CSV injection — but has been completely rebuilt into a multi‑vector, unauthenticated WordPress exploitation engine. It now chains 13 real‑world CVEs to create an administrator account or drop a web shell directly, then automatically injects a reverse shell into the active theme",
           "stargazers_count": 133,
-          "forks_count": 33,
+          "forks_count": 34,
           "language": "Python",
           "updated_at": "2026-08-29T20:30:38Z",
           "pushed_at": "2026-05-29T14:24:41Z",
