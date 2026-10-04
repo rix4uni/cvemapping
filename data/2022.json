@@ -680,8 +680,8 @@
         {
           "id": 532977482,
           "name": "CVE-2022-0543",
-          "full_name": "OpsCipher/CVE-2022-0543",
-          "html_url": "https://github.com/OpsCipher/CVE-2022-0543",
+          "full_name": "fulxey/CVE-2022-0543",
+          "html_url": "https://github.com/fulxey/CVE-2022-0543",
           "description": "Redis RCE through Lua Sandbox Escape vulnerability",
           "stargazers_count": 1,
           "forks_count": 3,
@@ -691,10 +691,10 @@
           "created_at": "2022-09-05T16:25:49Z",
           "topics": [],
           "owner": {
-            "login": "OpsCipher",
-            "html_url": "https://github.com/OpsCipher"
+            "login": "fulxey",
+            "html_url": "https://github.com/fulxey"
           },
-          "clone_url": "https://github.com/OpsCipher/CVE-2022-0543.git"
+          "clone_url": "https://github.com/fulxey/CVE-2022-0543.git"
         }
       ]
     },
@@ -1112,10 +1112,10 @@
           "full_name": "r1is/CVE-2022-0847",
           "html_url": "https://github.com/r1is/CVE-2022-0847",
           "description": "CVE-2022-0847-DirtyPipe-Exploit   CVE-2022-0847 是存在于 Linux内核 5.8 及之后版本中的本地提权漏洞。攻击者通过利用此漏洞，可覆盖重写任意可读文件中的数据，从而可将普通权限的用户提升到特权 root。    CVE-2022-0847 的漏洞原理类似于 CVE-2016-5195 脏牛漏洞（Dirty Cow），但它更容易被利用。漏洞作者将此漏洞命名为“Dirty Pipe”",
-          "stargazers_count": 281,
+          "stargazers_count": 282,
           "forks_count": 78,
           "language": "Shell",
-          "updated_at": "2026-09-15T09:08:54Z",
+          "updated_at": "2026-10-02T02:25:39Z",
           "pushed_at": "2023-02-02T02:17:30Z",
           "created_at": "2022-03-07T18:36:50Z",
           "topics": [],
@@ -1641,6 +1641,25 @@
           "clone_url": "https://github.com/DanaEpp/pwncat_dirtypipe.git"
         },
         {
+          "id": 467990193,
+          "name": "CVE-2022-0847",
+          "full_name": "gyaansastra/CVE-2022-0847",
+          "html_url": "https://github.com/gyaansastra/CVE-2022-0847",
+          "description": "Dirty Pipe POC",
+          "stargazers_count": 3,
+          "forks_count": 2,
+          "language": "C",
+          "updated_at": "2026-03-23T22:13:08Z",
+          "pushed_at": "2022-03-20T15:46:04Z",
+          "created_at": "2022-03-09T15:44:58Z",
+          "topics": [],
+          "owner": {
+            "login": "gyaansastra",
+            "html_url": "https://github.com/gyaansastra"
+          },
+          "clone_url": "https://github.com/gyaansastra/CVE-2022-0847.git"
+        },
+        {
           "id": 470128338,
           "name": "CVE-2022-0847-dirty-pipe-kernel-checker",
           "full_name": "MrP1xel/CVE-2022-0847-dirty-pipe-kernel-checker",
@@ -1684,23 +1703,30 @@
           "clone_url": "https://github.com/Shotokhan/cve_2022_0847_shellcode.git"
         },
         {
-          "id": 467990193,
-          "name": "CVE-2022-0847",
-          "full_name": "gyaansastra/CVE-2022-0847",
-          "html_url": "https://github.com/gyaansastra/CVE-2022-0847",
-          "description": "Dirty Pipe POC",
+          "id": 470139953,
+          "name": "CVE-2022-0847-DirtyPipe-Container-Breakout",
+          "full_name": "jpts/CVE-2022-0847-DirtyPipe-Container-Breakout",
+          "html_url": "https://github.com/jpts/CVE-2022-0847-DirtyPipe-Container-Breakout",
+          "description": "PoC Container Breakout for DirtyPipe Vulnerability CVE-2022-0847 ",
           "stargazers_count": 3,
           "forks_count": 2,
           "language": "C",
-          "updated_at": "2026-03-23T22:13:08Z",
-          "pushed_at": "2022-03-20T15:46:04Z",
-          "created_at": "2022-03-09T15:44:58Z",
-          "topics": [],
+          "updated_at": "2026-10-02T11:33:18Z",
+          "pushed_at": "2022-04-20T22:07:12Z",
+          "created_at": "2022-03-15T12:00:17Z",
+          "topics": [
+            "breakout",
+            "container",
+            "cve-2022-0847",
+            "dirtypipe",
+            "docker",
+            "poc"
+          ],
           "owner": {
-            "login": "gyaansastra",
-            "html_url": "https://github.com/gyaansastra"
+            "login": "jpts",
+            "html_url": "https://github.com/jpts"
           },
-          "clone_url": "https://github.com/gyaansastra/CVE-2022-0847.git"
+          "clone_url": "https://github.com/jpts/CVE-2022-0847-DirtyPipe-Container-Breakout.git"
         },
         {
           "id": 524458017,
@@ -1764,25 +1790,6 @@
           "clone_url": "https://github.com/sa-infinity8888/Dirty-Pipe-CVE-2022-0847.git"
         },
         {
-          "id": 467552702,
-          "name": "CVE-2022-0847",
-          "full_name": "puckiestyle/CVE-2022-0847",
-          "html_url": "https://github.com/puckiestyle/CVE-2022-0847",
-          "description": "",
-          "stargazers_count": 2,
-          "forks_count": 2,
-          "language": "C",
-          "updated_at": "2024-01-20T21:30:04Z",
-          "pushed_at": "2022-03-10T08:10:40Z",
-          "created_at": "2022-03-08T14:46:21Z",
-          "topics": [],
-          "owner": {
-            "login": "puckiestyle",
-            "html_url": "https://github.com/puckiestyle"
-          },
-          "clone_url": "https://github.com/puckiestyle/CVE-2022-0847.git"
-        },
-        {
           "id": 494818180,
           "name": "debian11-dirty_pipe-patcher",
           "full_name": "ihenakaarachchi/debian11-dirty_pipe-patcher",
@@ -1821,23 +1828,23 @@
           "clone_url": "https://github.com/VinuKalana/DirtyPipe-CVE-2022-0847.git"
         },
         {
-          "id": 469743112,
-          "name": "CVE-2022-0847-POC",
-          "full_name": "CYB3RK1D/CVE-2022-0847-POC",
-          "html_url": "https://github.com/CYB3RK1D/CVE-2022-0847-POC",
-          "description": "dirtypipe",
+          "id": 467741460,
+          "name": "CVE-2022-0847_DirtyPipeExploit",
+          "full_name": "dadhee/CVE-2022-0847_DirtyPipeExploit",
+          "html_url": "https://github.com/dadhee/CVE-2022-0847_DirtyPipeExploit",
+          "description": "A “Dirty Pipe” vulnerability with CVE-2022-0847 and a CVSS score of 7.8 has been identified, affecting Linux Kernel 5.8 and higher. The vulnerability allows attackers to overwrite data in read-only files. Threat actors can exploit this vulnerability to privilege themselves with code injection.",
           "stargazers_count": 2,
-          "forks_count": 2,
+          "forks_count": 3,
           "language": "C",
-          "updated_at": "2022-03-17T15:54:57Z",
-          "pushed_at": "2022-03-15T17:41:13Z",
-          "created_at": "2022-03-14T13:21:25Z",
+          "updated_at": "2024-08-12T20:21:23Z",
+          "pushed_at": "2022-03-09T02:01:28Z",
+          "created_at": "2022-03-09T01:55:04Z",
           "topics": [],
           "owner": {
-            "login": "CYB3RK1D",
-            "html_url": "https://github.com/CYB3RK1D"
+            "login": "dadhee",
+            "html_url": "https://github.com/dadhee"
           },
-          "clone_url": "https://github.com/CYB3RK1D/CVE-2022-0847-POC.git"
+          "clone_url": "https://github.com/dadhee/CVE-2022-0847_DirtyPipeExploit.git"
         },
         {
           "id": 510867863,
@@ -1859,68 +1866,23 @@
           "clone_url": "https://github.com/rabomen/Dirty-Pipe.git"
         },
         {
-          "id": 470139953,
-          "name": "CVE-2022-0847-DirtyPipe-Container-Breakout",
-          "full_name": "jpts/CVE-2022-0847-DirtyPipe-Container-Breakout",
-          "html_url": "https://github.com/jpts/CVE-2022-0847-DirtyPipe-Container-Breakout",
-          "description": "PoC Container Breakout for DirtyPipe Vulnerability CVE-2022-0847 ",
+          "id": 469743112,
+          "name": "CVE-2022-0847-POC",
+          "full_name": "CYB3RK1D/CVE-2022-0847-POC",
+          "html_url": "https://github.com/CYB3RK1D/CVE-2022-0847-POC",
+          "description": "dirtypipe",
           "stargazers_count": 2,
           "forks_count": 2,
           "language": "C",
-          "updated_at": "2026-06-03T08:18:54Z",
-          "pushed_at": "2022-04-20T22:07:12Z",
-          "created_at": "2022-03-15T12:00:17Z",
-          "topics": [
-            "breakout",
-            "container",
-            "cve-2022-0847",
-            "dirtypipe",
-            "docker",
-            "poc"
-          ],
-          "owner": {
-            "login": "jpts",
-            "html_url": "https://github.com/jpts"
-          },
-          "clone_url": "https://github.com/jpts/CVE-2022-0847-DirtyPipe-Container-Breakout.git"
-        },
-        {
-          "id": 472598995,
-          "name": "CVE-2022-0847",
-          "full_name": "tmoneypenny/CVE-2022-0847",
-          "html_url": "https://github.com/tmoneypenny/CVE-2022-0847",
-          "description": "Dirty Pipe - CVE-2022-0847",
-          "stargazers_count": 2,
-          "forks_count": 1,
-          "language": "Rust",
-          "updated_at": "2023-01-24T04:53:25Z",
-          "pushed_at": "2022-12-19T06:10:52Z",
-          "created_at": "2022-03-22T03:17:51Z",
+          "updated_at": "2022-03-17T15:54:57Z",
+          "pushed_at": "2022-03-15T17:41:13Z",
+          "created_at": "2022-03-14T13:21:25Z",
           "topics": [],
           "owner": {
-            "login": "tmoneypenny",
-            "html_url": "https://github.com/tmoneypenny"
+            "login": "CYB3RK1D",
+            "html_url": "https://github.com/CYB3RK1D"
           },
-          "clone_url": "https://github.com/tmoneypenny/CVE-2022-0847.git"
-        },
-        {
-          "id": 467741460,
-          "name": "CVE-2022-0847_DirtyPipeExploit",
-          "full_name": "dadhee/CVE-2022-0847_DirtyPipeExploit",
-          "html_url": "https://github.com/dadhee/CVE-2022-0847_DirtyPipeExploit",
-          "description": "A “Dirty Pipe” vulnerability with CVE-2022-0847 and a CVSS score of 7.8 has been identified, affecting Linux Kernel 5.8 and higher. The vulnerability allows attackers to overwrite data in read-only files. Threat actors can exploit this vulnerability to privilege themselves with code injection.",
-          "stargazers_count": 2,
-          "forks_count": 3,
-          "language": "C",
-          "updated_at": "2024-08-12T20:21:23Z",
-          "pushed_at": "2022-03-09T02:01:28Z",
-          "created_at": "2022-03-09T01:55:04Z",
-          "topics": [],
-          "owner": {
-            "login": "dadhee",
-            "html_url": "https://github.com/dadhee"
-          },
-          "clone_url": "https://github.com/dadhee/CVE-2022-0847_DirtyPipeExploit.git"
+          "clone_url": "https://github.com/CYB3RK1D/CVE-2022-0847-POC.git"
         },
         {
           "id": 467468720,
@@ -1942,23 +1904,23 @@
           "clone_url": "https://github.com/cspshivam/CVE-2022-0847-dirty-pipe-exploit.git"
         },
         {
-          "id": 535409119,
-          "name": "Dirty-Pipe-Exploits",
-          "full_name": "Gustavo-Nogueira/Dirty-Pipe-Exploits",
-          "html_url": "https://github.com/Gustavo-Nogueira/Dirty-Pipe-Exploits",
-          "description": "CVE-2022-0847(Dirty Pipe) vulnerability exploits.",
+          "id": 472598995,
+          "name": "CVE-2022-0847",
+          "full_name": "tmoneypenny/CVE-2022-0847",
+          "html_url": "https://github.com/tmoneypenny/CVE-2022-0847",
+          "description": "Dirty Pipe - CVE-2022-0847",
           "stargazers_count": 2,
           "forks_count": 1,
-          "language": "C",
-          "updated_at": "2022-12-01T05:36:55Z",
-          "pushed_at": "2022-09-26T14:06:13Z",
-          "created_at": "2022-09-11T19:50:53Z",
+          "language": "Rust",
+          "updated_at": "2023-01-24T04:53:25Z",
+          "pushed_at": "2022-12-19T06:10:52Z",
+          "created_at": "2022-03-22T03:17:51Z",
           "topics": [],
           "owner": {
-            "login": "Gustavo-Nogueira",
-            "html_url": "https://github.com/Gustavo-Nogueira"
+            "login": "tmoneypenny",
+            "html_url": "https://github.com/tmoneypenny"
           },
-          "clone_url": "https://github.com/Gustavo-Nogueira/Dirty-Pipe-Exploits.git"
+          "clone_url": "https://github.com/tmoneypenny/CVE-2022-0847.git"
         },
         {
           "id": 478388812,
@@ -1978,6 +1940,44 @@
             "html_url": "https://github.com/mhanief"
           },
           "clone_url": "https://github.com/mhanief/dirtypipe.git"
+        },
+        {
+          "id": 535409119,
+          "name": "Dirty-Pipe-Exploits",
+          "full_name": "Gustavo-Nogueira/Dirty-Pipe-Exploits",
+          "html_url": "https://github.com/Gustavo-Nogueira/Dirty-Pipe-Exploits",
+          "description": "CVE-2022-0847(Dirty Pipe) vulnerability exploits.",
+          "stargazers_count": 2,
+          "forks_count": 1,
+          "language": "C",
+          "updated_at": "2022-12-01T05:36:55Z",
+          "pushed_at": "2022-09-26T14:06:13Z",
+          "created_at": "2022-09-11T19:50:53Z",
+          "topics": [],
+          "owner": {
+            "login": "Gustavo-Nogueira",
+            "html_url": "https://github.com/Gustavo-Nogueira"
+          },
+          "clone_url": "https://github.com/Gustavo-Nogueira/Dirty-Pipe-Exploits.git"
+        },
+        {
+          "id": 467552702,
+          "name": "CVE-2022-0847",
+          "full_name": "puckiestyle/CVE-2022-0847",
+          "html_url": "https://github.com/puckiestyle/CVE-2022-0847",
+          "description": "",
+          "stargazers_count": 2,
+          "forks_count": 2,
+          "language": "C",
+          "updated_at": "2024-01-20T21:30:04Z",
+          "pushed_at": "2022-03-10T08:10:40Z",
+          "created_at": "2022-03-08T14:46:21Z",
+          "topics": [],
+          "owner": {
+            "login": "puckiestyle",
+            "html_url": "https://github.com/puckiestyle"
+          },
+          "clone_url": "https://github.com/puckiestyle/CVE-2022-0847.git"
         },
         {
           "id": 467570864,
@@ -2582,6 +2582,30 @@
             "html_url": "https://github.com/ByteHackr"
           },
           "clone_url": "https://github.com/ByteHackr/CVE-2022-0853.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2022-0891",
+      "repositories": [
+        {
+          "id": 1402984542,
+          "name": "libtiff-cve-2022-0891-lab",
+          "full_name": "flavorex0000/libtiff-cve-2022-0891-lab",
+          "html_url": "https://github.com/flavorex0000/libtiff-cve-2022-0891-lab",
+          "description": "Isolated ASan/UBSan reproduction and patch verification lab for public CVE-2022-0891",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Shell",
+          "updated_at": "2026-10-03T10:06:27Z",
+          "pushed_at": "2026-10-03T10:06:24Z",
+          "created_at": "2026-10-03T10:06:19Z",
+          "topics": [],
+          "owner": {
+            "login": "flavorex0000",
+            "html_url": "https://github.com/flavorex0000"
+          },
+          "clone_url": "https://github.com/flavorex0000/libtiff-cve-2022-0891-lab.git"
         }
       ]
     },
@@ -3329,10 +3353,10 @@
           "full_name": "horizon3ai/CVE-2022-1388",
           "html_url": "https://github.com/horizon3ai/CVE-2022-1388",
           "description": "POC for CVE-2022-1388",
-          "stargazers_count": 231,
+          "stargazers_count": 229,
           "forks_count": 37,
           "language": "Python",
-          "updated_at": "2026-09-12T22:28:16Z",
+          "updated_at": "2026-10-02T19:56:45Z",
           "pushed_at": "2022-05-09T20:52:07Z",
           "created_at": "2022-05-09T11:46:45Z",
           "topics": [],
@@ -3836,26 +3860,23 @@
           "clone_url": "https://github.com/bandit92/CVE2022-1388_TestAPI.git"
         },
         {
-          "id": 572343924,
+          "id": 490339060,
           "name": "CVE-2022-1388",
-          "full_name": "revanmalang/CVE-2022-1388",
-          "html_url": "https://github.com/revanmalang/CVE-2022-1388",
-          "description": "",
-          "stargazers_count": 3,
-          "forks_count": 0,
+          "full_name": "saucer-man/CVE-2022-1388",
+          "html_url": "https://github.com/saucer-man/CVE-2022-1388",
+          "description": "CVE-2022-1388",
+          "stargazers_count": 2,
+          "forks_count": 1,
           "language": "Python",
-          "updated_at": "2026-09-30T10:33:30Z",
-          "pushed_at": "2022-11-30T04:07:51Z",
-          "created_at": "2022-11-30T04:06:56Z",
-          "topics": [
-            "cve",
-            "exploit"
-          ],
+          "updated_at": "2023-03-08T01:02:33Z",
+          "pushed_at": "2022-05-09T16:14:49Z",
+          "created_at": "2022-05-09T15:24:27Z",
+          "topics": [],
           "owner": {
-            "login": "revanmalang",
-            "html_url": "https://github.com/revanmalang"
+            "login": "saucer-man",
+            "html_url": "https://github.com/saucer-man"
           },
-          "clone_url": "https://github.com/revanmalang/CVE-2022-1388.git"
+          "clone_url": "https://github.com/saucer-man/CVE-2022-1388.git"
         },
         {
           "id": 491500644,
@@ -3953,25 +3974,6 @@
           "clone_url": "https://github.com/aancw/CVE-2022-1388-rs.git"
         },
         {
-          "id": 490339060,
-          "name": "CVE-2022-1388",
-          "full_name": "saucer-man/CVE-2022-1388",
-          "html_url": "https://github.com/saucer-man/CVE-2022-1388",
-          "description": "CVE-2022-1388",
-          "stargazers_count": 2,
-          "forks_count": 1,
-          "language": "Python",
-          "updated_at": "2023-03-08T01:02:33Z",
-          "pushed_at": "2022-05-09T16:14:49Z",
-          "created_at": "2022-05-09T15:24:27Z",
-          "topics": [],
-          "owner": {
-            "login": "saucer-man",
-            "html_url": "https://github.com/saucer-man"
-          },
-          "clone_url": "https://github.com/saucer-man/CVE-2022-1388.git"
-        },
-        {
           "id": 580855703,
           "name": "CVE-2022-1388",
           "full_name": "devengpk/CVE-2022-1388",
@@ -3989,6 +3991,40 @@
             "html_url": "https://github.com/devengpk"
           },
           "clone_url": "https://github.com/devengpk/CVE-2022-1388.git"
+        },
+        {
+          "id": 490613608,
+          "name": "CVE-2022-1388",
+          "full_name": "shamo0/CVE-2022-1388",
+          "html_url": "https://github.com/shamo0/CVE-2022-1388",
+          "description": "BIG-IP iControl REST vulnerability CVE-2022-1388 PoC",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2023-03-10T12:12:32Z",
+          "pushed_at": "2022-05-10T09:09:23Z",
+          "created_at": "2022-05-10T08:44:24Z",
+          "topics": [
+            "1388",
+            "2022",
+            "bash",
+            "bigip",
+            "cve",
+            "cve-2022-1388",
+            "exploit",
+            "f5",
+            "icontrol",
+            "python",
+            "rest",
+            "script",
+            "shell",
+            "vulnerabilit"
+          ],
+          "owner": {
+            "login": "shamo0",
+            "html_url": "https://github.com/shamo0"
+          },
+          "clone_url": "https://github.com/shamo0/CVE-2022-1388.git"
         },
         {
           "id": 490623250,
@@ -4162,25 +4198,6 @@
           "clone_url": "https://github.com/ThinkingOffensively/CVE-2022-1388.git"
         },
         {
-          "id": 490606277,
-          "name": "cve-2022-1388-1veresk",
-          "full_name": "iveresk/cve-2022-1388-1veresk",
-          "html_url": "https://github.com/iveresk/cve-2022-1388-1veresk",
-          "description": "Simple shell script for the exploit",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2022-12-20T12:13:57Z",
-          "pushed_at": "2022-05-24T12:39:02Z",
-          "created_at": "2022-05-10T08:22:46Z",
-          "topics": [],
-          "owner": {
-            "login": "iveresk",
-            "html_url": "https://github.com/iveresk"
-          },
-          "clone_url": "https://github.com/iveresk/cve-2022-1388-1veresk.git"
-        },
-        {
           "id": 575059061,
           "name": "CVE-2022-1388",
           "full_name": "amitlttwo/CVE-2022-1388",
@@ -4198,6 +4215,25 @@
             "html_url": "https://github.com/amitlttwo"
           },
           "clone_url": "https://github.com/amitlttwo/CVE-2022-1388.git"
+        },
+        {
+          "id": 490606277,
+          "name": "cve-2022-1388-1veresk",
+          "full_name": "iveresk/cve-2022-1388-1veresk",
+          "html_url": "https://github.com/iveresk/cve-2022-1388-1veresk",
+          "description": "Simple shell script for the exploit",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Shell",
+          "updated_at": "2022-12-20T12:13:57Z",
+          "pushed_at": "2022-05-24T12:39:02Z",
+          "created_at": "2022-05-10T08:22:46Z",
+          "topics": [],
+          "owner": {
+            "login": "iveresk",
+            "html_url": "https://github.com/iveresk"
+          },
+          "clone_url": "https://github.com/iveresk/cve-2022-1388-1veresk.git"
         },
         {
           "id": 490752282,
@@ -4219,38 +4255,23 @@
           "clone_url": "https://github.com/thatonesecguy/CVE-2022-1388-Exploit.git"
         },
         {
-          "id": 490613608,
-          "name": "CVE-2022-1388",
-          "full_name": "shamo0/CVE-2022-1388",
-          "html_url": "https://github.com/shamo0/CVE-2022-1388",
-          "description": "BIG-IP iControl REST vulnerability CVE-2022-1388 PoC",
-          "stargazers_count": 1,
+          "id": 489537473,
+          "name": "CVE-2022-1388-POC",
+          "full_name": "hackeyes/CVE-2022-1388-POC",
+          "html_url": "https://github.com/hackeyes/CVE-2022-1388-POC",
+          "description": "BIG-IP iCONTROL REST AUTH BYPASS RCE POC CVE-2022-1388",
+          "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2023-03-10T12:12:32Z",
-          "pushed_at": "2022-05-10T09:09:23Z",
-          "created_at": "2022-05-10T08:44:24Z",
-          "topics": [
-            "1388",
-            "2022",
-            "bash",
-            "bigip",
-            "cve",
-            "cve-2022-1388",
-            "exploit",
-            "f5",
-            "icontrol",
-            "python",
-            "rest",
-            "script",
-            "shell",
-            "vulnerabilit"
-          ],
+          "language": "",
+          "updated_at": "2022-05-11T20:29:21Z",
+          "pushed_at": "2022-05-05T15:30:37Z",
+          "created_at": "2022-05-07T01:31:41Z",
+          "topics": [],
           "owner": {
-            "login": "shamo0",
-            "html_url": "https://github.com/shamo0"
+            "login": "hackeyes",
+            "html_url": "https://github.com/hackeyes"
           },
-          "clone_url": "https://github.com/shamo0/CVE-2022-1388.git"
+          "clone_url": "https://github.com/hackeyes/CVE-2022-1388-POC.git"
         },
         {
           "id": 491262541,
@@ -4445,25 +4466,6 @@
             "html_url": "https://github.com/Wrin9"
           },
           "clone_url": "https://github.com/Wrin9/CVE-2022-1388.git"
-        },
-        {
-          "id": 489537473,
-          "name": "CVE-2022-1388-POC",
-          "full_name": "hackeyes/CVE-2022-1388-POC",
-          "html_url": "https://github.com/hackeyes/CVE-2022-1388-POC",
-          "description": "BIG-IP iCONTROL REST AUTH BYPASS RCE POC CVE-2022-1388",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2022-05-11T20:29:21Z",
-          "pushed_at": "2022-05-05T15:30:37Z",
-          "created_at": "2022-05-07T01:31:41Z",
-          "topics": [],
-          "owner": {
-            "login": "hackeyes",
-            "html_url": "https://github.com/hackeyes"
-          },
-          "clone_url": "https://github.com/hackeyes/CVE-2022-1388-POC.git"
         },
         {
           "id": 576167094,
@@ -5485,10 +5487,10 @@
           "full_name": "Mr-xn/CVE-2022-21371",
           "html_url": "https://github.com/Mr-xn/CVE-2022-21371",
           "description": "Oracle WebLogic Server 12.1.3.0.0 / 12.2.1.3.0 / 12.2.1.4.0 / 14.1.1.0.0 Local File Inclusion",
-          "stargazers_count": 27,
+          "stargazers_count": 26,
           "forks_count": 8,
           "language": "",
-          "updated_at": "2024-08-12T20:20:04Z",
+          "updated_at": "2026-10-02T15:34:02Z",
           "pushed_at": "2022-01-25T14:52:21Z",
           "created_at": "2022-01-25T14:50:29Z",
           "topics": [],
@@ -6711,7 +6713,7 @@
           "html_url": "https://github.com/msm8916-mainline/CVE-2022-22063",
           "description": "Security issue in the hypervisor firmware of some older Qualcomm chipsets",
           "stargazers_count": 46,
-          "forks_count": 3,
+          "forks_count": 4,
           "language": "C",
           "updated_at": "2026-09-09T17:40:23Z",
           "pushed_at": "2022-12-27T20:32:37Z",
@@ -8241,44 +8243,6 @@
           "clone_url": "https://github.com/qq87234770/CVE-2022-22947.git"
         },
         {
-          "id": 478073054,
-          "name": "CVE-2022-22947-POC-Reproduce",
-          "full_name": "aesm1p/CVE-2022-22947-POC-Reproduce",
-          "html_url": "https://github.com/aesm1p/CVE-2022-22947-POC-Reproduce",
-          "description": "CVE-2022-22947 reproduce",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-05-13T19:49:29Z",
-          "pushed_at": "2022-04-05T10:14:01Z",
-          "created_at": "2022-04-05T10:11:03Z",
-          "topics": [],
-          "owner": {
-            "login": "aesm1p",
-            "html_url": "https://github.com/aesm1p"
-          },
-          "clone_url": "https://github.com/aesm1p/CVE-2022-22947-POC-Reproduce.git"
-        },
-        {
-          "id": 465993918,
-          "name": "CVE-2022-22947",
-          "full_name": "BerMalBerIst/CVE-2022-22947",
-          "html_url": "https://github.com/BerMalBerIst/CVE-2022-22947",
-          "description": "Exp",
-          "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "Python",
-          "updated_at": "2023-01-09T05:36:31Z",
-          "pushed_at": "2022-03-04T05:33:47Z",
-          "created_at": "2022-03-04T05:26:33Z",
-          "topics": [],
-          "owner": {
-            "login": "BerMalBerIst",
-            "html_url": "https://github.com/BerMalBerIst"
-          },
-          "clone_url": "https://github.com/BerMalBerIst/CVE-2022-22947.git"
-        },
-        {
           "id": 465956696,
           "name": "Spring-Cloud-Gateway-CVE-2022-22947",
           "full_name": "Summer177/Spring-Cloud-Gateway-CVE-2022-22947",
@@ -8296,6 +8260,44 @@
             "html_url": "https://github.com/Summer177"
           },
           "clone_url": "https://github.com/Summer177/Spring-Cloud-Gateway-CVE-2022-22947.git"
+        },
+        {
+          "id": 475703854,
+          "name": "CVE-2022-22947-exp",
+          "full_name": "scopion/CVE-2022-22947-exp",
+          "html_url": "https://github.com/scopion/CVE-2022-22947-exp",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2022-04-14T01:12:30Z",
+          "pushed_at": "2022-03-30T03:15:09Z",
+          "created_at": "2022-03-30T03:22:50Z",
+          "topics": [],
+          "owner": {
+            "login": "scopion",
+            "html_url": "https://github.com/scopion"
+          },
+          "clone_url": "https://github.com/scopion/CVE-2022-22947-exp.git"
+        },
+        {
+          "id": 466102092,
+          "name": "CVE-2022-22947-POC",
+          "full_name": "nanaao/CVE-2022-22947-POC",
+          "html_url": "https://github.com/nanaao/CVE-2022-22947-POC",
+          "description": "CVE-2022-22947批量检测脚本，回显命令没进行正则，大佬们先用着，后续再更",
+          "stargazers_count": 0,
+          "forks_count": 15,
+          "language": "",
+          "updated_at": "2024-08-12T20:21:13Z",
+          "pushed_at": "2022-03-04T11:36:47Z",
+          "created_at": "2022-03-04T11:45:35Z",
+          "topics": [],
+          "owner": {
+            "login": "nanaao",
+            "html_url": "https://github.com/nanaao"
+          },
+          "clone_url": "https://github.com/nanaao/CVE-2022-22947-POC.git"
         },
         {
           "id": 1257276221,
@@ -8336,44 +8338,6 @@
           "clone_url": "https://github.com/hh-hunter/cve-2022-22947-docker.git"
         },
         {
-          "id": 466102092,
-          "name": "CVE-2022-22947-POC",
-          "full_name": "nanaao/CVE-2022-22947-POC",
-          "html_url": "https://github.com/nanaao/CVE-2022-22947-POC",
-          "description": "CVE-2022-22947批量检测脚本，回显命令没进行正则，大佬们先用着，后续再更",
-          "stargazers_count": 0,
-          "forks_count": 15,
-          "language": "",
-          "updated_at": "2024-08-12T20:21:13Z",
-          "pushed_at": "2022-03-04T11:36:47Z",
-          "created_at": "2022-03-04T11:45:35Z",
-          "topics": [],
-          "owner": {
-            "login": "nanaao",
-            "html_url": "https://github.com/nanaao"
-          },
-          "clone_url": "https://github.com/nanaao/CVE-2022-22947-POC.git"
-        },
-        {
-          "id": 468214144,
-          "name": "Spring-CVE-2022-22947-",
-          "full_name": "PaoPaoLong-lab/Spring-CVE-2022-22947-",
-          "html_url": "https://github.com/PaoPaoLong-lab/Spring-CVE-2022-22947-",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2022-03-10T10:46:36Z",
-          "pushed_at": "2022-03-10T10:46:32Z",
-          "created_at": "2022-03-10T06:01:32Z",
-          "topics": [],
-          "owner": {
-            "login": "PaoPaoLong-lab",
-            "html_url": "https://github.com/PaoPaoLong-lab"
-          },
-          "clone_url": "https://github.com/PaoPaoLong-lab/Spring-CVE-2022-22947-.git"
-        },
-        {
           "id": 465652006,
           "name": "cve-2022-22947",
           "full_name": "scopion/cve-2022-22947",
@@ -8391,44 +8355,6 @@
             "html_url": "https://github.com/scopion"
           },
           "clone_url": "https://github.com/scopion/cve-2022-22947.git"
-        },
-        {
-          "id": 475703854,
-          "name": "CVE-2022-22947-exp",
-          "full_name": "scopion/CVE-2022-22947-exp",
-          "html_url": "https://github.com/scopion/CVE-2022-22947-exp",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2022-04-14T01:12:30Z",
-          "pushed_at": "2022-03-30T03:15:09Z",
-          "created_at": "2022-03-30T03:22:50Z",
-          "topics": [],
-          "owner": {
-            "login": "scopion",
-            "html_url": "https://github.com/scopion"
-          },
-          "clone_url": "https://github.com/scopion/CVE-2022-22947-exp.git"
-        },
-        {
-          "id": 1253663270,
-          "name": "spring-cloud-gateway-cve-2022-22947-report",
-          "full_name": "ciri3/spring-cloud-gateway-cve-2022-22947-report",
-          "html_url": "https://github.com/ciri3/spring-cloud-gateway-cve-2022-22947-report",
-          "description": "Technical report about CVE-2022-22947 in Spring Cloud Gateway and its exploitation through exposed Actuator endpoints.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-06-03T11:24:35Z",
-          "pushed_at": "2026-06-03T11:24:31Z",
-          "created_at": "2026-05-29T17:34:32Z",
-          "topics": [],
-          "owner": {
-            "login": "ciri3",
-            "html_url": "https://github.com/ciri3"
-          },
-          "clone_url": "https://github.com/ciri3/spring-cloud-gateway-cve-2022-22947-report.git"
         },
         {
           "id": 476087252,
@@ -8450,6 +8376,25 @@
           "clone_url": "https://github.com/fbion/CVE-2022-22947.git"
         },
         {
+          "id": 468214144,
+          "name": "Spring-CVE-2022-22947-",
+          "full_name": "PaoPaoLong-lab/Spring-CVE-2022-22947-",
+          "html_url": "https://github.com/PaoPaoLong-lab/Spring-CVE-2022-22947-",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2022-03-10T10:46:36Z",
+          "pushed_at": "2022-03-10T10:46:32Z",
+          "created_at": "2022-03-10T06:01:32Z",
+          "topics": [],
+          "owner": {
+            "login": "PaoPaoLong-lab",
+            "html_url": "https://github.com/PaoPaoLong-lab"
+          },
+          "clone_url": "https://github.com/PaoPaoLong-lab/Spring-CVE-2022-22947-.git"
+        },
+        {
           "id": 466061651,
           "name": "CVE-2022-22947-goby",
           "full_name": "flying0er/CVE-2022-22947-goby",
@@ -8467,6 +8412,44 @@
             "html_url": "https://github.com/flying0er"
           },
           "clone_url": "https://github.com/flying0er/CVE-2022-22947-goby.git"
+        },
+        {
+          "id": 465993918,
+          "name": "CVE-2022-22947",
+          "full_name": "BerMalBerIst/CVE-2022-22947",
+          "html_url": "https://github.com/BerMalBerIst/CVE-2022-22947",
+          "description": "Exp",
+          "stargazers_count": 0,
+          "forks_count": 1,
+          "language": "Python",
+          "updated_at": "2023-01-09T05:36:31Z",
+          "pushed_at": "2022-03-04T05:33:47Z",
+          "created_at": "2022-03-04T05:26:33Z",
+          "topics": [],
+          "owner": {
+            "login": "BerMalBerIst",
+            "html_url": "https://github.com/BerMalBerIst"
+          },
+          "clone_url": "https://github.com/BerMalBerIst/CVE-2022-22947.git"
+        },
+        {
+          "id": 478073054,
+          "name": "CVE-2022-22947-POC-Reproduce",
+          "full_name": "aesm1p/CVE-2022-22947-POC-Reproduce",
+          "html_url": "https://github.com/aesm1p/CVE-2022-22947-POC-Reproduce",
+          "description": "CVE-2022-22947 reproduce",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-05-13T19:49:29Z",
+          "pushed_at": "2022-04-05T10:14:01Z",
+          "created_at": "2022-04-05T10:11:03Z",
+          "topics": [],
+          "owner": {
+            "login": "aesm1p",
+            "html_url": "https://github.com/aesm1p"
+          },
+          "clone_url": "https://github.com/aesm1p/CVE-2022-22947-POC-Reproduce.git"
         }
       ]
     },
@@ -16520,7 +16503,7 @@
           "forks_count": 0,
           "language": "Python",
           "updated_at": "2026-09-30T05:41:32Z",
-          "pushed_at": "2026-09-30T05:41:27Z",
+          "pushed_at": "2026-10-03T23:11:30Z",
           "created_at": "2026-05-06T01:47:50Z",
           "topics": [],
           "owner": {
@@ -17259,10 +17242,10 @@
           "full_name": "websecnl/CVE-2022-26809",
           "html_url": "https://github.com/websecnl/CVE-2022-26809",
           "description": "Remote Code Execution Exploit in the RPC Library",
-          "stargazers_count": 28,
+          "stargazers_count": 27,
           "forks_count": 4,
           "language": "Python",
-          "updated_at": "2026-09-09T03:17:38Z",
+          "updated_at": "2026-10-02T15:34:04Z",
           "pushed_at": "2022-04-19T17:04:04Z",
           "created_at": "2022-04-14T08:12:24Z",
           "topics": [
@@ -24553,10 +24536,10 @@
           "full_name": "Muirey03/CVE-2022-32832",
           "html_url": "https://github.com/Muirey03/CVE-2022-32832",
           "description": "Proof-of-concept and write-up for the CVE-2022-32832 vulnerability patched in iOS 15.6",
-          "stargazers_count": 97,
+          "stargazers_count": 98,
           "forks_count": 7,
           "language": "C",
-          "updated_at": "2026-08-08T14:24:04Z",
+          "updated_at": "2026-10-04T03:14:42Z",
           "pushed_at": "2022-07-21T13:44:32Z",
           "created_at": "2022-07-21T13:09:50Z",
           "topics": [],
@@ -24718,10 +24701,10 @@
           "full_name": "Bdenneu/CVE-2022-33679",
           "html_url": "https://github.com/Bdenneu/CVE-2022-33679",
           "description": "One day based on https://googleprojectzero.blogspot.com/2022/10/rc4-is-still-considered-harmful.html",
-          "stargazers_count": 414,
+          "stargazers_count": 413,
           "forks_count": 70,
           "language": "Python",
-          "updated_at": "2026-09-29T16:12:44Z",
+          "updated_at": "2026-10-03T01:45:53Z",
           "pushed_at": "2024-11-10T17:21:28Z",
           "created_at": "2022-11-02T18:38:01Z",
           "topics": [],
@@ -30213,7 +30196,7 @@
           "html_url": "https://github.com/Cr4ckC4t/cve-2022-41352-zimbra-rce",
           "description": "Zimbra \u003c9.0.0.p27 RCE",
           "stargazers_count": 109,
-          "forks_count": 25,
+          "forks_count": 24,
           "language": "Python",
           "updated_at": "2026-04-04T16:53:02Z",
           "pushed_at": "2022-11-24T14:59:35Z",
@@ -32020,10 +32003,10 @@
           "full_name": "gmh5225/CVE-2022-44721-CsFalconUninstaller",
           "html_url": "https://github.com/gmh5225/CVE-2022-44721-CsFalconUninstaller",
           "description": "",
-          "stargazers_count": 23,
+          "stargazers_count": 24,
           "forks_count": 8,
           "language": "",
-          "updated_at": "2026-09-30T18:17:56Z",
+          "updated_at": "2026-10-02T11:41:52Z",
           "pushed_at": "2022-12-02T14:38:27Z",
           "created_at": "2022-12-03T11:04:17Z",
           "topics": [],
@@ -32997,10 +32980,10 @@
           "full_name": "binganao/vulns-2022",
           "html_url": "https://github.com/binganao/vulns-2022",
           "description": "本项目用于搜集 2022 年的漏洞，注意：本项目并不刻意搜集 POC 或 EXP，主要以CVE-2021、CVE-2022 为关键词，包含但不限于漏洞资讯、漏洞复现、漏洞分析、漏洞验证、漏洞利用",
-          "stargazers_count": 374,
+          "stargazers_count": 373,
           "forks_count": 52,
           "language": "",
-          "updated_at": "2026-09-27T14:29:30Z",
+          "updated_at": "2026-10-02T15:15:35Z",
           "pushed_at": "2022-04-17T04:01:19Z",
           "created_at": "2022-01-15T00:31:06Z",
           "topics": [],
