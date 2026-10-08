@@ -6029,7 +6029,7 @@
           "html_url": "https://github.com/Pealeap/CVE-2025-21065",
           "description": "A PoC for CVE-2025-21065 that allows any self-attacker to execute commands with Retail Mode privileges (UID 1000/GID 1000, u:r:system_app:s0)",
           "stargazers_count": 0,
-          "forks_count": 0,
+          "forks_count": 1,
           "language": "C",
           "updated_at": "2026-10-03T18:02:56Z",
           "pushed_at": "2026-10-03T18:03:37Z",
@@ -6372,10 +6372,10 @@
           "full_name": "linux-tools/VIVO-IQOO-Neo9-Root-Tools",
           "html_url": "https://github.com/linux-tools/VIVO-IQOO-Neo9-Root-Tools",
           "description": "Support OriginOS 4~ OriginOS 6(Some firmware requires manual, individual adaptation), using CVE-2025-21479，CVE-2026-43499",
-          "stargazers_count": 4,
+          "stargazers_count": 5,
           "forks_count": 3,
           "language": "C",
-          "updated_at": "2026-10-07T13:03:17Z",
+          "updated_at": "2026-10-08T03:58:59Z",
           "pushed_at": "2026-10-06T09:28:05Z",
           "created_at": "2026-10-06T09:08:12Z",
           "topics": [],
@@ -6432,6 +6432,36 @@
           "clone_url": "https://github.com/diyiqiuye/CVE-2025-21479-FX5P.git"
         },
         {
+          "id": 1401988509,
+          "name": "cve-2025-21479_iqooneo7speed",
+          "full_name": "longg66/cve-2025-21479_iqooneo7speed",
+          "html_url": "https://github.com/longg66/cve-2025-21479_iqooneo7speed",
+          "description": "CVE-2025-21479 (Qualcomm Adreno GPU) local privilege escalation on vivo iQOO Neo7 竞速版 / PD2232 (SM8475, Adreno 730, GKI 5.10). No bootloader unlock, no flashing. Includes adapted exploit source, prebuilt binaries, compatibility precheck, and KernelSU/ReSukiSU late-load persistence. Verified on kernel 5.10.233-gki, vendor patch 2025-03-05.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "C",
+          "updated_at": "2026-10-02T15:43:22Z",
+          "pushed_at": "2026-10-02T15:43:18Z",
+          "created_at": "2026-10-02T15:25:49Z",
+          "topics": [
+            "android",
+            "cve-2025-21479",
+            "kernel-exploit",
+            "kernelsu",
+            "privilege-escalation",
+            "qualcomm-adreno",
+            "root",
+            "selinux",
+            "sm8475",
+            "vivo"
+          ],
+          "owner": {
+            "login": "longg66",
+            "html_url": "https://github.com/longg66"
+          },
+          "clone_url": "https://github.com/longg66/cve-2025-21479_iqooneo7speed.git"
+        },
+        {
           "id": 1372965776,
           "name": "lenovo_y700_tb320fc_on_CVE-2025-21479",
           "full_name": "xjoker/lenovo_y700_tb320fc_on_CVE-2025-21479",
@@ -6470,36 +6500,6 @@
           "clone_url": "https://github.com/7678837-glitch/lenovo_y700_tb320fc_on_CVE-2025-21479.git"
         },
         {
-          "id": 1401988509,
-          "name": "cve-2025-21479_iqooneo7speed",
-          "full_name": "longg66/cve-2025-21479_iqooneo7speed",
-          "html_url": "https://github.com/longg66/cve-2025-21479_iqooneo7speed",
-          "description": "CVE-2025-21479 (Qualcomm Adreno GPU) local privilege escalation on vivo iQOO Neo7 竞速版 / PD2232 (SM8475, Adreno 730, GKI 5.10). No bootloader unlock, no flashing. Includes adapted exploit source, prebuilt binaries, compatibility precheck, and KernelSU/ReSukiSU late-load persistence. Verified on kernel 5.10.233-gki, vendor patch 2025-03-05.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "C",
-          "updated_at": "2026-10-02T15:43:22Z",
-          "pushed_at": "2026-10-02T15:43:18Z",
-          "created_at": "2026-10-02T15:25:49Z",
-          "topics": [
-            "android",
-            "cve-2025-21479",
-            "kernel-exploit",
-            "kernelsu",
-            "privilege-escalation",
-            "qualcomm-adreno",
-            "root",
-            "selinux",
-            "sm8475",
-            "vivo"
-          ],
-          "owner": {
-            "login": "longg66",
-            "html_url": "https://github.com/longg66"
-          },
-          "clone_url": "https://github.com/longg66/cve-2025-21479_iqooneo7speed.git"
-        },
-        {
           "id": 1407994057,
           "name": "linux-tools-vivo_iqoo_neo_9_root_research_on_CVE-2025-21479",
           "full_name": "Shiho-Patch/linux-tools-vivo_iqoo_neo_9_root_research_on_CVE-2025-21479",
@@ -6517,6 +6517,25 @@
             "html_url": "https://github.com/Shiho-Patch"
           },
           "clone_url": "https://github.com/Shiho-Patch/linux-tools-vivo_iqoo_neo_9_root_research_on_CVE-2025-21479.git"
+        },
+        {
+          "id": 1409633035,
+          "name": "cheese-app",
+          "full_name": "Type010/cheese-app",
+          "html_url": "https://github.com/Type010/cheese-app",
+          "description": "CVE-2025-21479",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Kotlin",
+          "updated_at": "2026-10-08T03:25:56Z",
+          "pushed_at": "2026-10-08T03:25:52Z",
+          "created_at": "2026-10-08T02:50:32Z",
+          "topics": [],
+          "owner": {
+            "login": "Type010",
+            "html_url": "https://github.com/Type010"
+          },
+          "clone_url": "https://github.com/Type010/cheese-app.git"
         }
       ]
     },
@@ -6601,10 +6620,10 @@
           "full_name": "hoefler02/CVE-2025-21756",
           "html_url": "https://github.com/hoefler02/CVE-2025-21756",
           "description": "Exploit for CVE-2025-21756 for Linux kernel 6.6.75. My first linux kernel exploit!",
-          "stargazers_count": 160,
+          "stargazers_count": 159,
           "forks_count": 25,
           "language": "C",
-          "updated_at": "2026-09-17T02:59:32Z",
+          "updated_at": "2026-10-07T20:37:11Z",
           "pushed_at": "2025-06-05T21:32:05Z",
           "created_at": "2025-04-18T14:22:15Z",
           "topics": [],
@@ -9318,10 +9337,10 @@
           "full_name": "34306/decrypted",
           "html_url": "https://github.com/34306/decrypted",
           "description": "FairPlay decryptor (dump iPA) for iOS Application that running on macOS with SIP-enabled, using CVE-2025-24204. Support macOS 15.0-15.2",
-          "stargazers_count": 151,
+          "stargazers_count": 152,
           "forks_count": 22,
           "language": "Swift",
-          "updated_at": "2026-09-30T21:45:30Z",
+          "updated_at": "2026-10-08T03:05:14Z",
           "pushed_at": "2025-09-04T17:59:49Z",
           "created_at": "2025-09-04T17:49:51Z",
           "topics": [],
@@ -22447,25 +22466,6 @@
             "html_url": "https://github.com/bambooqj"
           },
           "clone_url": "https://github.com/bambooqj/CVE-2025-32432.git"
-        },
-        {
-          "id": 1369721856,
-          "name": "CVE-2025-32432",
-          "full_name": "Si13NTTT/CVE-2025-32432",
-          "html_url": "https://github.com/Si13NTTT/CVE-2025-32432",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-09-15T12:12:04Z",
-          "pushed_at": "2026-09-15T12:12:00Z",
-          "created_at": "2026-09-14T10:19:44Z",
-          "topics": [],
-          "owner": {
-            "login": "Si13NTTT",
-            "html_url": "https://github.com/Si13NTTT"
-          },
-          "clone_url": "https://github.com/Si13NTTT/CVE-2025-32432.git"
         }
       ]
     },
@@ -30349,10 +30349,10 @@
           "full_name": "Shinn-Home/CVE-2025-45737",
           "html_url": "https://github.com/Shinn-Home/CVE-2025-45737",
           "description": "利用CVE-2025-45737漏洞，实现提权",
-          "stargazers_count": 9,
+          "stargazers_count": 10,
           "forks_count": 8,
           "language": "C++",
-          "updated_at": "2026-10-06T05:55:49Z",
+          "updated_at": "2026-10-08T02:27:06Z",
           "pushed_at": "2026-10-02T13:52:45Z",
           "created_at": "2026-10-02T13:48:22Z",
           "topics": [],
@@ -40475,8 +40475,8 @@
           "stargazers_count": 3,
           "forks_count": 1,
           "language": "Python",
-          "updated_at": "2026-10-07T18:01:30Z",
-          "pushed_at": "2026-10-07T18:01:25Z",
+          "updated_at": "2026-10-08T04:04:13Z",
+          "pushed_at": "2026-10-08T04:04:09Z",
           "created_at": "2025-08-14T05:16:16Z",
           "topics": [
             "1panel",
@@ -41048,10 +41048,10 @@
           "full_name": "assetnote/react2shell-scanner",
           "html_url": "https://github.com/assetnote/react2shell-scanner",
           "description": "High Fidelity Detection Mechanism for RSC/Next.js RCE (CVE-2025-55182 \u0026 CVE-2025-66478)",
-          "stargazers_count": 2453,
+          "stargazers_count": 2454,
           "forks_count": 269,
           "language": "Python",
-          "updated_at": "2026-10-06T14:05:58Z",
+          "updated_at": "2026-10-08T02:42:40Z",
           "pushed_at": "2025-12-07T04:16:46Z",
           "created_at": "2025-12-04T06:55:04Z",
           "topics": [],
@@ -41067,10 +41067,10 @@
           "full_name": "msanft/CVE-2025-55182",
           "html_url": "https://github.com/msanft/CVE-2025-55182",
           "description": "Explanation and full RCE PoC for CVE-2025-55182",
-          "stargazers_count": 1429,
+          "stargazers_count": 1430,
           "forks_count": 196,
           "language": "Python",
-          "updated_at": "2026-09-28T12:48:24Z",
+          "updated_at": "2026-10-08T04:05:32Z",
           "pushed_at": "2025-12-08T13:51:04Z",
           "created_at": "2025-12-04T11:49:55Z",
           "topics": [],
@@ -45703,8 +45703,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "JavaScript",
-          "updated_at": "2026-10-07T18:16:16Z",
-          "pushed_at": "2026-10-07T18:16:10Z",
+          "updated_at": "2026-10-08T04:17:08Z",
+          "pushed_at": "2026-10-08T04:17:05Z",
           "created_at": "2025-12-24T14:48:19Z",
           "topics": [
             "bugbounty",
@@ -47926,8 +47926,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-10-07T18:16:10Z",
-          "pushed_at": "2026-10-07T18:16:05Z",
+          "updated_at": "2026-10-08T04:17:08Z",
+          "pushed_at": "2026-10-08T04:17:04Z",
           "created_at": "2022-06-17T10:19:10Z",
           "topics": [
             "appsec",
@@ -52405,6 +52405,30 @@
             "html_url": "https://github.com/prabhatverma47"
           },
           "clone_url": "https://github.com/prabhatverma47/CVE-2025-58180.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2025-58226",
+      "repositories": [
+        {
+          "id": 1409496070,
+          "name": "CVE-2025-58226-PoC",
+          "full_name": "QASIM1401/CVE-2025-58226-PoC",
+          "html_url": "https://github.com/QASIM1401/CVE-2025-58226-PoC",
+          "description": "CVE-2025-58226 — 3D FlipBook \u003c= 1.16.16 unauthenticated sensitive data exposure: two-stage PoC (enumerate -\u003e leak file URLs -\u003e download) + nuclei template",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-10-07T23:46:59Z",
+          "pushed_at": "2026-10-07T23:46:54Z",
+          "created_at": "2026-10-07T23:46:42Z",
+          "topics": [],
+          "owner": {
+            "login": "QASIM1401",
+            "html_url": "https://github.com/QASIM1401"
+          },
+          "clone_url": "https://github.com/QASIM1401/CVE-2025-58226-PoC.git"
         }
       ]
     },
@@ -58222,25 +58246,6 @@
             "html_url": "https://github.com/BardLaudian"
           },
           "clone_url": "https://github.com/BardLaudian/CVE-2025-64512.git"
-        },
-        {
-          "id": 1370956908,
-          "name": "CVE-2025-64512_PoC",
-          "full_name": "Jinook-Kim/CVE-2025-64512_PoC",
-          "html_url": "https://github.com/Jinook-Kim/CVE-2025-64512_PoC",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-09-15T05:41:51Z",
-          "pushed_at": "2026-09-15T05:41:48Z",
-          "created_at": "2026-09-15T05:39:37Z",
-          "topics": [],
-          "owner": {
-            "login": "Jinook-Kim",
-            "html_url": "https://github.com/Jinook-Kim"
-          },
-          "clone_url": "https://github.com/Jinook-Kim/CVE-2025-64512_PoC.git"
         }
       ]
     },
@@ -59963,8 +59968,8 @@
           "stargazers_count": 1,
           "forks_count": 0,
           "language": "Go",
-          "updated_at": "2026-10-07T18:33:44Z",
-          "pushed_at": "2026-10-07T18:33:39Z",
+          "updated_at": "2026-10-08T04:32:27Z",
+          "pushed_at": "2026-10-08T04:32:23Z",
           "created_at": "2026-03-23T09:09:21Z",
           "topics": [
             "cve",
@@ -60052,10 +60057,10 @@
           "full_name": "assetnote/react2shell-scanner",
           "html_url": "https://github.com/assetnote/react2shell-scanner",
           "description": "High Fidelity Detection Mechanism for RSC/Next.js RCE (CVE-2025-55182 \u0026 CVE-2025-66478)",
-          "stargazers_count": 2453,
+          "stargazers_count": 2454,
           "forks_count": 269,
           "language": "Python",
-          "updated_at": "2026-10-06T14:05:58Z",
+          "updated_at": "2026-10-08T02:42:40Z",
           "pushed_at": "2025-12-07T04:16:46Z",
           "created_at": "2025-12-04T06:55:04Z",
           "topics": [],
@@ -61848,8 +61853,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-10-07T18:16:10Z",
-          "pushed_at": "2026-10-07T18:16:05Z",
+          "updated_at": "2026-10-08T04:17:08Z",
+          "pushed_at": "2026-10-08T04:17:04Z",
           "created_at": "2022-06-17T10:19:10Z",
           "topics": [
             "appsec",
