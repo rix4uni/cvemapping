@@ -2294,7 +2294,7 @@
           "html_url": "https://github.com/Notselwyn/CVE-2024-1086",
           "description": "Universal local privilege escalation Proof-of-Concept exploit for CVE-2024-1086, working on most Linux kernels between v5.14 and v6.6, including Debian, Ubuntu, and KernelCTF. The success rate is 99.4% in KernelCTF images.",
           "stargazers_count": 2458,
-          "forks_count": 327,
+          "forks_count": 328,
           "language": "C",
           "updated_at": "2026-10-13T19:05:49Z",
           "pushed_at": "2024-04-17T16:09:54Z",
@@ -2464,10 +2464,10 @@
           "full_name": "imnotcha0s/CVE-2024-10914",
           "html_url": "https://github.com/imnotcha0s/CVE-2024-10914",
           "description": "Exploit for cve-2024-10914: D-Link DNS-320, DNS-320LW, DNS-325, DNS-340L Version 1.00, Version 1.01.0914.2012, Version 1.01, Version 1.02, Version 1.08 Command Injection",
-          "stargazers_count": 14,
+          "stargazers_count": 15,
           "forks_count": 4,
           "language": "Python",
-          "updated_at": "2026-10-11T20:06:26Z",
+          "updated_at": "2026-10-14T12:37:30Z",
           "pushed_at": "2024-11-09T19:31:42Z",
           "created_at": "2024-11-09T19:30:39Z",
           "topics": [],
@@ -5227,7 +5227,7 @@
           "html_url": "https://github.com/tykawaii98/CVE-2024-21338_PoC",
           "description": "",
           "stargazers_count": 40,
-          "forks_count": 11,
+          "forks_count": 12,
           "language": "C++",
           "updated_at": "2026-06-01T09:36:26Z",
           "pushed_at": "2024-06-23T06:09:10Z",
@@ -8446,6 +8446,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2024-23222",
+      "repositories": [
+        {
+          "id": 1418754376,
+          "name": "CVE-2024-23222",
+          "full_name": "jamezx32/CVE-2024-23222",
+          "html_url": "https://github.com/jamezx32/CVE-2024-23222",
+          "description": "JSC DFG TOCTOU stale JSCell - deterministic UAF PoCs + race harness",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "JavaScript",
+          "updated_at": "2026-10-14T11:02:26Z",
+          "pushed_at": "2026-10-14T10:49:01Z",
+          "created_at": "2026-10-14T10:48:55Z",
+          "topics": [],
+          "owner": {
+            "login": "jamezx32",
+            "html_url": "https://github.com/jamezx32"
+          },
+          "clone_url": "https://github.com/jamezx32/CVE-2024-23222.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2024-23298",
       "repositories": [
         {
@@ -9078,44 +9102,6 @@
           "clone_url": "https://github.com/NingXin2002/HFS2.3_poc.git"
         },
         {
-          "id": 1327405964,
-          "name": "CVE-2024-23692",
-          "full_name": "sandimfz/CVE-2024-23692",
-          "html_url": "https://github.com/sandimfz/CVE-2024-23692",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-10-09T09:48:21Z",
-          "pushed_at": "2026-08-23T02:11:38Z",
-          "created_at": "2026-08-08T04:20:57Z",
-          "topics": [],
-          "owner": {
-            "login": "sandimfz",
-            "html_url": "https://github.com/sandimfz"
-          },
-          "clone_url": "https://github.com/sandimfz/CVE-2024-23692.git"
-        },
-        {
-          "id": 815792680,
-          "name": "CVE-2024-23692-exp",
-          "full_name": "Tupler/CVE-2024-23692-exp",
-          "html_url": "https://github.com/Tupler/CVE-2024-23692-exp",
-          "description": "CVE-2024-23692 exp",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2024-06-16T07:05:17Z",
-          "pushed_at": "2024-06-16T07:05:14Z",
-          "created_at": "2024-06-16T07:04:01Z",
-          "topics": [],
-          "owner": {
-            "login": "Tupler",
-            "html_url": "https://github.com/Tupler"
-          },
-          "clone_url": "https://github.com/Tupler/CVE-2024-23692-exp.git"
-        },
-        {
           "id": 1167229680,
           "name": "hfs2",
           "full_name": "wgetnz/hfs2",
@@ -9171,6 +9157,25 @@
             "html_url": "https://github.com/WanLiChangChengWanLiChang"
           },
           "clone_url": "https://github.com/WanLiChangChengWanLiChang/CVE-2024-23692-RCE.git"
+        },
+        {
+          "id": 815792680,
+          "name": "CVE-2024-23692-exp",
+          "full_name": "Tupler/CVE-2024-23692-exp",
+          "html_url": "https://github.com/Tupler/CVE-2024-23692-exp",
+          "description": "CVE-2024-23692 exp",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2024-06-16T07:05:17Z",
+          "pushed_at": "2024-06-16T07:05:14Z",
+          "created_at": "2024-06-16T07:04:01Z",
+          "topics": [],
+          "owner": {
+            "login": "Tupler",
+            "html_url": "https://github.com/Tupler"
+          },
+          "clone_url": "https://github.com/Tupler/CVE-2024-23692-exp.git"
         }
       ]
     },
@@ -14343,10 +14348,10 @@
           "full_name": "X-Projetion/CVE-2024-26304-RCE-exploit",
           "html_url": "https://github.com/X-Projetion/CVE-2024-26304-RCE-exploit",
           "description": "CVE-2024-26304 is a critical vulnerability (CVSS score of 9.8) affecting ArubaOS",
-          "stargazers_count": 6,
+          "stargazers_count": 5,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-01-27T02:28:36Z",
+          "updated_at": "2026-10-14T16:49:05Z",
           "pushed_at": "2024-10-05T01:51:59Z",
           "created_at": "2024-10-05T01:38:36Z",
           "topics": [],
@@ -16989,6 +16994,25 @@
             "html_url": "https://github.com/PumpkinBridge"
           },
           "clone_url": "https://github.com/PumpkinBridge/Chrome-CVE-2024-2887-RCE-POC.git"
+        },
+        {
+          "id": 1418754938,
+          "name": "CVE-2024-2887",
+          "full_name": "jamezx32/CVE-2024-2887",
+          "html_url": "https://github.com/jamezx32/CVE-2024-2887",
+          "description": "V8 Wasm GC type confusion - two PoCs (kExtern / kNone paths)",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "JavaScript",
+          "updated_at": "2026-10-14T11:02:31Z",
+          "pushed_at": "2026-10-14T10:49:34Z",
+          "created_at": "2026-10-14T10:49:28Z",
+          "topics": [],
+          "owner": {
+            "login": "jamezx32",
+            "html_url": "https://github.com/jamezx32"
+          },
+          "clone_url": "https://github.com/jamezx32/CVE-2024-2887.git"
         }
       ]
     },
@@ -17737,7 +17761,7 @@
           "html_url": "https://github.com/ambionics/cnext-exploits",
           "description": "Exploits for CNEXT (CVE-2024-2961), a buffer overflow in the glibc's iconv()",
           "stargazers_count": 505,
-          "forks_count": 60,
+          "forks_count": 61,
           "language": "Python",
           "updated_at": "2026-10-07T08:26:20Z",
           "pushed_at": "2024-09-30T08:45:56Z",
@@ -18677,7 +18701,7 @@
           "stargazers_count": 528,
           "forks_count": 37,
           "language": "C++",
-          "updated_at": "2026-10-13T13:58:52Z",
+          "updated_at": "2026-10-14T10:02:24Z",
           "pushed_at": "2025-07-13T14:10:02Z",
           "created_at": "2024-07-15T08:07:05Z",
           "topics": [],
@@ -21159,7 +21183,7 @@
           "html_url": "https://github.com/amalmurali47/git_rce",
           "description": "Exploit PoC for CVE-2024-32002",
           "stargazers_count": 532,
-          "forks_count": 146,
+          "forks_count": 147,
           "language": "Shell",
           "updated_at": "2026-09-24T07:16:28Z",
           "pushed_at": "2024-05-19T07:12:00Z",
@@ -21206,7 +21230,7 @@
           "html_url": "https://github.com/amalmurali47/hook",
           "description": "Hook for the PoC for exploiting CVE-2024-32002",
           "stargazers_count": 18,
-          "forks_count": 31,
+          "forks_count": 32,
           "language": "Shell",
           "updated_at": "2026-06-13T14:18:13Z",
           "pushed_at": "2024-05-19T06:30:05Z",
@@ -26151,17 +26175,17 @@
       "cve_id": "CVE-2024-36057",
       "repositories": [
         {
-          "id": 1356974921,
+          "id": 1419337787,
           "name": "CVE-2024-36057",
           "full_name": "hacklantic/CVE-2024-36057",
           "html_url": "https://github.com/hacklantic/CVE-2024-36057",
-          "description": "CVE-2024-36057 — Authenticated OS Command Injection in Koha Library Software \u003c 22.05.22 (upload-cover-image.pl). Advisory + PoC by Hacklantic.",
+          "description": "CVE-2024-36057 - Authenticated OS Command Injection in Koha Library Software \u003c 23.05.10 (upload-cover-image.pl). Advisory + PoC by Hacklantic.",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-09-19T10:51:47Z",
-          "pushed_at": "2026-09-04T09:54:40Z",
-          "created_at": "2026-09-04T09:54:36Z",
+          "updated_at": "2026-10-14T15:58:43Z",
+          "pushed_at": "2026-10-14T15:58:38Z",
+          "created_at": "2026-10-14T15:58:32Z",
           "topics": [
             "command-injection",
             "cve",
@@ -26185,17 +26209,17 @@
       "cve_id": "CVE-2024-36058",
       "repositories": [
         {
-          "id": 1356975061,
+          "id": 1419337300,
           "name": "CVE-2024-36058",
           "full_name": "hacklantic/CVE-2024-36058",
           "html_url": "https://github.com/hacklantic/CVE-2024-36058",
-          "description": "CVE-2024-36058 — Authenticated Time-Based Blind SQL Injection in Koha Library Software \u003c 22.05.22 (opac-sendbasket.pl). Advisory + PoC by Hacklantic.",
+          "description": "CVE-2024-36058 - Authenticated Time-Based Blind SQL Injection in Koha Library Software \u003c 23.05.10 (opac-sendbasket.pl). Advisory + PoC by Hacklantic.",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-09-19T10:51:47Z",
-          "pushed_at": "2026-09-04T09:54:46Z",
-          "created_at": "2026-09-04T09:54:43Z",
+          "updated_at": "2026-10-14T15:58:32Z",
+          "pushed_at": "2026-10-14T15:58:28Z",
+          "created_at": "2026-10-14T15:58:21Z",
           "topics": [
             "blind-sql-injection",
             "cve",
@@ -27459,10 +27483,10 @@
           "full_name": "bartfroklage/CVE-2024-37383-POC",
           "html_url": "https://github.com/bartfroklage/CVE-2024-37383-POC",
           "description": "Proof of concept for CVE-2024-37383",
-          "stargazers_count": 5,
+          "stargazers_count": 6,
           "forks_count": 1,
           "language": "Python",
-          "updated_at": "2025-12-05T01:37:53Z",
+          "updated_at": "2026-10-14T14:01:32Z",
           "pushed_at": "2024-10-24T05:48:34Z",
           "created_at": "2024-10-24T04:01:03Z",
           "topics": [],
@@ -28390,25 +28414,6 @@
             "html_url": "https://github.com/AliHj98"
           },
           "clone_url": "https://github.com/AliHj98/cve-2024-38063-Anonyvader.git"
-        },
-        {
-          "id": 899722656,
-          "name": "Windows-CVE-2024-38063",
-          "full_name": "fredagsguf/Windows-CVE-2024-38063",
-          "html_url": "https://github.com/fredagsguf/Windows-CVE-2024-38063",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2024-12-06T22:54:04Z",
-          "pushed_at": "2024-12-06T22:54:01Z",
-          "created_at": "2024-12-06T21:45:09Z",
-          "topics": [],
-          "owner": {
-            "login": "fredagsguf",
-            "html_url": "https://github.com/fredagsguf"
-          },
-          "clone_url": "https://github.com/fredagsguf/Windows-CVE-2024-38063.git"
         }
       ]
     },
@@ -34671,7 +34676,7 @@
           "html_url": "https://github.com/synacktiv/CVE-2024-45409",
           "description": "Ruby-SAML / GitLab Authentication Bypass (CVE-2024-45409) exploit",
           "stargazers_count": 86,
-          "forks_count": 15,
+          "forks_count": 14,
           "language": "Python",
           "updated_at": "2026-10-13T19:06:45Z",
           "pushed_at": "2024-10-07T11:50:17Z",
@@ -37104,10 +37109,10 @@
           "full_name": "canyie/MagiskEoP",
           "html_url": "https://github.com/canyie/MagiskEoP",
           "description": "Exploit and writeup for installed app to root privilege escalation through CVE-2024-48336 (Magisk Bug #8279), Privileges Escalation / Arbitrary Code Execution Vulnerability",
-          "stargazers_count": 199,
+          "stargazers_count": 200,
           "forks_count": 27,
           "language": "Java",
-          "updated_at": "2026-10-06T11:02:07Z",
+          "updated_at": "2026-10-14T16:56:23Z",
           "pushed_at": "2024-11-05T02:57:25Z",
           "created_at": "2024-08-24T08:51:08Z",
           "topics": [],
@@ -40802,6 +40807,25 @@
             "html_url": "https://github.com/Alchemist3dot14"
           },
           "clone_url": "https://github.com/Alchemist3dot14/CVE-2024-5274-Detection.git"
+        },
+        {
+          "id": 1418755551,
+          "name": "CVE-2024-5274",
+          "full_name": "jamezx32/CVE-2024-5274",
+          "html_url": "https://github.com/jamezx32/CVE-2024-5274",
+          "description": "V8 parser x bytecode-flush NativeContext leak - PoC",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "JavaScript",
+          "updated_at": "2026-10-14T11:02:34Z",
+          "pushed_at": "2026-10-14T10:50:07Z",
+          "created_at": "2026-10-14T10:50:00Z",
+          "topics": [],
+          "owner": {
+            "login": "jamezx32",
+            "html_url": "https://github.com/jamezx32"
+          },
+          "clone_url": "https://github.com/jamezx32/CVE-2024-5274.git"
         }
       ]
     },
@@ -42529,7 +42553,7 @@
           "html_url": "https://github.com/ading2210/CVE-2024-6778-POC",
           "description": "A POC exploit for CVE-2024-5836 and CVE-2024-6778, allowing for a sandbox escape from a Chrome extension. ",
           "stargazers_count": 98,
-          "forks_count": 12,
+          "forks_count": 13,
           "language": "JavaScript",
           "updated_at": "2026-09-23T21:18:32Z",
           "pushed_at": "2024-10-17T05:12:29Z",
@@ -42955,10 +42979,10 @@
           "full_name": "Karmakstylez/CVE-2024-6387",
           "html_url": "https://github.com/Karmakstylez/CVE-2024-6387",
           "description": "Remote Unauthenticated Code Execution Vulnerability in OpenSSH server (CVE-2024-6387)",
-          "stargazers_count": 196,
+          "stargazers_count": 195,
           "forks_count": 46,
           "language": "Python",
-          "updated_at": "2026-09-25T12:04:27Z",
+          "updated_at": "2026-10-14T03:17:09Z",
           "pushed_at": "2024-08-22T08:50:25Z",
           "created_at": "2024-07-08T11:27:49Z",
           "topics": [],
@@ -44943,7 +44967,7 @@
           "html_url": "https://github.com/ading2210/CVE-2024-6778-POC",
           "description": "A POC exploit for CVE-2024-5836 and CVE-2024-6778, allowing for a sandbox escape from a Chrome extension. ",
           "stargazers_count": 98,
-          "forks_count": 12,
+          "forks_count": 13,
           "language": "JavaScript",
           "updated_at": "2026-09-23T21:18:32Z",
           "pushed_at": "2024-10-17T05:12:29Z",
@@ -46745,25 +46769,6 @@
             "html_url": "https://github.com/z3k0sec"
           },
           "clone_url": "https://github.com/z3k0sec/File-Read-CVE-2024-9264.git"
-        },
-        {
-          "id": 1343693889,
-          "name": "CVE-2024-9264-in-Grafana-11.x",
-          "full_name": "barun121/CVE-2024-9264-in-Grafana-11.x",
-          "html_url": "https://github.com/barun121/CVE-2024-9264-in-Grafana-11.x",
-          "description": "Vulnerability Exploitation using tools Penetration Testing, Grafana, Docker, Kali Linux.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-08-23T11:27:19Z",
-          "pushed_at": "2026-08-23T11:27:14Z",
-          "created_at": "2026-08-23T11:26:48Z",
-          "topics": [],
-          "owner": {
-            "login": "barun121",
-            "html_url": "https://github.com/barun121"
-          },
-          "clone_url": "https://github.com/barun121/CVE-2024-9264-in-Grafana-11.x.git"
         }
       ]
     },
@@ -47345,30 +47350,6 @@
             "html_url": "https://github.com/RandomRobbieBF"
           },
           "clone_url": "https://github.com/RandomRobbieBF/CVE-2024-9890.git"
-        }
-      ]
-    },
-    {
-      "cve_id": "CVE-2024-99001",
-      "repositories": [
-        {
-          "id": 1344465939,
-          "name": "patch-CVE-2024-99001",
-          "full_name": "gduma-phData/patch-CVE-2024-99001",
-          "html_url": "https://github.com/gduma-phData/patch-CVE-2024-99001",
-          "description": "Patch: V8 type confusion (Chromium)",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-08-24T03:05:23Z",
-          "pushed_at": "2026-08-24T03:05:12Z",
-          "created_at": "2026-08-24T03:05:09Z",
-          "topics": [],
-          "owner": {
-            "login": "gduma-phData",
-            "html_url": "https://github.com/gduma-phData"
-          },
-          "clone_url": "https://github.com/gduma-phData/patch-CVE-2024-99001.git"
         }
       ]
     },
