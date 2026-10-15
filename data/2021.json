@@ -226,7 +226,7 @@
           "html_url": "https://github.com/calebstewart/CVE-2021-1675",
           "description": "Pure PowerShell implementation of CVE-2021-1675 Print Spooler Local Privilege Escalation (PrintNightmare)",
           "stargazers_count": 1111,
-          "forks_count": 223,
+          "forks_count": 222,
           "language": "PowerShell",
           "updated_at": "2026-10-13T19:01:55Z",
           "pushed_at": "2021-07-05T08:54:06Z",
@@ -1092,10 +1092,10 @@
           "full_name": "KaLendsi/CVE-2021-1732-Exploit",
           "html_url": "https://github.com/KaLendsi/CVE-2021-1732-Exploit",
           "description": "CVE-2021-1732 Exploit",
-          "stargazers_count": 427,
+          "stargazers_count": 428,
           "forks_count": 123,
           "language": "C++",
-          "updated_at": "2026-09-15T07:30:07Z",
+          "updated_at": "2026-10-14T21:15:05Z",
           "pushed_at": "2021-03-05T03:10:26Z",
           "created_at": "2021-03-05T02:11:10Z",
           "topics": [],
@@ -1293,22 +1293,35 @@
       "repositories": [
         {
           "id": 1415473144,
-          "name": "kgsl-1905-msm8953",
-          "full_name": "Gonvar/kgsl-1905-msm8953",
-          "html_url": "https://github.com/Gonvar/kgsl-1905-msm8953",
-          "description": "Research notes \u0026 harnesses: KGSL SVM use-after-free (CVE-2021-1905) on Qualcomm MSM8953 / Adreno 506 / kernel 3.18 armv7. Credits upstream patches and prior art.",
+          "name": "movistar-home-root-",
+          "full_name": "Gonvar/movistar-home-root-",
+          "html_url": "https://github.com/Gonvar/movistar-home-root-",
+          "description": "Rooting the Movistar Home (ASKEY RG3205W): a working ARM32 CVE-2021-1905 (Qualcomm Adreno KGSL) exploit chain from unprivileged app to uid 0 on MSM8953 / Android 8.1 / armv7 — full kernel read/write guide, tooling and pitfalls.",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "C",
-          "updated_at": "2026-10-14T18:30:26Z",
-          "pushed_at": "2026-10-14T18:30:22Z",
+          "updated_at": "2026-10-14T20:29:33Z",
+          "pushed_at": "2026-10-14T20:28:38Z",
           "created_at": "2026-10-12T11:05:26Z",
-          "topics": [],
+          "topics": [
+            "adreno",
+            "android-8-1",
+            "android-exploit",
+            "armv7",
+            "cve-2021-1905",
+            "kernel-exploit",
+            "kgsl",
+            "movistar-home",
+            "msm8953",
+            "privilege-escalation",
+            "security-research",
+            "snapdragon-625"
+          ],
           "owner": {
             "login": "Gonvar",
             "html_url": "https://github.com/Gonvar"
           },
-          "clone_url": "https://github.com/Gonvar/kgsl-1905-msm8953.git"
+          "clone_url": "https://github.com/Gonvar/movistar-home-root-.git"
         },
         {
           "id": 370174301,
@@ -16071,35 +16084,6 @@
           "clone_url": "https://github.com/Amaranese/CVE-2021-34527.git"
         },
         {
-          "id": 1321773086,
-          "name": "printnightmare-detection-mitigation-lab",
-          "full_name": "KaritaMW/printnightmare-detection-mitigation-lab",
-          "html_url": "https://github.com/KaritaMW/printnightmare-detection-mitigation-lab",
-          "description": "Sanitised Windows security lab demonstrating Active Directory administration, host and network detection, and layered mitigation of CVE-2021-34527.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2026-08-03T12:53:47Z",
-          "pushed_at": "2026-08-03T12:51:42Z",
-          "created_at": "2026-08-03T12:45:41Z",
-          "topics": [
-            "active-directory",
-            "cybersecurity",
-            "group-policy",
-            "incident-detection",
-            "network-analysis",
-            "sysmon",
-            "vulnerability-management",
-            "windows-security",
-            "wireshark"
-          ],
-          "owner": {
-            "login": "KaritaMW",
-            "html_url": "https://github.com/KaritaMW"
-          },
-          "clone_url": "https://github.com/KaritaMW/printnightmare-detection-mitigation-lab.git"
-        },
-        {
           "id": 384221697,
           "name": "printnightmare",
           "full_name": "glorisonlai/printnightmare",
@@ -16138,23 +16122,23 @@
           "clone_url": "https://github.com/geekbrett/CVE-2021-34527-PrintNightmare-Workaround.git"
         },
         {
-          "id": 1359580692,
-          "name": "CVE-2021-1675",
-          "full_name": "HKenzoKimura/CVE-2021-1675",
-          "html_url": "https://github.com/HKenzoKimura/CVE-2021-1675",
-          "description": "Simulated PoC — PrintNightmare Windows Print Spooler RCE/LPE (CVE-2021-1675 + CVE-2021-34527). Non-functional payload for detection engineering. CISA KEV · Patched July 2021 · MITRE T1068.",
+          "id": 385174791,
+          "name": "PrintNightmare-CVE-2021-1675-CVE-2021-34527",
+          "full_name": "galoget/PrintNightmare-CVE-2021-1675-CVE-2021-34527",
+          "html_url": "https://github.com/galoget/PrintNightmare-CVE-2021-1675-CVE-2021-34527",
+          "description": "CVE-2021-1675 / CVE-2021-34527 - PrintNightmare Python, C# and PowerShell Exploits Implementations (LPE \u0026 RCE)",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-09-07T23:38:38Z",
-          "pushed_at": "2026-09-06T23:36:52Z",
-          "created_at": "2026-09-06T23:32:22Z",
+          "language": "PowerShell",
+          "updated_at": "2024-08-12T20:14:38Z",
+          "pushed_at": "2021-07-12T08:35:30Z",
+          "created_at": "2021-07-12T08:18:40Z",
           "topics": [],
           "owner": {
-            "login": "HKenzoKimura",
-            "html_url": "https://github.com/HKenzoKimura"
+            "login": "galoget",
+            "html_url": "https://github.com/galoget"
           },
-          "clone_url": "https://github.com/HKenzoKimura/CVE-2021-1675.git"
+          "clone_url": "https://github.com/galoget/PrintNightmare-CVE-2021-1675-CVE-2021-34527.git"
         },
         {
           "id": 383699836,
@@ -16176,23 +16160,23 @@
           "clone_url": "https://github.com/vinaysudheer/Disable-Spooler-Service-PrintNightmare-CVE-2021-34527.git"
         },
         {
-          "id": 385174791,
-          "name": "PrintNightmare-CVE-2021-1675-CVE-2021-34527",
-          "full_name": "galoget/PrintNightmare-CVE-2021-1675-CVE-2021-34527",
-          "html_url": "https://github.com/galoget/PrintNightmare-CVE-2021-1675-CVE-2021-34527",
-          "description": "CVE-2021-1675 / CVE-2021-34527 - PrintNightmare Python, C# and PowerShell Exploits Implementations (LPE \u0026 RCE)",
+          "id": 1359580692,
+          "name": "CVE-2021-1675",
+          "full_name": "HKenzoKimura/CVE-2021-1675",
+          "html_url": "https://github.com/HKenzoKimura/CVE-2021-1675",
+          "description": "Simulated PoC — PrintNightmare Windows Print Spooler RCE/LPE (CVE-2021-1675 + CVE-2021-34527). Non-functional payload for detection engineering. CISA KEV · Patched July 2021 · MITRE T1068.",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "PowerShell",
-          "updated_at": "2024-08-12T20:14:38Z",
-          "pushed_at": "2021-07-12T08:35:30Z",
-          "created_at": "2021-07-12T08:18:40Z",
+          "language": "Python",
+          "updated_at": "2026-09-07T23:38:38Z",
+          "pushed_at": "2026-09-06T23:36:52Z",
+          "created_at": "2026-09-06T23:32:22Z",
           "topics": [],
           "owner": {
-            "login": "galoget",
-            "html_url": "https://github.com/galoget"
+            "login": "HKenzoKimura",
+            "html_url": "https://github.com/HKenzoKimura"
           },
-          "clone_url": "https://github.com/galoget/PrintNightmare-CVE-2021-1675-CVE-2021-34527.git"
+          "clone_url": "https://github.com/HKenzoKimura/CVE-2021-1675.git"
         },
         {
           "id": 385563396,
@@ -16233,25 +16217,6 @@
           "clone_url": "https://github.com/twi1ight00/PrintNightmare.git"
         },
         {
-          "id": 1323390054,
-          "name": "printnightmare-detection-lab",
-          "full_name": "joertx07/printnightmare-detection-lab",
-          "html_url": "https://github.com/joertx07/printnightmare-detection-lab",
-          "description": "Splunk SIEM lab simulating and detecting CVE-2021-34527 (PrintNightmare) exploitation using Sysmon, Windows Event logs, and custom SPL detection rules.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-08-04T22:15:20Z",
-          "pushed_at": "2026-08-04T22:15:03Z",
-          "created_at": "2026-08-04T21:22:33Z",
-          "topics": [],
-          "owner": {
-            "login": "joertx07",
-            "html_url": "https://github.com/joertx07"
-          },
-          "clone_url": "https://github.com/joertx07/printnightmare-detection-lab.git"
-        },
-        {
           "id": 384554464,
           "name": "PowerShell-PrintNightmare",
           "full_name": "syntaxbearror/PowerShell-PrintNightmare",
@@ -16269,6 +16234,25 @@
             "html_url": "https://github.com/syntaxbearror"
           },
           "clone_url": "https://github.com/syntaxbearror/PowerShell-PrintNightmare.git"
+        },
+        {
+          "id": 384385967,
+          "name": "Printnightmare",
+          "full_name": "Eutectico/Printnightmare",
+          "html_url": "https://github.com/Eutectico/Printnightmare",
+          "description": "Fix for PrintNightmare CVE-2021-34527",
+          "stargazers_count": 0,
+          "forks_count": 1,
+          "language": "PowerShell",
+          "updated_at": "2021-07-09T11:02:54Z",
+          "pushed_at": "2021-07-09T11:02:51Z",
+          "created_at": "2021-07-09T09:22:03Z",
+          "topics": [],
+          "owner": {
+            "login": "Eutectico",
+            "html_url": "https://github.com/Eutectico"
+          },
+          "clone_url": "https://github.com/Eutectico/Printnightmare.git"
         },
         {
           "id": 382021281,
@@ -16296,25 +16280,6 @@
           "clone_url": "https://github.com/DenizSe/CVE-2021-34527.git"
         },
         {
-          "id": 384385967,
-          "name": "Printnightmare",
-          "full_name": "Eutectico/Printnightmare",
-          "html_url": "https://github.com/Eutectico/Printnightmare",
-          "description": "Fix for PrintNightmare CVE-2021-34527",
-          "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "PowerShell",
-          "updated_at": "2021-07-09T11:02:54Z",
-          "pushed_at": "2021-07-09T11:02:51Z",
-          "created_at": "2021-07-09T09:22:03Z",
-          "topics": [],
-          "owner": {
-            "login": "Eutectico",
-            "html_url": "https://github.com/Eutectico"
-          },
-          "clone_url": "https://github.com/Eutectico/Printnightmare.git"
-        },
-        {
           "id": 383968301,
           "name": "CVE-2021-34527_ACL_mitigation",
           "full_name": "WidespreadPandemic/CVE-2021-34527_ACL_mitigation",
@@ -16332,6 +16297,25 @@
             "html_url": "https://github.com/WidespreadPandemic"
           },
           "clone_url": "https://github.com/WidespreadPandemic/CVE-2021-34527_ACL_mitigation.git"
+        },
+        {
+          "id": 1323390054,
+          "name": "printnightmare-detection-lab",
+          "full_name": "joertx07/printnightmare-detection-lab",
+          "html_url": "https://github.com/joertx07/printnightmare-detection-lab",
+          "description": "Splunk SIEM lab simulating and detecting CVE-2021-34527 (PrintNightmare) exploitation using Sysmon, Windows Event logs, and custom SPL detection rules.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-08-04T22:15:20Z",
+          "pushed_at": "2026-08-04T22:15:03Z",
+          "created_at": "2026-08-04T21:22:33Z",
+          "topics": [],
+          "owner": {
+            "login": "joertx07",
+            "html_url": "https://github.com/joertx07"
+          },
+          "clone_url": "https://github.com/joertx07/printnightmare-detection-lab.git"
         }
       ]
     },
@@ -19888,6 +19872,25 @@
     {
       "cve_id": "CVE-2021-4034",
       "repositories": [
+        {
+          "id": 1419864242,
+          "name": "CVE-2021-4034",
+          "full_name": "SerhiiMaruniak/CVE-2021-4034",
+          "html_url": "https://github.com/SerhiiMaruniak/CVE-2021-4034",
+          "description": "CVE-2021-4034 (PwnKit) - Python PoC",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-10-14T21:24:13Z",
+          "pushed_at": "2026-10-14T21:24:09Z",
+          "created_at": "2026-10-14T21:20:36Z",
+          "topics": [],
+          "owner": {
+            "login": "SerhiiMaruniak",
+            "html_url": "https://github.com/SerhiiMaruniak"
+          },
+          "clone_url": "https://github.com/SerhiiMaruniak/CVE-2021-4034.git"
+        },
         {
           "id": 1369985128,
           "name": "Pwnkit-CVE-2021-4034-LPE",
