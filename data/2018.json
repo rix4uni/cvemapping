@@ -5301,10 +5301,10 @@
           "full_name": "zer0condition/GDRVLoader",
           "html_url": "https://github.com/zer0condition/GDRVLoader",
           "description": "Unsigned driver loader using CVE-2018-19320",
-          "stargazers_count": 385,
+          "stargazers_count": 386,
           "forks_count": 87,
           "language": "C",
-          "updated_at": "2026-10-21T09:39:15Z",
+          "updated_at": "2026-10-22T16:49:13Z",
           "pushed_at": "2026-03-16T09:42:55Z",
           "created_at": "2022-11-12T05:48:13Z",
           "topics": [],
@@ -6806,30 +6806,6 @@
             "html_url": "https://github.com/malindarathnayake"
           },
           "clone_url": "https://github.com/malindarathnayake/Intel-CVE-2018-3639-Mitigation_RegistryUpdate.git"
-        }
-      ]
-    },
-    {
-      "cve_id": "CVE-2018-3736",
-      "repositories": [
-        {
-          "id": 1152305575,
-          "name": "CVE-2018-3736-unfixed",
-          "full_name": "CQ-Tools/CVE-2018-3736-unfixed",
-          "html_url": "https://github.com/CQ-Tools/CVE-2018-3736-unfixed",
-          "description": "Security analysis - CVE-2018-3736",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "JavaScript",
-          "updated_at": "2026-02-07T17:20:46Z",
-          "pushed_at": "2026-02-08T11:06:07Z",
-          "created_at": "2026-02-07T17:20:35Z",
-          "topics": [],
-          "owner": {
-            "login": "CQ-Tools",
-            "html_url": "https://github.com/CQ-Tools"
-          },
-          "clone_url": "https://github.com/CQ-Tools/CVE-2018-3736-unfixed.git"
         }
       ]
     },
@@ -10319,34 +10295,61 @@
           "clone_url": "https://github.com/Prapul1/VulnHub-DC1-Writeup.git"
         },
         {
-          "id": 1403505638,
-          "name": "DC-1_Vulnhub_Walkthrough",
-          "full_name": "Aihikk/DC-1_Vulnhub_Walkthrough",
-          "html_url": "https://github.com/Aihikk/DC-1_Vulnhub_Walkthrough",
-          "description": "VulnHub DC-1 boot2root — unauthenticated RCE via Drupalgeddon2 (CVE-2018-7600) to SUID find privilege escalation, with severity-rated findings and remediation.",
+          "id": 1265078811,
+          "name": "drupalgeddon2-cli",
+          "full_name": "nayem-m/drupalgeddon2-cli",
+          "html_url": "https://github.com/nayem-m/drupalgeddon2-cli",
+          "description": "CLI rewrite of the Drupalgeddon2 (CVE-2018-7600) PoC — for authorised testing/education",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-06-11T05:16:11Z",
+          "pushed_at": "2026-06-11T05:16:07Z",
+          "created_at": "2026-06-10T12:52:30Z",
+          "topics": [],
+          "owner": {
+            "login": "nayem-m",
+            "html_url": "https://github.com/nayem-m"
+          },
+          "clone_url": "https://github.com/nayem-m/drupalgeddon2-cli.git"
+        },
+        {
+          "id": 1254234157,
+          "name": "CVE-2018-7600",
+          "full_name": "Dungsocool/CVE-2018-7600",
+          "html_url": "https://github.com/Dungsocool/CVE-2018-7600",
+          "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-10-06T14:33:38Z",
-          "pushed_at": "2026-10-04T05:55:49Z",
-          "created_at": "2026-10-03T18:10:28Z",
-          "topics": [
-            "boot2root",
-            "cve-2018-7600",
-            "drupal",
-            "gtfobins",
-            "metasploit",
-            "penetration-testing",
-            "privilege-escalation",
-            "suid",
-            "vapt",
-            "vulnhub"
-          ],
+          "updated_at": "2026-05-30T10:03:18Z",
+          "pushed_at": "2026-05-30T10:03:15Z",
+          "created_at": "2026-05-30T10:03:00Z",
+          "topics": [],
           "owner": {
-            "login": "Aihikk",
-            "html_url": "https://github.com/Aihikk"
+            "login": "Dungsocool",
+            "html_url": "https://github.com/Dungsocool"
           },
-          "clone_url": "https://github.com/Aihikk/DC-1_Vulnhub_Walkthrough.git"
+          "clone_url": "https://github.com/Dungsocool/CVE-2018-7600.git"
+        },
+        {
+          "id": 1419132904,
+          "name": "DC1-Penetration-Testing-Report",
+          "full_name": "SanCody/DC1-Penetration-Testing-Report",
+          "html_url": "https://github.com/SanCody/DC1-Penetration-Testing-Report",
+          "description": "Penetration test report for the DC-1 VulnHub machine: Drupalgeddon2 (CVE-2018-7600) RCE, credential discovery, and SUID privilege escalation to root. Includes CVSS-rated findings and a remediation roadmap.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-10-17T03:23:47Z",
+          "pushed_at": "2026-10-17T03:23:43Z",
+          "created_at": "2026-10-14T14:28:24Z",
+          "topics": [],
+          "owner": {
+            "login": "SanCody",
+            "html_url": "https://github.com/SanCody"
+          },
+          "clone_url": "https://github.com/SanCody/DC1-Penetration-Testing-Report.git"
         },
         {
           "id": 1063380068,
@@ -10387,23 +10390,53 @@
           "clone_url": "https://github.com/bixiPRO/Drupalgeddon2-CVE-2018-7600.git"
         },
         {
-          "id": 1410887213,
-          "name": "vulhub-drupal-cve-2018-7600",
-          "full_name": "CyberCTF/vulhub-drupal-cve-2018-7600",
-          "html_url": "https://github.com/CyberCTF/vulhub-drupal-cve-2018-7600",
-          "description": "Vulhub drupal/CVE-2018-7600: Drupalgeddon 2 on Drupal 8.5.0, run with Isoloom",
+          "id": 1403505638,
+          "name": "DC-1_Vulnhub_Walkthrough",
+          "full_name": "Aihikk/DC-1_Vulnhub_Walkthrough",
+          "html_url": "https://github.com/Aihikk/DC-1_Vulnhub_Walkthrough",
+          "description": "VulnHub DC-1 boot2root — unauthenticated RCE via Drupalgeddon2 (CVE-2018-7600) to SUID find privilege escalation, with severity-rated findings and remediation.",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2026-10-20T07:34:18Z",
-          "pushed_at": "2026-10-20T07:34:10Z",
-          "created_at": "2026-10-08T19:53:21Z",
+          "language": "",
+          "updated_at": "2026-10-06T14:33:38Z",
+          "pushed_at": "2026-10-04T05:55:49Z",
+          "created_at": "2026-10-03T18:10:28Z",
+          "topics": [
+            "boot2root",
+            "cve-2018-7600",
+            "drupal",
+            "gtfobins",
+            "metasploit",
+            "penetration-testing",
+            "privilege-escalation",
+            "suid",
+            "vapt",
+            "vulnhub"
+          ],
+          "owner": {
+            "login": "Aihikk",
+            "html_url": "https://github.com/Aihikk"
+          },
+          "clone_url": "https://github.com/Aihikk/DC-1_Vulnhub_Walkthrough.git"
+        },
+        {
+          "id": 1430070070,
+          "name": "Drupalgeddon2-python",
+          "full_name": "Alexnpc18/Drupalgeddon2-python",
+          "html_url": "https://github.com/Alexnpc18/Drupalgeddon2-python",
+          "description": "Vulnerabilidad CVE-2018-7600,injection command",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-10-22T17:48:11Z",
+          "pushed_at": "2026-10-22T17:46:47Z",
+          "created_at": "2026-10-22T17:35:02Z",
           "topics": [],
           "owner": {
-            "login": "CyberCTF",
-            "html_url": "https://github.com/CyberCTF"
+            "login": "Alexnpc18",
+            "html_url": "https://github.com/Alexnpc18"
           },
-          "clone_url": "https://github.com/CyberCTF/vulhub-drupal-cve-2018-7600.git"
+          "clone_url": "https://github.com/Alexnpc18/Drupalgeddon2-python.git"
         },
         {
           "id": 1325244107,
@@ -10423,6 +10456,25 @@
             "html_url": "https://github.com/Shams-Ul-Mehmood"
           },
           "clone_url": "https://github.com/Shams-Ul-Mehmood/CVE-2018-7600-Drupalgeddon2-RCE.git"
+        },
+        {
+          "id": 134812138,
+          "name": "CVE-2018-7600",
+          "full_name": "soch4n/CVE-2018-7600",
+          "html_url": "https://github.com/soch4n/CVE-2018-7600",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2018-05-25T06:20:54Z",
+          "pushed_at": "2018-05-25T06:20:53Z",
+          "created_at": "2018-05-25T06:19:05Z",
+          "topics": [],
+          "owner": {
+            "login": "soch4n",
+            "html_url": "https://github.com/soch4n"
+          },
+          "clone_url": "https://github.com/soch4n/CVE-2018-7600.git"
         },
         {
           "id": 1193047119,
@@ -10455,63 +10507,6 @@
           "clone_url": "https://github.com/erman-bolukbasi/web-penetration-drupal.git"
         },
         {
-          "id": 1404651984,
-          "name": "CVE-2018-7600",
-          "full_name": "K52-ai/CVE-2018-7600",
-          "html_url": "https://github.com/K52-ai/CVE-2018-7600",
-          "description": "CVE-2018-7600 (Drupalgeddon2) — Drupal RCE exploit tool. Standalone Python PoC for authorized security testing. CVSS 9.8 Critical. by K52-ai.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-10-18T19:47:32Z",
-          "pushed_at": "2026-10-18T19:47:28Z",
-          "created_at": "2026-10-04T17:04:22Z",
-          "topics": [],
-          "owner": {
-            "login": "K52-ai",
-            "html_url": "https://github.com/K52-ai"
-          },
-          "clone_url": "https://github.com/K52-ai/CVE-2018-7600.git"
-        },
-        {
-          "id": 134812138,
-          "name": "CVE-2018-7600",
-          "full_name": "soch4n/CVE-2018-7600",
-          "html_url": "https://github.com/soch4n/CVE-2018-7600",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2018-05-25T06:20:54Z",
-          "pushed_at": "2018-05-25T06:20:53Z",
-          "created_at": "2018-05-25T06:19:05Z",
-          "topics": [],
-          "owner": {
-            "login": "soch4n",
-            "html_url": "https://github.com/soch4n"
-          },
-          "clone_url": "https://github.com/soch4n/CVE-2018-7600.git"
-        },
-        {
-          "id": 1419132904,
-          "name": "DC1-Penetration-Testing-Report",
-          "full_name": "SanCody/DC1-Penetration-Testing-Report",
-          "html_url": "https://github.com/SanCody/DC1-Penetration-Testing-Report",
-          "description": "Penetration test report for the DC-1 VulnHub machine: Drupalgeddon2 (CVE-2018-7600) RCE, credential discovery, and SUID privilege escalation to root. Includes CVSS-rated findings and a remediation roadmap.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-10-17T03:23:47Z",
-          "pushed_at": "2026-10-17T03:23:43Z",
-          "created_at": "2026-10-14T14:28:24Z",
-          "topics": [],
-          "owner": {
-            "login": "SanCody",
-            "html_url": "https://github.com/SanCody"
-          },
-          "clone_url": "https://github.com/SanCody/DC1-Penetration-Testing-Report.git"
-        },
-        {
           "id": 140643631,
           "name": "CVE-2018-7600",
           "full_name": "happynote3966/CVE-2018-7600",
@@ -10531,42 +10526,42 @@
           "clone_url": "https://github.com/happynote3966/CVE-2018-7600.git"
         },
         {
-          "id": 1265078811,
-          "name": "drupalgeddon2-cli",
-          "full_name": "nayem-m/drupalgeddon2-cli",
-          "html_url": "https://github.com/nayem-m/drupalgeddon2-cli",
-          "description": "CLI rewrite of the Drupalgeddon2 (CVE-2018-7600) PoC — for authorised testing/education",
+          "id": 1410887213,
+          "name": "vulhub-drupal-cve-2018-7600",
+          "full_name": "CyberCTF/vulhub-drupal-cve-2018-7600",
+          "html_url": "https://github.com/CyberCTF/vulhub-drupal-cve-2018-7600",
+          "description": "Vulhub drupal/CVE-2018-7600: Drupalgeddon 2 on Drupal 8.5.0, run with Isoloom",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Shell",
+          "updated_at": "2026-10-20T07:34:18Z",
+          "pushed_at": "2026-10-20T07:34:10Z",
+          "created_at": "2026-10-08T19:53:21Z",
+          "topics": [],
+          "owner": {
+            "login": "CyberCTF",
+            "html_url": "https://github.com/CyberCTF"
+          },
+          "clone_url": "https://github.com/CyberCTF/vulhub-drupal-cve-2018-7600.git"
+        },
+        {
+          "id": 1404651984,
+          "name": "CVE-2018-7600",
+          "full_name": "K52-ai/CVE-2018-7600",
+          "html_url": "https://github.com/K52-ai/CVE-2018-7600",
+          "description": "CVE-2018-7600 (Drupalgeddon2) — Drupal RCE exploit tool. Standalone Python PoC for authorized security testing. CVSS 9.8 Critical. by K52-ai.",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-06-11T05:16:11Z",
-          "pushed_at": "2026-06-11T05:16:07Z",
-          "created_at": "2026-06-10T12:52:30Z",
+          "updated_at": "2026-10-18T19:47:32Z",
+          "pushed_at": "2026-10-18T19:47:28Z",
+          "created_at": "2026-10-04T17:04:22Z",
           "topics": [],
           "owner": {
-            "login": "nayem-m",
-            "html_url": "https://github.com/nayem-m"
+            "login": "K52-ai",
+            "html_url": "https://github.com/K52-ai"
           },
-          "clone_url": "https://github.com/nayem-m/drupalgeddon2-cli.git"
-        },
-        {
-          "id": 1254234157,
-          "name": "CVE-2018-7600",
-          "full_name": "Dungsocool/CVE-2018-7600",
-          "html_url": "https://github.com/Dungsocool/CVE-2018-7600",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-05-30T10:03:18Z",
-          "pushed_at": "2026-05-30T10:03:15Z",
-          "created_at": "2026-05-30T10:03:00Z",
-          "topics": [],
-          "owner": {
-            "login": "Dungsocool",
-            "html_url": "https://github.com/Dungsocool"
-          },
-          "clone_url": "https://github.com/Dungsocool/CVE-2018-7600.git"
+          "clone_url": "https://github.com/K52-ai/CVE-2018-7600.git"
         }
       ]
     },
