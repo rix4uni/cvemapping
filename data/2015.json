@@ -2393,32 +2393,6 @@
       ]
     },
     {
-      "cve_id": "CVE-2015-1925",
-      "repositories": [
-        {
-          "id": 1169941798,
-          "name": "CVE-2015-1925.RCE",
-          "full_name": "damariion/CVE-2015-1925.RCE",
-          "html_url": "https://github.com/damariion/CVE-2015-1925.RCE",
-          "description": "Stack-based buffer overflow in the server in IBM Tivoli Storage Manager FastBack 6.1 before 6.1.12 allows remote attackers to cause a denial of service",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-08-13T19:17:47Z",
-          "pushed_at": "2026-08-13T19:16:06Z",
-          "created_at": "2026-03-01T13:16:31Z",
-          "topics": [
-            "exploitation"
-          ],
-          "owner": {
-            "login": "damariion",
-            "html_url": "https://github.com/damariion"
-          },
-          "clone_url": "https://github.com/damariion/CVE-2015-1925.RCE.git"
-        }
-      ]
-    },
-    {
       "cve_id": "CVE-2015-1986",
       "repositories": [
         {
@@ -6357,15 +6331,15 @@
       "repositories": [
         {
           "id": 1188536107,
-          "name": "CVE-2015-8522.RCE",
-          "full_name": "damariion/CVE-2015-8522.RCE",
-          "html_url": "https://github.com/damariion/CVE-2015-8522.RCE",
-          "description": "Tivoli FastBack Server (6.1.4) is vulnerable to a stack-based buffer overflow allowing threat-actors to gain Arbitrary Code Execution (ACE) via a remote TCP-connection. The PoC provided in this repository leverages this vulnerability to establish a reverse-shell.",
+          "name": "CVE-2015-8522-RCE",
+          "full_name": "damariion/CVE-2015-8522-RCE",
+          "html_url": "https://github.com/damariion/CVE-2015-8522-RCE",
+          "description": "An exploits for CVE-2015-8522 that establishes a reverse-shell after bypassing ASLR and DEP.",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-08-02T12:17:22Z",
-          "pushed_at": "2026-04-15T10:58:11Z",
+          "updated_at": "2026-10-28T14:32:11Z",
+          "pushed_at": "2026-10-28T14:02:07Z",
           "created_at": "2026-03-22T08:07:28Z",
           "topics": [
             "exploitation"
@@ -6374,7 +6348,7 @@
             "login": "damariion",
             "html_url": "https://github.com/damariion"
           },
-          "clone_url": "https://github.com/damariion/CVE-2015-8522.RCE.git"
+          "clone_url": "https://github.com/damariion/CVE-2015-8522-RCE.git"
         }
       ]
     },
