@@ -101,10 +101,10 @@
           "full_name": "michalbednarski/OtherActivityToken",
           "html_url": "https://github.com/michalbednarski/OtherActivityToken",
           "description": "Exploit for CVE-2025-0098, Activity token leak due to pid-only check and then use of that token for arbitrary startActivity()",
-          "stargazers_count": 6,
+          "stargazers_count": 7,
           "forks_count": 1,
           "language": "Java",
-          "updated_at": "2026-10-29T15:23:07Z",
+          "updated_at": "2026-10-29T18:39:51Z",
           "pushed_at": "2026-10-29T09:35:39Z",
           "created_at": "2026-10-29T09:34:14Z",
           "topics": [],
@@ -18864,8 +18864,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-10-29T16:10:07Z",
-          "pushed_at": "2026-10-29T16:34:34Z",
+          "updated_at": "2026-10-29T17:49:56Z",
+          "pushed_at": "2026-10-29T17:59:59Z",
           "created_at": "2026-10-26T15:47:12Z",
           "topics": [],
           "owner": {
@@ -19104,10 +19104,10 @@
           "full_name": "ricardojoserf/axis-RCE",
           "html_url": "https://github.com/ricardojoserf/axis-RCE",
           "description": "Unauth RCE on Axis Camera Station (ACS) chaining CVE‑2025‑30026 (Authentication bypass) + CVE‑2025‑30023 (Insecure deserialization)",
-          "stargazers_count": 5,
+          "stargazers_count": 6,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-10-29T14:25:52Z",
+          "updated_at": "2026-10-29T20:39:28Z",
           "pushed_at": "2026-10-28T09:16:16Z",
           "created_at": "2026-07-20T15:20:05Z",
           "topics": [
@@ -19136,10 +19136,10 @@
           "full_name": "ricardojoserf/axis-RCE",
           "html_url": "https://github.com/ricardojoserf/axis-RCE",
           "description": "Unauth RCE on Axis Camera Station (ACS) chaining CVE‑2025‑30026 (Authentication bypass) + CVE‑2025‑30023 (Insecure deserialization)",
-          "stargazers_count": 5,
+          "stargazers_count": 6,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-10-29T14:25:52Z",
+          "updated_at": "2026-10-29T20:39:28Z",
           "pushed_at": "2026-10-28T09:16:16Z",
           "created_at": "2026-07-20T15:20:05Z",
           "topics": [
@@ -21896,10 +21896,10 @@
           "full_name": "Skorpion96/unisoc-su",
           "html_url": "https://github.com/Skorpion96/unisoc-su",
           "description": "A method for CVE-2025-31710 and to connect to cmd_skt to obtain a root shell on unisoc unpatched models",
-          "stargazers_count": 138,
+          "stargazers_count": 139,
           "forks_count": 23,
           "language": "Shell",
-          "updated_at": "2026-10-29T14:02:14Z",
+          "updated_at": "2026-10-29T17:47:07Z",
           "pushed_at": "2026-10-29T01:19:36Z",
           "created_at": "2025-06-06T14:31:13Z",
           "topics": [],
@@ -23619,10 +23619,10 @@
           "full_name": "MohamedKarrab/CVE-2025-32463",
           "html_url": "https://github.com/MohamedKarrab/CVE-2025-32463",
           "description": "Privilege escalation to root using sudo chroot, NO NEED for gcc installed.",
-          "stargazers_count": 51,
+          "stargazers_count": 52,
           "forks_count": 9,
           "language": "Shell",
-          "updated_at": "2026-10-27T04:23:15Z",
+          "updated_at": "2026-10-29T16:51:52Z",
           "pushed_at": "2025-10-06T18:11:14Z",
           "created_at": "2025-07-14T23:07:56Z",
           "topics": [
@@ -33647,6 +33647,34 @@
       ]
     },
     {
+      "cve_id": "CVE-2025-48804",
+      "repositories": [
+        {
+          "id": 1225609726,
+          "name": "BitUnlocker",
+          "full_name": "garatc/BitUnlocker",
+          "html_url": "https://github.com/garatc/BitUnlocker",
+          "description": "Downgrade attack for CVE-2025-48804",
+          "stargazers_count": 246,
+          "forks_count": 44,
+          "language": "Python",
+          "updated_at": "2026-10-29T21:19:16Z",
+          "pushed_at": "2026-10-29T21:19:11Z",
+          "created_at": "2026-04-30T13:05:30Z",
+          "topics": [
+            "bitlocker",
+            "bitunlocker",
+            "cve-2025-48804"
+          ],
+          "owner": {
+            "login": "garatc",
+            "html_url": "https://github.com/garatc"
+          },
+          "clone_url": "https://github.com/garatc/BitUnlocker.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2025-48827",
       "repositories": [
         {
@@ -35165,44 +35193,6 @@
             "html_url": "https://github.com/pedrorichil"
           },
           "clone_url": "https://github.com/pedrorichil/CVE-2025-49844.git"
-        },
-        {
-          "id": 478490703,
-          "name": "CVE-2025-49844",
-          "full_name": "Zain3311/CVE-2025-49844",
-          "html_url": "https://github.com/Zain3311/CVE-2025-49844",
-          "description": "🚨 Exploit the CVE-2025-49844 Redis Lua interpreter UAF vulnerability to execute arbitrary shellcode and gain persistent backdoor access.",
-          "stargazers_count": 2,
-          "forks_count": 0,
-          "language": "CSS",
-          "updated_at": "2026-10-12T04:26:30Z",
-          "pushed_at": "2026-10-12T04:26:26Z",
-          "created_at": "2022-04-06T09:27:39Z",
-          "topics": [
-            "ai-security",
-            "cve-2025",
-            "cve-2025-49844",
-            "cve-2025-49844-poc",
-            "docker",
-            "elaina-cute",
-            "exploit",
-            "exploitation",
-            "exploitation-framework",
-            "keras",
-            "pentest",
-            "red-team",
-            "redis",
-            "redis-exploit",
-            "redis-exploitation",
-            "tensorflow",
-            "yuri08",
-            "yuri08loveelaina"
-          ],
-          "owner": {
-            "login": "Zain3311",
-            "html_url": "https://github.com/Zain3311"
-          },
-          "clone_url": "https://github.com/Zain3311/CVE-2025-49844.git"
         },
         {
           "id": 1072981994,
@@ -49140,8 +49130,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-10-29T16:44:53Z",
-          "pushed_at": "2026-10-29T16:44:48Z",
+          "updated_at": "2026-10-29T17:17:25Z",
+          "pushed_at": "2026-10-29T17:17:21Z",
           "created_at": "2026-10-26T15:33:53Z",
           "topics": [],
           "owner": {
