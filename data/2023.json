@@ -307,7 +307,7 @@
           "forks_count": 0,
           "language": "",
           "updated_at": "2026-10-21T16:39:04Z",
-          "pushed_at": "2026-11-05T10:59:28Z",
+          "pushed_at": "2026-11-06T10:57:26Z",
           "created_at": "2026-10-07T15:40:37Z",
           "topics": [],
           "owner": {
@@ -3935,10 +3935,10 @@
           "full_name": "Wh04m1001/CVE-2023-21752",
           "html_url": "https://github.com/Wh04m1001/CVE-2023-21752",
           "description": "",
-          "stargazers_count": 327,
+          "stargazers_count": 326,
           "forks_count": 60,
           "language": "C++",
-          "updated_at": "2026-10-17T02:30:52Z",
+          "updated_at": "2026-11-06T13:50:16Z",
           "pushed_at": "2023-01-13T09:01:20Z",
           "created_at": "2023-01-10T15:59:26Z",
           "topics": [],
@@ -5168,10 +5168,10 @@
           "full_name": "n3m1sys/CVE-2023-22809-sudoedit-privesc",
           "html_url": "https://github.com/n3m1sys/CVE-2023-22809-sudoedit-privesc",
           "description": "A script to automate privilege escalation with CVE-2023-22809 vulnerability",
-          "stargazers_count": 164,
+          "stargazers_count": 163,
           "forks_count": 36,
           "language": "Shell",
-          "updated_at": "2026-09-15T09:09:15Z",
+          "updated_at": "2026-11-06T13:50:25Z",
           "pushed_at": "2023-02-15T18:10:53Z",
           "created_at": "2023-01-21T15:19:23Z",
           "topics": [
@@ -21438,30 +21438,6 @@
       ]
     },
     {
-      "cve_id": "CVE-2023-3635",
-      "repositories": [
-        {
-          "id": 1346678960,
-          "name": "reproducer-okio-cve-2023-3635",
-          "full_name": "JoshuaASmith/reproducer-okio-cve-2023-3635",
-          "html_url": "https://github.com/JoshuaASmith/reproducer-okio-cve-2023-3635",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Kotlin",
-          "updated_at": "2026-08-25T22:31:48Z",
-          "pushed_at": "2026-10-27T09:20:44Z",
-          "created_at": "2026-08-25T22:22:44Z",
-          "topics": [],
-          "owner": {
-            "login": "JoshuaASmith",
-            "html_url": "https://github.com/JoshuaASmith"
-          },
-          "clone_url": "https://github.com/JoshuaASmith/reproducer-okio-cve-2023-3635.git"
-        }
-      ]
-    },
-    {
       "cve_id": "CVE-2023-3640",
       "repositories": [
         {
@@ -29225,10 +29201,10 @@
           "full_name": "secengjeff/rapidresetclient",
           "html_url": "https://github.com/secengjeff/rapidresetclient",
           "description": "Tool for testing mitigations and exposure to Rapid Reset DDoS (CVE-2023-44487)",
-          "stargazers_count": 76,
+          "stargazers_count": 75,
           "forks_count": 16,
           "language": "Go",
-          "updated_at": "2026-10-26T08:07:15Z",
+          "updated_at": "2026-11-06T13:51:18Z",
           "pushed_at": "2023-10-30T20:22:37Z",
           "created_at": "2023-10-13T23:55:32Z",
           "topics": [],
@@ -29389,23 +29365,23 @@
           "clone_url": "https://github.com/ByteHackr/CVE-2023-44487.git"
         },
         {
-          "id": 737062629,
-          "name": "rapid-reset-check",
-          "full_name": "ramonzx6/rapid-reset-check",
-          "html_url": "https://github.com/ramonzx6/rapid-reset-check",
-          "description": "rapid-reset-check is a small Go CLI for quickly inventorying HTTPS endpoints that expose HTTP/2 and therefore need a CVE-2023-44487 mitigation review",
+          "id": 1448159693,
+          "name": "cortex9-http2-rapid-reset-stream-accounting-model",
+          "full_name": "federiconbaez/cortex9-http2-rapid-reset-stream-accounting-model",
+          "html_url": "https://github.com/federiconbaez/cortex9-http2-rapid-reset-stream-accounting-model",
+          "description": "Discrete-time Rust model of HTTP/2 stream accounting vs handler work for studying Rapid Reset (CVE-2023-44487). Not a reproduction, no sockets.",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Go",
-          "updated_at": "2026-08-24T01:34:26Z",
-          "pushed_at": "2026-08-24T01:32:04Z",
-          "created_at": "2023-12-29T17:40:24Z",
+          "language": "Rust",
+          "updated_at": "2026-11-06T11:06:03Z",
+          "pushed_at": "2026-11-06T11:05:57Z",
+          "created_at": "2026-11-06T11:05:50Z",
           "topics": [],
           "owner": {
-            "login": "ramonzx6",
-            "html_url": "https://github.com/ramonzx6"
+            "login": "federiconbaez",
+            "html_url": "https://github.com/federiconbaez"
           },
-          "clone_url": "https://github.com/ramonzx6/rapid-reset-check.git"
+          "clone_url": "https://github.com/federiconbaez/cortex9-http2-rapid-reset-stream-accounting-model.git"
         },
         {
           "id": 703914770,
@@ -29425,6 +29401,25 @@
             "html_url": "https://github.com/pabloec20"
           },
           "clone_url": "https://github.com/pabloec20/rapidreset.git"
+        },
+        {
+          "id": 737062629,
+          "name": "rapid-reset-check",
+          "full_name": "ramonzx6/rapid-reset-check",
+          "html_url": "https://github.com/ramonzx6/rapid-reset-check",
+          "description": "rapid-reset-check is a small Go CLI for quickly inventorying HTTPS endpoints that expose HTTP/2 and therefore need a CVE-2023-44487 mitigation review",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Go",
+          "updated_at": "2026-08-24T01:34:26Z",
+          "pushed_at": "2026-08-24T01:32:04Z",
+          "created_at": "2023-12-29T17:40:24Z",
+          "topics": [],
+          "owner": {
+            "login": "ramonzx6",
+            "html_url": "https://github.com/ramonzx6"
+          },
+          "clone_url": "https://github.com/ramonzx6/rapid-reset-check.git"
         },
         {
           "id": 730433558,
@@ -32692,10 +32687,10 @@
           "full_name": "LiveOverflow/webp-CVE-2023-4863",
           "html_url": "https://github.com/LiveOverflow/webp-CVE-2023-4863",
           "description": "",
-          "stargazers_count": 56,
+          "stargazers_count": 55,
           "forks_count": 9,
           "language": "JavaScript",
-          "updated_at": "2026-08-07T20:39:52Z",
+          "updated_at": "2026-11-06T13:51:22Z",
           "pushed_at": "2024-05-13T17:40:58Z",
           "created_at": "2023-12-18T23:12:25Z",
           "topics": [],
@@ -32867,6 +32862,25 @@
     {
       "cve_id": "CVE-2023-48795",
       "repositories": [
+        {
+          "id": 1448122490,
+          "name": "cortex9-terrapin-strict-kex-model",
+          "full_name": "federiconbaez/cortex9-terrapin-strict-kex-model",
+          "html_url": "https://github.com/federiconbaez/cortex9-terrapin-strict-kex-model",
+          "description": "Abstract state model of SSH sequence numbers and OpenSSH strict KEX for studying Terrapin (CVE-2023-48795). Not a reproduction.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Rust",
+          "updated_at": "2026-11-06T11:09:35Z",
+          "pushed_at": "2026-11-06T11:09:31Z",
+          "created_at": "2026-11-06T10:25:45Z",
+          "topics": [],
+          "owner": {
+            "login": "federiconbaez",
+            "html_url": "https://github.com/federiconbaez"
+          },
+          "clone_url": "https://github.com/federiconbaez/cortex9-terrapin-strict-kex-model.git"
+        },
         {
           "id": 1433400028,
           "name": "CVE-2023-48795",

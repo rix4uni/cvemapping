@@ -554,6 +554,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2018-1000810",
+      "repositories": [
+        {
+          "id": 1448267596,
+          "name": "cortex9-rust-str-repeat-capacity-overflow-model",
+          "full_name": "federiconbaez/cortex9-rust-str-repeat-capacity-overflow-model",
+          "html_url": "https://github.com/federiconbaez/cortex9-rust-str-repeat-capacity-overflow-model",
+          "description": "Abstract execution of Rust [T]::repeat capacity arithmetic in 1.29.0 vs 1.29.1 (CVE-2018-1000810) for 16/32/64-bit usize. Allocates nothing.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-11-06T13:01:30Z",
+          "pushed_at": "2026-11-06T13:01:24Z",
+          "created_at": "2026-11-06T13:01:17Z",
+          "topics": [],
+          "owner": {
+            "login": "federiconbaez",
+            "html_url": "https://github.com/federiconbaez"
+          },
+          "clone_url": "https://github.com/federiconbaez/cortex9-rust-str-repeat-capacity-overflow-model.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2018-1000861",
       "repositories": [
         {
@@ -6890,30 +6914,6 @@
       ]
     },
     {
-      "cve_id": "CVE-2018-3737",
-      "repositories": [
-        {
-          "id": 1152305794,
-          "name": "CVE-2018-3737-fixed",
-          "full_name": "CQ-Tools/CVE-2018-3737-fixed",
-          "html_url": "https://github.com/CQ-Tools/CVE-2018-3737-fixed",
-          "description": "Security analysis - CVE-2018-3737",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "JavaScript",
-          "updated_at": "2026-02-07T17:21:08Z",
-          "pushed_at": "2026-02-08T11:06:17Z",
-          "created_at": "2026-02-07T17:20:58Z",
-          "topics": [],
-          "owner": {
-            "login": "CQ-Tools",
-            "html_url": "https://github.com/CQ-Tools"
-          },
-          "clone_url": "https://github.com/CQ-Tools/CVE-2018-3737-fixed.git"
-        }
-      ]
-    },
-    {
       "cve_id": "CVE-2018-3746",
       "repositories": [
         {
@@ -8496,7 +8496,7 @@
           "html_url": "https://github.com/DavidBuchanan314/NXLoader",
           "description": "My first Android app: Launch Fusée Gelée payloads from stock Android (CVE-2018-6242)",
           "stargazers_count": 561,
-          "forks_count": 54,
+          "forks_count": 53,
           "language": "Java",
           "updated_at": "2026-10-30T14:04:08Z",
           "pushed_at": "2022-12-11T10:44:39Z",

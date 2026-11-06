@@ -992,6 +992,25 @@
             "html_url": "https://github.com/0xUhaw"
           },
           "clone_url": "https://github.com/0xUhaw/CVE-2022-0778.git"
+        },
+        {
+          "id": 1448204456,
+          "name": "cortex9-openssl-bn-mod-sqrt-loop-model",
+          "full_name": "federiconbaez/cortex9-openssl-bn-mod-sqrt-loop-model",
+          "html_url": "https://github.com/federiconbaez/cortex9-openssl-bn-mod-sqrt-loop-model",
+          "description": "Pure-Python port of OpenSSL BN_mod_sqrt before/after the CVE-2022-0778 fix, with a step budget on the loops that can grow. Offline.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-11-06T11:55:07Z",
+          "pushed_at": "2026-11-06T11:55:02Z",
+          "created_at": "2026-11-06T11:54:55Z",
+          "topics": [],
+          "owner": {
+            "login": "federiconbaez",
+            "html_url": "https://github.com/federiconbaez"
+          },
+          "clone_url": "https://github.com/federiconbaez/cortex9-openssl-bn-mod-sqrt-loop-model.git"
         }
       ]
     },
@@ -3434,10 +3453,10 @@
           "full_name": "horizon3ai/CVE-2022-1388",
           "html_url": "https://github.com/horizon3ai/CVE-2022-1388",
           "description": "POC for CVE-2022-1388",
-          "stargazers_count": 230,
+          "stargazers_count": 229,
           "forks_count": 37,
           "language": "Python",
-          "updated_at": "2026-10-13T19:23:46Z",
+          "updated_at": "2026-11-06T13:47:20Z",
           "pushed_at": "2022-05-09T20:52:07Z",
           "created_at": "2022-05-09T11:46:45Z",
           "topics": [],
@@ -4636,25 +4655,6 @@
             "html_url": "https://github.com/aykhan019"
           },
           "clone_url": "https://github.com/aykhan019/cve-2022-1471-jira-lab.git"
-        },
-        {
-          "id": 1304349797,
-          "name": "yaml-payload-2",
-          "full_name": "seal-sec-demo-2/yaml-payload-2",
-          "html_url": "https://github.com/seal-sec-demo-2/yaml-payload-2",
-          "description": "SnakeYAML CVE-2022-1471 exploit payload for Seal Security demos",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Java",
-          "updated_at": "2026-09-01T14:22:04Z",
-          "pushed_at": "2026-07-17T20:21:36Z",
-          "created_at": "2026-07-17T20:01:20Z",
-          "topics": [],
-          "owner": {
-            "login": "seal-sec-demo-2",
-            "html_url": "https://github.com/seal-sec-demo-2"
-          },
-          "clone_url": "https://github.com/seal-sec-demo-2/yaml-payload-2.git"
         }
       ]
     },
@@ -7594,10 +7594,10 @@
           "full_name": "lucksec/Spring-Cloud-Gateway-CVE-2022-22947",
           "html_url": "https://github.com/lucksec/Spring-Cloud-Gateway-CVE-2022-22947",
           "description": "CVE-2022-22947",
-          "stargazers_count": 222,
+          "stargazers_count": 221,
           "forks_count": 58,
           "language": "Python",
-          "updated_at": "2026-10-29T08:45:36Z",
+          "updated_at": "2026-11-06T15:48:17Z",
           "pushed_at": "2022-03-03T14:03:30Z",
           "created_at": "2022-03-02T11:58:55Z",
           "topics": [],
@@ -13741,6 +13741,25 @@
       "cve_id": "CVE-2022-24713",
       "repositories": [
         {
+          "id": 1448330593,
+          "name": "cortex9-rust-regex-empty-repetition-size-limit-model",
+          "full_name": "federiconbaez/cortex9-rust-regex-empty-repetition-size-limit-model",
+          "html_url": "https://github.com/federiconbaez/cortex9-rust-regex-empty-repetition-size-limit-model",
+          "description": "Offline model of the regex 1.5.4 compile-size accounting for empty repetitions (CVE-2022-24713), checked against regex-syntax HIR and real compile results. Bounded cases are labelled MODEL_LIMIT.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-11-06T14:00:08Z",
+          "pushed_at": "2026-11-06T14:00:03Z",
+          "created_at": "2026-11-06T13:59:56Z",
+          "topics": [],
+          "owner": {
+            "login": "federiconbaez",
+            "html_url": "https://github.com/federiconbaez"
+          },
+          "clone_url": "https://github.com/federiconbaez/cortex9-rust-regex-empty-repetition-size-limit-model.git"
+        },
+        {
           "id": 500224436,
           "name": "CVE-2022-24713-POC",
           "full_name": "jpeisach/CVE-2022-24713-POC",
@@ -13825,6 +13844,30 @@
             "html_url": "https://github.com/tuo4n8"
           },
           "clone_url": "https://github.com/tuo4n8/CVE-2022-24760.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2022-24765",
+      "repositories": [
+        {
+          "id": 1448203797,
+          "name": "cortex9-git-safe-directory-discovery-model",
+          "full_name": "federiconbaez/cortex9-git-safe-directory-discovery-model",
+          "html_url": "https://github.com/federiconbaez/cortex9-git-safe-directory-discovery-model",
+          "description": "In-memory model of git repository discovery and the safe.directory ownership check (CVE-2022-24765). Never runs git or touches the real FS.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-11-06T11:54:24Z",
+          "pushed_at": "2026-11-06T11:54:20Z",
+          "created_at": "2026-11-06T11:54:13Z",
+          "topics": [],
+          "owner": {
+            "login": "federiconbaez",
+            "html_url": "https://github.com/federiconbaez"
+          },
+          "clone_url": "https://github.com/federiconbaez/cortex9-git-safe-directory-discovery-model.git"
         }
       ]
     },
@@ -14514,6 +14557,25 @@
       "cve_id": "CVE-2022-25235",
       "repositories": [
         {
+          "id": 1448267429,
+          "name": "cortex9-expat-utf8-name-validation-model",
+          "full_name": "federiconbaez/cortex9-expat-utf8-name-validation-model",
+          "html_url": "https://github.com/federiconbaez/cortex9-expat-utf8-name-validation-model",
+          "description": "Offline Python model of expat's UTF-8 name checks before/after the CVE-2022-25235 fix, with an independent RFC 3629 decoder. No XML parsing of untrusted input.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-11-06T13:01:20Z",
+          "pushed_at": "2026-11-06T13:01:15Z",
+          "created_at": "2026-11-06T13:01:08Z",
+          "topics": [],
+          "owner": {
+            "login": "federiconbaez",
+            "html_url": "https://github.com/federiconbaez"
+          },
+          "clone_url": "https://github.com/federiconbaez/cortex9-expat-utf8-name-validation-model.git"
+        },
+        {
           "id": 495706238,
           "name": "external_expat_AOSP10_r33_CVE-2022-25235",
           "full_name": "Satheesh575555/external_expat_AOSP10_r33_CVE-2022-25235",
@@ -14537,6 +14599,25 @@
     {
       "cve_id": "CVE-2022-25236",
       "repositories": [
+        {
+          "id": 1448267092,
+          "name": "cortex9-expat-namespace-separator-model",
+          "full_name": "federiconbaez/cortex9-expat-namespace-separator-model",
+          "html_url": "https://github.com/federiconbaez/cortex9-expat-namespace-separator-model",
+          "description": "Offline Python model of expat addBinding/namespace-separator handling in 2.4.4, 2.4.5 and 2.4.7 (CVE-2022-25236). String-level only.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-11-06T13:01:02Z",
+          "pushed_at": "2026-11-06T13:00:56Z",
+          "created_at": "2026-11-06T13:00:50Z",
+          "topics": [],
+          "owner": {
+            "login": "federiconbaez",
+            "html_url": "https://github.com/federiconbaez"
+          },
+          "clone_url": "https://github.com/federiconbaez/cortex9-expat-namespace-separator-model.git"
+        },
         {
           "id": 489225532,
           "name": "external_expat_AOSP10_r33_CVE-2022-25236",
@@ -14854,126 +14935,6 @@
             "html_url": "https://github.com/szymonh"
           },
           "clone_url": "https://github.com/szymonh/rndis-co.git"
-        }
-      ]
-    },
-    {
-      "cve_id": "CVE-2022-25476",
-      "repositories": [
-        {
-          "id": 1302318810,
-          "name": "CVE-2022-25476",
-          "full_name": "HORKimhab/CVE-2022-25476",
-          "html_url": "https://github.com/HORKimhab/CVE-2022-25476",
-          "description": "CVE-2022-25476 - Collection",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-07-16T04:43:01Z",
-          "pushed_at": "2026-07-16T04:42:57Z",
-          "created_at": "2026-07-16T04:40:48Z",
-          "topics": [],
-          "owner": {
-            "login": "HORKimhab",
-            "html_url": "https://github.com/HORKimhab"
-          },
-          "clone_url": "https://github.com/HORKimhab/CVE-2022-25476.git"
-        }
-      ]
-    },
-    {
-      "cve_id": "CVE-2022-25477",
-      "repositories": [
-        {
-          "id": 1302323023,
-          "name": "CVE-2022-25477",
-          "full_name": "HORKimhab/CVE-2022-25477",
-          "html_url": "https://github.com/HORKimhab/CVE-2022-25477",
-          "description": "CVE Realtek SD card reader. CVE-2022-25477, CVE-2022-25478, CVE-2022-25479, CVE-2022-25480, CVE-2024-40432, CVE-2024-40431",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-07-16T04:48:46Z",
-          "pushed_at": "2026-07-16T04:48:42Z",
-          "created_at": "2026-07-16T04:46:13Z",
-          "topics": [],
-          "owner": {
-            "login": "HORKimhab",
-            "html_url": "https://github.com/HORKimhab"
-          },
-          "clone_url": "https://github.com/HORKimhab/CVE-2022-25477.git"
-        }
-      ]
-    },
-    {
-      "cve_id": "CVE-2022-25478",
-      "repositories": [
-        {
-          "id": 1302323023,
-          "name": "CVE-2022-25477",
-          "full_name": "HORKimhab/CVE-2022-25477",
-          "html_url": "https://github.com/HORKimhab/CVE-2022-25477",
-          "description": "CVE Realtek SD card reader. CVE-2022-25477, CVE-2022-25478, CVE-2022-25479, CVE-2022-25480, CVE-2024-40432, CVE-2024-40431",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-07-16T04:48:46Z",
-          "pushed_at": "2026-07-16T04:48:42Z",
-          "created_at": "2026-07-16T04:46:13Z",
-          "topics": [],
-          "owner": {
-            "login": "HORKimhab",
-            "html_url": "https://github.com/HORKimhab"
-          },
-          "clone_url": "https://github.com/HORKimhab/CVE-2022-25477.git"
-        }
-      ]
-    },
-    {
-      "cve_id": "CVE-2022-25479",
-      "repositories": [
-        {
-          "id": 1302323023,
-          "name": "CVE-2022-25477",
-          "full_name": "HORKimhab/CVE-2022-25477",
-          "html_url": "https://github.com/HORKimhab/CVE-2022-25477",
-          "description": "CVE Realtek SD card reader. CVE-2022-25477, CVE-2022-25478, CVE-2022-25479, CVE-2022-25480, CVE-2024-40432, CVE-2024-40431",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-07-16T04:48:46Z",
-          "pushed_at": "2026-07-16T04:48:42Z",
-          "created_at": "2026-07-16T04:46:13Z",
-          "topics": [],
-          "owner": {
-            "login": "HORKimhab",
-            "html_url": "https://github.com/HORKimhab"
-          },
-          "clone_url": "https://github.com/HORKimhab/CVE-2022-25477.git"
-        }
-      ]
-    },
-    {
-      "cve_id": "CVE-2022-25480",
-      "repositories": [
-        {
-          "id": 1302323023,
-          "name": "CVE-2022-25477",
-          "full_name": "HORKimhab/CVE-2022-25477",
-          "html_url": "https://github.com/HORKimhab/CVE-2022-25477",
-          "description": "CVE Realtek SD card reader. CVE-2022-25477, CVE-2022-25478, CVE-2022-25479, CVE-2022-25480, CVE-2024-40432, CVE-2024-40431",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-07-16T04:48:46Z",
-          "pushed_at": "2026-07-16T04:48:42Z",
-          "created_at": "2026-07-16T04:46:13Z",
-          "topics": [],
-          "owner": {
-            "login": "HORKimhab",
-            "html_url": "https://github.com/HORKimhab"
-          },
-          "clone_url": "https://github.com/HORKimhab/CVE-2022-25477.git"
         }
       ]
     },
@@ -16689,8 +16650,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-11-06T02:13:26Z",
-          "pushed_at": "2026-11-06T02:13:21Z",
+          "updated_at": "2026-11-06T18:14:41Z",
+          "pushed_at": "2026-11-06T18:14:35Z",
           "created_at": "2026-05-06T01:47:50Z",
           "topics": [],
           "owner": {
@@ -19659,10 +19620,10 @@
           "full_name": "hakivvi/CVE-2022-29464",
           "html_url": "https://github.com/hakivvi/CVE-2022-29464",
           "description": "WSO2 RCE (CVE-2022-29464) exploit and writeup.",
-          "stargazers_count": 379,
+          "stargazers_count": 378,
           "forks_count": 83,
           "language": "Python",
-          "updated_at": "2026-10-28T11:27:31Z",
+          "updated_at": "2026-11-06T13:47:07Z",
           "pushed_at": "2022-04-27T05:52:43Z",
           "created_at": "2022-04-20T21:23:52Z",
           "topics": [
@@ -20802,10 +20763,10 @@
           "full_name": "aaronsvk/CVE-2022-30075",
           "html_url": "https://github.com/aaronsvk/CVE-2022-30075",
           "description": "Tp-Link Archer AX50 Authenticated RCE (CVE-2022-30075)",
-          "stargazers_count": 238,
+          "stargazers_count": 237,
           "forks_count": 42,
           "language": "Python",
-          "updated_at": "2026-11-02T00:00:03Z",
+          "updated_at": "2026-11-06T13:47:42Z",
           "pushed_at": "2022-11-20T03:03:53Z",
           "created_at": "2022-06-07T23:26:47Z",
           "topics": [],
@@ -25913,54 +25874,6 @@
       ]
     },
     {
-      "cve_id": "CVE-2022-35497",
-      "repositories": [
-        {
-          "id": 1304134770,
-          "name": "CVE-2022-35497",
-          "full_name": "PN-Tester/CVE-2022-35497",
-          "html_url": "https://github.com/PN-Tester/CVE-2022-35497",
-          "description": "TM4WEB Vulnerability - CVE-2022-35497",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-07-17T19:30:55Z",
-          "pushed_at": "2026-07-17T19:30:20Z",
-          "created_at": "2026-07-17T15:29:31Z",
-          "topics": [],
-          "owner": {
-            "login": "PN-Tester",
-            "html_url": "https://github.com/PN-Tester"
-          },
-          "clone_url": "https://github.com/PN-Tester/CVE-2022-35497.git"
-        }
-      ]
-    },
-    {
-      "cve_id": "CVE-2022-35499",
-      "repositories": [
-        {
-          "id": 1304115357,
-          "name": "CVE-2022-35499",
-          "full_name": "PN-Tester/CVE-2022-35499",
-          "html_url": "https://github.com/PN-Tester/CVE-2022-35499",
-          "description": "TM4Web Vulnerability - CVE-2022-35499",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-07-17T17:47:13Z",
-          "pushed_at": "2026-07-17T17:46:57Z",
-          "created_at": "2026-07-17T15:07:47Z",
-          "topics": [],
-          "owner": {
-            "login": "PN-Tester",
-            "html_url": "https://github.com/PN-Tester"
-          },
-          "clone_url": "https://github.com/PN-Tester/CVE-2022-35499.git"
-        }
-      ]
-    },
-    {
       "cve_id": "CVE-2022-35500",
       "repositories": [
         {
@@ -26858,7 +26771,7 @@
           "forks_count": 0,
           "language": "",
           "updated_at": "2026-10-21T16:39:07Z",
-          "pushed_at": "2026-11-05T11:03:59Z",
+          "pushed_at": "2026-11-06T11:00:45Z",
           "created_at": "2026-10-07T15:40:44Z",
           "topics": [],
           "owner": {
@@ -27932,14 +27845,14 @@
         },
         {
           "id": 1447464045,
-          "name": "AGM3-W09HN-TempRoot",
-          "full_name": "lRENyaaa/AGM3-W09HN-TempRoot",
-          "html_url": "https://github.com/lRENyaaa/AGM3-W09HN-TempRoot",
+          "name": "AGM3-W09HN-TMP-ROOT-CVE-2022-38181",
+          "full_name": "lRENyaaa/AGM3-W09HN-TMP-ROOT-CVE-2022-38181",
+          "html_url": "https://github.com/lRENyaaa/AGM3-W09HN-TMP-ROOT-CVE-2022-38181",
           "description": "在 AGM3-W09HN 上通过 CVE-2022-38181 取得临时Root",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "C",
-          "updated_at": "2026-11-05T20:14:33Z",
+          "updated_at": "2026-11-06T11:37:27Z",
           "pushed_at": "2026-11-05T20:14:30Z",
           "created_at": "2026-11-05T20:08:35Z",
           "topics": [],
@@ -27947,7 +27860,7 @@
             "login": "lRENyaaa",
             "html_url": "https://github.com/lRENyaaa"
           },
-          "clone_url": "https://github.com/lRENyaaa/AGM3-W09HN-TempRoot.git"
+          "clone_url": "https://github.com/lRENyaaa/AGM3-W09HN-TMP-ROOT-CVE-2022-38181.git"
         },
         {
           "id": 1311553311,
@@ -32391,10 +32304,10 @@
           "full_name": "p0dalirius/CVE-2022-45771-Pwndoc-LFI-to-RCE",
           "html_url": "https://github.com/p0dalirius/CVE-2022-45771-Pwndoc-LFI-to-RCE",
           "description": "Pwndoc local file inclusion to remote code execution of Node.js code on the server",
-          "stargazers_count": 47,
+          "stargazers_count": 46,
           "forks_count": 7,
           "language": "Python",
-          "updated_at": "2026-01-14T22:12:54Z",
+          "updated_at": "2026-11-06T13:49:55Z",
           "pushed_at": "2025-01-31T09:58:14Z",
           "created_at": "2022-12-13T10:03:14Z",
           "topics": [
