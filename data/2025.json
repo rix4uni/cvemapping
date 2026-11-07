@@ -6199,10 +6199,10 @@
           "full_name": "ynwarcs/CVE-2025-21298",
           "html_url": "https://github.com/ynwarcs/CVE-2025-21298",
           "description": "Proof of concept \u0026 details for CVE-2025-21298",
-          "stargazers_count": 197,
+          "stargazers_count": 196,
           "forks_count": 49,
           "language": "Rich Text Format",
-          "updated_at": "2026-10-13T19:07:16Z",
+          "updated_at": "2026-11-07T13:35:16Z",
           "pushed_at": "2025-01-20T18:22:01Z",
           "created_at": "2025-01-20T18:16:51Z",
           "topics": [],
@@ -21883,6 +21883,25 @@
             "html_url": "https://github.com/Skorpion96"
           },
           "clone_url": "https://github.com/Skorpion96/unisoc-su.git"
+        },
+        {
+          "id": 1449382234,
+          "name": "360-kidwatch-11X-W370-Ghostroot",
+          "full_name": "Little-yellow-duck1206/360-kidwatch-11X-W370-Ghostroot",
+          "html_url": "https://github.com/Little-yellow-duck1206/360-kidwatch-11X-W370-Ghostroot",
+          "description": "A stealthy, file-based Local Privilege Escalation (LPE) PoC for 360 11X W370 (Unisoc SC8541E, Android 8.1) exploiting CVE-2025-31710. No PC required. For research only.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Shell",
+          "updated_at": "2026-11-07T15:32:57Z",
+          "pushed_at": "2026-11-07T15:32:52Z",
+          "created_at": "2026-11-07T13:28:19Z",
+          "topics": [],
+          "owner": {
+            "login": "Little-yellow-duck1206",
+            "html_url": "https://github.com/Little-yellow-duck1206"
+          },
+          "clone_url": "https://github.com/Little-yellow-duck1206/360-kidwatch-11X-W370-Ghostroot.git"
         }
       ]
     },
@@ -35912,7 +35931,7 @@
           "forks_count": 0,
           "language": "",
           "updated_at": "2026-10-21T16:39:02Z",
-          "pushed_at": "2026-11-06T10:47:51Z",
+          "pushed_at": "2026-11-07T10:01:29Z",
           "created_at": "2026-10-07T15:40:34Z",
           "topics": [],
           "owner": {
@@ -39988,6 +40007,34 @@
             "html_url": "https://github.com/amalpvatayam67"
           },
           "clone_url": "https://github.com/amalpvatayam67/day01-sessionreaper-lab.git"
+        },
+        {
+          "id": 1449192433,
+          "name": "module-sessionreaper-patch",
+          "full_name": "bigcartenergy/module-sessionreaper-patch",
+          "html_url": "https://github.com/bigcartenergy/module-sessionreaper-patch",
+          "description": "Free security patch for Magento Open Source and Mage-OS by Big Cart Energy: closes CVE-2025-54236 (SessionReaper) on the Magento 2.3 and 2.4 releases that have no official fix, as one plugin on the Web API input processor that applies the allow-list of Adobe's fix. No core file is modified.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "PHP",
+          "updated_at": "2026-11-07T09:07:42Z",
+          "pushed_at": "2026-11-07T09:48:48Z",
+          "created_at": "2026-11-07T09:04:01Z",
+          "topics": [
+            "adobe-commerce",
+            "composer-package",
+            "cve-2025-54236",
+            "magento-open-source",
+            "magento2",
+            "magento2-module",
+            "security-patch",
+            "sessionreaper"
+          ],
+          "owner": {
+            "login": "bigcartenergy",
+            "html_url": "https://github.com/bigcartenergy"
+          },
+          "clone_url": "https://github.com/bigcartenergy/module-sessionreaper-patch.git"
         },
         {
           "id": 1125104768,
@@ -48417,10 +48464,10 @@
           "full_name": "X-Cotang/CVE-2025-55183_POC",
           "html_url": "https://github.com/X-Cotang/CVE-2025-55183_POC",
           "description": "CVE-2025-55183 POC",
-          "stargazers_count": 4,
+          "stargazers_count": 5,
           "forks_count": 1,
           "language": "Python",
-          "updated_at": "2025-12-15T07:49:32Z",
+          "updated_at": "2026-11-07T15:12:12Z",
           "pushed_at": "2025-12-12T09:17:39Z",
           "created_at": "2025-12-12T08:50:07Z",
           "topics": [],
@@ -53283,9 +53330,9 @@
           "description": "poc and yara rules",
           "stargazers_count": 1,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-10-24T18:50:10Z",
-          "pushed_at": "2026-10-24T18:50:06Z",
+          "language": "Go",
+          "updated_at": "2026-11-07T11:08:00Z",
+          "pushed_at": "2026-11-07T11:07:56Z",
           "created_at": "2026-08-28T12:36:55Z",
           "topics": [
             "cve",
@@ -55091,30 +55138,6 @@
             "html_url": "https://github.com/studiomeyer-io"
           },
           "clone_url": "https://github.com/studiomeyer-io/mcp-server-attestation.git"
-        }
-      ]
-    },
-    {
-      "cve_id": "CVE-2025-61622",
-      "repositories": [
-        {
-          "id": 1069122189,
-          "name": "cve_2025_61622_poc",
-          "full_name": "fa1consec/cve_2025_61622_poc",
-          "html_url": "https://github.com/fa1consec/cve_2025_61622_poc",
-          "description": "This PoC demonstrates the Remote Code Execution (RCE) vulnerability in  Apache Pyfory (versions 0.12.0-0.12.2 and legacy PyFury 0.1.0-0.10.3)  due to insecure pickle fallback deserialization (CVE-2025-61622).",
-          "stargazers_count": 4,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2025-11-16T15:08:56Z",
-          "pushed_at": "2025-10-03T16:30:18Z",
-          "created_at": "2025-10-03T12:44:16Z",
-          "topics": [],
-          "owner": {
-            "login": "fa1consec",
-            "html_url": "https://github.com/fa1consec"
-          },
-          "clone_url": "https://github.com/fa1consec/cve_2025_61622_poc.git"
         }
       ]
     },
@@ -65676,7 +65699,7 @@
           "forks_count": 0,
           "language": "HTML",
           "updated_at": "2026-10-21T17:13:09Z",
-          "pushed_at": "2026-11-06T10:49:16Z",
+          "pushed_at": "2026-11-07T10:02:07Z",
           "created_at": "2026-06-23T18:32:13Z",
           "topics": [],
           "owner": {
