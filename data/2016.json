@@ -302,10 +302,10 @@
           "full_name": "daybreak-kits/weblogicScanner",
           "html_url": "https://github.com/daybreak-kits/weblogicScanner",
           "description": "weblogic 漏洞扫描工具。目前包含对以下漏洞的检测能力：CVE-2014-4210、CVE-2016-0638、CVE-2016-3510、CVE-2017-3248、CVE-2017-3506、CVE-2017-10271、CVE-2018-2628、CVE-2018-2893、CVE-2018-2894、CVE-2018-3191、CVE-2018-3245、CVE-2018-3252、CVE-2019-2618、CVE-2019-2725、CVE-2019-2729、CVE-2019-2890、CVE-2020-2551、CVE-2020-14750、CVE-2020-14882、CVE-2020-14883",
-          "stargazers_count": 2079,
+          "stargazers_count": 2078,
           "forks_count": 325,
           "language": "Python",
-          "updated_at": "2026-11-05T13:17:22Z",
+          "updated_at": "2026-11-10T13:24:02Z",
           "pushed_at": "2023-11-24T09:21:56Z",
           "created_at": "2020-01-15T04:26:29Z",
           "topics": [
@@ -1129,10 +1129,10 @@
           "full_name": "opsxcq/exploit-CVE-2016-10033",
           "html_url": "https://github.com/opsxcq/exploit-CVE-2016-10033",
           "description": "PHPMailer \u003c 5.2.18 Remote Code Execution exploit and vulnerable container",
-          "stargazers_count": 408,
+          "stargazers_count": 409,
           "forks_count": 144,
           "language": "PHP",
-          "updated_at": "2026-11-01T20:05:55Z",
+          "updated_at": "2026-11-10T13:26:05Z",
           "pushed_at": "2023-02-27T06:48:09Z",
           "created_at": "2016-12-26T13:39:03Z",
           "topics": [
@@ -2692,6 +2692,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2016-1834",
+      "repositories": [
+        {
+          "id": 1451232991,
+          "name": "cortex9-libxml2-strncat-length-wrap-model",
+          "full_name": "federiconbaez/cortex9-libxml2-strncat-length-wrap-model",
+          "html_url": "https://github.com/federiconbaez/cortex9-libxml2-strncat-length-wrap-model",
+          "description": "Offline length-arithmetic model of libxml2 xmlStrncat/xmlStrncatNew (CVE-2016-1834), with C11 (UB_STOP) and explicit wrap32 semantics side by side. Lengths only: no strings built, nothing copied.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "C",
+          "updated_at": "2026-11-09T10:37:48Z",
+          "pushed_at": "2026-11-09T10:37:43Z",
+          "created_at": "2026-11-09T10:37:36Z",
+          "topics": [],
+          "owner": {
+            "login": "federiconbaez",
+            "html_url": "https://github.com/federiconbaez"
+          },
+          "clone_url": "https://github.com/federiconbaez/cortex9-libxml2-strncat-length-wrap-model.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2016-20012",
       "repositories": [
         {
@@ -3847,10 +3871,10 @@
           "full_name": "daybreak-kits/weblogicScanner",
           "html_url": "https://github.com/daybreak-kits/weblogicScanner",
           "description": "weblogic 漏洞扫描工具。目前包含对以下漏洞的检测能力：CVE-2014-4210、CVE-2016-0638、CVE-2016-3510、CVE-2017-3248、CVE-2017-3506、CVE-2017-10271、CVE-2018-2628、CVE-2018-2893、CVE-2018-2894、CVE-2018-3191、CVE-2018-3245、CVE-2018-3252、CVE-2019-2618、CVE-2019-2725、CVE-2019-2729、CVE-2019-2890、CVE-2020-2551、CVE-2020-14750、CVE-2020-14882、CVE-2020-14883",
-          "stargazers_count": 2079,
+          "stargazers_count": 2078,
           "forks_count": 325,
           "language": "Python",
-          "updated_at": "2026-11-05T13:17:22Z",
+          "updated_at": "2026-11-10T13:24:02Z",
           "pushed_at": "2023-11-24T09:21:56Z",
           "created_at": "2020-01-15T04:26:29Z",
           "topics": [
@@ -5240,10 +5264,10 @@
           "full_name": "scumjr/dirtycow-vdso",
           "html_url": "https://github.com/scumjr/dirtycow-vdso",
           "description": "PoC for Dirty COW (CVE-2016-5195)",
-          "stargazers_count": 510,
+          "stargazers_count": 511,
           "forks_count": 145,
           "language": "C",
-          "updated_at": "2026-10-31T16:57:01Z",
+          "updated_at": "2026-11-09T14:14:11Z",
           "pushed_at": "2022-03-16T12:08:54Z",
           "created_at": "2016-10-22T15:25:34Z",
           "topics": [],
@@ -7055,6 +7079,40 @@
           "clone_url": "https://github.com/justlce/CVE-2016-6210-Exploit.git"
         },
         {
+          "id": 1225581327,
+          "name": "ssh-enum",
+          "full_name": "Alisha-chaudhary/ssh-enum",
+          "html_url": "https://github.com/Alisha-chaudhary/ssh-enum",
+          "description": "This project explores whether modern OpenSSH reveals valid usernames through subtle response or timing differences. CVE-2016-6210 user enumeration investigation ( Welch's t-test, Cohen's d, and detection engineering ) on a controlled lab on Ubuntu 22.04.5 LTS, it also examines the traces such attempts leave behind and how they can be detected..",
+          "stargazers_count": 2,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-11-11T04:08:27Z",
+          "pushed_at": "2026-07-02T19:20:41Z",
+          "created_at": "2026-04-30T12:31:20Z",
+          "topics": [
+            "blue-team",
+            "cve-2016-6210",
+            "detection-engineering",
+            "hydra",
+            "kali-linux",
+            "kali-linux-tools",
+            "log-analysis",
+            "metasploit",
+            "openssh",
+            "python",
+            "ssh",
+            "statistical-analysis",
+            "timing-analysis",
+            "ubuntu"
+          ],
+          "owner": {
+            "login": "Alisha-chaudhary",
+            "html_url": "https://github.com/Alisha-chaudhary"
+          },
+          "clone_url": "https://github.com/Alisha-chaudhary/ssh-enum.git"
+        },
+        {
           "id": 616157822,
           "name": "CVE-2016-6210-exploit",
           "full_name": "goomdan/CVE-2016-6210-exploit",
@@ -7093,57 +7151,23 @@
           "clone_url": "https://github.com/wabiyagi/CVE-2016-6210.git"
         },
         {
-          "id": 1225581327,
-          "name": "ssh-enum",
-          "full_name": "Alisha-chaudhary/ssh-enum",
-          "html_url": "https://github.com/Alisha-chaudhary/ssh-enum",
-          "description": "This project explores whether modern OpenSSH reveals valid usernames through subtle response or timing differences. CVE-2016-6210 user enumeration investigation ( Welch's t-test, Cohen's d, and detection engineering ) on a controlled lab on Ubuntu 22.04.5 LTS, it also examines the traces such attempts leave behind and how they can be detected..",
+          "id": 964914758,
+          "name": "CVE-2016-6210-OpenSSHd-7.2p2",
+          "full_name": "nicoleman0/CVE-2016-6210-OpenSSHd-7.2p2",
+          "html_url": "https://github.com/nicoleman0/CVE-2016-6210-OpenSSHd-7.2p2",
+          "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-07-02T19:20:47Z",
-          "pushed_at": "2026-07-02T19:20:41Z",
-          "created_at": "2026-04-30T12:31:20Z",
-          "topics": [
-            "blue-team",
-            "cve-2016-6210",
-            "detection-engineering",
-            "hydra",
-            "kali-linux",
-            "kali-linux-tools",
-            "log-analysis",
-            "metasploit",
-            "openssh",
-            "python",
-            "ssh",
-            "statistical-analysis",
-            "timing-analysis",
-            "ubuntu"
-          ],
-          "owner": {
-            "login": "Alisha-chaudhary",
-            "html_url": "https://github.com/Alisha-chaudhary"
-          },
-          "clone_url": "https://github.com/Alisha-chaudhary/ssh-enum.git"
-        },
-        {
-          "id": 1021305950,
-          "name": "cve-2016-6210",
-          "full_name": "KiPhuong/cve-2016-6210",
-          "html_url": "https://github.com/KiPhuong/cve-2016-6210",
-          "description": "PoC of cve-2016-6210",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2025-07-17T08:02:07Z",
-          "pushed_at": "2025-07-17T08:02:04Z",
-          "created_at": "2025-07-17T07:47:19Z",
+          "updated_at": "2025-04-12T02:51:13Z",
+          "pushed_at": "2025-04-12T02:51:10Z",
+          "created_at": "2025-04-12T02:51:08Z",
           "topics": [],
           "owner": {
-            "login": "KiPhuong",
-            "html_url": "https://github.com/KiPhuong"
+            "login": "nicoleman0",
+            "html_url": "https://github.com/nicoleman0"
           },
-          "clone_url": "https://github.com/KiPhuong/cve-2016-6210.git"
+          "clone_url": "https://github.com/nicoleman0/CVE-2016-6210-OpenSSHd-7.2p2.git"
         },
         {
           "id": 686134711,
@@ -7165,23 +7189,23 @@
           "clone_url": "https://github.com/samh4cks/CVE-2016-6210-OpenSSH-User-Enumeration.git"
         },
         {
-          "id": 964914758,
-          "name": "CVE-2016-6210-OpenSSHd-7.2p2",
-          "full_name": "nicoleman0/CVE-2016-6210-OpenSSHd-7.2p2",
-          "html_url": "https://github.com/nicoleman0/CVE-2016-6210-OpenSSHd-7.2p2",
-          "description": "",
+          "id": 1021305950,
+          "name": "cve-2016-6210",
+          "full_name": "KiPhuong/cve-2016-6210",
+          "html_url": "https://github.com/KiPhuong/cve-2016-6210",
+          "description": "PoC of cve-2016-6210",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2025-04-12T02:51:13Z",
-          "pushed_at": "2025-04-12T02:51:10Z",
-          "created_at": "2025-04-12T02:51:08Z",
+          "updated_at": "2025-07-17T08:02:07Z",
+          "pushed_at": "2025-07-17T08:02:04Z",
+          "created_at": "2025-07-17T07:47:19Z",
           "topics": [],
           "owner": {
-            "login": "nicoleman0",
-            "html_url": "https://github.com/nicoleman0"
+            "login": "KiPhuong",
+            "html_url": "https://github.com/KiPhuong"
           },
-          "clone_url": "https://github.com/nicoleman0/CVE-2016-6210-OpenSSHd-7.2p2.git"
+          "clone_url": "https://github.com/KiPhuong/cve-2016-6210.git"
         }
       ]
     },
@@ -9083,10 +9107,10 @@
           "full_name": "ImageTragick/PoCs",
           "html_url": "https://github.com/ImageTragick/PoCs",
           "description": "Proof of Concepts for CVE-2016–3714",
-          "stargazers_count": 494,
+          "stargazers_count": 495,
           "forks_count": 153,
           "language": "Shell",
-          "updated_at": "2026-11-08T00:33:11Z",
+          "updated_at": "2026-11-10T13:04:27Z",
           "pushed_at": "2016-05-23T17:45:55Z",
           "created_at": "2016-05-03T05:43:08Z",
           "topics": [],

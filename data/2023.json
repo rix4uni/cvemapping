@@ -219,6 +219,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2023-0286",
+      "repositories": [
+        {
+          "id": 1451220918,
+          "name": "cortex9-openssl-x400-generalname-type-confusion-model",
+          "full_name": "federiconbaez/cortex9-openssl-x400-generalname-type-confusion-model",
+          "html_url": "https://github.com/federiconbaez/cortex9-openssl-x400-generalname-type-confusion-model",
+          "description": "Offline labelled-heap model of the OpenSSL X.400 address type confusion in GENERAL_NAME_cmp (CVE-2023-0286). Model bytes only: no OpenSSL, no real memory reads.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Rust",
+          "updated_at": "2026-11-09T10:24:35Z",
+          "pushed_at": "2026-11-09T10:24:30Z",
+          "created_at": "2026-11-09T10:24:23Z",
+          "topics": [],
+          "owner": {
+            "login": "federiconbaez",
+            "html_url": "https://github.com/federiconbaez"
+          },
+          "clone_url": "https://github.com/federiconbaez/cortex9-openssl-x400-generalname-type-confusion-model.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2023-0297",
       "repositories": [
         {
@@ -307,7 +331,7 @@
           "forks_count": 0,
           "language": "",
           "updated_at": "2026-10-21T16:39:04Z",
-          "pushed_at": "2026-11-08T10:27:29Z",
+          "pushed_at": "2026-11-10T11:16:40Z",
           "created_at": "2026-10-07T15:40:37Z",
           "topics": [],
           "owner": {
@@ -389,10 +413,10 @@
           "full_name": "sxlmnwb/CVE-2023-0386",
           "html_url": "https://github.com/sxlmnwb/CVE-2023-0386",
           "description": "Vulnerabilities Exploitation On Ubuntu 22.04",
-          "stargazers_count": 58,
+          "stargazers_count": 59,
           "forks_count": 3,
           "language": "C",
-          "updated_at": "2026-11-05T07:29:55Z",
+          "updated_at": "2026-11-09T01:57:54Z",
           "pushed_at": "2023-05-16T10:49:19Z",
           "created_at": "2023-05-16T10:26:10Z",
           "topics": [
@@ -4040,10 +4064,10 @@
           "full_name": "SamuelTulach/nullmap",
           "html_url": "https://github.com/SamuelTulach/nullmap",
           "description": "Using CVE-2023-21768 to manual map kernel mode driver ",
-          "stargazers_count": 202,
+          "stargazers_count": 203,
           "forks_count": 41,
           "language": "C",
-          "updated_at": "2026-11-08T15:03:46Z",
+          "updated_at": "2026-11-09T23:03:08Z",
           "pushed_at": "2023-03-10T20:16:53Z",
           "created_at": "2023-03-10T19:08:28Z",
           "topics": [
@@ -8899,6 +8923,25 @@
           "clone_url": "https://github.com/thanhlam-attt/CVE-2023-25690.git"
         },
         {
+          "id": 1387183365,
+          "name": "cve-2023-25690-smuggler",
+          "full_name": "roshanrajbanshi/cve-2023-25690-smuggler",
+          "html_url": "https://github.com/roshanrajbanshi/cve-2023-25690-smuggler",
+          "description": "Python exploit for CVE-2023-25690 — Apache HTTP Request Smuggling via CRLF injection in mod_rewrite/mod_proxy. Built and tested against TryHackMe's Contrabando box.",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-11-09T21:22:44Z",
+          "pushed_at": "2026-09-25T09:31:31Z",
+          "created_at": "2026-09-25T09:23:01Z",
+          "topics": [],
+          "owner": {
+            "login": "roshanrajbanshi",
+            "html_url": "https://github.com/roshanrajbanshi"
+          },
+          "clone_url": "https://github.com/roshanrajbanshi/cve-2023-25690-smuggler.git"
+        },
+        {
           "id": 632567622,
           "name": "linux-apache-fix-mod_rewrite-spaceInURL",
           "full_name": "tbachvarova/linux-apache-fix-mod_rewrite-spaceInURL",
@@ -8920,25 +8963,6 @@
             "html_url": "https://github.com/tbachvarova"
           },
           "clone_url": "https://github.com/tbachvarova/linux-apache-fix-mod_rewrite-spaceInURL.git"
-        },
-        {
-          "id": 1387183365,
-          "name": "cve-2023-25690-smuggler",
-          "full_name": "roshanrajbanshi/cve-2023-25690-smuggler",
-          "html_url": "https://github.com/roshanrajbanshi/cve-2023-25690-smuggler",
-          "description": "Python exploit for CVE-2023-25690 — Apache HTTP Request Smuggling via CRLF injection in mod_rewrite/mod_proxy. Built and tested against TryHackMe's Contrabando box.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-09-25T09:31:35Z",
-          "pushed_at": "2026-09-25T09:31:31Z",
-          "created_at": "2026-09-25T09:23:01Z",
-          "topics": [],
-          "owner": {
-            "login": "roshanrajbanshi",
-            "html_url": "https://github.com/roshanrajbanshi"
-          },
-          "clone_url": "https://github.com/roshanrajbanshi/cve-2023-25690-smuggler.git"
         }
       ]
     },
@@ -9319,10 +9343,10 @@
           "full_name": "horizon3ai/CVE-2023-26067",
           "html_url": "https://github.com/horizon3ai/CVE-2023-26067",
           "description": "Lexmark CVE-2023-26067",
-          "stargazers_count": 28,
+          "stargazers_count": 29,
           "forks_count": 6,
           "language": "Python",
-          "updated_at": "2025-11-12T03:28:00Z",
+          "updated_at": "2026-11-08T22:01:46Z",
           "pushed_at": "2023-08-08T13:54:06Z",
           "created_at": "2023-08-07T20:55:15Z",
           "topics": [],
@@ -11044,10 +11068,10 @@
           "full_name": "jakabakos/CVE-2023-27524-Apache-Superset-Auth-Bypass-and-RCE",
           "html_url": "https://github.com/jakabakos/CVE-2023-27524-Apache-Superset-Auth-Bypass-and-RCE",
           "description": "",
-          "stargazers_count": 30,
+          "stargazers_count": 31,
           "forks_count": 9,
           "language": "Python",
-          "updated_at": "2026-11-03T03:14:32Z",
+          "updated_at": "2026-11-09T02:54:52Z",
           "pushed_at": "2023-09-11T06:49:19Z",
           "created_at": "2023-09-08T06:15:00Z",
           "topics": [],
@@ -11664,25 +11688,6 @@
           "clone_url": "https://github.com/TechinsightsPro/ShodanFortiOS.git"
         },
         {
-          "id": 1353981471,
-          "name": "Fortigate-SSL-VPN-Exploit-Kit",
-          "full_name": "abraxas/Fortigate-SSL-VPN-Exploit-Kit",
-          "html_url": "https://github.com/abraxas/Fortigate-SSL-VPN-Exploit-Kit",
-          "description": "The FortiGate SSL-VPN pot of gold. CVE-2024-21762 and CVE-2023-27997.  79 working exploit clients. 53 hardware SKUs. 55 FortiOS builds. ",
-          "stargazers_count": 1,
-          "forks_count": 1,
-          "language": "Python",
-          "updated_at": "2026-09-15T20:35:23Z",
-          "pushed_at": "2026-09-01T20:15:00Z",
-          "created_at": "2026-09-01T20:04:23Z",
-          "topics": [],
-          "owner": {
-            "login": "abraxas",
-            "html_url": "https://github.com/abraxas"
-          },
-          "clone_url": "https://github.com/abraxas/Fortigate-SSL-VPN-Exploit-Kit.git"
-        },
-        {
           "id": 657194011,
           "name": "CVE-2023-27997-Check",
           "full_name": "imbas007/CVE-2023-27997-Check",
@@ -12142,10 +12147,10 @@
           "full_name": "fortra/CVE-2023-28252",
           "html_url": "https://github.com/fortra/CVE-2023-28252",
           "description": "",
-          "stargazers_count": 184,
+          "stargazers_count": 185,
           "forks_count": 43,
           "language": "C",
-          "updated_at": "2026-09-25T12:03:32Z",
+          "updated_at": "2026-11-10T07:19:20Z",
           "pushed_at": "2023-07-10T16:57:44Z",
           "created_at": "2023-06-27T12:22:05Z",
           "topics": [],
@@ -12704,10 +12709,10 @@
           "full_name": "AbelChe/evil_minio",
           "html_url": "https://github.com/AbelChe/evil_minio",
           "description": "EXP for CVE-2023-28434 MinIO unauthorized to RCE",
-          "stargazers_count": 318,
+          "stargazers_count": 319,
           "forks_count": 40,
           "language": "Go",
-          "updated_at": "2026-09-30T02:41:37Z",
+          "updated_at": "2026-11-10T19:01:54Z",
           "pushed_at": "2023-04-04T05:26:59Z",
           "created_at": "2023-03-27T08:53:04Z",
           "topics": [
@@ -19975,7 +19980,7 @@
           "html_url": "https://github.com/synacktiv/CVE-2023-35001",
           "description": "Pwn2Own Vancouver 2023 Ubuntu LPE exploit",
           "stargazers_count": 170,
-          "forks_count": 25,
+          "forks_count": 24,
           "language": "Go",
           "updated_at": "2026-10-16T23:23:18Z",
           "pushed_at": "2023-11-12T00:42:29Z",
@@ -21915,6 +21920,44 @@
           "clone_url": "https://github.com/simrotion13/CVE-2023-36845.git"
         },
         {
+          "id": 1451205971,
+          "name": "ccfb-pointwise-20261109-010-cve-2023-36845-scanner",
+          "full_name": "cxb2523/ccfb-pointwise-20261109-010-cve-2023-36845-scanner",
+          "html_url": "https://github.com/cxb2523/ccfb-pointwise-20261109-010-cve-2023-36845-scanner",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Go",
+          "updated_at": "2026-11-09T10:08:52Z",
+          "pushed_at": "2026-11-09T10:19:54Z",
+          "created_at": "2026-11-09T10:08:32Z",
+          "topics": [],
+          "owner": {
+            "login": "cxb2523",
+            "html_url": "https://github.com/cxb2523"
+          },
+          "clone_url": "https://github.com/cxb2523/ccfb-pointwise-20261109-010-cve-2023-36845-scanner.git"
+        },
+        {
+          "id": 1453579576,
+          "name": "ccfb-pointwise-20261111-claude-uid831-867-017-cve-2023-36845-scanner",
+          "full_name": "cxb2523/ccfb-pointwise-20261111-claude-uid831-867-017-cve-2023-36845-scanner",
+          "html_url": "https://github.com/cxb2523/ccfb-pointwise-20261111-claude-uid831-867-017-cve-2023-36845-scanner",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Go",
+          "updated_at": "2026-11-11T05:55:17Z",
+          "pushed_at": "2026-11-11T06:31:34Z",
+          "created_at": "2026-11-11T05:53:31Z",
+          "topics": [],
+          "owner": {
+            "login": "cxb2523",
+            "html_url": "https://github.com/cxb2523"
+          },
+          "clone_url": "https://github.com/cxb2523/ccfb-pointwise-20261111-claude-uid831-867-017-cve-2023-36845-scanner.git"
+        },
+        {
           "id": 719033136,
           "name": "ansible-cve-2023-36845",
           "full_name": "P4x1s/ansible-cve-2023-36845",
@@ -22030,10 +22073,10 @@
           "full_name": "Octoberfest7/CVE-2023-36874_BOF",
           "html_url": "https://github.com/Octoberfest7/CVE-2023-36874_BOF",
           "description": "Weaponized CobaltStrike BOF for CVE-2023-36874 Windows Error Reporting LPE",
-          "stargazers_count": 204,
+          "stargazers_count": 205,
           "forks_count": 26,
           "language": "C++",
-          "updated_at": "2026-11-08T15:03:58Z",
+          "updated_at": "2026-11-09T23:03:22Z",
           "pushed_at": "2023-08-25T00:30:01Z",
           "created_at": "2023-08-24T22:24:34Z",
           "topics": [],
@@ -28696,25 +28739,6 @@
           "clone_url": "https://github.com/sunu11/chrome-CVE-2023-4357.git"
         },
         {
-          "id": 1354217248,
-          "name": "NetSec-CVE-2023-4357",
-          "full_name": "shihongsu/NetSec-CVE-2023-4357",
-          "html_url": "https://github.com/shihongsu/NetSec-CVE-2023-4357",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-09-02T02:36:54Z",
-          "pushed_at": "2026-09-02T02:35:59Z",
-          "created_at": "2026-09-02T02:15:00Z",
-          "topics": [],
-          "owner": {
-            "login": "shihongsu",
-            "html_url": "https://github.com/shihongsu"
-          },
-          "clone_url": "https://github.com/shihongsu/NetSec-CVE-2023-4357.git"
-        },
-        {
           "id": 721463764,
           "name": "CVE-2023-4357-APT-Style-exploitation",
           "full_name": "passwa11/CVE-2023-4357-APT-Style-exploitation",
@@ -29168,10 +29192,10 @@
           "full_name": "secengjeff/rapidresetclient",
           "html_url": "https://github.com/secengjeff/rapidresetclient",
           "description": "Tool for testing mitigations and exposure to Rapid Reset DDoS (CVE-2023-44487)",
-          "stargazers_count": 75,
+          "stargazers_count": 76,
           "forks_count": 16,
           "language": "Go",
-          "updated_at": "2026-11-06T13:51:18Z",
+          "updated_at": "2026-11-09T19:07:53Z",
           "pushed_at": "2023-10-30T20:22:37Z",
           "created_at": "2023-10-13T23:55:32Z",
           "topics": [],
@@ -29190,7 +29214,7 @@
           "stargazers_count": 56,
           "forks_count": 16,
           "language": "Python",
-          "updated_at": "2026-08-15T04:41:30Z",
+          "updated_at": "2026-11-09T13:41:39Z",
           "pushed_at": "2023-10-13T11:19:10Z",
           "created_at": "2023-10-11T01:59:47Z",
           "topics": [
@@ -29853,7 +29877,7 @@
           "html_url": "https://github.com/keowu/BadRentdrv2",
           "description": "A vulnerable driver exploited by me (BYOVD) that is capable of terminating several EDRs and antivirus software in the market, rendering them ineffective, working for both x32 and x64(CVE-2023-44976).",
           "stargazers_count": 107,
-          "forks_count": 20,
+          "forks_count": 19,
           "language": "C++",
           "updated_at": "2026-11-05T14:39:23Z",
           "pushed_at": "2024-12-26T13:43:18Z",
@@ -30032,6 +30056,30 @@
             "html_url": "https://github.com/RandomRobbieBF"
           },
           "clone_url": "https://github.com/RandomRobbieBF/CVE-2023-45657.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-45777",
+      "repositories": [
+        {
+          "id": 745800831,
+          "name": "TheLastBundleMismatch",
+          "full_name": "michalbednarski/TheLastBundleMismatch",
+          "html_url": "https://github.com/michalbednarski/TheLastBundleMismatch",
+          "description": "Writeup and exploit for CVE-2023-45777, bypass for Intent validation inside AccountManagerService on Android 13 despite \"Lazy Bundle\" mitigation",
+          "stargazers_count": 102,
+          "forks_count": 15,
+          "language": "Java",
+          "updated_at": "2026-11-10T21:37:48Z",
+          "pushed_at": "2026-11-10T18:39:12Z",
+          "created_at": "2024-01-20T07:14:06Z",
+          "topics": [],
+          "owner": {
+            "login": "michalbednarski",
+            "html_url": "https://github.com/michalbednarski"
+          },
+          "clone_url": "https://github.com/michalbednarski/TheLastBundleMismatch.git"
         }
       ]
     },
@@ -31334,44 +31382,6 @@
           "clone_url": "https://github.com/basesixtythree/B63-POC-CVE-2023-46604.git"
         },
         {
-          "id": 721121106,
-          "name": "CVE-2023-46604-demo",
-          "full_name": "nitzanoligo/CVE-2023-46604-demo",
-          "html_url": "https://github.com/nitzanoligo/CVE-2023-46604-demo",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2024-11-05T13:10:04Z",
-          "pushed_at": "2024-11-05T13:10:01Z",
-          "created_at": "2023-11-20T11:57:24Z",
-          "topics": [],
-          "owner": {
-            "login": "nitzanoligo",
-            "html_url": "https://github.com/nitzanoligo"
-          },
-          "clone_url": "https://github.com/nitzanoligo/CVE-2023-46604-demo.git"
-        },
-        {
-          "id": 1410904435,
-          "name": "vulhub-activemq-cve-2023-46604",
-          "full_name": "CyberCTF/vulhub-activemq-cve-2023-46604",
-          "html_url": "https://github.com/CyberCTF/vulhub-activemq-cve-2023-46604",
-          "description": "Vulhub activemq/CVE-2023-46604: ActiveMQ 5.17.3 OpenWire RCE, run with Isoloom",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-11-05T15:27:26Z",
-          "pushed_at": "2026-11-05T15:27:21Z",
-          "created_at": "2026-10-08T20:11:23Z",
-          "topics": [],
-          "owner": {
-            "login": "CyberCTF",
-            "html_url": "https://github.com/CyberCTF"
-          },
-          "clone_url": "https://github.com/CyberCTF/vulhub-activemq-cve-2023-46604.git"
-        },
-        {
           "id": 1428352005,
           "name": "CVE-2023-46604",
           "full_name": "Theocyg/CVE-2023-46604",
@@ -31391,32 +31401,42 @@
           "clone_url": "https://github.com/Theocyg/CVE-2023-46604.git"
         },
         {
-          "id": 1353499249,
-          "name": "ActiveMQ-CVE-2023-46604",
-          "full_name": "Bhanunamikaze/ActiveMQ-CVE-2023-46604",
-          "html_url": "https://github.com/Bhanunamikaze/ActiveMQ-CVE-2023-46604",
-          "description": "Exploit POC for Apache ActiveMQ CVE-2023-46604",
+          "id": 1439906292,
+          "name": "cve-2023-46604-activemq-lab",
+          "full_name": "krevetkqqq/cve-2023-46604-activemq-lab",
+          "html_url": "https://github.com/krevetkqqq/cve-2023-46604-activemq-lab",
+          "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-09-01T11:44:06Z",
-          "pushed_at": "2026-09-01T11:37:13Z",
-          "created_at": "2026-09-01T11:36:48Z",
-          "topics": [
-            "activemq",
-            "apache-activemq",
-            "cve-2023-46604",
-            "openwire",
-            "penetration-testing",
-            "python",
-            "security-validation",
-            "vulnerability-assessment"
-          ],
+          "updated_at": "2026-10-30T18:15:24Z",
+          "pushed_at": "2026-10-30T18:15:19Z",
+          "created_at": "2026-10-30T15:30:41Z",
+          "topics": [],
           "owner": {
-            "login": "Bhanunamikaze",
-            "html_url": "https://github.com/Bhanunamikaze"
+            "login": "krevetkqqq",
+            "html_url": "https://github.com/krevetkqqq"
           },
-          "clone_url": "https://github.com/Bhanunamikaze/ActiveMQ-CVE-2023-46604.git"
+          "clone_url": "https://github.com/krevetkqqq/cve-2023-46604-activemq-lab.git"
+        },
+        {
+          "id": 721121106,
+          "name": "CVE-2023-46604-demo",
+          "full_name": "nitzanoligo/CVE-2023-46604-demo",
+          "html_url": "https://github.com/nitzanoligo/CVE-2023-46604-demo",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2024-11-05T13:10:04Z",
+          "pushed_at": "2024-11-05T13:10:01Z",
+          "created_at": "2023-11-20T11:57:24Z",
+          "topics": [],
+          "owner": {
+            "login": "nitzanoligo",
+            "html_url": "https://github.com/nitzanoligo"
+          },
+          "clone_url": "https://github.com/nitzanoligo/CVE-2023-46604-demo.git"
         },
         {
           "id": 721014510,
@@ -31457,25 +31477,6 @@
           "clone_url": "https://github.com/tomasmussi/activemq-cve-2023-46604.git"
         },
         {
-          "id": 1439906292,
-          "name": "cve-2023-46604-activemq-lab",
-          "full_name": "krevetkqqq/cve-2023-46604-activemq-lab",
-          "html_url": "https://github.com/krevetkqqq/cve-2023-46604-activemq-lab",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-10-30T18:15:24Z",
-          "pushed_at": "2026-10-30T18:15:19Z",
-          "created_at": "2026-10-30T15:30:41Z",
-          "topics": [],
-          "owner": {
-            "login": "krevetkqqq",
-            "html_url": "https://github.com/krevetkqqq"
-          },
-          "clone_url": "https://github.com/krevetkqqq/cve-2023-46604-activemq-lab.git"
-        },
-        {
           "id": 719245638,
           "name": "CVE-2023-46604-POC",
           "full_name": "vjayant93/CVE-2023-46604-POC",
@@ -31493,6 +31494,25 @@
             "html_url": "https://github.com/vjayant93"
           },
           "clone_url": "https://github.com/vjayant93/CVE-2023-46604-POC.git"
+        },
+        {
+          "id": 1410904435,
+          "name": "vulhub-activemq-cve-2023-46604",
+          "full_name": "CyberCTF/vulhub-activemq-cve-2023-46604",
+          "html_url": "https://github.com/CyberCTF/vulhub-activemq-cve-2023-46604",
+          "description": "Vulhub activemq/CVE-2023-46604: ActiveMQ 5.17.3 OpenWire RCE, run with Isoloom",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-11-05T15:27:26Z",
+          "pushed_at": "2026-11-05T15:27:21Z",
+          "created_at": "2026-10-08T20:11:23Z",
+          "topics": [],
+          "owner": {
+            "login": "CyberCTF",
+            "html_url": "https://github.com/CyberCTF"
+          },
+          "clone_url": "https://github.com/CyberCTF/vulhub-activemq-cve-2023-46604.git"
         },
         {
           "id": 734983177,
@@ -32801,28 +32821,23 @@
           "clone_url": "https://github.com/talbeerysec/BAD-WEBP-CVE-2023-4863.git"
         },
         {
-          "id": 1232970301,
-          "name": "aegisgraph",
-          "full_name": "577Industries/aegisgraph",
-          "html_url": "https://github.com/577Industries/aegisgraph",
-          "description": "AegisGraph: graph-based application-layer assessment evidence platform for Secure Messaging Applications (SMAs). DARPA ASEMA HR0011SB20254-12 Tier 3 research. ReproChain CVE-2023-4863 reachability + PolyDiff differential parser fuzzing + claim-state governance + reproducible benchmark surface.",
+          "id": 1451228646,
+          "name": "cortex9-libwebp-huffman-table-sizing-model",
+          "full_name": "federiconbaez/cortex9-libwebp-huffman-table-sizing-model",
+          "html_url": "https://github.com/federiconbaez/cortex9-libwebp-huffman-table-sizing-model",
+          "description": "Offline size-only model of libwebp BuildHuffmanTable table sizing (CVE-2023-4863). Counts entries only: no image decoding, no table writes.",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-10-14T22:44:55Z",
-          "pushed_at": "2026-09-02T05:12:06Z",
-          "created_at": "2026-05-08T13:04:43Z",
-          "topics": [
-            "577-industries",
-            "577i-program-aegis",
-            "graph-analysis",
-            "secure-messaging"
-          ],
+          "language": "C",
+          "updated_at": "2026-11-09T10:39:12Z",
+          "pushed_at": "2026-11-09T10:39:09Z",
+          "created_at": "2026-11-09T10:32:48Z",
+          "topics": [],
           "owner": {
-            "login": "577Industries",
-            "html_url": "https://github.com/577Industries"
+            "login": "federiconbaez",
+            "html_url": "https://github.com/federiconbaez"
           },
-          "clone_url": "https://github.com/577Industries/aegisgraph.git"
+          "clone_url": "https://github.com/federiconbaez/cortex9-libwebp-huffman-table-sizing-model.git"
         }
       ]
     },
@@ -33050,10 +33065,10 @@
           "full_name": "abdoghazy2015/ofbiz-CVE-2023-49070-RCE-POC",
           "html_url": "https://github.com/abdoghazy2015/ofbiz-CVE-2023-49070-RCE-POC",
           "description": "",
-          "stargazers_count": 60,
+          "stargazers_count": 61,
           "forks_count": 13,
           "language": "Python",
-          "updated_at": "2026-11-05T13:24:17Z",
+          "updated_at": "2026-11-09T16:42:05Z",
           "pushed_at": "2023-12-15T06:29:09Z",
           "created_at": "2023-12-14T09:32:41Z",
           "topics": [],
@@ -34026,30 +34041,6 @@
             "html_url": "https://github.com/jmussmann"
           },
           "clone_url": "https://github.com/jmussmann/cve-2023-4966-iocs.git"
-        }
-      ]
-    },
-    {
-      "cve_id": "CVE-2023-49792",
-      "repositories": [
-        {
-          "id": 1352862548,
-          "name": "nextcloud-cve-2023-49792-research",
-          "full_name": "CStockdale1/nextcloud-cve-2023-49792-research",
-          "html_url": "https://github.com/CStockdale1/nextcloud-cve-2023-49792-research",
-          "description": "A project analysis of CVE-2023-49792, inspired by a HackerOne report I have recently come across.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "PHP",
-          "updated_at": "2026-09-03T03:55:44Z",
-          "pushed_at": "2026-09-03T03:55:35Z",
-          "created_at": "2026-08-31T21:08:33Z",
-          "topics": [],
-          "owner": {
-            "login": "CStockdale1",
-            "html_url": "https://github.com/CStockdale1"
-          },
-          "clone_url": "https://github.com/CStockdale1/nextcloud-cve-2023-49792-research.git"
         }
       ]
     },
@@ -35634,8 +35625,8 @@
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "C++",
-          "updated_at": "2026-09-07T16:37:23Z",
-          "pushed_at": "2026-09-07T16:36:51Z",
+          "updated_at": "2026-11-09T17:29:42Z",
+          "pushed_at": "2026-11-09T17:29:37Z",
           "created_at": "2026-09-07T16:26:58Z",
           "topics": [],
           "owner": {
@@ -36195,6 +36186,30 @@
       ]
     },
     {
+      "cve_id": "CVE-2023-6241",
+      "repositories": [
+        {
+          "id": 1449672080,
+          "name": "CVE-2023-6241-JM",
+          "full_name": "R0rt1z2/CVE-2023-6241-JM",
+          "html_url": "https://github.com/R0rt1z2/CVE-2023-6241-JM",
+          "description": "CVE-2023-6241 (kbase_jit_free race) PoC",
+          "stargazers_count": 2,
+          "forks_count": 0,
+          "language": "C",
+          "updated_at": "2026-11-11T01:34:39Z",
+          "pushed_at": "2026-11-07T19:44:50Z",
+          "created_at": "2026-11-07T19:25:31Z",
+          "topics": [],
+          "owner": {
+            "login": "R0rt1z2",
+            "html_url": "https://github.com/R0rt1z2"
+          },
+          "clone_url": "https://github.com/R0rt1z2/CVE-2023-6241-JM.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2023-6289",
       "repositories": [
         {
@@ -36300,34 +36315,6 @@
       ]
     },
     {
-      "cve_id": "CVE-2023-6572",
-      "repositories": [
-        {
-          "id": 1352906627,
-          "name": "gha-lab-6255f5fc33",
-          "full_name": "pvharmo2/gha-lab-6255f5fc33",
-          "html_url": "https://github.com/pvharmo2/gha-lab-6255f5fc33",
-          "description": "Security-research lab reproducing CVE-2023-6572 (GHSA-gqvf-3hgp-5hxv): command injection in gradio-app/gradio's workflow_run handling of generate-changeset.yml",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-08-31T22:20:50Z",
-          "pushed_at": "2026-08-31T22:20:43Z",
-          "created_at": "2026-08-31T22:18:59Z",
-          "topics": [
-            "academic-research",
-            "github-actions",
-            "research-artifact"
-          ],
-          "owner": {
-            "login": "pvharmo2",
-            "html_url": "https://github.com/pvharmo2"
-          },
-          "clone_url": "https://github.com/pvharmo2/gha-lab-6255f5fc33.git"
-        }
-      ]
-    },
-    {
       "cve_id": "CVE-2023-6661",
       "repositories": [
         {
@@ -36427,10 +36414,10 @@
           "full_name": "Yutori-Natsu/cve-2023-6931-pipa",
           "html_url": "https://github.com/Yutori-Natsu/cve-2023-6931-pipa",
           "description": "",
-          "stargazers_count": 2,
+          "stargazers_count": 3,
           "forks_count": 1,
           "language": "C",
-          "updated_at": "2026-11-08T13:39:25Z",
+          "updated_at": "2026-11-10T15:56:50Z",
           "pushed_at": "2026-09-22T14:02:35Z",
           "created_at": "2026-09-22T14:02:28Z",
           "topics": [],
@@ -36566,11 +36553,11 @@
           "full_name": "GhostTroops/TOP",
           "html_url": "https://github.com/GhostTroops/TOP",
           "description": "TOP All bugbounty pentesting CVE-2023- POC Exp  RCE example payload  Things",
-          "stargazers_count": 731,
-          "forks_count": 126,
+          "stargazers_count": 733,
+          "forks_count": 127,
           "language": "Shell",
-          "updated_at": "2026-11-08T04:03:50Z",
-          "pushed_at": "2026-11-08T04:03:45Z",
+          "updated_at": "2026-11-11T05:25:13Z",
+          "pushed_at": "2026-11-11T04:25:08Z",
           "created_at": "2022-03-19T01:54:15Z",
           "topics": [
             "bugbounty",
