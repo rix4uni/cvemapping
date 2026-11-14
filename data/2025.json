@@ -2965,7 +2965,7 @@
           "html_url": "https://github.com/initstring/abrt_root",
           "description": "Privilege escalation in Fedora Linux via ABRT (Automatic Bug Reporting Tool): CVE-2025-12744",
           "stargazers_count": 7,
-          "forks_count": 1,
+          "forks_count": 2,
           "language": "Python",
           "updated_at": "2026-02-18T07:30:10Z",
           "pushed_at": "2025-12-03T08:22:54Z",
@@ -4699,6 +4699,46 @@
             "html_url": "https://github.com/khaifunglee"
           },
           "clone_url": "https://github.com/khaifunglee/reproducing-CVE-2025-1489.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2025-15467",
+      "repositories": [
+        {
+          "id": 1457489119,
+          "name": "CVE-2026-128027",
+          "full_name": "googlesky/CVE-2026-128027",
+          "html_url": "https://github.com/googlesky/CVE-2026-128027",
+          "description": "GHSA-x9p2-77v6-6vhf PoC: a FrankenPHP image baked on a stale base snapshot ships libcrypto3 3.3.5, exposed to CVE-2025-15467 (pre-auth stack overflow in CMS parsing); the refreshed base ships 3.3.6 and rejects the same crafted CMS blob. ASan differential lab with registry-staleness evidence.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-11-14T07:11:38Z",
+          "pushed_at": "2026-11-14T07:11:34Z",
+          "created_at": "2026-11-14T07:11:12Z",
+          "topics": [
+            "base-image",
+            "cms",
+            "cve-2025-15467",
+            "cve-2026-128027",
+            "cwe-1395",
+            "frankenphp",
+            "ghsa-x9p2-77v6-6vhf",
+            "libcrypto",
+            "openssl",
+            "poc",
+            "proof-of-concept",
+            "security-research",
+            "stack-overflow",
+            "supply-chain",
+            "vulnerability-research"
+          ],
+          "owner": {
+            "login": "googlesky",
+            "html_url": "https://github.com/googlesky"
+          },
+          "clone_url": "https://github.com/googlesky/CVE-2026-128027.git"
         }
       ]
     },
@@ -6486,10 +6526,10 @@
           "full_name": "hoefler02/CVE-2025-21756",
           "html_url": "https://github.com/hoefler02/CVE-2025-21756",
           "description": "Exploit for CVE-2025-21756 for Linux kernel 6.6.75. My first linux kernel exploit!",
-          "stargazers_count": 158,
+          "stargazers_count": 159,
           "forks_count": 25,
           "language": "C",
-          "updated_at": "2026-11-13T14:24:08Z",
+          "updated_at": "2026-11-14T13:37:32Z",
           "pushed_at": "2025-06-05T21:32:05Z",
           "created_at": "2025-04-18T14:22:15Z",
           "topics": [],
@@ -7788,6 +7828,25 @@
     {
       "cve_id": "CVE-2025-23419",
       "repositories": [
+        {
+          "id": 1457921472,
+          "name": "CVE-2025-23419",
+          "full_name": "przemyslawbryzek/CVE-2025-23419",
+          "html_url": "https://github.com/przemyslawbryzek/CVE-2025-23419",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-11-14T16:04:45Z",
+          "pushed_at": "2026-11-14T16:04:45Z",
+          "created_at": "2026-11-14T16:04:42Z",
+          "topics": [],
+          "owner": {
+            "login": "przemyslawbryzek",
+            "html_url": "https://github.com/przemyslawbryzek"
+          },
+          "clone_url": "https://github.com/przemyslawbryzek/CVE-2025-23419.git"
+        },
         {
           "id": 1118271087,
           "name": "safe-check-CVE-2025-23419",
@@ -9109,10 +9168,10 @@
           "full_name": "jailbreakdotparty/dirtyZero",
           "html_url": "https://github.com/jailbreakdotparty/dirtyZero",
           "description": "Simple customization toolbox, utilizing CVE-2025-24203. Supports iOS 16.0 - iOS 18.3.2.",
-          "stargazers_count": 428,
+          "stargazers_count": 429,
           "forks_count": 39,
           "language": "Swift",
-          "updated_at": "2026-11-09T15:39:02Z",
+          "updated_at": "2026-11-14T07:11:20Z",
           "pushed_at": "2026-09-07T04:53:41Z",
           "created_at": "2025-05-09T07:18:55Z",
           "topics": [],
@@ -13464,30 +13523,6 @@
             "html_url": "https://github.com/redpack-kr"
           },
           "clone_url": "https://github.com/redpack-kr/CVE-2025-26319.git"
-        }
-      ]
-    },
-    {
-      "cve_id": "CVE-2025-26326",
-      "repositories": [
-        {
-          "id": 1433546548,
-          "name": "CVE-2025-26326",
-          "full_name": "ohackercego/CVE-2025-26326",
-          "html_url": "https://github.com/ohackercego/CVE-2025-26326",
-          "description": "CVE-2025-26326 - vulnerabilidade critica em add-ons de conexao remota do NVDA (recuperado)",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-10-25T19:16:42Z",
-          "pushed_at": "2026-10-25T19:16:38Z",
-          "created_at": "2026-10-25T19:16:34Z",
-          "topics": [],
-          "owner": {
-            "login": "ohackercego",
-            "html_url": "https://github.com/ohackercego"
-          },
-          "clone_url": "https://github.com/ohackercego/CVE-2025-26326.git"
         }
       ]
     },
@@ -19104,25 +19139,6 @@
           "clone_url": "https://github.com/F5-Labs/parquet-canary-exploit-rce-poc-CVE-2025-30065.git"
         },
         {
-          "id": 960380943,
-          "name": "CVE-2025-30065",
-          "full_name": "bjornhels/CVE-2025-30065",
-          "html_url": "https://github.com/bjornhels/CVE-2025-30065",
-          "description": "PoC",
-          "stargazers_count": 12,
-          "forks_count": 3,
-          "language": "Java",
-          "updated_at": "2025-05-13T09:17:11Z",
-          "pushed_at": "2025-04-07T05:47:47Z",
-          "created_at": "2025-04-04T10:37:32Z",
-          "topics": [],
-          "owner": {
-            "login": "bjornhels",
-            "html_url": "https://github.com/bjornhels"
-          },
-          "clone_url": "https://github.com/bjornhels/CVE-2025-30065.git"
-        },
-        {
           "id": 960328746,
           "name": "CVE-2025-30065",
           "full_name": "h3st4k3r/CVE-2025-30065",
@@ -19197,6 +19213,25 @@
             "html_url": "https://github.com/ron-imperva"
           },
           "clone_url": "https://github.com/ron-imperva/CVE-2025-30065-PoC.git"
+        },
+        {
+          "id": 960688652,
+          "name": "CVE-2025-30065",
+          "full_name": "zha0/CVE-2025-30065",
+          "html_url": "https://github.com/zha0/CVE-2025-30065",
+          "description": "PoC",
+          "stargazers_count": 0,
+          "forks_count": 2,
+          "language": "",
+          "updated_at": "2025-04-04T21:55:22Z",
+          "pushed_at": "2025-04-04T12:25:19Z",
+          "created_at": "2025-04-04T21:55:22Z",
+          "topics": [],
+          "owner": {
+            "login": "zha0",
+            "html_url": "https://github.com/zha0"
+          },
+          "clone_url": "https://github.com/zha0/CVE-2025-30065.git"
         }
       ]
     },
@@ -23192,30 +23227,6 @@
             "html_url": "https://github.com/cyhe50"
           },
           "clone_url": "https://github.com/cyhe50/cve-2025-32434-poc.git"
-        }
-      ]
-    },
-    {
-      "cve_id": "CVE-2025-32440",
-      "repositories": [
-        {
-          "id": 1431637701,
-          "name": "CVE-2025-32440-netalertx-auth-bypass",
-          "full_name": "jstjep00/CVE-2025-32440-netalertx-auth-bypass",
-          "html_url": "https://github.com/jstjep00/CVE-2025-32440-netalertx-auth-bypass",
-          "description": "Verified PoC and replication steps for CVE-2025-32440 (NetAlertX auth bypass)",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-10-23T23:17:48Z",
-          "pushed_at": "2026-10-23T23:17:43Z",
-          "created_at": "2026-10-23T23:17:38Z",
-          "topics": [],
-          "owner": {
-            "login": "jstjep00",
-            "html_url": "https://github.com/jstjep00"
-          },
-          "clone_url": "https://github.com/jstjep00/CVE-2025-32440-netalertx-auth-bypass.git"
         }
       ]
     },
@@ -30704,7 +30715,7 @@
           "forks_count": 0,
           "language": "C++",
           "updated_at": "2026-11-12T17:53:05Z",
-          "pushed_at": "2026-11-12T17:52:59Z",
+          "pushed_at": "2026-11-14T18:38:37Z",
           "created_at": "2026-11-12T17:52:46Z",
           "topics": [],
           "owner": {
@@ -35069,7 +35080,7 @@
           "stargazers_count": 3,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-09-13T21:36:43Z",
+          "updated_at": "2026-11-14T17:23:42Z",
           "pushed_at": "2025-08-17T13:02:24Z",
           "created_at": "2025-06-09T10:09:43Z",
           "topics": [],
@@ -39030,23 +39041,45 @@
           "clone_url": "https://github.com/Cameloo1/sharepoint-toolshell-micro-postmortem.git"
         },
         {
-          "id": 1027458917,
-          "name": "CVE-2025-53770",
-          "full_name": "r3xbugbounty/CVE-2025-53770",
-          "html_url": "https://github.com/r3xbugbounty/CVE-2025-53770",
-          "description": "",
+          "id": 1024557532,
+          "name": "cve-2025-53770",
+          "full_name": "0xray5c68616e37/cve-2025-53770",
+          "html_url": "https://github.com/0xray5c68616e37/cve-2025-53770",
+          "description": "Unauthenticated Remote Code Execution via unsafe deserialization in Microsoft SharePoint Server (CVE-2025-53770)",
           "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2025-07-28T03:40:28Z",
-          "pushed_at": "2025-07-28T03:40:24Z",
-          "created_at": "2025-07-28T03:39:57Z",
+          "forks_count": 3,
+          "language": "",
+          "updated_at": "2025-07-22T22:33:13Z",
+          "pushed_at": "2025-07-22T19:22:14Z",
+          "created_at": "2025-07-22T22:33:13Z",
           "topics": [],
           "owner": {
-            "login": "r3xbugbounty",
-            "html_url": "https://github.com/r3xbugbounty"
+            "login": "0xray5c68616e37",
+            "html_url": "https://github.com/0xray5c68616e37"
           },
-          "clone_url": "https://github.com/r3xbugbounty/CVE-2025-53770.git"
+          "clone_url": "https://github.com/0xray5c68616e37/cve-2025-53770.git"
+        },
+        {
+          "id": 1025222469,
+          "name": "ToolShellFinder",
+          "full_name": "zach115th/ToolShellFinder",
+          "html_url": "https://github.com/zach115th/ToolShellFinder",
+          "description": "Scans Windows IIS logs for signs of CVE-2025-53770 \u0026 CVE-2025-53771",
+          "stargazers_count": 0,
+          "forks_count": 1,
+          "language": "PowerShell",
+          "updated_at": "2026-10-24T22:13:11Z",
+          "pushed_at": "2026-10-24T22:13:08Z",
+          "created_at": "2025-07-23T23:43:10Z",
+          "topics": [
+            "cve",
+            "toolshell"
+          ],
+          "owner": {
+            "login": "zach115th",
+            "html_url": "https://github.com/zach115th"
+          },
+          "clone_url": "https://github.com/zach115th/ToolShellFinder.git"
         },
         {
           "id": 1024210633,
@@ -39066,6 +39099,25 @@
             "html_url": "https://github.com/GreenForceNetworks"
           },
           "clone_url": "https://github.com/GreenForceNetworks/Toolshell_CVE-2025-53770.git"
+        },
+        {
+          "id": 1027458917,
+          "name": "CVE-2025-53770",
+          "full_name": "r3xbugbounty/CVE-2025-53770",
+          "html_url": "https://github.com/r3xbugbounty/CVE-2025-53770",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2025-07-28T03:40:28Z",
+          "pushed_at": "2025-07-28T03:40:24Z",
+          "created_at": "2025-07-28T03:39:57Z",
+          "topics": [],
+          "owner": {
+            "login": "r3xbugbounty",
+            "html_url": "https://github.com/r3xbugbounty"
+          },
+          "clone_url": "https://github.com/r3xbugbounty/CVE-2025-53770.git"
         },
         {
           "id": 1027188610,
@@ -39106,6 +39158,25 @@
           "clone_url": "https://github.com/BirdsAreFlyingCameras/CVE-2025-53770_Raw-HTTP-Request-Generator.git"
         },
         {
+          "id": 1023751831,
+          "name": "CVE-2025-53770-Hunting",
+          "full_name": "siag-itsec/CVE-2025-53770-Hunting",
+          "html_url": "https://github.com/siag-itsec/CVE-2025-53770-Hunting",
+          "description": "Hunting for Critical SharePoint Vulnerability CVE-2025-53770",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2025-07-21T16:29:54Z",
+          "pushed_at": "2025-07-21T16:29:54Z",
+          "created_at": "2025-07-21T16:29:53Z",
+          "topics": [],
+          "owner": {
+            "login": "siag-itsec",
+            "html_url": "https://github.com/siag-itsec"
+          },
+          "clone_url": "https://github.com/siag-itsec/CVE-2025-53770-Hunting.git"
+        },
+        {
           "id": 1027821376,
           "name": "CVE-2025-53770",
           "full_name": "daryllundy/CVE-2025-53770",
@@ -39131,44 +39202,6 @@
           "clone_url": "https://github.com/daryllundy/CVE-2025-53770.git"
         },
         {
-          "id": 1023751831,
-          "name": "CVE-2025-53770-Hunting",
-          "full_name": "siag-itsec/CVE-2025-53770-Hunting",
-          "html_url": "https://github.com/siag-itsec/CVE-2025-53770-Hunting",
-          "description": "Hunting for Critical SharePoint Vulnerability CVE-2025-53770",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2025-07-21T16:29:54Z",
-          "pushed_at": "2025-07-21T16:29:54Z",
-          "created_at": "2025-07-21T16:29:53Z",
-          "topics": [],
-          "owner": {
-            "login": "siag-itsec",
-            "html_url": "https://github.com/siag-itsec"
-          },
-          "clone_url": "https://github.com/siag-itsec/CVE-2025-53770-Hunting.git"
-        },
-        {
-          "id": 1025247829,
-          "name": "suricata-rule-CVE-2025-53770",
-          "full_name": "nisargsuthar/suricata-rule-CVE-2025-53770",
-          "html_url": "https://github.com/nisargsuthar/suricata-rule-CVE-2025-53770",
-          "description": "Detection rules for CVE-2025-53770",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2025-07-24T23:33:35Z",
-          "pushed_at": "2025-07-24T23:33:31Z",
-          "created_at": "2025-07-24T01:14:15Z",
-          "topics": [],
-          "owner": {
-            "login": "nisargsuthar",
-            "html_url": "https://github.com/nisargsuthar"
-          },
-          "clone_url": "https://github.com/nisargsuthar/suricata-rule-CVE-2025-53770.git"
-        },
-        {
           "id": 1023641163,
           "name": "ZeroPoint",
           "full_name": "gmh5225/ZeroPoint",
@@ -39188,23 +39221,23 @@
           "clone_url": "https://github.com/gmh5225/ZeroPoint.git"
         },
         {
-          "id": 1025681369,
-          "name": "sharepoint-toolshell-cve-2025-53770",
-          "full_name": "bharath-cyber-root/sharepoint-toolshell-cve-2025-53770",
-          "html_url": "https://github.com/bharath-cyber-root/sharepoint-toolshell-cve-2025-53770",
-          "description": "",
+          "id": 1025247829,
+          "name": "suricata-rule-CVE-2025-53770",
+          "full_name": "nisargsuthar/suricata-rule-CVE-2025-53770",
+          "html_url": "https://github.com/nisargsuthar/suricata-rule-CVE-2025-53770",
+          "description": "Detection rules for CVE-2025-53770",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2025-07-24T16:21:34Z",
-          "pushed_at": "2025-07-24T16:21:30Z",
-          "created_at": "2025-07-24T16:19:23Z",
+          "updated_at": "2025-07-24T23:33:35Z",
+          "pushed_at": "2025-07-24T23:33:31Z",
+          "created_at": "2025-07-24T01:14:15Z",
           "topics": [],
           "owner": {
-            "login": "bharath-cyber-root",
-            "html_url": "https://github.com/bharath-cyber-root"
+            "login": "nisargsuthar",
+            "html_url": "https://github.com/nisargsuthar"
           },
-          "clone_url": "https://github.com/bharath-cyber-root/sharepoint-toolshell-cve-2025-53770.git"
+          "clone_url": "https://github.com/nisargsuthar/suricata-rule-CVE-2025-53770.git"
         },
         {
           "id": 1023377089,
@@ -39321,23 +39354,23 @@
           "clone_url": "https://github.com/Agampreet-Singh/CVE-2025-53770.git"
         },
         {
-          "id": 1026214435,
-          "name": "ToolShell-Honeypot",
-          "full_name": "bitsalv/ToolShell-Honeypot",
-          "html_url": "https://github.com/bitsalv/ToolShell-Honeypot",
-          "description": "Honeypot for CVE-2025-53770 aka ToolShell",
+          "id": 1025681369,
+          "name": "sharepoint-toolshell-cve-2025-53770",
+          "full_name": "bharath-cyber-root/sharepoint-toolshell-cve-2025-53770",
+          "html_url": "https://github.com/bharath-cyber-root/sharepoint-toolshell-cve-2025-53770",
+          "description": "",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2025-07-29T08:48:26Z",
-          "pushed_at": "2025-07-29T08:48:22Z",
-          "created_at": "2025-07-25T13:54:05Z",
+          "language": "",
+          "updated_at": "2025-07-24T16:21:34Z",
+          "pushed_at": "2025-07-24T16:21:30Z",
+          "created_at": "2025-07-24T16:19:23Z",
           "topics": [],
           "owner": {
-            "login": "bitsalv",
-            "html_url": "https://github.com/bitsalv"
+            "login": "bharath-cyber-root",
+            "html_url": "https://github.com/bharath-cyber-root"
           },
-          "clone_url": "https://github.com/bitsalv/ToolShell-Honeypot.git"
+          "clone_url": "https://github.com/bharath-cyber-root/sharepoint-toolshell-cve-2025-53770.git"
         },
         {
           "id": 1066460703,
@@ -39378,45 +39411,42 @@
           "clone_url": "https://github.com/Michaael01/LetsDefend--SOC-342-CVE-2025-53770-SharePoint-Exploit-ToolShell.git"
         },
         {
-          "id": 1025222469,
-          "name": "ToolShellFinder",
-          "full_name": "zach115th/ToolShellFinder",
-          "html_url": "https://github.com/zach115th/ToolShellFinder",
-          "description": "Scans Windows IIS logs for signs of CVE-2025-53770 \u0026 CVE-2025-53771",
-          "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "PowerShell",
-          "updated_at": "2026-10-24T22:13:11Z",
-          "pushed_at": "2026-10-24T22:13:08Z",
-          "created_at": "2025-07-23T23:43:10Z",
-          "topics": [
-            "cve",
-            "toolshell"
-          ],
-          "owner": {
-            "login": "zach115th",
-            "html_url": "https://github.com/zach115th"
-          },
-          "clone_url": "https://github.com/zach115th/ToolShellFinder.git"
-        },
-        {
-          "id": 1024557532,
-          "name": "cve-2025-53770",
-          "full_name": "0xray5c68616e37/cve-2025-53770",
-          "html_url": "https://github.com/0xray5c68616e37/cve-2025-53770",
+          "id": 1457294012,
+          "name": "CVE-2025-53770",
+          "full_name": "alinaclark672377250/CVE-2025-53770",
+          "html_url": "https://github.com/alinaclark672377250/CVE-2025-53770",
           "description": "Unauthenticated Remote Code Execution via unsafe deserialization in Microsoft SharePoint Server (CVE-2025-53770)",
           "stargazers_count": 0,
-          "forks_count": 3,
+          "forks_count": 0,
           "language": "",
-          "updated_at": "2025-07-22T22:33:13Z",
-          "pushed_at": "2025-07-22T19:22:14Z",
-          "created_at": "2025-07-22T22:33:13Z",
+          "updated_at": "2026-11-14T02:06:25Z",
+          "pushed_at": "2026-11-14T02:06:31Z",
+          "created_at": "2026-11-14T02:06:23Z",
           "topics": [],
           "owner": {
-            "login": "0xray5c68616e37",
-            "html_url": "https://github.com/0xray5c68616e37"
+            "login": "alinaclark672377250",
+            "html_url": "https://github.com/alinaclark672377250"
           },
-          "clone_url": "https://github.com/0xray5c68616e37/cve-2025-53770.git"
+          "clone_url": "https://github.com/alinaclark672377250/CVE-2025-53770.git"
+        },
+        {
+          "id": 1026214435,
+          "name": "ToolShell-Honeypot",
+          "full_name": "bitsalv/ToolShell-Honeypot",
+          "html_url": "https://github.com/bitsalv/ToolShell-Honeypot",
+          "description": "Honeypot for CVE-2025-53770 aka ToolShell",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2025-07-29T08:48:26Z",
+          "pushed_at": "2025-07-29T08:48:22Z",
+          "created_at": "2025-07-25T13:54:05Z",
+          "topics": [],
+          "owner": {
+            "login": "bitsalv",
+            "html_url": "https://github.com/bitsalv"
+          },
+          "clone_url": "https://github.com/bitsalv/ToolShell-Honeypot.git"
         }
       ]
     },
@@ -41174,10 +41204,10 @@
           "full_name": "msanft/CVE-2025-55182",
           "html_url": "https://github.com/msanft/CVE-2025-55182",
           "description": "Explanation and full RCE PoC for CVE-2025-55182",
-          "stargazers_count": 1433,
+          "stargazers_count": 1435,
           "forks_count": 196,
           "language": "Python",
-          "updated_at": "2026-11-13T09:57:20Z",
+          "updated_at": "2026-11-14T15:34:45Z",
           "pushed_at": "2025-12-08T13:51:04Z",
           "created_at": "2025-12-04T11:49:55Z",
           "topics": [],
@@ -41193,10 +41223,10 @@
           "full_name": "lachlan2k/React2Shell-CVE-2025-55182-original-poc",
           "html_url": "https://github.com/lachlan2k/React2Shell-CVE-2025-55182-original-poc",
           "description": "Original Proof-of-Concepts for React2Shell CVE-2025-55182",
-          "stargazers_count": 1066,
+          "stargazers_count": 1067,
           "forks_count": 112,
           "language": "JavaScript",
-          "updated_at": "2026-11-12T22:12:12Z",
+          "updated_at": "2026-11-14T04:29:32Z",
           "pushed_at": "2025-12-05T08:56:15Z",
           "created_at": "2025-12-05T08:00:07Z",
           "topics": [
@@ -41272,10 +41302,10 @@
           "full_name": "zack0x01/CVE-2025-55182-advanced-scanner-",
           "html_url": "https://github.com/zack0x01/CVE-2025-55182-advanced-scanner-",
           "description": "",
-          "stargazers_count": 280,
+          "stargazers_count": 281,
           "forks_count": 47,
           "language": "Shell",
-          "updated_at": "2026-11-12T22:12:12Z",
+          "updated_at": "2026-11-14T18:40:56Z",
           "pushed_at": "2025-12-06T19:52:21Z",
           "created_at": "2025-12-06T14:36:55Z",
           "topics": [],
@@ -64522,32 +64552,6 @@
             "html_url": "https://github.com/v31l0x1"
           },
           "clone_url": "https://github.com/v31l0x1/ThrottleStopPPL.git"
-        },
-        {
-          "id": 1430798811,
-          "name": "driver-mapper",
-          "full_name": "datcathuh/driver-mapper",
-          "html_url": "https://github.com/datcathuh/driver-mapper",
-          "description": "manual driver mapper that abuses ThrottleStop.sys (CVE-2025-7771) for physical r/w. pdb symbols, pfn va-\u003epa map, NtAddAtom trampoline, calls DriverEntry.",
-          "stargazers_count": 1,
-          "forks_count": 1,
-          "language": "C",
-          "updated_at": "2026-10-25T16:50:15Z",
-          "pushed_at": "2026-10-23T08:48:39Z",
-          "created_at": "2026-10-23T08:48:14Z",
-          "topics": [
-            "byovd",
-            "cve-2025-7771",
-            "driver",
-            "kernel",
-            "mapper",
-            "windows"
-          ],
-          "owner": {
-            "login": "datcathuh",
-            "html_url": "https://github.com/datcathuh"
-          },
-          "clone_url": "https://github.com/datcathuh/driver-mapper.git"
         }
       ]
     },
@@ -65165,25 +65169,6 @@
           "clone_url": "https://github.com/pexlexity/WinRAR-CVE-2025-8088-Path-Traversal-PoC.git"
         },
         {
-          "id": 1036278526,
-          "name": "cve-2025-8088",
-          "full_name": "travisbgreen/cve-2025-8088",
-          "html_url": "https://github.com/travisbgreen/cve-2025-8088",
-          "description": "cve-2025-8088_detection",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "YARA",
-          "updated_at": "2026-08-14T16:23:13Z",
-          "pushed_at": "2026-11-03T23:02:36Z",
-          "created_at": "2025-08-11T20:43:36Z",
-          "topics": [],
-          "owner": {
-            "login": "travisbgreen",
-            "html_url": "https://github.com/travisbgreen"
-          },
-          "clone_url": "https://github.com/travisbgreen/cve-2025-8088.git"
-        },
-        {
           "id": 1045090650,
           "name": "-CVE-2025-8088",
           "full_name": "pescada-dev/-CVE-2025-8088",
@@ -65201,6 +65186,25 @@
             "html_url": "https://github.com/pescada-dev"
           },
           "clone_url": "https://github.com/pescada-dev/-CVE-2025-8088.git"
+        },
+        {
+          "id": 1038780934,
+          "name": "CVE-2025-8088-WinRAR-PathTraversal-PoC",
+          "full_name": "0xAbolfazl/CVE-2025-8088-WinRAR-PathTraversal-PoC",
+          "html_url": "https://github.com/0xAbolfazl/CVE-2025-8088-WinRAR-PathTraversal-PoC",
+          "description": "",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2025-11-21T05:11:54Z",
+          "pushed_at": "2025-08-16T23:03:32Z",
+          "created_at": "2025-08-15T20:03:05Z",
+          "topics": [],
+          "owner": {
+            "login": "0xAbolfazl",
+            "html_url": "https://github.com/0xAbolfazl"
+          },
+          "clone_url": "https://github.com/0xAbolfazl/CVE-2025-8088-WinRAR-PathTraversal-PoC.git"
         },
         {
           "id": 1058526798,
@@ -65222,23 +65226,23 @@
           "clone_url": "https://github.com/Shinkirou789/Cve-2025-8088-WinRar-vulnerability.git"
         },
         {
-          "id": 1038780934,
-          "name": "CVE-2025-8088-WinRAR-PathTraversal-PoC",
-          "full_name": "0xAbolfazl/CVE-2025-8088-WinRAR-PathTraversal-PoC",
-          "html_url": "https://github.com/0xAbolfazl/CVE-2025-8088-WinRAR-PathTraversal-PoC",
-          "description": "",
+          "id": 1036278526,
+          "name": "cve-2025-8088",
+          "full_name": "travisbgreen/cve-2025-8088",
+          "html_url": "https://github.com/travisbgreen/cve-2025-8088",
+          "description": "cve-2025-8088_detection",
           "stargazers_count": 1,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2025-11-21T05:11:54Z",
-          "pushed_at": "2025-08-16T23:03:32Z",
-          "created_at": "2025-08-15T20:03:05Z",
+          "language": "YARA",
+          "updated_at": "2026-11-14T15:51:25Z",
+          "pushed_at": "2026-11-03T23:02:36Z",
+          "created_at": "2025-08-11T20:43:36Z",
           "topics": [],
           "owner": {
-            "login": "0xAbolfazl",
-            "html_url": "https://github.com/0xAbolfazl"
+            "login": "travisbgreen",
+            "html_url": "https://github.com/travisbgreen"
           },
-          "clone_url": "https://github.com/0xAbolfazl/CVE-2025-8088-WinRAR-PathTraversal-PoC.git"
+          "clone_url": "https://github.com/travisbgreen/cve-2025-8088.git"
         },
         {
           "id": 1056475002,
@@ -65279,25 +65283,6 @@
           "clone_url": "https://github.com/hbesljx/CVE-2025-8088-EXP.git"
         },
         {
-          "id": 1041916645,
-          "name": "CVE-2025-8088",
-          "full_name": "ghostn4444/CVE-2025-8088",
-          "html_url": "https://github.com/ghostn4444/CVE-2025-8088",
-          "description": "This PoC is for authorized study and testing. CVE-2025-8088 is actively exploited, and misuse may violate laws or cause harm. Update to WinRAR 7.13+ to avoid suspicious RARs.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2025-08-29T06:18:02Z",
-          "pushed_at": "2025-08-29T06:17:59Z",
-          "created_at": "2025-08-21T07:49:53Z",
-          "topics": [],
-          "owner": {
-            "login": "ghostn4444",
-            "html_url": "https://github.com/ghostn4444"
-          },
-          "clone_url": "https://github.com/ghostn4444/CVE-2025-8088.git"
-        },
-        {
           "id": 1040493182,
           "name": "CVE-2025-8088",
           "full_name": "nhattanhh/CVE-2025-8088",
@@ -65315,6 +65300,25 @@
             "html_url": "https://github.com/nhattanhh"
           },
           "clone_url": "https://github.com/nhattanhh/CVE-2025-8088.git"
+        },
+        {
+          "id": 1041916645,
+          "name": "CVE-2025-8088",
+          "full_name": "ghostn4444/CVE-2025-8088",
+          "html_url": "https://github.com/ghostn4444/CVE-2025-8088",
+          "description": "This PoC is for authorized study and testing. CVE-2025-8088 is actively exploited, and misuse may violate laws or cause harm. Update to WinRAR 7.13+ to avoid suspicious RARs.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2025-08-29T06:18:02Z",
+          "pushed_at": "2025-08-29T06:17:59Z",
+          "created_at": "2025-08-21T07:49:53Z",
+          "topics": [],
+          "owner": {
+            "login": "ghostn4444",
+            "html_url": "https://github.com/ghostn4444"
+          },
+          "clone_url": "https://github.com/ghostn4444/CVE-2025-8088.git"
         },
         {
           "id": 1080246769,
