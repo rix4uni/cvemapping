@@ -13258,25 +13258,6 @@
       "cve_id": "CVE-2022-24355",
       "repositories": [
         {
-          "id": 1317175995,
-          "name": "CVE-2022-24355",
-          "full_name": "ilizavr/CVE-2022-24355",
-          "html_url": "https://github.com/ilizavr/CVE-2022-24355",
-          "description": "Tplink wr841 v10 rce exploit without authorisation ",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-08-07T02:02:51Z",
-          "pushed_at": "2026-07-31T10:57:18Z",
-          "created_at": "2026-07-30T11:08:36Z",
-          "topics": [],
-          "owner": {
-            "login": "ilizavr",
-            "html_url": "https://github.com/ilizavr"
-          },
-          "clone_url": "https://github.com/ilizavr/CVE-2022-24355.git"
-        },
-        {
           "id": 473158474,
           "name": "CVE-2022-24355",
           "full_name": "ExLuck/CVE-2022-24355",
@@ -20815,30 +20796,6 @@
       ]
     },
     {
-      "cve_id": "CVE-2022-30024",
-      "repositories": [
-        {
-          "id": 1314803432,
-          "name": "CVE-2022-30024",
-          "full_name": "ilizavr/CVE-2022-30024",
-          "html_url": "https://github.com/ilizavr/CVE-2022-30024",
-          "description": "Tplink wr841 v10 rce exploit",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-08-07T02:02:47Z",
-          "pushed_at": "2026-07-31T10:56:20Z",
-          "created_at": "2026-07-28T09:43:58Z",
-          "topics": [],
-          "owner": {
-            "login": "ilizavr",
-            "html_url": "https://github.com/ilizavr"
-          },
-          "clone_url": "https://github.com/ilizavr/CVE-2022-30024.git"
-        }
-      ]
-    },
-    {
       "cve_id": "CVE-2022-30040",
       "repositories": [
         {
@@ -28299,23 +28256,23 @@
           "clone_url": "https://github.com/redzrush101/zte-blade-v40-vita-unlock.git"
         },
         {
-          "id": 1418210491,
-          "name": "BLU_G35",
-          "full_name": "mpse-engineering/BLU_G35",
-          "html_url": "https://github.com/mpse-engineering/BLU_G35",
-          "description": "A self-contained Linux kit for BLU G35 (Unisoc SC9863A): unlock the bootloader via the publicly documented CVE-2022-38694 BootROM method, insure first with three cross-verified backups, gate every write behind typed consent, and roll back to full box state. Security research — read the pinned issue before running anything.",
+          "id": 1463622367,
+          "name": "itel-a05s-a663lc",
+          "full_name": "sriramsrangan/itel-a05s-a663lc",
+          "html_url": "https://github.com/sriramsrangan/itel-a05s-a663lc",
+          "description": "itel A05s (A663LC) bootloader unlock (CVE-2022-38694) and a native Debian call box: boot Debian from the stock kernel while keeping Android's modem stack.",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Shell",
-          "updated_at": "2026-10-15T04:54:47Z",
-          "pushed_at": "2026-10-15T04:55:37Z",
-          "created_at": "2026-10-14T01:26:50Z",
+          "language": "Python",
+          "updated_at": "2026-11-19T03:35:14Z",
+          "pushed_at": "2026-11-19T03:52:46Z",
+          "created_at": "2026-11-19T03:35:04Z",
           "topics": [],
           "owner": {
-            "login": "mpse-engineering",
-            "html_url": "https://github.com/mpse-engineering"
+            "login": "sriramsrangan",
+            "html_url": "https://github.com/sriramsrangan"
           },
-          "clone_url": "https://github.com/mpse-engineering/BLU_G35.git"
+          "clone_url": "https://github.com/sriramsrangan/itel-a05s-a663lc.git"
         },
         {
           "id": 1350452428,
@@ -28335,6 +28292,25 @@
             "html_url": "https://github.com/Gadorach"
           },
           "clone_url": "https://github.com/Gadorach/vankyo-s30-bootloader-unlock.git"
+        },
+        {
+          "id": 1418210491,
+          "name": "BLU_G35",
+          "full_name": "mpse-engineering/BLU_G35",
+          "html_url": "https://github.com/mpse-engineering/BLU_G35",
+          "description": "A self-contained Linux kit for BLU G35 (Unisoc SC9863A): unlock the bootloader via the publicly documented CVE-2022-38694 BootROM method, insure first with three cross-verified backups, gate every write behind typed consent, and roll back to full box state. Security research — read the pinned issue before running anything.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Shell",
+          "updated_at": "2026-10-15T04:54:47Z",
+          "pushed_at": "2026-10-15T04:55:37Z",
+          "created_at": "2026-10-14T01:26:50Z",
+          "topics": [],
+          "owner": {
+            "login": "mpse-engineering",
+            "html_url": "https://github.com/mpse-engineering"
+          },
+          "clone_url": "https://github.com/mpse-engineering/BLU_G35.git"
         }
       ]
     },
@@ -28540,10 +28516,10 @@
           "full_name": "atomxw/cobaltstrike4.5_cdf",
           "html_url": "https://github.com/atomxw/cobaltstrike4.5_cdf",
           "description": "cobaltstrike4.5版本破/解、去除checksum8特征、bypass BeaconEye、修复错误路径泄漏stage、增加totp双因子验证、修复CVE-2022-39197等",
-          "stargazers_count": 47,
+          "stargazers_count": 46,
           "forks_count": 13,
           "language": "",
-          "updated_at": "2026-08-14T01:47:30Z",
+          "updated_at": "2026-11-19T02:40:39Z",
           "pushed_at": "2022-09-22T06:14:53Z",
           "created_at": "2022-09-22T08:55:36Z",
           "topics": [],
@@ -32582,6 +32558,30 @@
             "html_url": "https://github.com/imjdl"
           },
           "clone_url": "https://github.com/imjdl/CVE-2022-46169.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2022-46337",
+      "repositories": [
+        {
+          "id": 1463698879,
+          "name": "derby",
+          "full_name": "intersoftdatalabs-in/derby",
+          "html_url": "https://github.com/intersoftdatalabs-in/derby",
+          "description": "Intersoft Java 8 LTS build of Apache Derby 10.14.2.1 from Apache SVN branches/10.14 (DERBY-7147 / CVE-2022-46337)",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Java",
+          "updated_at": "2026-11-19T05:20:44Z",
+          "pushed_at": "2026-11-19T05:20:20Z",
+          "created_at": "2026-11-19T05:20:05Z",
+          "topics": [],
+          "owner": {
+            "login": "intersoftdatalabs-in",
+            "html_url": "https://github.com/intersoftdatalabs-in"
+          },
+          "clone_url": "https://github.com/intersoftdatalabs-in/derby.git"
         }
       ]
     },
