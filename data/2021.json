@@ -11619,7 +11619,7 @@
           "stargazers_count": 42,
           "forks_count": 2,
           "language": "HTML",
-          "updated_at": "2026-11-20T21:48:29Z",
+          "updated_at": "2026-11-21T22:07:46Z",
           "pushed_at": "2026-11-13T12:34:17Z",
           "created_at": "2026-10-26T12:34:54Z",
           "topics": [
@@ -24037,6 +24037,25 @@
           "clone_url": "https://github.com/Hydragyrum/CVE-2021-41773-Playground.git"
         },
         {
+          "id": 1466880936,
+          "name": "CVE-2021-42013",
+          "full_name": "wvverez/CVE-2021-42013",
+          "html_url": "https://github.com/wvverez/CVE-2021-42013",
+          "description": "PoC (Proof of concept) for CVE Apache v2.4.49, leveraging a Path Traversal vulnerability to achieve Remote Code Execution (RCE) via CGI and Reverse Shell function coded for python3",
+          "stargazers_count": 4,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-11-22T00:29:32Z",
+          "pushed_at": "2026-11-22T00:21:57Z",
+          "created_at": "2026-11-21T19:22:31Z",
+          "topics": [],
+          "owner": {
+            "login": "wvverez",
+            "html_url": "https://github.com/wvverez"
+          },
+          "clone_url": "https://github.com/wvverez/CVE-2021-42013.git"
+        },
+        {
           "id": 417233035,
           "name": "cve-2021-42013-docker-lab",
           "full_name": "twseptian/cve-2021-42013-docker-lab",
@@ -24098,108 +24117,6 @@
           "clone_url": "https://github.com/TheLastVvV/CVE-2021-42013.git"
         },
         {
-          "id": 414878778,
-          "name": "CVE-2021-41773",
-          "full_name": "corelight/CVE-2021-41773",
-          "html_url": "https://github.com/corelight/CVE-2021-41773",
-          "description": "A Zeek package which raises notices for Path Traversal/RCE in Apache HTTP Server 2.4.49 (CVE-2021-41773) and 2.4.50 (CVE-2021-42013)",
-          "stargazers_count": 1,
-          "forks_count": 2,
-          "language": "Zeek",
-          "updated_at": "2021-10-28T05:48:41Z",
-          "pushed_at": "2021-10-28T05:55:41Z",
-          "created_at": "2021-10-08T06:54:27Z",
-          "topics": [],
-          "owner": {
-            "login": "corelight",
-            "html_url": "https://github.com/corelight"
-          },
-          "clone_url": "https://github.com/corelight/CVE-2021-41773.git"
-        },
-        {
-          "id": 416511119,
-          "name": "httpd-2.4.49",
-          "full_name": "ksanchezcld/httpd-2.4.49",
-          "html_url": "https://github.com/ksanchezcld/httpd-2.4.49",
-          "description": "critical: Path Traversal and Remote Code Execution in Apache HTTP Server 2.4.49 and 2.4.50 (incomplete fix of CVE-2021-41773) (CVE-2021-42013)",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "C",
-          "updated_at": "2023-04-29T16:26:04Z",
-          "pushed_at": "2021-10-12T22:02:19Z",
-          "created_at": "2021-10-12T22:02:09Z",
-          "topics": [],
-          "owner": {
-            "login": "ksanchezcld",
-            "html_url": "https://github.com/ksanchezcld"
-          },
-          "clone_url": "https://github.com/ksanchezcld/httpd-2.4.49.git"
-        },
-        {
-          "id": 426066790,
-          "name": "Apache-2.4.49-2.4.50-Traversal-Remote-Code-Execution-Exploit",
-          "full_name": "IcmpOff/Apache-2.4.49-2.4.50-Traversal-Remote-Code-Execution-Exploit",
-          "html_url": "https://github.com/IcmpOff/Apache-2.4.49-2.4.50-Traversal-Remote-Code-Execution-Exploit",
-          "description": "This Metasploit module exploits an unauthenticated remote code execution vulnerability which exists in Apache version 2.4.49 (CVE-2021-41773). If files outside of the document root are not protected by ‘require all denied’ and CGI has been explicitly enabled, it can be used to execute arbitrary commands. This vulnerability has been reintroduced in the Apache 2.4.50 fix (CVE-2021-42013).",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2024-10-17T08:07:25Z",
-          "pushed_at": "2021-11-09T02:39:22Z",
-          "created_at": "2021-11-09T02:38:13Z",
-          "topics": [
-            "apache",
-            "exploit",
-            "metasploit",
-            "metasploit-framework",
-            "metasploit-modules",
-            "rce"
-          ],
-          "owner": {
-            "login": "IcmpOff",
-            "html_url": "https://github.com/IcmpOff"
-          },
-          "clone_url": "https://github.com/IcmpOff/Apache-2.4.49-2.4.50-Traversal-Remote-Code-Execution-Exploit.git"
-        },
-        {
-          "id": 1466880936,
-          "name": "CVE-2021-42013",
-          "full_name": "wvverez/CVE-2021-42013",
-          "html_url": "https://github.com/wvverez/CVE-2021-42013",
-          "description": "PoC (Proof of concept) for CVE-2021-42013 Apache v2.4.49, leveraging a Path Traversal vulnerability to achieve Remote Code Execution (RCE) via CGI and Reverse Shell function coded for python3",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-11-21T20:58:41Z",
-          "pushed_at": "2026-11-21T19:25:43Z",
-          "created_at": "2026-11-21T19:22:31Z",
-          "topics": [],
-          "owner": {
-            "login": "wvverez",
-            "html_url": "https://github.com/wvverez"
-          },
-          "clone_url": "https://github.com/wvverez/CVE-2021-42013.git"
-        },
-        {
-          "id": 424321579,
-          "name": "CVE-2021-42013",
-          "full_name": "robotsense1337/CVE-2021-42013",
-          "html_url": "https://github.com/robotsense1337/CVE-2021-42013",
-          "description": "Exploit Apache 2.4.50(CVE-2021-42013)",
-          "stargazers_count": 1,
-          "forks_count": 1,
-          "language": "Python",
-          "updated_at": "2021-11-04T04:50:20Z",
-          "pushed_at": "2021-11-03T17:41:41Z",
-          "created_at": "2021-11-03T17:33:52Z",
-          "topics": [],
-          "owner": {
-            "login": "robotsense1337",
-            "html_url": "https://github.com/robotsense1337"
-          },
-          "clone_url": "https://github.com/robotsense1337/CVE-2021-42013.git"
-        },
-        {
           "id": 418481558,
           "name": "CVE-2021-41773_42013",
           "full_name": "zerodaywolf/CVE-2021-41773_42013",
@@ -24229,6 +24146,89 @@
             "html_url": "https://github.com/zerodaywolf"
           },
           "clone_url": "https://github.com/zerodaywolf/CVE-2021-41773_42013.git"
+        },
+        {
+          "id": 426066790,
+          "name": "Apache-2.4.49-2.4.50-Traversal-Remote-Code-Execution-Exploit",
+          "full_name": "IcmpOff/Apache-2.4.49-2.4.50-Traversal-Remote-Code-Execution-Exploit",
+          "html_url": "https://github.com/IcmpOff/Apache-2.4.49-2.4.50-Traversal-Remote-Code-Execution-Exploit",
+          "description": "This Metasploit module exploits an unauthenticated remote code execution vulnerability which exists in Apache version 2.4.49 (CVE-2021-41773). If files outside of the document root are not protected by ‘require all denied’ and CGI has been explicitly enabled, it can be used to execute arbitrary commands. This vulnerability has been reintroduced in the Apache 2.4.50 fix (CVE-2021-42013).",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2024-10-17T08:07:25Z",
+          "pushed_at": "2021-11-09T02:39:22Z",
+          "created_at": "2021-11-09T02:38:13Z",
+          "topics": [
+            "apache",
+            "exploit",
+            "metasploit",
+            "metasploit-framework",
+            "metasploit-modules",
+            "rce"
+          ],
+          "owner": {
+            "login": "IcmpOff",
+            "html_url": "https://github.com/IcmpOff"
+          },
+          "clone_url": "https://github.com/IcmpOff/Apache-2.4.49-2.4.50-Traversal-Remote-Code-Execution-Exploit.git"
+        },
+        {
+          "id": 414878778,
+          "name": "CVE-2021-41773",
+          "full_name": "corelight/CVE-2021-41773",
+          "html_url": "https://github.com/corelight/CVE-2021-41773",
+          "description": "A Zeek package which raises notices for Path Traversal/RCE in Apache HTTP Server 2.4.49 (CVE-2021-41773) and 2.4.50 (CVE-2021-42013)",
+          "stargazers_count": 1,
+          "forks_count": 2,
+          "language": "Zeek",
+          "updated_at": "2021-10-28T05:48:41Z",
+          "pushed_at": "2021-10-28T05:55:41Z",
+          "created_at": "2021-10-08T06:54:27Z",
+          "topics": [],
+          "owner": {
+            "login": "corelight",
+            "html_url": "https://github.com/corelight"
+          },
+          "clone_url": "https://github.com/corelight/CVE-2021-41773.git"
+        },
+        {
+          "id": 424321579,
+          "name": "CVE-2021-42013",
+          "full_name": "robotsense1337/CVE-2021-42013",
+          "html_url": "https://github.com/robotsense1337/CVE-2021-42013",
+          "description": "Exploit Apache 2.4.50(CVE-2021-42013)",
+          "stargazers_count": 1,
+          "forks_count": 1,
+          "language": "Python",
+          "updated_at": "2021-11-04T04:50:20Z",
+          "pushed_at": "2021-11-03T17:41:41Z",
+          "created_at": "2021-11-03T17:33:52Z",
+          "topics": [],
+          "owner": {
+            "login": "robotsense1337",
+            "html_url": "https://github.com/robotsense1337"
+          },
+          "clone_url": "https://github.com/robotsense1337/CVE-2021-42013.git"
+        },
+        {
+          "id": 416511119,
+          "name": "httpd-2.4.49",
+          "full_name": "ksanchezcld/httpd-2.4.49",
+          "html_url": "https://github.com/ksanchezcld/httpd-2.4.49",
+          "description": "critical: Path Traversal and Remote Code Execution in Apache HTTP Server 2.4.49 and 2.4.50 (incomplete fix of CVE-2021-41773) (CVE-2021-42013)",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "C",
+          "updated_at": "2023-04-29T16:26:04Z",
+          "pushed_at": "2021-10-12T22:02:19Z",
+          "created_at": "2021-10-12T22:02:09Z",
+          "topics": [],
+          "owner": {
+            "login": "ksanchezcld",
+            "html_url": "https://github.com/ksanchezcld"
+          },
+          "clone_url": "https://github.com/ksanchezcld/httpd-2.4.49.git"
         },
         {
           "id": 427958357,
@@ -24432,10 +24432,10 @@
           "full_name": "cube0x0/noPac",
           "html_url": "https://github.com/cube0x0/noPac",
           "description": "CVE-2021-42287/CVE-2021-42278 Scanner \u0026 Exploiter.",
-          "stargazers_count": 1416,
+          "stargazers_count": 1417,
           "forks_count": 310,
           "language": "C#",
-          "updated_at": "2026-11-19T22:25:13Z",
+          "updated_at": "2026-11-21T22:03:37Z",
           "pushed_at": "2021-12-16T09:50:15Z",
           "created_at": "2021-12-11T19:27:30Z",
           "topics": [],
@@ -24577,10 +24577,10 @@
           "full_name": "cube0x0/noPac",
           "html_url": "https://github.com/cube0x0/noPac",
           "description": "CVE-2021-42287/CVE-2021-42278 Scanner \u0026 Exploiter.",
-          "stargazers_count": 1416,
+          "stargazers_count": 1417,
           "forks_count": 310,
           "language": "C#",
-          "updated_at": "2026-11-19T22:25:13Z",
+          "updated_at": "2026-11-21T22:03:37Z",
           "pushed_at": "2021-12-16T09:50:15Z",
           "created_at": "2021-12-11T19:27:30Z",
           "topics": [],
@@ -31126,23 +31126,23 @@
           "clone_url": "https://github.com/mcpmark-eval-liuhezi/log4shell-research-brief.git"
         },
         {
-          "id": 1466621830,
-          "name": "log4shell-audit2",
-          "full_name": "for-toolathlon/log4shell-audit2",
-          "html_url": "https://github.com/for-toolathlon/log4shell-audit2",
-          "description": "Quarterly security tracking repo for Log4Shell (CVE-2021-44228) audit",
+          "id": 1466623929,
+          "name": "log4shell-audit-2",
+          "full_name": "for-toolathlon/log4shell-audit-2",
+          "html_url": "https://github.com/for-toolathlon/log4shell-audit-2",
+          "description": "Security audit tracking for Log4Shell (CVE-2021-44228)",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-11-21T14:25:05Z",
-          "pushed_at": "2026-11-21T14:26:09Z",
-          "created_at": "2026-11-21T14:25:03Z",
+          "updated_at": "2026-11-21T14:27:28Z",
+          "pushed_at": "2026-11-21T14:28:32Z",
+          "created_at": "2026-11-21T14:27:26Z",
           "topics": [],
           "owner": {
             "login": "for-toolathlon",
             "html_url": "https://github.com/for-toolathlon"
           },
-          "clone_url": "https://github.com/for-toolathlon/log4shell-audit2.git"
+          "clone_url": "https://github.com/for-toolathlon/log4shell-audit-2.git"
         },
         {
           "id": 1442740893,
@@ -31240,23 +31240,23 @@
           "clone_url": "https://github.com/scheibling/py-log4shellscanner.git"
         },
         {
-          "id": 1464970801,
-          "name": "log4shell-research-brief",
-          "full_name": "for-toolathlon/log4shell-research-brief",
-          "html_url": "https://github.com/for-toolathlon/log4shell-research-brief",
-          "description": "Internal security-awareness research brief on Log4Shell (CVE-2021-44228) — all citations open source",
+          "id": 1466621830,
+          "name": "log4shell-audit2",
+          "full_name": "for-toolathlon/log4shell-audit2",
+          "html_url": "https://github.com/for-toolathlon/log4shell-audit2",
+          "description": "Quarterly security tracking repo for Log4Shell (CVE-2021-44228) audit",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-11-20T04:19:52Z",
-          "pushed_at": "2026-11-21T03:44:16Z",
-          "created_at": "2026-11-20T04:19:49Z",
+          "updated_at": "2026-11-21T14:25:05Z",
+          "pushed_at": "2026-11-21T14:26:09Z",
+          "created_at": "2026-11-21T14:25:03Z",
           "topics": [],
           "owner": {
             "login": "for-toolathlon",
             "html_url": "https://github.com/for-toolathlon"
           },
-          "clone_url": "https://github.com/for-toolathlon/log4shell-research-brief.git"
+          "clone_url": "https://github.com/for-toolathlon/log4shell-audit2.git"
         },
         {
           "id": 439273557,
@@ -33685,23 +33685,23 @@
           "clone_url": "https://github.com/BJLIYANLIANG/log4j-scanner.git"
         },
         {
-          "id": 1227018906,
-          "name": "Cyber-Attack-Simulation-",
-          "full_name": "sajanapamuditha/Cyber-Attack-Simulation-",
-          "html_url": "https://github.com/sajanapamuditha/Cyber-Attack-Simulation-",
-          "description": " Log4Shell (CVE-2021-44228)",
+          "id": 1464970801,
+          "name": "log4shell-research-brief",
+          "full_name": "for-toolathlon/log4shell-research-brief",
+          "html_url": "https://github.com/for-toolathlon/log4shell-research-brief",
+          "description": "Internal security-awareness research brief on Log4Shell (CVE-2021-44228) — all citations open source",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-11-21T18:42:18Z",
-          "pushed_at": "2026-11-21T17:42:14Z",
-          "created_at": "2026-05-02T05:17:53Z",
+          "updated_at": "2026-11-20T04:19:52Z",
+          "pushed_at": "2026-11-21T23:37:43Z",
+          "created_at": "2026-11-20T04:19:49Z",
           "topics": [],
           "owner": {
-            "login": "sajanapamuditha",
-            "html_url": "https://github.com/sajanapamuditha"
+            "login": "for-toolathlon",
+            "html_url": "https://github.com/for-toolathlon"
           },
-          "clone_url": "https://github.com/sajanapamuditha/Cyber-Attack-Simulation-.git"
+          "clone_url": "https://github.com/for-toolathlon/log4shell-research-brief.git"
         },
         {
           "id": 437116864,
@@ -33742,23 +33742,23 @@
           "clone_url": "https://github.com/wheezysec/CVE-2021-44228-kusto.git"
         },
         {
-          "id": 1466623929,
-          "name": "log4shell-audit-2",
-          "full_name": "for-toolathlon/log4shell-audit-2",
-          "html_url": "https://github.com/for-toolathlon/log4shell-audit-2",
-          "description": "Security audit tracking for Log4Shell (CVE-2021-44228)",
+          "id": 1227018906,
+          "name": "Cyber-Attack-Simulation-",
+          "full_name": "sajanapamuditha/Cyber-Attack-Simulation-",
+          "html_url": "https://github.com/sajanapamuditha/Cyber-Attack-Simulation-",
+          "description": " Log4Shell (CVE-2021-44228)",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-11-21T14:27:28Z",
-          "pushed_at": "2026-11-21T14:28:32Z",
-          "created_at": "2026-11-21T14:27:26Z",
+          "updated_at": "2026-11-21T18:42:18Z",
+          "pushed_at": "2026-11-21T17:42:14Z",
+          "created_at": "2026-05-02T05:17:53Z",
           "topics": [],
           "owner": {
-            "login": "for-toolathlon",
-            "html_url": "https://github.com/for-toolathlon"
+            "login": "sajanapamuditha",
+            "html_url": "https://github.com/sajanapamuditha"
           },
-          "clone_url": "https://github.com/for-toolathlon/log4shell-audit-2.git"
+          "clone_url": "https://github.com/sajanapamuditha/Cyber-Attack-Simulation-.git"
         },
         {
           "id": 439595430,
