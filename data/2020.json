@@ -437,30 +437,6 @@
       ]
     },
     {
-      "cve_id": "CVE-2020-0423",
-      "repositories": [
-        {
-          "id": 1234832810,
-          "name": "CVE-2020-0423",
-          "full_name": "wired0ut/CVE-2020-0423",
-          "html_url": "https://github.com/wired0ut/CVE-2020-0423",
-          "description": "An exploit to CVE-2020-0423, which is a Binder deffered work UAF.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "C",
-          "updated_at": "2026-06-20T15:01:48Z",
-          "pushed_at": "2026-06-20T15:01:44Z",
-          "created_at": "2026-05-10T17:43:30Z",
-          "topics": [],
-          "owner": {
-            "login": "wired0ut",
-            "html_url": "https://github.com/wired0ut"
-          },
-          "clone_url": "https://github.com/wired0ut/CVE-2020-0423.git"
-        }
-      ]
-    },
-    {
       "cve_id": "CVE-2020-0551",
       "repositories": [
         {
@@ -958,6 +934,25 @@
           "clone_url": "https://github.com/Doug-Moody/Windows10_Cumulative_Updates_PowerShell.git"
         },
         {
+          "id": 234146234,
+          "name": "CVE-2020-0601",
+          "full_name": "JPurrier/CVE-2020-0601",
+          "html_url": "https://github.com/JPurrier/CVE-2020-0601",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 1,
+          "language": "PowerShell",
+          "updated_at": "2024-08-12T19:56:40Z",
+          "pushed_at": "2020-01-17T10:49:17Z",
+          "created_at": "2020-01-15T18:31:30Z",
+          "topics": [],
+          "owner": {
+            "login": "JPurrier",
+            "html_url": "https://github.com/JPurrier"
+          },
+          "clone_url": "https://github.com/JPurrier/CVE-2020-0601.git"
+        },
+        {
           "id": 236119532,
           "name": "PoC_CurveBall",
           "full_name": "apodlosky/PoC_CurveBall",
@@ -975,6 +970,25 @@
             "html_url": "https://github.com/apodlosky"
           },
           "clone_url": "https://github.com/apodlosky/PoC_CurveBall.git"
+        },
+        {
+          "id": 234442281,
+          "name": "cve-2020-0601-utils",
+          "full_name": "0xxon/cve-2020-0601-utils",
+          "html_url": "https://github.com/0xxon/cve-2020-0601-utils",
+          "description": "C++ based utility to check if certificates are trying to exploit CVE-2020-0601",
+          "stargazers_count": 0,
+          "forks_count": 3,
+          "language": "C",
+          "updated_at": "2024-08-12T19:56:43Z",
+          "pushed_at": "2020-01-21T19:48:58Z",
+          "created_at": "2020-01-17T01:02:52Z",
+          "topics": [],
+          "owner": {
+            "login": "0xxon",
+            "html_url": "https://github.com/0xxon"
+          },
+          "clone_url": "https://github.com/0xxon/cve-2020-0601-utils.git"
         },
         {
           "id": 235000073,
@@ -1015,25 +1029,6 @@
           "clone_url": "https://github.com/dlee35/curveball_lua.git"
         },
         {
-          "id": 234442281,
-          "name": "cve-2020-0601-utils",
-          "full_name": "0xxon/cve-2020-0601-utils",
-          "html_url": "https://github.com/0xxon/cve-2020-0601-utils",
-          "description": "C++ based utility to check if certificates are trying to exploit CVE-2020-0601",
-          "stargazers_count": 0,
-          "forks_count": 3,
-          "language": "C",
-          "updated_at": "2024-08-12T19:56:43Z",
-          "pushed_at": "2020-01-21T19:48:58Z",
-          "created_at": "2020-01-17T01:02:52Z",
-          "topics": [],
-          "owner": {
-            "login": "0xxon",
-            "html_url": "https://github.com/0xxon"
-          },
-          "clone_url": "https://github.com/0xxon/cve-2020-0601-utils.git"
-        },
-        {
           "id": 243353551,
           "name": "meetup-2-curveball",
           "full_name": "bsides-rijeka/meetup-2-curveball",
@@ -1051,6 +1046,36 @@
             "html_url": "https://github.com/bsides-rijeka"
           },
           "clone_url": "https://github.com/bsides-rijeka/meetup-2-curveball.git"
+        },
+        {
+          "id": 1473195192,
+          "name": "CVE-2020-0601",
+          "full_name": "googlesky/CVE-2020-0601",
+          "html_url": "https://github.com/googlesky/CVE-2020-0601",
+          "description": "CurveBall: CryptoAPI trusts an ECC certificate without validating the chain. Fixed in January 2020 update. Differential: spoof trusted on vuln, refused on fixed",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-11-26T13:24:51Z",
+          "pushed_at": "2026-11-26T13:29:42Z",
+          "created_at": "2026-11-26T13:24:38Z",
+          "topics": [
+            "certificate",
+            "cryptoapi",
+            "curveball",
+            "cve-2026-2020-0601",
+            "cwe-295",
+            "poc",
+            "proof-of-concept",
+            "python",
+            "security-research",
+            "vulnerability-research"
+          ],
+          "owner": {
+            "login": "googlesky",
+            "html_url": "https://github.com/googlesky"
+          },
+          "clone_url": "https://github.com/googlesky/CVE-2020-0601.git"
         },
         {
           "id": 234714299,
@@ -1089,25 +1114,6 @@
             "html_url": "https://github.com/MarkusZehnle"
           },
           "clone_url": "https://github.com/MarkusZehnle/CVE-2020-0601.git"
-        },
-        {
-          "id": 234146234,
-          "name": "CVE-2020-0601",
-          "full_name": "JPurrier/CVE-2020-0601",
-          "html_url": "https://github.com/JPurrier/CVE-2020-0601",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "PowerShell",
-          "updated_at": "2024-08-12T19:56:40Z",
-          "pushed_at": "2020-01-17T10:49:17Z",
-          "created_at": "2020-01-15T18:31:30Z",
-          "topics": [],
-          "owner": {
-            "login": "JPurrier",
-            "html_url": "https://github.com/JPurrier"
-          },
-          "clone_url": "https://github.com/JPurrier/CVE-2020-0601.git"
         },
         {
           "id": 239981818,
@@ -1543,10 +1549,10 @@
           "full_name": "maxpl0it/CVE-2020-0674-Exploit",
           "html_url": "https://github.com/maxpl0it/CVE-2020-0674-Exploit",
           "description": "This is an exploit for CVE-2020-0674 that runs on the x64 version of IE 8, 9, 10, and 11 on Windows 7.",
-          "stargazers_count": 222,
+          "stargazers_count": 223,
           "forks_count": 65,
           "language": "HTML",
-          "updated_at": "2026-07-29T10:34:02Z",
+          "updated_at": "2026-11-26T15:35:27Z",
           "pushed_at": "2020-05-15T09:03:36Z",
           "created_at": "2020-05-07T22:02:25Z",
           "topics": [],
@@ -1586,10 +1592,10 @@
           "full_name": "padovah4ck/CVE-2020-0683",
           "html_url": "https://github.com/padovah4ck/CVE-2020-0683",
           "description": "CVE-2020-0683 - Windows MSI “Installer service” Elevation of Privilege",
-          "stargazers_count": 338,
+          "stargazers_count": 337,
           "forks_count": 56,
           "language": "C++",
-          "updated_at": "2026-11-19T21:42:04Z",
+          "updated_at": "2026-11-27T11:42:30Z",
           "pushed_at": "2021-12-23T16:28:28Z",
           "created_at": "2020-02-11T16:42:34Z",
           "topics": [],
@@ -1942,6 +1948,36 @@
           "clone_url": "https://github.com/truongtn/cve-2020-0688.git"
         },
         {
+          "id": 1473217784,
+          "name": "CVE-2020-0688",
+          "full_name": "googlesky/CVE-2020-0688",
+          "html_url": "https://github.com/googlesky/CVE-2020-0688",
+          "description": "Exchange: static validation key lets attackers forge viewstate for RCE. Fixed in February 2020 CU. Differential: gadget executed on vuln, refused on fixed",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-11-26T13:43:59Z",
+          "pushed_at": "2026-11-26T13:48:36Z",
+          "created_at": "2026-11-26T13:43:45Z",
+          "topics": [
+            "cve-2026-2020-0688",
+            "cwe-798",
+            "deserialization",
+            "exchange",
+            "poc",
+            "proof-of-concept",
+            "python",
+            "security-research",
+            "viewstate",
+            "vulnerability-research"
+          ],
+          "owner": {
+            "login": "googlesky",
+            "html_url": "https://github.com/googlesky"
+          },
+          "clone_url": "https://github.com/googlesky/CVE-2020-0688.git"
+        },
+        {
           "id": 245925775,
           "name": "CVE-2020-0688",
           "full_name": "bailongwang1/CVE-2020-0688",
@@ -2146,7 +2182,7 @@
           "stargazers_count": 1362,
           "forks_count": 338,
           "language": "C",
-          "updated_at": "2026-11-19T21:45:31Z",
+          "updated_at": "2026-11-27T11:42:40Z",
           "pushed_at": "2020-12-07T20:04:27Z",
           "created_at": "2020-03-30T11:42:56Z",
           "topics": [
@@ -2168,10 +2204,10 @@
           "full_name": "ly4k/SMBGhost",
           "html_url": "https://github.com/ly4k/SMBGhost",
           "description": "Scanner for CVE-2020-0796 - SMBv3 RCE",
-          "stargazers_count": 723,
-          "forks_count": 186,
+          "stargazers_count": 724,
+          "forks_count": 185,
           "language": "Python",
-          "updated_at": "2026-11-19T21:44:01Z",
+          "updated_at": "2026-11-26T00:04:59Z",
           "pushed_at": "2020-10-01T08:36:29Z",
           "created_at": "2020-03-11T15:21:27Z",
           "topics": [
@@ -2189,10 +2225,10 @@
           "full_name": "jamf/CVE-2020-0796-RCE-POC",
           "html_url": "https://github.com/jamf/CVE-2020-0796-RCE-POC",
           "description": "CVE-2020-0796 Remote Code Execution POC",
-          "stargazers_count": 569,
-          "forks_count": 171,
+          "stargazers_count": 570,
+          "forks_count": 172,
           "language": "Python",
-          "updated_at": "2026-11-19T21:47:21Z",
+          "updated_at": "2026-11-26T00:05:05Z",
           "pushed_at": "2020-06-09T20:46:45Z",
           "created_at": "2020-04-20T14:35:48Z",
           "topics": [
@@ -2214,10 +2250,10 @@
           "full_name": "Barriuso/SMBGhost_AutomateExploitation",
           "html_url": "https://github.com/Barriuso/SMBGhost_AutomateExploitation",
           "description": "SMBGhost (CVE-2020-0796) Automate Exploitation and Detection",
-          "stargazers_count": 361,
+          "stargazers_count": 362,
           "forks_count": 49,
           "language": "Python",
-          "updated_at": "2026-11-19T21:51:44Z",
+          "updated_at": "2026-11-26T00:05:13Z",
           "pushed_at": "2022-03-30T14:02:04Z",
           "created_at": "2020-06-10T16:44:39Z",
           "topics": [],
@@ -2771,6 +2807,25 @@
           "clone_url": "https://github.com/tango-j/CVE-2020-0796.git"
         },
         {
+          "id": 299197060,
+          "name": "SMBGhost-CVE-2020-0796-",
+          "full_name": "codewithpradhan/SMBGhost-CVE-2020-0796-",
+          "html_url": "https://github.com/codewithpradhan/SMBGhost-CVE-2020-0796-",
+          "description": "To crash Windows-10 easily",
+          "stargazers_count": 4,
+          "forks_count": 2,
+          "language": "Python",
+          "updated_at": "2026-11-26T15:36:20Z",
+          "pushed_at": "2020-09-28T05:24:14Z",
+          "created_at": "2020-09-28T05:23:20Z",
+          "topics": [],
+          "owner": {
+            "login": "codewithpradhan",
+            "html_url": "https://github.com/codewithpradhan"
+          },
+          "clone_url": "https://github.com/codewithpradhan/SMBGhost-CVE-2020-0796-.git"
+        },
+        {
           "id": 246914011,
           "name": "SMBCompScan",
           "full_name": "wneessen/SMBCompScan",
@@ -2790,44 +2845,6 @@
           "clone_url": "https://github.com/wneessen/SMBCompScan.git"
         },
         {
-          "id": 247747657,
-          "name": "smbghost",
-          "full_name": "sujitawake/smbghost",
-          "html_url": "https://github.com/sujitawake/smbghost",
-          "description": "CVE-2020-0796_CoronaBlue_SMBGhost",
-          "stargazers_count": 3,
-          "forks_count": 2,
-          "language": "",
-          "updated_at": "2025-04-18T15:44:23Z",
-          "pushed_at": "2020-03-19T08:06:51Z",
-          "created_at": "2020-03-16T15:31:52Z",
-          "topics": [],
-          "owner": {
-            "login": "sujitawake",
-            "html_url": "https://github.com/sujitawake"
-          },
-          "clone_url": "https://github.com/sujitawake/smbghost.git"
-        },
-        {
-          "id": 299197060,
-          "name": "SMBGhost-CVE-2020-0796-",
-          "full_name": "codewithpradhan/SMBGhost-CVE-2020-0796-",
-          "html_url": "https://github.com/codewithpradhan/SMBGhost-CVE-2020-0796-",
-          "description": "To crash Windows-10 easily",
-          "stargazers_count": 3,
-          "forks_count": 2,
-          "language": "Python",
-          "updated_at": "2026-07-27T20:04:54Z",
-          "pushed_at": "2020-09-28T05:24:14Z",
-          "created_at": "2020-09-28T05:23:20Z",
-          "topics": [],
-          "owner": {
-            "login": "codewithpradhan",
-            "html_url": "https://github.com/codewithpradhan"
-          },
-          "clone_url": "https://github.com/codewithpradhan/SMBGhost-CVE-2020-0796-.git"
-        },
-        {
           "id": 270919583,
           "name": "CVE-2020-0796",
           "full_name": "exp-sky/CVE-2020-0796",
@@ -2845,6 +2862,25 @@
             "html_url": "https://github.com/exp-sky"
           },
           "clone_url": "https://github.com/exp-sky/CVE-2020-0796.git"
+        },
+        {
+          "id": 247747657,
+          "name": "smbghost",
+          "full_name": "sujitawake/smbghost",
+          "html_url": "https://github.com/sujitawake/smbghost",
+          "description": "CVE-2020-0796_CoronaBlue_SMBGhost",
+          "stargazers_count": 3,
+          "forks_count": 2,
+          "language": "",
+          "updated_at": "2025-04-18T15:44:23Z",
+          "pushed_at": "2020-03-19T08:06:51Z",
+          "created_at": "2020-03-16T15:31:52Z",
+          "topics": [],
+          "owner": {
+            "login": "sujitawake",
+            "html_url": "https://github.com/sujitawake"
+          },
+          "clone_url": "https://github.com/sujitawake/smbghost.git"
         },
         {
           "id": 246918199,
@@ -3136,25 +3172,6 @@
           "clone_url": "https://github.com/LabDookhtegan/CVE-2020-0796-EXP.git"
         },
         {
-          "id": 1281538323,
-          "name": "smbghost",
-          "full_name": "p4ncontomat3/smbghost",
-          "html_url": "https://github.com/p4ncontomat3/smbghost",
-          "description": "scanner for CVE-2020-0796",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-06-26T16:54:07Z",
-          "pushed_at": "2026-06-26T16:54:03Z",
-          "created_at": "2026-06-26T16:53:44Z",
-          "topics": [],
-          "owner": {
-            "login": "p4ncontomat3",
-            "html_url": "https://github.com/p4ncontomat3"
-          },
-          "clone_url": "https://github.com/p4ncontomat3/smbghost.git"
-        },
-        {
           "id": 263364082,
           "name": "SMBGhostScanner",
           "full_name": "bacth0san96/SMBGhostScanner",
@@ -3193,27 +3210,25 @@
           "clone_url": "https://github.com/halsten/CVE-2020-0796.git"
         },
         {
-          "id": 246894204,
-          "name": "smbee",
-          "full_name": "UraSecTeam/smbee",
-          "html_url": "https://github.com/UraSecTeam/smbee",
-          "description": "Check system is vulnerable CVE-2020-0796 (SMB v3)",
+          "id": 246870588,
+          "name": "CVE-2020-0796-Scanner",
+          "full_name": "xax007/CVE-2020-0796-Scanner",
+          "html_url": "https://github.com/xax007/CVE-2020-0796-Scanner",
+          "description": "CVE-2020-0796 SMBv3.1.1 Compression Capability Vulnerability Scanner",
           "stargazers_count": 0,
           "forks_count": 2,
           "language": "",
-          "updated_at": "2024-08-12T19:58:44Z",
-          "pushed_at": "2020-03-12T17:42:59Z",
-          "created_at": "2020-03-12T17:32:56Z",
+          "updated_at": "2024-08-12T19:58:43Z",
+          "pushed_at": "2020-03-12T15:46:06Z",
+          "created_at": "2020-03-12T15:36:43Z",
           "topics": [
-            "coronablue",
-            "cve-2020-0796",
-            "smbghost"
+            "cve-2020-0796"
           ],
           "owner": {
-            "login": "UraSecTeam",
-            "html_url": "https://github.com/UraSecTeam"
+            "login": "xax007",
+            "html_url": "https://github.com/xax007"
           },
-          "clone_url": "https://github.com/UraSecTeam/smbee.git"
+          "clone_url": "https://github.com/xax007/CVE-2020-0796-Scanner.git"
         },
         {
           "id": 268789911,
@@ -3235,44 +3250,42 @@
           "clone_url": "https://github.com/ysyyrps123/CVE-2020-0796-exp.git"
         },
         {
-          "id": 1389479710,
-          "name": "cve-2020-0796-scanner",
-          "full_name": "linusboz12345-sys/cve-2020-0796-scanner",
-          "html_url": "https://github.com/linusboz12345-sys/cve-2020-0796-scanner",
-          "description": "",
+          "id": 246927086,
+          "name": "SMBGhost-WorkaroundApplier",
+          "full_name": "Almorabea/SMBGhost-WorkaroundApplier",
+          "html_url": "https://github.com/Almorabea/SMBGhost-WorkaroundApplier",
+          "description": "This script will apply the workaround for the vulnerability CVE-2020-0796 for the SMBv3 unauthenticated RCE",
           "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-09-26T16:05:35Z",
-          "pushed_at": "2026-09-26T16:05:35Z",
-          "created_at": "2026-09-26T16:05:34Z",
+          "forks_count": 1,
+          "language": "Python",
+          "updated_at": "2024-08-12T19:58:45Z",
+          "pushed_at": "2020-03-13T14:52:49Z",
+          "created_at": "2020-03-12T20:41:30Z",
           "topics": [],
           "owner": {
-            "login": "linusboz12345-sys",
-            "html_url": "https://github.com/linusboz12345-sys"
+            "login": "Almorabea",
+            "html_url": "https://github.com/Almorabea"
           },
-          "clone_url": "https://github.com/linusboz12345-sys/cve-2020-0796-scanner.git"
+          "clone_url": "https://github.com/Almorabea/SMBGhost-WorkaroundApplier.git"
         },
         {
-          "id": 246870588,
-          "name": "CVE-2020-0796-Scanner",
-          "full_name": "xax007/CVE-2020-0796-Scanner",
-          "html_url": "https://github.com/xax007/CVE-2020-0796-Scanner",
-          "description": "CVE-2020-0796 SMBv3.1.1 Compression Capability Vulnerability Scanner",
+          "id": 246728549,
+          "name": "CVE-2020-0796",
+          "full_name": "kn6869610/CVE-2020-0796",
+          "html_url": "https://github.com/kn6869610/CVE-2020-0796",
+          "description": "",
           "stargazers_count": 0,
-          "forks_count": 2,
-          "language": "",
-          "updated_at": "2024-08-12T19:58:43Z",
-          "pushed_at": "2020-03-12T15:46:06Z",
-          "created_at": "2020-03-12T15:36:43Z",
-          "topics": [
-            "cve-2020-0796"
-          ],
+          "forks_count": 1,
+          "language": "Python",
+          "updated_at": "2024-08-12T19:58:39Z",
+          "pushed_at": "2020-03-12T03:19:51Z",
+          "created_at": "2020-03-12T02:47:49Z",
+          "topics": [],
           "owner": {
-            "login": "xax007",
-            "html_url": "https://github.com/xax007"
+            "login": "kn6869610",
+            "html_url": "https://github.com/kn6869610"
           },
-          "clone_url": "https://github.com/xax007/CVE-2020-0796-Scanner.git"
+          "clone_url": "https://github.com/kn6869610/CVE-2020-0796.git"
         },
         {
           "id": 271468541,
@@ -3313,42 +3326,23 @@
           "clone_url": "https://github.com/ysyyrps123/CVE-2020-0796.git"
         },
         {
-          "id": 247218948,
-          "name": "CVE-2020-0796",
-          "full_name": "wsfengfan/CVE-2020-0796",
-          "html_url": "https://github.com/wsfengfan/CVE-2020-0796",
-          "description": "CVE-2020-0796 Python POC buffer overflow",
-          "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "",
-          "updated_at": "2024-08-12T19:58:47Z",
-          "pushed_at": "2020-03-14T05:51:48Z",
-          "created_at": "2020-03-14T05:39:37Z",
-          "topics": [],
-          "owner": {
-            "login": "wsfengfan",
-            "html_url": "https://github.com/wsfengfan"
-          },
-          "clone_url": "https://github.com/wsfengfan/CVE-2020-0796.git"
-        },
-        {
-          "id": 246728549,
-          "name": "CVE-2020-0796",
-          "full_name": "kn6869610/CVE-2020-0796",
-          "html_url": "https://github.com/kn6869610/CVE-2020-0796",
+          "id": 1389479710,
+          "name": "cve-2020-0796-scanner",
+          "full_name": "linusboz12345-sys/cve-2020-0796-scanner",
+          "html_url": "https://github.com/linusboz12345-sys/cve-2020-0796-scanner",
           "description": "",
           "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "Python",
-          "updated_at": "2024-08-12T19:58:39Z",
-          "pushed_at": "2020-03-12T03:19:51Z",
-          "created_at": "2020-03-12T02:47:49Z",
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-09-26T16:05:35Z",
+          "pushed_at": "2026-09-26T16:05:35Z",
+          "created_at": "2026-09-26T16:05:34Z",
           "topics": [],
           "owner": {
-            "login": "kn6869610",
-            "html_url": "https://github.com/kn6869610"
+            "login": "linusboz12345-sys",
+            "html_url": "https://github.com/linusboz12345-sys"
           },
-          "clone_url": "https://github.com/kn6869610/CVE-2020-0796.git"
+          "clone_url": "https://github.com/linusboz12345-sys/cve-2020-0796-scanner.git"
         },
         {
           "id": 255573167,
@@ -3370,6 +3364,48 @@
           "clone_url": "https://github.com/intelliroot-tech/cve-2020-0796-Scanner.git"
         },
         {
+          "id": 247218948,
+          "name": "CVE-2020-0796",
+          "full_name": "wsfengfan/CVE-2020-0796",
+          "html_url": "https://github.com/wsfengfan/CVE-2020-0796",
+          "description": "CVE-2020-0796 Python POC buffer overflow",
+          "stargazers_count": 0,
+          "forks_count": 1,
+          "language": "",
+          "updated_at": "2024-08-12T19:58:47Z",
+          "pushed_at": "2020-03-14T05:51:48Z",
+          "created_at": "2020-03-14T05:39:37Z",
+          "topics": [],
+          "owner": {
+            "login": "wsfengfan",
+            "html_url": "https://github.com/wsfengfan"
+          },
+          "clone_url": "https://github.com/wsfengfan/CVE-2020-0796.git"
+        },
+        {
+          "id": 246894204,
+          "name": "smbee",
+          "full_name": "UraSecTeam/smbee",
+          "html_url": "https://github.com/UraSecTeam/smbee",
+          "description": "Check system is vulnerable CVE-2020-0796 (SMB v3)",
+          "stargazers_count": 0,
+          "forks_count": 2,
+          "language": "",
+          "updated_at": "2024-08-12T19:58:44Z",
+          "pushed_at": "2020-03-12T17:42:59Z",
+          "created_at": "2020-03-12T17:32:56Z",
+          "topics": [
+            "coronablue",
+            "cve-2020-0796",
+            "smbghost"
+          ],
+          "owner": {
+            "login": "UraSecTeam",
+            "html_url": "https://github.com/UraSecTeam"
+          },
+          "clone_url": "https://github.com/UraSecTeam/smbee.git"
+        },
+        {
           "id": 251207693,
           "name": "cve-2020-0796-vuln",
           "full_name": "tripledd/cve-2020-0796-vuln",
@@ -3387,25 +3423,6 @@
             "html_url": "https://github.com/tripledd"
           },
           "clone_url": "https://github.com/tripledd/cve-2020-0796-vuln.git"
-        },
-        {
-          "id": 246927086,
-          "name": "SMBGhost-WorkaroundApplier",
-          "full_name": "Almorabea/SMBGhost-WorkaroundApplier",
-          "html_url": "https://github.com/Almorabea/SMBGhost-WorkaroundApplier",
-          "description": "This script will apply the workaround for the vulnerability CVE-2020-0796 for the SMBv3 unauthenticated RCE",
-          "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "Python",
-          "updated_at": "2024-08-12T19:58:45Z",
-          "pushed_at": "2020-03-13T14:52:49Z",
-          "created_at": "2020-03-12T20:41:30Z",
-          "topics": [],
-          "owner": {
-            "login": "Almorabea",
-            "html_url": "https://github.com/Almorabea"
-          },
-          "clone_url": "https://github.com/Almorabea/SMBGhost-WorkaroundApplier.git"
         },
         {
           "id": 310486564,
@@ -3583,25 +3600,6 @@
             "html_url": "https://github.com/rdoix"
           },
           "clone_url": "https://github.com/rdoix/CVE-2020-10148-Solarwinds-Orion.git"
-        },
-        {
-          "id": 1259802475,
-          "name": "solarwinds-sunburst-cve-2020-10148",
-          "full_name": "horrister/solarwinds-sunburst-cve-2020-10148",
-          "html_url": "https://github.com/horrister/solarwinds-sunburst-cve-2020-10148",
-          "description": "",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "PowerShell",
-          "updated_at": "2026-06-06T18:27:17Z",
-          "pushed_at": "2026-06-06T18:08:43Z",
-          "created_at": "2026-06-04T21:53:03Z",
-          "topics": [],
-          "owner": {
-            "login": "horrister",
-            "html_url": "https://github.com/horrister"
-          },
-          "clone_url": "https://github.com/horrister/solarwinds-sunburst-cve-2020-10148.git"
         }
       ]
     },
@@ -3665,7 +3663,7 @@
           "stargazers_count": 4297,
           "forks_count": 1077,
           "language": "Python",
-          "updated_at": "2026-11-21T14:20:03Z",
+          "updated_at": "2026-11-27T11:42:41Z",
           "pushed_at": "2021-04-04T09:13:57Z",
           "created_at": "2020-04-01T09:33:35Z",
           "topics": [
@@ -3808,7 +3806,7 @@
           "stargazers_count": 4297,
           "forks_count": 1077,
           "language": "Python",
-          "updated_at": "2026-11-21T14:20:03Z",
+          "updated_at": "2026-11-27T11:42:41Z",
           "pushed_at": "2021-04-04T09:13:57Z",
           "created_at": "2020-04-01T09:33:35Z",
           "topics": [
@@ -4307,30 +4305,6 @@
       ]
     },
     {
-      "cve_id": "CVE-2020-10567",
-      "repositories": [
-        {
-          "id": 1192591049,
-          "name": "CVE-2020-10567",
-          "full_name": "PierreAdams/CVE-2020-10567",
-          "html_url": "https://github.com/PierreAdams/CVE-2020-10567",
-          "description": "RCE RESPONSIVE filemanager v.9.14.0",
-          "stargazers_count": 4,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-06-09T08:55:29Z",
-          "pushed_at": "2026-06-09T08:55:14Z",
-          "created_at": "2026-03-26T11:18:08Z",
-          "topics": [],
-          "owner": {
-            "login": "PierreAdams",
-            "html_url": "https://github.com/PierreAdams"
-          },
-          "clone_url": "https://github.com/PierreAdams/CVE-2020-10567.git"
-        }
-      ]
-    },
-    {
       "cve_id": "CVE-2020-1066",
       "repositories": [
         {
@@ -4339,10 +4313,10 @@
           "full_name": "cbwang505/CVE-2020-1066-EXP",
           "html_url": "https://github.com/cbwang505/CVE-2020-1066-EXP",
           "description": "CVE-2020-1066-EXP支持Windows 7和Windows Server 2008 R2操作系统",
-          "stargazers_count": 186,
+          "stargazers_count": 187,
           "forks_count": 41,
           "language": "C++",
-          "updated_at": "2026-06-22T11:03:42Z",
+          "updated_at": "2026-11-26T15:34:47Z",
           "pushed_at": "2020-06-17T00:56:08Z",
           "created_at": "2020-06-01T04:44:05Z",
           "topics": [],
@@ -5020,7 +4994,7 @@
           "stargazers_count": 4297,
           "forks_count": 1077,
           "language": "Python",
-          "updated_at": "2026-11-21T14:20:03Z",
+          "updated_at": "2026-11-27T11:42:41Z",
           "pushed_at": "2021-04-04T09:13:57Z",
           "created_at": "2020-04-01T09:33:35Z",
           "topics": [
@@ -5522,44 +5496,6 @@
           "clone_url": "https://github.com/appcheck-ng/salt-rce-scanner-CVE-2020-11651-CVE-2020-11652.git"
         },
         {
-          "id": 1410943016,
-          "name": "vulhub-saltstack-cve-2020-11651",
-          "full_name": "CyberCTF/vulhub-saltstack-cve-2020-11651",
-          "html_url": "https://github.com/CyberCTF/vulhub-saltstack-cve-2020-11651",
-          "description": "Vulhub saltstack/CVE-2020-11651: SaltStack Master Authentication Bypass (CVE-2020-11651), run with Isoloom",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-11-05T15:28:34Z",
-          "pushed_at": "2026-11-05T15:28:30Z",
-          "created_at": "2026-10-08T20:53:05Z",
-          "topics": [],
-          "owner": {
-            "login": "CyberCTF",
-            "html_url": "https://github.com/CyberCTF"
-          },
-          "clone_url": "https://github.com/CyberCTF/vulhub-saltstack-cve-2020-11651.git"
-        },
-        {
-          "id": 1277627922,
-          "name": "CVE-2020-11651-Poc",
-          "full_name": "s1lentf00thold/CVE-2020-11651-Poc",
-          "html_url": "https://github.com/s1lentf00thold/CVE-2020-11651-Poc",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-06-23T04:01:33Z",
-          "pushed_at": "2026-06-23T04:01:30Z",
-          "created_at": "2026-06-23T03:58:44Z",
-          "topics": [],
-          "owner": {
-            "login": "s1lentf00thold",
-            "html_url": "https://github.com/s1lentf00thold"
-          },
-          "clone_url": "https://github.com/s1lentf00thold/CVE-2020-11651-Poc.git"
-        },
-        {
           "id": 1449693397,
           "name": "salt-cve-2020-11651-poc",
           "full_name": "codenamepetrel/salt-cve-2020-11651-poc",
@@ -5604,6 +5540,25 @@
             "html_url": "https://github.com/RakhithJK"
           },
           "clone_url": "https://github.com/RakhithJK/CVE-2020-11651.git"
+        },
+        {
+          "id": 1410943016,
+          "name": "vulhub-saltstack-cve-2020-11651",
+          "full_name": "CyberCTF/vulhub-saltstack-cve-2020-11651",
+          "html_url": "https://github.com/CyberCTF/vulhub-saltstack-cve-2020-11651",
+          "description": "Vulhub saltstack/CVE-2020-11651: SaltStack Master Authentication Bypass (CVE-2020-11651), run with Isoloom",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-11-05T15:28:34Z",
+          "pushed_at": "2026-11-05T15:28:30Z",
+          "created_at": "2026-10-08T20:53:05Z",
+          "topics": [],
+          "owner": {
+            "login": "CyberCTF",
+            "html_url": "https://github.com/CyberCTF"
+          },
+          "clone_url": "https://github.com/CyberCTF/vulhub-saltstack-cve-2020-11651.git"
         }
       ]
     },
@@ -6014,6 +5969,36 @@
     {
       "cve_id": "CVE-2020-11989",
       "repositories": [
+        {
+          "id": 1473174470,
+          "name": "CVE-2020-11989",
+          "full_name": "googlesky/CVE-2020-11989",
+          "html_url": "https://github.com/googlesky/CVE-2020-11989",
+          "description": "Apache Shiro with Spring dynamic controllers allows authentication bypass via crafted path. Fixed in 1.5.3. Differential: bypass on vuln, denied on fixed",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-11-26T13:07:00Z",
+          "pushed_at": "2026-11-26T13:11:58Z",
+          "created_at": "2026-11-26T13:06:47Z",
+          "topics": [
+            "apache-shiro",
+            "authentication-bypass",
+            "cve-2026-2020-11989",
+            "cwe-863",
+            "poc",
+            "proof-of-concept",
+            "python",
+            "security-research",
+            "spring",
+            "vulnerability-research"
+          ],
+          "owner": {
+            "login": "googlesky",
+            "html_url": "https://github.com/googlesky"
+          },
+          "clone_url": "https://github.com/googlesky/CVE-2020-11989.git"
+        },
         {
           "id": 305056797,
           "name": "HYWZ36-CVE-2020-11989-code",
@@ -7739,7 +7724,7 @@
           "forks_count": 0,
           "language": "Python",
           "updated_at": "2026-10-21T17:13:18Z",
-          "pushed_at": "2026-11-23T13:11:27Z",
+          "pushed_at": "2026-11-27T12:44:36Z",
           "created_at": "2026-07-07T23:03:12Z",
           "topics": [],
           "owner": {
@@ -7794,25 +7779,6 @@
             "html_url": "https://github.com/0xkami"
           },
           "clone_url": "https://github.com/0xkami/cve-2020-13933.git"
-        },
-        {
-          "id": 418858024,
-          "name": "CVE-2020-13933Project",
-          "full_name": "KingBangQ/CVE-2020-13933Project",
-          "html_url": "https://github.com/KingBangQ/CVE-2020-13933Project",
-          "description": "此项目为复现CVE-2020-13933 shiro漏洞所搭建的简易springboot+shiro项目",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-11-01T11:43:55Z",
-          "pushed_at": "2026-06-24T02:11:20Z",
-          "created_at": "2021-10-19T09:33:46Z",
-          "topics": [],
-          "owner": {
-            "login": "KingBangQ",
-            "html_url": "https://github.com/KingBangQ"
-          },
-          "clone_url": "https://github.com/KingBangQ/CVE-2020-13933Project.git"
         }
       ]
     },
@@ -7826,9 +7792,9 @@
           "html_url": "https://github.com/RedTeamPentesting/CVE-2020-13935",
           "description": "Exploit for WebSocket Vulnerability in Apache Tomcat",
           "stargazers_count": 167,
-          "forks_count": 35,
+          "forks_count": 36,
           "language": "Go",
-          "updated_at": "2026-10-23T11:43:45Z",
+          "updated_at": "2026-11-27T11:43:28Z",
           "pushed_at": "2020-11-02T14:51:48Z",
           "created_at": "2020-11-02T14:48:55Z",
           "topics": [],
@@ -8321,10 +8287,10 @@
           "full_name": "qcri/sbom-install-sources-vex",
           "html_url": "https://github.com/qcri/sbom-install-sources-vex",
           "description": "Same library installed 7 ways: what SBOM tools, scanners and VEX matching miss (PyYAML CVE-2020-14343, Syft/Trivy/Grype/OpenVEX)",
-          "stargazers_count": 0,
+          "stargazers_count": 1,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-11-15T13:43:20Z",
+          "updated_at": "2026-11-26T08:00:58Z",
           "pushed_at": "2026-11-09T07:34:22Z",
           "created_at": "2026-10-11T07:38:47Z",
           "topics": [],
@@ -8560,10 +8526,10 @@
           "full_name": "bvcyber/CVE-2020-1472",
           "html_url": "https://github.com/bvcyber/CVE-2020-1472",
           "description": "Test tool for CVE-2020-1472",
-          "stargazers_count": 1842,
+          "stargazers_count": 1843,
           "forks_count": 354,
           "language": "Python",
-          "updated_at": "2026-11-21T12:23:35Z",
+          "updated_at": "2026-11-27T11:43:16Z",
           "pushed_at": "2025-06-27T07:13:13Z",
           "created_at": "2020-09-08T08:58:37Z",
           "topics": [],
@@ -8579,10 +8545,10 @@
           "full_name": "dirkjanm/CVE-2020-1472",
           "html_url": "https://github.com/dirkjanm/CVE-2020-1472",
           "description": "PoC for Zerologon - all research credits go to Tom Tervoort of Secura",
-          "stargazers_count": 1336,
-          "forks_count": 281,
+          "stargazers_count": 1337,
+          "forks_count": 282,
           "language": "Python",
-          "updated_at": "2026-11-19T21:58:52Z",
+          "updated_at": "2026-11-26T04:51:07Z",
           "pushed_at": "2020-11-03T09:45:24Z",
           "created_at": "2020-09-14T16:56:51Z",
           "topics": [],
@@ -8601,7 +8567,7 @@
           "stargazers_count": 709,
           "forks_count": 144,
           "language": "Python",
-          "updated_at": "2026-11-19T21:58:53Z",
+          "updated_at": "2026-11-27T11:43:18Z",
           "pushed_at": "2020-10-15T18:31:15Z",
           "created_at": "2020-09-14T19:19:07Z",
           "topics": [],
@@ -9104,23 +9070,42 @@
           "clone_url": "https://github.com/mingchen-script/CVE-2020-1472-visualizer.git"
         },
         {
-          "id": 1428966182,
-          "name": "CVE-2020-1472-Zerologon-Vulnerability-Assessment",
-          "full_name": "Divineokoduwa/CVE-2020-1472-Zerologon-Vulnerability-Assessment",
-          "html_url": "https://github.com/Divineokoduwa/CVE-2020-1472-Zerologon-Vulnerability-Assessment",
-          "description": "",
+          "id": 299264416,
+          "name": "CVE-2020-1472",
+          "full_name": "Whippet0/CVE-2020-1472",
+          "html_url": "https://github.com/Whippet0/CVE-2020-1472",
+          "description": "CVE-2020-1472",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-10-21T22:01:54Z",
-          "pushed_at": "2026-10-21T22:01:50Z",
-          "created_at": "2026-10-21T21:49:46Z",
+          "language": "HTML",
+          "updated_at": "2020-11-17T06:01:36Z",
+          "pushed_at": "2020-11-17T06:01:32Z",
+          "created_at": "2020-09-28T09:54:31Z",
           "topics": [],
           "owner": {
-            "login": "Divineokoduwa",
-            "html_url": "https://github.com/Divineokoduwa"
+            "login": "Whippet0",
+            "html_url": "https://github.com/Whippet0"
           },
-          "clone_url": "https://github.com/Divineokoduwa/CVE-2020-1472-Zerologon-Vulnerability-Assessment.git"
+          "clone_url": "https://github.com/Whippet0/CVE-2020-1472.git"
+        },
+        {
+          "id": 287009597,
+          "name": "CVE-2020-1472-visualizer",
+          "full_name": "Tobey123/CVE-2020-1472-visualizer",
+          "html_url": "https://github.com/Tobey123/CVE-2020-1472-visualizer",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 1,
+          "language": "",
+          "updated_at": "2020-11-05T15:16:46Z",
+          "pushed_at": "2020-08-06T22:24:04Z",
+          "created_at": "2020-08-12T12:35:56Z",
+          "topics": [],
+          "owner": {
+            "login": "Tobey123",
+            "html_url": "https://github.com/Tobey123"
+          },
+          "clone_url": "https://github.com/Tobey123/CVE-2020-1472-visualizer.git"
         },
         {
           "id": 296056571,
@@ -9142,6 +9127,36 @@
           "clone_url": "https://github.com/FaFcFF41/CVE-2020-1472.git"
         },
         {
+          "id": 1473176757,
+          "name": "CVE-2020-1472",
+          "full_name": "googlesky/CVE-2020-1472",
+          "html_url": "https://github.com/googlesky/CVE-2020-1472",
+          "description": "ZeroLogon: Netlogon accepts an all-zero AES session key, enabling domain takeover. Fixed in August 2020 update. Differential: channel established on vuln, refused on fixed",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-11-26T13:08:59Z",
+          "pushed_at": "2026-11-26T13:12:58Z",
+          "created_at": "2026-11-26T13:08:47Z",
+          "topics": [
+            "cve-2026-2020-1472",
+            "cwe-287",
+            "netlogon",
+            "poc",
+            "proof-of-concept",
+            "python",
+            "security-research",
+            "vulnerability-research",
+            "windows",
+            "zerologon"
+          ],
+          "owner": {
+            "login": "googlesky",
+            "html_url": "https://github.com/googlesky"
+          },
+          "clone_url": "https://github.com/googlesky/CVE-2020-1472.git"
+        },
+        {
           "id": 297085240,
           "name": "zerologon-cve-2020-1472-notes",
           "full_name": "johnpathe/zerologon-cve-2020-1472-notes",
@@ -9159,6 +9174,63 @@
             "html_url": "https://github.com/johnpathe"
           },
           "clone_url": "https://github.com/johnpathe/zerologon-cve-2020-1472-notes.git"
+        },
+        {
+          "id": 1456236037,
+          "name": "zerologon-security-lab",
+          "full_name": "mynga17/zerologon-security-lab",
+          "html_url": "https://github.com/mynga17/zerologon-security-lab",
+          "description": "A practical cybersecurity lab focused on analyzing and demonstrating the Zerologon vulnerability (CVE-2020-1472) in a controlled Active Directory environment.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-11-13T06:24:16Z",
+          "pushed_at": "2026-11-13T07:12:28Z",
+          "created_at": "2026-11-13T06:24:14Z",
+          "topics": [],
+          "owner": {
+            "login": "mynga17",
+            "html_url": "https://github.com/mynga17"
+          },
+          "clone_url": "https://github.com/mynga17/zerologon-security-lab.git"
+        },
+        {
+          "id": 1428966182,
+          "name": "CVE-2020-1472-Zerologon-Vulnerability-Assessment",
+          "full_name": "Divineokoduwa/CVE-2020-1472-Zerologon-Vulnerability-Assessment",
+          "html_url": "https://github.com/Divineokoduwa/CVE-2020-1472-Zerologon-Vulnerability-Assessment",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-10-21T22:01:54Z",
+          "pushed_at": "2026-10-21T22:01:50Z",
+          "created_at": "2026-10-21T21:49:46Z",
+          "topics": [],
+          "owner": {
+            "login": "Divineokoduwa",
+            "html_url": "https://github.com/Divineokoduwa"
+          },
+          "clone_url": "https://github.com/Divineokoduwa/CVE-2020-1472-Zerologon-Vulnerability-Assessment.git"
+        },
+        {
+          "id": 295917575,
+          "name": "CVE-2020-1472",
+          "full_name": "Fa1c0n35/CVE-2020-1472",
+          "html_url": "https://github.com/Fa1c0n35/CVE-2020-1472",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 1,
+          "language": "Python",
+          "updated_at": "2024-08-12T20:05:49Z",
+          "pushed_at": "2020-09-16T03:54:37Z",
+          "created_at": "2020-09-16T03:54:27Z",
+          "topics": [],
+          "owner": {
+            "login": "Fa1c0n35",
+            "html_url": "https://github.com/Fa1c0n35"
+          },
+          "clone_url": "https://github.com/Fa1c0n35/CVE-2020-1472.git"
         },
         {
           "id": 1111759231,
@@ -9199,42 +9271,23 @@
           "clone_url": "https://github.com/ckq7703/CVE-2020-1472.git"
         },
         {
-          "id": 1310207070,
-          "name": "internal-penetration-testing-project-using-Metasploit",
-          "full_name": "abdullah50i/internal-penetration-testing-project-using-Metasploit",
-          "html_url": "https://github.com/abdullah50i/internal-penetration-testing-project-using-Metasploit",
-          "description": "Initialized \u0026 connected PostgreSQL to Metasploit. Reconnoitered 10.1.16.0/24 with Nmap and imported results. Enumerated hosts/services using SYN, SMB \u0026 LDAP scanners. Exploited DC10 via ZeroLogon (CVE-2020-1472), dumped AD NTLM hashes with Impacket, performed Pass-the-Hash, then gained a Meterpreter reverse shell.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-07-23T18:51:45Z",
-          "pushed_at": "2026-07-23T18:51:40Z",
-          "created_at": "2026-07-23T17:32:59Z",
-          "topics": [],
-          "owner": {
-            "login": "abdullah50i",
-            "html_url": "https://github.com/abdullah50i"
-          },
-          "clone_url": "https://github.com/abdullah50i/internal-penetration-testing-project-using-Metasploit.git"
-        },
-        {
-          "id": 295917575,
-          "name": "CVE-2020-1472",
-          "full_name": "Fa1c0n35/CVE-2020-1472",
-          "html_url": "https://github.com/Fa1c0n35/CVE-2020-1472",
+          "id": 299845895,
+          "name": "cve-2020-1472",
+          "full_name": "Ken-Abruzzi/cve-2020-1472",
+          "html_url": "https://github.com/Ken-Abruzzi/cve-2020-1472",
           "description": "",
           "stargazers_count": 0,
-          "forks_count": 1,
+          "forks_count": 0,
           "language": "Python",
-          "updated_at": "2024-08-12T20:05:49Z",
-          "pushed_at": "2020-09-16T03:54:37Z",
-          "created_at": "2020-09-16T03:54:27Z",
+          "updated_at": "2020-09-30T07:57:36Z",
+          "pushed_at": "2020-09-30T07:57:34Z",
+          "created_at": "2020-09-30T07:45:50Z",
           "topics": [],
           "owner": {
-            "login": "Fa1c0n35",
-            "html_url": "https://github.com/Fa1c0n35"
+            "login": "Ken-Abruzzi",
+            "html_url": "https://github.com/Ken-Abruzzi"
           },
-          "clone_url": "https://github.com/Fa1c0n35/CVE-2020-1472.git"
+          "clone_url": "https://github.com/Ken-Abruzzi/cve-2020-1472.git"
         },
         {
           "id": 299216120,
@@ -9256,44 +9309,6 @@
           "clone_url": "https://github.com/Fa1c0n35/CVE-2020-1472-02-.git"
         },
         {
-          "id": 299845895,
-          "name": "cve-2020-1472",
-          "full_name": "Ken-Abruzzi/cve-2020-1472",
-          "html_url": "https://github.com/Ken-Abruzzi/cve-2020-1472",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2020-09-30T07:57:36Z",
-          "pushed_at": "2020-09-30T07:57:34Z",
-          "created_at": "2020-09-30T07:45:50Z",
-          "topics": [],
-          "owner": {
-            "login": "Ken-Abruzzi",
-            "html_url": "https://github.com/Ken-Abruzzi"
-          },
-          "clone_url": "https://github.com/Ken-Abruzzi/cve-2020-1472.git"
-        },
-        {
-          "id": 287009597,
-          "name": "CVE-2020-1472-visualizer",
-          "full_name": "Tobey123/CVE-2020-1472-visualizer",
-          "html_url": "https://github.com/Tobey123/CVE-2020-1472-visualizer",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "",
-          "updated_at": "2020-11-05T15:16:46Z",
-          "pushed_at": "2020-08-06T22:24:04Z",
-          "created_at": "2020-08-12T12:35:56Z",
-          "topics": [],
-          "owner": {
-            "login": "Tobey123",
-            "html_url": "https://github.com/Tobey123"
-          },
-          "clone_url": "https://github.com/Tobey123/CVE-2020-1472-visualizer.git"
-        },
-        {
           "id": 298383438,
           "name": "CVE-2020-1472",
           "full_name": "grupooruss/CVE-2020-1472",
@@ -9311,25 +9326,6 @@
             "html_url": "https://github.com/grupooruss"
           },
           "clone_url": "https://github.com/grupooruss/CVE-2020-1472.git"
-        },
-        {
-          "id": 297260718,
-          "name": "CVE-2020-1472",
-          "full_name": "t31m0/CVE-2020-1472",
-          "html_url": "https://github.com/t31m0/CVE-2020-1472",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2020-09-21T07:24:16Z",
-          "pushed_at": "2020-09-21T07:24:13Z",
-          "created_at": "2020-09-21T07:24:03Z",
-          "topics": [],
-          "owner": {
-            "login": "t31m0",
-            "html_url": "https://github.com/t31m0"
-          },
-          "clone_url": "https://github.com/t31m0/CVE-2020-1472.git"
         },
         {
           "id": 305977168,
@@ -9370,23 +9366,23 @@
           "clone_url": "https://github.com/maikelnight/zerologon.git"
         },
         {
-          "id": 296966855,
+          "id": 297260718,
           "name": "CVE-2020-1472",
-          "full_name": "hectorgie/CVE-2020-1472",
-          "html_url": "https://github.com/hectorgie/CVE-2020-1472",
+          "full_name": "t31m0/CVE-2020-1472",
+          "html_url": "https://github.com/t31m0/CVE-2020-1472",
           "description": "",
           "stargazers_count": 0,
-          "forks_count": 1,
+          "forks_count": 0,
           "language": "Python",
-          "updated_at": "2020-09-19T23:15:54Z",
-          "pushed_at": "2020-09-19T23:15:52Z",
-          "created_at": "2020-09-19T23:15:41Z",
+          "updated_at": "2020-09-21T07:24:16Z",
+          "pushed_at": "2020-09-21T07:24:13Z",
+          "created_at": "2020-09-21T07:24:03Z",
           "topics": [],
           "owner": {
-            "login": "hectorgie",
-            "html_url": "https://github.com/hectorgie"
+            "login": "t31m0",
+            "html_url": "https://github.com/t31m0"
           },
-          "clone_url": "https://github.com/hectorgie/CVE-2020-1472.git"
+          "clone_url": "https://github.com/t31m0/CVE-2020-1472.git"
         },
         {
           "id": 311800203,
@@ -9408,42 +9404,42 @@
           "clone_url": "https://github.com/JayP232/The_big_Zero.git"
         },
         {
-          "id": 299264416,
+          "id": 296966855,
           "name": "CVE-2020-1472",
-          "full_name": "Whippet0/CVE-2020-1472",
-          "html_url": "https://github.com/Whippet0/CVE-2020-1472",
-          "description": "CVE-2020-1472",
+          "full_name": "hectorgie/CVE-2020-1472",
+          "html_url": "https://github.com/hectorgie/CVE-2020-1472",
+          "description": "",
           "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "HTML",
-          "updated_at": "2020-11-17T06:01:36Z",
-          "pushed_at": "2020-11-17T06:01:32Z",
-          "created_at": "2020-09-28T09:54:31Z",
+          "forks_count": 1,
+          "language": "Python",
+          "updated_at": "2020-09-19T23:15:54Z",
+          "pushed_at": "2020-09-19T23:15:52Z",
+          "created_at": "2020-09-19T23:15:41Z",
           "topics": [],
           "owner": {
-            "login": "Whippet0",
-            "html_url": "https://github.com/Whippet0"
+            "login": "hectorgie",
+            "html_url": "https://github.com/hectorgie"
           },
-          "clone_url": "https://github.com/Whippet0/CVE-2020-1472.git"
+          "clone_url": "https://github.com/hectorgie/CVE-2020-1472.git"
         },
         {
-          "id": 1456236037,
-          "name": "zerologon-security-lab",
-          "full_name": "mynga17/zerologon-security-lab",
-          "html_url": "https://github.com/mynga17/zerologon-security-lab",
-          "description": "A practical cybersecurity lab focused on analyzing and demonstrating the Zerologon vulnerability (CVE-2020-1472) in a controlled Active Directory environment.",
+          "id": 1310207070,
+          "name": "internal-penetration-testing-project-using-Metasploit",
+          "full_name": "abdullah50i/internal-penetration-testing-project-using-Metasploit",
+          "html_url": "https://github.com/abdullah50i/internal-penetration-testing-project-using-Metasploit",
+          "description": "Initialized \u0026 connected PostgreSQL to Metasploit. Reconnoitered 10.1.16.0/24 with Nmap and imported results. Enumerated hosts/services using SYN, SMB \u0026 LDAP scanners. Exploited DC10 via ZeroLogon (CVE-2020-1472), dumped AD NTLM hashes with Impacket, performed Pass-the-Hash, then gained a Meterpreter reverse shell.",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2026-11-13T06:24:16Z",
-          "pushed_at": "2026-11-13T07:12:28Z",
-          "created_at": "2026-11-13T06:24:14Z",
+          "updated_at": "2026-07-23T18:51:45Z",
+          "pushed_at": "2026-07-23T18:51:40Z",
+          "created_at": "2026-07-23T17:32:59Z",
           "topics": [],
           "owner": {
-            "login": "mynga17",
-            "html_url": "https://github.com/mynga17"
+            "login": "abdullah50i",
+            "html_url": "https://github.com/abdullah50i"
           },
-          "clone_url": "https://github.com/mynga17/zerologon-security-lab.git"
+          "clone_url": "https://github.com/abdullah50i/internal-penetration-testing-project-using-Metasploit.git"
         },
         {
           "id": 323842467,
@@ -9475,10 +9471,10 @@
           "full_name": "daybreak-kits/weblogicScanner",
           "html_url": "https://github.com/daybreak-kits/weblogicScanner",
           "description": "weblogic 漏洞扫描工具。目前包含对以下漏洞的检测能力：CVE-2014-4210、CVE-2016-0638、CVE-2016-3510、CVE-2017-3248、CVE-2017-3506、CVE-2017-10271、CVE-2018-2628、CVE-2018-2893、CVE-2018-2894、CVE-2018-3191、CVE-2018-3245、CVE-2018-3252、CVE-2019-2618、CVE-2019-2725、CVE-2019-2729、CVE-2019-2890、CVE-2020-2551、CVE-2020-14750、CVE-2020-14882、CVE-2020-14883",
-          "stargazers_count": 2078,
-          "forks_count": 325,
+          "stargazers_count": 2077,
+          "forks_count": 326,
           "language": "Python",
-          "updated_at": "2026-11-19T21:40:14Z",
+          "updated_at": "2026-11-27T11:42:24Z",
           "pushed_at": "2023-11-24T09:21:56Z",
           "created_at": "2020-01-15T04:26:29Z",
           "topics": [
@@ -9623,7 +9619,7 @@
           "stargazers_count": 4297,
           "forks_count": 1077,
           "language": "Python",
-          "updated_at": "2026-11-21T14:20:03Z",
+          "updated_at": "2026-11-27T11:42:41Z",
           "pushed_at": "2021-04-04T09:13:57Z",
           "created_at": "2020-04-01T09:33:35Z",
           "topics": [
@@ -9659,10 +9655,10 @@
           "full_name": "daybreak-kits/weblogicScanner",
           "html_url": "https://github.com/daybreak-kits/weblogicScanner",
           "description": "weblogic 漏洞扫描工具。目前包含对以下漏洞的检测能力：CVE-2014-4210、CVE-2016-0638、CVE-2016-3510、CVE-2017-3248、CVE-2017-3506、CVE-2017-10271、CVE-2018-2628、CVE-2018-2893、CVE-2018-2894、CVE-2018-3191、CVE-2018-3245、CVE-2018-3252、CVE-2019-2618、CVE-2019-2725、CVE-2019-2729、CVE-2019-2890、CVE-2020-2551、CVE-2020-14750、CVE-2020-14882、CVE-2020-14883",
-          "stargazers_count": 2078,
-          "forks_count": 325,
+          "stargazers_count": 2077,
+          "forks_count": 326,
           "language": "Python",
-          "updated_at": "2026-11-19T21:40:14Z",
+          "updated_at": "2026-11-27T11:42:24Z",
           "pushed_at": "2023-11-24T09:21:56Z",
           "created_at": "2020-01-15T04:26:29Z",
           "topics": [
@@ -10183,10 +10179,10 @@
           "full_name": "daybreak-kits/weblogicScanner",
           "html_url": "https://github.com/daybreak-kits/weblogicScanner",
           "description": "weblogic 漏洞扫描工具。目前包含对以下漏洞的检测能力：CVE-2014-4210、CVE-2016-0638、CVE-2016-3510、CVE-2017-3248、CVE-2017-3506、CVE-2017-10271、CVE-2018-2628、CVE-2018-2893、CVE-2018-2894、CVE-2018-3191、CVE-2018-3245、CVE-2018-3252、CVE-2019-2618、CVE-2019-2725、CVE-2019-2729、CVE-2019-2890、CVE-2020-2551、CVE-2020-14750、CVE-2020-14882、CVE-2020-14883",
-          "stargazers_count": 2078,
-          "forks_count": 325,
+          "stargazers_count": 2077,
+          "forks_count": 326,
           "language": "Python",
-          "updated_at": "2026-11-19T21:40:14Z",
+          "updated_at": "2026-11-27T11:42:24Z",
           "pushed_at": "2023-11-24T09:21:56Z",
           "created_at": "2020-01-15T04:26:29Z",
           "topics": [
@@ -11682,25 +11678,6 @@
           "clone_url": "https://github.com/CPO-EH/CVE-2020-16898_Workaround.git"
         },
         {
-          "id": 1259988545,
-          "name": "suricata-script",
-          "full_name": "aricooper/suricata-script",
-          "html_url": "https://github.com/aricooper/suricata-script",
-          "description": "CVE-2020-16898 — “Bad Neighbor” (ICMPv6 RDNSS length parsing) — Suricata Lua Detection",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-06-05T05:22:39Z",
-          "pushed_at": "2026-06-05T05:12:06Z",
-          "created_at": "2026-06-05T03:50:37Z",
-          "topics": [],
-          "owner": {
-            "login": "aricooper",
-            "html_url": "https://github.com/aricooper"
-          },
-          "clone_url": "https://github.com/aricooper/suricata-script.git"
-        },
-        {
           "id": 304851828,
           "name": "CVE-2020-16898_Checker",
           "full_name": "CPO-EH/CVE-2020-16898_Checker",
@@ -11792,7 +11769,7 @@
           "html_url": "https://github.com/ioncodes/CVE-2020-16938",
           "description": "Bypassing NTFS permissions to read any files as unprivileged user.",
           "stargazers_count": 194,
-          "forks_count": 37,
+          "forks_count": 38,
           "language": "C++",
           "updated_at": "2026-09-26T10:33:03Z",
           "pushed_at": "2020-10-21T15:39:00Z",
@@ -11995,30 +11972,6 @@
             "html_url": "https://github.com/revengsh"
           },
           "clone_url": "https://github.com/revengsh/CVE-2020-17087.git"
-        }
-      ]
-    },
-    {
-      "cve_id": "CVE-2020-17103",
-      "repositories": [
-        {
-          "id": 1262132734,
-          "name": "CVE-2020-17103",
-          "full_name": "ashrafzaryouh/CVE-2020-17103",
-          "html_url": "https://github.com/ashrafzaryouh/CVE-2020-17103",
-          "description": "CVE-2020-17103",
-          "stargazers_count": 0,
-          "forks_count": 3,
-          "language": "C#",
-          "updated_at": "2026-06-07T16:32:47Z",
-          "pushed_at": "2026-06-07T16:32:44Z",
-          "created_at": "2026-06-07T16:05:30Z",
-          "topics": [],
-          "owner": {
-            "login": "ashrafzaryouh",
-            "html_url": "https://github.com/ashrafzaryouh"
-          },
-          "clone_url": "https://github.com/ashrafzaryouh/CVE-2020-17103.git"
         }
       ]
     },
@@ -12438,6 +12391,41 @@
       ]
     },
     {
+      "cve_id": "CVE-2020-1935",
+      "repositories": [
+        {
+          "id": 1473220251,
+          "name": "CVE-2020-1935",
+          "full_name": "googlesky/CVE-2020-1935",
+          "html_url": "https://github.com/googlesky/CVE-2020-1935",
+          "description": "Tomcat invalid header line endings enable request smuggling behind a proxy. Fixed in 9.0.31/8.5.51/7.0.100. Differential: header accepted on vuln, refused on fixed",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-11-26T13:45:59Z",
+          "pushed_at": "2026-11-26T13:49:36Z",
+          "created_at": "2026-11-26T13:45:47Z",
+          "topics": [
+            "cve-2026-2020-1935",
+            "cwe-444",
+            "http",
+            "poc",
+            "proof-of-concept",
+            "python",
+            "request-smuggling",
+            "security-research",
+            "tomcat",
+            "vulnerability-research"
+          ],
+          "owner": {
+            "login": "googlesky",
+            "html_url": "https://github.com/googlesky"
+          },
+          "clone_url": "https://github.com/googlesky/CVE-2020-1935.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2020-1938",
       "repositories": [
         {
@@ -12449,7 +12437,7 @@
           "stargazers_count": 4297,
           "forks_count": 1077,
           "language": "Python",
-          "updated_at": "2026-11-21T14:20:03Z",
+          "updated_at": "2026-11-27T11:42:41Z",
           "pushed_at": "2021-04-04T09:13:57Z",
           "created_at": "2020-04-01T09:33:35Z",
           "topics": [
@@ -12505,42 +12493,15 @@
           "clone_url": "https://github.com/00theway/Ghostcat-CNVD-2020-10487.git"
         },
         {
-          "id": 849195359,
-          "name": "TomcatScanPro",
-          "full_name": "lizhianyuguangming/TomcatScanPro",
-          "html_url": "https://github.com/lizhianyuguangming/TomcatScanPro",
-          "description": "tomcat自动化漏洞扫描利用工具，支持批量弱口令检测、后台部署war包getshell、CVE-2017-12615 文件上传、CVE-2020-1938/CNVD-2020-10487 文件包含",
-          "stargazers_count": 299,
-          "forks_count": 24,
-          "language": "Python",
-          "updated_at": "2026-11-19T23:20:56Z",
-          "pushed_at": "2026-06-16T13:16:53Z",
-          "created_at": "2024-08-29T06:38:16Z",
-          "topics": [
-            "hacker",
-            "hackertools",
-            "penetration-testing-tools",
-            "scan",
-            "scanner-web",
-            "tomcat",
-            "tools"
-          ],
-          "owner": {
-            "login": "lizhianyuguangming",
-            "html_url": "https://github.com/lizhianyuguangming"
-          },
-          "clone_url": "https://github.com/lizhianyuguangming/TomcatScanPro.git"
-        },
-        {
           "id": 241988804,
           "name": "CNVD-2020-10487-Tomcat-Ajp-lfi-Scanner",
           "full_name": "bkfish/CNVD-2020-10487-Tomcat-Ajp-lfi-Scanner",
           "html_url": "https://github.com/bkfish/CNVD-2020-10487-Tomcat-Ajp-lfi-Scanner",
           "description": "Cnvd-2020-10487 / cve-2020-1938, scanner tool",
-          "stargazers_count": 294,
+          "stargazers_count": 293,
           "forks_count": 92,
           "language": "Python",
-          "updated_at": "2026-10-30T01:14:58Z",
+          "updated_at": "2026-11-27T11:42:33Z",
           "pushed_at": "2021-11-26T07:40:35Z",
           "created_at": "2020-02-20T21:00:15Z",
           "topics": [],
@@ -12556,10 +12517,10 @@
           "full_name": "sv3nbeast/CVE-2020-1938-Tomact-file_include-file_read",
           "html_url": "https://github.com/sv3nbeast/CVE-2020-1938-Tomact-file_include-file_read",
           "description": "Tomcat的文件包含及文件读取漏洞利用POC",
-          "stargazers_count": 57,
+          "stargazers_count": 56,
           "forks_count": 18,
           "language": "Python",
-          "updated_at": "2026-09-15T05:29:40Z",
+          "updated_at": "2026-11-27T11:42:33Z",
           "pushed_at": "2020-02-21T10:19:52Z",
           "created_at": "2020-02-21T07:48:50Z",
           "topics": [],
@@ -12613,10 +12574,10 @@
           "full_name": "woaiqiukui/CVE-2020-1938TomcatAjpScanner",
           "html_url": "https://github.com/woaiqiukui/CVE-2020-1938TomcatAjpScanner",
           "description": "批量扫描TomcatAJP漏洞",
-          "stargazers_count": 15,
+          "stargazers_count": 14,
           "forks_count": 2,
           "language": "Python",
-          "updated_at": "2026-09-09T18:49:45Z",
+          "updated_at": "2026-11-27T11:42:33Z",
           "pushed_at": "2020-02-22T01:58:22Z",
           "created_at": "2020-02-21T14:55:40Z",
           "topics": [],
@@ -12855,6 +12816,25 @@
           "clone_url": "https://github.com/CyberCTF/vulhub-tomcat-cve-2020-1938.git"
         },
         {
+          "id": 1356668972,
+          "name": "tomcatfileread",
+          "full_name": "lem0n817/tomcatfileread",
+          "html_url": "https://github.com/lem0n817/tomcatfileread",
+          "description": "CVE-2020-1938 (Ghostcat) Tomcat AJP file read/file include PoC with python3 port",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-09-04T06:17:01Z",
+          "pushed_at": "2026-09-04T03:47:26Z",
+          "created_at": "2026-09-04T03:45:44Z",
+          "topics": [],
+          "owner": {
+            "login": "lem0n817",
+            "html_url": "https://github.com/lem0n817"
+          },
+          "clone_url": "https://github.com/lem0n817/tomcatfileread.git"
+        },
+        {
           "id": 244516769,
           "name": "GhostCat-LFI-exp",
           "full_name": "whatboxapp/GhostCat-LFI-exp",
@@ -12874,23 +12854,34 @@
           "clone_url": "https://github.com/whatboxapp/GhostCat-LFI-exp.git"
         },
         {
-          "id": 1356668972,
-          "name": "tomcatfileread",
-          "full_name": "lem0n817/tomcatfileread",
-          "html_url": "https://github.com/lem0n817/tomcatfileread",
-          "description": "CVE-2020-1938 (Ghostcat) Tomcat AJP file read/file include PoC with python3 port",
+          "id": 1473146687,
+          "name": "CVE-2020-1938",
+          "full_name": "googlesky/CVE-2020-1938",
+          "html_url": "https://github.com/googlesky/CVE-2020-1938",
+          "description": "Apache Tomcat Ghostcat: AJP attributes from untrusted peers allow file disclosure and code execution. Fixed in 9.0.31 / 8.5.51 / 7.0.100. Differential: attribute accepted on vuln, refused on fixed",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-09-04T06:17:01Z",
-          "pushed_at": "2026-09-04T03:47:26Z",
-          "created_at": "2026-09-04T03:45:44Z",
-          "topics": [],
+          "updated_at": "2026-11-26T12:42:15Z",
+          "pushed_at": "2026-11-26T12:52:17Z",
+          "created_at": "2026-11-26T12:41:59Z",
+          "topics": [
+            "ajp",
+            "cve-2026-2020-1938",
+            "cwe-862",
+            "ghostcat",
+            "poc",
+            "proof-of-concept",
+            "python",
+            "security-research",
+            "tomcat",
+            "vulnerability-research"
+          ],
           "owner": {
-            "login": "lem0n817",
-            "html_url": "https://github.com/lem0n817"
+            "login": "googlesky",
+            "html_url": "https://github.com/googlesky"
           },
-          "clone_url": "https://github.com/lem0n817/tomcatfileread.git"
+          "clone_url": "https://github.com/googlesky/CVE-2020-1938.git"
         },
         {
           "id": 263413091,
@@ -13232,6 +13223,30 @@
             "html_url": "https://github.com/mngunibanda1-prog"
           },
           "clone_url": "https://github.com/mngunibanda1-prog/Jozini-network-scanner.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2020-20277",
+      "repositories": [
+        {
+          "id": 1472377721,
+          "name": "CVE-2020-20277-PoC",
+          "full_name": "decoyishere/CVE-2020-20277-PoC",
+          "html_url": "https://github.com/decoyishere/CVE-2020-20277-PoC",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-11-25T21:52:34Z",
+          "pushed_at": "2026-11-25T21:52:34Z",
+          "created_at": "2026-11-25T21:52:33Z",
+          "topics": [],
+          "owner": {
+            "login": "decoyishere",
+            "html_url": "https://github.com/decoyishere"
+          },
+          "clone_url": "https://github.com/decoyishere/CVE-2020-20277-PoC.git"
         }
       ]
     },
@@ -13826,10 +13841,10 @@
           "full_name": "mansoorr123/wp-file-manager-CVE-2020-25213",
           "html_url": "https://github.com/mansoorr123/wp-file-manager-CVE-2020-25213",
           "description": "https://medium.com/@mansoorr/exploiting-cve-2020-25213-wp-file-manager-wordpress-plugin-6-9-3f79241f0cd8",
-          "stargazers_count": 57,
+          "stargazers_count": 56,
           "forks_count": 24,
           "language": "Shell",
-          "updated_at": "2026-11-06T13:41:20Z",
+          "updated_at": "2026-11-27T11:43:24Z",
           "pushed_at": "2020-10-12T09:57:28Z",
           "created_at": "2020-10-10T17:50:01Z",
           "topics": [
@@ -14040,7 +14055,7 @@
           "stargazers_count": 4297,
           "forks_count": 1077,
           "language": "Python",
-          "updated_at": "2026-11-21T14:20:03Z",
+          "updated_at": "2026-11-27T11:42:41Z",
           "pushed_at": "2021-04-04T09:13:57Z",
           "created_at": "2020-04-01T09:33:35Z",
           "topics": [
@@ -14076,10 +14091,10 @@
           "full_name": "daybreak-kits/weblogicScanner",
           "html_url": "https://github.com/daybreak-kits/weblogicScanner",
           "description": "weblogic 漏洞扫描工具。目前包含对以下漏洞的检测能力：CVE-2014-4210、CVE-2016-0638、CVE-2016-3510、CVE-2017-3248、CVE-2017-3506、CVE-2017-10271、CVE-2018-2628、CVE-2018-2893、CVE-2018-2894、CVE-2018-3191、CVE-2018-3245、CVE-2018-3252、CVE-2019-2618、CVE-2019-2725、CVE-2019-2729、CVE-2019-2890、CVE-2020-2551、CVE-2020-14750、CVE-2020-14882、CVE-2020-14883",
-          "stargazers_count": 2078,
-          "forks_count": 325,
+          "stargazers_count": 2077,
+          "forks_count": 326,
           "language": "Python",
-          "updated_at": "2026-11-19T21:40:14Z",
+          "updated_at": "2026-11-27T11:42:24Z",
           "pushed_at": "2023-11-24T09:21:56Z",
           "created_at": "2020-01-15T04:26:29Z",
           "topics": [
@@ -14310,7 +14325,7 @@
           "stargazers_count": 4297,
           "forks_count": 1077,
           "language": "Python",
-          "updated_at": "2026-11-21T14:20:03Z",
+          "updated_at": "2026-11-27T11:42:41Z",
           "pushed_at": "2021-04-04T09:13:57Z",
           "created_at": "2020-04-01T09:33:35Z",
           "topics": [
@@ -14346,10 +14361,10 @@
           "full_name": "daybreak-kits/weblogicScanner",
           "html_url": "https://github.com/daybreak-kits/weblogicScanner",
           "description": "weblogic 漏洞扫描工具。目前包含对以下漏洞的检测能力：CVE-2014-4210、CVE-2016-0638、CVE-2016-3510、CVE-2017-3248、CVE-2017-3506、CVE-2017-10271、CVE-2018-2628、CVE-2018-2893、CVE-2018-2894、CVE-2018-3191、CVE-2018-3245、CVE-2018-3252、CVE-2019-2618、CVE-2019-2725、CVE-2019-2729、CVE-2019-2890、CVE-2020-2551、CVE-2020-14750、CVE-2020-14882、CVE-2020-14883",
-          "stargazers_count": 2078,
-          "forks_count": 325,
+          "stargazers_count": 2077,
+          "forks_count": 326,
           "language": "Python",
-          "updated_at": "2026-11-19T21:40:14Z",
+          "updated_at": "2026-11-27T11:42:24Z",
           "pushed_at": "2023-11-24T09:21:56Z",
           "created_at": "2020-01-15T04:26:29Z",
           "topics": [
@@ -14387,7 +14402,7 @@
           "html_url": "https://github.com/Y4er/CVE-2020-2555",
           "description": "Weblogic com.tangosol.util.extractor.ReflectionExtractor RCE",
           "stargazers_count": 177,
-          "forks_count": 56,
+          "forks_count": 55,
           "language": "Java",
           "updated_at": "2026-07-29T10:33:53Z",
           "pushed_at": "2022-12-15T00:36:55Z",
@@ -14493,6 +14508,36 @@
             "html_url": "https://github.com/Hu3sky"
           },
           "clone_url": "https://github.com/Hu3sky/CVE-2020-2555.git"
+        },
+        {
+          "id": 1473175521,
+          "name": "CVE-2020-2555",
+          "full_name": "googlesky/CVE-2020-2555",
+          "html_url": "https://github.com/googlesky/CVE-2020-2555",
+          "description": "Oracle Coherence T3 deserializes untrusted objects for RCE. Fixed in October 2020 CPU. Differential: gadget executed on vuln, refused on fixed",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-11-26T13:07:57Z",
+          "pushed_at": "2026-11-26T13:12:27Z",
+          "created_at": "2026-11-26T13:07:45Z",
+          "topics": [
+            "cve-2026-2020-2555",
+            "cwe-502",
+            "deserialization",
+            "oracle-coherence",
+            "poc",
+            "proof-of-concept",
+            "python",
+            "security-research",
+            "t3",
+            "vulnerability-research"
+          ],
+          "owner": {
+            "login": "googlesky",
+            "html_url": "https://github.com/googlesky"
+          },
+          "clone_url": "https://github.com/googlesky/CVE-2020-2555.git"
         }
       ]
     },
@@ -15858,7 +15903,7 @@
           "stargazers_count": 4297,
           "forks_count": 1077,
           "language": "Python",
-          "updated_at": "2026-11-21T14:20:03Z",
+          "updated_at": "2026-11-27T11:42:41Z",
           "pushed_at": "2021-04-04T09:13:57Z",
           "created_at": "2020-04-01T09:33:35Z",
           "topics": [
@@ -15894,10 +15939,10 @@
           "full_name": "daybreak-kits/weblogicScanner",
           "html_url": "https://github.com/daybreak-kits/weblogicScanner",
           "description": "weblogic 漏洞扫描工具。目前包含对以下漏洞的检测能力：CVE-2014-4210、CVE-2016-0638、CVE-2016-3510、CVE-2017-3248、CVE-2017-3506、CVE-2017-10271、CVE-2018-2628、CVE-2018-2893、CVE-2018-2894、CVE-2018-3191、CVE-2018-3245、CVE-2018-3252、CVE-2019-2618、CVE-2019-2725、CVE-2019-2729、CVE-2019-2890、CVE-2020-2551、CVE-2020-14750、CVE-2020-14882、CVE-2020-14883",
-          "stargazers_count": 2078,
-          "forks_count": 325,
+          "stargazers_count": 2077,
+          "forks_count": 326,
           "language": "Python",
-          "updated_at": "2026-11-19T21:40:14Z",
+          "updated_at": "2026-11-27T11:42:24Z",
           "pushed_at": "2023-11-24T09:21:56Z",
           "created_at": "2020-01-15T04:26:29Z",
           "topics": [
@@ -16941,10 +16986,10 @@
           "full_name": "dn9uy3n/Check-WP-CVE-2020-35489",
           "html_url": "https://github.com/dn9uy3n/Check-WP-CVE-2020-35489",
           "description": "The (WordPress) website test script can be exploited for Unlimited File Upload via CVE-2020-35489",
-          "stargazers_count": 32,
+          "stargazers_count": 31,
           "forks_count": 15,
           "language": "Python",
-          "updated_at": "2026-09-09T17:54:58Z",
+          "updated_at": "2026-11-27T11:43:39Z",
           "pushed_at": "2024-03-26T14:10:09Z",
           "created_at": "2020-12-24T09:10:17Z",
           "topics": [
@@ -17197,10 +17242,10 @@
           "full_name": "guardicore/vmware_vcenter_cve_2020_3952",
           "html_url": "https://github.com/guardicore/vmware_vcenter_cve_2020_3952",
           "description": "Exploit for CVE-2020-3952 in vCenter 6.7",
-          "stargazers_count": 274,
+          "stargazers_count": 275,
           "forks_count": 59,
           "language": "Python",
-          "updated_at": "2026-07-29T10:33:59Z",
+          "updated_at": "2026-11-26T13:53:36Z",
           "pushed_at": "2020-04-16T08:38:42Z",
           "created_at": "2020-04-16T07:40:51Z",
           "topics": [],
@@ -17963,7 +18008,7 @@
           "stargazers_count": 4297,
           "forks_count": 1077,
           "language": "Python",
-          "updated_at": "2026-11-21T14:20:03Z",
+          "updated_at": "2026-11-27T11:42:41Z",
           "pushed_at": "2021-04-04T09:13:57Z",
           "created_at": "2020-04-01T09:33:35Z",
           "topics": [
@@ -18087,10 +18132,10 @@
           "full_name": "yasserjanah/CVE-2020-5902",
           "html_url": "https://github.com/yasserjanah/CVE-2020-5902",
           "description": "exploit code for  F5-Big-IP (CVE-2020-5902)",
-          "stargazers_count": 43,
+          "stargazers_count": 42,
           "forks_count": 15,
           "language": "Python",
-          "updated_at": "2026-11-11T10:11:18Z",
+          "updated_at": "2026-11-27T11:43:03Z",
           "pushed_at": "2023-05-22T23:32:39Z",
           "created_at": "2020-07-06T01:12:23Z",
           "topics": [
@@ -18706,23 +18751,61 @@
           "clone_url": "https://github.com/Zinkuth/F5-BIG-IP-CVE-2020-5902.git"
         },
         {
-          "id": 278139122,
-          "name": "CVE-2020-5902",
-          "full_name": "dnerzker/CVE-2020-5902",
-          "html_url": "https://github.com/dnerzker/CVE-2020-5902",
-          "description": "",
+          "id": 1286374577,
+          "name": "F5-BIG-IP",
+          "full_name": "DevRafaelprogrammer/F5-BIG-IP",
+          "html_url": "https://github.com/DevRafaelprogrammer/F5-BIG-IP",
+          "description": "O F5 BIG-IP é uma plataforma de entrega e segurança de aplicações amplamente utilizada em ambientes corporativos. A CVE-2020-5902 é uma vulnerabilidade crítica no TMUI que, em versões não corrigidas, pode permitir acesso não autorizado e execução remota de código, reforçando a necessidade de atualização e gestão contínua de vulnerabilidades.",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Lua",
-          "updated_at": "2020-07-16T16:16:40Z",
-          "pushed_at": "2020-07-16T16:16:37Z",
-          "created_at": "2020-07-08T16:22:53Z",
+          "language": "Python",
+          "updated_at": "2026-07-01T19:08:20Z",
+          "pushed_at": "2026-07-01T19:07:55Z",
+          "created_at": "2026-07-01T18:03:16Z",
           "topics": [],
           "owner": {
-            "login": "dnerzker",
-            "html_url": "https://github.com/dnerzker"
+            "login": "DevRafaelprogrammer",
+            "html_url": "https://github.com/DevRafaelprogrammer"
           },
-          "clone_url": "https://github.com/dnerzker/CVE-2020-5902.git"
+          "clone_url": "https://github.com/DevRafaelprogrammer/F5-BIG-IP.git"
+        },
+        {
+          "id": 279017452,
+          "name": "CVE-2020-5902-fofa-scan",
+          "full_name": "freeFV/CVE-2020-5902-fofa-scan",
+          "html_url": "https://github.com/freeFV/CVE-2020-5902-fofa-scan",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 1,
+          "language": "",
+          "updated_at": "2021-04-11T14:53:19Z",
+          "pushed_at": "2020-07-09T08:06:07Z",
+          "created_at": "2020-07-12T07:49:18Z",
+          "topics": [],
+          "owner": {
+            "login": "freeFV",
+            "html_url": "https://github.com/freeFV"
+          },
+          "clone_url": "https://github.com/freeFV/CVE-2020-5902-fofa-scan.git"
+        },
+        {
+          "id": 278380388,
+          "name": "CVE-2020-5902-Vuln-Checker",
+          "full_name": "TheCyberViking/CVE-2020-5902-Vuln-Checker",
+          "html_url": "https://github.com/TheCyberViking/CVE-2020-5902-Vuln-Checker",
+          "description": "Simple Vulnerability Checker Wrote by me \"@TheCyberViking\" and A fellow Researcher who wanted to be left Nameless... you know who you are you beautiful bitch",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2020-07-26T14:48:39Z",
+          "pushed_at": "2020-07-26T14:48:36Z",
+          "created_at": "2020-07-09T14:01:29Z",
+          "topics": [],
+          "owner": {
+            "login": "TheCyberViking",
+            "html_url": "https://github.com/TheCyberViking"
+          },
+          "clone_url": "https://github.com/TheCyberViking/CVE-2020-5902-Vuln-Checker.git"
         },
         {
           "id": 277900768,
@@ -18744,23 +18827,34 @@
           "clone_url": "https://github.com/ajdumanhug/CVE-2020-5902.git"
         },
         {
-          "id": 279083082,
-          "name": "cve-2020-5902",
-          "full_name": "momika233/cve-2020-5902",
-          "html_url": "https://github.com/momika233/cve-2020-5902",
-          "description": "",
+          "id": 1473276584,
+          "name": "CVE-2020-5902",
+          "full_name": "googlesky/CVE-2020-5902",
+          "html_url": "https://github.com/googlesky/CVE-2020-5902",
+          "description": "F5 BIG-IP TMUI path traversal RCE. Fixed in 15.1.0.4/14.1.2.6/13.1.3.4. Differential: traversal on vuln, refused on fixed",
           "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "Lua",
-          "updated_at": "2024-08-12T20:03:40Z",
-          "pushed_at": "2020-07-12T14:40:26Z",
-          "created_at": "2020-07-12T14:37:25Z",
-          "topics": [],
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-11-26T14:32:53Z",
+          "pushed_at": "2026-11-26T14:37:10Z",
+          "created_at": "2026-11-26T14:32:41Z",
+          "topics": [
+            "cve-2026-2020-5902",
+            "cwe-22",
+            "f5-big-ip",
+            "path-traversal",
+            "poc",
+            "proof-of-concept",
+            "python",
+            "security-research",
+            "tmui",
+            "vulnerability-research"
+          ],
           "owner": {
-            "login": "momika233",
-            "html_url": "https://github.com/momika233"
+            "login": "googlesky",
+            "html_url": "https://github.com/googlesky"
           },
-          "clone_url": "https://github.com/momika233/cve-2020-5902.git"
+          "clone_url": "https://github.com/googlesky/CVE-2020-5902.git"
         },
         {
           "id": 277798487,
@@ -18782,6 +18876,25 @@
           "clone_url": "https://github.com/k3nundrum/CVE-2020-5902.git"
         },
         {
+          "id": 278139122,
+          "name": "CVE-2020-5902",
+          "full_name": "dnerzker/CVE-2020-5902",
+          "html_url": "https://github.com/dnerzker/CVE-2020-5902",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Lua",
+          "updated_at": "2020-07-16T16:16:40Z",
+          "pushed_at": "2020-07-16T16:16:37Z",
+          "created_at": "2020-07-08T16:22:53Z",
+          "topics": [],
+          "owner": {
+            "login": "dnerzker",
+            "html_url": "https://github.com/dnerzker"
+          },
+          "clone_url": "https://github.com/dnerzker/CVE-2020-5902.git"
+        },
+        {
           "id": 278872817,
           "name": "CVE-2020-5902",
           "full_name": "flyopenair/CVE-2020-5902",
@@ -18799,25 +18912,6 @@
             "html_url": "https://github.com/flyopenair"
           },
           "clone_url": "https://github.com/flyopenair/CVE-2020-5902.git"
-        },
-        {
-          "id": 1286374577,
-          "name": "F5-BIG-IP",
-          "full_name": "DevRafaelprogrammer/F5-BIG-IP",
-          "html_url": "https://github.com/DevRafaelprogrammer/F5-BIG-IP",
-          "description": "O F5 BIG-IP é uma plataforma de entrega e segurança de aplicações amplamente utilizada em ambientes corporativos. A CVE-2020-5902 é uma vulnerabilidade crítica no TMUI que, em versões não corrigidas, pode permitir acesso não autorizado e execução remota de código, reforçando a necessidade de atualização e gestão contínua de vulnerabilidades.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-07-01T19:08:20Z",
-          "pushed_at": "2026-07-01T19:07:55Z",
-          "created_at": "2026-07-01T18:03:16Z",
-          "topics": [],
-          "owner": {
-            "login": "DevRafaelprogrammer",
-            "html_url": "https://github.com/DevRafaelprogrammer"
-          },
-          "clone_url": "https://github.com/DevRafaelprogrammer/F5-BIG-IP.git"
         },
         {
           "id": 277800636,
@@ -18858,23 +18952,23 @@
           "clone_url": "https://github.com/Any3ite/CVE-2020-5902-F5BIG.git"
         },
         {
-          "id": 278380388,
-          "name": "CVE-2020-5902-Vuln-Checker",
-          "full_name": "TheCyberViking/CVE-2020-5902-Vuln-Checker",
-          "html_url": "https://github.com/TheCyberViking/CVE-2020-5902-Vuln-Checker",
-          "description": "Simple Vulnerability Checker Wrote by me \"@TheCyberViking\" and A fellow Researcher who wanted to be left Nameless... you know who you are you beautiful bitch",
+          "id": 279083082,
+          "name": "cve-2020-5902",
+          "full_name": "momika233/cve-2020-5902",
+          "html_url": "https://github.com/momika233/cve-2020-5902",
+          "description": "",
           "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2020-07-26T14:48:39Z",
-          "pushed_at": "2020-07-26T14:48:36Z",
-          "created_at": "2020-07-09T14:01:29Z",
+          "forks_count": 1,
+          "language": "Lua",
+          "updated_at": "2024-08-12T20:03:40Z",
+          "pushed_at": "2020-07-12T14:40:26Z",
+          "created_at": "2020-07-12T14:37:25Z",
           "topics": [],
           "owner": {
-            "login": "TheCyberViking",
-            "html_url": "https://github.com/TheCyberViking"
+            "login": "momika233",
+            "html_url": "https://github.com/momika233"
           },
-          "clone_url": "https://github.com/TheCyberViking/CVE-2020-5902-Vuln-Checker.git"
+          "clone_url": "https://github.com/momika233/cve-2020-5902.git"
         },
         {
           "id": 277851560,
@@ -18913,25 +19007,6 @@
             "html_url": "https://github.com/GoodiesHQ"
           },
           "clone_url": "https://github.com/GoodiesHQ/F5-Patch.git"
-        },
-        {
-          "id": 279017452,
-          "name": "CVE-2020-5902-fofa-scan",
-          "full_name": "freeFV/CVE-2020-5902-fofa-scan",
-          "html_url": "https://github.com/freeFV/CVE-2020-5902-fofa-scan",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 1,
-          "language": "",
-          "updated_at": "2021-04-11T14:53:19Z",
-          "pushed_at": "2020-07-09T08:06:07Z",
-          "created_at": "2020-07-12T07:49:18Z",
-          "topics": [],
-          "owner": {
-            "login": "freeFV",
-            "html_url": "https://github.com/freeFV"
-          },
-          "clone_url": "https://github.com/freeFV/CVE-2020-5902-fofa-scan.git"
         },
         {
           "id": 288487774,
@@ -20304,30 +20379,6 @@
       ]
     },
     {
-      "cve_id": "CVE-2020-8036",
-      "repositories": [
-        {
-          "id": 1272471484,
-          "name": "ENV-CVE-2020-8036",
-          "full_name": "yan5ui/ENV-CVE-2020-8036",
-          "html_url": "https://github.com/yan5ui/ENV-CVE-2020-8036",
-          "description": "Aritifacts of docker env of CVE-2020-8036",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "C",
-          "updated_at": "2026-06-17T16:54:31Z",
-          "pushed_at": "2026-06-17T16:54:18Z",
-          "created_at": "2026-06-17T16:32:49Z",
-          "topics": [],
-          "owner": {
-            "login": "yan5ui",
-            "html_url": "https://github.com/yan5ui"
-          },
-          "clone_url": "https://github.com/yan5ui/ENV-CVE-2020-8036.git"
-        }
-      ]
-    },
-    {
       "cve_id": "CVE-2020-8103",
       "repositories": [
         {
@@ -20800,10 +20851,10 @@
           "full_name": "B1anda0/CVE-2020-8209",
           "html_url": "https://github.com/B1anda0/CVE-2020-8209",
           "description": "该脚本为Citrix XenMobile 目录遍历漏洞（CVE-2020-8209）批量检测脚本。",
-          "stargazers_count": 30,
+          "stargazers_count": 29,
           "forks_count": 14,
           "language": "Python",
-          "updated_at": "2026-07-29T10:34:18Z",
+          "updated_at": "2026-11-24T07:59:17Z",
           "pushed_at": "2020-12-07T07:46:06Z",
           "created_at": "2020-11-17T07:20:46Z",
           "topics": [],
@@ -21012,7 +21063,7 @@
           "html_url": "https://github.com/Rapidsafeguard/codesnippets_CVE-2020-8417",
           "description": "",
           "stargazers_count": 0,
-          "forks_count": 0,
+          "forks_count": 1,
           "language": "HTML",
           "updated_at": "2020-12-31T20:04:01Z",
           "pushed_at": "2020-12-31T20:03:59Z",
@@ -22344,6 +22395,41 @@
       ]
     },
     {
+      "cve_id": "CVE-2020-9402",
+      "repositories": [
+        {
+          "id": 1473148453,
+          "name": "CVE-2020-9402",
+          "full_name": "googlesky/CVE-2020-9402",
+          "html_url": "https://github.com/googlesky/CVE-2020-9402",
+          "description": "Django GIS tolerance parameter injects SQL on Oracle. Fixed in 2.2.11 / 3.0.4. Differential: SQL injected on vuln, rejected on fixed",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-11-26T12:43:51Z",
+          "pushed_at": "2026-11-26T12:53:01Z",
+          "created_at": "2026-11-26T12:43:35Z",
+          "topics": [
+            "cve-2026-2020-9402",
+            "cwe-89",
+            "django",
+            "gis",
+            "poc",
+            "proof-of-concept",
+            "python",
+            "security-research",
+            "sql-injection",
+            "vulnerability-research"
+          ],
+          "owner": {
+            "login": "googlesky",
+            "html_url": "https://github.com/googlesky"
+          },
+          "clone_url": "https://github.com/googlesky/CVE-2020-9402.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2020-9442",
       "repositories": [
         {
@@ -22450,10 +22536,10 @@
           "full_name": "threedr3am/tomcat-cluster-session-sync-exp",
           "html_url": "https://github.com/threedr3am/tomcat-cluster-session-sync-exp",
           "description": "tomcat使用了自带session同步功能时，不安全的配置（没有使用EncryptInterceptor）导致存在的反序列化漏洞，通过精心构造的数据包， 可以对使用了tomcat自带session同步功能的服务器进行攻击。PS:这个不是CVE-2020-9484，9484是session持久化的洞，这个是session集群同步的洞！",
-          "stargazers_count": 214,
+          "stargazers_count": 213,
           "forks_count": 37,
           "language": "Java",
-          "updated_at": "2026-07-03T16:52:39Z",
+          "updated_at": "2026-11-27T11:42:50Z",
           "pushed_at": "2020-05-19T05:13:19Z",
           "created_at": "2020-05-19T05:12:53Z",
           "topics": [],
@@ -22488,10 +22574,10 @@
           "full_name": "IdealDreamLast/CVE-2020-9484",
           "html_url": "https://github.com/IdealDreamLast/CVE-2020-9484",
           "description": "用Kali 2.0复现Apache Tomcat Session反序列化代码执行漏洞",
-          "stargazers_count": 52,
+          "stargazers_count": 51,
           "forks_count": 20,
           "language": "",
-          "updated_at": "2026-07-03T16:52:17Z",
+          "updated_at": "2026-11-27T11:42:51Z",
           "pushed_at": "2020-05-21T15:13:22Z",
           "created_at": "2020-05-21T14:30:46Z",
           "topics": [],
@@ -22557,6 +22643,85 @@
             "html_url": "https://github.com/qerogram"
           },
           "clone_url": "https://github.com/qerogram/CVE-2020-9484.git"
+        },
+        {
+          "id": 1473150815,
+          "name": "CVE-2020-9484",
+          "full_name": "googlesky/CVE-2020-9484",
+          "html_url": "https://github.com/googlesky/CVE-2020-9484",
+          "description": "Apache Tomcat FileStore deserializes a file selected by a crafted session id. Fixed in 9.0.35 / 8.5.55. Differential: traversal on vuln, refused on fixed",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-11-26T12:46:01Z",
+          "pushed_at": "2026-11-26T12:54:01Z",
+          "created_at": "2026-11-26T12:45:47Z",
+          "topics": [
+            "cve-2026-2020-9484",
+            "cwe-502",
+            "deserialization",
+            "poc",
+            "proof-of-concept",
+            "python",
+            "security-research",
+            "session",
+            "tomcat",
+            "vulnerability-research"
+          ],
+          "owner": {
+            "login": "googlesky",
+            "html_url": "https://github.com/googlesky"
+          },
+          "clone_url": "https://github.com/googlesky/CVE-2020-9484.git"
+        },
+        {
+          "id": 1472870537,
+          "name": "Apache-Tomcat-CVE-2020-9484",
+          "full_name": "CrieHeiki/Apache-Tomcat-CVE-2020-9484",
+          "html_url": "https://github.com/CrieHeiki/Apache-Tomcat-CVE-2020-9484",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-11-26T08:22:17Z",
+          "pushed_at": "2026-11-27T09:04:19Z",
+          "created_at": "2026-11-26T08:22:15Z",
+          "topics": [],
+          "owner": {
+            "login": "CrieHeiki",
+            "html_url": "https://github.com/CrieHeiki"
+          },
+          "clone_url": "https://github.com/CrieHeiki/Apache-Tomcat-CVE-2020-9484.git"
+        },
+        {
+          "id": 1473222154,
+          "name": "CVE-2021-25329",
+          "full_name": "googlesky/CVE-2021-25329",
+          "html_url": "https://github.com/googlesky/CVE-2021-25329",
+          "description": "Tomcat FileStore deserialization fix for CVE-2020-9484 was incomplete. Fixed in 9.0.42/8.5.62/7.0.108. Differential: traversal on vuln, refused on fixed",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-11-26T13:47:32Z",
+          "pushed_at": "2026-11-26T13:50:21Z",
+          "created_at": "2026-11-26T13:47:18Z",
+          "topics": [
+            "cve-2026-2021-25329",
+            "cwe-502",
+            "deserialization",
+            "poc",
+            "proof-of-concept",
+            "python",
+            "security-research",
+            "session",
+            "tomcat",
+            "vulnerability-research"
+          ],
+          "owner": {
+            "login": "googlesky",
+            "html_url": "https://github.com/googlesky"
+          },
+          "clone_url": "https://github.com/googlesky/CVE-2021-25329.git"
         },
         {
           "id": 265741960,
@@ -23256,6 +23421,91 @@
           "clone_url": "https://github.com/optionalg/OpenSMTPD.git"
         },
         {
+          "id": 258993063,
+          "name": "cve-2020-test",
+          "full_name": "zhang192073/cve-2020-test",
+          "html_url": "https://github.com/zhang192073/cve-2020-test",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2020-04-26T09:44:02Z",
+          "pushed_at": "2020-04-26T09:42:50Z",
+          "created_at": "2020-04-26T09:42:49Z",
+          "topics": [],
+          "owner": {
+            "login": "zhang192073",
+            "html_url": "https://github.com/zhang192073"
+          },
+          "clone_url": "https://github.com/zhang192073/cve-2020-test.git"
+        },
+        {
+          "id": 1468715284,
+          "name": "PEagle",
+          "full_name": "vinniboy021-blip/PEagle",
+          "html_url": "https://github.com/vinniboy021-blip/PEagle",
+          "description": "Windows Privilege Escalation Enumeration — PowerShell autossuficiente. ADCS ESC1-17, 18 CVEs (2020-2026), AV/EDR detection, 132 testes.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "PowerShell",
+          "updated_at": "2026-11-23T12:09:31Z",
+          "pushed_at": "2026-11-26T12:48:42Z",
+          "created_at": "2026-11-23T12:09:19Z",
+          "topics": [
+            "adcs",
+            "ctf",
+            "cve",
+            "pentest",
+            "powershell",
+            "privilege-escalation",
+            "red-team",
+            "windows"
+          ],
+          "owner": {
+            "login": "vinniboy021-blip",
+            "html_url": "https://github.com/vinniboy021-blip"
+          },
+          "clone_url": "https://github.com/vinniboy021-blip/PEagle.git"
+        },
+        {
+          "id": 268830270,
+          "name": "cve2020",
+          "full_name": "haneline/cve2020",
+          "html_url": "https://github.com/haneline/cve2020",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2020-06-02T14:55:22Z",
+          "pushed_at": "2020-06-02T14:55:23Z",
+          "created_at": "2020-06-02T14:55:22Z",
+          "topics": [],
+          "owner": {
+            "login": "haneline",
+            "html_url": "https://github.com/haneline"
+          },
+          "clone_url": "https://github.com/haneline/cve2020.git"
+        },
+        {
+          "id": 239535677,
+          "name": "CVenligne2020",
+          "full_name": "StephaneLegrand/CVenligne2020",
+          "html_url": "https://github.com/StephaneLegrand/CVenligne2020",
+          "description": "Mon cv en ligne pour Openclassrooms",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "HTML",
+          "updated_at": "2020-02-10T14:51:41Z",
+          "pushed_at": "2020-02-10T14:51:39Z",
+          "created_at": "2020-02-10T14:47:05Z",
+          "topics": [],
+          "owner": {
+            "login": "StephaneLegrand",
+            "html_url": "https://github.com/StephaneLegrand"
+          },
+          "clone_url": "https://github.com/StephaneLegrand/CVenligne2020.git"
+        },
+        {
           "id": 248239275,
           "name": "cve2020-0796",
           "full_name": "kernelkill/cve2020-0796",
@@ -23294,6 +23544,63 @@
           "clone_url": "https://github.com/it4ch1-007/POC_CVE_2020_0014.git"
         },
         {
+          "id": 285362364,
+          "name": "CVE-2020-BIG-IP",
+          "full_name": "Revanthinfosec/CVE-2020-BIG-IP",
+          "html_url": "https://github.com/Revanthinfosec/CVE-2020-BIG-IP",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2020-08-05T17:42:36Z",
+          "pushed_at": "2020-08-05T17:42:34Z",
+          "created_at": "2020-08-05T17:41:44Z",
+          "topics": [],
+          "owner": {
+            "login": "Revanthinfosec",
+            "html_url": "https://github.com/Revanthinfosec"
+          },
+          "clone_url": "https://github.com/Revanthinfosec/CVE-2020-BIG-IP.git"
+        },
+        {
+          "id": 263410426,
+          "name": "SNP_report_assignement_IT19009278",
+          "full_name": "Caj6r/SNP_report_assignement_IT19009278",
+          "html_url": "https://github.com/Caj6r/SNP_report_assignement_IT19009278",
+          "description": "Report for Exploit Assignment. Topic Selected: CVE 2020-7274",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2020-05-12T17:55:33Z",
+          "pushed_at": "2020-05-12T17:55:31Z",
+          "created_at": "2020-05-12T17:52:00Z",
+          "topics": [],
+          "owner": {
+            "login": "Caj6r",
+            "html_url": "https://github.com/Caj6r"
+          },
+          "clone_url": "https://github.com/Caj6r/SNP_report_assignement_IT19009278.git"
+        },
+        {
+          "id": 297053063,
+          "name": "CVE2020",
+          "full_name": "dima5455/CVE2020",
+          "html_url": "https://github.com/dima5455/CVE2020",
+          "description": "",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2020-10-11T10:47:12Z",
+          "pushed_at": "2020-10-11T10:47:10Z",
+          "created_at": "2020-09-20T10:36:19Z",
+          "topics": [],
+          "owner": {
+            "login": "dima5455",
+            "html_url": "https://github.com/dima5455"
+          },
+          "clone_url": "https://github.com/dima5455/CVE2020.git"
+        },
+        {
           "id": 256385058,
           "name": "Docker",
           "full_name": "scxiaotan1/Docker",
@@ -23317,186 +23624,6 @@
             "html_url": "https://github.com/scxiaotan1"
           },
           "clone_url": "https://github.com/scxiaotan1/Docker.git"
-        },
-        {
-          "id": 1278867964,
-          "name": "vigil",
-          "full_name": "blackjack550/vigil",
-          "html_url": "https://github.com/blackjack550/vigil",
-          "description": "FFmpeg vulnerability pre-scanner in Go. Detects 30+ CVEs (2020-2026) via container header analysis without triggering decode. RCE risk assessment + codec-based exploit detection.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Go",
-          "updated_at": "2026-06-24T08:10:57Z",
-          "pushed_at": "2026-06-24T08:14:30Z",
-          "created_at": "2026-06-24T07:00:34Z",
-          "topics": [],
-          "owner": {
-            "login": "blackjack550",
-            "html_url": "https://github.com/blackjack550"
-          },
-          "clone_url": "https://github.com/blackjack550/vigil.git"
-        },
-        {
-          "id": 268830270,
-          "name": "cve2020",
-          "full_name": "haneline/cve2020",
-          "html_url": "https://github.com/haneline/cve2020",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2020-06-02T14:55:22Z",
-          "pushed_at": "2020-06-02T14:55:23Z",
-          "created_at": "2020-06-02T14:55:22Z",
-          "topics": [],
-          "owner": {
-            "login": "haneline",
-            "html_url": "https://github.com/haneline"
-          },
-          "clone_url": "https://github.com/haneline/cve2020.git"
-        },
-        {
-          "id": 258993063,
-          "name": "cve-2020-test",
-          "full_name": "zhang192073/cve-2020-test",
-          "html_url": "https://github.com/zhang192073/cve-2020-test",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2020-04-26T09:44:02Z",
-          "pushed_at": "2020-04-26T09:42:50Z",
-          "created_at": "2020-04-26T09:42:49Z",
-          "topics": [],
-          "owner": {
-            "login": "zhang192073",
-            "html_url": "https://github.com/zhang192073"
-          },
-          "clone_url": "https://github.com/zhang192073/cve-2020-test.git"
-        },
-        {
-          "id": 1259780804,
-          "name": "poc_cve_2020_0022",
-          "full_name": "it4ch1-007/poc_cve_2020_0022",
-          "html_url": "https://github.com/it4ch1-007/poc_cve_2020_0022",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "C",
-          "updated_at": "2026-06-04T21:16:21Z",
-          "pushed_at": "2026-06-04T21:15:36Z",
-          "created_at": "2026-06-04T21:13:52Z",
-          "topics": [],
-          "owner": {
-            "login": "it4ch1-007",
-            "html_url": "https://github.com/it4ch1-007"
-          },
-          "clone_url": "https://github.com/it4ch1-007/poc_cve_2020_0022.git"
-        },
-        {
-          "id": 243260988,
-          "name": "CVE_2020_1938_ajp_poc",
-          "full_name": "b1cat/CVE_2020_1938_ajp_poc",
-          "html_url": "https://github.com/b1cat/CVE_2020_1938_ajp_poc",
-          "description": "CVE_2020_1938_ajp_poc",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2020-02-26T13:06:46Z",
-          "pushed_at": "2020-02-26T13:06:44Z",
-          "created_at": "2020-02-26T12:47:42Z",
-          "topics": [],
-          "owner": {
-            "login": "b1cat",
-            "html_url": "https://github.com/b1cat"
-          },
-          "clone_url": "https://github.com/b1cat/CVE_2020_1938_ajp_poc.git"
-        },
-        {
-          "id": 285362364,
-          "name": "CVE-2020-BIG-IP",
-          "full_name": "Revanthinfosec/CVE-2020-BIG-IP",
-          "html_url": "https://github.com/Revanthinfosec/CVE-2020-BIG-IP",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2020-08-05T17:42:36Z",
-          "pushed_at": "2020-08-05T17:42:34Z",
-          "created_at": "2020-08-05T17:41:44Z",
-          "topics": [],
-          "owner": {
-            "login": "Revanthinfosec",
-            "html_url": "https://github.com/Revanthinfosec"
-          },
-          "clone_url": "https://github.com/Revanthinfosec/CVE-2020-BIG-IP.git"
-        },
-        {
-          "id": 1468715284,
-          "name": "PEagle",
-          "full_name": "vinniboy021-blip/PEagle",
-          "html_url": "https://github.com/vinniboy021-blip/PEagle",
-          "description": "Windows Privilege Escalation Enumeration — PowerShell autossuficiente. ADCS ESC1-17, 18 CVEs (2020-2026), AV/EDR detection, 132 testes.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "PowerShell",
-          "updated_at": "2026-11-23T12:09:31Z",
-          "pushed_at": "2026-11-24T00:22:00Z",
-          "created_at": "2026-11-23T12:09:19Z",
-          "topics": [
-            "adcs",
-            "ctf",
-            "cve",
-            "pentest",
-            "powershell",
-            "privilege-escalation",
-            "red-team",
-            "windows"
-          ],
-          "owner": {
-            "login": "vinniboy021-blip",
-            "html_url": "https://github.com/vinniboy021-blip"
-          },
-          "clone_url": "https://github.com/vinniboy021-blip/PEagle.git"
-        },
-        {
-          "id": 297053063,
-          "name": "CVE2020",
-          "full_name": "dima5455/CVE2020",
-          "html_url": "https://github.com/dima5455/CVE2020",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2020-10-11T10:47:12Z",
-          "pushed_at": "2020-10-11T10:47:10Z",
-          "created_at": "2020-09-20T10:36:19Z",
-          "topics": [],
-          "owner": {
-            "login": "dima5455",
-            "html_url": "https://github.com/dima5455"
-          },
-          "clone_url": "https://github.com/dima5455/CVE2020.git"
-        },
-        {
-          "id": 239535677,
-          "name": "CVenligne2020",
-          "full_name": "StephaneLegrand/CVenligne2020",
-          "html_url": "https://github.com/StephaneLegrand/CVenligne2020",
-          "description": "Mon cv en ligne pour Openclassrooms",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "HTML",
-          "updated_at": "2020-02-10T14:51:41Z",
-          "pushed_at": "2020-02-10T14:51:39Z",
-          "created_at": "2020-02-10T14:47:05Z",
-          "topics": [],
-          "owner": {
-            "login": "StephaneLegrand",
-            "html_url": "https://github.com/StephaneLegrand"
-          },
-          "clone_url": "https://github.com/StephaneLegrand/CVenligne2020.git"
         },
         {
           "id": 298454102,
@@ -23651,23 +23778,23 @@
           "clone_url": "https://github.com/arvind2022/isac_rconfig3.9.git"
         },
         {
-          "id": 263410426,
-          "name": "SNP_report_assignement_IT19009278",
-          "full_name": "Caj6r/SNP_report_assignement_IT19009278",
-          "html_url": "https://github.com/Caj6r/SNP_report_assignement_IT19009278",
-          "description": "Report for Exploit Assignment. Topic Selected: CVE 2020-7274",
+          "id": 243260988,
+          "name": "CVE_2020_1938_ajp_poc",
+          "full_name": "b1cat/CVE_2020_1938_ajp_poc",
+          "html_url": "https://github.com/b1cat/CVE_2020_1938_ajp_poc",
+          "description": "CVE_2020_1938_ajp_poc",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "",
-          "updated_at": "2020-05-12T17:55:33Z",
-          "pushed_at": "2020-05-12T17:55:31Z",
-          "created_at": "2020-05-12T17:52:00Z",
+          "language": "Python",
+          "updated_at": "2020-02-26T13:06:46Z",
+          "pushed_at": "2020-02-26T13:06:44Z",
+          "created_at": "2020-02-26T12:47:42Z",
           "topics": [],
           "owner": {
-            "login": "Caj6r",
-            "html_url": "https://github.com/Caj6r"
+            "login": "b1cat",
+            "html_url": "https://github.com/b1cat"
           },
-          "clone_url": "https://github.com/Caj6r/SNP_report_assignement_IT19009278.git"
+          "clone_url": "https://github.com/b1cat/CVE_2020_1938_ajp_poc.git"
         }
       ]
     }

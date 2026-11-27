@@ -122,6 +122,71 @@
             "html_url": "https://github.com/jaychouzzk"
           },
           "clone_url": "https://github.com/jaychouzzk/CVE-2019-0193-exp.git"
+        },
+        {
+          "id": 1473147311,
+          "name": "CVE-2019-0193",
+          "full_name": "googlesky/CVE-2019-0193",
+          "html_url": "https://github.com/googlesky/CVE-2019-0193",
+          "description": "Apache Solr DataImportHandler resolves external entities from request-supplied dataConfig. Fixed in 8.1.1 / 7.7.2. Differential: XXE on vuln, refused on fixed",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-11-26T12:42:47Z",
+          "pushed_at": "2026-11-26T12:52:32Z",
+          "created_at": "2026-11-26T12:42:32Z",
+          "topics": [
+            "cve-2026-2019-0193",
+            "cwe-611",
+            "dataimporthandler",
+            "poc",
+            "proof-of-concept",
+            "python",
+            "security-research",
+            "solr",
+            "vulnerability-research",
+            "xxe"
+          ],
+          "owner": {
+            "login": "googlesky",
+            "html_url": "https://github.com/googlesky"
+          },
+          "clone_url": "https://github.com/googlesky/CVE-2019-0193.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2019-0199",
+      "repositories": [
+        {
+          "id": 1473249531,
+          "name": "CVE-2019-0199",
+          "full_name": "googlesky/CVE-2019-0199",
+          "html_url": "https://github.com/googlesky/CVE-2019-0199",
+          "description": "Tomcat HTTP/2 excessive SETTINGS frames cause worker exhaustion. Fixed in 9.0.14/8.5.37. Differential: frames accepted on vuln, refused on fixed",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-11-26T14:10:31Z",
+          "pushed_at": "2026-11-26T14:13:56Z",
+          "created_at": "2026-11-26T14:10:16Z",
+          "topics": [
+            "cve-2026-2019-0199",
+            "cwe-400",
+            "denial-of-service",
+            "http2",
+            "poc",
+            "proof-of-concept",
+            "python",
+            "security-research",
+            "tomcat",
+            "vulnerability-research"
+          ],
+          "owner": {
+            "login": "googlesky",
+            "html_url": "https://github.com/googlesky"
+          },
+          "clone_url": "https://github.com/googlesky/CVE-2019-0199.git"
         }
       ]
     },
@@ -179,25 +244,6 @@
             "html_url": "https://github.com/ozkanbilge"
           },
           "clone_url": "https://github.com/ozkanbilge/Apache-Exploit-2019.git"
-        },
-        {
-          "id": 1255265982,
-          "name": "CVE-2019-0211-exploit",
-          "full_name": "Jeanback1/CVE-2019-0211-exploit",
-          "html_url": "https://github.com/Jeanback1/CVE-2019-0211-exploit",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "PHP",
-          "updated_at": "2026-05-31T16:10:07Z",
-          "pushed_at": "2026-05-31T16:10:04Z",
-          "created_at": "2026-05-31T16:05:56Z",
-          "topics": [],
-          "owner": {
-            "login": "Jeanback1",
-            "html_url": "https://github.com/Jeanback1"
-          },
-          "clone_url": "https://github.com/Jeanback1/CVE-2019-0211-exploit.git"
         }
       ]
     },
@@ -222,25 +268,6 @@
             "html_url": "https://github.com/ianxtianxt"
           },
           "clone_url": "https://github.com/ianxtianxt/cve-2019-0227.git"
-        },
-        {
-          "id": 1240715913,
-          "name": "Axis1.4-CVE-2019-0227",
-          "full_name": "1475210817/Axis1.4-CVE-2019-0227",
-          "html_url": "https://github.com/1475210817/Axis1.4-CVE-2019-0227",
-          "description": "Apache Axis1.4 远程命令执行漏洞利用工具 - CVE-2019-0227，支持随机化服务名和Webshell文件名",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-05-16T13:52:05Z",
-          "pushed_at": "2026-05-16T13:52:02Z",
-          "created_at": "2026-05-16T13:31:32Z",
-          "topics": [],
-          "owner": {
-            "login": "1475210817",
-            "html_url": "https://github.com/1475210817"
-          },
-          "clone_url": "https://github.com/1475210817/Axis1.4-CVE-2019-0227.git"
         }
       ]
     },
@@ -253,10 +280,10 @@
           "full_name": "pyn3rd/CVE-2019-0232",
           "html_url": "https://github.com/pyn3rd/CVE-2019-0232",
           "description": "Apache Tomcat Remote Code Execution on Windows",
-          "stargazers_count": 190,
+          "stargazers_count": 188,
           "forks_count": 47,
           "language": "Batchfile",
-          "updated_at": "2026-07-03T16:51:05Z",
+          "updated_at": "2026-11-27T11:41:38Z",
           "pushed_at": "2019-11-27T07:39:40Z",
           "created_at": "2019-04-15T07:54:25Z",
           "topics": [],
@@ -272,10 +299,10 @@
           "full_name": "jas502n/CVE-2019-0232",
           "html_url": "https://github.com/jas502n/CVE-2019-0232",
           "description": "Apache Tomcat Remote Code Execution on Windows - CGI-BIN",
-          "stargazers_count": 81,
+          "stargazers_count": 80,
           "forks_count": 26,
           "language": "Python",
-          "updated_at": "2026-11-05T13:16:25Z",
+          "updated_at": "2026-11-27T11:41:39Z",
           "pushed_at": "2019-04-17T02:42:03Z",
           "created_at": "2019-04-16T14:32:03Z",
           "topics": [],
@@ -322,6 +349,36 @@
             "html_url": "https://github.com/cyy95"
           },
           "clone_url": "https://github.com/cyy95/CVE-2019-0232-EXP.git"
+        },
+        {
+          "id": 1473173898,
+          "name": "CVE-2019-0232",
+          "full_name": "googlesky/CVE-2019-0232",
+          "html_url": "https://github.com/googlesky/CVE-2019-0232",
+          "description": "Apache Tomcat CGI servlet with enableCmdLineArguments on Windows injects commands. Fixed in 9.0.9/8.5.35/7.0.94. Differential: command injected on vuln, refused on fixed",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-11-27T06:50:55Z",
+          "pushed_at": "2026-11-26T13:11:43Z",
+          "created_at": "2026-11-26T13:06:18Z",
+          "topics": [
+            "cgi",
+            "command-injection",
+            "cve-2026-2019-0232",
+            "cwe-78",
+            "poc",
+            "proof-of-concept",
+            "python",
+            "security-research",
+            "tomcat",
+            "vulnerability-research"
+          ],
+          "owner": {
+            "login": "googlesky",
+            "html_url": "https://github.com/googlesky"
+          },
+          "clone_url": "https://github.com/googlesky/CVE-2019-0232.git"
         },
         {
           "id": 1298455863,
@@ -571,10 +628,10 @@
           "full_name": "Ekultek/BlueKeep",
           "html_url": "https://github.com/Ekultek/BlueKeep",
           "description": "Proof of concept for CVE-2019-0708",
-          "stargazers_count": 1186,
+          "stargazers_count": 1185,
           "forks_count": 328,
           "language": "Python",
-          "updated_at": "2026-11-19T21:24:52Z",
+          "updated_at": "2026-11-24T09:56:56Z",
           "pushed_at": "2026-03-16T15:23:32Z",
           "created_at": "2019-05-29T16:53:54Z",
           "topics": [],
@@ -590,10 +647,10 @@
           "full_name": "robertdavidgraham/rdpscan",
           "html_url": "https://github.com/robertdavidgraham/rdpscan",
           "description": "A quick scanner for the CVE-2019-0708 \"BlueKeep\" vulnerability.",
-          "stargazers_count": 924,
+          "stargazers_count": 925,
           "forks_count": 237,
           "language": "C",
-          "updated_at": "2026-11-19T21:24:23Z",
+          "updated_at": "2026-11-26T00:04:34Z",
           "pushed_at": "2019-06-22T21:48:45Z",
           "created_at": "2019-05-23T22:50:12Z",
           "topics": [],
@@ -658,10 +715,10 @@
           "full_name": "0xeb-bp/bluekeep",
           "html_url": "https://github.com/0xeb-bp/bluekeep",
           "description": "Public work for CVE-2019-0708",
-          "stargazers_count": 294,
+          "stargazers_count": 293,
           "forks_count": 91,
           "language": "Python",
-          "updated_at": "2026-10-24T03:04:37Z",
+          "updated_at": "2026-11-24T09:56:52Z",
           "pushed_at": "2019-11-19T02:43:38Z",
           "created_at": "2019-07-23T03:15:53Z",
           "topics": [],
@@ -677,10 +734,10 @@
           "full_name": "Cyb0r9/ispy",
           "html_url": "https://github.com/Cyb0r9/ispy",
           "description": "ispy V1.0 - Eternalblue(ms17-010)/Bluekeep(CVE-2019-0708) Scanner and exploit ( Metasploit automation )",
-          "stargazers_count": 245,
+          "stargazers_count": 244,
           "forks_count": 68,
           "language": "Python",
-          "updated_at": "2026-10-11T20:38:59Z",
+          "updated_at": "2026-11-27T11:42:06Z",
           "pushed_at": "2021-02-06T00:24:21Z",
           "created_at": "2019-09-30T19:46:21Z",
           "topics": [],
@@ -719,10 +776,10 @@
           "full_name": "Leoid/CVE-2019-0708",
           "html_url": "https://github.com/Leoid/CVE-2019-0708",
           "description": "Only Hitting PoC [Tested on Windows Server 2008 r2]",
-          "stargazers_count": 127,
+          "stargazers_count": 126,
           "forks_count": 36,
           "language": "Python",
-          "updated_at": "2026-11-06T23:58:07Z",
+          "updated_at": "2026-11-27T11:41:45Z",
           "pushed_at": "2019-05-28T02:46:19Z",
           "created_at": "2019-05-28T02:25:21Z",
           "topics": [],
@@ -2207,6 +2264,44 @@
           "clone_url": "https://github.com/JasonLOU/CVE-2019-0708.git"
         },
         {
+          "id": 186838257,
+          "name": "CVE-2019-0708-EXPloit-3389",
+          "full_name": "sbkcbig/CVE-2019-0708-EXPloit-3389",
+          "html_url": "https://github.com/sbkcbig/CVE-2019-0708-EXPloit-3389",
+          "description": "EXPloit-poc: https://pan.baidu.com/s/184gN1tJVIOYqOjaezM_VsA 提取码:e2k8",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2019-05-16T02:41:17Z",
+          "pushed_at": "2019-05-15T14:08:41Z",
+          "created_at": "2019-05-15T14:00:38Z",
+          "topics": [],
+          "owner": {
+            "login": "sbkcbig",
+            "html_url": "https://github.com/sbkcbig"
+          },
+          "clone_url": "https://github.com/sbkcbig/CVE-2019-0708-EXPloit-3389.git"
+        },
+        {
+          "id": 189534368,
+          "name": "bluekeep_CVE-2019-0708_poc_to_exploit",
+          "full_name": "binddns/bluekeep_CVE-2019-0708_poc_to_exploit",
+          "html_url": "https://github.com/binddns/bluekeep_CVE-2019-0708_poc_to_exploit",
+          "description": "Porting BlueKeep PoC from @Ekultek to actual exploits",
+          "stargazers_count": 0,
+          "forks_count": 122,
+          "language": "Python",
+          "updated_at": "2019-05-31T05:42:24Z",
+          "pushed_at": "2019-05-31T05:30:04Z",
+          "created_at": "2019-05-31T05:42:21Z",
+          "topics": [],
+          "owner": {
+            "login": "binddns",
+            "html_url": "https://github.com/binddns"
+          },
+          "clone_url": "https://github.com/binddns/bluekeep_CVE-2019-0708_poc_to_exploit.git"
+        },
+        {
           "id": 1334178854,
           "name": "Perform-an-RDP-exploitation-using-the-BlueKeep-vulnerability-CVE-2019-0708-on-Windows",
           "full_name": "Mohaimenul370/Perform-an-RDP-exploitation-using-the-BlueKeep-vulnerability-CVE-2019-0708-on-Windows",
@@ -2226,23 +2321,34 @@
           "clone_url": "https://github.com/Mohaimenul370/Perform-an-RDP-exploitation-using-the-BlueKeep-vulnerability-CVE-2019-0708-on-Windows.git"
         },
         {
-          "id": 1345213816,
-          "name": "Explotacion-RCE-Pentesting-BlueKeep-CVE-2019-0708-",
-          "full_name": "SebasPV27/Explotacion-RCE-Pentesting-BlueKeep-CVE-2019-0708-",
-          "html_url": "https://github.com/SebasPV27/Explotacion-RCE-Pentesting-BlueKeep-CVE-2019-0708-",
-          "description": "Demostración práctica y bitácora técnica de explotación de BlueKeep (CVE-2019-0708) en RDP usando Nmap y Metasploit, documentando la resolución de errores en el entorno virtual.",
+          "id": 1473177304,
+          "name": "CVE-2019-0708",
+          "full_name": "googlesky/CVE-2019-0708",
+          "html_url": "https://github.com/googlesky/CVE-2019-0708",
+          "description": "BlueKeep: RDP preconnection with invalid channel count triggers use-after-free RCE. Fixed in May 2019 update. Differential: UAF path reached on vuln, refused on fixed",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-08-24T17:22:02Z",
-          "pushed_at": "2026-08-24T17:20:47Z",
-          "created_at": "2026-08-24T17:14:40Z",
-          "topics": [],
+          "language": "Python",
+          "updated_at": "2026-11-26T13:09:33Z",
+          "pushed_at": "2026-11-26T13:13:13Z",
+          "created_at": "2026-11-26T13:09:15Z",
+          "topics": [
+            "bluekeep",
+            "cve-2026-2019-0708",
+            "cwe-416",
+            "poc",
+            "proof-of-concept",
+            "python",
+            "rdp",
+            "security-research",
+            "use-after-free",
+            "vulnerability-research"
+          ],
           "owner": {
-            "login": "SebasPV27",
-            "html_url": "https://github.com/SebasPV27"
+            "login": "googlesky",
+            "html_url": "https://github.com/googlesky"
           },
-          "clone_url": "https://github.com/SebasPV27/Explotacion-RCE-Pentesting-BlueKeep-CVE-2019-0708-.git"
+          "clone_url": "https://github.com/googlesky/CVE-2019-0708.git"
         },
         {
           "id": 191468609,
@@ -2302,6 +2408,25 @@
           "clone_url": "https://github.com/ZhaoYukai/CVE-2019-0708.git"
         },
         {
+          "id": 1345213816,
+          "name": "Explotacion-RCE-Pentesting-BlueKeep-CVE-2019-0708-",
+          "full_name": "SebasPV27/Explotacion-RCE-Pentesting-BlueKeep-CVE-2019-0708-",
+          "html_url": "https://github.com/SebasPV27/Explotacion-RCE-Pentesting-BlueKeep-CVE-2019-0708-",
+          "description": "Demostración práctica y bitácora técnica de explotación de BlueKeep (CVE-2019-0708) en RDP usando Nmap y Metasploit, documentando la resolución de errores en el entorno virtual.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2026-08-24T17:22:02Z",
+          "pushed_at": "2026-08-24T17:20:47Z",
+          "created_at": "2026-08-24T17:14:40Z",
+          "topics": [],
+          "owner": {
+            "login": "SebasPV27",
+            "html_url": "https://github.com/SebasPV27"
+          },
+          "clone_url": "https://github.com/SebasPV27/Explotacion-RCE-Pentesting-BlueKeep-CVE-2019-0708-.git"
+        },
+        {
           "id": 186769422,
           "name": "Dark-Network-CVE-2019-0708",
           "full_name": "xiyangzuishuai/Dark-Network-CVE-2019-0708",
@@ -2319,63 +2444,6 @@
             "html_url": "https://github.com/xiyangzuishuai"
           },
           "clone_url": "https://github.com/xiyangzuishuai/Dark-Network-CVE-2019-0708.git"
-        },
-        {
-          "id": 188417390,
-          "name": "CVE-2019-0708-Tool",
-          "full_name": "SQLDebugger/CVE-2019-0708-Tool",
-          "html_url": "https://github.com/SQLDebugger/CVE-2019-0708-Tool",
-          "description": "50 first stargazers will get get the tool via email",
-          "stargazers_count": 0,
-          "forks_count": 12,
-          "language": "",
-          "updated_at": "2019-05-24T12:22:38Z",
-          "pushed_at": "2019-05-31T16:45:02Z",
-          "created_at": "2019-05-24T12:22:35Z",
-          "topics": [],
-          "owner": {
-            "login": "SQLDebugger",
-            "html_url": "https://github.com/SQLDebugger"
-          },
-          "clone_url": "https://github.com/SQLDebugger/CVE-2019-0708-Tool.git"
-        },
-        {
-          "id": 189534368,
-          "name": "bluekeep_CVE-2019-0708_poc_to_exploit",
-          "full_name": "binddns/bluekeep_CVE-2019-0708_poc_to_exploit",
-          "html_url": "https://github.com/binddns/bluekeep_CVE-2019-0708_poc_to_exploit",
-          "description": "Porting BlueKeep PoC from @Ekultek to actual exploits",
-          "stargazers_count": 0,
-          "forks_count": 122,
-          "language": "Python",
-          "updated_at": "2019-05-31T05:42:24Z",
-          "pushed_at": "2019-05-31T05:30:04Z",
-          "created_at": "2019-05-31T05:42:21Z",
-          "topics": [],
-          "owner": {
-            "login": "binddns",
-            "html_url": "https://github.com/binddns"
-          },
-          "clone_url": "https://github.com/binddns/bluekeep_CVE-2019-0708_poc_to_exploit.git"
-        },
-        {
-          "id": 186731659,
-          "name": "CVE-2019-0708-PoC",
-          "full_name": "yetiddbb/CVE-2019-0708-PoC",
-          "html_url": "https://github.com/yetiddbb/CVE-2019-0708-PoC",
-          "description": "CVE-2019-0708",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2019-05-15T02:06:00Z",
-          "pushed_at": "2019-05-15T02:03:51Z",
-          "created_at": "2019-05-15T02:03:50Z",
-          "topics": [],
-          "owner": {
-            "login": "yetiddbb",
-            "html_url": "https://github.com/yetiddbb"
-          },
-          "clone_url": "https://github.com/yetiddbb/CVE-2019-0708-PoC.git"
         },
         {
           "id": 189126322,
@@ -2397,23 +2465,42 @@
           "clone_url": "https://github.com/oneoy/BlueKeep.git"
         },
         {
-          "id": 186838257,
-          "name": "CVE-2019-0708-EXPloit-3389",
-          "full_name": "sbkcbig/CVE-2019-0708-EXPloit-3389",
-          "html_url": "https://github.com/sbkcbig/CVE-2019-0708-EXPloit-3389",
-          "description": "EXPloit-poc: https://pan.baidu.com/s/184gN1tJVIOYqOjaezM_VsA 提取码:e2k8",
+          "id": 188287755,
+          "name": "CVE-2019-0708-PoC-Exploit",
+          "full_name": "freeide/CVE-2019-0708-PoC-Exploit",
+          "html_url": "https://github.com/freeide/CVE-2019-0708-PoC-Exploit",
+          "description": "CVE-2019-0708 PoC Exploit",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "",
-          "updated_at": "2019-05-16T02:41:17Z",
-          "pushed_at": "2019-05-15T14:08:41Z",
-          "created_at": "2019-05-15T14:00:38Z",
+          "updated_at": "2020-01-25T02:16:54Z",
+          "pushed_at": "2019-05-23T15:56:16Z",
+          "created_at": "2019-05-23T18:37:27Z",
           "topics": [],
           "owner": {
-            "login": "sbkcbig",
-            "html_url": "https://github.com/sbkcbig"
+            "login": "freeide",
+            "html_url": "https://github.com/freeide"
           },
-          "clone_url": "https://github.com/sbkcbig/CVE-2019-0708-EXPloit-3389.git"
+          "clone_url": "https://github.com/freeide/CVE-2019-0708-PoC-Exploit.git"
+        },
+        {
+          "id": 186731659,
+          "name": "CVE-2019-0708-PoC",
+          "full_name": "yetiddbb/CVE-2019-0708-PoC",
+          "html_url": "https://github.com/yetiddbb/CVE-2019-0708-PoC",
+          "description": "CVE-2019-0708",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2019-05-15T02:06:00Z",
+          "pushed_at": "2019-05-15T02:03:51Z",
+          "created_at": "2019-05-15T02:03:50Z",
+          "topics": [],
+          "owner": {
+            "login": "yetiddbb",
+            "html_url": "https://github.com/yetiddbb"
+          },
+          "clone_url": "https://github.com/yetiddbb/CVE-2019-0708-PoC.git"
         },
         {
           "id": 206926531,
@@ -2435,25 +2522,6 @@
           "clone_url": "https://github.com/Micr067/CVE-2019-0708RDP-MSF.git"
         },
         {
-          "id": 197586528,
-          "name": "bluekeepscan",
-          "full_name": "benhe119/bluekeepscan",
-          "html_url": "https://github.com/benhe119/bluekeepscan",
-          "description": "CVE-2019-0708",
-          "stargazers_count": 0,
-          "forks_count": 2,
-          "language": "Go",
-          "updated_at": "2019-07-18T12:52:52Z",
-          "pushed_at": "2019-05-27T12:58:13Z",
-          "created_at": "2019-07-18T12:52:49Z",
-          "topics": [],
-          "owner": {
-            "login": "benhe119",
-            "html_url": "https://github.com/benhe119"
-          },
-          "clone_url": "https://github.com/benhe119/bluekeepscan.git"
-        },
-        {
           "id": 187097173,
           "name": "CVE-2019-0708-POC",
           "full_name": "f8al/CVE-2019-0708-POC",
@@ -2473,23 +2541,42 @@
           "clone_url": "https://github.com/f8al/CVE-2019-0708-POC.git"
         },
         {
-          "id": 188287755,
-          "name": "CVE-2019-0708-PoC-Exploit",
-          "full_name": "freeide/CVE-2019-0708-PoC-Exploit",
-          "html_url": "https://github.com/freeide/CVE-2019-0708-PoC-Exploit",
-          "description": "CVE-2019-0708 PoC Exploit",
+          "id": 197586528,
+          "name": "bluekeepscan",
+          "full_name": "benhe119/bluekeepscan",
+          "html_url": "https://github.com/benhe119/bluekeepscan",
+          "description": "CVE-2019-0708",
           "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2020-01-25T02:16:54Z",
-          "pushed_at": "2019-05-23T15:56:16Z",
-          "created_at": "2019-05-23T18:37:27Z",
+          "forks_count": 2,
+          "language": "Go",
+          "updated_at": "2019-07-18T12:52:52Z",
+          "pushed_at": "2019-05-27T12:58:13Z",
+          "created_at": "2019-07-18T12:52:49Z",
           "topics": [],
           "owner": {
-            "login": "freeide",
-            "html_url": "https://github.com/freeide"
+            "login": "benhe119",
+            "html_url": "https://github.com/benhe119"
           },
-          "clone_url": "https://github.com/freeide/CVE-2019-0708-PoC-Exploit.git"
+          "clone_url": "https://github.com/benhe119/bluekeepscan.git"
+        },
+        {
+          "id": 188417390,
+          "name": "CVE-2019-0708-Tool",
+          "full_name": "SQLDebugger/CVE-2019-0708-Tool",
+          "html_url": "https://github.com/SQLDebugger/CVE-2019-0708-Tool",
+          "description": "50 first stargazers will get get the tool via email",
+          "stargazers_count": 0,
+          "forks_count": 12,
+          "language": "",
+          "updated_at": "2019-05-24T12:22:38Z",
+          "pushed_at": "2019-05-31T16:45:02Z",
+          "created_at": "2019-05-24T12:22:35Z",
+          "topics": [],
+          "owner": {
+            "login": "SQLDebugger",
+            "html_url": "https://github.com/SQLDebugger"
+          },
+          "clone_url": "https://github.com/SQLDebugger/CVE-2019-0708-Tool.git"
         },
         {
           "id": 229308908,
@@ -2677,7 +2764,7 @@
           "html_url": "https://github.com/ze0r/cve-2019-0808-poc",
           "description": "cve-2019-0808-poc",
           "stargazers_count": 47,
-          "forks_count": 15,
+          "forks_count": 16,
           "language": "C++",
           "updated_at": "2026-07-29T10:33:02Z",
           "pushed_at": "2019-03-25T12:10:40Z",
@@ -2829,10 +2916,10 @@
           "full_name": "padovah4ck/CVE-2019-0986",
           "html_url": "https://github.com/padovah4ck/CVE-2019-0986",
           "description": "Security Research",
-          "stargazers_count": 37,
+          "stargazers_count": 36,
           "forks_count": 9,
           "language": "C#",
-          "updated_at": "2026-11-06T23:52:37Z",
+          "updated_at": "2026-11-27T11:41:34Z",
           "pushed_at": "2021-12-23T16:31:30Z",
           "created_at": "2019-03-21T13:58:25Z",
           "topics": [],
@@ -2902,7 +2989,7 @@
           "html_url": "https://github.com/adamyordan/cve-2019-1003000-jenkins-rce-poc",
           "description": "Jenkins RCE Proof-of-Concept: SECURITY-1266 / CVE-2019-1003000 (Script Security), CVE-2019-1003001 (Pipeline: Groovy), CVE-2019-1003002 (Pipeline: Declarative)",
           "stargazers_count": 314,
-          "forks_count": 83,
+          "forks_count": 84,
           "language": "JavaScript",
           "updated_at": "2026-11-19T21:16:53Z",
           "pushed_at": "2019-04-01T13:19:49Z",
@@ -2979,7 +3066,7 @@
           "html_url": "https://github.com/adamyordan/cve-2019-1003000-jenkins-rce-poc",
           "description": "Jenkins RCE Proof-of-Concept: SECURITY-1266 / CVE-2019-1003000 (Script Security), CVE-2019-1003001 (Pipeline: Groovy), CVE-2019-1003002 (Pipeline: Declarative)",
           "stargazers_count": 314,
-          "forks_count": 83,
+          "forks_count": 84,
           "language": "JavaScript",
           "updated_at": "2026-11-19T21:16:53Z",
           "pushed_at": "2019-04-01T13:19:49Z",
@@ -3014,7 +3101,7 @@
           "html_url": "https://github.com/adamyordan/cve-2019-1003000-jenkins-rce-poc",
           "description": "Jenkins RCE Proof-of-Concept: SECURITY-1266 / CVE-2019-1003000 (Script Security), CVE-2019-1003001 (Pipeline: Groovy), CVE-2019-1003002 (Pipeline: Declarative)",
           "stargazers_count": 314,
-          "forks_count": 83,
+          "forks_count": 84,
           "language": "JavaScript",
           "updated_at": "2026-11-19T21:16:53Z",
           "pushed_at": "2019-04-01T13:19:49Z",
@@ -3187,10 +3274,10 @@
           "full_name": "Diefunction/CVE-2019-10149",
           "html_url": "https://github.com/Diefunction/CVE-2019-10149",
           "description": "CVE-2019-10149 : A flaw was found in Exim versions 4.87 to 4.91 (inclusive). Improper validation of recipient address in deliver_message() function in /src/deliver.c may lead to remote command execution.",
-          "stargazers_count": 21,
+          "stargazers_count": 20,
           "forks_count": 9,
           "language": "Python",
-          "updated_at": "2026-11-23T12:29:02Z",
+          "updated_at": "2026-11-24T09:48:59Z",
           "pushed_at": "2021-06-04T18:15:44Z",
           "created_at": "2019-10-27T01:03:11Z",
           "topics": [
@@ -3339,25 +3426,6 @@
             "html_url": "https://github.com/aishee"
           },
           "clone_url": "https://github.com/aishee/CVE-2019-10149-quick.git"
-        },
-        {
-          "id": 1232051049,
-          "name": "CVE-2019-10149",
-          "full_name": "Ambrella-Security/CVE-2019-10149",
-          "html_url": "https://github.com/Ambrella-Security/CVE-2019-10149",
-          "description": "Vulnerability Research and Exploit for CVE-2019-10149",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-05-07T14:48:45Z",
-          "pushed_at": "2026-05-07T14:40:37Z",
-          "created_at": "2026-05-07T14:40:12Z",
-          "topics": [],
-          "owner": {
-            "login": "Ambrella-Security",
-            "html_url": "https://github.com/Ambrella-Security"
-          },
-          "clone_url": "https://github.com/Ambrella-Security/CVE-2019-10149.git"
         }
       ]
     },
@@ -3583,6 +3651,36 @@
             "html_url": "https://github.com/JonyFilc"
           },
           "clone_url": "https://github.com/JonyFilc/PrintSpoofer-ReflectiveDLL.git"
+        },
+        {
+          "id": 1473219051,
+          "name": "CVE-2019-1040",
+          "full_name": "googlesky/CVE-2019-1040",
+          "html_url": "https://github.com/googlesky/CVE-2019-1040",
+          "description": "NTLM MIC bypass enables credential relay and downgrade. Fixed in September 2019 update. Differential: auth succeeds on vuln, refused on fixed",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-11-26T13:45:01Z",
+          "pushed_at": "2026-11-26T13:49:06Z",
+          "created_at": "2026-11-26T13:44:48Z",
+          "topics": [
+            "cve-2026-2019-1040",
+            "cwe-345",
+            "mic-bypass",
+            "ntlm",
+            "poc",
+            "proof-of-concept",
+            "python",
+            "relay",
+            "security-research",
+            "vulnerability-research"
+          ],
+          "owner": {
+            "login": "googlesky",
+            "html_url": "https://github.com/googlesky"
+          },
+          "clone_url": "https://github.com/googlesky/CVE-2019-1040.git"
         }
       ]
     },
@@ -3812,25 +3910,6 @@
             "html_url": "https://github.com/jimahub"
           },
           "clone_url": "https://github.com/jimahub/scenario-b-warn.git"
-        },
-        {
-          "id": 1235030462,
-          "name": "aurora-demo-lockfile",
-          "full_name": "mlbrilliance/aurora-demo-lockfile",
-          "html_url": "https://github.com/mlbrilliance/aurora-demo-lockfile",
-          "description": "AURORA demo target — deliberately vulnerable lockfiles (CVE-2019-10744, CVE-2018-18074, CVE-2020-26160)",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-05-11T00:13:11Z",
-          "pushed_at": "2026-05-11T00:13:06Z",
-          "created_at": "2026-05-11T00:11:54Z",
-          "topics": [],
-          "owner": {
-            "login": "mlbrilliance",
-            "html_url": "https://github.com/mlbrilliance"
-          },
-          "clone_url": "https://github.com/mlbrilliance/aurora-demo-lockfile.git"
         }
       ]
     },
@@ -3910,10 +3989,10 @@
           "full_name": "KTN1990/CVE-2019-10869",
           "html_url": "https://github.com/KTN1990/CVE-2019-10869",
           "description": "(Wordpress) Ninja Forms File Uploads Extension \u003c= 3.0.22 – Unauthenticated Arbitrary File Upload",
-          "stargazers_count": 17,
+          "stargazers_count": 16,
           "forks_count": 6,
           "language": "Python",
-          "updated_at": "2026-09-09T17:58:41Z",
+          "updated_at": "2026-11-27T11:41:43Z",
           "pushed_at": "2019-05-17T10:41:43Z",
           "created_at": "2019-05-12T08:20:16Z",
           "topics": [],
@@ -4022,10 +4101,10 @@
           "full_name": "neex/phuip-fpizdam",
           "html_url": "https://github.com/neex/phuip-fpizdam",
           "description": "Exploit for CVE-2019-11043",
-          "stargazers_count": 1837,
-          "forks_count": 248,
+          "stargazers_count": 1838,
+          "forks_count": 249,
           "language": "Go",
-          "updated_at": "2026-11-19T21:32:42Z",
+          "updated_at": "2026-11-25T23:44:58Z",
           "pushed_at": "2019-11-12T18:53:14Z",
           "created_at": "2019-09-23T21:37:27Z",
           "topics": [],
@@ -4934,10 +5013,10 @@
           "full_name": "jas502n/CVE-2019-11580",
           "html_url": "https://github.com/jas502n/CVE-2019-11580",
           "description": "CVE-2019-11580 Atlassian Crowd and Crowd Data Center RCE",
-          "stargazers_count": 105,
+          "stargazers_count": 104,
           "forks_count": 19,
           "language": "Python",
-          "updated_at": "2026-05-18T02:48:18Z",
+          "updated_at": "2026-11-25T05:52:18Z",
           "pushed_at": "2019-07-18T10:03:28Z",
           "created_at": "2019-07-17T07:54:38Z",
           "topics": [],
@@ -5201,7 +5280,7 @@
           "html_url": "https://github.com/dorkerdevil/CVE-2019-11932",
           "description": " double-free bug in WhatsApp exploit poc",
           "stargazers_count": 267,
-          "forks_count": 70,
+          "forks_count": 71,
           "language": "C",
           "updated_at": "2026-11-01T20:55:39Z",
           "pushed_at": "2021-03-19T17:23:25Z",
@@ -5787,10 +5866,10 @@
           "full_name": "MagicZer0/Jackson_RCE-CVE-2019-12384",
           "html_url": "https://github.com/MagicZer0/Jackson_RCE-CVE-2019-12384",
           "description": "CVE-2019-12384 漏洞测试环境",
-          "stargazers_count": 21,
+          "stargazers_count": 20,
           "forks_count": 4,
           "language": "Java",
-          "updated_at": "2025-05-07T00:14:25Z",
+          "updated_at": "2026-11-25T05:52:20Z",
           "pushed_at": "2022-11-16T11:52:18Z",
           "created_at": "2019-07-26T03:24:38Z",
           "topics": [],
@@ -5990,10 +6069,10 @@
           "full_name": "padovah4ck/CVE-2019-1253",
           "html_url": "https://github.com/padovah4ck/CVE-2019-1253",
           "description": "Poc for CVE-2019-1253",
-          "stargazers_count": 153,
+          "stargazers_count": 152,
           "forks_count": 37,
           "language": "C#",
-          "updated_at": "2026-11-06T23:53:07Z",
+          "updated_at": "2026-11-27T11:42:03Z",
           "pushed_at": "2021-12-23T16:29:43Z",
           "created_at": "2019-09-11T20:40:15Z",
           "topics": [],
@@ -6351,6 +6430,25 @@
             "html_url": "https://github.com/oldthree3"
           },
           "clone_url": "https://github.com/oldthree3/CVE-2019-12735-VIM-NEOVIM.git"
+        },
+        {
+          "id": 1473031954,
+          "name": "vimplugin-audit",
+          "full_name": "eltociear/vimplugin-audit",
+          "html_url": "https://github.com/eltociear/vimplugin-audit",
+          "description": "Scan Vim and Neovim plugins for malicious code (startup/install-time context, modeline CVE-2019-12735 shape, loadstring(base64), API-key exfil). Zero-dep Python.",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-11-26T10:53:20Z",
+          "pushed_at": "2026-11-27T09:56:29Z",
+          "created_at": "2026-11-26T10:53:06Z",
+          "topics": [],
+          "owner": {
+            "login": "eltociear",
+            "html_url": "https://github.com/eltociear"
+          },
+          "clone_url": "https://github.com/eltociear/vimplugin-audit.git"
         }
       ]
     },
@@ -6935,10 +7033,10 @@
           "full_name": "apt69/COMahawk",
           "html_url": "https://github.com/apt69/COMahawk",
           "description": "Privilege Escalation: Weaponizing CVE-2019-1405 and CVE-2019-1322",
-          "stargazers_count": 345,
+          "stargazers_count": 346,
           "forks_count": 72,
           "language": "C++",
-          "updated_at": "2026-11-19T21:36:04Z",
+          "updated_at": "2026-11-26T00:04:47Z",
           "pushed_at": "2019-11-14T14:16:54Z",
           "created_at": "2019-11-13T16:34:03Z",
           "topics": [],
@@ -7028,6 +7126,36 @@
             "html_url": "https://github.com/bigbigliang-malwarebenchmark"
           },
           "clone_url": "https://github.com/bigbigliang-malwarebenchmark/cve-2019-13272.git"
+        },
+        {
+          "id": 1473248178,
+          "name": "CVE-2019-13272",
+          "full_name": "googlesky/CVE-2019-13272",
+          "html_url": "https://github.com/googlesky/CVE-2019-13272",
+          "description": "Linux ptrace credential record flaw gives local root. Fixed in 5.1.17. Differential: pre-exec creds reused on vuln, refreshed on fixed",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-11-26T14:09:26Z",
+          "pushed_at": "2026-11-26T14:13:24Z",
+          "created_at": "2026-11-26T14:09:09Z",
+          "topics": [
+            "cve-2026-2019-13272",
+            "cwe-269",
+            "linux-kernel",
+            "poc",
+            "privilege-escalation",
+            "proof-of-concept",
+            "ptrace",
+            "python",
+            "security-research",
+            "vulnerability-research"
+          ],
+          "owner": {
+            "login": "googlesky",
+            "html_url": "https://github.com/googlesky"
+          },
+          "clone_url": "https://github.com/googlesky/CVE-2019-13272.git"
         }
       ]
     },
@@ -7339,10 +7467,10 @@
           "full_name": "apt69/COMahawk",
           "html_url": "https://github.com/apt69/COMahawk",
           "description": "Privilege Escalation: Weaponizing CVE-2019-1405 and CVE-2019-1322",
-          "stargazers_count": 345,
+          "stargazers_count": 346,
           "forks_count": 72,
           "language": "C++",
-          "updated_at": "2026-11-19T21:36:04Z",
+          "updated_at": "2026-11-26T00:04:47Z",
           "pushed_at": "2019-11-14T14:16:54Z",
           "created_at": "2019-11-13T16:34:03Z",
           "topics": [],
@@ -8662,6 +8790,31 @@
             "html_url": "https://github.com/Barakat"
           },
           "clone_url": "https://github.com/Barakat/CVE-2019-16098.git"
+        },
+        {
+          "id": 801114665,
+          "name": "RTCore64-CVE-2019-16098",
+          "full_name": "Fl0sec/RTCore64-CVE-2019-16098",
+          "html_url": "https://github.com/Fl0sec/RTCore64-CVE-2019-16098",
+          "description": "Static analysis of RTCore64.sys (MSI Afterburner 4.6.2), its IOCTL SDK and an LPE PoC (CVE-2019-16098)",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "C++",
+          "updated_at": "2026-11-25T18:14:50Z",
+          "pushed_at": "2026-11-25T18:13:58Z",
+          "created_at": "2024-05-15T16:08:33Z",
+          "topics": [
+            "cve",
+            "driver",
+            "privilege-escalation",
+            "reverse-engineering",
+            "windows-kernel"
+          ],
+          "owner": {
+            "login": "Fl0sec",
+            "html_url": "https://github.com/Fl0sec"
+          },
+          "clone_url": "https://github.com/Fl0sec/RTCore64-CVE-2019-16098.git"
         }
       ]
     },
@@ -8860,10 +9013,10 @@
           "full_name": "0x27/CiscoRV320Dump",
           "html_url": "https://github.com/0x27/CiscoRV320Dump",
           "description": "CVE-2019-1652 /CVE-2019-1653 Exploits For Dumping Cisco RV320 Configurations \u0026 Debugging Data AND Remote Root Exploit!",
-          "stargazers_count": 229,
+          "stargazers_count": 230,
           "forks_count": 64,
           "language": "Python",
-          "updated_at": "2026-11-19T09:56:21Z",
+          "updated_at": "2026-11-25T02:55:31Z",
           "pushed_at": "2019-02-08T12:38:05Z",
           "created_at": "2019-01-24T10:12:44Z",
           "topics": [
@@ -8889,10 +9042,10 @@
           "full_name": "0x27/CiscoRV320Dump",
           "html_url": "https://github.com/0x27/CiscoRV320Dump",
           "description": "CVE-2019-1652 /CVE-2019-1653 Exploits For Dumping Cisco RV320 Configurations \u0026 Debugging Data AND Remote Root Exploit!",
-          "stargazers_count": 229,
+          "stargazers_count": 230,
           "forks_count": 64,
           "language": "Python",
-          "updated_at": "2026-11-19T09:56:21Z",
+          "updated_at": "2026-11-25T02:55:31Z",
           "pushed_at": "2019-02-08T12:38:05Z",
           "created_at": "2019-01-24T10:12:44Z",
           "topics": [
@@ -9498,6 +9651,71 @@
             "html_url": "https://github.com/CyberCTF"
           },
           "clone_url": "https://github.com/CyberCTF/vulhub-solr-cve-2019-17558.git"
+        },
+        {
+          "id": 1473151348,
+          "name": "CVE-2019-17558",
+          "full_name": "googlesky/CVE-2019-17558",
+          "html_url": "https://github.com/googlesky/CVE-2019-17558",
+          "description": "Apache Solr VelocityResponseWriter renders a user-provided template as code. Fixed in 8.3.1. Differential: directive executed on vuln, refused on fixed",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-11-26T12:46:30Z",
+          "pushed_at": "2026-11-26T12:54:15Z",
+          "created_at": "2026-11-26T12:46:16Z",
+          "topics": [
+            "cve-2026-2019-17558",
+            "cwe-94",
+            "poc",
+            "proof-of-concept",
+            "python",
+            "rce",
+            "security-research",
+            "solr",
+            "velocity",
+            "vulnerability-research"
+          ],
+          "owner": {
+            "login": "googlesky",
+            "html_url": "https://github.com/googlesky"
+          },
+          "clone_url": "https://github.com/googlesky/CVE-2019-17558.git"
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2019-17563",
+      "repositories": [
+        {
+          "id": 1473219659,
+          "name": "CVE-2019-17563",
+          "full_name": "googlesky/CVE-2019-17563",
+          "html_url": "https://github.com/googlesky/CVE-2019-17563",
+          "description": "Tomcat FORM auth session fixation in a narrow login window. Fixed in 9.0.29/8.5.49/7.0.98. Differential: session reused on vuln, rotated on fixed",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-11-26T13:45:31Z",
+          "pushed_at": "2026-11-26T13:49:21Z",
+          "created_at": "2026-11-26T13:45:18Z",
+          "topics": [
+            "cve-2026-2019-17563",
+            "cwe-384",
+            "form-auth",
+            "poc",
+            "proof-of-concept",
+            "python",
+            "security-research",
+            "session-fixation",
+            "tomcat",
+            "vulnerability-research"
+          ],
+          "owner": {
+            "login": "googlesky",
+            "html_url": "https://github.com/googlesky"
+          },
+          "clone_url": "https://github.com/googlesky/CVE-2019-17563.git"
         }
       ]
     },
@@ -9546,6 +9764,36 @@
             "html_url": "https://github.com/shadow-horse"
           },
           "clone_url": "https://github.com/shadow-horse/CVE-2019-17571.git"
+        },
+        {
+          "id": 1473172821,
+          "name": "CVE-2019-17571",
+          "full_name": "googlesky/CVE-2019-17571",
+          "html_url": "https://github.com/googlesky/CVE-2019-17571",
+          "description": "Log4j 1.x SocketServer deserializes untrusted log events for RCE. Fixed by disabling SocketServer / migrating to Log4j 2. Differential: gadget executed on vuln, refused on fixed",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-11-26T13:05:33Z",
+          "pushed_at": "2026-11-26T13:11:12Z",
+          "created_at": "2026-11-26T13:05:20Z",
+          "topics": [
+            "cve-2026-2019-17571",
+            "cwe-502",
+            "deserialization",
+            "log4j",
+            "poc",
+            "proof-of-concept",
+            "python",
+            "rce",
+            "security-research",
+            "vulnerability-research"
+          ],
+          "owner": {
+            "login": "googlesky",
+            "html_url": "https://github.com/googlesky"
+          },
+          "clone_url": "https://github.com/googlesky/CVE-2019-17571.git"
         }
       ]
     },
@@ -9845,7 +10093,7 @@
           "html_url": "https://github.com/noperator/CVE-2019-18935",
           "description": "RCE exploit for a .NET JSON deserialization vulnerability in Telerik UI for ASP.NET AJAX.",
           "stargazers_count": 371,
-          "forks_count": 87,
+          "forks_count": 88,
           "language": "Python",
           "updated_at": "2026-11-19T21:38:03Z",
           "pushed_at": "2022-04-14T18:23:38Z",
@@ -10415,6 +10663,41 @@
       ]
     },
     {
+      "cve_id": "CVE-2019-19781",
+      "repositories": [
+        {
+          "id": 1473277167,
+          "name": "CVE-2019-19781",
+          "full_name": "googlesky/CVE-2019-19781",
+          "html_url": "https://github.com/googlesky/CVE-2019-19781",
+          "description": "Citrix ADC/Gateway directory traversal to template RCE. Fixed in January 2020 update. Differential: traversal on vuln, refused on fixed",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-11-26T14:33:24Z",
+          "pushed_at": "2026-11-26T14:37:25Z",
+          "created_at": "2026-11-26T14:33:10Z",
+          "topics": [
+            "citrix-adc",
+            "cve-2026-2019-19781",
+            "cwe-22",
+            "path-traversal",
+            "poc",
+            "proof-of-concept",
+            "python",
+            "rce",
+            "security-research",
+            "vulnerability-research"
+          ],
+          "owner": {
+            "login": "googlesky",
+            "html_url": "https://github.com/googlesky"
+          },
+          "clone_url": "https://github.com/googlesky/CVE-2019-19781.git"
+        }
+      ]
+    },
+    {
       "cve_id": "CVE-2019-19844",
       "repositories": [
         {
@@ -10460,6 +10743,36 @@
             "html_url": "https://github.com/andripwn"
           },
           "clone_url": "https://github.com/andripwn/django_cve201919844.git"
+        },
+        {
+          "id": 1473147854,
+          "name": "CVE-2019-19844",
+          "full_name": "googlesky/CVE-2019-19844",
+          "html_url": "https://github.com/googlesky/CVE-2019-19844",
+          "description": "Django password reset matches case-transformed emails, enabling account takeover. Fixed in 1.11.27 / 2.2.9 / 3.0.2. Differential: token sent to victim on vuln, refused on fixed",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-11-26T12:43:17Z",
+          "pushed_at": "2026-11-26T12:52:46Z",
+          "created_at": "2026-11-26T12:43:03Z",
+          "topics": [
+            "account-takeover",
+            "cve-2026-2019-19844",
+            "cwe-640",
+            "django",
+            "password-reset",
+            "poc",
+            "proof-of-concept",
+            "python",
+            "security-research",
+            "vulnerability-research"
+          ],
+          "owner": {
+            "login": "googlesky",
+            "html_url": "https://github.com/googlesky"
+          },
+          "clone_url": "https://github.com/googlesky/CVE-2019-19844.git"
         }
       ]
     },
@@ -10521,25 +10834,6 @@
             "html_url": "https://github.com/CyberCTF"
           },
           "clone_url": "https://github.com/CyberCTF/vulhub-influxdb-cve-2019-20933.git"
-        },
-        {
-          "id": 1252501618,
-          "name": "CVE-2019-20933",
-          "full_name": "Dungsocool/CVE-2019-20933",
-          "html_url": "https://github.com/Dungsocool/CVE-2019-20933",
-          "description": "Lab 5: InfluxDB Authentication Bypass (CVE-2019-20933) - Writeup and Exploit",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-05-28T15:29:44Z",
-          "pushed_at": "2026-05-28T15:27:23Z",
-          "created_at": "2026-05-28T15:27:02Z",
-          "topics": [],
-          "owner": {
-            "login": "Dungsocool",
-            "html_url": "https://github.com/Dungsocool"
-          },
-          "clone_url": "https://github.com/Dungsocool/CVE-2019-20933.git"
         }
       ]
     },
@@ -10647,25 +10941,6 @@
           "clone_url": "https://github.com/flipphoneguy/root-sonim-xp3800.git"
         },
         {
-          "id": 1330178660,
-          "name": "CVE_2019_2215",
-          "full_name": "0xbinder/CVE_2019_2215",
-          "html_url": "https://github.com/0xbinder/CVE_2019_2215",
-          "description": "A rewritten Proof-of-Concept / Local Privilege Escalation (LPE) exploit targeting CVE-2019-2215, a Use-After-Free vulnerability in the Android Binder driver.",
-          "stargazers_count": 6,
-          "forks_count": 0,
-          "language": "C",
-          "updated_at": "2026-11-11T09:57:11Z",
-          "pushed_at": "2026-08-25T08:24:09Z",
-          "created_at": "2026-08-10T19:27:11Z",
-          "topics": [],
-          "owner": {
-            "login": "0xbinder",
-            "html_url": "https://github.com/0xbinder"
-          },
-          "clone_url": "https://github.com/0xbinder/CVE_2019_2215.git"
-        },
-        {
           "id": 215683959,
           "name": "CVE-2019-2215",
           "full_name": "ATorNinja/CVE-2019-2215",
@@ -10685,6 +10960,25 @@
           "clone_url": "https://github.com/ATorNinja/CVE-2019-2215.git"
         },
         {
+          "id": 1330178660,
+          "name": "CVE_2019_2215",
+          "full_name": "0xbinder/CVE_2019_2215",
+          "html_url": "https://github.com/0xbinder/CVE_2019_2215",
+          "description": "A rewritten Proof-of-Concept / Local Privilege Escalation (LPE) exploit targeting CVE-2019-2215, a Use-After-Free vulnerability in the Android Binder driver.",
+          "stargazers_count": 4,
+          "forks_count": 0,
+          "language": "C",
+          "updated_at": "2026-11-27T11:55:34Z",
+          "pushed_at": "2026-08-25T08:24:09Z",
+          "created_at": "2026-08-10T19:27:11Z",
+          "topics": [],
+          "owner": {
+            "login": "0xbinder",
+            "html_url": "https://github.com/0xbinder"
+          },
+          "clone_url": "https://github.com/0xbinder/CVE_2019_2215.git"
+        },
+        {
           "id": 1369860644,
           "name": "sony-bravia-root-toolkit",
           "full_name": "saaedimam/sony-bravia-root-toolkit",
@@ -10702,6 +10996,25 @@
             "html_url": "https://github.com/saaedimam"
           },
           "clone_url": "https://github.com/saaedimam/sony-bravia-root-toolkit.git"
+        },
+        {
+          "id": 1467596920,
+          "name": "CVE-2019-2215-ForMIpad4-NEW-GUI",
+          "full_name": "RxinnotRstar/CVE-2019-2215-ForMIpad4-NEW-GUI",
+          "html_url": "https://github.com/RxinnotRstar/CVE-2019-2215-ForMIpad4-NEW-GUI",
+          "description": "小米平板4（clover）CVE-2019-2215 内存态 root 工具新界面（KernelSU 风格）历代源码存档",
+          "stargazers_count": 1,
+          "forks_count": 0,
+          "language": "Java",
+          "updated_at": "2026-11-24T15:45:50Z",
+          "pushed_at": "2026-11-23T16:44:18Z",
+          "created_at": "2026-11-22T13:38:22Z",
+          "topics": [],
+          "owner": {
+            "login": "RxinnotRstar",
+            "html_url": "https://github.com/RxinnotRstar"
+          },
+          "clone_url": "https://github.com/RxinnotRstar/CVE-2019-2215-ForMIpad4-NEW-GUI.git"
         },
         {
           "id": 1452206530,
@@ -10740,44 +11053,6 @@
             "html_url": "https://github.com/Begitdj"
           },
           "clone_url": "https://github.com/Begitdj/cve-2019-2215-markw.git"
-        },
-        {
-          "id": 1408673824,
-          "name": "cve-2019-2215-oppo-a77t",
-          "full_name": "WJNKAC/cve-2019-2215-oppo-a77t",
-          "html_url": "https://github.com/WJNKAC/cve-2019-2215-oppo-a77t",
-          "description": "在AI辅助下利用cve-2019-2215 完成OPPO A77t提权",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "C",
-          "updated_at": "2026-10-07T12:22:28Z",
-          "pushed_at": "2026-10-07T12:22:24Z",
-          "created_at": "2026-10-07T11:21:53Z",
-          "topics": [],
-          "owner": {
-            "login": "WJNKAC",
-            "html_url": "https://github.com/WJNKAC"
-          },
-          "clone_url": "https://github.com/WJNKAC/cve-2019-2215-oppo-a77t.git"
-        },
-        {
-          "id": 1413570923,
-          "name": "odin-od105-devkit",
-          "full_name": "FDLAlfrid/odin-od105-devkit",
-          "html_url": "https://github.com/FDLAlfrid/odin-od105-devkit",
-          "description": "CVE-2019-2215 temporary root toolkit for Smartisan Nut Pro (OD105)",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "C",
-          "updated_at": "2026-10-10T19:20:34Z",
-          "pushed_at": "2026-11-23T07:35:54Z",
-          "created_at": "2026-10-10T19:09:32Z",
-          "topics": [],
-          "owner": {
-            "login": "FDLAlfrid",
-            "html_url": "https://github.com/FDLAlfrid"
-          },
-          "clone_url": "https://github.com/FDLAlfrid/odin-od105-devkit.git"
         },
         {
           "id": 1467289910,
@@ -10824,6 +11099,25 @@
           "clone_url": "https://github.com/neohob/odinroot.git"
         },
         {
+          "id": 1413570923,
+          "name": "odin-od105-devkit",
+          "full_name": "FDLAlfrid/odin-od105-devkit",
+          "html_url": "https://github.com/FDLAlfrid/odin-od105-devkit",
+          "description": "CVE-2019-2215 temporary root toolkit for Smartisan Nut Pro (OD105)",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "C",
+          "updated_at": "2026-10-10T19:20:34Z",
+          "pushed_at": "2026-11-26T13:41:17Z",
+          "created_at": "2026-10-10T19:09:32Z",
+          "topics": [],
+          "owner": {
+            "login": "FDLAlfrid",
+            "html_url": "https://github.com/FDLAlfrid"
+          },
+          "clone_url": "https://github.com/FDLAlfrid/odin-od105-devkit.git"
+        },
+        {
           "id": 1305697497,
           "name": "CVE-2019-2215",
           "full_name": "NESTle19/CVE-2019-2215",
@@ -10843,23 +11137,23 @@
           "clone_url": "https://github.com/NESTle19/CVE-2019-2215.git"
         },
         {
-          "id": 1467596920,
-          "name": "CVE-2019-2215-ForMIpad4-NEW-GUI",
-          "full_name": "RxinnotRstar/CVE-2019-2215-ForMIpad4-NEW-GUI",
-          "html_url": "https://github.com/RxinnotRstar/CVE-2019-2215-ForMIpad4-NEW-GUI",
-          "description": "小米平板4（clover）CVE-2019-2215 内存态 root 工具新界面（KernelSU 风格）历代源码存档",
+          "id": 1450160220,
+          "name": "CVE-2019-2215-ForMIpad4",
+          "full_name": "RxinnotRstar/CVE-2019-2215-ForMIpad4",
+          "html_url": "https://github.com/RxinnotRstar/CVE-2019-2215-ForMIpad4",
+          "description": "使用CVE-2019-2215 对miui10的小米平板4的临时root获取软件。",
           "stargazers_count": 0,
           "forks_count": 0,
           "language": "Java",
-          "updated_at": "2026-11-22T13:40:14Z",
-          "pushed_at": "2026-11-23T16:44:18Z",
-          "created_at": "2026-11-22T13:38:22Z",
+          "updated_at": "2026-11-08T11:57:28Z",
+          "pushed_at": "2026-11-08T11:57:24Z",
+          "created_at": "2026-11-08T09:55:38Z",
           "topics": [],
           "owner": {
             "login": "RxinnotRstar",
             "html_url": "https://github.com/RxinnotRstar"
           },
-          "clone_url": "https://github.com/RxinnotRstar/CVE-2019-2215-ForMIpad4-NEW-GUI.git"
+          "clone_url": "https://github.com/RxinnotRstar/CVE-2019-2215-ForMIpad4.git"
         },
         {
           "id": 1278217765,
@@ -10879,25 +11173,6 @@
             "html_url": "https://github.com/mythicaltree"
           },
           "clone_url": "https://github.com/mythicaltree/CVE-2019-2215.git"
-        },
-        {
-          "id": 1450160220,
-          "name": "CVE-2019-2215-ForMIpad4",
-          "full_name": "RxinnotRstar/CVE-2019-2215-ForMIpad4",
-          "html_url": "https://github.com/RxinnotRstar/CVE-2019-2215-ForMIpad4",
-          "description": "使用CVE-2019-2215 对miui10的小米平板4的临时root获取软件。",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Java",
-          "updated_at": "2026-11-08T11:57:28Z",
-          "pushed_at": "2026-11-08T11:57:24Z",
-          "created_at": "2026-11-08T09:55:38Z",
-          "topics": [],
-          "owner": {
-            "login": "RxinnotRstar",
-            "html_url": "https://github.com/RxinnotRstar"
-          },
-          "clone_url": "https://github.com/RxinnotRstar/CVE-2019-2215-ForMIpad4.git"
         },
         {
           "id": 1430678696,
@@ -10943,6 +11218,25 @@
             "html_url": "https://github.com/kilokite"
           },
           "clone_url": "https://github.com/kilokite/old-phone-temp-root.git"
+        },
+        {
+          "id": 1408673824,
+          "name": "cve-2019-2215-oppo-a77t",
+          "full_name": "WJNKAC/cve-2019-2215-oppo-a77t",
+          "html_url": "https://github.com/WJNKAC/cve-2019-2215-oppo-a77t",
+          "description": "在AI辅助下利用cve-2019-2215 完成OPPO A77t提权",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "C",
+          "updated_at": "2026-10-07T12:22:28Z",
+          "pushed_at": "2026-10-07T12:22:24Z",
+          "created_at": "2026-10-07T11:21:53Z",
+          "topics": [],
+          "owner": {
+            "login": "WJNKAC",
+            "html_url": "https://github.com/WJNKAC"
+          },
+          "clone_url": "https://github.com/WJNKAC/cve-2019-2215-oppo-a77t.git"
         }
       ]
     },
@@ -11132,10 +11426,10 @@
           "full_name": "jas502n/cve-2019-2618",
           "html_url": "https://github.com/jas502n/cve-2019-2618",
           "description": "Weblogic Upload Vuln(Need  username password)-CVE-2019-2618",
-          "stargazers_count": 173,
+          "stargazers_count": 170,
           "forks_count": 47,
           "language": "Python",
-          "updated_at": "2026-01-31T00:36:26Z",
+          "updated_at": "2026-11-25T05:52:10Z",
           "pushed_at": "2019-04-17T15:05:09Z",
           "created_at": "2019-04-17T12:23:24Z",
           "topics": [],
@@ -11455,6 +11749,36 @@
           "clone_url": "https://github.com/davidmthomsen/CVE-2019-2725.git"
         },
         {
+          "id": 1473176109,
+          "name": "CVE-2019-2725",
+          "full_name": "googlesky/CVE-2019-2725",
+          "html_url": "https://github.com/googlesky/CVE-2019-2725",
+          "description": "Oracle WebLogic wls-wsat deserializes unsafe XML types for RCE. Fixed in April 2019 CPU. Differential: gadget executed on vuln, refused on fixed",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "Python",
+          "updated_at": "2026-11-26T13:08:29Z",
+          "pushed_at": "2026-11-26T13:12:43Z",
+          "created_at": "2026-11-26T13:08:14Z",
+          "topics": [
+            "cve-2026-2019-2725",
+            "cwe-502",
+            "deserialization",
+            "poc",
+            "proof-of-concept",
+            "python",
+            "security-research",
+            "soap",
+            "vulnerability-research",
+            "weblogic"
+          ],
+          "owner": {
+            "login": "googlesky",
+            "html_url": "https://github.com/googlesky"
+          },
+          "clone_url": "https://github.com/googlesky/CVE-2019-2725.git"
+        },
+        {
           "id": 186536395,
           "name": "CNTA-2019-0014xCVE-2019-2725",
           "full_name": "peterpeter228/CNTA-2019-0014xCVE-2019-2725",
@@ -11547,7 +11871,7 @@
           "html_url": "https://github.com/jas502n/CVE-2019-2888",
           "description": "WebLogic EJBTaglibDescriptor XXE漏洞(CVE-2019-2888)",
           "stargazers_count": 59,
-          "forks_count": 22,
+          "forks_count": 21,
           "language": "Java",
           "updated_at": "2026-09-09T06:14:03Z",
           "pushed_at": "2019-11-02T10:47:46Z",
@@ -13082,30 +13406,6 @@
       ]
     },
     {
-      "cve_id": "CVE-2019-5784",
-      "repositories": [
-        {
-          "id": 831753735,
-          "name": "CVE-2019-5784-PoC",
-          "full_name": "rooootdev/CVE-2019-5784-PoC",
-          "html_url": "https://github.com/rooootdev/CVE-2019-5784-PoC",
-          "description": "a proof of concept for CVE-2019-5784",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "HTML",
-          "updated_at": "2026-05-07T13:15:27Z",
-          "pushed_at": "2026-05-07T13:15:18Z",
-          "created_at": "2024-07-21T14:30:28Z",
-          "topics": [],
-          "owner": {
-            "login": "rooootdev",
-            "html_url": "https://github.com/rooootdev"
-          },
-          "clone_url": "https://github.com/rooootdev/CVE-2019-5784-PoC.git"
-        }
-      ]
-    },
-    {
       "cve_id": "CVE-2019-5786",
       "repositories": [
         {
@@ -13429,10 +13729,10 @@
           "full_name": "oways/CVE-2019-6340",
           "html_url": "https://github.com/oways/CVE-2019-6340",
           "description": "CVE-2019-6340 POC Drupal rce",
-          "stargazers_count": 11,
+          "stargazers_count": 12,
           "forks_count": 8,
           "language": "Python",
-          "updated_at": "2026-10-08T10:27:14Z",
+          "updated_at": "2026-11-25T02:55:32Z",
           "pushed_at": "2019-02-25T08:57:14Z",
           "created_at": "2019-02-25T07:47:16Z",
           "topics": [],
@@ -13460,32 +13760,6 @@
             "html_url": "https://github.com/DevDungeon"
           },
           "clone_url": "https://github.com/DevDungeon/CVE-2019-6340-Drupal-8.6.9-REST-Auth-Bypass.git"
-        },
-        {
-          "id": 1250793133,
-          "name": "Drupal_REST-RCE_Unauthenticated",
-          "full_name": "joaoaugustom/Drupal_REST-RCE_Unauthenticated",
-          "html_url": "https://github.com/joaoaugustom/Drupal_REST-RCE_Unauthenticated",
-          "description": "This exploit is based on CVE-2019-6340 and was built upon the original exploit by leonjza and the Metasploit module, extending it can be executed multiple times against the same target without waiting for cache expiration.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-05-31T19:35:32Z",
-          "pushed_at": "2026-05-31T19:35:28Z",
-          "created_at": "2026-05-27T01:16:33Z",
-          "topics": [
-            "cve",
-            "cve-2019-6340",
-            "drupal",
-            "drupal-8",
-            "exploit",
-            "penetration-testing"
-          ],
-          "owner": {
-            "login": "joaoaugustom",
-            "html_url": "https://github.com/joaoaugustom"
-          },
-          "clone_url": "https://github.com/joaoaugustom/Drupal_REST-RCE_Unauthenticated.git"
         },
         {
           "id": 175109773,
@@ -14143,10 +14417,10 @@
           "full_name": "mpgn/CVE-2019-7609",
           "html_url": "https://github.com/mpgn/CVE-2019-7609",
           "description": "RCE on Kibana versions before 5.6.15 and 6.6.0 in the Timelion visualizer",
-          "stargazers_count": 59,
+          "stargazers_count": 58,
           "forks_count": 12,
           "language": "",
-          "updated_at": "2026-11-18T13:25:09Z",
+          "updated_at": "2026-11-27T15:37:05Z",
           "pushed_at": "2019-12-20T14:28:44Z",
           "created_at": "2019-10-21T07:32:31Z",
           "topics": [
@@ -14220,49 +14494,6 @@
             "html_url": "https://github.com/xw77cve"
           },
           "clone_url": "https://github.com/xw77cve/CVE-2019-7642.git"
-        }
-      ]
-    },
-    {
-      "cve_id": "CVE-2019-7711",
-      "repositories": [
-        {
-          "id": 1233895702,
-          "name": "CVE-2019-7711",
-          "full_name": "kaleth4/CVE-2019-7711",
-          "html_url": "https://github.com/kaleth4/CVE-2019-7711",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-05-09T14:02:44Z",
-          "pushed_at": "2026-05-09T14:02:40Z",
-          "created_at": "2026-05-09T13:45:15Z",
-          "topics": [],
-          "owner": {
-            "login": "kaleth4",
-            "html_url": "https://github.com/kaleth4"
-          },
-          "clone_url": "https://github.com/kaleth4/CVE-2019-7711.git"
-        },
-        {
-          "id": 1228745383,
-          "name": "RTOS-F-16-Exploit---CVE-2019-7711",
-          "full_name": "mbanyamer/RTOS-F-16-Exploit---CVE-2019-7711",
-          "html_url": "https://github.com/mbanyamer/RTOS-F-16-Exploit---CVE-2019-7711",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-05-04T10:34:59Z",
-          "pushed_at": "2026-05-04T10:34:55Z",
-          "created_at": "2026-05-04T10:32:21Z",
-          "topics": [],
-          "owner": {
-            "login": "mbanyamer",
-            "html_url": "https://github.com/mbanyamer"
-          },
-          "clone_url": "https://github.com/mbanyamer/RTOS-F-16-Exploit---CVE-2019-7711.git"
         }
       ]
     },
@@ -14342,10 +14573,10 @@
           "full_name": "0xbug/CVE-2019-8451",
           "html_url": "https://github.com/0xbug/CVE-2019-8451",
           "description": "https://jira.atlassian.com/browse/JRASERVER-69793",
-          "stargazers_count": 11,
+          "stargazers_count": 10,
           "forks_count": 3,
           "language": "",
-          "updated_at": "2026-11-05T16:55:57Z",
+          "updated_at": "2026-11-27T11:42:05Z",
           "pushed_at": "2019-09-16T10:47:45Z",
           "created_at": "2019-09-16T10:39:40Z",
           "topics": [],
@@ -14552,10 +14783,10 @@
           "full_name": "brianwrf/WordPress_4.9.8_RCE_POC",
           "html_url": "https://github.com/brianwrf/WordPress_4.9.8_RCE_POC",
           "description": "A simple PoC for WordPress RCE (author priviledge), refer to CVE-2019-8942 and CVE-2019-8943.",
-          "stargazers_count": 74,
+          "stargazers_count": 73,
           "forks_count": 20,
           "language": "",
-          "updated_at": "2026-09-09T17:49:09Z",
+          "updated_at": "2026-11-27T11:41:29Z",
           "pushed_at": "2019-03-18T01:20:52Z",
           "created_at": "2019-02-25T06:38:15Z",
           "topics": [
@@ -14586,25 +14817,6 @@
             "html_url": "https://github.com/synacktiv"
           },
           "clone_url": "https://github.com/synacktiv/CVE-2019-8942.git"
-        },
-        {
-          "id": 1246866909,
-          "name": "WordPress-RCE-CVE-2019-8942",
-          "full_name": "SpeatX/WordPress-RCE-CVE-2019-8942",
-          "html_url": "https://github.com/SpeatX/WordPress-RCE-CVE-2019-8942",
-          "description": "Python exploit toolkit for WordPress Crop Image RCE — CVE-2019-8942 \u0026 CVE-2019-8943",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-06-24T14:25:55Z",
-          "pushed_at": "2026-05-23T22:59:47Z",
-          "created_at": "2026-05-22T16:36:35Z",
-          "topics": [],
-          "owner": {
-            "login": "SpeatX",
-            "html_url": "https://github.com/SpeatX"
-          },
-          "clone_url": "https://github.com/SpeatX/WordPress-RCE-CVE-2019-8942.git"
         }
       ]
     },
@@ -14617,10 +14829,10 @@
           "full_name": "brianwrf/WordPress_4.9.8_RCE_POC",
           "html_url": "https://github.com/brianwrf/WordPress_4.9.8_RCE_POC",
           "description": "A simple PoC for WordPress RCE (author priviledge), refer to CVE-2019-8942 and CVE-2019-8943.",
-          "stargazers_count": 74,
+          "stargazers_count": 73,
           "forks_count": 20,
           "language": "",
-          "updated_at": "2026-09-09T17:49:09Z",
+          "updated_at": "2026-11-27T11:41:29Z",
           "pushed_at": "2019-03-18T01:20:52Z",
           "created_at": "2019-02-25T06:38:15Z",
           "topics": [
@@ -14632,25 +14844,6 @@
             "html_url": "https://github.com/brianwrf"
           },
           "clone_url": "https://github.com/brianwrf/WordPress_4.9.8_RCE_POC.git"
-        },
-        {
-          "id": 1246866909,
-          "name": "WordPress-RCE-CVE-2019-8942",
-          "full_name": "SpeatX/WordPress-RCE-CVE-2019-8942",
-          "html_url": "https://github.com/SpeatX/WordPress-RCE-CVE-2019-8942",
-          "description": "Python exploit toolkit for WordPress Crop Image RCE — CVE-2019-8942 \u0026 CVE-2019-8943",
-          "stargazers_count": 1,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-06-24T14:25:55Z",
-          "pushed_at": "2026-05-23T22:59:47Z",
-          "created_at": "2026-05-22T16:36:35Z",
-          "topics": [],
-          "owner": {
-            "login": "SpeatX",
-            "html_url": "https://github.com/SpeatX"
-          },
-          "clone_url": "https://github.com/SpeatX/WordPress-RCE-CVE-2019-8942.git"
         }
       ]
     },
@@ -14735,10 +14928,10 @@
           "full_name": "quliyevresul7777/CVE-2019-9053",
           "html_url": "https://github.com/quliyevresul7777/CVE-2019-9053",
           "description": "Exploit Title: Unauthenticated SQL Injection on CMS Made Simple \u003c= 2.2.9",
-          "stargazers_count": 1,
+          "stargazers_count": 2,
           "forks_count": 0,
           "language": "Python",
-          "updated_at": "2026-08-22T14:12:06Z",
+          "updated_at": "2026-11-25T12:59:38Z",
           "pushed_at": "2026-08-22T14:09:23Z",
           "created_at": "2026-08-22T13:32:31Z",
           "topics": [],
@@ -14768,23 +14961,23 @@
           "clone_url": "https://github.com/rideckszz/poc-CVE-2019-9053.git"
         },
         {
-          "id": 1237310853,
-          "name": "SimpleCTF-THM-Walkthrough",
-          "full_name": "paulameg/SimpleCTF-THM-Walkthrough",
-          "html_url": "https://github.com/paulameg/SimpleCTF-THM-Walkthrough",
-          "description": "First CTF successfully completed! This repo documents my walkthrough of TryHackMe's Simple CTF. It covers network reconnaissance (Nmap), web exploitation (CVE-2019-9053), and credential cracking. As a dev, it was great to pivot from SQLi to a Root shell by leveraging Sudo misconfigurations. Educational purposes only. ",
-          "stargazers_count": 1,
+          "id": 1469390605,
+          "name": "LAB-014-SIMPLE-CTF",
+          "full_name": "fantasmakm4/LAB-014-SIMPLE-CTF",
+          "html_url": "https://github.com/fantasmakm4/LAB-014-SIMPLE-CTF",
+          "description": "FANTASMA LAB-014 | TryHackMe Simple CTF | CVE-2019-9053 | SQL Injection | Hashcat | SSH | Privilege Escalation ROOT",
+          "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-05-15T07:04:37Z",
-          "pushed_at": "2026-05-13T04:19:50Z",
-          "created_at": "2026-05-13T04:17:22Z",
+          "language": "",
+          "updated_at": "2026-11-23T22:44:39Z",
+          "pushed_at": "2026-11-23T22:44:46Z",
+          "created_at": "2026-11-23T22:44:38Z",
           "topics": [],
           "owner": {
-            "login": "paulameg",
-            "html_url": "https://github.com/paulameg"
+            "login": "fantasmakm4",
+            "html_url": "https://github.com/fantasmakm4"
           },
-          "clone_url": "https://github.com/paulameg/SimpleCTF-THM-Walkthrough.git"
+          "clone_url": "https://github.com/fantasmakm4/LAB-014-SIMPLE-CTF.git"
         },
         {
           "id": 1279984859,
@@ -14887,101 +15080,6 @@
             "html_url": "https://github.com/coolkiee"
           },
           "clone_url": "https://github.com/coolkiee/CVE-2019-9053.git"
-        },
-        {
-          "id": 1255265959,
-          "name": "CVE-2019-9053-exploit",
-          "full_name": "Jeanback1/CVE-2019-9053-exploit",
-          "html_url": "https://github.com/Jeanback1/CVE-2019-9053-exploit",
-          "description": "",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-05-31T16:09:39Z",
-          "pushed_at": "2026-05-31T16:09:35Z",
-          "created_at": "2026-05-31T16:05:54Z",
-          "topics": [],
-          "owner": {
-            "login": "Jeanback1",
-            "html_url": "https://github.com/Jeanback1"
-          },
-          "clone_url": "https://github.com/Jeanback1/CVE-2019-9053-exploit.git"
-        },
-        {
-          "id": 1253664585,
-          "name": "Simple-CTF-Writeup",
-          "full_name": "ImperialX1104/Simple-CTF-Writeup",
-          "html_url": "https://github.com/ImperialX1104/Simple-CTF-Writeup",
-          "description": "Professional TryHackMe Simple CTF walkthrough covering enumeration, CMS Made Simple SQL Injection (CVE-2019-9053), credential recovery, SSH access, privilege escalation via Vim, and root compromise.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-05-29T18:41:18Z",
-          "pushed_at": "2026-05-29T18:41:14Z",
-          "created_at": "2026-05-29T17:36:05Z",
-          "topics": [],
-          "owner": {
-            "login": "ImperialX1104",
-            "html_url": "https://github.com/ImperialX1104"
-          },
-          "clone_url": "https://github.com/ImperialX1104/Simple-CTF-Writeup.git"
-        },
-        {
-          "id": 1248512386,
-          "name": "CVE-2019-9053",
-          "full_name": "v4rr10r/CVE-2019-9053",
-          "html_url": "https://github.com/v4rr10r/CVE-2019-9053",
-          "description": "CMS Made Simple CVE-2019-9053 Exploit (Python 3)",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-05-24T19:04:06Z",
-          "pushed_at": "2026-05-24T19:04:02Z",
-          "created_at": "2026-05-24T18:32:26Z",
-          "topics": [],
-          "owner": {
-            "login": "v4rr10r",
-            "html_url": "https://github.com/v4rr10r"
-          },
-          "clone_url": "https://github.com/v4rr10r/CVE-2019-9053.git"
-        },
-        {
-          "id": 1247366732,
-          "name": "CMS-Made-Simple-2.2.10---SQL-Injection",
-          "full_name": "jyothsna-Git007/CMS-Made-Simple-2.2.10---SQL-Injection",
-          "html_url": "https://github.com/jyothsna-Git007/CMS-Made-Simple-2.2.10---SQL-Injection",
-          "description": "Google Dorks for detecting CMS Made Simple \u003c 2.2.10 SQL Injection (CVE-2019-9053). Built for security auditing and patch verification.",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2026-05-23T08:28:08Z",
-          "pushed_at": "2026-05-23T08:28:04Z",
-          "created_at": "2026-05-23T08:05:23Z",
-          "topics": [],
-          "owner": {
-            "login": "jyothsna-Git007",
-            "html_url": "https://github.com/jyothsna-Git007"
-          },
-          "clone_url": "https://github.com/jyothsna-Git007/CMS-Made-Simple-2.2.10---SQL-Injection.git"
-        },
-        {
-          "id": 1469390605,
-          "name": "LAB-014-SIMPLE-CTF",
-          "full_name": "fantasmakm4/LAB-014-SIMPLE-CTF",
-          "html_url": "https://github.com/fantasmakm4/LAB-014-SIMPLE-CTF",
-          "description": "FANTASMA LAB-014 | TryHackMe Simple CTF | CVE-2019-9053 | SQL Injection | Hashcat | SSH | Privilege Escalation ROOT",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2026-11-23T22:44:39Z",
-          "pushed_at": "2026-11-23T22:44:46Z",
-          "created_at": "2026-11-23T22:44:38Z",
-          "topics": [],
-          "owner": {
-            "login": "fantasmakm4",
-            "html_url": "https://github.com/fantasmakm4"
-          },
-          "clone_url": "https://github.com/fantasmakm4/LAB-014-SIMPLE-CTF.git"
         }
       ]
     },
@@ -16223,42 +16321,23 @@
           "clone_url": "https://github.com/angeloanatrella86/CVE-2019.git"
         },
         {
-          "id": 211793794,
-          "name": "CVE2019-1253-Compiled",
-          "full_name": "offsec-ttps/CVE2019-1253-Compiled",
-          "html_url": "https://github.com/offsec-ttps/CVE2019-1253-Compiled",
-          "description": "Windows AppX Deployment -  Windows Elevation of Privilege Vulnerability",
+          "id": 205669919,
+          "name": "CVE2019-11510",
+          "full_name": "sp4rkhunt3r/CVE2019-11510",
+          "html_url": "https://github.com/sp4rkhunt3r/CVE2019-11510",
+          "description": "It will determine your website is vulnerabale to Pulse VPN Vulnerability or not. simply just enter the name of the website.",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "",
-          "updated_at": "2023-09-10T07:43:31Z",
-          "pushed_at": "2019-09-30T09:21:57Z",
-          "created_at": "2019-09-30T06:47:01Z",
+          "language": "Python",
+          "updated_at": "2019-09-01T12:02:15Z",
+          "pushed_at": "2019-09-01T12:02:14Z",
+          "created_at": "2019-09-01T11:57:23Z",
           "topics": [],
           "owner": {
-            "login": "offsec-ttps",
-            "html_url": "https://github.com/offsec-ttps"
+            "login": "sp4rkhunt3r",
+            "html_url": "https://github.com/sp4rkhunt3r"
           },
-          "clone_url": "https://github.com/offsec-ttps/CVE2019-1253-Compiled.git"
-        },
-        {
-          "id": 191501617,
-          "name": "Dolibarr-ERP-CMS-Vulnerability",
-          "full_name": "berkayipek/Dolibarr-ERP-CMS-Vulnerability",
-          "html_url": "https://github.com/berkayipek/Dolibarr-ERP-CMS-Vulnerability",
-          "description": "CVE-2019-XXXX | Dolibarr ERP 9.0.1 application has directory listing vulnerability. ",
-          "stargazers_count": 0,
-          "forks_count": 0,
-          "language": "",
-          "updated_at": "2020-04-29T06:40:14Z",
-          "pushed_at": "2019-06-12T05:14:37Z",
-          "created_at": "2019-06-12T05:10:38Z",
-          "topics": [],
-          "owner": {
-            "login": "berkayipek",
-            "html_url": "https://github.com/berkayipek"
-          },
-          "clone_url": "https://github.com/berkayipek/Dolibarr-ERP-CMS-Vulnerability.git"
+          "clone_url": "https://github.com/sp4rkhunt3r/CVE2019-11510.git"
         },
         {
           "id": 200469846,
@@ -16299,6 +16378,44 @@
           "clone_url": "https://github.com/merlin-ke/CVE_2019_15107.git"
         },
         {
+          "id": 211793794,
+          "name": "CVE2019-1253-Compiled",
+          "full_name": "offsec-ttps/CVE2019-1253-Compiled",
+          "html_url": "https://github.com/offsec-ttps/CVE2019-1253-Compiled",
+          "description": "Windows AppX Deployment -  Windows Elevation of Privilege Vulnerability",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2023-09-10T07:43:31Z",
+          "pushed_at": "2019-09-30T09:21:57Z",
+          "created_at": "2019-09-30T06:47:01Z",
+          "topics": [],
+          "owner": {
+            "login": "offsec-ttps",
+            "html_url": "https://github.com/offsec-ttps"
+          },
+          "clone_url": "https://github.com/offsec-ttps/CVE2019-1253-Compiled.git"
+        },
+        {
+          "id": 191501617,
+          "name": "Dolibarr-ERP-CMS-Vulnerability",
+          "full_name": "berkayipek/Dolibarr-ERP-CMS-Vulnerability",
+          "html_url": "https://github.com/berkayipek/Dolibarr-ERP-CMS-Vulnerability",
+          "description": "CVE-2019-XXXX | Dolibarr ERP 9.0.1 application has directory listing vulnerability. ",
+          "stargazers_count": 0,
+          "forks_count": 0,
+          "language": "",
+          "updated_at": "2020-04-29T06:40:14Z",
+          "pushed_at": "2019-06-12T05:14:37Z",
+          "created_at": "2019-06-12T05:10:38Z",
+          "topics": [],
+          "owner": {
+            "login": "berkayipek",
+            "html_url": "https://github.com/berkayipek"
+          },
+          "clone_url": "https://github.com/berkayipek/Dolibarr-ERP-CMS-Vulnerability.git"
+        },
+        {
           "id": 224592411,
           "name": "CVE2019-0683",
           "full_name": "offsec-ttps/CVE2019-0683",
@@ -16318,23 +16435,23 @@
           "clone_url": "https://github.com/offsec-ttps/CVE2019-0683.git"
         },
         {
-          "id": 205669919,
-          "name": "CVE2019-11510",
-          "full_name": "sp4rkhunt3r/CVE2019-11510",
-          "html_url": "https://github.com/sp4rkhunt3r/CVE2019-11510",
-          "description": "It will determine your website is vulnerabale to Pulse VPN Vulnerability or not. simply just enter the name of the website.",
+          "id": 1474143537,
+          "name": "BlueKeep-VURN-CVE-2019-Working-Shell",
+          "full_name": "metaphoricaldepartmentofscienc-prog/BlueKeep-VURN-CVE-2019-Working-Shell",
+          "html_url": "https://github.com/metaphoricaldepartmentofscienc-prog/BlueKeep-VURN-CVE-2019-Working-Shell",
+          "description": "Its bluekeep but its working unlike 100% of these repos which dont even fcking work and are just a scanner or a POC",
           "stargazers_count": 0,
           "forks_count": 0,
-          "language": "Python",
-          "updated_at": "2019-09-01T12:02:15Z",
-          "pushed_at": "2019-09-01T12:02:14Z",
-          "created_at": "2019-09-01T11:57:23Z",
+          "language": "",
+          "updated_at": "2026-11-27T07:59:02Z",
+          "pushed_at": "2026-11-27T07:59:02Z",
+          "created_at": "2026-11-27T07:59:00Z",
           "topics": [],
           "owner": {
-            "login": "sp4rkhunt3r",
-            "html_url": "https://github.com/sp4rkhunt3r"
+            "login": "metaphoricaldepartmentofscienc-prog",
+            "html_url": "https://github.com/metaphoricaldepartmentofscienc-prog"
           },
-          "clone_url": "https://github.com/sp4rkhunt3r/CVE2019-11510.git"
+          "clone_url": "https://github.com/metaphoricaldepartmentofscienc-prog/BlueKeep-VURN-CVE-2019-Working-Shell.git"
         }
       ]
     }
